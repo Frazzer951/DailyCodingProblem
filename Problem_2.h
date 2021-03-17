@@ -6,14 +6,14 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 */
 
-#include <vector>
 #include <iostream>
 #include <string>
+#include <vector>
 
-std::vector<int> sumArray(std::vector<int> arr);
+std::vector<int> sumArray( std::vector<int> arr );
 
-std::string vectorToString(std::vector<int>const& v);
+std::string vectorToString( std::vector<int> const & v );
 
-void checkArray(std::vector<int> const& v);
+void checkArray( std::vector<int> const & v );
 
 int prob_2();

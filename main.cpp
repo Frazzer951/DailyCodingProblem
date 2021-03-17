@@ -1,10 +1,10 @@
 #include "Problem_1.h"
 #include "Problem_2.h"
 
-int main() {
+int main()
+{
+  prob_1();
+  prob_2();
 
-	prob_1();
-	prob_2();
-
-	return 0;
+  return 0;
 }

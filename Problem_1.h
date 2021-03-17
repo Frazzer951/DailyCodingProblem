@@ -6,9 +6,9 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 Bonus: Can you do this in one pass?
 */
 
-#include <vector>
 #include <iostream>
+#include <vector>
 
-bool arrayAddToNum(std::vector<int> arr, int k);
+bool arrayAddToNum( std::vector<int> arr, int k );
 
 int prob_1();
