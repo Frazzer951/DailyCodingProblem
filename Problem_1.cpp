@@ -10,8 +10,8 @@ Bonus: Can you do this in one pass?
 #include <iostream>
 
 bool arrayAddToNum(std::vector<int> arr, int k) {
-	for (auto i = 0; i < arr.size() - 1; ++i) {
-		for (auto j = i; j < arr.size(); ++j) {
+	for (unsigned int i = 0; i < arr.size() - 1; ++i) {
+		for (unsigned int j = i; j < arr.size(); ++j) {
 			if (arr[i] + arr[j] == k) return true;
 		}
 	}
