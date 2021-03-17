@@ -36,7 +36,9 @@ void checkArray(std::vector<int> const& v) {
 	std::cout << "The array [ " << vectorToString(v) << "] summed to [ " << vectorToString(sumedArray) << "]\n";
 }
 
-int main() {
+int prob_2() {
+	std::cout << "\nProblem 2:\n";
+
 	checkArray({ 1,2,3,4,5 });
 	checkArray({ 3,2,1 });
 

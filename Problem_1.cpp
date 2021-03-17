@@ -19,6 +19,8 @@ bool arrayAddToNum(std::vector<int> arr, int k) {
 }
 
 int prob_1() {
+	std::cout << "\nProblem 1:\n";
+
 	std::string str = (arrayAddToNum({ 10,15,3,7 }, 17)) ? "True" : "False";
 
 	std::cout << str << std::endl;
