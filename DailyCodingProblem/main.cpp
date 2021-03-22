@@ -3,6 +3,7 @@
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
+#include "Problem_6.h"
 
 
 int main()
@@ -12,6 +13,7 @@ int main()
   prob_3();
   prob_4();
   prob_5();
+  prob_6();
 
   return 0;
 }
