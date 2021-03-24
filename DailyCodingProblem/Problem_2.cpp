@@ -28,7 +28,7 @@ std::vector<int> sumArray( std::vector<int> arr )
 std::string vectorToString( std::vector<int> const & v )
 {
   std::string str;
-  for( int i = 0; i < v.size(); i++ )
+  for( unsigned int i = 0; i < v.size(); i++ )
     str += std::to_string( v.at( i ) ) + " ";
   return str;
 }

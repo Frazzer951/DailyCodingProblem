@@ -1,4 +1,4 @@
-/*
+/* EASY
 A univalve tree (which stands for "universal value") is a tree where all nodes under it have the same value.
 
 Given the root to a binary tree, count the number of univalve subtrees.
@@ -16,11 +16,12 @@ For example, the following tree has 5 univalve subtrees:
 
 #include <iostream>
 
-struct Node
+class Node
 {
-  int           data;
-  struct Node * left;
-  struct Node * right;
+public:
+  int    data;
+  Node * left;
+  Node * right;
 
   Node( int val )
   {
@@ -36,8 +37,8 @@ bool sameChildren( Node * root )
   if( root == NULL ) return true;
   if( root->left == NULL && root->right == NULL ) return true;
 
-  if( root->data != root->left->data ) return false;
-  if( root->data != root->right->data ) return false;
+  if( root->left != NULL && root->data != root->left->data ) return false;
+  if( root->right != NULL && root->data != root->right->data ) return false;
 
   return sameChildren( root->left ) && sameChildren( root->right );
 }
@@ -61,7 +62,7 @@ int prob_8()
 {
   std::cout << "\nProblem 8\n";
 
-  struct Node * root       = new Node( 0 );
+  Node * root              = new Node( 0 );
   root->left               = new Node( 1 );
   root->right              = new Node( 0 );
   root->right->right       = new Node( 0 );
@@ -71,7 +72,7 @@ int prob_8()
 
   std::cout << "The tree of root has " << countUnivalTree( root ) << " univalve subtrees\n";
 
-  struct Node * root2       = new Node( 1 );
+  Node * root2              = new Node( 1 );
   root2->left               = new Node( 1 );
   root2->left->left         = new Node( 1 );
   root2->left->right        = new Node( 0 );

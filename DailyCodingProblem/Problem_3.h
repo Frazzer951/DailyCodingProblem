@@ -1,7 +1,6 @@
 #pragma once
 
-class Node
-{};
+class Node;
 
 std::string serialize( Node root );
 

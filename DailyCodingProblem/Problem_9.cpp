@@ -15,13 +15,13 @@ int findSum( std::vector<int> v )
   if( v.size() == 1 ) return v[0];
 
   int sum_1 = 0;
-  for( int i = 0; i < v.size(); i += 2 )
+  for( unsigned int i = 0; i < v.size(); i += 2 )
   {
     sum_1 += v[i];
   }
 
   int sum_2 = v[0];
-  for( int i = 3; i < v.size(); i += 2 )
+  for( unsigned int i = 3; i < v.size(); i += 2 )
   {
     sum_2 += v[i];
   }
@@ -31,7 +31,7 @@ int findSum( std::vector<int> v )
 void testVector( std::vector<int> v )
 {
   std::cout << "For the array: ";
-  for( int i = 0; i < v.size(); ++i )
+  for( unsigned int i = 0; i < v.size(); ++i )
   {
     std::cout << v[i] << ' ';
   }

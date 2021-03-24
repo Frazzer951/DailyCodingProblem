@@ -1,5 +1,5 @@
 #pragma once
-struct Node;
+class Node;
 
 bool sameChildren( Node * root );
 
