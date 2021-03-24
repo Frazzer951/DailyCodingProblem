@@ -7,19 +7,31 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 */
 
 #include <iostream>
-#include <vector>
+#include <string>
 
-std::vector<std::vector<std::string>> find_permutations( std::string str )
+int num_encodings( std::string s )
 {
-  std::vector<std::vector<std::string>> perms;
+  if( s[0] == '0' ) return 0;
+  else if( s.size() <= 1 )
+    return 1;
 
-  return perms;
+  int total = 0;
+
+  if( std::stoi( s.substr( 0, 2 ) ) <= 26 ) total += num_encodings( s.substr( 2 ) );
+
+  total += num_encodings( s.substr( 1 ) );
+  return total;
 }
 
 int prob_7()
 {
   std::cout << "\nProblem 7\n";
-  std::cout << "Skipped because IDK how\n";
-  find_permutations( "111" );
+
+  std::cout << "1 can be encoded " << num_encodings( "1" ) << " ways. \n";
+  std::cout << "11 can be encoded " << num_encodings( "11" ) << " ways. \n";
+  std::cout << "111 can be encoded " << num_encodings( "111" ) << " ways. \n";
+  std::cout << "1111 can be encoded " << num_encodings( "1111" ) << " ways. \n";
+  std::cout << "001 can be encoded " << num_encodings( "001" ) << " ways. \n";
+
   return 0;
 }
