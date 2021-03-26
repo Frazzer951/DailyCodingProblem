@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem_1.cpp" />
+    <ClCompile Include="Problem_10.cpp" />
     <ClCompile Include="Problem_2.cpp" />
     <ClCompile Include="Problem_3.cpp" />
     <ClCompile Include="Problem_4.cpp" />
@@ -152,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Problem_1.h" />
+    <ClInclude Include="Problem_10.h" />
     <ClInclude Include="Problem_2.h" />
     <ClInclude Include="Problem_3.h" />
     <ClInclude Include="Problem_4.h" />
