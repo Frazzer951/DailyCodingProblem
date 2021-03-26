@@ -20,7 +20,7 @@ int largest_non_adjacent( std::vector<int> v )
   int max_excluding_last = std::max( 0, v[0] );
   int max_including_last = std::max( max_excluding_last, v[1] );
 
-  for( int i = 2; i < v.size(); ++i )
+  for( unsigned int i = 2; i < v.size(); ++i )
   {
     int prev_max_including_last = max_including_last;
 
