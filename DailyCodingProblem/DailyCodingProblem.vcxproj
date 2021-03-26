@@ -143,6 +143,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem_1.cpp" />
     <ClCompile Include="Problem_10.cpp" />
+    <ClCompile Include="Problem_11.cpp" />
     <ClCompile Include="Problem_2.cpp" />
     <ClCompile Include="Problem_3.cpp" />
     <ClCompile Include="Problem_4.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="Problem_1.h" />
     <ClInclude Include="Problem_10.h" />
+    <ClInclude Include="Problem_11.h" />
     <ClInclude Include="Problem_2.h" />
     <ClInclude Include="Problem_3.h" />
     <ClInclude Include="Problem_4.h" />
