@@ -20,7 +20,7 @@ int prob_10()
 {
   std::cout << "\nProblem 10\n";
 
-  jobScheduler( test, 1000 );
+  jobScheduler( test, 10 );
 
   return 0;
 }
