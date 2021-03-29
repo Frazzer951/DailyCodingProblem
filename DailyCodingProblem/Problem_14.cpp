@@ -39,7 +39,8 @@ int prob_14()
   std::cout << "At 100 iterations PI is estimated as: " << monteCarloPi( 100 ) << '\n';
   std::cout << "At 1000 iterations PI is estimated as: " << monteCarloPi( 1000 ) << '\n';
   std::cout << "At 1000000 iterations PI is estimated as: " << monteCarloPi( 1000000 ) << '\n';
-  std::cout << "At 10000000 iterations PI is estimated as: " << monteCarloPi( 10000000 ) << '\n';
+  // std::cout << "At 10000000 iterations PI is estimated as: " << monteCarloPi( 10000000 ) << '\n';
+  // std::cout << "At 100000000 iterations PI is estimated as: " << monteCarloPi( 100000000 ) << '\n';
 
   return 0;
 }
