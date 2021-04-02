@@ -1,13 +1,5 @@
 #pragma once
 
-//class SerNode;
-//
-//std::string serialize( SerNode root );
-//
-//SerNode * deserialize( std::string str );
-//
-//int prob_3();
-
 /* MEDIUM
 Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
@@ -31,8 +23,8 @@ class SerNode
 {
 public:
   std::string _val;
-  SerNode *      _left;
-  SerNode *      _right;
+  SerNode *   _left;
+  SerNode *   _right;
 
   SerNode( std::string val )
   {
@@ -49,7 +41,6 @@ public:
     _left  = left;
     _right = right;
   }
-
 
   std::string value()
   {

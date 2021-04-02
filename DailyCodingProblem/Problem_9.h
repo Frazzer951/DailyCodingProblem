@@ -1,14 +1,5 @@
 #pragma once
-
-//#include <vector>
-//
-//int largest_non_adjacent( std::vector<int> v );
-//
-//int findSum( std::vector<int> v, int index = 0 );
-//
-//void testVector( std::vector<int> v );
-//
-//int prob_9();
+#define max( a, b ) ( ( ( a ) > ( b ) ) ? ( a ) : ( b ) )
 
 /* HARD
 Given a list of integers, write a function that returns the largest sum of non-adjacent numbers. Numbers can be 0 or negative.
@@ -26,23 +17,22 @@ int largest_non_adjacent( std::vector<int> v )
 {
   if( v.size() <= 2 )
   {
-    return std::max( 0, v[0] );
+    return max( 0, v[0] );
   }
 
-  int max_excluding_last = std::max( 0, v[0] );
-  int max_including_last = std::max( max_excluding_last, v[1] );
+  int max_excluding_last = max( 0, v[0] );
+  int max_including_last = max( max_excluding_last, v[1] );
 
   for( unsigned int i = 2; i < v.size(); ++i )
   {
     int prev_max_including_last = max_including_last;
 
-    max_including_last = std::max( max_including_last, max_excluding_last + v[i] );
+    max_including_last = max( max_including_last, max_excluding_last + v[i] );
     max_excluding_last = prev_max_including_last;
   }
 
-  return std::max( max_including_last, max_excluding_last );
+  return max( max_including_last, max_excluding_last );
 }
-
 
 // Old Solution
 int findSum( std::vector<int> v, int index = 0 )

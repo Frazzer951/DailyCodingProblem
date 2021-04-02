@@ -1,15 +1,5 @@
 #pragma once
 
-//#include <utility>
-//
-//std::pair<int, int> cons( int a, int b );
-//
-//int car( std::pair<int, int> p );
-//
-//int cdr( std::pair<int, int> p );
-//
-//int prob_5();
-
 /* MEDIUM
 cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair.
 For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.

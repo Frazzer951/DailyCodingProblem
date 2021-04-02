@@ -1,7 +1,5 @@
 #pragma once
 
-//int prob_17();
-
 /* HARD
 Suppose we represent our file system by a string in the following manner:
 

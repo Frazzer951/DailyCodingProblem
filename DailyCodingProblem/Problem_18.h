@@ -1,7 +1,5 @@
 #pragma once
 
-//int prob_18();
-
 /* HARD
 Given an array of integers and a number k, where 1 <= k <= length of the array, compute the maximum values of each subarray of length k.
 
@@ -22,7 +20,6 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 std::vector<int> compSubArrMax( std::vector<int> arr, int k )
 {
   std::vector<int> returnVec;
-
 
   for( int i = 0; i + k <= arr.size(); ++i )
   {

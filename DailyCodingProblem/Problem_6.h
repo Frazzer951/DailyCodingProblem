@@ -1,12 +1,5 @@
 #pragma once
 
-//struct xNode;
-//xNode * xorNode( xNode * a, xNode * b );
-//
-//class xor_list;
-//
-//int prob_6();
-
 /* HARD
 An XOR linked list is a more memory efficient doubly linked list.
 Instead of each node holding next and prev fields, it holds a field named both,

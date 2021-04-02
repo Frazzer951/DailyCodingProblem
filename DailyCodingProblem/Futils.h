@@ -42,7 +42,7 @@ std::string intVecToStr( std::vector<int> v )
   std::string str;
   for( int i = 0; i < v.size(); ++i )
   {
-    str += std::to_string(v[i]) + ' ';
+    str += std::to_string( v[i] ) + ' ';
   }
   return str;
 }

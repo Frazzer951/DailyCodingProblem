@@ -1,12 +1,5 @@
 #pragma once
 
-//#include <iostream>
-//#include <vector>
-//
-//bool arrayAddToNum( std::vector<int> arr, int k );
-//
-//int prob_1();
-
 /* EASY
 Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 

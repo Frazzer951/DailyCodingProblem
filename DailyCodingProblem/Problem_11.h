@@ -1,11 +1,5 @@
 #pragma once
 
-//#include <vector>
-//
-//std::vector<std::string> autocomplete( std::string str, std::vector<std::string> qstrs );
-//
-//int prob_11();
-
 /* MEDIUM
 Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
 

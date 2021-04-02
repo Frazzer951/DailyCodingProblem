@@ -1,12 +1,4 @@
 #include "Problem_1.h"
-#include "Problem_2.h"
-#include "Problem_3.h"
-#include "Problem_4.h"
-#include "Problem_5.h"
-#include "Problem_6.h"
-#include "Problem_7.h"
-#include "Problem_8.h"
-#include "Problem_9.h"
 #include "Problem_10.h"
 #include "Problem_11.h"
 #include "Problem_12.h"
@@ -16,6 +8,14 @@
 #include "Problem_16.h"
 #include "Problem_17.h"
 #include "Problem_18.h"
+#include "Problem_2.h"
+#include "Problem_3.h"
+#include "Problem_4.h"
+#include "Problem_5.h"
+#include "Problem_6.h"
+#include "Problem_7.h"
+#include "Problem_8.h"
+#include "Problem_9.h"
 
 int main()
 {

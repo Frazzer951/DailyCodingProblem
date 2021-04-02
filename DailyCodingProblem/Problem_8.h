@@ -1,11 +1,4 @@
 #pragma once
-//class Node;
-//
-//bool sameChildren( Node * root );
-//
-//int countUnivalTree( Node * root );
-//
-//int prob_8();
 
 /* EASY
 A univalve tree (which stands for "universal value") is a tree where all nodes under it have the same value.

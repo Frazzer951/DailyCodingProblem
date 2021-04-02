@@ -1,8 +1,5 @@
 #pragma once
 
-
-//int prob_14();
-
 /* MEDIUM
 The area of a circle is defined as ?r^2. Estimate ? to 3 decimal places using a Monte Carlo method.
 
