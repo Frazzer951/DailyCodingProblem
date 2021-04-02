@@ -1,7 +1,34 @@
 #pragma once
 
-void test();
+//void test();
+//
+//void jobScheduler( void f(), int n );
+//
+//int prob_10();
 
-void jobScheduler( void f(), int n );
+/* MEDIUM
+Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
+*/
 
-int prob_10();
+#include <Windows.h>
+#include <iostream>
+
+void test()
+{
+  std::cout << "Running function test\n";
+}
+
+void jobScheduler( void f(), int n )
+{
+  Sleep( n );
+  f();
+}
+
+int prob_10()
+{
+  std::cout << "\nProblem 10\n";
+
+  jobScheduler( test, 10 );
+
+  return 0;
+}
