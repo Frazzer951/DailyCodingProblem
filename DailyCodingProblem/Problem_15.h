@@ -19,10 +19,14 @@ int prob_15()
 {
   std::cout << "\nProblem 15\n";
 
-  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is " << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
-  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is " << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
-  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is " << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
-  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is " << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
+  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is "
+            << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
+  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is "
+            << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
+  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is "
+            << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
+  std::cout << "A random element from the list [10, 15, 12, 67, 21, 43] is "
+            << randElement( { 10, 15, 12, 67, 21, 43 } ) << ".\n";
 
   return 0;
 }

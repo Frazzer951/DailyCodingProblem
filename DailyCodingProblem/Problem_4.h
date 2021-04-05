@@ -19,10 +19,7 @@ int findMissingPositive( int arr[], int size )
 
   for( auto i = 0; i < size; ++i )
   {
-    if( arr[i] > 0 && arr[i] == missing )
-    {
-      missing++;
-    }
+    if( arr[i] > 0 && arr[i] == missing ) { missing++; }
   }
   return missing;
 }
@@ -30,10 +27,7 @@ int findMissingPositive( int arr[], int size )
 void testArray( int arr[], int size )
 {
   std::cout << "For the array: ";
-  for( int i = 0; i < size; ++i )
-  {
-    std::cout << arr[i] << ' ';
-  }
+  for( int i = 0; i < size; ++i ) { std::cout << arr[i] << ' '; }
   int missing = findMissingPositive( arr, size );
   std::cout << " the missing number is " << missing << '\n';
 }

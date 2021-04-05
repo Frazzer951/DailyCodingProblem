@@ -7,10 +7,7 @@ Implement a job scheduler which takes in a function f and an integer n, and call
 #include <Windows.h>
 #include <iostream>
 
-void testFunc()
-{
-  std::cout << "Running function test\n";
-}
+void testFunc() { std::cout << "Running function test\n"; }
 
 void jobScheduler( void f(), int n )
 {

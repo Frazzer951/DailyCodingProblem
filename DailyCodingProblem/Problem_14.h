@@ -17,15 +17,12 @@ double monteCarloPi( int n )
 
   for( int i = 0; i < n; ++i )
   {
-    double x = ( (float)rand() ) / (float)RAND_MAX;
-    double y = ( (float)rand() ) / (float)RAND_MAX;
+    double x = ( (float) rand() ) / (float) RAND_MAX;
+    double y = ( (float) rand() ) / (float) RAND_MAX;
 
     total++;
 
-    if( x * x + y * y <= 1 )
-    {
-      inCircle++;
-    }
+    if( x * x + y * y <= 1 ) { inCircle++; }
   }
 
   double PI_Guess = 4.0 * inCircle / total;

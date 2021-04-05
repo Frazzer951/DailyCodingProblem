@@ -51,10 +51,7 @@ int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
 std::string intVecToStr( std::vector<int> v )
 {
   std::string str;
-  for( unsigned int i = 0; i < v.size(); ++i )
-  {
-    str += std::to_string( v[i] ) + ' ';
-  }
+  for( unsigned int i = 0; i < v.size(); ++i ) { str += std::to_string( v[i] ) + ' '; }
   return str;
 }
 
@@ -102,10 +99,7 @@ public:
     slNode * node = head;
     for( int i = 0; i < index; ++i )
     {
-      if( node->next )
-      {
-        node = node->next;
-      }
+      if( node->next ) { node = node->next; }
       else
       {
         throw "Linked List index out of range";

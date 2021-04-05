@@ -1,7 +1,8 @@
 #pragma once
 
 /* MEDIUM
-Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
+Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s),
+which deserializes the string back into the tree.
 
 For example, given the following SerNode class
 
@@ -26,10 +27,7 @@ public:
   SerNode *   _left;
   SerNode *   _right;
 
-  SerNode( std::string val )
-  {
-    _val = val;
-  }
+  SerNode( std::string val ) { _val = val; }
   SerNode( std::string val, SerNode * left )
   {
     _val  = val;
@@ -42,41 +40,23 @@ public:
     _right = right;
   }
 
-  std::string value()
-  {
-    return _val;
-  }
+  std::string value() { return _val; }
 
-  SerNode left()
-  {
-    return *_left;
-  }
+  SerNode left() { return *_left; }
 
-  SerNode right()
-  {
-    return *_right;
-  }
+  SerNode right() { return *_right; }
 
   std::string serialize_node()
   {
     std::string node_str = _val + ":{";
-    if( _left != NULL )
-    {
-      node_str += _left->serialize_node();
-    }
-    if( _right != NULL )
-    {
-      node_str += ',' + _right->serialize_node();
-    }
+    if( _left != NULL ) { node_str += _left->serialize_node(); }
+    if( _right != NULL ) { node_str += ',' + _right->serialize_node(); }
     node_str += "}";
     return node_str;
   }
 };
 
-std::string serialize( SerNode root )
-{
-  return root.serialize_node();
-}
+std::string serialize( SerNode root ) { return root.serialize_node(); }
 
 SerNode * deserialize( std::string str )
 {
@@ -98,7 +78,7 @@ SerNode * deserialize( std::string str )
 
   std::string nodes = str.substr( colon_index + 1 );
 
-  if( nodes.size() == 2 ) { return new SerNode( node_name ); }    // If there are no sub nodes return empty node
+  if( nodes.size() == 2 ) { return new SerNode( node_name ); } // If there are no sub nodes return empty node
 
   auto comma_index = nodes.find( ',' );
 

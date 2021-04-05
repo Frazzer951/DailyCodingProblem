@@ -1,7 +1,8 @@
 #pragma once
 
 /* EASY
-You run an e-commerce website and want to record the last N order ids in a log. Implement a data structure to accomplish this, with the following API:
+You run an e-commerce website and want to record the last N order ids in a log. Implement a data structure to accomplish
+this, with the following API:
 
 record(order_id): adds the order_id to the log
 get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N.
@@ -16,15 +17,9 @@ class Store
 public:
   std::vector<long int> log;
 
-  void record( long int order_id )
-  {
-    log.push_back( order_id );
-  }
+  void record( long int order_id ) { log.push_back( order_id ); }
 
-  long int get_last( int i )
-  {
-    return log[log.size() - i];
-  }
+  long int get_last( int i ) { return log[log.size() - i]; }
 };
 
 int prob_16()

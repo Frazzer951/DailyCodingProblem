@@ -49,10 +49,7 @@ int countUnivalTree( Node * root )
 {
   if( root == NULL ) return 0;
 
-  if( root->left == NULL && root->right == NULL )
-  {
-    return 1;
-  }
+  if( root->left == NULL && root->right == NULL ) { return 1; }
   int count = 0;
 
   if( sameChildren( root ) ) count++;

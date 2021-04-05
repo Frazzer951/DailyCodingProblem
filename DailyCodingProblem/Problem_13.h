@@ -37,7 +37,7 @@ int longest_substring_with_k_distinct_characters( std::string s, unsigned int k 
     h[s[i]] = i;
     if( h.size() <= k )
     {
-      new_lower_bounds = bounds[0];    // Lower bound remains the same
+      new_lower_bounds = bounds[0]; // Lower bound remains the same
     }
     else
     {
@@ -57,9 +57,12 @@ int prob_13()
 {
   std::cout << "\nProblem 13\n";
 
-  std::cout << "The string 'abcba' with 2 distinct characters longest substring is " << longest_substring_with_k_distinct_characters( "abcba", 2 ) << " characters long\n";
-  std::cout << "The string 'banana' with 2 distinct characters longest substring is " << longest_substring_with_k_distinct_characters( "banana", 2 ) << " characters long\n";
-  std::cout << "The string 'banana' with 3 distinct characters longest substring is " << longest_substring_with_k_distinct_characters( "banana", 3 ) << " characters long\n";
+  std::cout << "The string 'abcba' with 2 distinct characters longest substring is "
+            << longest_substring_with_k_distinct_characters( "abcba", 2 ) << " characters long\n";
+  std::cout << "The string 'banana' with 2 distinct characters longest substring is "
+            << longest_substring_with_k_distinct_characters( "banana", 2 ) << " characters long\n";
+  std::cout << "The string 'banana' with 3 distinct characters longest substring is "
+            << longest_substring_with_k_distinct_characters( "banana", 3 ) << " characters long\n";
 
   return 0;
 }

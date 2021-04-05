@@ -125,15 +125,9 @@ TEST( FUtils, slList )
 }
 
 // Problem 1
-TEST( Problem_1, Given_Case )
-{
-  EXPECT_TRUE( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) );
-}
+TEST( Problem_1, Given_Case ) { EXPECT_TRUE( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) ); }
 
-TEST( Problem_1, Custom_Case )
-{
-  EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11 ) );
-}
+TEST( Problem_1, Custom_Case ) { EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11 ) ); }
 
 // Problem 2
 TEST( Problem_2, Given_Case_1 )
@@ -180,15 +174,9 @@ TEST( Problem_4, Given_Case_2 )
 }
 
 // Problem 5
-TEST( Problem_5, Given_Case_1 )
-{
-  EXPECT_EQ( car( cons( 3, 4 ) ), 3 );
-}
+TEST( Problem_5, Given_Case_1 ) { EXPECT_EQ( car( cons( 3, 4 ) ), 3 ); }
 
-TEST( Problem_5, Given_Case_2 )
-{
-  EXPECT_EQ( cdr( cons( 3, 4 ) ), 4 );
-}
+TEST( Problem_5, Given_Case_2 ) { EXPECT_EQ( cdr( cons( 3, 4 ) ), 4 ); }
 
 // Problem 6
 TEST( Problem_6, Test_Case_1 )
@@ -310,10 +298,7 @@ TEST( Problem_9, Test_Case_2 )
 }
 
 // Problem 10
-TEST( Problem_10, Given_Case )
-{
-  jobScheduler( testFunc, 100 );
-}
+TEST( Problem_10, Given_Case ) { jobScheduler( testFunc, 100 ); }
 
 // Problem 11
 TEST( Problem_11, Given_Case )
@@ -324,25 +309,13 @@ TEST( Problem_11, Given_Case )
 }
 
 // Problem 12
-TEST( Problem_12, Given_Case )
-{
-  EXPECT_EQ( countWays( 4 ), 5 );
-}
+TEST( Problem_12, Given_Case ) { EXPECT_EQ( countWays( 4 ), 5 ); }
 
-TEST( Problem_12, Test_Case_1 )
-{
-  EXPECT_EQ( countWays( 1 ), 1 );
-}
+TEST( Problem_12, Test_Case_1 ) { EXPECT_EQ( countWays( 1 ), 1 ); }
 
-TEST( Problem_12, Test_Case_2 )
-{
-  EXPECT_EQ( countWays( 2 ), 2 );
-}
+TEST( Problem_12, Test_Case_2 ) { EXPECT_EQ( countWays( 2 ), 2 ); }
 
-TEST( Problem_12, Test_Case_3 )
-{
-  EXPECT_EQ( countWays( 3 ), 3 );
-}
+TEST( Problem_12, Test_Case_3 ) { EXPECT_EQ( countWays( 3 ), 3 ); }
 
 // Problem 13
 TEST( Problem_13, Given_Case )
@@ -451,10 +424,7 @@ TEST( Problem_16, Test_Case_4 )
 }
 
 // Problem 17
-TEST( Problem_17, Given_Case )
-{
-  FAIL();
-}
+TEST( Problem_17, Given_Case ) { FAIL(); }
 
 // Problem 18
 TEST( Problem_18, Given_Case )
@@ -469,22 +439,16 @@ TEST( Problem_18, Given_Case )
 // Problem 19
 TEST( Problem_19, Test_Case_1 )
 {
-  std::vector<std::vector<int>> vec = {
-      { 10, 15, 20 },
-      { 14, 47, 6 },
-      { 2, 7, 10 } };
-  auto cost = build_houses( vec );
+  std::vector<std::vector<int>> vec  = { { 10, 15, 20 }, { 14, 47, 6 }, { 2, 7, 10 } };
+  auto                          cost = build_houses( vec );
 
   EXPECT_EQ( cost, 18 );
 }
 
 TEST( Problem_19, Test_Case_2 )
 {
-  std::vector<std::vector<int>> vec = {
-      { 10, 15, 20 },
-      { 6, 47, 14 },
-      { 2, 7, 10 } };
-  auto cost = build_houses( vec );
+  std::vector<std::vector<int>> vec  = { { 10, 15, 20 }, { 6, 47, 14 }, { 2, 7, 10 } };
+  auto                          cost = build_houses( vec );
 
   EXPECT_EQ( cost, 26 );
 }
@@ -492,7 +456,7 @@ TEST( Problem_19, Test_Case_2 )
 // Problem 20
 TEST( Problem_20, Test_Case_1 )
 {
-  //A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
+  // A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
   slNode * A   = new slNode( 3 );
   slNode * A_1 = new slNode( 7 );
   slNode * B   = new slNode( 99 );
@@ -513,7 +477,7 @@ TEST( Problem_20, Test_Case_1 )
 
 TEST( Problem_20, Test_Case_2 )
 {
-  //A = 3 -> 7 -> 16 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
+  // A = 3 -> 7 -> 16 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
   slNode * A   = new slNode( 3 );
   slNode * A_1 = new slNode( 7 );
   slNode * A_2 = new slNode( 16 );
@@ -536,7 +500,9 @@ TEST( Problem_20, Test_Case_2 )
 
 TEST( Problem_21, Given_Case )
 {
-  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ), std::make_pair( 60, 150 ) };
+  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ),
+                                                std::make_pair( 0, 50 ),
+                                                std::make_pair( 60, 150 ) };
   int                              roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 2 );
@@ -544,8 +510,10 @@ TEST( Problem_21, Given_Case )
 
 TEST( Problem_21, Test_Case )
 {
-  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ), std::make_pair( 50, 75 ) };
-  int                              roomsNeeded = findMinRoomsNeeded( schedule );
+  std::vector<std::pair<int, int>> schedule = {
+    std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ), std::make_pair( 50, 75 )
+  };
+  int roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 3 );
 }
