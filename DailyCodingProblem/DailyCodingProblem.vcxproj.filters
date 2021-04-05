@@ -71,7 +71,7 @@
     <ClInclude Include="Problem_17.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Futils.h">
+    <ClInclude Include="FUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Problem_18.h">

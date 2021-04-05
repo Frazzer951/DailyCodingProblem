@@ -24,7 +24,7 @@ char findMin( std::map<char, int> m )
   return key;
 }
 
-int longest_substring_with_k_distinct_characters( std::string s, int k )
+int longest_substring_with_k_distinct_characters( std::string s, unsigned int k )
 {
   if( k == 0 ) return 0;
 
@@ -32,7 +32,7 @@ int longest_substring_with_k_distinct_characters( std::string s, int k )
   std::map<char, int> h;
   int                 max_length = 0;
   int                 new_lower_bounds;
-  for( int i = 0; i < s.size(); ++i )
+  for( unsigned int i = 0; i < s.size(); ++i )
   {
     h[s[i]] = i;
     if( h.size() <= k )

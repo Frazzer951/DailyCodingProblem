@@ -9,7 +9,7 @@ std::vector<std::string> split( std::string str, char delim = ' ' )
 {
   std::vector<std::string> split_str;
   std::string              word;
-  int                      i = 0;
+  unsigned int             i = 0;
   while( i < str.length() )
   {
     if( str[i] == delim )
@@ -30,7 +30,7 @@ std::vector<std::string> split( std::string str, char delim = ' ' )
 int getIntVecMax( std::vector<int> v )
 {
   int max = v[0];
-  for( int i = 0; i < v.size(); ++i )
+  for( unsigned int i = 0; i < v.size(); ++i )
   {
     if( v[i] > max ) { max = v[i]; }
   }
@@ -40,7 +40,7 @@ int getIntVecMax( std::vector<int> v )
 std::string intVecToStr( std::vector<int> v )
 {
   std::string str;
-  for( int i = 0; i < v.size(); ++i )
+  for( unsigned int i = 0; i < v.size(); ++i )
   {
     str += std::to_string( v[i] ) + ' ';
   }

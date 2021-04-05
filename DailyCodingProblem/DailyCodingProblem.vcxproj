@@ -149,7 +149,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Futils.h" />
+    <ClInclude Include="FUtils.h" />
     <ClInclude Include="Problem_1.h" />
     <ClInclude Include="Problem_10.h" />
     <ClInclude Include="Problem_11.h" />

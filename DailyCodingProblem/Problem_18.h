@@ -21,7 +21,7 @@ std::vector<int> compSubArrMax( std::vector<int> arr, int k )
 {
   std::vector<int> returnVec;
 
-  for( int i = 0; i + k <= arr.size(); ++i )
+  for( unsigned int i = 0; i + k <= arr.size(); ++i )
   {
     std::vector<int> subVec;
     for( int j = 0; j < k; ++j )
