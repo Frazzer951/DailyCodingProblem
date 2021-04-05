@@ -15,7 +15,7 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 #include <iostream>
 #include <vector>
 
-#include "Futils.h"
+#include "FUtils.h"
 
 std::vector<int> compSubArrMax( std::vector<int> arr, int k )
 {
