@@ -13,6 +13,7 @@
 #include "Problem_18.h"
 #include "Problem_19.h"
 #include "Problem_2.h"
+#include "Problem_20.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -22,15 +23,6 @@
 #include "Problem_9.h"
 
 #include "gtest/gtest.h"
-
-/*
-std::vector<std::string> split( std::string str, char delim = ' ' )
-
-
-int getIntVecMax( std::vector<int> v )
-
-std::string intVecToStr( std::vector<int> v )
-*/
 
 // FUtils
 TEST( FUtils, split )
@@ -97,6 +89,38 @@ TEST( FUtils, intVecToStr )
   str          = intVecToStr( vec );
 
   EXPECT_EQ( str, expected_str );
+}
+
+TEST( FUtils, slNode )
+{
+  slNode * root    = new slNode( 10 );
+  slNode * node    = new slNode( 3 );
+  slNode * node2   = new slNode( 8 );
+  root->next       = node;
+  root->next->next = node2;
+
+  EXPECT_EQ( root->value, 10 );
+  EXPECT_EQ( root->next->value, 3 );
+  EXPECT_EQ( root->next->next->value, 8 );
+}
+
+TEST( FUtils, slList )
+{
+  slList   list;
+  slNode * node  = new slNode( 3 );
+  slNode * node2 = new slNode( 8 );
+
+  list.add( node );
+  list.add( node2 );
+
+  EXPECT_EQ( list.head, node );
+  EXPECT_EQ( list.tail, node2 );
+
+  EXPECT_EQ( list.get( 0 ), node );
+  EXPECT_EQ( list.get( 0 )->value, node->value );
+
+  EXPECT_EQ( list.get( 1 ), node2 );
+  EXPECT_EQ( list.get( 1 )->value, node2->value );
 }
 
 // Problem 1
@@ -462,4 +486,49 @@ TEST( Problem_19, Test_Case_2 )
   auto cost = build_houses( vec );
 
   EXPECT_EQ( cost, 26 );
+}
+
+// Problem 20
+TEST( Problem_20, Test_Case_1 )
+{
+  //A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
+  slNode * A   = new slNode( 3 );
+  slNode * A_1 = new slNode( 7 );
+  slNode * B   = new slNode( 99 );
+  slNode * B_1 = new slNode( 1 );
+  slNode * C   = new slNode( 8 );
+  slNode * D   = new slNode( 10 );
+
+  A->next   = A_1;
+  A_1->next = C;
+  B->next   = B_1;
+  B_1->next = C;
+  C->next   = D;
+
+  slNode * intersect = findNodeIntersect( A, B );
+
+  EXPECT_EQ( intersect, C );
+}
+
+TEST( Problem_20, Test_Case_2 )
+{
+  //A = 3 -> 7 -> 16 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
+  slNode * A   = new slNode( 3 );
+  slNode * A_1 = new slNode( 7 );
+  slNode * A_2 = new slNode( 16 );
+  slNode * B   = new slNode( 99 );
+  slNode * B_1 = new slNode( 1 );
+  slNode * C   = new slNode( 8 );
+  slNode * D   = new slNode( 10 );
+
+  A->next   = A_1;
+  A_1->next = A_2;
+  A_2->next = C;
+  B->next   = B_1;
+  B_1->next = C;
+  C->next   = D;
+
+  slNode * intersect = findNodeIntersect( A, B );
+
+  EXPECT_EQ( intersect, C );
 }

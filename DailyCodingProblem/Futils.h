@@ -57,3 +57,60 @@ std::string intVecToStr( std::vector<int> v )
   }
   return str;
 }
+
+struct slNode
+{
+  int      value;
+  slNode * next;
+
+  slNode( int x )
+  {
+    value = x;
+    next  = NULL;
+  }
+};
+
+class slList
+{
+public:
+  slNode * head;
+  slNode * tail;
+
+  slList()
+  {
+    head = NULL;
+    tail = NULL;
+  }
+
+  void add( slNode * node )
+  {
+    if( head == NULL )
+    {
+      head = node;
+      tail = node;
+    }
+    else
+    {
+      tail->next = node;
+      node->next = NULL;
+      tail       = node;
+    }
+  }
+
+  slNode * get( int index )
+  {
+    slNode * node = head;
+    for( int i = 0; i < index; ++i )
+    {
+      if( node->next )
+      {
+        node = node->next;
+      }
+      else
+      {
+        throw "Linked List index out of range";
+      }
+    }
+    return node;
+  };
+};
