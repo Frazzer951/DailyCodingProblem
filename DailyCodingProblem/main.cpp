@@ -17,26 +17,40 @@
 #include "Problem_8.h"
 #include "Problem_9.h"
 
-int main()
-{
-  prob_1();
-  prob_2();
-  prob_3();
-  prob_4();
-  prob_5();
-  prob_6();
-  prob_7();
-  prob_8();
-  prob_9();
-  prob_10();
-  prob_11();
-  prob_12();
-  prob_13();
-  prob_14();
-  prob_15();
-  prob_16();
-  prob_17();
-  prob_18();
+#include "gtest/gtest.h"
 
-  return 0;
+
+TEST( Problem_1, Given_Case )
+{
+  EXPECT_TRUE( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) );
 }
+
+TEST( Problem_1, Custom_Case )
+{
+  EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11 ) );
+}
+
+
+//int main()
+//{
+//  prob_1();
+//  prob_2();
+//  prob_3();
+//  prob_4();
+//  prob_5();
+//  prob_6();
+//  prob_7();
+//  prob_8();
+//  prob_9();
+//  prob_10();
+//  prob_11();
+//  prob_12();
+//  prob_13();
+//  prob_14();
+//  prob_15();
+//  prob_16();
+//  prob_17();
+//  prob_18();
+//
+//  return 0;
+//}
