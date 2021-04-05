@@ -37,6 +37,17 @@ int getIntVecMax( std::vector<int> v )
   return max;
 }
 
+int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
+{
+  int min = ( exclude_index == 0 ) ? v[1] : v[0];
+  for( unsigned int i = 0; i < v.size(); ++i )
+  {
+    if( i == exclude_index ) continue;
+    if( v[i] < min ) { min = v[i]; }
+  }
+  return min;
+}
+
 std::string intVecToStr( std::vector<int> v )
 {
   std::string str;

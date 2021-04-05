@@ -77,6 +77,9 @@
     <ClInclude Include="Problem_18.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Problem_19.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,6 +11,7 @@
 #include "Problem_16.h"
 #include "Problem_17.h"
 #include "Problem_18.h"
+#include "Problem_19.h"
 #include "Problem_2.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
@@ -60,6 +61,27 @@ TEST( FUtils, getIntVecMax )
   max_val      = getIntVecMax( vec );
 
   EXPECT_EQ( max_val, expected_max );
+}
+
+TEST( FUtils, getIntVecMin )
+{
+  std::vector<int> vec          = { 1, 5, 3, 7, 5, 9 };
+  int              expected_min = 1;
+  int              min_val      = getIntVecMin( vec );
+
+  EXPECT_EQ( min_val, expected_min );
+
+  vec          = { -5, -2, -8 };
+  expected_min = -8;
+  min_val      = getIntVecMin( vec );
+
+  EXPECT_EQ( min_val, expected_min );
+
+  vec          = { -5, -2, -8 };
+  expected_min = -5;
+  min_val      = getIntVecMin( vec, 2 );
+
+  EXPECT_EQ( min_val, expected_min );
 }
 
 TEST( FUtils, intVecToStr )
@@ -417,4 +439,27 @@ TEST( Problem_18, Given_Case )
   std::vector<int> expected = { 10, 7, 8, 8 };
 
   EXPECT_EQ( max_vals, expected );
+}
+
+// Problem 19
+TEST( Problem_19, Test_Case_1 )
+{
+  std::vector<std::vector<int>> vec = {
+      { 10, 15, 20 },
+      { 14, 47, 6 },
+      { 2, 7, 10 } };
+  auto cost = build_houses( vec );
+
+  EXPECT_EQ( cost, 18 );
+}
+
+TEST( Problem_19, Test_Case_2 )
+{
+  std::vector<std::vector<int>> vec = {
+      { 10, 15, 20 },
+      { 6, 47, 14 },
+      { 2, 7, 10 } };
+  auto cost = build_houses( vec );
+
+  EXPECT_EQ( cost, 26 );
 }
