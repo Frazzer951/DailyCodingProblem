@@ -14,6 +14,7 @@
 #include "Problem_19.h"
 #include "Problem_2.h"
 #include "Problem_20.h"
+#include "Problem_21.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -531,4 +532,20 @@ TEST( Problem_20, Test_Case_2 )
   slNode * intersect = findNodeIntersect( A, B );
 
   EXPECT_EQ( intersect, C );
+}
+
+TEST( Problem_21, Given_Case )
+{
+  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ), std::make_pair( 60, 150 ) };
+  int                              roomsNeeded = findMinRoomsNeeded( schedule );
+
+  EXPECT_EQ( roomsNeeded, 2 );
+}
+
+TEST( Problem_21, Test_Case )
+{
+  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ), std::make_pair( 50, 75 ) };
+  int                              roomsNeeded = findMinRoomsNeeded( schedule );
+
+  EXPECT_EQ( roomsNeeded, 3 );
 }
