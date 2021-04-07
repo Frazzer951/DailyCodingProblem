@@ -16,6 +16,7 @@
 #include "Problem_20.h"
 #include "Problem_21.h"
 #include "Problem_22.h"
+#include "Problem_23.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -545,4 +546,42 @@ TEST( Problem_22, Given_Case_2 )
   auto                     result   = decompressString( wordSet, str );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 23
+TEST( Problem_23, Given_Case )
+{
+  /*
+  [[f, f, f, f],
+   [t, t, f, t],
+   [f, f, f, f],
+   [f, f, f, f]]
+  and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number of steps required to reach the end is
+  7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.
+  */
+
+  std::vector<std::vector<bool>> maze = { { false, false, false, false },
+                                          { true, true, false, true },
+                                          { false, false, false, false },
+                                          { false, false, false, false } };
+  std::pair<int, int>            startPos( 3, 0 );
+  std::pair<int, int>            endPos( 0, 0 );
+  int                            expectedMoves = 7;
+  int                            moves         = stepsToSolveMaze( maze, startPos, endPos );
+
+  EXPECT_EQ( moves, expectedMoves );
+}
+
+TEST( Problem_23, Test_Case )
+{
+  std::vector<std::vector<bool>> maze = { { false, false, false, false },
+                                          { true, true, false, true },
+                                          { false, false, false, false },
+                                          { false, false, false, false } };
+  std::pair<int, int>            startPos( 3, 3 );
+  std::pair<int, int>            endPos( 0, 0 );
+  int                            expectedMoves = 6;
+  int                            moves         = stepsToSolveMaze( maze, startPos, endPos );
+
+  EXPECT_EQ( moves, expectedMoves );
 }
