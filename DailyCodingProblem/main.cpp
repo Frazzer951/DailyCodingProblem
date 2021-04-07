@@ -15,6 +15,7 @@
 #include "Problem_2.h"
 #include "Problem_20.h"
 #include "Problem_21.h"
+#include "Problem_22.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -498,6 +499,7 @@ TEST( Problem_20, Test_Case_2 )
   EXPECT_EQ( intersect, C );
 }
 
+// Problem 21
 TEST( Problem_21, Given_Case )
 {
   std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ),
@@ -516,4 +518,31 @@ TEST( Problem_21, Test_Case )
   int roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 3 );
+}
+
+// Problem 22
+TEST( Problem_22, Given_Case_1 )
+{
+  // For example, given the set of words 'quick', 'brown', 'the', 'fox', and the string "thequickbrownfox", you should
+  // return ['the', 'quick', 'brown', 'fox'].
+
+  std::vector<std::string> wordSet  = { "quick", "brown", "the", "fox" };
+  std::string              str      = "thequickbrownfox";
+  std::vector<std::string> expected = { "the", "quick", "brown", "fox" };
+  auto                     result   = decompressString( wordSet, str );
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_22, Given_Case_2 )
+{
+  // Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string "bedbathandbeyond", return either
+  // ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
+
+  std::vector<std::string> wordSet  = { "bed", "bath", "bedbath", "and", "beyond" };
+  std::string              str      = "bedbathandbeyond";
+  std::vector<std::string> expected = { "bed", "bath", "and", "beyond" };
+  auto                     result   = decompressString( wordSet, str );
+
+  EXPECT_EQ( result, expected );
 }
