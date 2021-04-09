@@ -18,6 +18,7 @@
 #include "Problem_22.h"
 #include "Problem_23.h"
 #include "Problem_24.h"
+#include "Problem_25.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -622,4 +623,17 @@ TEST( Problem_24, Test_Case )
   EXPECT_TRUE( h->lock() );
 
   EXPECT_FALSE( root->lock() );
+}
+
+// Problem 25
+TEST( Problem_25, Given_Case_1 )
+{
+  EXPECT_TRUE( regex( "ray", "ra." ) );
+  EXPECT_FALSE( regex( "raymond", "ra." ) );
+}
+
+TEST( Problem_25, Given_Case_2 )
+{
+  EXPECT_TRUE( regex( "chat", ".*at" ) );
+  EXPECT_FALSE( regex( "chats", ".*at" ) );
 }
