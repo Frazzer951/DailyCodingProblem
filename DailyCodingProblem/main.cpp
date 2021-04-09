@@ -17,6 +17,7 @@
 #include "Problem_21.h"
 #include "Problem_22.h"
 #include "Problem_23.h"
+#include "Problem_24.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -584,4 +585,41 @@ TEST( Problem_23, Test_Case )
   int                            moves         = stepsToSolveMaze( maze, startPos, endPos );
 
   EXPECT_EQ( moves, expectedMoves );
+}
+
+// Problem 24
+TEST( Problem_24, Test_Case )
+{
+  lbtNode * root = new lbtNode( 10 );
+  lbtNode * a    = new lbtNode( 12 );
+  lbtNode * b    = new lbtNode( 34 );
+  lbtNode * c    = new lbtNode( 75 );
+  lbtNode * d    = new lbtNode( 11 );
+  lbtNode * e    = new lbtNode( 28 );
+  lbtNode * f    = new lbtNode( 19 );
+  lbtNode * g    = new lbtNode( 23 );
+  lbtNode * h    = new lbtNode( 99 );
+
+  root->setLeft( a );
+  root->setRight( b );
+  a->setLeft( c );
+  a->setRight( d );
+  c->setLeft( e );
+  b->setRight( f );
+  b->setLeft( g );
+  f->setLeft( h );
+
+  EXPECT_FALSE( root->isLocked() );
+  EXPECT_TRUE( root->lock() );
+  EXPECT_TRUE( root->isLocked() );
+
+  EXPECT_FALSE( e->lock() );
+  EXPECT_FALSE( h->lock() );
+
+  EXPECT_TRUE( root->unlock() );
+
+  EXPECT_TRUE( e->lock() );
+  EXPECT_TRUE( h->lock() );
+
+  EXPECT_FALSE( root->lock() );
 }
