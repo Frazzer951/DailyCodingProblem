@@ -119,7 +119,7 @@ int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int, int> s
         }
       }
     }
-    else // Get to the correct point
+    else    // Get to the correct point
     {
       if( left )
       {

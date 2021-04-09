@@ -64,10 +64,10 @@ int prob_9()
   std::cout << "\nProblem 9\n";
   std::cout << "This will only work on the given test cases and specific sceneries\n";
 
-  testVector( { 2, 4, 6, 2, 5 } );        // Sum is 13
-  testVector( { 5, 1, 1, 5 } );           // Sum is 10
-  testVector( { 5, 1, 1, 5, 1, 3 } );     // Sum is 13
-  testVector( { 1, 7, 3, 4, 1, 1, 10 } ); // Sum is 21
+  testVector( { 2, 4, 6, 2, 5 } );           // Sum is 13
+  testVector( { 5, 1, 1, 5 } );              // Sum is 10
+  testVector( { 5, 1, 1, 5, 1, 3 } );        // Sum is 13
+  testVector( { 1, 7, 3, 4, 1, 1, 10 } );    // Sum is 21
 
   return 0;
 }

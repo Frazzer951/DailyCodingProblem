@@ -78,7 +78,7 @@ SerNode * deserialize( std::string str )
 
   std::string nodes = str.substr( colon_index + 1 );
 
-  if( nodes.size() == 2 ) { return new SerNode( node_name ); } // If there are no sub nodes return empty node
+  if( nodes.size() == 2 ) { return new SerNode( node_name ); }    // If there are no sub nodes return empty node
 
   auto comma_index = nodes.find( ',' );
 

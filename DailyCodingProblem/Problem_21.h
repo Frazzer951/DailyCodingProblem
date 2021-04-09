@@ -18,9 +18,7 @@ int findMinRoomsNeeded( std::vector<std::pair<int, int>> schedule )
   for( unsigned int i = 1; i < schedule.size(); ++i )
   {
     auto comClass = schedule[i];
-    if( ( curClass.first >= comClass.first && curClass.first < comClass.second ) ||
-        ( curClass.second > comClass.first && curClass.second <= comClass.second ) ||
-        ( curClass.first < comClass.first && curClass.second > comClass.second ) )
+    if( ( curClass.first >= comClass.first && curClass.first < comClass.second ) || ( curClass.second > comClass.first && curClass.second <= comClass.second ) || ( curClass.first < comClass.first && curClass.second > comClass.second ) )
     {
       conflictingLecture.push_back( schedule[i] );
     }

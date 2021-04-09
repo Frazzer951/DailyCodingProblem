@@ -23,7 +23,7 @@ struct xNode
   }
 };
 
-xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
+xNode * xorNode( xNode * a, xNode * b ) { return (xNode *)( (uintptr_t)a ^ (uintptr_t)b ); }
 
 class xor_list
 {

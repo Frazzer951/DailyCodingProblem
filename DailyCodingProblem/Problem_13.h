@@ -37,7 +37,7 @@ int longest_substring_with_k_distinct_characters( std::string s, unsigned int k 
     h[s[i]] = i;
     if( h.size() <= k )
     {
-      new_lower_bounds = bounds[0]; // Lower bound remains the same
+      new_lower_bounds = bounds[0];    // Lower bound remains the same
     }
     else
     {
