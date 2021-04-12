@@ -20,6 +20,7 @@
 #include "Problem_24.h"
 #include "Problem_25.h"
 #include "Problem_26.h"
+#include "Problem_27.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -653,4 +654,14 @@ TEST( Problem_26, Test_Case )
   auto rmNode = getKthLastNode( list, 2 );
 
   EXPECT_EQ( rmNode->value, 4 );
+}
+
+// Problem 27
+TEST( Problem_27, Given_Case )
+{
+  // For example, given the string "([])[]({})", you should return true.
+  // Given the string "([)]" or "((()", you should return false.
+  EXPECT_TRUE( isBallancedString( "([])[]({})" ) );
+  EXPECT_FALSE( isBallancedString( "([)]" ) );
+  EXPECT_FALSE( isBallancedString( "((()" ) );
 }

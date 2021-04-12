@@ -10,7 +10,7 @@ Do this in constant space and in one pass.
 
 #include "FUtils.h"
 
-slNode * getKthLastNode( slList list, unsigned int k )
+slNode * getKthLastNode( slList list, int k )
 {
   slNode * slow = list.get( 0 );
   slNode * fast = list.get( 0 );
