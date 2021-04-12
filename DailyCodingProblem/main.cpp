@@ -21,6 +21,7 @@
 #include "Problem_25.h"
 #include "Problem_26.h"
 #include "Problem_27.h"
+#include "Problem_28.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -664,4 +665,19 @@ TEST( Problem_27, Given_Case )
   EXPECT_TRUE( isBallancedString( "([])[]({})" ) );
   EXPECT_FALSE( isBallancedString( "([)]" ) );
   EXPECT_FALSE( isBallancedString( "((()" ) );
+}
+
+// Problem 28
+TEST( Problem_28, Given_Case )
+{
+  //For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k = 16, you should return the following:
+  //["the  quick brown", # 1 extra space on the left
+  //"fox  jumps  over", # 2 extra spaces distributed evenly
+  //"the   lazy   dog"] # 4 extra spaces distributed evenly
+
+  std::vector<std::string> words            = { "the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog" };
+  std::vector<std::string> expected_strings = { "the  quick brown", "fox  jumps  over", "the   lazy   dog" };
+  auto                     returned_strings = padWords( words, 16 );
+
+  EXPECT_EQ( returned_strings, expected_strings );
 }
