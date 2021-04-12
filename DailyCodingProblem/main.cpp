@@ -19,6 +19,7 @@
 #include "Problem_23.h"
 #include "Problem_24.h"
 #include "Problem_25.h"
+#include "Problem_26.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -637,4 +638,19 @@ TEST( Problem_25, Given_Case_2 )
 {
   EXPECT_TRUE( regex( "chat", ".*at" ) );
   EXPECT_FALSE( regex( "chats", ".*at" ) );
+}
+
+// Problem 26
+TEST( Problem_26, Test_Case )
+{
+  slList list;
+  list.add( new slNode( 1 ) );
+  list.add( new slNode( 2 ) );
+  list.add( new slNode( 3 ) );
+  list.add( new slNode( 4 ) );
+  list.add( new slNode( 5 ) );
+
+  auto rmNode = getKthLastNode( list, 2 );
+
+  EXPECT_EQ( rmNode->value, 4 );
 }
