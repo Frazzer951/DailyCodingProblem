@@ -22,6 +22,7 @@
 #include "Problem_26.h"
 #include "Problem_27.h"
 #include "Problem_28.h"
+#include "Problem_29.h"
 #include "Problem_3.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
@@ -670,7 +671,8 @@ TEST( Problem_27, Given_Case )
 // Problem 28
 TEST( Problem_28, Given_Case )
 {
-  //For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k = 16, you should return the following:
+  // For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k
+  // = 16, you should return the following:
   //["the  quick brown", # 1 extra space on the left
   //"fox  jumps  over", # 2 extra spaces distributed evenly
   //"the   lazy   dog"] # 4 extra spaces distributed evenly
@@ -680,4 +682,27 @@ TEST( Problem_28, Given_Case )
   auto                     returned_strings = padWords( words, 16 );
 
   EXPECT_EQ( returned_strings, expected_strings );
+}
+
+// Problem 29
+TEST( Problem_29, Given_case )
+{
+  std::string expected_encode = "4A3B2C1D2A";
+  std::string expected_decode = "AAAABBBCCDAA";
+  std::string encode          = runLengthEncode( "AAAABBBCCDAA" );
+  std::string decode          = runLengthDecode( encode );
+
+  EXPECT_EQ( encode, expected_encode );
+  EXPECT_EQ( decode, expected_decode );
+}
+
+TEST( Problem_29, Test_case )
+{
+  std::string expected_encode = "2B3G2R1E";
+  std::string expected_decode = "BBGGGRRE";
+  std::string encode          = runLengthEncode( "BBGGGRRE" );
+  std::string decode          = runLengthDecode( encode );
+
+  EXPECT_EQ( encode, expected_encode );
+  EXPECT_EQ( decode, expected_decode );
 }
