@@ -24,6 +24,7 @@
 #include "Problem_28.h"
 #include "Problem_29.h"
 #include "Problem_3.h"
+#include "Problem_30.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -705,4 +706,21 @@ TEST( Problem_29, Test_case )
 
   EXPECT_EQ( encode, expected_encode );
   EXPECT_EQ( decode, expected_decode );
+}
+
+// Problem 30
+TEST( Problem_30, Given_Case_1 )
+{
+  // [2, 1, 2] = 1 unit of water
+  int unitWater = waterHeightMap( { 2, 1, 2 } );
+
+  EXPECT_EQ( unitWater, 1 );
+}
+
+TEST( Problem_30, Given_Case_2 )
+{
+  // [3, 0, 1, 3, 0, 5] = 8 unit of water
+  int unitWater = waterHeightMap( { 3, 0, 1, 3, 0, 5 } );
+
+  EXPECT_EQ( unitWater, 8 );
 }

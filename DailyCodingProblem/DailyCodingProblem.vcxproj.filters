@@ -110,6 +110,9 @@
     <ClInclude Include="Problem_29.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Problem_30.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
