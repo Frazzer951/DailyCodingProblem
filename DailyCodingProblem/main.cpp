@@ -27,6 +27,7 @@
 #include "Problem_30.h"
 #include "Problem_31.h"
 #include "Problem_32.h"
+#include "Problem_33.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -739,3 +740,15 @@ TEST( Problem_31, Given_Case )
 
 // Problem 32
 TEST( Problem_32, Given_Case ) { FAIL(); }
+
+// Problem 33
+TEST( Problem_33, Given_Case )
+{
+  // For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should print out:
+  // 2 1.5 2 3.5 2 2 2
+
+  std::vector<double> result   = runningMedian( { 2, 1, 5, 7, 2, 0, 5 } );
+  std::vector<double> expected = { 2, 1.5, 2, 3.5, 2, 2, 2 };
+
+  EXPECT_EQ( result, expected );
+}
