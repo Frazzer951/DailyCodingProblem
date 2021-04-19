@@ -16,7 +16,7 @@ which achieves this goal.
 
 int build_houses( std::vector<std::vector<int>> matrix )
 {
-  int              k = matrix[0].size();
+  auto             k = matrix[0].size();
   std::vector<int> soln_row( k, 0 );
 
   for( auto row : matrix )
