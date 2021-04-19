@@ -28,6 +28,7 @@
 #include "Problem_31.h"
 #include "Problem_32.h"
 #include "Problem_33.h"
+#include "Problem_34.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -751,4 +752,21 @@ TEST( Problem_33, Given_Case )
   std::vector<double> expected = { 2, 1.5, 2, 3.5, 2, 2, 2 };
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 34
+TEST( Problem_34, Given_Case_1 )
+{
+  std::string result   = makePalindrome( "race" );
+  std::string expected = "ecarace";
+
+  EXPECT_EQ(result, expected);
+}
+
+TEST( Problem_34, Given_Case_2 )
+{
+  std::string result   = makePalindrome( "google" );
+  std::string expected = "elgoogle";
+
+  EXPECT_EQ(result, expected);
 }
