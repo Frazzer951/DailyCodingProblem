@@ -26,6 +26,7 @@
 #include "Problem_3.h"
 #include "Problem_30.h"
 #include "Problem_31.h"
+#include "Problem_32.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -735,3 +736,6 @@ TEST( Problem_31, Given_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 32
+TEST( Problem_32, Given_Case ) { FAIL(); }
