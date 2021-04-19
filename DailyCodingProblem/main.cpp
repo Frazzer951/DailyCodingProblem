@@ -25,6 +25,7 @@
 #include "Problem_29.h"
 #include "Problem_3.h"
 #include "Problem_30.h"
+#include "Problem_31.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -723,4 +724,14 @@ TEST( Problem_30, Given_Case_2 )
   int unitWater = waterHeightMap( { 3, 0, 1, 3, 0, 5 } );
 
   EXPECT_EQ( unitWater, 8 );
+}
+
+// Problem 31
+TEST( Problem_31, Given_Case )
+{
+  //“kitten” and “sitting” is three
+  int result   = distance( "kitten", "sitting" );
+  int expected = 3;
+
+  EXPECT_EQ( result, expected );
 }

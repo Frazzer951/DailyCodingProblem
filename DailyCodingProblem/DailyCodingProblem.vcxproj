@@ -173,6 +173,7 @@
     <ClInclude Include="Problem_29.h" />
     <ClInclude Include="Problem_3.h" />
     <ClInclude Include="Problem_30.h" />
+    <ClInclude Include="Problem_31.h" />
     <ClInclude Include="Problem_4.h" />
     <ClInclude Include="Problem_5.h" />
     <ClInclude Include="Problem_6.h" />
