@@ -29,6 +29,7 @@
 #include "Problem_32.h"
 #include "Problem_33.h"
 #include "Problem_34.h"
+#include "Problem_35.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -760,7 +761,7 @@ TEST( Problem_34, Given_Case_1 )
   std::string result   = makePalindrome( "race" );
   std::string expected = "ecarace";
 
-  EXPECT_EQ(result, expected);
+  EXPECT_EQ( result, expected );
 }
 
 TEST( Problem_34, Given_Case_2 )
@@ -768,5 +769,15 @@ TEST( Problem_34, Given_Case_2 )
   std::string result   = makePalindrome( "google" );
   std::string expected = "elgoogle";
 
-  EXPECT_EQ(result, expected);
+  EXPECT_EQ( result, expected );
+}
+
+// Problem 35
+TEST( Problem_35, Given_Case )
+{
+  std::vector<char> result = { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
+  rgbSort( result );
+  std::vector<char> expected = { 'R', 'R', 'R', 'G', 'G', 'B', 'B' };
+
+  EXPECT_EQ( result, expected );
 }
