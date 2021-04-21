@@ -26,7 +26,6 @@ public:
     left = right = NULL;
   }
 
-
   // Insert function.
   BST * Insert( BST * root, int value )
   {
