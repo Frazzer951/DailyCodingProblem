@@ -31,6 +31,7 @@
 #include "Problem_34.h"
 #include "Problem_35.h"
 #include "Problem_36.h"
+#include "Problem_37.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -795,6 +796,16 @@ TEST( Problem_36, Test_Case )
 
   int result   = findSecondLargetNode( tree );
   int expected = 50;
+
+  EXPECT_EQ( result, expected );
+}
+
+// Problem 37
+TEST( Problem_37, Given_Case )
+{
+  // {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+  auto                          result   = getPowderSet( { 1, 2, 3 } );
+  std::vector<std::vector<int>> expected = { {}, { 1 }, { 2 }, { 1, 2 }, { 3 }, { 1, 3 }, { 2, 3 }, { 1, 2, 3 } };
 
   EXPECT_EQ( result, expected );
 }
