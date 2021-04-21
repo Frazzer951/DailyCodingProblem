@@ -30,6 +30,7 @@
 #include "Problem_33.h"
 #include "Problem_34.h"
 #include "Problem_35.h"
+#include "Problem_36.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -778,6 +779,22 @@ TEST( Problem_35, Given_Case )
   std::vector<char> result = { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
   rgbSort( result );
   std::vector<char> expected = { 'R', 'R', 'R', 'G', 'G', 'B', 'B' };
+
+  EXPECT_EQ( result, expected );
+}
+
+// Problem 36
+TEST( Problem_36, Test_Case )
+{
+  BST * tree = new BST( 10 );
+  tree->Insert( tree, 6 );
+  tree->Insert( tree, 14 );
+  tree->Insert( tree, 67 );
+  tree->Insert( tree, 14 );
+  tree->Insert( tree, 50 );
+
+  int result   = findSecondLargetNode( tree );
+  int expected = 50;
 
   EXPECT_EQ( result, expected );
 }
