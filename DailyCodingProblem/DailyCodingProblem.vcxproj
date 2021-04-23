@@ -184,6 +184,7 @@
     <ClInclude Include="Problem_35.h" />
     <ClInclude Include="Problem_36.h" />
     <ClInclude Include="Problem_37.h" />
+    <ClInclude Include="Problem_38.h" />
     <ClInclude Include="Problem_4.h" />
     <ClInclude Include="Problem_5.h" />
     <ClInclude Include="Problem_6.h" />
