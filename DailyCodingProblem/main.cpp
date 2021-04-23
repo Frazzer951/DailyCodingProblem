@@ -33,6 +33,7 @@
 #include "Problem_36.h"
 #include "Problem_37.h"
 #include "Problem_38.h"
+#include "Problem_39.h"
 #include "Problem_4.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
@@ -834,4 +835,11 @@ TEST( Problem_38, Test_Case_3 )
   int expected = 92;
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 39
+TEST( Problem_39, Test_Case )
+{
+  CGOL();
+  FAIL();
 }
