@@ -37,6 +37,7 @@
 #include "Problem_4.h"
 #include "Problem_40.h"
 #include "Problem_41.h"
+#include "Problem_42.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
 #include "Problem_7.h"
@@ -906,6 +907,16 @@ TEST( Problem_41, Given_Case_3 )
 
   std::vector<std::string> result   = getItinerary( flights, "A" );
   std::vector<std::string> expected = { "A", "B", "C", "A", "C" };
+
+  EXPECT_EQ( result, expected );
+}
+
+// Problem 42
+TEST( Problem_42, Given_Case )
+{
+  // given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24
+  auto             result   = subset_sum( { 12, 1, 61, 5, 9, 2 }, 24 );
+  std::vector<int> expected = { 12, 1, 9, 2 };
 
   EXPECT_EQ( result, expected );
 }
