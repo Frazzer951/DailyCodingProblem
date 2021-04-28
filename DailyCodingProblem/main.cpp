@@ -739,7 +739,7 @@ TEST( Problem_30, Given_Case_2 )
 TEST( Problem_31, Given_Case )
 {
   //“kitten” and “sitting” is three
-  int result   = distance( "kitten", "sitting" );
+  int result   = strDistance( "kitten", "sitting" );
   int expected = 3;
 
   EXPECT_EQ( result, expected );
