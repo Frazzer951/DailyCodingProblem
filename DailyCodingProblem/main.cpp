@@ -38,6 +38,7 @@
 #include "Problem_40.h"
 #include "Problem_41.h"
 #include "Problem_42.h"
+#include "Problem_43.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
 #include "Problem_7.h"
@@ -919,4 +920,51 @@ TEST( Problem_42, Given_Case )
   std::vector<int> expected = { 12, 1, 9, 2 };
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 43
+TEST( Problem_43, Test_Push )
+{
+  stack testStack;
+  testStack.push( 10 );
+
+  EXPECT_EQ( testStack.top->val, 10 );
+}
+
+TEST( Problem_43, Test_Pop )
+{
+  stack testStack;
+  testStack.push( 15 );
+
+  int result   = testStack.pop();
+  int expected = 15;
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_43, Test_Pop_Exception )
+{
+  stack testStack;
+
+  EXPECT_ANY_THROW( testStack.pop() );
+}
+
+TEST( Problem_43, Test_getMax )
+{
+  stack testStack;
+  testStack.push( 15 );
+  testStack.push( 18 );
+  testStack.push( 2 );
+
+  int result   = testStack.getMax();
+  int expected = 18;
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_43, Test_getMax_Exception )
+{
+  stack testStack;
+
+  EXPECT_ANY_THROW( testStack.getMax() );
 }
