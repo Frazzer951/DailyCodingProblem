@@ -36,6 +36,7 @@
 #include "Problem_39.h"
 #include "Problem_4.h"
 #include "Problem_40.h"
+#include "Problem_41.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
 #include "Problem_7.h"
@@ -860,6 +861,51 @@ TEST( Problem_40, Given_Case_2 )
   // Given [13, 19, 13, 13], return 19.
   int result   = nonRepeatInt( { 13, 19, 13, 13 } );
   int expected = 19;
+
+  EXPECT_EQ( result, expected );
+}
+
+// Problem 41
+TEST( Problem_41, Given_Case_1 )
+{
+  // Given [('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')] and starting airport 'YUL',
+  // return ['YUL', 'YYZ', 'SFO', 'HKO', 'ORD'].
+
+  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "SFO", "HKO" ),
+                                                               std::make_pair( "YYZ", "SFO" ),
+                                                               std::make_pair( "YUL", "YYZ" ),
+                                                               std::make_pair( "HKO", "ORD" ) };
+
+  std::vector<std::string> result   = getItinerary( flights, "YUL" );
+  std::vector<std::string> expected = { "YUL", "YYZ", "SFO", "HKO", "ORD" };
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_41, Given_Case_2 )
+{
+  // Given [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 'COM', return null.
+
+  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "SFO", "COM" ),
+                                                               std::make_pair( "COM", "YYZ" ) };
+
+  std::vector<std::string> result   = getItinerary( flights, "COM" );
+  std::vector<std::string> expected = {};
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_41, Given_Case_3 )
+{
+  // Given [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', return ['A', 'B', 'C', 'A', 'C']
+
+  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "A", "B" ),
+                                                               std::make_pair( "A", "C" ),
+                                                               std::make_pair( "B", "C" ),
+                                                               std::make_pair( "C", "A" ) };
+
+  std::vector<std::string> result   = getItinerary( flights, "A" );
+  std::vector<std::string> expected = { "A", "B", "C", "A", "C" };
 
   EXPECT_EQ( result, expected );
 }
