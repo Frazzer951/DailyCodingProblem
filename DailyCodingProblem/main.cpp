@@ -35,6 +35,7 @@
 #include "Problem_38.h"
 #include "Problem_39.h"
 #include "Problem_4.h"
+#include "Problem_40.h"
 #include "Problem_5.h"
 #include "Problem_6.h"
 #include "Problem_7.h"
@@ -842,4 +843,23 @@ TEST( Problem_39, Test_Case )
 {
   CGOL();
   FAIL();
+}
+
+// Problem 40
+TEST( Problem_40, Given_Case_1 )
+{
+  // Given [6, 1, 3, 3, 3, 6, 6], return 1.
+  int result   = nonRepeatInt( { 6, 1, 3, 3, 3, 6, 6 } );
+  int expected = 1;
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_40, Given_Case_2 )
+{
+  // Given [13, 19, 13, 13], return 19.
+  int result   = nonRepeatInt( { 13, 19, 13, 13 } );
+  int expected = 19;
+
+  EXPECT_EQ( result, expected );
 }
