@@ -12,7 +12,7 @@ which achieves this goal.
 
 #include <vector>
 
-#include "FUtils.h"
+#include "FUtils.hpp"
 
 int build_houses( std::vector<std::vector<int>> matrix )
 {

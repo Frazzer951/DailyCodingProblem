@@ -17,7 +17,7 @@ You can simply print them out as you compute them.
 #include <iostream>
 #include <vector>
 
-#include "FUtils.h"
+#include "FUtils.hpp"
 
 std::vector<int> compSubArrMax( std::vector<int> arr, int k )
 {
