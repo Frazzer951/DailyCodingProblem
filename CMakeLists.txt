@@ -29,6 +29,6 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 include_directories(problems)
 include_directories(include)
 
-add_executable(${PROJECT_NAME} main.cpp "include/main.hpp")
+add_executable(${PROJECT_NAME} "src/main.cpp" )
 target_link_libraries(${PROJECT_NAME} gtest_main)
 
