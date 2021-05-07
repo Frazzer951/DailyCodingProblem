@@ -132,3 +132,11 @@ TEST( Problem_44, Given_Case_2 )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 45
+TEST( Problem_45, Test_Case )
+{
+  int result = rand7();
+
+  EXPECT_TRUE( ( result >= 1 ) && ( result <= 7 ) );
+}
