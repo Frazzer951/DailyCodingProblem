@@ -695,7 +695,7 @@ TEST( Problem_30, Given_Case_2 )
 // Problem 31
 TEST( Problem_31, Given_Case )
 {
-  //“kitten” and “sitting” is three
+  //ï¿½kittenï¿½ and ï¿½sittingï¿½ is three
   int result   = strDistance( "kitten", "sitting" );
   int expected = 3;
 

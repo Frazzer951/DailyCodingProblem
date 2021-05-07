@@ -27,11 +27,17 @@ public:
   SerNode *   _left;
   SerNode *   _right;
 
-  SerNode( std::string val ) { _val = val; }
+  SerNode( std::string val )
+  {
+    _val   = val;
+    _left  = nullptr;
+    _right = nullptr;
+  }
   SerNode( std::string val, SerNode * left )
   {
-    _val  = val;
-    _left = left;
+    _val   = val;
+    _left  = left;
+    _right = nullptr;
   }
   SerNode( std::string val, SerNode * left, SerNode * right )
   {
