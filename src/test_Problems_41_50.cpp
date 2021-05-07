@@ -226,3 +226,31 @@ TEST( Problem_49, Given_Case_2 )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 50
+TEST( Problem_50, Given_Case )
+{
+  /*
+  For example, given the following tree:
+
+      *
+     / \
+    +   +
+   / \ / \
+  3  2 4  5
+
+  You should return 45, as it is (3 + 2) * (4 + 5).
+  */
+  btNode root( '*' );
+  root.left         = new btNode( '+' );
+  root.right        = new btNode( '+' );
+  root.left->left   = new btNode( '3' );
+  root.left->right  = new btNode( '2' );
+  root.right->left  = new btNode( '4' );
+  root.right->right = new btNode( '5' );
+
+  int result   = evaluate( root );
+  int expected = 45;
+
+  EXPECT_EQ( result, expected );
+}
