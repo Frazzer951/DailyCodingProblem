@@ -140,3 +140,22 @@ TEST( Problem_45, Test_Case )
 
   EXPECT_TRUE( ( result >= 1 ) && ( result <= 7 ) );
 }
+
+// Problem 46
+TEST( Problem_46, Given_Case_1 )
+{
+  // "aabcdcb" is "bcdcb"
+  std::string result   = longest_palindrome( "aabcdcb" );
+  std::string expected = "bcdcb";
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_46, Given_Case_2 )
+{
+  // "bananas" is "anana"
+  std::string result   = longest_palindrome( "bananas" );
+  std::string expected = "anana";
+
+  EXPECT_EQ( result, expected );
+}
