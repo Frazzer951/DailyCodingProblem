@@ -207,3 +207,22 @@ TEST( Problem_48, Given_Case )
 
   EXPECT_EQ( result, a );
 }
+
+// Problem 49
+TEST( Problem_49, Given_Case_1 )
+{
+  // [34, -50, 42, 14, -5, 86], the maximum sum would be 137
+  int result   = max_subarray_sum( { 34, -50, 42, 14, -5, 86 } );
+  int expected = 137;
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_49, Given_Case_2 )
+{
+  // [-5, -1, -8, -9], the maximum sum would be 0
+  int result   = max_subarray_sum( { -5, -1, -8, -9 } );
+  int expected = 0;
+
+  EXPECT_EQ( result, expected );
+}

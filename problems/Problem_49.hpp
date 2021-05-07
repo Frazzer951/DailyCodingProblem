@@ -10,3 +10,16 @@ Given the array [-5, -1, -8, -9], the maximum sum would be 0, since we would not
 
 Do this in O(N) time.
 */
+
+#include <vector>
+
+int max_subarray_sum( std::vector<int> arr )
+{
+  int max_ending_here = 0, max_so_far = 0;
+  for( int x : arr )
+  {
+    max_ending_here = std::max( x, max_ending_here + x );
+    max_so_far      = std::max( max_so_far, max_ending_here );
+  }
+  return max_so_far;
+}
