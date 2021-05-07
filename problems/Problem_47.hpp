@@ -8,3 +8,18 @@ sell it.
 For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could buy the stock at 5 dollars and sell it at
 10 dollars.
 */
+
+#include <vector>
+
+int max_profit( std::vector<int> prices )
+{
+  int profit = 0;
+  for( int i = 0; i < prices.size() - 1; i++ )
+  {
+    for( int j = i; j < prices.size(); j++ )
+    {
+      if( prices[j] - prices[i] > profit ) profit = prices[j] - prices[i];
+    }
+  }
+  return profit;
+}

@@ -159,3 +159,21 @@ TEST( Problem_46, Given_Case_2 )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 47
+TEST( Problem_47, Given_Case )
+{
+  //[9, 11, 8, 5, 7, 10], you should return 5
+  int result   = max_profit( { 9, 11, 8, 5, 7, 10 } );
+  int expected = 5;
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_47, Test_Case )
+{
+  int result   = max_profit( { 10, 16, 7, 18, 5, 9 } );
+  int expected = 11;
+
+  EXPECT_EQ( result, expected );
+}
