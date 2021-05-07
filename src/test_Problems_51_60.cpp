@@ -1,5 +1,6 @@
 #include "Problem_51.hpp"
 #include "Problem_52.hpp"
+#include "Problem_53.hpp"
 
 #include "gtest/gtest.h"
 
@@ -38,4 +39,25 @@ TEST( Problem_52, CacheSizeTest )
   cache.set( "seven", "7" );
   EXPECT_EQ( cache.get( "seven" ), "7" );
   EXPECT_EQ( cache.get( "two" ), "" );
+}
+
+// Problem 53
+queue_s q;
+TEST( Problem_53, enqueue )
+{
+  EXPECT_NO_THROW( q.enqueue( 1 ) );
+  EXPECT_NO_THROW( q.enqueue( 2 ) );
+  EXPECT_NO_THROW( q.enqueue( 3 ) );
+  EXPECT_NO_THROW( q.enqueue( 4 ) );
+  EXPECT_NO_THROW( q.enqueue( 5 ) );
+}
+
+TEST( Problem_53, dequeue )
+{
+  EXPECT_EQ( q.dequeue(), 1 );
+  EXPECT_EQ( q.dequeue(), 2 );
+  EXPECT_EQ( q.dequeue(), 3 );
+  EXPECT_EQ( q.dequeue(), 4 );
+  EXPECT_EQ( q.dequeue(), 5 );
+  EXPECT_EQ( q.dequeue(), NULL );
 }
