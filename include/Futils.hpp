@@ -108,3 +108,22 @@ public:
     return node;
   };
 };
+
+struct btNode
+{
+  char     value;
+  btNode * left;
+  btNode * right;
+
+  btNode( char x )
+  {
+    value = x;
+    left  = NULL;
+    right = NULL;
+  }
+};
+
+inline bool operator==( const btNode & lhs, const btNode & rhs )
+{
+  return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;
+}

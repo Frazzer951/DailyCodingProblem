@@ -177,3 +177,33 @@ TEST( Problem_47, Test_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 48
+TEST( Problem_48, Given_Case )
+{
+  // For example, given the following preorder traversal:
+  // [a, b, d, e, c, f, g]
+  // And the following inorder traversal:
+  // [d, b, e, a, f, c, g]
+  // You should return the following tree:
+  //     a
+  //    / \
+  //   b   c
+  //  / \ / \
+  // d  e f  g
+
+  btNode * a = new btNode( 'a' );
+  btNode * b = new btNode( 'b' );
+  btNode * c = new btNode( 'c' );
+  btNode * d = new btNode( 'd' );
+  btNode * e = new btNode( 'e' );
+  btNode * f = new btNode( 'f' );
+  btNode * g = new btNode( 'g' );
+
+  std::vector<btNode *> preorder = { a, b, d, e, c, f, g };
+  std::vector<btNode *> inorder  = { d, b, e, a, f, c, g };
+
+  btNode * result = reconstruct( preorder, inorder );
+
+  EXPECT_EQ( result, a );
+}
