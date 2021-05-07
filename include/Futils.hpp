@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> split( std::string str, char delim = ' ' )
+inline std::vector<std::string> split( std::string str, char delim = ' ' )
 {
   std::vector<std::string> split_str;
   std::string              word;
@@ -27,7 +27,7 @@ std::vector<std::string> split( std::string str, char delim = ' ' )
   return split_str;
 }
 
-int getIntVecMax( std::vector<int> v )
+inline int getIntVecMax( std::vector<int> v )
 {
   int max = v[0];
   for( unsigned int i = 0; i < v.size(); ++i )
@@ -37,7 +37,7 @@ int getIntVecMax( std::vector<int> v )
   return max;
 }
 
-int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
+inline int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
 {
   int min = ( exclude_index == 0 ) ? v[1] : v[0];
   for( unsigned int i = 0; i < v.size(); ++i )
@@ -48,7 +48,7 @@ int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
   return min;
 }
 
-std::string intVecToStr( std::vector<int> v )
+inline std::string intVecToStr( std::vector<int> v )
 {
   std::string str;
   for( unsigned int i = 0; i < v.size(); ++i ) { str += std::to_string( v[i] ) + ' '; }

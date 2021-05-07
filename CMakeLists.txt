@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(DailyCodingProblem VERSION 1.0.0)
 
-SET(CMAKE_CXX_FLAGS "-std=c++17")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Download and unpack googletest at configure time
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -31,6 +32,10 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 include_directories(problems)
 include_directories(include)
 
-add_executable(${PROJECT_NAME} "src/main.cpp" )
+file(GLOB src_files
+     "src/*.cpp"
+)
+
+add_executable(${PROJECT_NAME} ${src_files} )
 target_link_libraries(${PROJECT_NAME} gtest_main)
 
