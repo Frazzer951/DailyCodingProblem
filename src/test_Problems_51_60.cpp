@@ -2,6 +2,7 @@
 #include "Problem_52.hpp"
 #include "Problem_53.hpp"
 #include "Problem_54.hpp"
+#include "Problem_55.hpp"
 
 #include "gtest/gtest.h"
 
@@ -164,4 +165,27 @@ TEST( Problem_54, test_case_1 )
   auto result_board = solveSudoku( test_board );
 
   EXPECT_EQ( result_board, expected_board );
+}
+
+// Problem 55
+URLShortener urls;
+TEST( Problem_55, shorten_restore )
+{
+  std::string url    = "www.google.com";
+  std::string result = urls.restore( urls.shorten( url ) );
+
+  EXPECT_EQ( result, url );
+}
+
+TEST( Problem_55, shorten_same_url )
+{
+  std::string url       = "www.frazzer.net";
+  std::string shorten_1 = urls.shorten( url );
+  std::string shorten_2 = urls.shorten( url );
+  std::string restore_1 = urls.restore( shorten_1 );
+  std::string restore_2 = urls.restore( shorten_2 );
+
+  EXPECT_EQ( shorten_1, shorten_2 );
+  EXPECT_EQ( url, restore_1 );
+  EXPECT_EQ( url, restore_2 );
 }
