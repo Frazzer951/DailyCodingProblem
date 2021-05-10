@@ -1,6 +1,7 @@
 #include "Problem_51.hpp"
 #include "Problem_52.hpp"
 #include "Problem_53.hpp"
+#include "Problem_54.hpp"
 
 #include "gtest/gtest.h"
 
@@ -60,4 +61,107 @@ TEST( Problem_53, dequeue )
   EXPECT_EQ( q.dequeue(), 4 );
   EXPECT_EQ( q.dequeue(), 5 );
   EXPECT_EQ( q.dequeue(), NULL );
+}
+
+// Problem 54
+TEST( Problem_54, valid_sudoku_1 )
+{
+  std::vector<std::vector<int>> test_board = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+
+  EXPECT_TRUE( valid_sudoku( test_board ) );
+}
+
+TEST( Problem_54, valid_sudoku_2 )
+{
+  std::vector<std::vector<int>> test_board = { { 5, 3, 4, 6, 7, 8, 9, 1, 2 },
+                                               { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
+                                               { 1, 9, 8, 3, 4, 2, 5, 6, 7 },
+                                               { 8, 5, 9, 7, 6, 1, 4, 2, 3 },
+                                               { 4, 2, 6, 8, 5, 3, 7, 9, 1 },
+                                               { 7, 1, 3, 9, 2, 4, 8, 5, 6 },
+                                               { 9, 6, 1, 5, 3, 7, 2, 8, 4 },
+                                               { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
+                                               { 3, 4, 5, 2, 8, 6, 1, 7, 9 } };
+
+  EXPECT_TRUE( valid_sudoku( test_board ) );
+}
+
+TEST( Problem_54, invalid_sudoku_1 )
+{
+  std::vector<std::vector<int>> test_board = { { 1, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 1, 0, 0, 0, 0, 0, 0, 0, 0 } };
+
+  EXPECT_FALSE( valid_sudoku( test_board ) );
+}
+
+TEST( Problem_54, invalid_sudoku_2 )
+{
+  std::vector<std::vector<int>> test_board = { { 2, 0, 0, 0, 0, 0, 0, 0, 2 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+
+  EXPECT_FALSE( valid_sudoku( test_board ) );
+}
+
+TEST( Problem_54, invalid_sudoku_3 )
+{
+  std::vector<std::vector<int>> test_board = { { 3, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 3, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                                               { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+
+  EXPECT_FALSE( valid_sudoku( test_board ) );
+}
+
+TEST( Problem_54, test_case_1 )
+{
+  std::vector<std::vector<int>> test_board = { { 0, 0, 4, 6, 0, 8, 9, 1, 2 },
+                                               { 0, 7, 2, 0, 0, 0, 3, 4, 8 },
+                                               { 1, 0, 0, 3, 4, 2, 5, 0, 7 },
+                                               { 0, 5, 9, 7, 0, 1, 4, 2, 0 },
+                                               { 0, 2, 6, 0, 5, 0, 7, 9, 0 },
+                                               { 0, 1, 3, 9, 0, 4, 8, 5, 0 },
+                                               { 9, 0, 1, 5, 3, 7, 0, 0, 4 },
+                                               { 2, 8, 7, 0, 0, 0, 6, 3, 0 },
+                                               { 3, 4, 5, 2, 0, 6, 1, 0, 0 } };
+
+  std::vector<std::vector<int>> expected_board = { { 5, 3, 4, 6, 7, 8, 9, 1, 2 },
+                                                   { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
+                                                   { 1, 9, 8, 3, 4, 2, 5, 6, 7 },
+                                                   { 8, 5, 9, 7, 6, 1, 4, 2, 3 },
+                                                   { 4, 2, 6, 8, 5, 3, 7, 9, 1 },
+                                                   { 7, 1, 3, 9, 2, 4, 8, 5, 6 },
+                                                   { 9, 6, 1, 5, 3, 7, 2, 8, 4 },
+                                                   { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
+                                                   { 3, 4, 5, 2, 8, 6, 1, 7, 9 } };
+
+  auto result_board = solveSudoku( test_board );
+
+  EXPECT_EQ( result_board, expected_board );
 }
