@@ -3,6 +3,7 @@
 #include "Problem_053.hpp"
 #include "Problem_054.hpp"
 #include "Problem_055.hpp"
+#include "Problem_057.hpp"
 
 #include "gtest/gtest.h"
 
@@ -188,4 +189,16 @@ TEST( Problem_55, shorten_same_url )
   EXPECT_EQ( shorten_1, shorten_2 );
   EXPECT_EQ( url, restore_1 );
   EXPECT_EQ( url, restore_2 );
+}
+
+// Problem 57
+TEST( Problem_57, Given_Case )
+{
+  // given the string "the quick brown fox jumps over the lazy dog" and k = 10,
+  // you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"].
+
+  auto                     result   = splitString( "the quick brown fox jumps over the lazy dog", 10 );
+  std::vector<std::string> expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
+
+  EXPECT_EQ( result, expected );
 }
