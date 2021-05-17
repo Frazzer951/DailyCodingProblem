@@ -1,7 +1,5 @@
 #pragma once
 
-#include <vector>
-
 /* EASY
 The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
 
@@ -28,12 +26,15 @@ std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
 }
 */
 
+#include <math.h>
+#include <vector>
+
 // Internet Solution from GeeksForGeeks
 std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
 {
   std::vector<std::vector<int>> powerSet;
   // set_size of power set of a set with set_size n is (2**n -1)
-  unsigned int pow_set_size = (unsigned int)std::pow( 2, set.size() );
+  unsigned int pow_set_size = (unsigned int)pow( 2, set.size() );
   unsigned int counter, j;
 
   // Run from counter 000..0 to 111..1

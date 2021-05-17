@@ -9,6 +9,7 @@ For example, given [6, 1, 3, 3, 3, 6, 6], return 1. Given [13, 19, 13, 13], retu
 Do this in O(N) time and O(1) space.
 */
 
+#include <math.h>
 #include <vector>
 
 using namespace std;
@@ -43,7 +44,7 @@ int nonRepeatInt( vector<int> v )
   int result = 0;
   for( int i = 0; i < 32; i++ )
   {
-    if( result_arr[i] ) { result += (int)std::pow( 2, i ); }
+    if( result_arr[i] ) { result += (int)pow( 2, i ); }
   }
 
   return result;
