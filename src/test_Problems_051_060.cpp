@@ -3,6 +3,7 @@
 #include "Problem_053.hpp"
 #include "Problem_054.hpp"
 #include "Problem_055.hpp"
+#include "Problem_056.hpp"
 #include "Problem_057.hpp"
 
 #include "gtest/gtest.h"
@@ -189,6 +190,12 @@ TEST( Problem_55, shorten_same_url )
   EXPECT_EQ( shorten_1, shorten_2 );
   EXPECT_EQ( url, restore_1 );
   EXPECT_EQ( url, restore_2 );
+}
+
+// Problem 56
+TEST( Problem_56, Test_Case )
+{
+  // Even with the solution I'm still lost, so I'm skipping this one
 }
 
 // Problem 57
