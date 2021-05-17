@@ -6,6 +6,7 @@ following methods: enqueue, which inserts an element into the queue, and dequeue
 */
 
 #include <stack>
+#include <stdexcept>
 
 class queue_s
 {
@@ -29,7 +30,7 @@ public:
 
   int dequeue()
   {
-    if( s1.empty() ) { return NULL; }
+    if( s1.empty() ) { throw std::out_of_range( "There are no items in the Queue!" ); }
     int x = s1.top();
     s1.pop();
     return x;

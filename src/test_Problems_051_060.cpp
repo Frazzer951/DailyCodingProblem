@@ -66,7 +66,7 @@ TEST( Problem_53, dequeue )
   EXPECT_EQ( q.dequeue(), 3 );
   EXPECT_EQ( q.dequeue(), 4 );
   EXPECT_EQ( q.dequeue(), 5 );
-  EXPECT_EQ( q.dequeue(), NULL );
+  EXPECT_THROW( q.dequeue(), std::out_of_range );
 }
 
 // Problem 54
