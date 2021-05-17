@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 /* Medium
 Given a string, find the palindrome that can be made by inserting the fewest number of characters as possible anywhere
 in the word. If there is more than one palindrome of minimum length that can be made, return the lexicographically
@@ -13,6 +11,9 @@ letters, but "ecarace" comes first alphabetically.
 
 As another example, given the string "google", you should return "elgoogle".
 */
+
+#include <algorithm>
+#include <string>
 
 bool isPalindrome( std::string str )
 {
