@@ -220,3 +220,9 @@ TEST( Problem_58, Given_Case )
 
   EXPECT_EQ( 4, result );
 }
+
+// Problem 59
+TEST( Problem_59, Test_Case )
+{
+  // I'm not learning networking for this
+}
