@@ -38,7 +38,7 @@ int shifted_array_search( std::vector<int> lst, int num )
 
   while( true )
   {
-    if( dist == 0 ) return NULL;
+    if( dist == 0 ) return -1;
 
     int guess_ind = ( low + dist ) % lst.size();
     int guess     = lst[guess_ind];
