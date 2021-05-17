@@ -40,3 +40,52 @@ TEST( Problem_62, Test_Case )
 
   EXPECT_EQ( 8, result );
 }
+
+// Problem 63
+TEST( Problem_63, Given_Case_1 )
+{
+  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
+                                             { 'O', 'B', 'Q', 'P' },
+                                             { 'A', 'N', 'O', 'B' },
+                                             { 'M', 'A', 'S', 'S' } };
+
+  bool result = findWord( letters, "FOAM" );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_63, Given_Case_2 )
+{
+  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
+                                             { 'O', 'B', 'Q', 'P' },
+                                             { 'A', 'N', 'O', 'B' },
+                                             { 'M', 'A', 'S', 'S' } };
+
+  bool result = findWord( letters, "MASS" );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_63, Test_Case_1 )
+{
+  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
+                                             { 'O', 'B', 'Q', 'P' },
+                                             { 'A', 'N', 'O', 'B' },
+                                             { 'M', 'A', 'S', 'S' } };
+
+  bool result = findWord( letters, "ZOOM" );
+
+  EXPECT_FALSE( result );
+}
+
+TEST( Problem_63, Test_Case_2 )
+{
+  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
+                                             { 'O', 'B', 'Q', 'P' },
+                                             { 'A', 'N', 'O', 'B' },
+                                             { 'M', 'A', 'S', 'S' } };
+
+  bool result = findWord( letters, "LAUGH" );
+
+  EXPECT_FALSE( result );
+}
