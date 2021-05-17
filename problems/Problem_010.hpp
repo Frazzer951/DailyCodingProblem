@@ -16,7 +16,12 @@ void testFunc() { std::cout << "Running function test\n"; }
 
 void jobScheduler( void f(), int n )
 {
+#ifdef _WIN32
   Sleep( n );
+#else
+  usleep( n * 1000 );    // takes microseconds
+#endif
+
   f();
 }
 
