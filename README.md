@@ -9,7 +9,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 32
 - Problem 39
 - Problem 56
-- Problem 58
 - Problem 59
 - Problem 60
 - Problem 61

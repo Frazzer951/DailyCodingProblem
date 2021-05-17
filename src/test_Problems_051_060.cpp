@@ -5,6 +5,7 @@
 #include "Problem_055.hpp"
 #include "Problem_056.hpp"
 #include "Problem_057.hpp"
+#include "Problem_058.hpp"
 
 #include "gtest/gtest.h"
 
@@ -208,4 +209,14 @@ TEST( Problem_57, Given_Case )
   std::vector<std::string> expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 58
+TEST( Problem_58, Given_Case )
+{
+  // Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
+
+  int result = shifted_array_search( { 13, 18, 25, 2, 8, 10 }, 8 );
+
+  EXPECT_EQ( 4, result );
 }
