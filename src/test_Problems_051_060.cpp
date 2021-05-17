@@ -6,6 +6,8 @@
 #include "Problem_056.hpp"
 #include "Problem_057.hpp"
 #include "Problem_058.hpp"
+#include "Problem_059.hpp"
+#include "Problem_060.hpp"
 
 #include "gtest/gtest.h"
 
@@ -225,4 +227,26 @@ TEST( Problem_58, Given_Case )
 TEST( Problem_59, Test_Case )
 {
   // I'm not learning networking for this
+}
+
+// Problem 60
+TEST( Problem_60, Given_Case_1 )
+{
+  // For example, given the multiset {15, 5, 20, 10, 35, 15, 10},
+  // it would return true, since we can split it up into
+  // {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
+
+  bool result = partitions( { 15, 5, 20, 10, 35, 15, 10 } );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_60, Given_Case_2 )
+{
+  //Given the multiset {15, 5, 20, 10, 35}, it would return false,
+  // since we can't split it up into two subsets that add up to the same sum.
+
+  bool result = partitions( { 15, 5, 20, 10, 35 } );
+
+  EXPECT_FALSE( result );
 }

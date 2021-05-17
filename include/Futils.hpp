@@ -127,3 +127,15 @@ inline bool operator==( const btNode & lhs, const btNode & rhs )
 {
   return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;
 }
+
+inline int sum( std::vector<int> v )
+{
+  int sum = 0;
+
+  for( int x : v )
+  {
+    sum += x;
+  }
+
+  return sum;
+}
