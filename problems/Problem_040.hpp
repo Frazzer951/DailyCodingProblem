@@ -12,27 +12,9 @@ Do this in O(N) time and O(1) space.
 #include <math.h>
 #include <vector>
 
-using namespace std;
-
-/*
-def find_unique(arr):
-    result_arr = [0] * 32
-    for num in arr:
-        for i in range(32):
-            bit = num >> i & 1
-            result_arr[i] = (result_arr[i] + bit) % 3
-
-    result = 0
-    for i, bit in enumerate(result_arr):
-        if bit:
-            result += 2 ** i
-
-    return result
-*/
-
-int nonRepeatInt( vector<int> v )
+int nonRepeatInt( std::vector<int> v )
 {
-  vector<int> result_arr( 32, 0 );
+  std::vector<int> result_arr( 32, 0 );
   for( int num : v )
   {
     for( int i = 0; i < 32; i++ )
