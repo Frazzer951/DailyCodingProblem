@@ -135,7 +135,10 @@ TEST( Problem_16, Test_Case_4 )
 }
 
 // Problem 17
-// TEST( Problem_17, Given_Case ) { FAIL(); }
+TEST( Problem_17, Given_Case )
+{
+  // Not sure how to do this ATM so I'll return later
+}
 
 // Problem 18
 TEST( Problem_18, Given_Case )
