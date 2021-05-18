@@ -14,10 +14,8 @@ For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has th
 
 #include <vector>
 
-using namespace std;
-
 // Does not follow speed requirement
-int outOfOrder( vector<int> v )
+int outOfOrder( std::vector<int> v )
 {
   int count = 0;
 

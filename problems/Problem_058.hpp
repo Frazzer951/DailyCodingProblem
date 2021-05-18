@@ -9,3 +9,44 @@ For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 
 
 You can assume all the integers in the array are unique.
 */
+
+#include <vector>
+
+int shifted_array_search( std::vector<int> lst, int num )
+{
+  int i    = lst.size() / 2;
+  int dist = i / 2;
+
+  while( true )
+  {
+    if( lst[0] > lst[i] && lst[i - 1] > lst[i] ) break;
+    else if( dist == 0 )
+      break;
+    else if( lst[0] <= lst[i] )
+      i = i + dist;
+    else if( lst[i - 1] <= lst[i] )
+      i = i - dist;
+    else
+      break;
+
+    dist = dist / 2;
+  }
+
+  int low  = i;
+  int high = i - 1;
+  dist     = lst.size() / 2;
+
+  while( true )
+  {
+    if( dist == 0 ) return -1;
+
+    int guess_ind = ( low + dist ) % lst.size();
+    int guess     = lst[guess_ind];
+    if( guess == num ) return guess_ind;
+
+    if( guess < num ) low = ( low + dist ) % lst.size();
+    if( guess > num ) high = ( lst.size() + high - dist ) % lst.size();
+
+    dist = dist / 2;
+  }
+}

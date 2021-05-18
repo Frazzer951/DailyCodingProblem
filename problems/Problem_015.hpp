@@ -6,6 +6,7 @@ pick a random element from the stream with uniform probability.
 */
 
 #include <iostream>
+#include <stdlib.h>
 #include <vector>
 
 int randElement( std::vector<int> v )

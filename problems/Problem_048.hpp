@@ -35,14 +35,14 @@ int get_index( std::vector<btNode *> v, btNode * node )
 
 // Function to slice a given vector
 // from range X to Y
-vector<btNode *> slicing( vector<btNode *> & arr, int X, int Y )
+std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y )
 {
   // Starting and Ending iterators
   auto start = arr.begin() + X;
   auto end   = arr.begin() + Y + 1;
 
   // To store the sliced vector
-  vector<btNode *> result( Y - X + 1 );
+  std::vector<btNode *> result( Y - X + 1 );
 
   // Copy vector using copy function()
   copy( start, end, result.begin() );

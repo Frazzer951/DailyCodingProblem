@@ -3,7 +3,11 @@
 #include "Problem_053.hpp"
 #include "Problem_054.hpp"
 #include "Problem_055.hpp"
+#include "Problem_056.hpp"
 #include "Problem_057.hpp"
+#include "Problem_058.hpp"
+#include "Problem_059.hpp"
+#include "Problem_060.hpp"
 
 #include "gtest/gtest.h"
 
@@ -62,7 +66,7 @@ TEST( Problem_53, dequeue )
   EXPECT_EQ( q.dequeue(), 3 );
   EXPECT_EQ( q.dequeue(), 4 );
   EXPECT_EQ( q.dequeue(), 5 );
-  EXPECT_EQ( q.dequeue(), NULL );
+  EXPECT_THROW( q.dequeue(), std::out_of_range );
 }
 
 // Problem 54
@@ -191,6 +195,12 @@ TEST( Problem_55, shorten_same_url )
   EXPECT_EQ( url, restore_2 );
 }
 
+// Problem 56
+TEST( Problem_56, Test_Case )
+{
+  // Even with the solution I'm still lost, so I'm skipping this one
+}
+
 // Problem 57
 TEST( Problem_57, Given_Case )
 {
@@ -201,4 +211,42 @@ TEST( Problem_57, Given_Case )
   std::vector<std::string> expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 58
+TEST( Problem_58, Given_Case )
+{
+  // Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
+
+  int result = shifted_array_search( { 13, 18, 25, 2, 8, 10 }, 8 );
+
+  EXPECT_EQ( 4, result );
+}
+
+// Problem 59
+TEST( Problem_59, Test_Case )
+{
+  // I'm not learning networking for this
+}
+
+// Problem 60
+TEST( Problem_60, Given_Case_1 )
+{
+  // For example, given the multiset {15, 5, 20, 10, 35, 15, 10},
+  // it would return true, since we can split it up into
+  // {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
+
+  bool result = partitions( { 15, 5, 20, 10, 35, 15, 10 } );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_60, Given_Case_2 )
+{
+  //Given the multiset {15, 5, 20, 10, 35}, it would return false,
+  // since we can't split it up into two subsets that add up to the same sum.
+
+  bool result = partitions( { 15, 5, 20, 10, 35 } );
+
+  EXPECT_FALSE( result );
 }

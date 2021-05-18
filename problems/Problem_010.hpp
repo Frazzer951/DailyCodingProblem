@@ -4,14 +4,24 @@
 Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
 */
 
-#include <Windows.h>
+#ifdef _WIN32
+#  include <Windows.h>
+#else
+#  include <unistd.h>
+#endif
+
 #include <iostream>
 
 void testFunc() { std::cout << "Running function test\n"; }
 
 void jobScheduler( void f(), int n )
 {
+#ifdef _WIN32
   Sleep( n );
+#else
+  usleep( n * 1000 );    // takes microseconds
+#endif
+
   f();
 }
 

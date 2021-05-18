@@ -8,21 +8,8 @@ For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The long
 is "anana".
 */
 
+#include <algorithm>
 #include <string>
-
-/*
-def is_palindrome(s):
-    return s[::-1] == s
-
-def longest_palindrome(s):
-    longest = ''
-    for i in range(len(s) - 1):
-        for j in range(1, len(s)):
-            substring = s[i:j]
-            if is_palindrome(substring) and len(substring) > len(longest):
-                longest = substring
-    return longest
-*/
 
 bool is_palindrome( std::string s )
 {

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <vector>
-
 /* EASY
 The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
 
@@ -27,6 +25,9 @@ std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
   return powerSet;
 }
 */
+
+#include <math.h>
+#include <vector>
 
 // Internet Solution from GeeksForGeeks
 std::vector<std::vector<int>> getPowderSet( std::vector<int> set )

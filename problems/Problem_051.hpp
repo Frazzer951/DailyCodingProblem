@@ -9,6 +9,7 @@ It should run in O(N) time.
 Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 */
 
+#include <stdlib.h>
 #include <vector>
 
 std::vector<int> shuffle( std::vector<int> arr )

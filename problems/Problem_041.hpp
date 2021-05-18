@@ -18,18 +18,16 @@ one is lexicographically smaller.
 #include <string>
 #include <vector>
 
-using namespace std;
-
-pair<string, string> getAirportPair( vector<pair<string, string>> v, std::string first )
+std::pair<std::string, std::string> getAirportPair( std::vector<std::pair<std::string, std::string>> v, std::string first )
 {
-  for( pair<string, string> flight : v )
+  for( std::pair<std::string, std::string> flight : v )
   {
     if( flight.first == first ) return flight;
   }
-  return pair<string, string>();
+  return std::pair<std::string, std::string>();
 }
 
-int getPairIndex( vector<pair<string, string>> v, pair<string, string> p )
+int getPairIndex( std::vector<std::pair<std::string, std::string>> v, std::pair<std::string, std::string> p )
 {
   for( int i = 0; i < v.size(); i++ )
   {
@@ -38,15 +36,15 @@ int getPairIndex( vector<pair<string, string>> v, pair<string, string> p )
   return -1;
 }
 
-vector<string> getItinerary( vector<pair<string, string>> v, std::string start )
+std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::string>> v, std::string start )
 {
-  vector<string> itinerary = { start };
-  string         next      = start;
+  std::vector<std::string> itinerary = { start };
+  std::string              next      = start;
 
   while( !v.empty() )
   {
     auto flight = getAirportPair( v, next );
-    if( flight.first == "" && flight.second == "" ) return vector<string>();
+    if( flight.first == "" && flight.second == "" ) return std::vector<std::string>();
     v.erase( v.begin() + getPairIndex( v, flight ) );
     next = flight.second;
     itinerary.push_back( next );

@@ -5,6 +5,8 @@ Using a function rand5() that returns an integer from 1 to 5 (inclusive) with un
 rand7() that returns an integer from 1 to 7 (inclusive).
 */
 
+#include <stdlib.h>
+
 int rand5() { return rand() % 5 + 1; }
 
 int rand7()
