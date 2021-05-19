@@ -14,7 +14,7 @@ You can assume all the integers in the array are unique.
 
 int shifted_array_search( std::vector<int> lst, int num )
 {
-  int i    = lst.size() / 2;
+  int i    = (int)lst.size() / 2;
   int dist = i / 2;
 
   while( true )
@@ -34,7 +34,7 @@ int shifted_array_search( std::vector<int> lst, int num )
 
   int low  = i;
   int high = i - 1;
-  dist     = lst.size() / 2;
+  dist     = (int)lst.size() / 2;
 
   while( true )
   {
@@ -45,7 +45,7 @@ int shifted_array_search( std::vector<int> lst, int num )
     if( guess == num ) return guess_ind;
 
     if( guess < num ) low = ( low + dist ) % lst.size();
-    if( guess > num ) high = ( lst.size() + high - dist ) % lst.size();
+    if( guess > num ) high = ( (int)lst.size() + high - dist ) % (int)lst.size();
 
     dist = dist / 2;
   }

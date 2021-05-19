@@ -32,18 +32,18 @@ std::vector<std::string> splitString( std::string str, int k )
     if( count == 0 )
     {
       cur_str += word;
-      count = word.size();
+      count = (int)word.size();
     }
     else if( count + word.size() + 1 <= k )
     {
       cur_str += " " + word;
-      count += word.size() + 1;
+      count += (int)word.size() + 1;
     }
     else
     {
       multi_string.push_back( cur_str );
       cur_str = word;
-      count   = word.size();
+      count   = (int)word.size();
     }
   }
   multi_string.push_back( cur_str );
