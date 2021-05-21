@@ -39,7 +39,7 @@ std::vector<int> print_spiral( std::vector<std::vector<int>> v )
 {
   std::vector<int> spiral;
 
-  int i;
+  int i = 0;
   int k = 0;
   int m = (int)v.size();
   int l = 0;
