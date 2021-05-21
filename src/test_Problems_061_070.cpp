@@ -3,6 +3,7 @@
 #include "Problem_063.hpp"
 #include "Problem_064.hpp"
 #include "Problem_065.hpp"
+#include "Problem_066.hpp"
 
 #include "gtest/gtest.h"
 
@@ -134,4 +135,23 @@ TEST( Problem_65, Given_Case )
   auto result = print_spiral( v );
 
   EXPECT_EQ( expected, result );
+}
+
+// Problem 66
+TEST( Problem_66, Test_Case )
+{
+  int heads = 0;
+  int tails = 0;
+
+  for( int i = 0; i < 10000; i++ )
+  {
+    bool flip = toss_fair();
+    if( flip ) heads++;
+    else
+      tails++;
+  }
+
+  int difference = heads - tails;
+  std::cout << "The difference is " << difference << ".\n";
+  EXPECT_TRUE( ( difference >= -500 ) && ( difference <= 500 ) );
 }
