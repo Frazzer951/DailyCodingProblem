@@ -59,7 +59,7 @@ int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::
   for( auto & [r, c] : moves )
   {
     tour.push_back( std::make_pair( r, c ) );
-    board[r][c] = tour.size();
+    board[r][c] = (int)tour.size();
     count += knights_tours_helper( board, tour, n );
     tour.pop_back();
     board[r][c] = -1;

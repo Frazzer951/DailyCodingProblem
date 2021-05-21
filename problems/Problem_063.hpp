@@ -26,7 +26,7 @@ bool findWord( std::vector<std::vector<char>> letters, std::string word )
 {
   if( letters.size() < word.size() && letters[0].size() < word.size() ) return false;
 
-  bool wordFound;
+  bool wordFound = true;
 
   // First Go Trough Columns
   for( int i = 0; i < letters.size(); i++ )
