@@ -1,6 +1,8 @@
 #include "Problem_061.hpp"
 #include "Problem_062.hpp"
 #include "Problem_063.hpp"
+#include "Problem_064.hpp"
+#include "Problem_065.hpp"
 
 #include "gtest/gtest.h"
 
@@ -88,4 +90,12 @@ TEST( Problem_63, Test_Case_2 )
   bool result = findWord( letters, "LAUGH" );
 
   EXPECT_FALSE( result );
+}
+
+// Problem 64
+TEST( Problem_64, Test_Case_1 )
+{
+  int result = knights_tours( 1 );
+
+  EXPECT_EQ( 1, result );
 }

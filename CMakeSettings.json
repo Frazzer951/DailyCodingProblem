@@ -11,6 +11,18 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "enableClangTidyCodeAnalysis": true
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "enableClangTidyCodeAnalysis": true
     }
   ]
 }
