@@ -4,6 +4,9 @@
 #include "Problem_064.hpp"
 #include "Problem_065.hpp"
 #include "Problem_066.hpp"
+#include "Problem_067.hpp"
+#include "Problem_068.hpp"
+#include "Problem_069.hpp"
 
 #include "gtest/gtest.h"
 
@@ -154,4 +157,21 @@ TEST( Problem_66, Test_Case )
   int difference = heads - tails;
   std::cout << "The difference is " << difference << ".\n";
   EXPECT_TRUE( ( difference >= -500 ) && ( difference <= 500 ) );
+}
+
+// Problem 67
+LFUCache cache( 5 );
+TEST( Problem_67, Set )
+{
+  cache.set( "1", 1 );
+  cache.set( "2", 2 );
+  cache.set( "3", 3 );
+  cache.set( "4", 4 );
+  cache.set( "5", 5 );
+
+  EXPECT_EQ( 1, cache.get( "1" ) );
+  EXPECT_EQ( 2, cache.get( "2" ) );
+  EXPECT_EQ( 3, cache.get( "3" ) );
+  EXPECT_EQ( 4, cache.get( "4" ) );
+  EXPECT_EQ( 5, cache.get( "5" ) );
 }
