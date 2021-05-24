@@ -161,20 +161,20 @@ TEST( Problem_66, Test_Case )
 }
 
 // Problem 67
-LFUCache cache( 5 );
+LFUCache LFU_cache( 5 );
 TEST( Problem_67, Set )
 {
-  cache.set( "1", 1 );
-  cache.set( "2", 2 );
-  cache.set( "3", 3 );
-  cache.set( "4", 4 );
-  cache.set( "5", 5 );
+  LFU_cache.set( "1", 1 );
+  LFU_cache.set( "2", 2 );
+  LFU_cache.set( "3", 3 );
+  LFU_cache.set( "4", 4 );
+  LFU_cache.set( "5", 5 );
 
-  EXPECT_EQ( 1, cache.get( "1" ) );
-  EXPECT_EQ( 2, cache.get( "2" ) );
-  EXPECT_EQ( 3, cache.get( "3" ) );
-  EXPECT_EQ( 4, cache.get( "4" ) );
-  EXPECT_EQ( 5, cache.get( "5" ) );
+  EXPECT_EQ( 1, LFU_cache.get( "1" ) );
+  EXPECT_EQ( 2, LFU_cache.get( "2" ) );
+  EXPECT_EQ( 3, LFU_cache.get( "3" ) );
+  EXPECT_EQ( 4, LFU_cache.get( "4" ) );
+  EXPECT_EQ( 5, LFU_cache.get( "5" ) );
 }
 
 //Problem 68
