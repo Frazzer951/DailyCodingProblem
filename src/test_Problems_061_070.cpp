@@ -189,3 +189,18 @@ TEST( Problem_68, Given_Case )
 
   EXPECT_EQ( 2, result );
 }
+
+// Problem 69
+TEST( Problem_69, Given_Case )
+{
+  int result = largest_product_x3( { -10, -10, 5, 2 } );
+
+  EXPECT_EQ( 500, result );
+}
+
+TEST( Problem_69, Test_Case )
+{
+  int result = largest_product_x3( { -18, 3, 9, 4, -1, 10, 7 } );
+
+  EXPECT_EQ( 630, result );
+}
