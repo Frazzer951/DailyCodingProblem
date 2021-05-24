@@ -7,6 +7,7 @@
 #include "Problem_067.hpp"
 #include "Problem_068.hpp"
 #include "Problem_069.hpp"
+#include "Problem_070.hpp"
 
 #include "gtest/gtest.h"
 
@@ -203,4 +204,26 @@ TEST( Problem_69, Test_Case )
   int result = largest_product_x3( { -18, 3, 9, 4, -1, 10, 7 } );
 
   EXPECT_EQ( 630, result );
+}
+
+// Problem 70
+TEST( Problem_70, Given_Case_1 )
+{
+  int result = perfecet_num( 1 );
+
+  EXPECT_EQ( 19, result );
+}
+
+TEST( Problem_70, Given_Case_2 )
+{
+  int result = perfecet_num( 2 );
+
+  EXPECT_EQ( 28, result );
+}
+
+TEST( Problem_70, Test_Case )
+{
+  int result = perfecet_num( 10 );
+
+  EXPECT_EQ( 109, result );
 }
