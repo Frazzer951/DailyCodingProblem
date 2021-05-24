@@ -175,3 +175,17 @@ TEST( Problem_67, Set )
   EXPECT_EQ( 4, cache.get( "4" ) );
   EXPECT_EQ( 5, cache.get( "5" ) );
 }
+
+//Problem 68
+TEST( Problem_68, Given_Case )
+{
+  std::vector<std::pair<int, int>> bishops = {
+      std::make_pair( 0, 0 ),
+      std::make_pair( 1, 2 ),
+      std::make_pair( 2, 2 ),
+      std::make_pair( 4, 0 ) };
+
+  int result = pairs( bishops, 5 );
+
+  EXPECT_EQ( 2, result );
+}
