@@ -4,6 +4,8 @@ project(DailyCodingProblem VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+include(ClangFormat)
 enable_testing()
 
 # Download and unpack googletest at configure time
@@ -36,12 +38,25 @@ include_directories(include)
 
 file(GLOB src_files
      "src/*.cpp"
+     "src/*.hpp"
 )
 
-add_executable(${PROJECT_NAME} ${src_files} )
+file(GLOB problem_files
+     "problems/*.cpp"
+     "problems/*.hpp"
+)
+
+file(GLOB include_files
+     "include/*.cpp"
+     "include/*.hpp"
+)
+
+add_executable(${PROJECT_NAME} ${src_files} ${problem_files} ${include_files} )
 target_link_libraries(${PROJECT_NAME} gtest_main)
 
 add_test(
     NAME ${PROJECT_NAME}
     COMMAND ${PROJECT_NAME}
 )
+
+target_clangformat_setup(${PROJECT_NAME})
