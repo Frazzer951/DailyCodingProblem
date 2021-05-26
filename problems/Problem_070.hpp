@@ -13,7 +13,7 @@ For example, given 1, you should return 19. Given 2, you should return 28.
 int perfecet_num( int n )
 {
   std::string n_str  = std::to_string( n );
-  int         length = n_str.size();
+  int         length = (int) n_str.size();
   int         sum    = 0;
 
   for( int i = 0; i < length; i++ )
