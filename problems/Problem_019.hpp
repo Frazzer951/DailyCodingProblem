@@ -14,7 +14,7 @@ which achieves this goal.
 
 #include "Futils.hpp"
 
-int build_houses( std::vector<std::vector<int>> matrix )
+inline int build_houses( std::vector<std::vector<int>> matrix )
 {
   auto             k = matrix[0].size();
   std::vector<int> soln_row( k, 0 );

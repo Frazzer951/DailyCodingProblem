@@ -12,7 +12,7 @@ You can assume all the integers in the array are unique.
 
 #include <vector>
 
-int shifted_array_search( std::vector<int> lst, int num )
+inline int shifted_array_search( std::vector<int> lst, int num )
 {
   int i    = (int) lst.size() / 2;
   int dist = i / 2;
@@ -20,7 +20,7 @@ int shifted_array_search( std::vector<int> lst, int num )
   while( true )
   {
     if( lst[0] > lst[i] && lst[i - 1] > lst[i] ) break;
-    else if( dist == 0 )
+    if( dist == 0 )
       break;
     else if( lst[0] <= lst[i] )
       i = i + dist;

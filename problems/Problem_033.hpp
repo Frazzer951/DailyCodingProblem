@@ -20,14 +20,14 @@ For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should pri
 2
 */
 
-std::vector<double> runningMedian( std::vector<double> v )
+inline std::vector<double> runningMedian( std::vector<double> v )
 {
   std::vector<double> medians;
   std::vector<double> running;
 
-  for( int i = 0; i < v.size(); i++ )
+  for(double i : v)
   {
-    running.push_back( v[i] );
+    running.push_back( i );
     std::sort( running.begin(), running.end() );
 
     size_t middle = running.size() / 2;

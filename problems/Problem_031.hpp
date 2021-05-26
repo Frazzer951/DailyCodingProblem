@@ -11,7 +11,7 @@ substitute the �k� for �s�, substitute the �e� for �i�, and appe
 Given two strings, compute the edit distance between them.
 */
 
-int strDistance( std::string s1, std::string s2 )
+inline int strDistance( std::string s1, std::string s2 )
 {
   size_t x = s1.size() + 1;
   size_t y = s2.size() + 1;

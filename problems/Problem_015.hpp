@@ -5,18 +5,18 @@ Given a stream of elements too large to store in memory,
 pick a random element from the stream with uniform probability.
 */
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 #include <vector>
 
-int randElement( std::vector<int> v )
+inline int randElement( std::vector<int> v )
 {
   int index = rand() % v.size();
 
   return v[index];
 }
 
-int prob_15()
+inline int prob_15()
 {
   std::cout << "\nProblem 15\n";
 

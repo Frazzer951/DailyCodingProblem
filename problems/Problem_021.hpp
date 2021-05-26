@@ -9,9 +9,9 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
 
 #include <vector>
 
-int findMinRoomsNeeded( std::vector<std::pair<int, int>> schedule )
+inline int findMinRoomsNeeded( std::vector<std::pair<int, int>> schedule )
 {
-  if( schedule.size() == 0 ) return 0;
+  if( schedule.empty() ) return 0;
   std::vector<std::pair<int, int>> conflictingLecture;
 
   auto curClass = schedule[0];

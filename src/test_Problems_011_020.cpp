@@ -63,9 +63,9 @@ TEST( Problem_15, Test_Case_1 )
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for( unsigned int i = 0; i < elements.size(); ++i )
+  for(int element : elements)
   {
-    if( elements[i] == elem ) { inVec = true; }
+    if( element == elem ) { inVec = true; }
   }
 
   EXPECT_TRUE( inVec );
@@ -77,9 +77,9 @@ TEST( Problem_15, Test_Case_2 )
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for( unsigned int i = 0; i < elements.size(); ++i )
+  for(int element : elements)
   {
-    if( elements[i] == elem ) { inVec = true; }
+    if( element == elem ) { inVec = true; }
   }
 
   EXPECT_TRUE( inVec );
@@ -171,12 +171,12 @@ TEST( Problem_19, Test_Case_2 )
 TEST( Problem_20, Test_Case_1 )
 {
   // A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
-  slNode * A   = new slNode( 3 );
-  slNode * A_1 = new slNode( 7 );
-  slNode * B   = new slNode( 99 );
-  slNode * B_1 = new slNode( 1 );
-  slNode * C   = new slNode( 8 );
-  slNode * D   = new slNode( 10 );
+  auto * A   = new slNode( 3 );
+  auto * A_1 = new slNode( 7 );
+  auto * B   = new slNode( 99 );
+  auto * B_1 = new slNode( 1 );
+  auto * C   = new slNode( 8 );
+  auto * D   = new slNode( 10 );
 
   A->next   = A_1;
   A_1->next = C;
@@ -192,13 +192,13 @@ TEST( Problem_20, Test_Case_1 )
 TEST( Problem_20, Test_Case_2 )
 {
   // A = 3 -> 7 -> 16 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10
-  slNode * A   = new slNode( 3 );
-  slNode * A_1 = new slNode( 7 );
-  slNode * A_2 = new slNode( 16 );
-  slNode * B   = new slNode( 99 );
-  slNode * B_1 = new slNode( 1 );
-  slNode * C   = new slNode( 8 );
-  slNode * D   = new slNode( 10 );
+  auto * A   = new slNode( 3 );
+  auto * A_1 = new slNode( 7 );
+  auto * A_2 = new slNode( 16 );
+  auto * B   = new slNode( 99 );
+  auto * B_1 = new slNode( 1 );
+  auto * C   = new slNode( 8 );
+  auto * D   = new slNode( 10 );
 
   A->next   = A_1;
   A_1->next = A_2;

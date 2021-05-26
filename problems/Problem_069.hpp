@@ -10,7 +10,7 @@ You can assume the list has at least three integers.
 
 #include <vector>
 
-int largest_product_x3( std::vector<int> nums )
+inline int largest_product_x3( std::vector<int> nums )
 {
   int largest = nums[0] * nums[1] * nums[2];
 

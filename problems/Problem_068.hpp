@@ -29,21 +29,21 @@ You should return 2, since bishops 1 and 3 attack each other, as well as bishops
 
 #include <vector>
 
-bool is_attacking( std::pair<int, int> bishop0, std::pair<int, int> bishop1 )
+inline bool is_attacking( std::pair<int, int> bishop0, std::pair<int, int> bishop1 )
 {
   auto & [r0, c0] = bishop0;
   auto & [r1, c1] = bishop1;
   return abs( r1 - r0 ) == abs( c1 - c0 );
 }
 
-int pairs( std::vector<std::pair<int, int>> bishops, int m )
+inline int pairs( std::vector<std::pair<int, int>> bishops, int  /*m*/ )
 {
   int count = 0;
   for( int i = 0; i < bishops.size(); i++ )
   {
     for( int j = i + 1; j < bishops.size(); j++ )
     {
-      count += is_attacking( bishops[i], bishops[j] );
+      count += static_cast<int>(is_attacking( bishops[i], bishops[j] ));
     }
   }
   return count;

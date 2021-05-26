@@ -35,7 +35,7 @@ You should print out the following:
 
 #include <vector>
 
-std::vector<int> print_spiral( std::vector<std::vector<int>> v )
+inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
 {
   std::vector<int> spiral;
 

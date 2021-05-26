@@ -10,13 +10,14 @@ Hint: Try preprocessing the dictionary into a more efficient data structure to s
 */
 
 #include <iostream>
+#include <utility>
 #include <vector>
 
-std::vector<std::string> autocomplete( std::string qstr, std::vector<std::string> qstrs )
+inline std::vector<std::string> autocomplete( const std::string& qstr, const std::vector<std::string>& qstrs )
 {
   std::vector<std::string> returnStrs;
 
-  for( std::string word : qstrs )
+  for( const std::string& word : qstrs )
   {
     if( qstr == word.substr( 0, qstr.size() ) ) returnStrs.push_back( word );
   }
@@ -24,18 +25,18 @@ std::vector<std::string> autocomplete( std::string qstr, std::vector<std::string
   return returnStrs;
 }
 
-void testComplete( std::string qstr, std::vector<std::string> qstrs )
+inline void testComplete( const std::string& qstr, std::vector<std::string> qstrs )
 {
-  std::vector<std::string> autocompletes = autocomplete( qstr, qstrs );
+  std::vector<std::string> autocompletes = autocomplete( qstr, std::move(qstrs) );
 
   std::cout << "'" << qstr << "' auto-completes to ";
 
-  for( std::string str : autocompletes ) std::cout << str << ' ';
+  for( const std::string& str : autocompletes ) std::cout << str << ' ';
 
   std::cout << '\n';
 }
 
-int prob_11()
+inline int prob_11()
 {
   std::cout << "\nProblem 11\n";
 

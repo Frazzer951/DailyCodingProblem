@@ -10,4 +10,4 @@ currency, so that you can end up with some amount greater than A of that currenc
 There are no transaction costs and you can trade fractional quantities.
 */
 
-bool arbitrage( std::vector<std::vector<double>> table ) { return false; }
+inline bool arbitrage( const std::vector<std::vector<double>>&  /*table*/ ) { return false; }

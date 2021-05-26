@@ -11,10 +11,10 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 #include <iostream>
 #include <string>
 
-int num_encodings( std::string s )
+inline int num_encodings( std::string s )
 {
   if( s[0] == '0' ) return 0;
-  else if( s.size() <= 1 )
+  if( s.size() <= 1 )
     return 1;
 
   int total = 0;
@@ -25,7 +25,7 @@ int num_encodings( std::string s )
   return total;
 }
 
-int prob_7()
+inline int prob_7()
 {
   std::cout << "\nProblem 7\n";
 

@@ -19,11 +19,11 @@ struct xNode
   xNode( int value )
   {
     val  = value;
-    both = NULL;
+    both = nullptr;
   }
 };
 
-xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
+inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
 
 class xor_list
 {
@@ -33,13 +33,13 @@ public:
 
   xor_list()
   {
-    head = NULL;
-    tail = NULL;
+    head = nullptr;
+    tail = nullptr;
   }
 
   void add( xNode * node )
   {
-    if( head == NULL )
+    if( head == nullptr )
     {
       head = node;
       tail = node;
@@ -52,15 +52,15 @@ public:
     }
   }
 
-  xNode * get( int index )
+  xNode * get( int index ) const
   {
-    xNode * prev_id = NULL;
+    xNode * prev_id = nullptr;
     xNode * node    = head;
     for( int i = 0; i < index; ++i )
     {
       xNode * next_id = xorNode( prev_id, node->both );
 
-      if( next_id )
+      if( next_id != nullptr )
       {
         prev_id = node;
         node    = next_id;
@@ -74,12 +74,12 @@ public:
   };
 };
 
-void printAtIndex( xor_list list, int index )
+inline void printAtIndex( xor_list list, int index )
 {
   std::cout << "The index " << index << " contains the value " << list.get( index )->val << '\n';
 }
 
-int prob_6()
+inline int prob_6()
 {
   std::cout << "\nProblem 6:\n";
 

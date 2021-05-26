@@ -9,14 +9,14 @@ know the bias of the coin.
 Write a function to simulate an unbiased coin toss.
 */
 
-bool toss_biased()
+inline bool toss_biased()
 {
   int BIAS     = 66;
   int rand_num = rand() % 100 + 1;
   return rand_num > BIAS;
 }
 
-bool toss_fair()
+inline bool toss_fair()
 {
   bool t1 = toss_biased();
   bool t2 = toss_biased();

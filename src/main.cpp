@@ -71,9 +71,9 @@ TEST( FUtils, intVecToStr )
 
 TEST( FUtils, slNode )
 {
-  slNode * root    = new slNode( 10 );
-  slNode * node    = new slNode( 3 );
-  slNode * node2   = new slNode( 8 );
+  auto * root    = new slNode( 10 );
+  auto * node    = new slNode( 3 );
+  auto * node2   = new slNode( 8 );
   root->next       = node;
   root->next->next = node2;
 
@@ -85,8 +85,8 @@ TEST( FUtils, slNode )
 TEST( FUtils, slList )
 {
   slList   list;
-  slNode * node  = new slNode( 3 );
-  slNode * node2 = new slNode( 8 );
+  auto * node  = new slNode( 3 );
+  auto * node2 = new slNode( 8 );
 
   list.add( node );
   list.add( node2 );

@@ -24,7 +24,7 @@ d  e f  g
 
 #include "Futils.hpp"
 
-int get_index( std::vector<btNode *> v, btNode * node )
+inline int get_index( std::vector<btNode *> v, btNode * node )
 {
   for( int i = 0; i < v.size(); i++ )
   {
@@ -35,7 +35,7 @@ int get_index( std::vector<btNode *> v, btNode * node )
 
 // Function to slice a given vector
 // from range X to Y
-std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y )
+inline std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y )
 {
   // Starting and Ending iterators
   auto start = arr.begin() + X;
@@ -51,7 +51,7 @@ std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y )
   return result;
 }
 
-btNode * reconstruct( std::vector<btNode *> preorder, std::vector<btNode *> inorder )
+inline btNode * reconstruct( std::vector<btNode *> preorder, std::vector<btNode *> inorder )
 {
   if( preorder.size() == 1 && inorder.size() == 1 ) { return preorder[0]; }
 

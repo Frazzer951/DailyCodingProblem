@@ -36,7 +36,7 @@ Should return null, since we have an infinite loop.
 #include <string>
 #include <vector>
 
-int pathScore( std::string path )
+inline int pathScore( const std::string& path )
 {
   std::map<char, int> counts;
   int                 max_count = 0;
@@ -51,10 +51,10 @@ int pathScore( std::string path )
   return max_count;
 }
 
-int best_score( std::vector<std::vector<int>> paths, std::string nodes )
+inline int best_score( const std::vector<std::vector<int>>& paths, std::string nodes )
 {
   int best_score = 0;
-  for( std::vector<int> v : paths )
+  for( const std::vector<int>& v : paths )
   {
     std::string path;
     for( int i : v )
@@ -68,7 +68,7 @@ int best_score( std::vector<std::vector<int>> paths, std::string nodes )
   return best_score;
 }
 
-bool isLoop( std::vector<int> cur_path, int cur_index )
+inline bool isLoop( const std::vector<int>& cur_path, int cur_index )
 {
   for( int i : cur_path )
   {
@@ -77,7 +77,7 @@ bool isLoop( std::vector<int> cur_path, int cur_index )
   return false;
 }
 
-std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map, std::vector<int> cur_path = std::vector<int>() )
+inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map, std::vector<int> cur_path = std::vector<int>() )
 {
   if( edge_map[index].empty() ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, index ) );
 
@@ -101,7 +101,7 @@ std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<
   return paths;
 }
 
-int pathValue( std::string nodes, std::vector<std::pair<int, int>> edges )
+inline int pathValue( const std::string& nodes, const std::vector<std::pair<int, int>>& edges )
 {
   std::map<int, std::vector<int>> edge_map;
 
@@ -116,7 +116,7 @@ int pathValue( std::string nodes, std::vector<std::pair<int, int>> edges )
   {
     auto i_paths = follow_path( i, edge_map );
 
-    for( std::vector<int> path : i_paths )
+    for( const std::vector<int>& path : i_paths )
     {
       paths.push_back( path );
     }

@@ -19,21 +19,22 @@ You can simply print them out as you compute them.
 
 #include "Futils.hpp"
 
-std::vector<int> compSubArrMax( std::vector<int> arr, int k )
+inline std::vector<int> compSubArrMax( std::vector<int> arr, int k )
 {
   std::vector<int> returnVec;
 
   for( unsigned int i = 0; i + k <= arr.size(); ++i )
   {
     std::vector<int> subVec;
-    for( int j = 0; j < k; ++j ) { subVec.push_back( arr[j + i] ); }
+    subVec.reserve(k);
+for( int j = 0; j < k; ++j ) { subVec.push_back( arr[j + i] ); }
     returnVec.push_back( getIntVecMax( subVec ) );
   }
 
   return returnVec;
 }
 
-int prob_18()
+inline int prob_18()
 {
   std::cout << "\nProblem 18\n";
 

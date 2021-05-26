@@ -22,7 +22,7 @@ public:
   long int get_last( int i ) { return log[log.size() - i]; }
 };
 
-int prob_16()
+inline int prob_16()
 {
   std::cout << "\nProblem 16\n";
 

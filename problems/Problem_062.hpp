@@ -16,7 +16,7 @@ Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
 
 #include <vector>
 
-int num_ways( int n, int m )
+inline int num_ways( int n, int m )
 {
   std::vector<std::vector<int>> A( n, std::vector<int>( m, 0 ) );
   for( int i = 0; i < n; i++ )

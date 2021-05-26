@@ -15,19 +15,20 @@ No string in the list has a length of more than 10.
 */
 
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "Futils.hpp"
 
-std::vector<std::string> splitString( std::string str, int k )
+inline std::vector<std::string> splitString( std::string str, int k )
 {
   std::vector<std::string> multi_string;
 
-  auto split_string = split( str );
+  auto split_string = split( std::move(str) );
 
   int         count   = 0;
-  std::string cur_str = "";
-  for( auto word : split_string )
+  std::string cur_str;
+  for( const auto& word : split_string )
   {
     if( count == 0 )
     {

@@ -9,7 +9,7 @@ For example, given s = "abcba" and k = 2, the longest substring with k distinct 
 #include <iostream>
 #include <map>
 
-char findMin( std::map<char, int> m )
+inline char findMin( std::map<char, int> m )
 {
   char key = m.begin()->first;
   int  min = m.begin()->second;
@@ -24,14 +24,14 @@ char findMin( std::map<char, int> m )
   return key;
 }
 
-int longest_substring_with_k_distinct_characters( std::string s, unsigned int k )
+inline int longest_substring_with_k_distinct_characters( std::string s, unsigned int k )
 {
   if( k == 0 ) return 0;
 
   int                 bounds[] = { 0, 0 };
   std::map<char, int> h;
   int                 max_length = 0;
-  int                 new_lower_bounds;
+  int                 new_lower_bounds = 0;
   for( unsigned int i = 0; i < s.size(); ++i )
   {
     h[s[i]] = i;
@@ -53,7 +53,7 @@ int longest_substring_with_k_distinct_characters( std::string s, unsigned int k 
   return max_length;
 }
 
-int prob_13()
+inline int prob_13()
 {
   std::cout << "\nProblem 13\n";
 

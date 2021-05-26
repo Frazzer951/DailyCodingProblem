@@ -32,9 +32,9 @@ struct lbtNode
     value          = val;
     lockedSubNodes = 0;
     locked         = false;
-    parent         = NULL;
-    left           = NULL;
-    right          = NULL;
+    parent         = nullptr;
+    left           = nullptr;
+    right          = nullptr;
   }
 
   void setLeft( lbtNode * node )
@@ -49,14 +49,14 @@ struct lbtNode
     node->parent = this;
   }
 
-  bool canLockUnlock()
+  bool canLockUnlock() const
   {
     if( lockedSubNodes > 0 ) return false;
 
-    auto cur = parent;
-    while( cur != NULL )
+    auto *cur = parent;
+    while( cur != nullptr )
     {
-      if( cur->locked == true ) return false;
+      if( cur->locked ) return false;
       cur = cur->parent;
     }
     return true;
@@ -68,8 +68,8 @@ struct lbtNode
     {
       locked = true;
 
-      auto cur = parent;
-      while( cur != NULL )
+      auto *cur = parent;
+      while( cur != nullptr )
       {
         cur->lockedSubNodes++;
         cur = cur->parent;
@@ -86,8 +86,8 @@ struct lbtNode
     {
       locked = false;
 
-      auto cur = parent;
-      while( cur != NULL )
+      auto *cur = parent;
+      while( cur != nullptr )
       {
         cur->lockedSubNodes--;
         cur = cur->parent;
@@ -98,5 +98,5 @@ struct lbtNode
     return false;
   }
 
-  bool isLocked() { return locked; }
+  bool isLocked() const { return locked; }
 };

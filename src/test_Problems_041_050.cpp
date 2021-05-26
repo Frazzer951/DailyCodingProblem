@@ -192,13 +192,13 @@ TEST( Problem_48, Given_Case )
   //  / \ / \
   // d  e f  g
 
-  btNode * a = new btNode( 'a' );
-  btNode * b = new btNode( 'b' );
-  btNode * c = new btNode( 'c' );
-  btNode * d = new btNode( 'd' );
-  btNode * e = new btNode( 'e' );
-  btNode * f = new btNode( 'f' );
-  btNode * g = new btNode( 'g' );
+  auto * a = new btNode( 'a' );
+  auto * b = new btNode( 'b' );
+  auto * c = new btNode( 'c' );
+  auto * d = new btNode( 'd' );
+  auto * e = new btNode( 'e' );
+  auto * f = new btNode( 'f' );
+  auto * g = new btNode( 'g' );
 
   std::vector<btNode *> preorder = { a, b, d, e, c, f, g };
   std::vector<btNode *> inorder  = { d, b, e, a, f, c, g };

@@ -19,6 +19,7 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 
 #include <iostream>
 #include <string>
+#include <utility>
 
 class SerNode
 {
@@ -29,42 +30,42 @@ public:
 
   SerNode( std::string val )
   {
-    _val   = val;
+    _val   = std::move(val);
     _left  = nullptr;
     _right = nullptr;
   }
   SerNode( std::string val, SerNode * left )
   {
-    _val   = val;
+    _val   = std::move(val);
     _left  = left;
     _right = nullptr;
   }
   SerNode( std::string val, SerNode * left, SerNode * right )
   {
-    _val   = val;
+    _val   = std::move(val);
     _left  = left;
     _right = right;
   }
 
-  std::string value() { return _val; }
+  std::string value() const { return _val; }
 
-  SerNode left() { return *_left; }
+  SerNode left() const { return *_left; }
 
-  SerNode right() { return *_right; }
+  SerNode right() const { return *_right; }
 
-  std::string serialize_node()
+  std::string serialize_node() const
   {
     std::string node_str = _val + ":{";
-    if( _left != NULL ) { node_str += _left->serialize_node(); }
-    if( _right != NULL ) { node_str += ',' + _right->serialize_node(); }
+    if( _left != nullptr ) { node_str += _left->serialize_node(); }
+    if( _right != nullptr ) { node_str += ',' + _right->serialize_node(); }
     node_str += "}";
     return node_str;
   }
 };
 
-std::string serialize( SerNode root ) { return root.serialize_node(); }
+inline std::string serialize( SerNode root ) { return root.serialize_node(); }
 
-SerNode * deserialize( std::string str )
+inline SerNode * deserialize( const std::string& str )
 {
   // Example Serialized Tree
   // root:{left:{left.left:{}},right:{}}
@@ -91,21 +92,21 @@ SerNode * deserialize( std::string str )
   if( comma_index == -1 )
   {
     SerNode * left        = deserialize( nodes.substr( 1, nodes.size() - 2 ) );
-    SerNode * return_node = new SerNode( node_name, left );
+    auto * return_node = new SerNode( node_name, left );
     return return_node;
   }
   else
   {
     SerNode * left        = deserialize( nodes.substr( 1, comma_index - 1 ) );
     SerNode * right       = deserialize( nodes.substr( comma_index + 1, nodes.size() - comma_index - 2 ) );
-    SerNode * return_node = new SerNode( node_name, left, right );
+    auto * return_node = new SerNode( node_name, left, right );
     return return_node;
   }
 
   return new SerNode( "Error" );
 }
 
-int prob_3()
+inline int prob_3()
 {
   std::cout << "\nProblem 3:\n";
 

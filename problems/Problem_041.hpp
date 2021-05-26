@@ -18,7 +18,7 @@ one is lexicographically smaller.
 #include <string>
 #include <vector>
 
-std::pair<std::string, std::string> getAirportPair( std::vector<std::pair<std::string, std::string>> v, std::string first )
+inline std::pair<std::string, std::string> getAirportPair( const std::vector<std::pair<std::string, std::string>>& v, const std::string& first )
 {
   for( std::pair<std::string, std::string> flight : v )
   {
@@ -27,7 +27,7 @@ std::pair<std::string, std::string> getAirportPair( std::vector<std::pair<std::s
   return std::pair<std::string, std::string>();
 }
 
-int getPairIndex( std::vector<std::pair<std::string, std::string>> v, std::pair<std::string, std::string> p )
+inline int getPairIndex( std::vector<std::pair<std::string, std::string>> v, const std::pair<std::string, std::string>& p )
 {
   for( int i = 0; i < v.size(); i++ )
   {
@@ -36,7 +36,7 @@ int getPairIndex( std::vector<std::pair<std::string, std::string>> v, std::pair<
   return -1;
 }
 
-std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::string>> v, std::string start )
+inline std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::string>> v, const std::string& start )
 {
   std::vector<std::string> itinerary = { start };
   std::string              next      = start;
@@ -44,7 +44,7 @@ std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::s
   while( !v.empty() )
   {
     auto flight = getAirportPair( v, next );
-    if( flight.first == "" && flight.second == "" ) return std::vector<std::string>();
+    if( flight.first.empty() && flight.second.empty() ) return std::vector<std::string>();
     v.erase( v.begin() + getPairIndex( v, flight ) );
     next = flight.second;
     itinerary.push_back( next );

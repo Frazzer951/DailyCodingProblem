@@ -22,7 +22,7 @@ you should return the following:
 #include <string>
 #include <vector>
 
-std::vector<std::string> padWords( std::vector<std::string> words, unsigned int k )
+inline std::vector<std::string> padWords( std::vector<std::string> words, unsigned int k )
 {
   std::vector<std::string> padded_strings;
 
@@ -57,7 +57,7 @@ std::vector<std::string> padWords( std::vector<std::string> words, unsigned int 
       }
     }
 
-    std::string temp = "";
+    std::string temp;
     for( unsigned int i = 0; i < line.size(); i++ )
     {
       temp += line[i];

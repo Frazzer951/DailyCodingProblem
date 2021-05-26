@@ -6,10 +6,10 @@ The area of a circle is defined as ?r^2. Estimate ? to 3 decimal places using a 
 Hint: The basic equation of a circle is x2 + y2 = r2.
 */
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
-double monteCarloPi( int n )
+inline double monteCarloPi( int n )
 {
   // PI = 4 * (Points in circle)/(Total Points)
 
@@ -31,7 +31,7 @@ double monteCarloPi( int n )
   return PI_Guess;
 }
 
-int prob_14()
+inline int prob_14()
 {
   std::cout << "\nProblem 14\n";
 

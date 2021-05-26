@@ -14,7 +14,7 @@ Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in
 
 #include <vector>
 
-int waterHeightMap( std::vector<int> v )
+inline int waterHeightMap( std::vector<int> v )
 {
   int unitsOfWater = 0;
 

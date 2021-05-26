@@ -11,7 +11,7 @@ Do this in constant space and in one pass.
 
 #include "Futils.hpp"
 
-slNode * getKthLastNode( slList list, int k )
+inline slNode * getKthLastNode( slList list, int k )
 {
   slNode * slow = list.get( 0 );
   slNode * fast = list.get( 0 );
@@ -19,7 +19,7 @@ slNode * getKthLastNode( slList list, int k )
   for( int i = 0; i < k; i++ ) fast = fast->next;
 
   slNode * prev = slow;
-  while( fast != NULL )
+  while( fast != nullptr )
   {
     prev = slow;
     slow = slow->next;

@@ -11,7 +11,7 @@ For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] sin
 
 #include <vector>
 
-std::vector<int> subset_sum( std::vector<int> nums, int k )
+inline std::vector<int> subset_sum( std::vector<int> nums, int k )
 {
   std::vector<std::vector<std::vector<int> *>> A( nums.size() + 1, std::vector<std::vector<int> *>( k + 1, NULL ) );
 

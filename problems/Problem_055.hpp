@@ -11,13 +11,13 @@ null.
 Hint: What if we enter the same URL twice?
 */
 
+#include <cstdlib>
 #include <map>
-#include <stdlib.h>
 #include <string>
 
 class URLShortener
 {
-  std::string _generate_short()
+  static std::string _generate_short()
   {
     char        values[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     std::string random;
@@ -40,7 +40,7 @@ public:
   std::map<std::string, std::string> short_to_url;
   std::map<std::string, std::string> url_to_short;
 
-  std::string shorten( std::string url )
+  std::string shorten( const std::string& url )
   {
     std::string shortened = _generate_unused_short();
     if( url_to_short.find( url ) != url_to_short.end() ) return url_to_short[url];
@@ -49,5 +49,5 @@ public:
     return shortened;
   }
 
-  std::string restore( std::string shortened ) { return short_to_url[shortened]; }
+  std::string restore( const std::string& shortened ) { return short_to_url[shortened]; }
 };

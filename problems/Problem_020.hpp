@@ -12,13 +12,13 @@ Do this in O(M + N) time (where M and N are the lengths of the lists) and consta
 
 #include "Futils.hpp"
 
-unsigned int length( slNode * head )
+inline unsigned int length( slNode * head )
 {
-  if( head->next == NULL ) { return 1; }
+  if( head->next == nullptr ) { return 1; }
   return 1 + length( head->next );
 }
 
-slNode * findNodeIntersect( slNode * a, slNode * b )
+inline slNode * findNodeIntersect( slNode * a, slNode * b )
 {
   unsigned int m    = length( a );
   unsigned int n    = length( b );

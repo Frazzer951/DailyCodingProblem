@@ -11,7 +11,7 @@ Bonus: Can you do this in one pass?
 #include <iostream>
 #include <vector>
 
-bool arrayAddToNum( std::vector<int> arr, int k )
+inline bool arrayAddToNum( std::vector<int> arr, int k )
 {
   for( unsigned int i = 0; i < arr.size() - 1; ++i )
   {
@@ -23,7 +23,7 @@ bool arrayAddToNum( std::vector<int> arr, int k )
   return false;
 }
 
-int prob_1()
+inline int prob_1()
 {
   std::cout << "\nProblem 1:\n";
 

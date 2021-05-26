@@ -17,16 +17,16 @@ integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a
 
 #include <iostream>
 
-int fib( int n )
+inline int fib( int n )
 {
   if( n <= 1 ) return n;
 
   return fib( n - 1 ) + fib( n - 2 );
 }
 
-int countWays( int n ) { return fib( n + 1 ); }
+inline int countWays( int n ) { return fib( n + 1 ); }
 
-int prob_12()
+inline int prob_12()
 {
   std::cout << "\nProblem 12\n";
 

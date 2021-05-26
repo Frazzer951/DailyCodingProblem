@@ -16,13 +16,13 @@ Implement car and cdr.
 #include <iostream>
 #include <utility>
 
-std::pair<int, int> cons( int a, int b ) { return std::make_pair( a, b ); }
+inline std::pair<int, int> cons( int a, int b ) { return std::make_pair( a, b ); }
 
-int car( std::pair<int, int> p ) { return p.first; }
+inline int car( std::pair<int, int> p ) { return p.first; }
 
-int cdr( std::pair<int, int> p ) { return p.second; }
+inline int cdr( std::pair<int, int> p ) { return p.second; }
 
-int prob_5()
+inline int prob_5()
 {
   std::cout << "\nProblem 5:\n";
 

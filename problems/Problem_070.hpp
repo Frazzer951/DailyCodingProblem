@@ -10,7 +10,7 @@ For example, given 1, you should return 19. Given 2, you should return 28.
 
 #include <string>
 
-int perfecet_num( int n )
+inline int perfecet_num( int n )
 {
   std::string n_str  = std::to_string( n );
   int         length = (int) n_str.size();
@@ -22,11 +22,11 @@ int perfecet_num( int n )
   }
 
   if( sum == 10 ) return n;
-  else
-  {
+  
+  
     int needed = 10 - sum;
     n_str += std::to_string( needed );
 
     return ( perfecet_num( std::stoi( n_str ) ) );
-  }
+ 
 }

@@ -42,7 +42,7 @@ def partition(s):
 */
 
 
-bool partitions( std::vector<int> s )
+inline bool partitions( std::vector<int> s )
 {
   int k = sum( s );
   if( k % 2 != 0 ) return false;

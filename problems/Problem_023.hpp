@@ -20,33 +20,33 @@ and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number
 
 #include <vector>
 
-bool canMoveUp( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
+inline bool canMoveUp( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
 {
-  return maze[curPos.first - 1][curPos.second] == false;
+  return !maze[curPos.first - 1][curPos.second];
 }
-bool canMoveDown( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
+inline bool canMoveDown( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
 {
-  return maze[curPos.first + 1][curPos.second] == false;
+  return !maze[curPos.first + 1][curPos.second];
 }
-bool canMoveLeft( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
+inline bool canMoveLeft( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
 {
-  return maze[curPos.first][curPos.second - 1] == false;
+  return !maze[curPos.first][curPos.second - 1];
 }
-bool canMoveRight( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
+inline bool canMoveRight( std::vector<std::vector<bool>> maze, std::pair<int, int> curPos )
 {
-  return maze[curPos.first][curPos.second + 1] == false;
+  return !maze[curPos.first][curPos.second + 1];
 }
 
-int findOpening( std::vector<bool> row )
+inline int findOpening( std::vector<bool> row )
 {
   for( unsigned int i = 0; i < row.size(); ++i )
   {
-    if( row[i] == false ) return i;
+    if( !row[i] ) return i;
   }
   return -1;
 }
 
-int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int, int> startPos, std::pair<int, int> endPos )
+inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int, int> startPos, std::pair<int, int> endPos )
 {
   std::pair<int, int> curPos = startPos;
   int                 moves  = 0;

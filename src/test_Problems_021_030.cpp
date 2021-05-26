@@ -101,15 +101,15 @@ TEST( Problem_23, Test_Case )
 // Problem 24
 TEST( Problem_24, Test_Case )
 {
-  lbtNode * root = new lbtNode( 10 );
-  lbtNode * a    = new lbtNode( 12 );
-  lbtNode * b    = new lbtNode( 34 );
-  lbtNode * c    = new lbtNode( 75 );
-  lbtNode * d    = new lbtNode( 11 );
-  lbtNode * e    = new lbtNode( 28 );
-  lbtNode * f    = new lbtNode( 19 );
-  lbtNode * g    = new lbtNode( 23 );
-  lbtNode * h    = new lbtNode( 99 );
+  auto * root = new lbtNode( 10 );
+  auto * a    = new lbtNode( 12 );
+  auto * b    = new lbtNode( 34 );
+  auto * c    = new lbtNode( 75 );
+  auto * d    = new lbtNode( 11 );
+  auto * e    = new lbtNode( 28 );
+  auto * f    = new lbtNode( 19 );
+  auto * g    = new lbtNode( 23 );
+  auto * h    = new lbtNode( 99 );
 
   root->setLeft( a );
   root->setRight( b );
@@ -158,7 +158,7 @@ TEST( Problem_26, Test_Case )
   list.add( new slNode( 4 ) );
   list.add( new slNode( 5 ) );
 
-  auto rmNode = getKthLastNode( list, 2 );
+  auto *rmNode = getKthLastNode( list, 2 );
 
   EXPECT_EQ( rmNode->value, 4 );
 }

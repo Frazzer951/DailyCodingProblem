@@ -10,13 +10,13 @@ knight's tours on an N by N chessboard.
 
 #include <vector>
 
-bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, int> move, int n )
+inline bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, int> move, int n )
 {
   auto & [r, c] = move;
   return 0 <= r && r < n && 0 <= c && c < n && board[r][c] == -1;
 }
 
-std::vector<std::pair<int, int>> vaild_moves( std::vector<std::vector<int>> board, int r, int c, int n )
+inline std::vector<std::pair<int, int>> vaild_moves( const std::vector<std::vector<int>>& board, int r, int c, int n )
 {
   std::vector<std::pair<int, int>> deltas = {
     std::make_pair( 2, 1 ),
@@ -31,9 +31,10 @@ std::vector<std::pair<int, int>> vaild_moves( std::vector<std::vector<int>> boar
 
   std::vector<std::pair<int, int>> all_moves;
 
-  for( auto & [r_delta, c_delta] : deltas )
+  all_moves.reserve(deltas.size());
+for( auto & [r_delta, c_delta] : deltas )
   {
-    all_moves.push_back( std::make_pair( r + r_delta, c + c_delta ) );
+    all_moves.emplace_back( r + r_delta, c + c_delta );
   }
 
   std::vector<std::pair<int, int>> moves;
@@ -49,7 +50,7 @@ std::vector<std::pair<int, int>> vaild_moves( std::vector<std::vector<int>> boar
   return moves;
 }
 
-int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::pair<int, int>> tour, int n )
+inline int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::pair<int, int>> tour, int n )
 {
   if( tour.size() == n * n ) return 1;
 
@@ -59,7 +60,7 @@ int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::
   auto moves = vaild_moves( board, last_r, last_c, n );
   for( auto & [r, c] : moves )
   {
-    tour.push_back( std::make_pair( r, c ) );
+    tour.emplace_back( r, c );
     board[r][c] = (int) tour.size();
     count += knights_tours_helper( board, tour, n );
     tour.pop_back();
@@ -68,7 +69,7 @@ int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::
   return count;
 }
 
-int knights_tours( int n )
+inline int knights_tours( int n )
 {
   int count = 0;
   for( int i = 0; i < n; i++ )

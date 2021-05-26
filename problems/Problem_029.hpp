@@ -10,19 +10,19 @@ of alphabetic characters. You can assume the string to be decoded is valid.
 
 #include <string>
 
-int countChar( std::string str, char c )
+inline int countChar( std::string str, char c )
 {
   int count = 0;
-  for( unsigned int i = 0; i < str.size(); i++ )
+  for(char i : str)
   {
-    if( str[i] == c ) count++;
+    if( i == c ) count++;
     else
       break;
   }
   return count;
 }
 
-std::string runLengthEncode( std::string str )
+inline std::string runLengthEncode( std::string str )
 {
   std::string return_str;
 
@@ -37,20 +37,20 @@ std::string runLengthEncode( std::string str )
   return return_str;
 }
 
-std::string runLengthDecode( std::string str )
+inline std::string runLengthDecode( std::string str )
 {
   std::string                       return_str;
   std::vector<std::pair<int, char>> charPairs;
 
   while( !str.empty() )
   {
-    charPairs.push_back( std::make_pair( std::stoi( std::string( 1, str[0] ) ), str[1] ) );
+    charPairs.emplace_back( std::stoi( std::string( 1, str[0] ) ), str[1] );
     str = str.substr( 2 );
   }
 
-  for( unsigned int i = 0; i < charPairs.size(); i++ )
+  for(auto & charPair : charPairs)
   {
-    for( int j = 0; j < charPairs[i].first; j++ ) { return_str += charPairs[i].second; }
+    for( int j = 0; j < charPair.first; j++ ) { return_str += charPair.second; }
   }
 
   return return_str;

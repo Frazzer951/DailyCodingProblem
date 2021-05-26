@@ -22,10 +22,10 @@ char MINUS  = '-';
 char TIMES  = '*';
 char DIVIDE = '/';
 
-int evaluate( btNode root )
+inline int evaluate( btNode root )
 {
   if( root.value == PLUS ) return evaluate( *root.left ) + evaluate( *root.right );
-  else if( root.value == MINUS )
+  if( root.value == MINUS )
     return evaluate( *root.left ) - evaluate( *root.right );
   else if( root.value == TIMES )
     return evaluate( *root.left ) * evaluate( *root.right );

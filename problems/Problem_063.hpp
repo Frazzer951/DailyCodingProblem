@@ -22,21 +22,21 @@ it's the last row.
 #include <string>
 #include <vector>
 
-bool findWord( std::vector<std::vector<char>> letters, std::string word )
+inline bool findWord( std::vector<std::vector<char>> letters, std::string word )
 {
   if( letters.size() < word.size() && letters[0].size() < word.size() ) return false;
 
   bool wordFound = true;
 
   // First Go Trough Columns
-  for( int i = 0; i < letters.size(); i++ )
+  for(auto & letter : letters)
   {
-    if( letters[i][0] == word[0] )
+    if( letter[0] == word[0] )
     {
       wordFound = true;
       for( int j = 0; j < word.size(); j++ )
       {
-        if( letters[i][j] != word[j] )
+        if( letter[j] != word[j] )
         {
           wordFound = false;
           break;

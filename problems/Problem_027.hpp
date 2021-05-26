@@ -10,13 +10,15 @@ Given the string "([)]" or "((()", you should return false.
 
 #include <string>
 
-bool isBallancedString( std::string str )
+inline bool isBallancedString( std::string str )
 {
-  int round = 0, square = 0, curly = 0;
+  int round = 0;
+  int square = 0;
+  int curly = 0;
 
-  for( unsigned int i = 0; i < str.size(); i++ )
+  for(char i : str)
   {
-    switch( str[i] )
+    switch( i )
     {
       case '(': round++; break;
       case ')':

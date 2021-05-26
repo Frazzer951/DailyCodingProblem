@@ -32,7 +32,7 @@ def is_valid(board):
     return True
 */
 
-bool is_valid( std::vector<int> board )
+inline bool is_valid( std::vector<int> board )
 {
   int current_queen_row = (int) board.size() - 1;
   int current_queen_col = board[board.size() - 1];
@@ -45,7 +45,7 @@ bool is_valid( std::vector<int> board )
   return true;
 }
 
-int n_queens( int n, std::vector<int> board = {} )
+inline int n_queens( int n, std::vector<int> board = {} )
 {
   if( n == board.size() ) return 1;
 

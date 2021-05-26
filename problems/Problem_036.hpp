@@ -13,24 +13,23 @@ Given the root to a binary search tree, find the second largest node in the tree
 class BST
 {
 public:
-  int  data;
-  BST *left, *right;
+  int  data{ 0 };
+  BST *left{ NULL }, *right{ NULL };
 
   // Default constructor.
-  BST() :
-    data( 0 ), left( NULL ), right( NULL ) {}
+  BST() {}
 
   // Parameterized constructor.
   BST( int value )
   {
     data = value;
-    left = right = NULL;
+    left = right = nullptr;
   }
 
   // Insert function.
   BST * Insert( BST * root, int value )
   {
-    if( !root )
+    if( root == nullptr )
     {
       // Insert the first node, if root is NULL.
       return new BST( value );
@@ -62,18 +61,18 @@ public:
   // This gives data in sorted order.
   void Inorder( BST * root )
   {
-    if( !root ) { return; }
+    if( root == nullptr ) { return; }
     Inorder( root->left );
     std::cout << root->data << std::endl;
     Inorder( root->right );
   }
 };
 
-void revInorder( BST * node, int & count, int & val )
+inline void revInorder( BST * node, int & count, int & val )
 {
-  if( node == NULL || count == 2 ) return;
+  if( node == nullptr || count == 2 ) return;
 
-  if( node->right ) revInorder( node->right, count, val );
+  if( node->right != nullptr ) revInorder( node->right, count, val );
 
   count++;
 
@@ -83,13 +82,13 @@ void revInorder( BST * node, int & count, int & val )
     return;
   }
 
-  if( node->left ) revInorder( node->left, count, val );
+  if( node->left != nullptr ) revInorder( node->left, count, val );
 }
 
-int findSecondLargetNode( BST * root )
+inline int findSecondLargetNode( BST * root )
 {
   int count = 0;
-  int val;
+  int val = 0;
   revInorder( root, count, val );
   return val;
 }

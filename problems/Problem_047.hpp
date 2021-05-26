@@ -11,7 +11,7 @@ For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could bu
 
 #include <vector>
 
-int max_profit( std::vector<int> prices )
+inline int max_profit( std::vector<int> prices )
 {
   int profit = 0;
   for( int i = 0; i < prices.size() - 1; i++ )

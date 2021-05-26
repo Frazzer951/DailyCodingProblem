@@ -30,7 +30,7 @@ def power(x, y):
 
 namespace p61
 {
-  double pow( int num, int power )
+  inline double pow( int num, int power )
   {
     double base     = num;
     int    exponent = power;

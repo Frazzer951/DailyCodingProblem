@@ -16,6 +16,7 @@ Each operation should run in O(1) time.
 
 #include <map>
 #include <string>
+#include <utility>
 
 struct LLNode
 {
@@ -26,10 +27,10 @@ struct LLNode
 
   LLNode( std::string _key, std::string _val )
   {
-    key  = _key;
-    val  = _val;
-    prev = NULL;
-    next = NULL;
+    key  = std::move(_key);
+    val  = std::move(_val);
+    prev = nullptr;
+    next = nullptr;
   }
 };
 
@@ -48,11 +49,11 @@ struct LinkedList
     tail->prev = head;
   }
 
-  LLNode * get_head() { return head->next; }
+  LLNode * get_head() const { return head->next; }
 
-  LLNode * get_tail() { return tail->prev; }
+  LLNode * get_tail() const { return tail->prev; }
 
-  void add( LLNode * node )
+  void add( LLNode * node ) const
   {
     LLNode * prev = tail->prev;
     prev->next    = node;
@@ -61,7 +62,7 @@ struct LinkedList
     tail->prev    = node;
   }
 
-  void remove( LLNode * node )
+  static void remove( LLNode * node )
   {
     LLNode * prev = node->prev;
     LLNode * nxt  = node->next;
@@ -78,11 +79,11 @@ struct LRUCache
 
   LRUCache( int _n ) { n = _n; }
 
-  void set( std::string key, std::string val )
+  void set( const std::string& key, std::string val )
   {
     if( dict.find( key ) != dict.end() ) { dict.erase( key ); }
 
-    LLNode * node = new LLNode( key, val );
+    auto * node = new LLNode( key, std::move(val) );
     list.add( node );
     dict[key] = node;
     if( dict.size() > n )
@@ -93,7 +94,7 @@ struct LRUCache
     }
   }
 
-  std::string get( std::string key )
+  std::string get( const std::string& key )
   {
     if( dict.find( key ) != dict.end() )
     {

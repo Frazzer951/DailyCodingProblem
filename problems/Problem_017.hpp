@@ -40,7 +40,7 @@ The name of a directory or sub-directory will not contain a period.
 
 #include <iostream>
 
-int prob_17()
+inline int prob_17()
 {
   std::cout << "\nProblem 17\n";
 

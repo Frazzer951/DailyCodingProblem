@@ -29,27 +29,27 @@ public:
   {
     data = val;
 
-    left  = NULL;
-    right = NULL;
+    left  = nullptr;
+    right = nullptr;
   }
 };
 
-bool sameChildren( Node * root )
+inline bool sameChildren( Node * root )
 {
-  if( root == NULL ) return true;
-  if( root->left == NULL && root->right == NULL ) return true;
+  if( root == nullptr ) return true;
+  if( root->left == nullptr && root->right == nullptr ) return true;
 
-  if( root->left != NULL && root->data != root->left->data ) return false;
-  if( root->right != NULL && root->data != root->right->data ) return false;
+  if( root->left != nullptr && root->data != root->left->data ) return false;
+  if( root->right != nullptr && root->data != root->right->data ) return false;
 
   return sameChildren( root->left ) && sameChildren( root->right );
 }
 
-int countUnivalTree( Node * root )
+inline int countUnivalTree( Node * root )
 {
-  if( root == NULL ) return 0;
+  if( root == nullptr ) return 0;
 
-  if( root->left == NULL && root->right == NULL ) { return 1; }
+  if( root->left == nullptr && root->right == nullptr ) { return 1; }
   int count = 0;
 
   if( sameChildren( root ) ) count++;
@@ -57,7 +57,7 @@ int countUnivalTree( Node * root )
   return count + countUnivalTree( root->left ) + countUnivalTree( root->right );
 }
 
-int prob_8()
+inline int prob_8()
 {
   std::cout << "\nProblem 8\n";
 

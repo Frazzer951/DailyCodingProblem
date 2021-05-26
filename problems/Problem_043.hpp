@@ -18,7 +18,7 @@ Each method should run in constant time.
 
 class stackEmptyExcept : public std::exception
 {
-  virtual const char * what() const throw() { return "My exception happened"; }
+  [[nodiscard]] const char * what() const noexcept override { return "My exception happened"; }
 } stackEmpty;
 
 struct stackNode
@@ -36,7 +36,7 @@ struct stack
 
   void push( int val )
   {
-    stackNode * newNode = new stackNode( val, top );
+    auto * newNode = new stackNode( val, top );
     top                 = newNode;
   }
 
@@ -52,7 +52,7 @@ struct stack
     return val;
   }
 
-  int getMax()
+  int getMax() const
   {
     if( top == nullptr ) throw stackEmpty;
 

@@ -32,12 +32,12 @@ def colorable(graph, k, colors=[]):
     return False
 */
 
-bool valid()
+inline bool valid()
 {
   return false;
 }
 
-bool colorable()
+inline bool colorable()
 {
   return false;
 }

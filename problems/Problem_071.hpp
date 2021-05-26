@@ -6,16 +6,16 @@ with uniform probability, implement a function rand5() that returns an
 integer from 1 to 5 (inclusive).
 */
 
-#include <stdlib.h>
+#include <cstdlib>
 
 namespace prob71
 {
-  int rand7()
+  inline int rand7()
   {
     return rand() % 7 + 1;
   }
 
-  int rand5()
+  inline int rand5()
   {
     int r = rand7();
     if( r >= 1 && r <= 5 ) return r;

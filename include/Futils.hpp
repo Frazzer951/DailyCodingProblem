@@ -30,9 +30,9 @@ inline std::vector<std::string> split( std::string str, char delim = ' ' )
 inline int getIntVecMax( std::vector<int> v )
 {
   int max = v[0];
-  for( unsigned int i = 0; i < v.size(); ++i )
+  for(int i : v)
   {
-    if( v[i] > max ) { max = v[i]; }
+    if( i > max ) { max = i; }
   }
   return max;
 }
@@ -51,7 +51,7 @@ inline int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
 inline std::string intVecToStr( std::vector<int> v )
 {
   std::string str;
-  for( unsigned int i = 0; i < v.size(); ++i ) { str += std::to_string( v[i] ) + ' '; }
+  for(int i : v) { str += std::to_string( i ) + ' '; }
   return str;
 }
 
@@ -63,7 +63,7 @@ struct slNode
   slNode( int x )
   {
     value = x;
-    next  = NULL;
+    next  = nullptr;
   }
 };
 
@@ -75,13 +75,13 @@ public:
 
   slList()
   {
-    head = NULL;
-    tail = NULL;
+    head = nullptr;
+    tail = nullptr;
   }
 
   void add( slNode * node )
   {
-    if( head == NULL )
+    if( head == nullptr )
     {
       head = node;
       tail = node;
@@ -89,17 +89,17 @@ public:
     else
     {
       tail->next = node;
-      node->next = NULL;
+      node->next = nullptr;
       tail       = node;
     }
   }
 
-  slNode * get( int index )
+  slNode * get( int index ) const
   {
     slNode * node = head;
     for( int i = 0; i < index; ++i )
     {
-      if( node->next ) { node = node->next; }
+      if( node->next != nullptr ) { node = node->next; }
       else
       {
         throw "Linked List index out of range";
@@ -118,8 +118,8 @@ struct btNode
   btNode( char x )
   {
     value = x;
-    left  = NULL;
-    right = NULL;
+    left  = nullptr;
+    right = nullptr;
   }
 };
 
@@ -128,7 +128,7 @@ inline bool operator==( const btNode & lhs, const btNode & rhs )
   return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;
 }
 
-inline int sum( std::vector<int> v )
+inline int sum( const std::vector<int>& v )
 {
   int sum = 0;
 

@@ -16,7 +16,7 @@ on the string "chats" should return false.
 
 #include <string>
 
-bool regex( std::string str, std::string exp )
+inline bool regex( std::string str, std::string exp )
 {
   unsigned int str_index = 0;
 
@@ -42,6 +42,5 @@ bool regex( std::string str, std::string exp )
         break;
     }
   }
-  if( str_index != str.size() ) return false;
-  return true;
+  return str_index == str.size();
 }

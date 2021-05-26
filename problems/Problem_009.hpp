@@ -14,7 +14,7 @@ Follow-up: Can you do this in O(N) time and constant space?
 #include <vector>
 
 // New Solution from given solution
-int largest_non_adjacent( std::vector<int> v )
+inline int largest_non_adjacent( std::vector<int> v )
 {
   if( v.size() <= 2 ) { return std::max( 0, v[0] ); }
 
@@ -33,9 +33,9 @@ int largest_non_adjacent( std::vector<int> v )
 }
 
 // Old Solution
-int findSum( std::vector<int> v, int index = 0 )
+inline int findSum( std::vector<int> v, int index = 0 )
 {
-  if( v.size() == 0 || index >= int( v.size() ) ) return 0;
+  if( v.empty() || index >= int( v.size() ) ) return 0;
   if( index + 1 == v.size() ) return v[index];
 
   int sum_1 = 0;
@@ -51,15 +51,15 @@ int findSum( std::vector<int> v, int index = 0 )
   return sum;
 }
 
-void testVector( std::vector<int> v )
+inline void testVector( std::vector<int> v )
 {
   std::cout << "For the array: ";
-  for( unsigned int i = 0; i < v.size(); ++i ) { std::cout << v[i] << ' '; }
+  for(int i : v) { std::cout << i << ' '; }
   int sum = largest_non_adjacent( v );
   std::cout << " the largest sum is " << sum << '\n';
 }
 
-int prob_9()
+inline int prob_9()
 {
   std::cout << "\nProblem 9\n";
   std::cout << "This will only work on the given test cases and specific sceneries\n";

@@ -15,14 +15,14 @@ Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string
 #include <string>
 #include <vector>
 
-std::vector<std::string> decompressString( std::vector<std::string> wordSet, std::string str )
+inline std::vector<std::string> decompressString( const std::vector<std::string>& wordSet, std::string str )
 {
   std::vector<std::string> sentance;
 
   while( str.length() > 0 )
   {
     bool wordFound = false;
-    for( std::string word : wordSet )
+    for( const std::string& word : wordSet )
     {
       auto index = str.find( word );
       if( index == 0 )

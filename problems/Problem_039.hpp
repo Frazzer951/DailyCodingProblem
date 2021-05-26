@@ -20,4 +20,4 @@ You can represent a live cell with an asterisk (*) and a dead cell with a dot (.
 
 #include <iostream>
 
-void CGOL() { std::cout << "I dont wanna do this right now so I'll come back later"; }
+inline void CGOL() { std::cout << "I dont wanna do this right now so I'll come back later"; }

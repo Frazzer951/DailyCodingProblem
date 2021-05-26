@@ -14,7 +14,7 @@ Follow-up: what if you can't use division?
 #include <string>
 #include <vector>
 
-std::vector<int> sumArray( std::vector<int> arr )
+inline std::vector<int> sumArray( std::vector<int> arr )
 {
   std::vector<int> sum;
   for( unsigned int i = 0; i < arr.size(); ++i )
@@ -29,21 +29,21 @@ std::vector<int> sumArray( std::vector<int> arr )
   return sum;
 }
 
-std::string vectorToString( std::vector<int> const & v )
+inline std::string vectorToString( std::vector<int> const & v )
 {
   std::string str;
-  for( unsigned int i = 0; i < v.size(); i++ ) str += std::to_string( v.at( i ) ) + " ";
+  for(int i : v) str += std::to_string( i ) + " ";
   return str;
 }
 
-void checkArray( std::vector<int> const & v )
+inline void checkArray( std::vector<int> const & v )
 {
   std::vector<int> sumedArray = sumArray( v );
 
   std::cout << "The array [ " << vectorToString( v ) << "] summed to [ " << vectorToString( sumedArray ) << "]\n";
 }
 
-int prob_2()
+inline int prob_2()
 {
   std::cout << "\nProblem 2:\n";
 
