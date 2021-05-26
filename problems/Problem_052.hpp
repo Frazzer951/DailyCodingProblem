@@ -41,8 +41,8 @@ struct LinkedList
   LinkedList()
   {
     // dummy nodes
-    head = new LLNode( "", "head" );
-    tail = new LLNode( "", "tail" );
+    head       = new LLNode( "", "head" );
+    tail       = new LLNode( "", "tail" );
     // set up head <-> tail
     head->next = tail;
     tail->prev = head;

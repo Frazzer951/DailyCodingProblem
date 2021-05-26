@@ -41,9 +41,9 @@ std::vector<int> print_spiral( std::vector<std::vector<int>> v )
 
   int i = 0;
   int k = 0;
-  int m = (int)v.size();
+  int m = (int) v.size();
   int l = 0;
-  int n = (int)v[0].size();
+  int n = (int) v[0].size();
 
   /* k - starting row index
      m - ending row index

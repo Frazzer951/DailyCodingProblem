@@ -17,7 +17,8 @@ public:
   BST *left, *right;
 
   // Default constructor.
-  BST() : data( 0 ), left( NULL ), right( NULL ) {}
+  BST() :
+    data( 0 ), left( NULL ), right( NULL ) {}
 
   // Parameterized constructor.
   BST( int value )

@@ -14,7 +14,7 @@ Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 
 std::vector<int> shuffle( std::vector<int> arr )
 {
-  int n = (int)arr.size();
+  int n = (int) arr.size();
 
   for( int i = 0; i < n - 1; i++ )
   {

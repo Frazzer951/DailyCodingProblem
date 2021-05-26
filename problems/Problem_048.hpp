@@ -62,8 +62,8 @@ btNode * reconstruct( std::vector<btNode *> preorder, std::vector<btNode *> inor
   //    root.right = reconstruct(preorder[1 + root_i:], inorder[root_i + 1:])
 
   root->left  = reconstruct( slicing( preorder, 1, 1 + root_i ), slicing( inorder, 0, root_i ) );
-  root->right = reconstruct( slicing( preorder, 1 + root_i, (int)preorder.size() - 1 ),
-                             slicing( inorder, root_i + 1, (int)inorder.size() - 1 ) );
+  root->right = reconstruct( slicing( preorder, 1 + root_i, (int) preorder.size() - 1 ),
+                             slicing( inorder, root_i + 1, (int) inorder.size() - 1 ) );
 
   return root;
 }

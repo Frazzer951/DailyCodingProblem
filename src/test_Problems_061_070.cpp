@@ -108,33 +108,33 @@ TEST( Problem_64, Test_Case_1 )
 // Problem 65
 TEST( Problem_65, Given_Case )
 {
-  std::vector<std::vector<int>> v =
-      { { 1, 2, 3, 4, 5 },
-        { 6, 7, 8, 9, 10 },
-        { 11, 12, 13, 14, 15 },
-        { 16, 17, 18, 19, 20 } };
+  std::vector<std::vector<int>> v = { { 1, 2, 3, 4, 5 },
+                                      { 6, 7, 8, 9, 10 },
+                                      { 11, 12, 13, 14, 15 },
+                                      { 16, 17, 18, 19, 20 } };
 
   std::vector<int> expected = {
-      1,
-      2,
-      3,
-      4,
-      5,
-      10,
-      15,
-      20,
-      19,
-      18,
-      17,
-      16,
-      11,
-      6,
-      7,
-      8,
-      9,
-      14,
-      13,
-      12 };
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    15,
+    20,
+    19,
+    18,
+    17,
+    16,
+    11,
+    6,
+    7,
+    8,
+    9,
+    14,
+    13,
+    12
+  };
 
   auto result = print_spiral( v );
 
@@ -181,10 +181,11 @@ TEST( Problem_67, Set )
 TEST( Problem_68, Given_Case )
 {
   std::vector<std::pair<int, int>> bishops = {
-      std::make_pair( 0, 0 ),
-      std::make_pair( 1, 2 ),
-      std::make_pair( 2, 2 ),
-      std::make_pair( 4, 0 ) };
+    std::make_pair( 0, 0 ),
+    std::make_pair( 1, 2 ),
+    std::make_pair( 2, 2 ),
+    std::make_pair( 4, 0 )
+  };
 
   int result = pairs( bishops, 5 );
 

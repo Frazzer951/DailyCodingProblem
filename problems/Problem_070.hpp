@@ -18,7 +18,7 @@ int perfecet_num( int n )
 
   for( int i = 0; i < length; i++ )
   {
-    sum += (int)n_str[i] - 48;
+    sum += (int) n_str[i] - 48;
   }
 
   if( sum == 10 ) return n;

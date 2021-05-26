@@ -19,14 +19,15 @@ bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, int> mov
 std::vector<std::pair<int, int>> vaild_moves( std::vector<std::vector<int>> board, int r, int c, int n )
 {
   std::vector<std::pair<int, int>> deltas = {
-      std::make_pair( 2, 1 ),
-      std::make_pair( 1, 2 ),
-      std::make_pair( 1, -2 ),
-      std::make_pair( -2, 1 ),
-      std::make_pair( -1, 2 ),
-      std::make_pair( 2, -1 ),
-      std::make_pair( -1, -2 ),
-      std::make_pair( -2, -1 ) };
+    std::make_pair( 2, 1 ),
+    std::make_pair( 1, 2 ),
+    std::make_pair( 1, -2 ),
+    std::make_pair( -2, 1 ),
+    std::make_pair( -1, 2 ),
+    std::make_pair( 2, -1 ),
+    std::make_pair( -1, -2 ),
+    std::make_pair( -2, -1 )
+  };
 
   std::vector<std::pair<int, int>> all_moves;
 
@@ -59,7 +60,7 @@ int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::
   for( auto & [r, c] : moves )
   {
     tour.push_back( std::make_pair( r, c ) );
-    board[r][c] = (int)tour.size();
+    board[r][c] = (int) tour.size();
     count += knights_tours_helper( board, tour, n );
     tour.pop_back();
     board[r][c] = -1;

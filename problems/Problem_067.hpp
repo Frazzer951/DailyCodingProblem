@@ -35,7 +35,8 @@ struct LFUCache
   std::map<int, std::deque<std::string>>     freq_map;
   int                                        min_freq = 0;
 
-  LFUCache( int _capacity ) : capacity( _capacity ) {};
+  LFUCache( int _capacity ) :
+    capacity( _capacity ) {};
 
   int get( std::string key )
   {

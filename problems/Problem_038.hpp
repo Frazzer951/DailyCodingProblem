@@ -34,7 +34,7 @@ def is_valid(board):
 
 bool is_valid( std::vector<int> board )
 {
-  int current_queen_row = (int)board.size() - 1;
+  int current_queen_row = (int) board.size() - 1;
   int current_queen_col = board[board.size() - 1];
 
   for( int row = 0; row < board.size() - 1; row++ )

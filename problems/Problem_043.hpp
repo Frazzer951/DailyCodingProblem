@@ -26,7 +26,8 @@ struct stackNode
   int         val;
   stackNode * prev = nullptr;
 
-  stackNode( int value, stackNode * _prev = nullptr ) : val( value ), prev( _prev ) {}
+  stackNode( int value, stackNode * _prev = nullptr ) :
+    val( value ), prev( _prev ) {}
 };
 
 struct stack
