@@ -12,7 +12,7 @@ Do this in O(N) time and O(1) space.
 #include <cmath>
 #include <vector>
 
-inline int nonRepeatInt( const std::vector<int>& v )
+inline int nonRepeatInt( const std::vector<int> & v )
 {
   std::vector<int> result_arr( 32, 0 );
   for( int num : v )

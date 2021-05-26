@@ -158,7 +158,7 @@ TEST( Problem_26, Test_Case )
   list.add( new slNode( 4 ) );
   list.add( new slNode( 5 ) );
 
-  auto *rmNode = getKthLastNode( list, 2 );
+  auto * rmNode = getKthLastNode( list, 2 );
 
   EXPECT_EQ( rmNode->value, 4 );
 }

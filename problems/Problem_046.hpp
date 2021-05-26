@@ -11,7 +11,7 @@ is "anana".
 #include <algorithm>
 #include <string>
 
-inline bool is_palindrome( const std::string& s )
+inline bool is_palindrome( const std::string & s )
 {
   std::string temp = s;
   std::reverse( temp.begin(), temp.end() );
@@ -19,7 +19,7 @@ inline bool is_palindrome( const std::string& s )
   return s == temp;
 }
 
-inline std::string longest_palindrome( const std::string& s )
+inline std::string longest_palindrome( const std::string & s )
 {
   std::string longest;
   for( int i = 0; i < s.length() - 1; i++ )

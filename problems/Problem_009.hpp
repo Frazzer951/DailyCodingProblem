@@ -54,7 +54,7 @@ inline int findSum( std::vector<int> v, int index = 0 )
 inline void testVector( std::vector<int> v )
 {
   std::cout << "For the array: ";
-  for(int i : v) { std::cout << i << ' '; }
+  for( int i : v ) { std::cout << i << ' '; }
   int sum = largest_non_adjacent( v );
   std::cout << " the largest sum is " << sum << '\n';
 }

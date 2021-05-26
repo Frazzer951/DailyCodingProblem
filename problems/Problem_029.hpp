@@ -13,7 +13,7 @@ of alphabetic characters. You can assume the string to be decoded is valid.
 inline int countChar( std::string str, char c )
 {
   int count = 0;
-  for(char i : str)
+  for( char i : str )
   {
     if( i == c ) count++;
     else
@@ -48,7 +48,7 @@ inline std::string runLengthDecode( std::string str )
     str = str.substr( 2 );
   }
 
-  for(auto & charPair : charPairs)
+  for( auto & charPair : charPairs )
   {
     for( int j = 0; j < charPair.first; j++ ) { return_str += charPair.second; }
   }

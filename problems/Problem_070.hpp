@@ -22,11 +22,10 @@ inline int perfecet_num( int n )
   }
 
   if( sum == 10 ) return n;
-  
-  
-    int needed = 10 - sum;
-    n_str += std::to_string( needed );
 
-    return ( perfecet_num( std::stoi( n_str ) ) );
- 
+
+  int needed = 10 - sum;
+  n_str += std::to_string( needed );
+
+  return ( perfecet_num( std::stoi( n_str ) ) );
 }

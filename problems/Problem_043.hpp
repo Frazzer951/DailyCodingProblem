@@ -37,7 +37,7 @@ struct stack
   void push( int val )
   {
     auto * newNode = new stackNode( val, top );
-    top                 = newNode;
+    top            = newNode;
   }
 
   int pop()

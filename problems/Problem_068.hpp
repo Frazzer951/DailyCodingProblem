@@ -36,14 +36,14 @@ inline bool is_attacking( std::pair<int, int> bishop0, std::pair<int, int> bisho
   return abs( r1 - r0 ) == abs( c1 - c0 );
 }
 
-inline int pairs( std::vector<std::pair<int, int>> bishops, int  /*m*/ )
+inline int pairs( std::vector<std::pair<int, int>> bishops, int /*m*/ )
 {
   int count = 0;
   for( int i = 0; i < bishops.size(); i++ )
   {
     for( int j = i + 1; j < bishops.size(); j++ )
     {
-      count += static_cast<int>(is_attacking( bishops[i], bishops[j] ));
+      count += static_cast<int>( is_attacking( bishops[i], bishops[j] ) );
     }
   }
   return count;

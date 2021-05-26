@@ -19,7 +19,7 @@ and contain the following methods:
 #include <map>
 #include <string>
 
-inline int get_deque_index( std::deque<std::string> dq, const std::string& value )
+inline int get_deque_index( std::deque<std::string> dq, const std::string & value )
 {
   for( int i = 0; i < dq.size(); i++ )
   {
@@ -38,7 +38,7 @@ struct LFUCache
   LFUCache( int _capacity ) :
     capacity( _capacity ) {};
 
-  int get( const std::string& key )
+  int get( const std::string & key )
   {
     // If key doesn't exist, return None.
     if( val_map.find( key ) == val_map.end() )
@@ -67,7 +67,7 @@ struct LFUCache
     return val;
   }
 
-  void set( const std::string& key, int val )
+  void set( const std::string & key, int val )
   {
     if( capacity == 0 )
       return;

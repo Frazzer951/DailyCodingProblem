@@ -30,7 +30,7 @@ inline std::vector<std::string> split( std::string str, char delim = ' ' )
 inline int getIntVecMax( std::vector<int> v )
 {
   int max = v[0];
-  for(int i : v)
+  for( int i : v )
   {
     if( i > max ) { max = i; }
   }
@@ -51,7 +51,7 @@ inline int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
 inline std::string intVecToStr( std::vector<int> v )
 {
   std::string str;
-  for(int i : v) { str += std::to_string( i ) + ' '; }
+  for( int i : v ) { str += std::to_string( i ) + ' '; }
   return str;
 }
 
@@ -128,7 +128,7 @@ inline bool operator==( const btNode & lhs, const btNode & rhs )
   return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;
 }
 
-inline int sum( const std::vector<int>& v )
+inline int sum( const std::vector<int> & v )
 {
   int sum = 0;
 

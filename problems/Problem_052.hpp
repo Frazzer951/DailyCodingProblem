@@ -27,8 +27,8 @@ struct LLNode
 
   LLNode( std::string _key, std::string _val )
   {
-    key  = std::move(_key);
-    val  = std::move(_val);
+    key  = std::move( _key );
+    val  = std::move( _val );
     prev = nullptr;
     next = nullptr;
   }
@@ -79,11 +79,11 @@ struct LRUCache
 
   LRUCache( int _n ) { n = _n; }
 
-  void set( const std::string& key, std::string val )
+  void set( const std::string & key, std::string val )
   {
     if( dict.find( key ) != dict.end() ) { dict.erase( key ); }
 
-    auto * node = new LLNode( key, std::move(val) );
+    auto * node = new LLNode( key, std::move( val ) );
     list.add( node );
     dict[key] = node;
     if( dict.size() > n )
@@ -94,7 +94,7 @@ struct LRUCache
     }
   }
 
-  std::string get( const std::string& key )
+  std::string get( const std::string & key )
   {
     if( dict.find( key ) != dict.end() )
     {

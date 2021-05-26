@@ -25,7 +25,7 @@ inline std::vector<double> runningMedian( std::vector<double> v )
   std::vector<double> medians;
   std::vector<double> running;
 
-  for(double i : v)
+  for( double i : v )
   {
     running.push_back( i );
     std::sort( running.begin(), running.end() );

@@ -12,11 +12,11 @@ Given the string "([)]" or "((()", you should return false.
 
 inline bool isBallancedString( std::string str )
 {
-  int round = 0;
+  int round  = 0;
   int square = 0;
-  int curly = 0;
+  int curly  = 0;
 
-  for(char i : str)
+  for( char i : str )
   {
     switch( i )
     {

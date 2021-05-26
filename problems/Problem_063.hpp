@@ -29,7 +29,7 @@ inline bool findWord( std::vector<std::vector<char>> letters, std::string word )
   bool wordFound = true;
 
   // First Go Trough Columns
-  for(auto & letter : letters)
+  for( auto & letter : letters )
   {
     if( letter[0] == word[0] )
     {

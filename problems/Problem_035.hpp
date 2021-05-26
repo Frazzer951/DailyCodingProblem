@@ -23,7 +23,7 @@ inline void rgbSort( std::vector<char> & v )
   int r = 0;
   int g = 0;
   int b = 0;
-  for(char i : v)
+  for( char i : v )
   {
     switch( i )
     {

@@ -32,7 +32,7 @@ inline std::vector<int> sumArray( std::vector<int> arr )
 inline std::string vectorToString( std::vector<int> const & v )
 {
   std::string str;
-  for(int i : v) str += std::to_string( i ) + " ";
+  for( int i : v ) str += std::to_string( i ) + " ";
   return str;
 }
 

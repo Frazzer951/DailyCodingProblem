@@ -13,10 +13,10 @@ Do this in O(N) time.
 
 #include <vector>
 
-inline int max_subarray_sum( const std::vector<int>& arr )
+inline int max_subarray_sum( const std::vector<int> & arr )
 {
   int max_ending_here = 0;
-  int max_so_far = 0;
+  int max_so_far      = 0;
   for( int x : arr )
   {
     max_ending_here = std::max( x, max_ending_here + x );

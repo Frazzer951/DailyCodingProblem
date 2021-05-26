@@ -34,7 +34,7 @@ inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
 {
   std::vector<std::vector<int>> powerSet;
   // set_size of power set of a set with set_size n is (2**n -1)
-  auto pow_set_size = (unsigned int) pow( 2, set.size() );
+  auto         pow_set_size = (unsigned int) pow( 2, set.size() );
   unsigned int counter;
   unsigned int j;
 
@@ -45,7 +45,7 @@ inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
     for( j = 0; j < set.size(); j++ )
     {
       // Check if jth bit in the counter is set. If set then print jth element from set
-      if( (counter & ( 1 << j )) != 0u ) subset.push_back( set[j] );
+      if( ( counter & ( 1 << j ) ) != 0u ) subset.push_back( set[j] );
     }
     powerSet.push_back( subset );
   }

@@ -30,7 +30,7 @@ inline int longest_substring_with_k_distinct_characters( std::string s, unsigned
 
   int                 bounds[] = { 0, 0 };
   std::map<char, int> h;
-  int                 max_length = 0;
+  int                 max_length       = 0;
   int                 new_lower_bounds = 0;
   for( unsigned int i = 0; i < s.size(); ++i )
   {

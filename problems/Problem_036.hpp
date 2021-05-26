@@ -13,8 +13,8 @@ Given the root to a binary search tree, find the second largest node in the tree
 class BST
 {
 public:
-  int  data{ 0 };
-  BST *left{ NULL }, *right{ NULL };
+  int  data { 0 };
+  BST *left { NULL }, *right { NULL };
 
   // Default constructor.
   BST() {}
@@ -88,7 +88,7 @@ inline void revInorder( BST * node, int & count, int & val )
 inline int findSecondLargetNode( BST * root )
 {
   int count = 0;
-  int val = 0;
+  int val   = 0;
   revInorder( root, count, val );
   return val;
 }

@@ -26,8 +26,8 @@ inline std::vector<int> compSubArrMax( std::vector<int> arr, int k )
   for( unsigned int i = 0; i + k <= arr.size(); ++i )
   {
     std::vector<int> subVec;
-    subVec.reserve(k);
-for( int j = 0; j < k; ++j ) { subVec.push_back( arr[j + i] ); }
+    subVec.reserve( k );
+    for( int j = 0; j < k; ++j ) { subVec.push_back( arr[j + i] ); }
     returnVec.push_back( getIntVecMax( subVec ) );
   }
 

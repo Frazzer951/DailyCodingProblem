@@ -53,7 +53,7 @@ struct lbtNode
   {
     if( lockedSubNodes > 0 ) return false;
 
-    auto *cur = parent;
+    auto * cur = parent;
     while( cur != nullptr )
     {
       if( cur->locked ) return false;
@@ -68,7 +68,7 @@ struct lbtNode
     {
       locked = true;
 
-      auto *cur = parent;
+      auto * cur = parent;
       while( cur != nullptr )
       {
         cur->lockedSubNodes++;
@@ -86,7 +86,7 @@ struct lbtNode
     {
       locked = false;
 
-      auto *cur = parent;
+      auto * cur = parent;
       while( cur != nullptr )
       {
         cur->lockedSubNodes--;

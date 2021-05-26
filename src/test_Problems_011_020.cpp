@@ -63,7 +63,7 @@ TEST( Problem_15, Test_Case_1 )
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for(int element : elements)
+  for( int element : elements )
   {
     if( element == elem ) { inVec = true; }
   }
@@ -77,7 +77,7 @@ TEST( Problem_15, Test_Case_2 )
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for(int element : elements)
+  for( int element : elements )
   {
     if( element == elem ) { inVec = true; }
   }

@@ -24,11 +24,11 @@ inline std::vector<std::string> splitString( std::string str, int k )
 {
   std::vector<std::string> multi_string;
 
-  auto split_string = split( std::move(str) );
+  auto split_string = split( std::move( str ) );
 
-  int         count   = 0;
+  int         count = 0;
   std::string cur_str;
-  for( const auto& word : split_string )
+  for( const auto & word : split_string )
   {
     if( count == 0 )
     {
