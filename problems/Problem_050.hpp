@@ -31,6 +31,5 @@ inline int evaluate( btNode root )
     return evaluate( *root.left ) * evaluate( *root.right );
   if( root.value == DIVIDE )
     return evaluate( *root.left ) / evaluate( *root.right );
-  else
-    return root.value - 48;
+  return root.value - 48;
 }
