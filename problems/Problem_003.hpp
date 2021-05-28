@@ -95,15 +95,11 @@ inline SerNode * deserialize( const std::string & str )
     auto *    return_node = new SerNode( node_name, left );
     return return_node;
   }
-  else
-  {
-    SerNode * left        = deserialize( nodes.substr( 1, comma_index - 1 ) );
-    SerNode * right       = deserialize( nodes.substr( comma_index + 1, nodes.size() - comma_index - 2 ) );
-    auto *    return_node = new SerNode( node_name, left, right );
-    return return_node;
-  }
 
-  return new SerNode( "Error" );
+  SerNode * left        = deserialize( nodes.substr( 1, comma_index - 1 ) );
+  SerNode * right       = deserialize( nodes.substr( comma_index + 1, nodes.size() - comma_index - 2 ) );
+  auto *    return_node = new SerNode( node_name, left, right );
+  return return_node;
 }
 
 inline int prob_3()
