@@ -1,6 +1,7 @@
 #include "Problem_071.hpp"
 #include "Problem_072.hpp"
 #include "Problem_073.hpp"
+#include "Problem_074.hpp"
 
 #include "gtest/gtest.h"
 
@@ -53,4 +54,19 @@ TEST( Problem_73, Test_Case )
   EXPECT_EQ( 3, *list.get( 0 ) );
   EXPECT_EQ( 2, *list.get( 1 ) );
   EXPECT_EQ( 1, *list.get( 2 ) );
+}
+
+// Problem 74
+TEST( Problem_74, Given_Case )
+{
+  int result = countMultiples( 6, 12 );
+
+  EXPECT_EQ( 4, result );
+}
+
+TEST( Problem_74, Test_Case )
+{
+  int result = countMultiples( 10, 100 );
+
+  EXPECT_EQ( 1, result );
 }
