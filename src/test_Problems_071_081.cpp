@@ -1,5 +1,6 @@
 #include "Problem_071.hpp"
 #include "Problem_072.hpp"
+#include "Problem_073.hpp"
 
 #include "gtest/gtest.h"
 
@@ -37,4 +38,19 @@ TEST( Problem_72, Test_Case )
   int result = pathValue( "AB", edges );
 
   EXPECT_EQ( -1, result );
+}
+
+// Problem 73
+TEST( Problem_73, Test_Case )
+{
+  slList list;
+  list.add( new slNode( 1 ) );
+  list.add( new slNode( 2 ) );
+  list.add( new slNode( 3 ) );
+
+  reverse_slList( list );
+
+  EXPECT_EQ( 3, *list.get( 0 ) );
+  EXPECT_EQ( 2, *list.get( 1 ) );
+  EXPECT_EQ( 1, *list.get( 2 ) );
 }

@@ -67,6 +67,11 @@ struct slNode
   }
 };
 
+inline bool operator==( const slNode & lhs, const slNode & rhs )
+{
+  return lhs.value == rhs.value;
+}
+
 class slList
 {
 public:
