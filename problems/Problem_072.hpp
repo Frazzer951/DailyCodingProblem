@@ -105,7 +105,7 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
 {
   std::map<int, std::vector<int>> edge_map;
 
-  for( auto & [from, to] : edges )
+  for( const auto & [from, to] : edges )
   {
     edge_map[from].push_back( to );
   }

@@ -52,7 +52,7 @@ public:
     }
   }
 
-  xNode * get( int index ) const
+  [[nodiscard]] xNode * get( int index ) const
   {
     xNode * prev_id = nullptr;
     xNode * node    = head;

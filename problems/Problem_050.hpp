@@ -27,7 +27,7 @@ inline int evaluate( btNode root )
   if( root.value == PLUS ) return evaluate( *root.left ) + evaluate( *root.right );
   if( root.value == MINUS )
     return evaluate( *root.left ) - evaluate( *root.right );
-  else if( root.value == TIMES )
+  if( root.value == TIMES )
     return evaluate( *root.left ) * evaluate( *root.right );
   else if( root.value == DIVIDE )
     return evaluate( *root.left ) / evaluate( *root.right );

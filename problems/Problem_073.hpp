@@ -6,7 +6,7 @@ Given the head of a singly linked list, reverse it in-place.
 
 #include "Futils.hpp"
 
-void reverse_slList( slList & list )
+inline void reverse_slList( slList & list )
 {
   slNode * prev = nullptr;
   slNode * next = nullptr;

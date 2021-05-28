@@ -48,7 +48,7 @@ inline int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 )
   return min;
 }
 
-inline std::string intVecToStr( std::vector<int> v )
+inline std::string intVecToStr( const std::vector<int> & v )
 {
   std::string str;
   for( int i : v ) { str += std::to_string( i ) + ' '; }
@@ -99,7 +99,7 @@ public:
     }
   }
 
-  slNode * get( int index ) const
+  [[nodiscard]] slNode * get( int index ) const
   {
     slNode * node = head;
     for( int i = 0; i < index; ++i )

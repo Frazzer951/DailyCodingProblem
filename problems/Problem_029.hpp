@@ -10,7 +10,7 @@ of alphabetic characters. You can assume the string to be decoded is valid.
 
 #include <string>
 
-inline int countChar( std::string str, char c )
+inline int countChar( const std::string & str, char c )
 {
   int count = 0;
   for( char i : str )

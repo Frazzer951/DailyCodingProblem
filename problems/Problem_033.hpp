@@ -20,7 +20,7 @@ For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should pri
 2
 */
 
-inline std::vector<double> runningMedian( std::vector<double> v )
+inline std::vector<double> runningMedian( const std::vector<double> & v )
 {
   std::vector<double> medians;
   std::vector<double> running;

@@ -47,13 +47,13 @@ public:
     _right = right;
   }
 
-  std::string value() const { return _val; }
+  [[nodiscard]] std::string value() const { return _val; }
 
-  SerNode left() const { return *_left; }
+  [[nodiscard]] SerNode left() const { return *_left; }
 
-  SerNode right() const { return *_right; }
+  [[nodiscard]] SerNode right() const { return *_right; }
 
-  std::string serialize_node() const
+  [[nodiscard]] std::string serialize_node() const
   {
     std::string node_str = _val + ":{";
     if( _left != nullptr ) { node_str += _left->serialize_node(); }
@@ -63,7 +63,7 @@ public:
   }
 };
 
-inline std::string serialize( SerNode root ) { return root.serialize_node(); }
+inline std::string serialize( const SerNode & root ) { return root.serialize_node(); }
 
 inline SerNode * deserialize( const std::string & str )
 {

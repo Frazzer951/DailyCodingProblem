@@ -51,7 +51,7 @@ inline int findSum( std::vector<int> v, int index = 0 )
   return sum;
 }
 
-inline void testVector( std::vector<int> v )
+inline void testVector( const std::vector<int> & v )
 {
   std::cout << "For the array: ";
   for( int i : v ) { std::cout << i << ' '; }

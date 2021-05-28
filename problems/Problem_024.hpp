@@ -49,7 +49,7 @@ struct lbtNode
     node->parent = this;
   }
 
-  bool canLockUnlock() const
+  [[nodiscard]] bool canLockUnlock() const
   {
     if( lockedSubNodes > 0 ) return false;
 
@@ -98,5 +98,5 @@ struct lbtNode
     return false;
   }
 
-  bool isLocked() const { return locked; }
+  [[nodiscard]] bool isLocked() const { return locked; }
 };

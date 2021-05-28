@@ -14,10 +14,10 @@ class BST
 {
 public:
   int  data { 0 };
-  BST *left { NULL }, *right { NULL };
+  BST *left { nullptr }, *right { nullptr };
 
   // Default constructor.
-  BST() {}
+  BST() = default;
 
   // Parameterized constructor.
   BST( int value )

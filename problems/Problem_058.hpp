@@ -22,7 +22,7 @@ inline int shifted_array_search( std::vector<int> lst, int num )
     if( lst[0] > lst[i] && lst[i - 1] > lst[i] ) break;
     if( dist == 0 )
       break;
-    else if( lst[0] <= lst[i] )
+    if( lst[0] <= lst[i] )
       i = i + dist;
     else if( lst[i - 1] <= lst[i] )
       i = i - dist;

@@ -10,7 +10,7 @@ Given the string "([)]" or "((()", you should return false.
 
 #include <string>
 
-inline bool isBallancedString( std::string str )
+inline bool isBallancedString( const std::string & str )
 {
   int round  = 0;
   int square = 0;

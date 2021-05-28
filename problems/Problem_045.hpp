@@ -17,13 +17,13 @@ inline int rand7()
   if( r2 == 4 )
   {
     if( r1 <= 3 ) return 6;
-    else
-      return rand7();
+
+    return rand7();
   }
   else
   {
     if( r1 <= 3 ) return 7;
-    else
-      return rand7();
+
+    return rand7();
   }
 }

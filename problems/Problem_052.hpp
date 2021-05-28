@@ -49,9 +49,9 @@ struct LinkedList
     tail->prev = head;
   }
 
-  LLNode * get_head() const { return head->next; }
+  [[nodiscard]] LLNode * get_head() const { return head->next; }
 
-  LLNode * get_tail() const { return tail->prev; }
+  [[nodiscard]] LLNode * get_tail() const { return tail->prev; }
 
   void add( LLNode * node ) const
   {
@@ -89,7 +89,7 @@ struct LRUCache
     if( dict.size() > n )
     {
       LLNode * head = list.get_head();
-      list.remove( head );
+      LinkedList::remove( head );
       dict.erase( head->key );
     }
   }
@@ -100,7 +100,7 @@ struct LRUCache
     {
       LLNode * node = dict[key];
       // bump to the back of the list by removing and adding the node
-      list.remove( node );
+      LinkedList::remove( node );
       list.add( node );
       return node->val;
     }

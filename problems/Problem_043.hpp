@@ -52,7 +52,7 @@ struct stack
     return val;
   }
 
-  int getMax() const
+  [[nodiscard]] int getMax() const
   {
     if( top == nullptr ) throw stackEmpty;
 
