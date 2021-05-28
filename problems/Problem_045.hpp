@@ -20,10 +20,10 @@ inline int rand7()
 
     return rand7();
   }
-  else
-  {
+  
+  
     if( r1 <= 3 ) return 7;
 
     return rand7();
-  }
+ 
 }
