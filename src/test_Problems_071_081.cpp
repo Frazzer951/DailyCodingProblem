@@ -5,6 +5,7 @@
 #include "Problem_075.hpp"
 #include "Problem_076.hpp"
 #include "Problem_077.hpp"
+#include "Problem_078.hpp"
 
 #include "gtest/gtest.h"
 
@@ -127,6 +128,16 @@ TEST( Problem_77, Test_Case )
   std::vector<std::pair<int, int>> intervals = { std::make_pair( 1, 3 ), std::make_pair( 2, 3 ), std::make_pair( 5, 8 ), std::make_pair( 4, 10 ), std::make_pair( 20, 25 ), std::make_pair( 18, 30 ) };
   std::vector<std::pair<int, int>> expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ), std::make_pair( 18, 30 ) };
   std::vector<std::pair<int, int>> result    = merge_overlaping_intervals( intervals );
+
+  EXPECT_EQ( expected, result );
+}
+
+// Problem 78
+TEST( Problem_78, Test_Case )
+{
+  std::vector<std::forward_list<int>> lists    = { { 1, 2, 3, 4 }, { 5, 8, 15, 20 }, { 6, 9, 10, 11, 19 } };
+  std::forward_list<int>              expected = { 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 15, 19, 20 };
+  std::forward_list<int>              result   = combine_lists( lists );
 
   EXPECT_EQ( expected, result );
 }

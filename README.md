@@ -10,4 +10,3 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 39
 - Problem 56
 - Problem 59
-- Problem 78
