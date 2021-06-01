@@ -83,3 +83,31 @@ TEST( Problem_75, Given_Case )
 
   EXPECT_EQ( 6, result );
 }
+
+// Problem 76
+TEST( Problem_76, Given_Case_1 )
+{
+  std::vector<std::string> arr = { "cba", "daf", "ghi" };
+
+  int result = rows_to_remove( arr );
+
+  EXPECT_EQ( 1, result );
+}
+
+TEST( Problem_76, Given_Case_2 )
+{
+  std::vector<std::string> arr = { "abcdef" };
+
+  int result = rows_to_remove( arr );
+
+  EXPECT_EQ( 0, result );
+}
+
+TEST( Problem_76, Given_Case_3 )
+{
+  std::vector<std::string> arr = { "zyx", "wvu", "tsr" };
+
+  int result = rows_to_remove( arr );
+
+  EXPECT_EQ( 3, result );
+}
