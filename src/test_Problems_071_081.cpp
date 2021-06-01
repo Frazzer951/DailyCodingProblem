@@ -111,3 +111,22 @@ TEST( Problem_76, Given_Case_3 )
 
   EXPECT_EQ( 3, result );
 }
+
+// Problem 77
+TEST( Problem_77, Given_Case )
+{
+  std::vector<std::pair<int, int>> intervals = { std::make_pair( 1, 3 ), std::make_pair( 5, 8 ), std::make_pair( 4, 10 ), std::make_pair( 20, 25 ) };
+  std::vector<std::pair<int, int>> expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ), std::make_pair( 20, 25 ) };
+  std::vector<std::pair<int, int>> result    = merge_overlaping_intervals( intervals );
+
+  EXPECT_EQ( expected, result );
+}
+
+TEST( Problem_77, Test_Case )
+{
+  std::vector<std::pair<int, int>> intervals = { std::make_pair( 1, 3 ), std::make_pair( 2, 3 ), std::make_pair( 5, 8 ), std::make_pair( 4, 10 ), std::make_pair( 20, 25 ), std::make_pair( 18, 30 ) };
+  std::vector<std::pair<int, int>> expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ), std::make_pair( 18, 30 ) };
+  std::vector<std::pair<int, int>> result    = merge_overlaping_intervals( intervals );
+
+  EXPECT_EQ( expected, result );
+}
