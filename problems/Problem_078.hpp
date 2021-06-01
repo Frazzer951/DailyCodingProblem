@@ -7,7 +7,7 @@ Given k sorted singly linked lists, write a function to merge all the lists into
 #include <forward_list>
 #include <vector>
 
-int getSmallest( std::vector<std::forward_list<int>> & lists )
+inline int getSmallest( std::vector<std::forward_list<int>> & lists )
 {
   std::pair<int, int> smallest( 0, lists[0].front() );
 
@@ -25,7 +25,7 @@ int getSmallest( std::vector<std::forward_list<int>> & lists )
   return smallest.second;
 }
 
-void remove_empty_lists( std::vector<std::forward_list<int>> & lists )
+inline void remove_empty_lists( std::vector<std::forward_list<int>> & lists )
 {
   auto i = lists.begin();
   while( i != lists.end() )
@@ -37,7 +37,7 @@ void remove_empty_lists( std::vector<std::forward_list<int>> & lists )
   }
 }
 
-std::forward_list<int> combine_lists( std::vector<std::forward_list<int>> lists )
+inline std::forward_list<int> combine_lists( std::vector<std::forward_list<int>> lists )
 {
   std::forward_list<int> combined_list;
 

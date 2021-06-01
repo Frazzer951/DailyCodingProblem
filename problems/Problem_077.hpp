@@ -13,7 +13,7 @@ you should return [(1, 3), (4, 10), (20, 25)].
 
 #include <vector>
 
-inline std::vector<std::pair<int, int>> get_overlaping( std::pair<int, int> interval, std::vector<std::pair<int, int>> intervals )
+inline std::vector<std::pair<int, int>> get_overlaping( std::pair<int, int> interval, const std::vector<std::pair<int, int>> & intervals )
 {
   std::vector<std::pair<int, int>> overlaping;
 
