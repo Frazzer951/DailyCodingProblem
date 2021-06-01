@@ -2,6 +2,9 @@
 #include "Problem_072.hpp"
 #include "Problem_073.hpp"
 #include "Problem_074.hpp"
+#include "Problem_075.hpp"
+#include "Problem_076.hpp"
+#include "Problem_077.hpp"
 
 #include "gtest/gtest.h"
 
@@ -69,4 +72,14 @@ TEST( Problem_74, Test_Case )
   int result = countMultiples( 10, 100 );
 
   EXPECT_EQ( 1, result );
+}
+
+// Problem 75
+TEST( Problem_75, Given_Case )
+{
+  std::vector<int> arr = { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15 };
+
+  int result = longest_increasing_subsequence( arr );
+
+  EXPECT_EQ( 6, result );
 }

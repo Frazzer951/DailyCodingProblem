@@ -10,3 +10,24 @@ For example, given the array
 the longest increasing subsequence has length 6:
 it is 0, 2, 6, 9, 11, 15.
 */
+
+#include <vector>
+
+#include "Futils.hpp"
+
+inline int longest_increasing_subsequence( std::vector<int> arr )
+{
+  if( arr.empty() )
+    return 0;
+
+  std::vector<int> cache( arr.size(), 1 );
+  for( int i = 1; i < arr.size(); i++ )
+  {
+    for( int j = 0; j < i; j++ )
+    {
+      if( arr[i] > arr[j] )
+        cache[i] = std::max( cache[i], cache[j] + 1 );
+    }
+  }
+  return getIntVecMax( cache );
+}
