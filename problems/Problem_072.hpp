@@ -32,6 +32,7 @@ A
 Should return null, since we have an infinite loop.
 */
 
+#include <algorithm>
 #include <map>
 #include <string>
 #include <vector>
@@ -70,11 +71,8 @@ inline int best_score( const std::vector<std::vector<int>> & paths, std::string 
 
 inline bool isLoop( const std::vector<int> & cur_path, int cur_index )
 {
-  for( int i : cur_path )
-  {
-    if( i == cur_index ) return true;
-  }
-  return false;
+  return std::any_of( cur_path.begin(), cur_path.end(), [cur_index]( int i )
+                      { return i == cur_index; } );
 }
 
 inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map, std::vector<int> cur_path = std::vector<int>() )
