@@ -6,6 +6,7 @@
 #include "Problem_076.hpp"
 #include "Problem_077.hpp"
 #include "Problem_078.hpp"
+#include "Problem_079.hpp"
 
 #include "gtest/gtest.h"
 
@@ -140,4 +141,19 @@ TEST( Problem_78, Test_Case )
   std::forward_list<int>              result   = combine_lists( lists );
 
   EXPECT_EQ( expected, result );
+}
+
+// Problem 79
+TEST( Problem_79, Given_Case_1 )
+{
+  std::vector<int> nums   = { 10, 5, 7 };
+  bool             result = remove_one_non_decrease( nums );
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_79, Given_Case_2 )
+{
+  std::vector<int> nums   = { 10, 5, 1 };
+  bool             result = remove_one_non_decrease( nums );
+  EXPECT_FALSE( result );
 }
