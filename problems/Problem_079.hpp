@@ -15,7 +15,7 @@ we can't modify any one element to get a non-decreasing array.
 
 #include <vector>
 
-bool remove_one_non_decrease( std::vector<int> nums )
+inline bool remove_one_non_decrease( std::vector<int> nums )
 {
   for( int i = 0; i < nums.size(); i++ )
   {
