@@ -7,6 +7,7 @@
 #include "Problem_077.hpp"
 #include "Problem_078.hpp"
 #include "Problem_079.hpp"
+#include "Problem_080.hpp"
 
 #include "gtest/gtest.h"
 
@@ -156,4 +157,25 @@ TEST( Problem_79, Given_Case_2 )
   std::vector<int> nums   = { 10, 5, 1 };
   bool             result = remove_one_non_decrease( nums );
   EXPECT_FALSE( result );
+}
+
+// Problem 80
+TEST( Problem_80, Given_Case )
+{
+  /*
+        a
+       / \
+      b   c
+     /
+    d
+  */
+
+  auto * a      = new btNode( 'a' );
+  a->left       = new btNode( 'b' );
+  a->left->left = new btNode( 'd' );
+  a->right      = new btNode( 'c' );
+
+  auto *result = find_deepest( a );
+
+  EXPECT_EQ( a->left->left, result );
 }
