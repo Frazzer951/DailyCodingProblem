@@ -175,7 +175,7 @@ TEST( Problem_80, Given_Case )
   a->left->left = new btNode( 'd' );
   a->right      = new btNode( 'c' );
 
-  auto *result = find_deepest( a );
+  auto * result = find_deepest( a );
 
   EXPECT_EQ( a->left->left, result );
 }
