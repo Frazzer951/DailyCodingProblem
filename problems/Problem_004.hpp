@@ -10,25 +10,26 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 
 #include <algorithm>
 #include <iostream>
+#include <vector>
 
-inline int findMissingPositive( int arr[], int size )
+inline int findMissingPositive( std::vector<int> arr )
 {
-  std::sort( arr, arr + size );
+  std::sort( arr.begin(), arr.end() );
 
   int missing = 1;
 
-  for( auto i = 0; i < size; ++i )
+  for( auto i = 0; i < arr.size(); ++i )
   {
     if( arr[i] > 0 && arr[i] == missing ) { missing++; }
   }
   return missing;
 }
 
-inline void testArray( int arr[], int size )
+inline void testArray( std::vector<int> arr )
 {
   std::cout << "For the array: ";
-  for( int i = 0; i < size; ++i ) { std::cout << arr[i] << ' '; }
-  int missing = findMissingPositive( arr, size );
+  for( int i = 0; i < arr.size(); ++i ) { std::cout << arr[i] << ' '; }
+  int missing = findMissingPositive( arr );
   std::cout << " the missing number is " << missing << '\n';
 }
 
@@ -36,11 +37,11 @@ inline int prob_4()
 {
   std::cout << "\nProblem 4:\n";
 
-  int arr[] = { 3, 4, -1, 1 };
-  testArray( arr, 4 );
+  std::vector<int> arr = { 3, 4, -1, 1 };
+  testArray( arr );
 
-  int arr2[] = { 1, 2, 0 };
-  testArray( arr2, 3 );
+  std::vector<int> arr2 = { 1, 2, 0 };
+  testArray( arr2 );
 
   return 0;
 }

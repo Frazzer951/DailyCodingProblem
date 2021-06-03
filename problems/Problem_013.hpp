@@ -28,7 +28,7 @@ inline int longest_substring_with_k_distinct_characters( std::string s, unsigned
 {
   if( k == 0 ) return 0;
 
-  int                 bounds[] = { 0, 0 };
+  std::vector<int>    bounds = { 0, 0 };
   std::map<char, int> h;
   int                 max_length       = 0;
   int                 new_lower_bounds = 0;

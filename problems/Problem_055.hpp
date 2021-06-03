@@ -14,12 +14,13 @@ Hint: What if we enter the same URL twice?
 #include <cstdlib>
 #include <map>
 #include <string>
+#include <vector>
 
 class URLShortener
 {
   static std::string _generate_short()
   {
-    char        values[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    std::string values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     std::string random;
     for( int i = 0; i < 6; i++ )
     {

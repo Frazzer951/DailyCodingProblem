@@ -40,11 +40,11 @@ inline int shifted_array_search( std::vector<int> lst, int num )
   {
     if( dist == 0 ) return -1;
 
-    int guess_ind = ( low + dist ) % lst.size();
+    int guess_ind = ( low + dist ) % (int) lst.size();
     int guess     = lst[guess_ind];
     if( guess == num ) return guess_ind;
 
-    if( guess < num ) low = ( low + dist ) % lst.size();
+    if( guess < num ) low = ( low + dist ) % (int) lst.size();
     if( guess > num ) high = ( (int) lst.size() + high - dist ) % (int) lst.size();
 
     dist = dist / 2;

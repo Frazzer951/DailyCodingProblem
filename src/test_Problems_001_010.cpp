@@ -48,15 +48,15 @@ TEST( Problem_3, Given_Case )
 // Problem 4
 TEST( Problem_4, Given_Case_1 )
 {
-  int arr[]       = { 3, 4, -1, 1 };
-  int missing_num = findMissingPositive( arr, 4 );
+  std::vector<int> arr         = { 3, 4, -1, 1 };
+  int              missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 2 );
 }
 
 TEST( Problem_4, Given_Case_2 )
 {
-  int arr[]       = { 1, 2, 0 };
-  int missing_num = findMissingPositive( arr, 3 );
+  std::vector<int> arr         = { 1, 2, 0 };
+  int              missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 3 );
 }
 

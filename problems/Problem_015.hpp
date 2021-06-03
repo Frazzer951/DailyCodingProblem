@@ -11,7 +11,7 @@ pick a random element from the stream with uniform probability.
 
 inline int randElement( std::vector<int> v )
 {
-  int index = rand() % v.size();
+  int index = (int) ( rand() % v.size() );
 
   return v[index];
 }

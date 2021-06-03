@@ -39,7 +39,7 @@ inline bool canMoveRight( std::vector<std::vector<bool>> maze, std::pair<int, in
 
 inline int findOpening( std::vector<bool> row )
 {
-  for( unsigned int i = 0; i < row.size(); ++i )
+  for( int i = 0; i < row.size(); ++i )
   {
     if( !row[i] ) return i;
   }
