@@ -25,7 +25,7 @@ inline int findMissingPositive( std::vector<int> arr )
   return missing;
 }
 
-inline void testArray( std::vector<int> arr )
+inline void testArray( const std::vector<int> & arr )
 {
   std::cout << "For the array: ";
   for( int i : arr ) { std::cout << i << ' '; }
