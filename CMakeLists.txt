@@ -41,6 +41,12 @@ file(GLOB include_files
      "include/*.hpp"
 )
 
+# Copy Needed TXT Files to build dir
+file(COPY
+    ${CMAKE_CURRENT_SOURCE_DIR}/problems/Problem_082.txt
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 add_executable(${PROJECT_NAME} ${src_files} ${problem_files} ${include_files} )
 target_link_libraries(${PROJECT_NAME} gtest_main)
 
