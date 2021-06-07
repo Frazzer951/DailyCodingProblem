@@ -17,7 +17,7 @@ struct filereader
   std::vector<std::string> seven_letter_split;
   int                      pos = 0;
 
-  filereader( std::string filename )
+  filereader( const std::string & filename )
   {
     std::ifstream file;
     file.open( filename );
@@ -48,7 +48,7 @@ struct filereader
   }
 };
 
-std::string readN( int n )
+inline std::string readN( int n )
 {
   filereader filereader( "Problem_082.txt" );
 

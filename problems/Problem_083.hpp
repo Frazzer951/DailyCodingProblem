@@ -21,7 +21,7 @@ should become:
 
 #include "Futils.hpp"
 
-void invert_B_Tree( btNode * node )
+inline void invert_B_Tree( btNode * node )
 {
   if( node == nullptr ) return;
   if( node->left == nullptr && node->right == nullptr ) return;
@@ -33,7 +33,7 @@ void invert_B_Tree( btNode * node )
   invert_B_Tree( node->right );
 
   // Invert Self
-  auto tmp    = node->left;
+  auto * tmp  = node->left;
   node->left  = node->right;
   node->right = tmp;
 }
