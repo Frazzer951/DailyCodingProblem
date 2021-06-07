@@ -88,3 +88,28 @@ TEST( Problem_83, Given_Case )
   EXPECT_EQ( 'e', a->right->left->value );
   EXPECT_EQ( 'd', a->right->right->value );
 }
+
+// Problem 84
+TEST( Problem_84, Given_Case )
+{
+  /*
+  For example, this matrix has 4 islands.
+
+  1 0 0 0 0
+  0 0 1 1 0
+  0 1 1 0 0
+  0 0 0 0 0
+  1 1 0 0 1
+  1 1 0 0 1
+  */
+  std::vector<std::vector<int>> island_map = { { 1, 0, 0, 0, 0 },
+                                               { 0, 0, 1, 1, 0 },
+                                               { 0, 1, 1, 0, 0 },
+                                               { 0, 0, 0, 0, 0 },
+                                               { 1, 1, 0, 0, 1 },
+                                               { 1, 1, 0, 0, 1 } };
+
+  int result = num_islands( island_map );
+
+  EXPECT_EQ( 4, result );
+}
