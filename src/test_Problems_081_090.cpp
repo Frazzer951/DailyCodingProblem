@@ -50,3 +50,41 @@ TEST( Problem_82, Test_Case_2 )
 
   EXPECT_EQ( "Hello world", result );
 }
+
+// Problem 83
+TEST( Problem_83, Given_Case )
+{
+  /*
+  For example, given the following tree:
+
+      a
+     / \
+    b   c
+   / \  /
+  d   e f
+  should become:
+
+    a
+   / \
+  c   b
+  \  / \
+   f e  d
+
+  */
+
+  auto * a       = new btNode( 'a' );
+  a->left        = new btNode( 'b' );
+  a->left->left  = new btNode( 'd' );
+  a->left->right = new btNode( 'e' );
+  a->right       = new btNode( 'c' );
+  a->right->left = new btNode( 'f' );
+
+  invert_B_Tree( a );
+
+  EXPECT_EQ( 'a', a->value );
+  EXPECT_EQ( 'c', a->left->value );
+  EXPECT_EQ( 'f', a->left->right->value );
+  EXPECT_EQ( 'b', a->right->value );
+  EXPECT_EQ( 'e', a->right->left->value );
+  EXPECT_EQ( 'd', a->right->right->value );
+}

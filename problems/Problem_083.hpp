@@ -18,3 +18,22 @@ should become:
  \  / \
   f e  d
 */
+
+#include "Futils.hpp"
+
+void invert_B_Tree( btNode * node )
+{
+  if( node == nullptr ) return;
+  if( node->left == nullptr && node->right == nullptr ) return;
+
+  // Invert Left Node
+  invert_B_Tree( node->left );
+
+  // Invert Right Node
+  invert_B_Tree( node->right );
+
+  // Invert Self
+  auto tmp    = node->left;
+  node->left  = node->right;
+  node->right = tmp;
+}
