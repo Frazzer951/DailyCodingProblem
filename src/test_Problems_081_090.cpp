@@ -2,6 +2,7 @@
 #include "Problem_082.hpp"
 #include "Problem_083.hpp"
 #include "Problem_084.hpp"
+#include "Problem_085.hpp"
 
 #include "gtest/gtest.h"
 
@@ -112,4 +113,19 @@ TEST( Problem_84, Given_Case )
   int result = num_islands( island_map );
 
   EXPECT_EQ( 4, result );
+}
+
+// Problem 85
+TEST( Problem_85, Test_Case_1 )
+{
+  int result = math_if( 10, 20, 1 );
+
+  EXPECT_EQ( 10, result );
+}
+
+TEST( Problem_85, Test_Case_2 )
+{
+  int result = math_if( 10, 20, 0 );
+
+  EXPECT_EQ( 20, result );
 }
