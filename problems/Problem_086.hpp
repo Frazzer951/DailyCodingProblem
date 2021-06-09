@@ -12,7 +12,7 @@ Given the string ")(", you should return 2, since we must remove all of them.
 #include <string>
 #include <vector>
 
-int parentheses_to_remove( std::string parens_str )
+inline int parentheses_to_remove( std::string parens_str )
 {
   int               counter = 0;
   std::vector<bool> used( parens_str.size() );

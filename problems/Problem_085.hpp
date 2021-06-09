@@ -7,7 +7,7 @@ only mathematical or bit operations.
 You can assume b can only be 1 or 0.
 */
 
-int math_if( int x, int y, int b )
+inline int math_if( int x, int y, int b )
 {
   b = -b;
   x = x & b;
