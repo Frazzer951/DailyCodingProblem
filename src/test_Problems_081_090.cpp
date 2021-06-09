@@ -3,6 +3,7 @@
 #include "Problem_083.hpp"
 #include "Problem_084.hpp"
 #include "Problem_085.hpp"
+#include "Problem_086.hpp"
 
 #include "gtest/gtest.h"
 
@@ -128,4 +129,19 @@ TEST( Problem_85, Test_Case_2 )
   int result = math_if( 10, 20, 0 );
 
   EXPECT_EQ( 20, result );
+}
+
+//Problem 86
+TEST( Problem_86, Give_Case_1 )
+{
+  int result = parentheses_to_remove( "()())()" );
+
+  EXPECT_EQ( 1, result );
+}
+
+TEST( Problem_86, Give_Case_2 )
+{
+  int result = parentheses_to_remove( ")(" );
+
+  EXPECT_EQ( 2, result );
 }
