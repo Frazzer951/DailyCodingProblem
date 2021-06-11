@@ -48,7 +48,7 @@ struct mapNode
     val = value;
     for( int i = 0; i < 4; i++ )
     {
-      edges.push_back( std::set<mapNode *>() );
+      edges.emplace_back();
     }
   }
 };
@@ -63,23 +63,20 @@ inline bool operator<( const mapNode & lhs, const mapNode & rhs )
   return lhs.val < rhs.val;
 }
 
-int opposite( int dir )
+inline int opposite( int dir )
 {
   return ( dir + 2 ) % 4;
 }
 
 
-bool isValid( std::map<char, mapNode *> & map, mapNode * from, mapNode * to, int newDir )
+inline bool isValid( mapNode * from, mapNode * to, int newDir )
 {
   int oppositeDir = opposite( newDir );
-  if( from->edges[oppositeDir].find( to ) != from->edges[oppositeDir].end() )
-    return false;
-
-  return true;
+  return from->edges[oppositeDir].find( to ) == from->edges[oppositeDir].end();
 }
 
 
-void addEdges( std::map<char, mapNode *> & map, mapNode * from, mapNode * to, int newDir )
+inline void addEdges( mapNode * from, mapNode * to, int newDir )
 {
   /* Get the direct opposite direction, e.g. S from N */
   int oppositeDir = opposite( newDir );
@@ -108,11 +105,11 @@ void addEdges( std::map<char, mapNode *> & map, mapNode * from, mapNode * to, in
   }
 }
 
-bool validate( std::vector<std::string> rules )
+inline bool validate( const std::vector<std::string> & rules )
 {
   std::map<char, mapNode *> map;
 
-  for( std::string line : rules )
+  for( const std::string & line : rules )
   {
     auto rule = split( line );
     std::cout << "Rule " + rule[0] + " " + rule[1] + " " + rule[2] << '\n';
@@ -121,14 +118,14 @@ bool validate( std::vector<std::string> rules )
 
     if( map.find( fromVal ) == map.end() )
     {
-      mapNode * n  = new mapNode( fromVal );
+      auto * n     = new mapNode( fromVal );
       map[fromVal] = n;
     }
 
     if( map.find( toVal ) == map.end() )
     {
-      mapNode * n = new mapNode( toVal );
-      map[toVal]  = n;
+      auto * n   = new mapNode( toVal );
+      map[toVal] = n;
     }
 
     mapNode * from = map[fromVal];
@@ -138,9 +135,9 @@ bool validate( std::vector<std::string> rules )
     for( char dirChar : rule[1] )
     {
       int dir = charToDir[dirChar];
-      if( !isValid( map, from, to, dir ) )
+      if( !isValid( from, to, dir ) )
         return false;
-      addEdges( map, from, to, dir );
+      addEdges( from, to, dir );
     }
   }
 
