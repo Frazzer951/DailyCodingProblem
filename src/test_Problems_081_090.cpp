@@ -4,6 +4,7 @@
 #include "Problem_084.hpp"
 #include "Problem_085.hpp"
 #include "Problem_086.hpp"
+#include "Problem_088.hpp"
 
 #include "gtest/gtest.h"
 
@@ -131,7 +132,7 @@ TEST( Problem_85, Test_Case_2 )
   EXPECT_EQ( 20, result );
 }
 
-//Problem 86
+// Problem 86
 TEST( Problem_86, Give_Case_1 )
 {
   int result = parentheses_to_remove( "()())()" );
@@ -144,4 +145,33 @@ TEST( Problem_86, Give_Case_2 )
   int result = parentheses_to_remove( ")(" );
 
   EXPECT_EQ( 2, result );
+}
+
+// Problem 88
+TEST( Problem_88, Test_Case_1 )
+{
+  int result = divide( 10, 2 );
+
+  EXPECT_EQ( 5, result );
+}
+
+TEST( Problem_88, Test_Case_2 )
+{
+  int result = divide( 10, 10 );
+
+  EXPECT_EQ( 1, result );
+}
+
+TEST( Problem_88, Test_Case_3 )
+{
+  int result = divide( 10, 15 );
+
+  EXPECT_EQ( 0, result );
+}
+
+TEST( Problem_88, Test_Case_4 )
+{
+  int result = divide( 13, 4 );
+
+  EXPECT_EQ( 3, result );
 }
