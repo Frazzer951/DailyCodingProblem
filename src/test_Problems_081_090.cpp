@@ -4,6 +4,7 @@
 #include "Problem_084.hpp"
 #include "Problem_085.hpp"
 #include "Problem_086.hpp"
+#include "Problem_087.hpp"
 #include "Problem_088.hpp"
 
 #include "gtest/gtest.h"
@@ -145,6 +146,53 @@ TEST( Problem_86, Give_Case_2 )
   int result = parentheses_to_remove( ")(" );
 
   EXPECT_EQ( 2, result );
+}
+
+// Problem 87
+TEST( Problem_87, Given_Case_1 )
+{
+  std::vector<std::string> rules = { "A N B",
+                                     "C SE B",
+                                     "C N A" };
+
+  bool result = validate( rules );
+  EXPECT_FALSE( result );
+}
+
+TEST( Problem_87, Given_Case_2 )
+{
+  std::vector<std::string> rules = { "A NW B",
+                                     "A N B" };
+
+  bool result = validate( rules );
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_87, Given_Case_3 )
+{
+  std::vector<std::string> rules = { "A N B",
+                                     "C N B" };
+
+  bool result = validate( rules );
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_87, Given_Case_4 )
+{
+  std::vector<std::string> rules = { "A NW B",
+                                     "A N B" };
+
+  bool result = validate( rules );
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_87, Test_Case )
+{
+  std::vector<std::string> rules = { "A N B",
+                                     "B N A" };
+
+  bool result = validate( rules );
+  EXPECT_FALSE( result );
 }
 
 // Problem 88
