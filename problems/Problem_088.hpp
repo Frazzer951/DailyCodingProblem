@@ -6,7 +6,7 @@ multiplication, or modulus operators. Return the quotient as an integer,
 ignoring the remainder.
 */
 
-/*
+
 inline int divide( const int & x, const int & y )
 {
   int i       = 0;
@@ -20,8 +20,8 @@ inline int divide( const int & x, const int & y )
 
   return i;
 }
-*/
 
+/*
 inline int divide( int x, int y )
 {
   if( y == 0 )
@@ -43,3 +43,4 @@ inline int divide( int x, int y )
   }
   return quotient;
 }
+*/

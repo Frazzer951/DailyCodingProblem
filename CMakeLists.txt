@@ -4,6 +4,8 @@ project(DailyCodingProblem VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+add_compile_options(-Wall -Wextra -Werror -Wdouble-promotion -fno-common -O3 -Wno-sign-compare)
+
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include(ClangFormat)
 include(FetchContent)

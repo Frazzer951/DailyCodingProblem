@@ -228,7 +228,7 @@ TEST( Problem_88, Test_Case_4 )
 // Problem 89
 TEST( Problem_89, Test_Case_1 )
 {
-  btNode * root     = new btNode( 'd' );
+  auto * root       = new btNode( 'd' );
   root->left        = new btNode( 'c' );
   root->left->left  = new btNode( 'a' );
   root->left->right = new btNode( 'f' );
@@ -241,7 +241,7 @@ TEST( Problem_89, Test_Case_1 )
 
 TEST( Problem_89, Test_Case_2 )
 {
-  btNode * root     = new btNode( 'd' );
+  auto * root       = new btNode( 'd' );
   root->left        = new btNode( 'c' );
   root->left->left  = new btNode( 'a' );
   root->left->right = new btNode( 'f' );
