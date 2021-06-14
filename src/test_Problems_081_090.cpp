@@ -7,6 +7,7 @@
 #include "Problem_087.hpp"
 #include "Problem_088.hpp"
 #include "Problem_089.hpp"
+#include "Problem_090.hpp"
 
 #include "gtest/gtest.h"
 
@@ -250,4 +251,21 @@ TEST( Problem_89, Test_Case_2 )
   bool result = validateBST( root );
 
   EXPECT_FALSE( result );
+}
+
+// Problem 90
+TEST( Problem_90, Test_Case )
+{
+  std::vector<int> l = { 1, 3, 4, 8, 9 };
+
+  int result = randNotInL( 10, l );
+
+  EXPECT_TRUE( result >= 0 );
+  EXPECT_TRUE( result <= 10 );
+
+  EXPECT_NE( result, 1 );
+  EXPECT_NE( result, 3 );
+  EXPECT_NE( result, 4 );
+  EXPECT_NE( result, 8 );
+  EXPECT_NE( result, 9 );
 }
