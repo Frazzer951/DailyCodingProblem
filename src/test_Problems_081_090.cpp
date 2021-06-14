@@ -6,6 +6,7 @@
 #include "Problem_086.hpp"
 #include "Problem_087.hpp"
 #include "Problem_088.hpp"
+#include "Problem_089.hpp"
 
 #include "gtest/gtest.h"
 
@@ -222,4 +223,31 @@ TEST( Problem_88, Test_Case_4 )
   int result = divide( 13, 4 );
 
   EXPECT_EQ( 3, result );
+}
+
+// Problem 89
+TEST( Problem_89, Test_Case_1 )
+{
+  btNode * root     = new btNode( 'd' );
+  root->left        = new btNode( 'c' );
+  root->left->left  = new btNode( 'a' );
+  root->left->right = new btNode( 'f' );
+  root->right       = new btNode( 'z' );
+
+  bool result = validateBST( root );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_89, Test_Case_2 )
+{
+  btNode * root     = new btNode( 'd' );
+  root->left        = new btNode( 'c' );
+  root->left->left  = new btNode( 'a' );
+  root->left->right = new btNode( 'f' );
+  root->right       = new btNode( 'b' );
+
+  bool result = validateBST( root );
+
+  EXPECT_FALSE( result );
 }
