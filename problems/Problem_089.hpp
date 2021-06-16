@@ -17,8 +17,8 @@ inline bool validateBST( btNode * node )
   if( node == nullptr ) return true;
   if( node->left == nullptr && node->right == nullptr ) return true;
 
-  if( node->left->value > node->value ) return false;
-  if( node->right->value < node->value ) return false;
+  if( node->left != nullptr && node->left->value > node->value ) return false;
+  if( node->right != nullptr && node->right->value < node->value ) return false;
 
   return validateBST( node->left ) && validateBST( node->right );
 }
