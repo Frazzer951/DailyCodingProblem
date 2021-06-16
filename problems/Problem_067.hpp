@@ -42,7 +42,7 @@ struct LFUCache
   {
     // If key doesn't exist, return None.
     if( val_map.find( key ) == val_map.end() )
-      return NULL;
+      return 0;
 
 
     // First, we look up the val and frequency in our val_map.
