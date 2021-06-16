@@ -181,16 +181,18 @@ TEST( Problem_47, Test_Case )
 // Problem 48
 TEST( Problem_48, Given_Case )
 {
-  // For example, given the following preorder traversal:
-  // [a, b, d, e, c, f, g]
-  // And the following inorder traversal:
-  // [d, b, e, a, f, c, g]
-  // You should return the following tree:
-  //     a
-  //    / \
-  //   b   c
-  //  / \ / \
-  // d  e f  g
+  /*
+  For example, given the following preorder traversal:
+  [a, b, d, e, c, f, g]
+  And the following inorder traversal:
+  [d, b, e, a, f, c, g]
+  You should return the following tree:
+      a
+     / \
+    b   c
+   / \ / \
+  d  e f  g
+  */
 
   auto * a = new btNode( 'a' );
   auto * b = new btNode( 'b' );
