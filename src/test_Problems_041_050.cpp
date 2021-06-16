@@ -109,8 +109,8 @@ TEST( Problem_43, Test_getMax )
 TEST( Problem_43, Test_getMax_Exception )
 {
   stack testStack;
-
-  EXPECT_ANY_THROW( testStack.getMax() );
+  int   x = 0;
+  EXPECT_ANY_THROW( x = testStack.getMax() );
 }
 
 // Problem 44

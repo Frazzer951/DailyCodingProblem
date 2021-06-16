@@ -13,8 +13,8 @@ Given two strings, compute the edit distance between them.
 
 inline int strDistance( std::string s1, std::string s2 )
 {
-  int x = s1.size() + 1;
-  int y = s2.size() + 1;
+  int x = (int) s1.size() + 1;
+  int y = (int) s2.size() + 1;
 
   std::vector<std::vector<int>> A( y, std::vector<int>( x, -1 ) );
 
