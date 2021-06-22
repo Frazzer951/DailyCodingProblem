@@ -34,9 +34,9 @@ inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
 {
   std::vector<std::vector<int>> powerSet;
   // set_size of power set of a set with set_size n is (2**n -1)
-  auto         pow_set_size = (unsigned int) pow( 2, set.size() );
-  unsigned int counter      = 0;
-  unsigned int j            = 0;
+  std::size_t pow_set_size = set.size() * set.size() - 1;
+  int counter      = 0;
+  int j            = 0;
 
   // Run from counter 000..0 to 111..1
   for( counter = 0; counter < pow_set_size; counter++ )

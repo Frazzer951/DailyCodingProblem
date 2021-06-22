@@ -29,7 +29,8 @@ struct filereader
     {
       if( i == 7 )
       {
-        seven_letter_split.push_back( std::move( tmp ) );
+        seven_letter_split.push_back( tmp );
+        tmp.clear();
         i = 0;
       }
       tmp += c;
