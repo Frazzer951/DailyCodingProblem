@@ -149,3 +149,26 @@ TEST( Problem_97, Given_Case )
   d.set( 1, 2, 0 );                  // set key 1 to value 2 at time 0
   EXPECT_EQ( 2, d.get( 1, 0 ) );     // get key 1 at time 0 should be 2
 }
+
+// Problem 98
+TEST( Problem_98, Given_Case )
+{
+  /*
+  [
+    ['A','B','C','E'],
+    ['S','F','C','S'],
+    ['A','D','E','E']
+  ]
+  exists(board, "ABCCED") returns true,
+  exists(board, "SEE") returns true,
+  exists(board, "ABCB") returns false.
+  */
+
+  std::vector<std::vector<char>> board = { { 'A', 'B', 'C', 'E' },
+                                           { 'S', 'F', 'C', 'S' },
+                                           { 'A', 'D', 'E', 'E' } };
+
+  EXPECT_TRUE( find_word( board, "ABCCED" ) );
+  EXPECT_TRUE( find_word( board, "SEE" ) );
+  EXPECT_FALSE( find_word( board, "ABCB" ) );
+}
