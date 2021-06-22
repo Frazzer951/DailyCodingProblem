@@ -49,3 +49,21 @@ TEST( Problem_93, Test_Case_1 )
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );
 }
+
+// Problem 94
+TEST( Problem_94, Test_Case )
+{
+  ibtNode * root           = new ibtNode( 10 );
+  root->left               = new ibtNode( 6 );
+  root->left->left         = new ibtNode( -3 );
+  root->left->left->right  = new ibtNode( 3 );
+  root->left->right        = new ibtNode( 5 );
+  root->right              = new ibtNode( -4 );
+  root->right->left        = new ibtNode( 11 );
+  root->right->right       = new ibtNode( 9 );
+  root->right->right->left = new ibtNode( 2 );
+
+  int result = max_path_sum( root );
+
+  EXPECT_EQ( 28, result );
+}
