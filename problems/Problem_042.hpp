@@ -13,7 +13,7 @@ For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] sin
 
 inline std::vector<int> subset_sum( std::vector<int> nums, int k )
 {
-  std::vector<std::vector<std::vector<int> *>> A( nums.size() + 1, std::vector<std::vector<int> *>( k + 1, NULL ) );
+  std::vector<std::vector<std::vector<int> *>> A( nums.size() + 1, std::vector<std::vector<int> *>( k + 1, nullptr ) );
 
   for( int i = 0; i < nums.size() + 1; i++ ) { A[i][0] = new std::vector<int>(); }
 
@@ -25,15 +25,15 @@ inline std::vector<int> subset_sum( std::vector<int> nums, int k )
       if( last > j ) A[i][j] = A[i - 1][j];
       else
       {
-        if( A[i - 1][j] != NULL ) { A[i][j] = new std::vector<int>( *A[i - 1][j] ); }
-        else if( A[i - 1][j - last] != NULL )
+        if( A[i - 1][j] != nullptr ) { A[i][j] = new std::vector<int>( *A[i - 1][j] ); }
+        else if( A[i - 1][j - last] != nullptr )
         {
           A[i][j] = new std::vector<int>( *A[i - 1][j - last] );
           A[i][j]->push_back( last );
         }
         else
         {
-          A[i][j] = NULL;
+          A[i][j] = nullptr;
         }
       }
     }
