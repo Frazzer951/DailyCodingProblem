@@ -1,6 +1,11 @@
 #include "Problem_091.hpp"
 #include "Problem_092.hpp"
 #include "Problem_093.hpp"
+#include "Problem_094.hpp"
+#include "Problem_095.hpp"
+#include "Problem_096.hpp"
+#include "Problem_097.hpp"
+#include "Problem_098.hpp"
 
 #include "gtest/gtest.h"
 
