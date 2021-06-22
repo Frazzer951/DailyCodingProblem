@@ -67,3 +67,40 @@ TEST( Problem_94, Test_Case )
 
   EXPECT_EQ( 28, result );
 }
+
+// Problem 95
+TEST( Problem_95, Given_Case_1 )
+{
+  /*
+  the list [1,2,3] should return [1,3,2].
+  */
+
+  std::vector<int> nums     = { 1, 2, 3 };
+  std::vector<int> expected = { 1, 3, 2 };
+  nextPermutation( nums );
+  EXPECT_EQ( expected, nums );
+}
+
+TEST( Problem_95, Given_Case_2 )
+{
+  /*
+  The list [1,3,2] should return [2,1,3].
+  */
+
+  std::vector<int> nums     = { 1, 3, 2 };
+  std::vector<int> expected = { 2, 1, 3 };
+  nextPermutation( nums );
+  EXPECT_EQ( expected, nums );
+}
+
+TEST( Problem_95, Given_Case_3 )
+{
+  /*
+  The list [3,2,1] should return [1,2,3].
+  */
+
+  std::vector<int> nums     = { 3, 2, 1 };
+  std::vector<int> expected = { 1, 2, 3 };
+  nextPermutation( nums );
+  EXPECT_EQ( expected, nums );
+}
