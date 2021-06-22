@@ -6,6 +6,7 @@
 #include "Problem_096.hpp"
 #include "Problem_097.hpp"
 #include "Problem_098.hpp"
+#include "Problem_099.hpp"
 
 #include "gtest/gtest.h"
 
@@ -171,4 +172,18 @@ TEST( Problem_98, Given_Case )
   EXPECT_TRUE( find_word( board, "ABCCED" ) );
   EXPECT_TRUE( find_word( board, "SEE" ) );
   EXPECT_FALSE( find_word( board, "ABCB" ) );
+}
+
+// Problem 99
+TEST( Problem_99, Given_Case )
+{
+  /*
+  For example, given [100, 4, 200, 1, 3, 2],
+  the longest consecutive element sequence is [1, 2, 3, 4].
+  Return its length: 4.
+  */
+
+  std::vector<int> arr    = { 100, 4, 200, 1, 3, 2 };
+  int              result = findLongestConseqSubseq( arr );
+  EXPECT_EQ( 4, result );
 }
