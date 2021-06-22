@@ -24,12 +24,12 @@ exists(board, "ABCB") returns false.
 #include <string>
 #include <vector>
 
-bool is_valid( std::vector<std::vector<char>> board, int row, int col )
+inline bool is_valid( std::vector<std::vector<char>> board, int row, int col )
 {
   return row >= 0 && row < board.size() && col >= 0 && col < board[0].size();
 }
 
-bool search( std::vector<std::vector<char>> board, int row, int col, std::string word, std::size_t index, std::vector<std::vector<bool>> & visited )
+inline bool search( std::vector<std::vector<char>> board, int row, int col, std::string word, std::size_t index, std::vector<std::vector<bool>> & visited )
 {
   if( !is_valid( board, row, col ) )
     return false;
@@ -52,7 +52,7 @@ bool search( std::vector<std::vector<char>> board, int row, int col, std::string
   return false;
 }
 
-bool find_word( std::vector<std::vector<char>> board, std::string word )
+inline bool find_word( std::vector<std::vector<char>> board, const std::string & word )
 {
   int M = (int) board.size();
   int N = (int) board[0].size();

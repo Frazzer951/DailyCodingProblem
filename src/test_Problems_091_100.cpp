@@ -54,7 +54,7 @@ TEST( Problem_93, Test_Case_1 )
 // Problem 94
 TEST( Problem_94, Test_Case )
 {
-  ibtNode * root           = new ibtNode( 10 );
+  auto * root              = new ibtNode( 10 );
   root->left               = new ibtNode( 6 );
   root->left->left         = new ibtNode( -3 );
   root->left->left->right  = new ibtNode( 3 );

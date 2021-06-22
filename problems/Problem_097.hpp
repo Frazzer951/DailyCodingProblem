@@ -52,9 +52,9 @@ public:
     std::size_t i = bisect_left( keys, key );
     if( keys.size() == i )
       return values[i - 1];
-    else if( keys[i] == key )
+    if( keys[i] == key )
       return values[i];
-    else if( i == 0 )
+    if( i == 0 )
       return 0;
     else
       return values[i - 1];

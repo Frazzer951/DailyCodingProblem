@@ -15,7 +15,7 @@ Your algorithm should run in O(n) complexity.
 #include <unordered_set>
 #include <vector>
 
-int findLongestConseqSubseq( std::vector<int> arr )
+inline int findLongestConseqSubseq( std::vector<int> arr )
 {
   std::unordered_set<int> S;
   int                     ans = 0;
