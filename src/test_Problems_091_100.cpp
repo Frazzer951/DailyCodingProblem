@@ -7,6 +7,7 @@
 #include "Problem_097.hpp"
 #include "Problem_098.hpp"
 #include "Problem_099.hpp"
+#include "Problem_100.hpp"
 
 #include "gtest/gtest.h"
 
@@ -186,4 +187,19 @@ TEST( Problem_99, Given_Case )
   std::vector<int> arr    = { 100, 4, 200, 1, 3, 2 };
   int              result = findLongestConseqSubseq( arr );
   EXPECT_EQ( 4, result );
+}
+
+// Problem 100
+TEST( Problem_100, Given_Case )
+{
+  /*
+  Input: [(0, 0), (1, 1), (1, 2)]
+  Output: 2
+  */
+
+  std::vector<std::pair<int, int>> points = { std::make_pair( 0, 0 ), std::make_pair( 1, 1 ), std::make_pair( 1, 2 ) };
+
+  int result = minSteps( points );
+
+  EXPECT_EQ( 2, result );
 }

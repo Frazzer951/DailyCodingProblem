@@ -56,8 +56,8 @@ public:
       return values[i];
     if( i == 0 )
       return 0;
-    else
-      return values[i - 1];
+
+    return values[i - 1];
   }
 
   void set( int key, int value )
