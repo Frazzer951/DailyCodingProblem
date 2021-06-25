@@ -23,6 +23,30 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "enableClangTidyCodeAnalysis": true
+    },
+	{
+      "name": "x64-Debug-GCC",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "gcc" ],
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "enableClangTidyCodeAnalysis": true
+    },
+	{
+      "name": "x64-Debug-CLANG",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "clang" ],
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "enableClangTidyCodeAnalysis": true
     }
   ]
 }
