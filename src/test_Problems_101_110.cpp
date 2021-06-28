@@ -2,6 +2,7 @@
 #include "Problem_102.hpp"
 #include "Problem_103.hpp"
 #include "Problem_104.hpp"
+#include "Problem_105.hpp"
 
 #include "gtest/gtest.h"
 
@@ -67,4 +68,15 @@ TEST( Problem_104, Given_Case_2 )
   l.push_back( 4 );
 
   EXPECT_FALSE( palindromeList( l ) );
+}
+
+// Problem 105
+TEST( Problem_105, Test_Case )
+{
+  auto f1 = []()
+  { return 1; };
+
+  auto f2 = debunce( f1, 20 );
+
+  f2();
 }
