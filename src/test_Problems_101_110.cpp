@@ -30,3 +30,13 @@ TEST( Problem_102, Given_Case )
 
   EXPECT_EQ( expected, result );
 }
+
+// Problem 103
+TEST( Problem_103, Given_Case )
+{
+  // For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
+
+  int result = smallest( "figehaeci", { 'a', 'e', 'i' } );
+
+  EXPECT_EQ( 4, result );
+}
