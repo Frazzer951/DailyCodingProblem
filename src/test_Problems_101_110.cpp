@@ -40,3 +40,31 @@ TEST( Problem_103, Given_Case )
 
   EXPECT_EQ( 4, result );
 }
+
+// Problem 104
+TEST( Problem_104, Given_Case_1 )
+{
+  // For example, 1 -> 4 -> 3 -> 4 -> 1 returns True
+  // while 1 -> 4 returns False.
+
+  std::list<int> l;
+  l.push_back( 1 );
+  l.push_back( 4 );
+  l.push_back( 3 );
+  l.push_back( 4 );
+  l.push_back( 1 );
+
+  EXPECT_TRUE( palindromeList( l ) );
+}
+
+TEST( Problem_104, Given_Case_2 )
+{
+  // For example, 1 -> 4 -> 3 -> 4 -> 1 returns True
+  // while 1 -> 4 returns False.
+
+  std::list<int> l;
+  l.push_back( 1 );
+  l.push_back( 4 );
+
+  EXPECT_FALSE( palindromeList( l ) );
+}
