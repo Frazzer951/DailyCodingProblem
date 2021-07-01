@@ -47,15 +47,11 @@ class TimeMap
 public:
   int get( int key )
   {
-    if( keys.empty() )
-      return 0;
+    if( keys.empty() ) return 0;
     std::size_t i = bisect_left( keys, key );
-    if( keys.size() == i )
-      return values[i - 1];
-    if( keys[i] == key )
-      return values[i];
-    if( i == 0 )
-      return 0;
+    if( keys.size() == i ) return values[i - 1];
+    if( keys[i] == key ) return values[i];
+    if( i == 0 ) return 0;
 
     return values[i - 1];
   }
@@ -83,10 +79,7 @@ class MultiTimeMap
   std::map<int, TimeMap> map;
 
 public:
-  void set( int key, int value, int time )
-  {
-    map[key].set( time, value );
-  }
+  void set( int key, int value, int time ) { map[key].set( time, value ); }
 
   int get( int key, int time )
   {

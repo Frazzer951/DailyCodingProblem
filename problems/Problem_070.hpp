@@ -16,10 +16,7 @@ inline int perfecet_num( int n )
   int         length = (int) n_str.size();
   int         sum    = 0;
 
-  for( int i = 0; i < length; i++ )
-  {
-    sum += (int) n_str[i] - 48;
-  }
+  for( int i = 0; i < length; i++ ) { sum += (int) n_str[i] - 48; }
 
   if( sum == 10 ) return n;
 

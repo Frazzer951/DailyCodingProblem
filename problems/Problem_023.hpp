@@ -46,7 +46,8 @@ inline int findOpening( std::vector<bool> row )
   return -1;
 }
 
-inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int, int> startPos, std::pair<int, int> endPos )
+inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int, int> startPos,
+                             std::pair<int, int> endPos )
 {
   std::pair<int, int> curPos = startPos;
   int                 moves  = 0;

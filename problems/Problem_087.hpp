@@ -46,10 +46,7 @@ struct mapNode
   mapNode( char value = ' ' )
   {
     val = value;
-    for( int i = 0; i < 4; i++ )
-    {
-      edges.emplace_back();
-    }
+    for( int i = 0; i < 4; i++ ) { edges.emplace_back(); }
   }
 };
 
@@ -58,15 +55,9 @@ inline bool operator==( const mapNode & lhs, const mapNode & rhs )
   return ( lhs.val == rhs.val ) && ( lhs.edges == rhs.edges );
 }
 
-inline bool operator<( const mapNode & lhs, const mapNode & rhs )
-{
-  return lhs.val < rhs.val;
-}
+inline bool operator<( const mapNode & lhs, const mapNode & rhs ) { return lhs.val < rhs.val; }
 
-inline int opposite( int dir )
-{
-  return ( dir + 2 ) % 4;
-}
+inline int opposite( int dir ) { return ( dir + 2 ) % 4; }
 
 
 inline bool isValid( mapNode * from, mapNode * to, int newDir )
@@ -90,14 +81,12 @@ inline void addEdges( mapNode * from, mapNode * to, int newDir )
     /* Relationships in the same direction are ambiguous.
          For example, if A is north of B, and we are adding
          C north of B, we cannot say C is north of A. */
-    if( dir == newDir )
-      continue;
+    if( dir == newDir ) continue;
 
     for( mapNode * neighbor : from->edges[dir] )
     {
       /* No need to add self-edges */
-      if( neighbor == to )
-        continue;
+      if( neighbor == to ) continue;
       /* Add bi-directional edges */
       neighbor->edges[newDir].insert( to );
       to->edges[oppositeDir].insert( neighbor );
@@ -135,8 +124,7 @@ inline bool validate( const std::vector<std::string> & rules )
     for( char dirChar : rule[1] )
     {
       int dir = charToDir[dirChar];
-      if( !isValid( from, to, dir ) )
-        return false;
+      if( !isValid( from, to, dir ) ) return false;
       addEdges( from, to, dir );
     }
   }

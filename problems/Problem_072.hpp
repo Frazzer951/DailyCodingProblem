@@ -41,14 +41,8 @@ inline int pathScore( const std::string & path )
 {
   std::map<char, int> counts;
   int                 max_count = 0;
-  for( char c : path )
-  {
-    counts[c]++;
-  }
-  for( auto & [_, count] : counts )
-  {
-    max_count = ( count > max_count ) ? count : max_count;
-  }
+  for( char c : path ) { counts[c]++; }
+  for( auto & [_, count] : counts ) { max_count = ( count > max_count ) ? count : max_count; }
   return max_count;
 }
 
@@ -71,15 +65,16 @@ inline int best_score( const std::vector<std::vector<int>> & paths, std::string 
 
 inline bool isLoop( const std::vector<int> & cur_path, int cur_index )
 {
-  return std::any_of( cur_path.begin(), cur_path.end(), [cur_index]( int i )
-                      { return i == cur_index; } );
+  return std::any_of( cur_path.begin(), cur_path.end(), [cur_index]( int i ) { return i == cur_index; } );
 }
 
-inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map, std::vector<int> cur_path = std::vector<int>() )
+inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map,
+                                                  std::vector<int> cur_path = std::vector<int>() )
 {
   if( edge_map[index].empty() ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, index ) );
 
-  if( !cur_path.empty() && isLoop( cur_path, index ) ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, -1 ) );
+  if( !cur_path.empty() && isLoop( cur_path, index ) )
+    return std::vector<std::vector<int>>( 1, std::vector<int>( 1, -1 ) );
 
   cur_path.push_back( index );
 
@@ -103,10 +98,7 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
 {
   std::map<int, std::vector<int>> edge_map;
 
-  for( const auto & [from, to] : edges )
-  {
-    edge_map[from].push_back( to );
-  }
+  for( const auto & [from, to] : edges ) { edge_map[from].push_back( to ); }
 
   std::vector<std::vector<int>> paths;
 
@@ -114,10 +106,7 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
   {
     auto i_paths = follow_path( i, edge_map );
 
-    for( const std::vector<int> & path : i_paths )
-    {
-      paths.push_back( path );
-    }
+    for( const std::vector<int> & path : i_paths ) { paths.push_back( path ); }
   }
 
   return best_score( paths, nodes );

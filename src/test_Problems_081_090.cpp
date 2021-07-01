@@ -108,12 +108,8 @@ TEST( Problem_84, Given_Case )
   1 1 0 0 1
   1 1 0 0 1
   */
-  std::vector<std::vector<int>> island_map = { { 1, 0, 0, 0, 0 },
-                                               { 0, 0, 1, 1, 0 },
-                                               { 0, 1, 1, 0, 0 },
-                                               { 0, 0, 0, 0, 0 },
-                                               { 1, 1, 0, 0, 1 },
-                                               { 1, 1, 0, 0, 1 } };
+  std::vector<std::vector<int>> island_map = { { 1, 0, 0, 0, 0 }, { 0, 0, 1, 1, 0 }, { 0, 1, 1, 0, 0 },
+                                               { 0, 0, 0, 0, 0 }, { 1, 1, 0, 0, 1 }, { 1, 1, 0, 0, 1 } };
 
   int result = num_islands( island_map );
 
@@ -153,9 +149,7 @@ TEST( Problem_86, Give_Case_2 )
 // Problem 87
 TEST( Problem_87, Given_Case_1 )
 {
-  std::vector<std::string> rules = { "A N B",
-                                     "C SE B",
-                                     "C N A" };
+  std::vector<std::string> rules = { "A N B", "C SE B", "C N A" };
 
   bool result = validate( rules );
   EXPECT_FALSE( result );
@@ -163,8 +157,7 @@ TEST( Problem_87, Given_Case_1 )
 
 TEST( Problem_87, Given_Case_2 )
 {
-  std::vector<std::string> rules = { "A NW B",
-                                     "A N B" };
+  std::vector<std::string> rules = { "A NW B", "A N B" };
 
   bool result = validate( rules );
   EXPECT_TRUE( result );
@@ -172,8 +165,7 @@ TEST( Problem_87, Given_Case_2 )
 
 TEST( Problem_87, Given_Case_3 )
 {
-  std::vector<std::string> rules = { "A N B",
-                                     "C N B" };
+  std::vector<std::string> rules = { "A N B", "C N B" };
 
   bool result = validate( rules );
   EXPECT_TRUE( result );
@@ -181,8 +173,7 @@ TEST( Problem_87, Given_Case_3 )
 
 TEST( Problem_87, Given_Case_4 )
 {
-  std::vector<std::string> rules = { "A NW B",
-                                     "A N B" };
+  std::vector<std::string> rules = { "A NW B", "A N B" };
 
   bool result = validate( rules );
   EXPECT_TRUE( result );
@@ -190,8 +181,7 @@ TEST( Problem_87, Given_Case_4 )
 
 TEST( Problem_87, Test_Case )
 {
-  std::vector<std::string> rules = { "A N B",
-                                     "B N A" };
+  std::vector<std::string> rules = { "A N B", "B N A" };
 
   bool result = validate( rules );
   EXPECT_FALSE( result );

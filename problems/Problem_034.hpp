@@ -34,8 +34,7 @@ inline std::string makePalindrome( std::string s )
   std::string two = s[s.size() - 1] + makePalindrome( s.substr( 0, s.size() - 1 ) ) + s[s.size() - 1];
 
   if( one.size() < two.size() ) return one;
-  if( two.size() < one.size() )
-    return two;
+  if( two.size() < one.size() ) return two;
 
   return min( one, two );
 }

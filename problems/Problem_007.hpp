@@ -14,8 +14,7 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 inline int num_encodings( std::string s )
 {
   if( s[0] == '0' ) return 0;
-  if( s.size() <= 1 )
-    return 1;
+  if( s.size() <= 1 ) return 1;
 
   int total = 0;
 

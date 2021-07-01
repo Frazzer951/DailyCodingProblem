@@ -11,8 +11,7 @@ The path must go through at least one node, and does not need to go through the 
 
 inline std::pair<int, int> helper( ibtNode * root )
 {
-  if( root == nullptr )
-    return std::make_pair( std::numeric_limits<int>::min(), 0 );
+  if( root == nullptr ) return std::make_pair( std::numeric_limits<int>::min(), 0 );
 
   auto left         = helper( root->left );
   int  left_max_sum = left.first;

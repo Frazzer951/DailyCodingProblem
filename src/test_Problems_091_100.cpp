@@ -21,7 +21,9 @@ TEST( Problem_92, Given_Case )
   should return ['CSC100', 'CSC200', 'CSCS300'].
   */
 
-  std::map<std::string, std::vector<std::string>> course_dependencies = { { "CSC300", { "CSC100", "CSC200" } }, { "CSC200", { "CSC100" } }, { "CSC100", {} } };
+  std::map<std::string, std::vector<std::string>> course_dependencies = { { "CSC300", { "CSC100", "CSC200" } },
+                                                                          { "CSC200", { "CSC100" } },
+                                                                          { "CSC100", {} } };
 
   std::vector<std::string> expected = { "CSC100", "CSC200", "CSC300" };
   std::vector<std::string> result   = course_order( course_dependencies );
@@ -117,7 +119,8 @@ TEST( Problem_96, Given_Case )
 
   std::vector<int>              nums     = { 1, 2, 3 };
   std::vector<std::vector<int>> result   = getPermutations( nums );
-  std::vector<std::vector<int>> expected = { { 1, 2, 3 }, { 1, 3, 2 }, { 2, 1, 3 }, { 2, 3, 1 }, { 3, 1, 2 }, { 3, 2, 1 } };
+  std::vector<std::vector<int>> expected = { { 1, 2, 3 }, { 1, 3, 2 }, { 2, 1, 3 },
+                                             { 2, 3, 1 }, { 3, 1, 2 }, { 3, 2, 1 } };
 
   EXPECT_EQ( expected, result );
 }
@@ -166,9 +169,7 @@ TEST( Problem_98, Given_Case )
   exists(board, "ABCB") returns false.
   */
 
-  std::vector<std::vector<char>> board = { { 'A', 'B', 'C', 'E' },
-                                           { 'S', 'F', 'C', 'S' },
-                                           { 'A', 'D', 'E', 'E' } };
+  std::vector<std::vector<char>> board = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
 
   EXPECT_TRUE( find_word( board, "ABCCED" ) );
   EXPECT_TRUE( find_word( board, "SEE" ) );

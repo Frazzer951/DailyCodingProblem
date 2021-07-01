@@ -51,10 +51,9 @@ TEST( Problem_62, Test_Case )
 // Problem 63
 TEST( Problem_63, Given_Case_1 )
 {
-  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
-                                             { 'O', 'B', 'Q', 'P' },
-                                             { 'A', 'N', 'O', 'B' },
-                                             { 'M', 'A', 'S', 'S' } };
+  std::vector<std::vector<char>> letters = {
+    { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
+  };
 
   bool result = findWord( letters, "FOAM" );
 
@@ -63,10 +62,9 @@ TEST( Problem_63, Given_Case_1 )
 
 TEST( Problem_63, Given_Case_2 )
 {
-  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
-                                             { 'O', 'B', 'Q', 'P' },
-                                             { 'A', 'N', 'O', 'B' },
-                                             { 'M', 'A', 'S', 'S' } };
+  std::vector<std::vector<char>> letters = {
+    { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
+  };
 
   bool result = findWord( letters, "MASS" );
 
@@ -75,10 +73,9 @@ TEST( Problem_63, Given_Case_2 )
 
 TEST( Problem_63, Test_Case_1 )
 {
-  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
-                                             { 'O', 'B', 'Q', 'P' },
-                                             { 'A', 'N', 'O', 'B' },
-                                             { 'M', 'A', 'S', 'S' } };
+  std::vector<std::vector<char>> letters = {
+    { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
+  };
 
   bool result = findWord( letters, "ZOOM" );
 
@@ -87,10 +84,9 @@ TEST( Problem_63, Test_Case_1 )
 
 TEST( Problem_63, Test_Case_2 )
 {
-  std::vector<std::vector<char>> letters = { { 'F', 'A', 'C', 'I' },
-                                             { 'O', 'B', 'Q', 'P' },
-                                             { 'A', 'N', 'O', 'B' },
-                                             { 'M', 'A', 'S', 'S' } };
+  std::vector<std::vector<char>> letters = {
+    { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
+  };
 
   bool result = findWord( letters, "LAUGH" );
 
@@ -108,33 +104,11 @@ TEST( Problem_64, Test_Case_1 )
 // Problem 65
 TEST( Problem_65, Given_Case )
 {
-  std::vector<std::vector<int>> v = { { 1, 2, 3, 4, 5 },
-                                      { 6, 7, 8, 9, 10 },
-                                      { 11, 12, 13, 14, 15 },
-                                      { 16, 17, 18, 19, 20 } };
-
-  std::vector<int> expected = {
-    1,
-    2,
-    3,
-    4,
-    5,
-    10,
-    15,
-    20,
-    19,
-    18,
-    17,
-    16,
-    11,
-    6,
-    7,
-    8,
-    9,
-    14,
-    13,
-    12
+  std::vector<std::vector<int>> v = {
+    { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, { 16, 17, 18, 19, 20 }
   };
+
+  std::vector<int> expected = { 1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12 };
 
   auto result = print_spiral( v );
 
@@ -177,15 +151,11 @@ TEST( Problem_67, Set )
   EXPECT_EQ( 5, LFU_cache.get( "5" ) );
 }
 
-//Problem 68
+// Problem 68
 TEST( Problem_68, Given_Case )
 {
-  std::vector<std::pair<int, int>> bishops = {
-    std::make_pair( 0, 0 ),
-    std::make_pair( 1, 2 ),
-    std::make_pair( 2, 2 ),
-    std::make_pair( 4, 0 )
-  };
+  std::vector<std::pair<int, int>> bishops = { std::make_pair( 0, 0 ), std::make_pair( 1, 2 ), std::make_pair( 2, 2 ),
+                                               std::make_pair( 4, 0 ) };
 
   int result = pairs( bishops, 5 );
 

@@ -56,10 +56,7 @@ inline std::string readN( int n )
   int         num_needed = n / 7 + 1;
   std::string all;
 
-  for( int i = 0; i < num_needed; i++ )
-  {
-    all += filereader.read7();
-  }
+  for( int i = 0; i < num_needed; i++ ) { all += filereader.read7(); }
 
   return all.substr( 0, n );
 }

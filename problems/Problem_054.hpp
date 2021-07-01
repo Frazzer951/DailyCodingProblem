@@ -85,8 +85,7 @@ def sudoku(board):
 
 inline std::vector<std::vector<int>> solveSudoku( std::vector<std::vector<int>> board )
 {
-  if( valid_sudoku( board ) && is_filled( board ) )
-    return board;
+  if( valid_sudoku( board ) && is_filled( board ) ) return board;
 
   auto pos = find_first_empty( board );
   int  r   = pos.first;
@@ -99,8 +98,7 @@ inline std::vector<std::vector<int>> solveSudoku( std::vector<std::vector<int>> 
     if( valid_sudoku( board ) )
     {
       auto result = solveSudoku( board );
-      if( valid_sudoku( result ) && is_filled( result ) )
-        return result;
+      if( valid_sudoku( result ) && is_filled( result ) ) return result;
     }
     board[r][c] = 0;
   }

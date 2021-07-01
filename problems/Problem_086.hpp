@@ -39,8 +39,7 @@ inline int parentheses_to_remove( std::string parens_str )
           break;
         }
       }
-      if( !completed )
-        counter++;
+      if( !completed ) counter++;
     }
   }
   return counter;

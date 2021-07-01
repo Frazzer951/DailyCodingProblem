@@ -30,8 +30,7 @@ inline void remove_empty_lists( std::vector<std::forward_list<int>> & lists )
   auto i = lists.begin();
   while( i != lists.end() )
   {
-    if( i->empty() )
-      i = lists.erase( i );
+    if( i->empty() ) i = lists.erase( i );
     else
       i++;
   }

@@ -10,10 +10,7 @@ integer from 1 to 5 (inclusive).
 
 namespace prob71
 {
-  inline int rand7()
-  {
-    return rand() % 7 + 1;
-  }
+  inline int rand7() { return rand() % 7 + 1; }
 
   inline int rand5()
   {

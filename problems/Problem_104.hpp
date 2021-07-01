@@ -14,14 +14,12 @@ inline bool palindromeList( std::list<int> l )
 {
   std::vector<int> elements;
 
-  for( int i : l )
-    elements.push_back( i );
+  for( int i : l ) elements.push_back( i );
 
   int i = 0;
   for( auto it = l.rbegin(); it != l.rend(); ++it )
   {
-    if( elements[i] != *it )
-      return false;
+    if( elements[i] != *it ) return false;
     i++;
   }
   return true;

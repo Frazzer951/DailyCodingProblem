@@ -31,16 +31,14 @@ inline std::vector<int> SieveOfEratosthenes( int n )
   {
     if( prime[p] )
     {
-      for( int i = p * p; i <= n; i += p )
-        prime[i] = false;
+      for( int i = p * p; i <= n; i += p ) prime[i] = false;
     }
   }
 
   std::vector<int> primes;
   // Print all prime numbers
   for( int p = 2; p <= n; p++ )
-    if( prime[p] )
-      primes.push_back( p );
+    if( prime[p] ) primes.push_back( p );
 
   return primes;
 }
@@ -53,8 +51,7 @@ inline std::pair<int, int> primeSum( int n )
   {
     for( int j = i; j < primes.size(); j++ )
     {
-      if( primes[i] + primes[j] == n )
-        return std::make_pair( primes[i], primes[j] );
+      if( primes[i] + primes[j] == n ) return std::make_pair( primes[i], primes[j] );
     }
   }
   return std::make_pair( -1, -1 );

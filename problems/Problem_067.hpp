@@ -35,14 +35,12 @@ struct LFUCache
   std::map<int, std::deque<std::string>>     freq_map;
   int                                        min_freq = 0;
 
-  LFUCache( int _capacity ) :
-    capacity( _capacity ) {};
+  LFUCache( int _capacity ) : capacity( _capacity ) {};
 
   int get( const std::string & key )
   {
     // If key doesn't exist, return None.
-    if( val_map.find( key ) == val_map.end() )
-      return 0;
+    if( val_map.find( key ) == val_map.end() ) return 0;
 
 
     // First, we look up the val and frequency in our val_map.
@@ -57,8 +55,7 @@ struct LFUCache
     freq_map[freq].erase( freq_map[freq].begin() + get_deque_index( freq_map[freq], key ) );
     if( freq_map[freq].empty() )
     {
-      if( min_freq == freq )
-        min_freq += 1;
+      if( min_freq == freq ) min_freq += 1;
     }
 
     // Update our dicts as usual.
@@ -69,8 +66,7 @@ struct LFUCache
 
   void set( const std::string & key, int val )
   {
-    if( capacity == 0 )
-      return;
+    if( capacity == 0 ) return;
 
     if( val_map.find( key ) == val_map.end() )
     {
@@ -96,8 +92,7 @@ struct LFUCache
       freq_map[freq].erase( freq_map[freq].begin() + get_deque_index( freq_map[freq], key ) );
       if( freq_map[freq].empty() )
       {
-        if( freq == min_freq )
-          min_freq += 1;
+        if( freq == min_freq ) min_freq += 1;
       }
 
       val_map[key] = std::make_pair( val, freq + 1 );

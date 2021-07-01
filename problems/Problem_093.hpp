@@ -23,8 +23,7 @@ inline int btSize( btNode * node )
 
 inline btNode * largest_subBST( btNode * root )
 {
-  if( validateBST( root ) )
-    return root;
+  if( validateBST( root ) ) return root;
 
   btNode * left  = largest_subBST( root->left );
   btNode * right = largest_subBST( root->right );

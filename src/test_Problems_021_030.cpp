@@ -14,8 +14,7 @@
 // Problem 21
 TEST( Problem_21, Given_Case )
 {
-  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ),
-                                                std::make_pair( 0, 50 ),
+  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ),
                                                 std::make_pair( 60, 150 ) };
   int                              roomsNeeded = findMinRoomsNeeded( schedule );
 
@@ -24,10 +23,8 @@ TEST( Problem_21, Given_Case )
 
 TEST( Problem_21, Test_Case )
 {
-  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 0, 75 ),
-                                                std::make_pair( 25, 100 ),
-                                                std::make_pair( 80, 100 ),
-                                                std::make_pair( 50, 75 ) };
+  std::vector<std::pair<int, int>> schedule    = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ),
+                                                std::make_pair( 80, 100 ), std::make_pair( 50, 75 ) };
   int                              roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 3 );

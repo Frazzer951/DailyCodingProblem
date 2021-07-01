@@ -67,10 +67,7 @@ struct slNode
   }
 };
 
-inline bool operator==( const slNode & lhs, const slNode & rhs )
-{
-  return lhs.value == rhs.value;
-}
+inline bool operator==( const slNode & lhs, const slNode & rhs ) { return lhs.value == rhs.value; }
 
 class slList
 {
@@ -151,10 +148,7 @@ inline int sum( const std::vector<int> & v )
 {
   int sum = 0;
 
-  for( int x : v )
-  {
-    sum += x;
-  }
+  for( int x : v ) { sum += x; }
 
   return sum;
 }

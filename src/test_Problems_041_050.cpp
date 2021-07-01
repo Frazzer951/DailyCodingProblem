@@ -45,10 +45,8 @@ TEST( Problem_41, Given_Case_3 )
 {
   // Given [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', return ['A', 'B', 'C', 'A', 'C']
 
-  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "A", "B" ),
-                                                               std::make_pair( "A", "C" ),
-                                                               std::make_pair( "B", "C" ),
-                                                               std::make_pair( "C", "A" ) };
+  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "A", "B" ), std::make_pair( "A", "C" ),
+                                                               std::make_pair( "B", "C" ), std::make_pair( "C", "A" ) };
 
   std::vector<std::string> result   = getItinerary( flights, "A" );
   std::vector<std::string> expected = { "A", "B", "C", "A", "C" };

@@ -51,23 +51,16 @@ inline bool partitions( std::vector<int> s )
 
   std::vector<std::vector<bool>> A( k_over_two + 1, std::vector<bool>( s.size() + 1, false ) );
 
-  for( int j = 0; j < s.size() + 1; j++ )
-  {
-    A[0][j] = true;
-  }
+  for( int j = 0; j < s.size() + 1; j++ ) { A[0][j] = true; }
 
-  for( int i = 1; i < k_over_two + 1; i++ )
-  {
-    A[i][0] = false;
-  }
+  for( int i = 1; i < k_over_two + 1; i++ ) { A[i][0] = false; }
 
   for( int i = 1; i < k_over_two + 1; i++ )
   {
     for( int j = 1; j < s.size() + 1; j++ )
     {
       int using_last = i - s[j - 1];
-      if( using_last >= 0 )
-        A[i][j] = A[i][j - 1] || A[using_last][j - 1];
+      if( using_last >= 0 ) A[i][j] = A[i][j - 1] || A[using_last][j - 1];
       else
         A[i][j] = A[i][j - 1];
     }

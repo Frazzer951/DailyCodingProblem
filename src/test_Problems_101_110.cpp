@@ -76,8 +76,7 @@ TEST( Problem_104, Given_Case_2 )
 // Problem 105
 TEST( Problem_105, Test_Case )
 {
-  auto f1 = []()
-  { return 1; };
+  auto f1 = []() { return 1; };
 
   auto f2 = debunce( f1, 20 );
 
@@ -85,15 +84,9 @@ TEST( Problem_105, Test_Case )
 }
 
 // Problem 106
-TEST( Problem_106, Given_Case_1 )
-{
-  EXPECT_TRUE( validate_hops( { 2, 0, 1, 0 } ) );
-}
+TEST( Problem_106, Given_Case_1 ) { EXPECT_TRUE( validate_hops( { 2, 0, 1, 0 } ) ); }
 
-TEST( Problem_106, Given_Case_2 )
-{
-  EXPECT_FALSE( validate_hops( { 1, 1, 0, 1 } ) );
-}
+TEST( Problem_106, Given_Case_2 ) { EXPECT_FALSE( validate_hops( { 1, 1, 0, 1 } ) ); }
 
 // Problem 107
 TEST( Problem_107, Given_Case )

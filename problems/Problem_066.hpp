@@ -21,10 +21,8 @@ inline bool toss_fair()
   bool t1 = toss_biased();
   bool t2 = toss_biased();
 
-  if( t1 && !t2 )
-    return true;
-  if( !t1 && t2 )
-    return false;
+  if( t1 && !t2 ) return true;
+  if( !t1 && t2 ) return false;
 
   return toss_fair();
 }

@@ -31,10 +31,7 @@ inline std::vector<std::string> course_order( std::map<std::string, std::vector<
       {
         for( const auto & dep_course : dependencies )
         {
-          if( std::find( courses.begin(), courses.end(), dep_course ) == courses.end() )
-          {
-            continue;
-          }
+          if( std::find( courses.begin(), courses.end(), dep_course ) == courses.end() ) { continue; }
         }
       }
       courses.push_back( course );
