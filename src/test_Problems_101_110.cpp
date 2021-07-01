@@ -117,3 +117,20 @@ TEST( Problem_107, Given_Case )
 
   EXPECT_EQ( expected, result );
 }
+
+// Problem 108
+TEST( Problem_108, Given_Case_1 )
+{
+  // A is abcde and B is cdeab, return true.
+  // A is abc and B is acb, return false.
+
+  EXPECT_TRUE( isSifted( "abcde", "cdeab" ) );
+}
+
+TEST( Problem_108, Given_Case_2 )
+{
+  // A is abcde and B is cdeab, return true.
+  // A is abc and B is acb, return false.
+
+  EXPECT_FALSE( isSifted( "abc", "acb" ) );
+}
