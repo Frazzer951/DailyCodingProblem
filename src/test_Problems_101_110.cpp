@@ -3,6 +3,9 @@
 #include "Problem_103.hpp"
 #include "Problem_104.hpp"
 #include "Problem_105.hpp"
+#include "Problem_106.hpp"
+#include "Problem_107.hpp"
+#include "Problem_108.hpp"
 
 #include "gtest/gtest.h"
 
@@ -79,4 +82,15 @@ TEST( Problem_105, Test_Case )
   auto f2 = debunce( f1, 20 );
 
   f2();
+}
+
+// Problem 106
+TEST( Problem_106, Given_Case_1 )
+{
+  EXPECT_TRUE( validate_hops( { 2, 0, 1, 0 } ) );
+}
+
+TEST( Problem_106, Given_Case_2 )
+{
+  EXPECT_FALSE( validate_hops( { 1, 1, 0, 1 } ) );
 }
