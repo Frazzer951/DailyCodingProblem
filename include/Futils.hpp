@@ -128,6 +128,20 @@ struct btNode
   }
 };
 
+struct ibtNode
+{
+  int      value;
+  ibtNode * left;
+  ibtNode * right;
+
+  ibtNode( int x )
+  {
+    value = x;
+    left  = nullptr;
+    right = nullptr;
+  }
+};
+
 inline bool operator==( const btNode & lhs, const btNode & rhs )
 {
   return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;

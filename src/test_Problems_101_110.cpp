@@ -94,3 +94,26 @@ TEST( Problem_106, Given_Case_2 )
 {
   EXPECT_FALSE( validate_hops( { 1, 1, 0, 1 } ) );
 }
+
+// Problem 107
+TEST( Problem_107, Given_Case )
+{
+  /*
+    1
+   / \
+  2   3
+     / \
+    4   5
+  */
+
+  auto * root        = new ibtNode( 1 );
+  root->left         = new ibtNode( 2 );
+  root->right        = new ibtNode( 3 );
+  root->right->left  = new ibtNode( 4 );
+  root->right->right = new ibtNode( 5 );
+
+  std::vector<int> expected = { 1, 2, 3, 4, 5 };
+  std::vector<int> result   = bt_traverse( root );
+
+  EXPECT_EQ( expected, result );
+}
