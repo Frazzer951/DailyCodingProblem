@@ -130,7 +130,7 @@ struct btNode
 
 struct ibtNode
 {
-  int      value;
+  int       value;
   ibtNode * left;
   ibtNode * right;
 

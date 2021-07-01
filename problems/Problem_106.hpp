@@ -21,5 +21,5 @@ inline bool validate_hops( std::vector<int> hops )
     index += hops[index];
   }
 
-  return index == hops.size()-1;
+  return index == hops.size() - 1;
 }
