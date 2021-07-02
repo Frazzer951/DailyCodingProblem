@@ -6,6 +6,7 @@
 #include "Problem_106.hpp"
 #include "Problem_107.hpp"
 #include "Problem_108.hpp"
+#include "Problem_109.hpp"
 
 #include "gtest/gtest.h"
 
@@ -126,4 +127,21 @@ TEST( Problem_108, Given_Case_2 )
   // A is abc and B is acb, return false.
 
   EXPECT_FALSE( isSifted( "abc", "acb" ) );
+}
+
+// Problem 109
+TEST( Problem_109, Given_Case_1 )
+{
+  // 10101010 should be 01010101.
+  std::int8_t result   = even_odd_bit_swap( (std::int8_t) 0b10101010 );
+  auto expected = (std::int8_t) 0b01010101;
+  EXPECT_EQ( expected, result );
+}
+
+TEST( Problem_109, Given_Case_2 )
+{
+  // 11100010 should be 11010001.
+  std::int8_t result   = even_odd_bit_swap( (std::int8_t) 0b11100010 );
+  auto expected = (std::int8_t) 0b11010001;
+  EXPECT_EQ( expected, result );
 }
