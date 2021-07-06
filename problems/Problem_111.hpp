@@ -11,7 +11,7 @@ For example, given that W is "ab", and S is "abxaba", return 0, 3, and 4.
 #include <string>
 #include <vector>
 
-inline bool isAnagram( const std::string& s1, const std::string& s2 )
+inline bool isAnagram( const std::string & s1, const std::string & s2 )
 {
   std::map<char, int> count1;
   std::map<char, int> count2;
@@ -31,7 +31,7 @@ inline bool isAnagram( const std::string& s1, const std::string& s2 )
   return count1 == count2;
 }
 
-inline std::vector<int> anagramIndex( const std::string& w, const std::string& s )
+inline std::vector<int> anagramIndex( const std::string & w, const std::string & s )
 {
   std::vector<int> indecies;
   for( int i = 0; i <= s.size() - w.size(); i++ )
