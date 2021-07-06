@@ -1,5 +1,6 @@
 #include "Problem_111.hpp"
 #include "Problem_112.hpp"
+#include "Problem_113.hpp"
 
 #include "gtest/gtest.h"
 
@@ -31,4 +32,12 @@ TEST( Problem_112, Test_Case )
   EXPECT_EQ( root, pbtLCA( n1, n2 ) );
   EXPECT_EQ( root, pbtLCA( n4, n5 ) );
   EXPECT_EQ( n1, pbtLCA( n3, n4 ) );
+}
+
+// Problem 113
+TEST( Problem_113, Given_Case )
+{
+  std::string result = reverseSentance( "hello world here" );
+
+  EXPECT_EQ( "here world hello", result );
 }
