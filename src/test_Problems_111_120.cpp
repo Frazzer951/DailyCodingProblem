@@ -1,6 +1,7 @@
 #include "Problem_111.hpp"
 #include "Problem_112.hpp"
 #include "Problem_113.hpp"
+#include "Problem_115.hpp"
 
 #include "gtest/gtest.h"
 
@@ -40,4 +41,18 @@ TEST( Problem_113, Given_Case )
   std::string result = reverseSentance( "hello world here" );
 
   EXPECT_EQ( "here world hello", result );
+}
+
+// Problem 115
+TEST( Problem_115, Test_Case_1 )
+{
+  auto * root        = new btNode( 1 );
+  root->left         = new btNode( 2 );
+  root->right        = new btNode( 3 );
+  root->right->right = new btNode( 4 );
+
+  EXPECT_TRUE( isSubtree( root, root ) );
+  EXPECT_TRUE( isSubtree( root, root->left ) );
+  EXPECT_TRUE( isSubtree( root, root->right ) );
+  EXPECT_TRUE( isSubtree( root, root->right->right ) );
 }

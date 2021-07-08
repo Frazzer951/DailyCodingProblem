@@ -14,7 +14,7 @@ Follow-up: given a mutable string representation, can you perform this operation
 
 inline std::string reverseSentance( std::string sentance )
 {
-  auto        words = split( std::move(sentance) );
+  auto        words = split( std::move( sentance ) );
   std::string reverse;
   for( auto i = words.rbegin(); i != words.rend(); ++i ) { reverse += *i + " "; }
   reverse.erase( reverse.end() - 1 );
