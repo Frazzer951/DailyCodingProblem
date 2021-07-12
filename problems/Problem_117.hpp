@@ -22,9 +22,9 @@ inline int minimum_level_sum( ibtNode * root )
     queue.pop();
     level_to_sum[level] += node->value;
 
-    if( node->right ) queue.push( std::make_pair( node->right, level + 1 ) );
+    if( node->right != nullptr ) queue.push( std::make_pair( node->right, level + 1 ) );
 
-    if( node->left ) queue.push( std::make_pair( node->left, level + 1 ) );
+    if( node->left != nullptr ) queue.push( std::make_pair( node->left, level + 1 ) );
   }
 
   int min_level = 0;
