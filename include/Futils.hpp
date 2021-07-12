@@ -131,11 +131,11 @@ struct ibtNode
   ibtNode * left;
   ibtNode * right;
 
-  ibtNode( int x )
+  ibtNode( int x, ibtNode * _left = nullptr, ibtNode * _right = nullptr )
   {
     value = x;
-    left  = nullptr;
-    right = nullptr;
+    left  = _left;
+    right = _right;
   }
 };
 

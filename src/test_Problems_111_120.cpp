@@ -67,3 +67,41 @@ TEST( Problem_116, Test_Case )
 
   EXPECT_TRUE( root );
 }
+
+// Problem 117
+TEST( Problem_117, Given_Case_1 )
+{
+  /*
+         1
+       /  \
+     -2   -3            (level 1 is the minimum)
+         /  \
+        4   -5
+  */
+
+  auto * root = new ibtNode( 1, new ibtNode( -2 ), new ibtNode( -3, new ibtNode( 4 ), new ibtNode( -5 ) ) );
+
+  int min_level = minimum_level_sum( root );
+
+  EXPECT_EQ( 1, min_level );
+}
+
+TEST( Problem_117, Given_Case_2 )
+{
+  /*
+            1
+        /       \
+      2          3
+    /  \          \
+   4    5          6
+         \       /   \
+         -1   -7     -8   (level 3 is the minimum)
+  */
+
+  auto * root = new ibtNode( 1, new ibtNode( 2, new ibtNode( 4 ), new ibtNode( 5, new ibtNode( -1 ) ) ),
+                             new ibtNode( 3, nullptr, new ibtNode( 6, new ibtNode( -7 ), new ibtNode( -8 ) ) ) );
+
+  int min_level = minimum_level_sum( root );
+
+  EXPECT_EQ( 3, min_level );
+}
