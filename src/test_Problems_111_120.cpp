@@ -105,3 +105,14 @@ TEST( Problem_117, Given_Case_2 )
 
   EXPECT_EQ( 3, min_level );
 }
+
+// Problem 118
+TEST( Problem_118, Given_Case )
+{
+  // given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81]
+  std::vector<int> nums     = { -9, -2, 0, 2, 3 };
+  std::vector<int> expected = { 0, 4, 4, 9, 81 };
+  std::vector<int> result   = square_sort( nums );
+
+  EXPECT_EQ( expected, result );
+}
