@@ -2,6 +2,9 @@
 #include "Problem_112.hpp"
 #include "Problem_113.hpp"
 #include "Problem_115.hpp"
+#include "Problem_116.hpp"
+#include "Problem_117.hpp"
+#include "Problem_118.hpp"
 
 #include "gtest/gtest.h"
 
@@ -55,4 +58,12 @@ TEST( Problem_115, Test_Case_1 )
   EXPECT_TRUE( isSubtree( root, root->left ) );
   EXPECT_TRUE( isSubtree( root, root->right ) );
   EXPECT_TRUE( isSubtree( root, root->right->right ) );
+}
+
+// Problem 116
+TEST( Problem_116, Test_Case )
+{
+  auto * root = generate();
+
+  EXPECT_TRUE( root );
 }
