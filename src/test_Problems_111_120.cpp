@@ -1,10 +1,12 @@
 #include "Problem_111.hpp"
 #include "Problem_112.hpp"
 #include "Problem_113.hpp"
+#include "Problem_114.hpp"
 #include "Problem_115.hpp"
 #include "Problem_116.hpp"
 #include "Problem_117.hpp"
 #include "Problem_118.hpp"
+#include "Problem_119.hpp"
 #include "Problem_120.hpp"
 
 #include "gtest/gtest.h"
@@ -116,13 +118,4 @@ TEST( Problem_118, Given_Case )
   std::vector<int> result   = square_sort( nums );
 
   EXPECT_EQ( expected, result );
-}
-
-// Problem 120
-TEST( Problem_120, Test_Case )
-{
-  Singleton s1 = Singleton::getInstance();
-  Singleton s2 = Singleton::getInstance();
-  Singleton s3 = Singleton::getInstance();
-  Singleton s4 = Singleton::getInstance();
 }

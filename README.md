@@ -13,6 +13,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 91
 - Problem 114
 - Problem 119
+- Problem 120
 - Problem 121
 - Problem 122
 - Problem 123
