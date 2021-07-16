@@ -11,7 +11,7 @@ For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 
 inline std::vector<int> square_sort( std::vector<int> nums )
 {
-  for(int & num : nums) { num = num * num; }
+  for( int & num : nums ) { num = num * num; }
 
   std::sort( nums.begin(), nums.end() );
 
