@@ -102,3 +102,14 @@ TEST( Problem_125, Test_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 126
+TEST( Problem_126, Given_Case )
+{
+  // [1, 2, 3, 4, 5, 6] rotated by two becomes [3, 4, 5, 6, 1, 2].
+  std::vector<int> v        = { 1, 2, 3, 4, 5, 6 };
+  std::vector<int> expected = { 3, 4, 5, 6, 1, 2 };
+  std::vector<int> result   = rotateVector( v, 2 );
+
+  EXPECT_EQ( result, expected );
+}

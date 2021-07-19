@@ -23,8 +23,7 @@ inline ibtNode * search( ibtNode * node, int val )
 
   if( node->value == val ) return node;
   if( node->value < val ) return search( node->right, val );
-  else
-    return search( node->left, val );
+  return search( node->left, val );
 }
 
 inline std::vector<ibtNode *> iter_tree( ibtNode * root )
