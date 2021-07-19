@@ -1,6 +1,9 @@
 #include "Problem_121.hpp"
 #include "Problem_122.hpp"
 #include "Problem_123.hpp"
+#include "Problem_124.hpp"
+#include "Problem_125.hpp"
+#include "Problem_126.hpp"
 
 #include "gtest/gtest.h"
 
