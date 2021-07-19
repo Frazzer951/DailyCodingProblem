@@ -6,6 +6,7 @@ Given a string which we can delete at most k, return whether you can make a pali
 For example, given 'waterrfetawx' and a k of 2, you could delete f and x to get 'waterretaw'.
 */
 
+#include <algorithm>
 #include <string>
 #include <vector>
 
@@ -13,9 +14,9 @@ inline int longest_palindromic_subsequence( std::string s )
 {
   std::string rs = s;
   std::reverse( rs.begin(), rs.end() );
-  if( s == rs ) return s.size();
+  if( s == rs ) return (int) s.size();
 
-  int                           n = s.size();
+  int                           n = (int) s.size();
   std::vector<std::vector<int>> A( n, std::vector( n, 0 ) );
 
   for( int i = n - 1; i >= 0; i-- )
@@ -31,6 +32,7 @@ inline int longest_palindromic_subsequence( std::string s )
   return A[0][n - 1];
 }
 
-inline bool k_palindrome( std::string s, int k ) {
-  return  s.size() - longest_palindromic_subsequence( s )  <= k;
+inline bool k_palindrome( const std::string & s, int k )
+{
+  return s.size() - longest_palindromic_subsequence( s ) <= k;
 }

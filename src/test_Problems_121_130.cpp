@@ -8,9 +8,7 @@
 #include "gtest/gtest.h"
 
 // Problem 121
-TEST(Problem_121, Given_Case){
-  EXPECT_TRUE(k_palindrome("waterrfetawx", 2));
-  }
+TEST( Problem_121, Given_Case ) { EXPECT_TRUE( k_palindrome( "waterrfetawx", 2 ) ); }
 
 // Problem 122
 TEST( Problem_122, Given_Case )
