@@ -119,3 +119,28 @@ TEST( Problem_118, Given_Case )
 
   EXPECT_EQ( expected, result );
 }
+
+// Problem 119
+TEST( Problem_119, Given_Case_1 )
+{
+  // given the intervals [0, 3], [2, 6], [3, 4], [6, 9], return {3, 6}.
+
+  std::vector<std::vector<int>> intervals = { { 0, 3 }, { 2, 6 }, { 3, 4 }, { 6, 9 } };
+
+  std::vector<int> expected = { 3, 9 };
+  std::vector<int> result   = covering( intervals );
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_119, Given_Case_2 )
+{
+  // given the intervals [[10, 20], [1, 6], [3, 8], [7, 12]], return {1, 6}.
+
+  std::vector<std::vector<int>> intervals = { { 10, 20 }, { 1, 6 }, { 3, 8 }, { 7, 12 } };
+
+  std::vector<int> expected = { 6, 12 };
+  std::vector<int> result   = covering( intervals );
+
+  EXPECT_EQ( result, expected );
+}
