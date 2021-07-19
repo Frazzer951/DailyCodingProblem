@@ -6,3 +6,7 @@ up heads you flip again. How many rounds do you expect to play before only one c
 
 Write a function that, given n, returns the number of rounds you'd expect to play until one coin remains.
 */
+
+#include <cmath>
+
+inline double expected_tosses( int n ) { return std::log2( n ); }

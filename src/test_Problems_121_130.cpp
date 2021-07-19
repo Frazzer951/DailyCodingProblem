@@ -51,3 +51,10 @@ TEST( Problem_123, Test_Case )
   EXPECT_FALSE( isNum( "1." ) );
   EXPECT_FALSE( isNum( ".1" ) );
 }
+
+// Problem 124
+TEST(Problem_124, Test_Case){
+  EXPECT_DOUBLE_EQ(0,expected_tosses(1));
+  EXPECT_DOUBLE_EQ(1,expected_tosses(2));
+  EXPECT_DOUBLE_EQ(2,expected_tosses(4));
+}
