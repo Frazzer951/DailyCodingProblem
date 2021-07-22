@@ -58,9 +58,9 @@ TEST( Problem_73, Test_Case )
 
   reverse_slList( list );
 
-  EXPECT_EQ( 3, *list.get( 0 ) );
-  EXPECT_EQ( 2, *list.get( 1 ) );
-  EXPECT_EQ( 1, *list.get( 2 ) );
+  EXPECT_EQ( 3, list.get( 0 )->value );
+  EXPECT_EQ( 2, list.get( 1 )->value );
+  EXPECT_EQ( 1, list.get( 2 )->value );
 }
 
 // Problem 74
