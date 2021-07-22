@@ -155,3 +155,26 @@ TEST( Problem_127, Test_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 128
+TEST( Problem_128, Given_Case )
+{
+  /*
+    For example, with n = 3, we can do this in 7 moves:
+
+    Move 1 to 3
+    Move 1 to 2
+    Move 3 to 2
+    Move 1 to 3
+    Move 2 to 1
+    Move 2 to 3
+    Move 1 to 3
+  */
+
+  std::vector<std::pair<int, int>> expected = { std::make_pair( 1, 3 ), std::make_pair( 1, 2 ), std::make_pair( 3, 2 ),
+                                                std::make_pair( 1, 3 ), std::make_pair( 2, 1 ), std::make_pair( 2, 3 ),
+                                                std::make_pair( 1, 3 ) };
+  std::vector<std::pair<int, int>> result   = solveHanoi( 3 );
+
+  EXPECT_EQ( result, expected );
+}
