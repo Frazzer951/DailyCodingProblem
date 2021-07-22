@@ -2,6 +2,7 @@
 
 /* My Custom Functions */
 
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -60,14 +61,35 @@ struct slNode
   int      value;
   slNode * next;
 
-  slNode( int x )
+  slNode( int x, slNode * n = nullptr )
   {
     value = x;
-    next  = nullptr;
+    next  = n;
   }
 };
 
-inline bool operator==( const slNode & lhs, const slNode & rhs ) { return lhs.value == rhs.value; }
+inline bool operator==( const slNode & lhs, const slNode & rhs )
+{
+  if( lhs.value != rhs.value ) return false;
+  if( lhs.next != nullptr && rhs.next == nullptr ) return false;
+  if( lhs.next == nullptr && rhs.next != nullptr ) return false;
+  if( lhs.next != nullptr && rhs.next != nullptr ) return *lhs.next == *rhs.next;
+  return true;
+}
+
+inline std::ostream & operator<<( std::ostream & os, const slNode & n )
+{
+  os << n.value;
+  if( n.next != nullptr ) { os << " -> " << *n.next; }
+  return os;
+}
+
+inline std::ostream & operator<<( std::ostream & os, const slNode * n )
+{
+  os << n->value;
+  if( n->next != nullptr ) { os << " -> " << n->next; }
+  return os;
+}
 
 class slList
 {

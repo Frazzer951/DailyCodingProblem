@@ -1,7 +1,8 @@
 #pragma once
 
 /* EASY
-Let's represent an integer in a linked list format by having each node represent a digit in the number. The nodes make up the number in reversed order.
+Let's represent an integer in a linked list format by having each node represent a digit in the number. The nodes make
+up the number in reversed order.
 
 For example, the following linked list:
 
@@ -18,3 +19,38 @@ return 124 (99 + 25) as:
 
 4 -> 2 -> 1
 */
+
+#include "Futils.hpp"
+
+inline slNode * sum( slNode * x, slNode * y )
+{
+  slNode * sumNum    = new slNode( ( x->value + y->value ) % 10 );
+  slNode * cur       = sumNum;
+  int      remainder = ( x->value + y->value ) / 10;
+  x                  = x->next;
+  y                  = y->next;
+  while( x != nullptr || y != nullptr )
+  {
+    int curSum = remainder;
+    if( x != nullptr )
+    {
+      curSum += x->value;
+      x = x->next;
+    }
+    if( y != nullptr )
+    {
+      curSum += y->value;
+      y = y->next;
+    }
+
+    remainder = curSum / 10;
+    curSum    = curSum % 10;
+
+    cur->next = new slNode( curSum );
+    cur       = cur->next;
+  }
+
+  if( remainder > 0 ) cur->next = new slNode( remainder );
+
+  return sumNum;
+}
