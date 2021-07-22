@@ -24,7 +24,7 @@ return 124 (99 + 25) as:
 
 inline slNode * sum( slNode * x, slNode * y )
 {
-  slNode * sumNum    = new slNode( ( x->value + y->value ) % 10 );
+  auto *   sumNum    = new slNode( ( x->value + y->value ) % 10 );
   slNode * cur       = sumNum;
   int      remainder = ( x->value + y->value ) / 10;
   x                  = x->next;

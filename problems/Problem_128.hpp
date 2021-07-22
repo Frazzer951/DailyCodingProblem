@@ -43,13 +43,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
     {
       A.push( B.top() );
       B.pop();
-      moves.push_back( std::make_pair( 2, 1 ) );
+      moves.emplace_back( 2, 1 );
     }
     else if( B.empty() )
     {
       B.push( A.top() );
       A.pop();
-      moves.push_back( std::make_pair( 1, 2 ) );
+      moves.emplace_back( 1, 2 );
     }
     else
     {
@@ -57,13 +57,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
       {
         B.push( A.top() );
         A.pop();
-        moves.push_back( std::make_pair( 1, 2 ) );
+        moves.emplace_back( 1, 2 );
       }
       else
       {
         A.push( B.top() );
         B.pop();
-        moves.push_back( std::make_pair( 2, 1 ) );
+        moves.emplace_back( 2, 1 );
       }
     }
   };
@@ -74,13 +74,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
     {
       A.push( C.top() );
       C.pop();
-      moves.push_back( std::make_pair( 3, 1 ) );
+      moves.emplace_back( 3, 1 );
     }
     else if( C.empty() )
     {
       C.push( A.top() );
       A.pop();
-      moves.push_back( std::make_pair( 1, 3 ) );
+      moves.emplace_back( 1, 3 );
     }
     else
     {
@@ -88,13 +88,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
       {
         C.push( A.top() );
         A.pop();
-        moves.push_back( std::make_pair( 1, 3 ) );
+        moves.emplace_back( 1, 3 );
       }
       else
       {
         A.push( C.top() );
         C.pop();
-        moves.push_back( std::make_pair( 3, 1 ) );
+        moves.emplace_back( 3, 1 );
       }
     }
   };
@@ -105,13 +105,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
     {
       B.push( C.top() );
       C.pop();
-      moves.push_back( std::make_pair( 3, 2 ) );
+      moves.emplace_back( 3, 2 );
     }
     else if( C.empty() )
     {
       C.push( B.top() );
       B.pop();
-      moves.push_back( std::make_pair( 2, 3 ) );
+      moves.emplace_back( 2, 3 );
     }
     else
     {
@@ -119,13 +119,13 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
       {
         C.push( B.top() );
         B.pop();
-        moves.push_back( std::make_pair( 2, 3 ) );
+        moves.emplace_back( 2, 3 );
       }
       else
       {
         B.push( C.top() );
         C.pop();
-        moves.push_back( std::make_pair( 3, 2 ) );
+        moves.emplace_back( 3, 2 );
       }
     }
   };

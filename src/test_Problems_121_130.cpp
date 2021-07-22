@@ -130,10 +130,10 @@ TEST( Problem_127, Given_Case )
   4 -> 2 -> 1
   */
 
-  slNode * x      = new slNode( 9, new slNode( 9 ) );
-  slNode * y      = new slNode( 5, new slNode( 2 ) );
-  slNode   result = *sum( x, y );
-  slNode   expected( 4, new slNode( 2, new slNode( 1 ) ) );
+  auto * x      = new slNode( 9, new slNode( 9 ) );
+  auto * y      = new slNode( 5, new slNode( 2 ) );
+  slNode result = *sum( x, y );
+  slNode expected( 4, new slNode( 2, new slNode( 1 ) ) );
 
   EXPECT_EQ( result, expected );
 }
@@ -148,10 +148,10 @@ TEST( Problem_127, Test_Case )
   8 -> 9 -> 0 -> 1
   */
 
-  slNode * x      = new slNode( 9, new slNode( 9 ) );
-  slNode * y      = new slNode( 9, new slNode( 9, new slNode( 9 ) ) );
-  slNode   result = *sum( x, y );
-  slNode   expected( 8, new slNode( 9, new slNode( 0, new slNode( 1 ) ) ) );
+  auto * x      = new slNode( 9, new slNode( 9 ) );
+  auto * y      = new slNode( 9, new slNode( 9, new slNode( 9 ) ) );
+  slNode result = *sum( x, y );
+  slNode expected( 8, new slNode( 9, new slNode( 0, new slNode( 1 ) ) ) );
 
   EXPECT_EQ( result, expected );
 }
