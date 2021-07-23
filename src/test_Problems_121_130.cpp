@@ -6,6 +6,7 @@
 #include "Problem_126.hpp"
 #include "Problem_127.hpp"
 #include "Problem_128.hpp"
+#include "Problem_130.hpp"
 
 #include "gtest/gtest.h"
 
@@ -177,4 +178,17 @@ TEST( Problem_128, Given_Case )
   std::vector<std::pair<int, int>> result   = solveHanoi( 3 );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 130
+TEST( Problem_130, Given_Case )
+{
+  // [5, 2, 4, 0, 1] k = 2
+  // Return 3
+
+  std::vector<int> stocks = { 5, 2, 4, 0, 1 };
+
+  int result = stonks( stocks, 2 );
+
+  EXPECT_EQ( result, 3 );
 }
