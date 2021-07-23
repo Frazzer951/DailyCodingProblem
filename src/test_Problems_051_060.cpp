@@ -20,19 +20,17 @@ TEST( Problem_51, Test_Case )
 }
 
 // Problem 52
-LRUCache LRU_cache( 5 );
-TEST( Problem_52, set )
+TEST( Problem_52, set_get )
 {
+  LRUCache LRU_cache( 5 );
+
   EXPECT_NO_THROW( LRU_cache.set( "one", "1" ) );
   EXPECT_NO_THROW( LRU_cache.set( "two", "2" ) );
   EXPECT_NO_THROW( LRU_cache.set( "three", "3" ) );
   EXPECT_NO_THROW( LRU_cache.set( "four", "4" ) );
   EXPECT_NO_THROW( LRU_cache.set( "five", "5" ) );
   EXPECT_NO_THROW( LRU_cache.set( "six", "6" ) );
-}
 
-TEST( Problem_52, get )
-{
   EXPECT_EQ( LRU_cache.get( "one" ), "" );
   EXPECT_EQ( LRU_cache.get( "two" ), "2" );
   EXPECT_EQ( LRU_cache.get( "three" ), "3" );
@@ -43,24 +41,38 @@ TEST( Problem_52, get )
 
 TEST( Problem_52, CacheSizeTest )
 {
+  LRUCache LRU_cache( 5 );
+
+  EXPECT_NO_THROW( LRU_cache.set( "one", "1" ) );
+  EXPECT_NO_THROW( LRU_cache.set( "two", "2" ) );
+  EXPECT_NO_THROW( LRU_cache.set( "three", "3" ) );
+  EXPECT_NO_THROW( LRU_cache.set( "four", "4" ) );
+  EXPECT_NO_THROW( LRU_cache.set( "five", "5" ) );
+  EXPECT_NO_THROW( LRU_cache.set( "six", "6" ) );
+
+  EXPECT_EQ( LRU_cache.get( "one" ), "" );
+  EXPECT_EQ( LRU_cache.get( "two" ), "2" );
+  EXPECT_EQ( LRU_cache.get( "three" ), "3" );
+  EXPECT_EQ( LRU_cache.get( "four" ), "4" );
+  EXPECT_EQ( LRU_cache.get( "five" ), "5" );
+  EXPECT_EQ( LRU_cache.get( "six" ), "6" );
+
   LRU_cache.set( "seven", "7" );
   EXPECT_EQ( LRU_cache.get( "seven" ), "7" );
   EXPECT_EQ( LRU_cache.get( "two" ), "" );
 }
 
 // Problem 53
-queue_s q;
-TEST( Problem_53, enqueue )
+TEST( Problem_53, enqueue_dequeue )
 {
+  queue_s q;
+
   EXPECT_NO_THROW( q.enqueue( 1 ) );
   EXPECT_NO_THROW( q.enqueue( 2 ) );
   EXPECT_NO_THROW( q.enqueue( 3 ) );
   EXPECT_NO_THROW( q.enqueue( 4 ) );
   EXPECT_NO_THROW( q.enqueue( 5 ) );
-}
 
-TEST( Problem_53, dequeue )
-{
   EXPECT_EQ( q.dequeue(), 1 );
   EXPECT_EQ( q.dequeue(), 2 );
   EXPECT_EQ( q.dequeue(), 3 );

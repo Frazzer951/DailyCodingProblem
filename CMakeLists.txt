@@ -19,6 +19,7 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include(ClangFormat)
 include(FetchContent)
+include(GoogleTest)
 #set(CMAKE_CXX_CLANG_TIDY clang-tidy -fix)
 enable_testing()
 
@@ -62,9 +63,11 @@ file(COPY
 add_executable(${PROJECT_NAME} ${src_files} ${problem_files} ${include_files} )
 target_link_libraries(${PROJECT_NAME} gtest_main)
 
-add_test(
-    NAME ${PROJECT_NAME}
-    COMMAND ${PROJECT_NAME}
-)
+#add_test(
+#    NAME ${PROJECT_NAME}
+#    COMMAND ${PROJECT_NAME}
+#)
+
+gtest_discover_tests(${PROJECT_NAME})
 
 target_clangformat_setup(${PROJECT_NAME})

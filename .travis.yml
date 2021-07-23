@@ -16,4 +16,4 @@ script:
   - export CXX=g++-10
   - cmake .
   - cmake --build .
-  - ctest
+  - ctest --output-on-failure
