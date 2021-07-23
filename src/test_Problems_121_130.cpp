@@ -6,6 +6,7 @@
 #include "Problem_126.hpp"
 #include "Problem_127.hpp"
 #include "Problem_128.hpp"
+#include "Problem_129.hpp"
 #include "Problem_130.hpp"
 
 #include "gtest/gtest.h"
@@ -178,6 +179,14 @@ TEST( Problem_128, Given_Case )
   std::vector<std::pair<int, int>> result   = solveHanoi( 3 );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 129
+TEST( Problem_129, Given_Case )
+{
+  double result = squareroot( 9 );
+
+  EXPECT_DOUBLE_EQ( result, 3.0 );
 }
 
 // Problem 130
