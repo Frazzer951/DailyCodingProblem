@@ -44,3 +44,24 @@ TEST_F( HitCounterTest, range )
 
   EXPECT_EQ( timestamps, expected );
 }
+
+// Problem 133
+TEST( Problem_133, Given_Case )
+{
+  /*
+     10
+    /  \
+   5    30
+       /  \
+     22    35
+  */
+  pbtNode * root     = new pbtNode( 10, nullptr );
+  root->left         = new pbtNode( 5, root );
+  root->right        = new pbtNode( 30, root );
+  root->right->left  = new pbtNode( 22, root->right );
+  root->right->right = new pbtNode( 35, root->right );
+
+  EXPECT_EQ( nextElement( root->right->left ), 30 );
+  EXPECT_EQ( nextElement( root->left ), 10 );
+  EXPECT_EQ( nextElement( root ), 22 );
+}
