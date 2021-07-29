@@ -65,3 +65,17 @@ TEST( Problem_133, Given_Case )
   EXPECT_EQ( nextElement( root->left ), 10 );
   EXPECT_EQ( nextElement( root ), 22 );
 }
+
+// Problem 133
+TEST( Problem_133, Test_Class )
+{
+  int         arr[] = { 0, 0, 0, 18, 0, 0, 0, 1, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 4, 9 };
+  int         size  = sizeof( arr ) / sizeof( int );
+  SparseArray sArr;
+  ASSERT_NO_FATAL_FAILURE( sArr.init( arr, size ) );
+
+  for( int i = 0; i < size; i++ ) { EXPECT_EQ( sArr.get( i ), arr[i] ); }
+
+  ASSERT_NO_FATAL_FAILURE( sArr.set( 2, 1000 ) );
+  EXPECT_EQ( sArr.get( 2 ), 1000 );
+}
