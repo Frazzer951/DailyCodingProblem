@@ -17,7 +17,7 @@ class SparseArray
   std::map<int, int> values;
 
 public:
-  void init( int arr[], int size )
+  void init( const int arr[], int size )
   {
     for( int i = 0; i < size; i++ )
     {

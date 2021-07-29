@@ -55,7 +55,7 @@ TEST( Problem_133, Given_Case )
        /  \
      22    35
   */
-  pbtNode * root     = new pbtNode( 10, nullptr );
+  auto * root        = new pbtNode( 10, nullptr );
   root->left         = new pbtNode( 5, root );
   root->right        = new pbtNode( 30, root );
   root->right->left  = new pbtNode( 22, root->right );

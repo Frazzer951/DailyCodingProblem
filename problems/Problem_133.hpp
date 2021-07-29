@@ -17,7 +17,7 @@ You can assume each node has a parent pointer.
 
 inline int nextElement( pbtNode * node )
 {
-  auto curNode = node;
+  auto * curNode = node;
 
   if( node->right != nullptr ) { curNode = curNode->right; }
   else
