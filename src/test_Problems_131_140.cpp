@@ -79,3 +79,24 @@ TEST( Problem_133, Test_Class )
   ASSERT_NO_FATAL_FAILURE( sArr.set( 2, 1000 ) );
   EXPECT_EQ( sArr.get( 2 ), 1000 );
 }
+
+// Problem 135
+TEST( Problem_135, Given_Case )
+{
+  /*
+    10
+   /  \
+  5    5
+   \     \
+     2    1
+         /
+       -1
+  */
+  auto * root        = new ibtNode( 10, new ibtNode( 5 ), new ibtNode( 5 ) );
+  root->left->right  = new ibtNode( 2 );
+  root->right->right = new ibtNode( 1, new ibtNode( -1 ) );
+
+  int result = minPathSum( root );
+
+  EXPECT_EQ( result, 15 );
+}
