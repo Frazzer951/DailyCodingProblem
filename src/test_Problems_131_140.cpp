@@ -66,8 +66,8 @@ TEST( Problem_133, Given_Case )
   EXPECT_EQ( nextElement( root ), 22 );
 }
 
-// Problem 133
-TEST( Problem_133, Test_Class )
+// Problem 134
+TEST( Problem_134, Test_Class )
 {
   int         arr[] = { 0, 0, 0, 18, 0, 0, 0, 1, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 4, 9 };
   int         size  = sizeof( arr ) / sizeof( int );
