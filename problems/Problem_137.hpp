@@ -9,3 +9,16 @@ init(size): initialize the array with size
 set(i, val): updates index at i with val where val is either 1 or 0.
 get(i): gets the value at index i.
 */
+
+class bitarray
+{
+  bool * arr;
+
+public:
+  bitarray( const int & size ) : arr( new bool[size] )
+  {
+    for( int i = 0; i < size; i++ ) arr[i] = false;
+  }
+  void set( std::size_t i, bool val ) { arr[i] = val; }
+  bool get( std::size_t i ) { return arr[i]; }
+};

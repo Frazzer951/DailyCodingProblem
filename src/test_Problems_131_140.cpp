@@ -4,6 +4,7 @@
 #include "Problem_134.hpp"
 #include "Problem_135.hpp"
 #include "Problem_136.hpp"
+#include "Problem_137.hpp"
 
 #include "gtest/gtest.h"
 
@@ -119,4 +120,14 @@ TEST( Problem_136, Given_Case )
   int                           result = largestRectangle( v );
 
   EXPECT_EQ( result, 4 );
+}
+
+// Problem 137
+TEST( Problem_137, BitArray )
+{
+  bitarray arr( 10 );
+  bool     a[10] = { 1, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
+  for( int i = 0; i < 10; i++ ) { EXPECT_FALSE( arr.get( i ) ); }
+  for( int i = 0; i < 10; i++ ) { ASSERT_NO_FATAL_FAILURE( arr.set( i, a[i] ) ); }
+  for( int i = 0; i < 10; i++ ) { EXPECT_EQ( arr.get( i ), a[i] ); }
 }
