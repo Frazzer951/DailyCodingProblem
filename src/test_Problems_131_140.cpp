@@ -3,6 +3,7 @@
 #include "Problem_133.hpp"
 #include "Problem_134.hpp"
 #include "Problem_135.hpp"
+#include "Problem_136.hpp"
 
 #include "gtest/gtest.h"
 
@@ -99,4 +100,23 @@ TEST( Problem_135, Given_Case )
   int result = minPathSum( root );
 
   EXPECT_EQ( result, 15 );
+}
+
+// Problem 136
+TEST( Problem_136, Given_Case )
+{
+  /*
+  For example, given the following matrix:
+
+  [[1, 0, 0, 0],
+   [1, 0, 1, 1],
+   [1, 0, 1, 1],
+   [0, 1, 0, 0]]
+  Return 4.
+  */
+
+  std::vector<std::vector<int>> v      = { { 1, 0, 0, 0 }, { 1, 0, 1, 1 }, { 1, 0, 1, 1 }, { 0, 1, 0, 0 } };
+  int                           result = largestRectangle( v );
+
+  EXPECT_EQ( result, 4 );
 }
