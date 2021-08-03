@@ -5,6 +5,7 @@
 #include "Problem_135.hpp"
 #include "Problem_136.hpp"
 #include "Problem_137.hpp"
+#include "Problem_138.hpp"
 
 #include "gtest/gtest.h"
 
@@ -130,4 +131,11 @@ TEST( Problem_137, BitArray )
   for( int i = 0; i < 10; i++ ) { EXPECT_FALSE( arr.get( i ) ); }
   for( int i = 0; i < 10; i++ ) { ASSERT_NO_FATAL_FAILURE( arr.set( i, a[i] ) ); }
   for( int i = 0; i < 10; i++ ) { EXPECT_EQ( arr.get( i ), a[i] ); }
+}
+
+// Problem 138
+TEST( Problem_138, Given_Case )
+{
+  int result = minimum_coins( 16 );
+  EXPECT_EQ( result, 3 );
 }
