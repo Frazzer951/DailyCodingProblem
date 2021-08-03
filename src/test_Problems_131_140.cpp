@@ -6,6 +6,7 @@
 #include "Problem_136.hpp"
 #include "Problem_137.hpp"
 #include "Problem_138.hpp"
+#include "Problem_140.hpp"
 
 #include "gtest/gtest.h"
 
@@ -138,4 +139,15 @@ TEST( Problem_138, Given_Case )
 {
   int result = minimum_coins( 16 );
   EXPECT_EQ( result, 3 );
+}
+
+// Problem 140
+TEST( Problem_140, Given_Case )
+{
+  // given the array [2, 4, 6, 8, 10, 2, 6, 10], return 4 and 8
+  std::vector<int>    arr = { 2, 4, 6, 8, 10, 2, 6, 10 };
+  std::pair<int, int> expected( 4, 8 );
+  std::pair<int, int> result = array_two_elements( arr );
+
+  EXPECT_EQ( result, expected );
 }
