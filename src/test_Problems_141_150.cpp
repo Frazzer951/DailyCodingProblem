@@ -30,6 +30,16 @@ TEST( Problem_141, Test_Case )
   EXPECT_EQ( s.pop( 2 ), 1 );
 }
 
+// Problem 142
+TEST( Problem_142, Given_Case )
+{
+  // For example, (()* and (*) are balanced. )*( is not balanced.
+
+  EXPECT_TRUE( balanced( "(()*" ) );
+  EXPECT_TRUE( balanced( "(*)" ) );
+  EXPECT_FALSE( balanced( ")*(" ) );
+}
+
 // Problem 143
 TEST( Problem_143, Given_Case )
 {
