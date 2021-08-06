@@ -13,22 +13,22 @@ For example, given x = 10 and lst = [9, 12, 3, 5, 14, 10, 10], one partition may
 
 #include <vector>
 
-inline std::vector<int> partition( std::vector<int> lst, int x )
+inline std::vector<int> partition( const std::vector<int> & lst, int x )
 {
   std::vector<int> less;
   std::vector<int> eq;
   std::vector<int> great;
 
-  for( int i = 0; i < lst.size(); i++ )
+  for( int i : lst )
   {
-    if( lst[i] < x ) { less.push_back( lst[i] ); }
-    else if( lst[i] == x )
+    if( i < x ) { less.push_back( i ); }
+    else if( i == x )
     {
-      eq.push_back( lst[i] );
+      eq.push_back( i );
     }
     else
     {
-      great.push_back( lst[i] );
+      great.push_back( i );
     }
   }
   less.insert( less.end(), eq.begin(), eq.end() );

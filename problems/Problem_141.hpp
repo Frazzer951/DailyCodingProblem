@@ -41,16 +41,15 @@ public:
       s0--;
       return list[s0];
     }
-    else if( stack_number == 1 )
+    if( stack_number == 1 )
     {
       s1--;
       return list[s1];
     }
-    else
-    {
-      s2++;
-      return list[s2];
-    }
+
+
+    s2++;
+    return list[s2];
   }
 
   bool is_resize_needed() { return s0 == list.size() / 2 || s1 > s2; }

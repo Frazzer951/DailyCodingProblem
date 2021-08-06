@@ -9,7 +9,7 @@ For example, (()* and (*) are balanced. )*( is not balanced.
 
 #include <string>
 
-inline bool balanced( std::string s )
+inline bool balanced( const std::string & s )
 {
   int low  = 0;
   int high = 0;
