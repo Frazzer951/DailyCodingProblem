@@ -5,6 +5,31 @@
 
 #include "gtest/gtest.h"
 
+// Problem 141
+TEST( Problem_141, Test_Case )
+{
+  Stack s;
+  s.push( 1, 0 );
+  s.push( 2, 0 );
+  s.push( 3, 0 );
+  s.push( 1, 1 );
+  s.push( 2, 1 );
+  s.push( 3, 1 );
+  s.push( 1, 2 );
+  s.push( 2, 2 );
+  s.push( 3, 2 );
+
+  EXPECT_EQ( s.pop( 0 ), 3 );
+  EXPECT_EQ( s.pop( 1 ), 3 );
+  EXPECT_EQ( s.pop( 2 ), 3 );
+  EXPECT_EQ( s.pop( 0 ), 2 );
+  EXPECT_EQ( s.pop( 1 ), 2 );
+  EXPECT_EQ( s.pop( 2 ), 2 );
+  EXPECT_EQ( s.pop( 0 ), 1 );
+  EXPECT_EQ( s.pop( 1 ), 1 );
+  EXPECT_EQ( s.pop( 2 ), 1 );
+}
+
 // Problem 143
 TEST( Problem_143, Given_Case )
 {
