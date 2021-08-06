@@ -18,5 +18,4 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 139
 - Problem 141
 - Problem 142
-- Problem 143
 - Problem 144
