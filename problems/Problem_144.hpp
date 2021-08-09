@@ -14,7 +14,7 @@ Follow-up: If you can preprocess the array, can you do this in constant time?
 
 #include <vector>
 
-inline int _nearest( std::vector<int> arr, int i )
+inline int nearest( std::vector<int> arr, int i )
 {
   for( int j = 1; j < arr.size(); j++ )
   {
@@ -23,6 +23,7 @@ inline int _nearest( std::vector<int> arr, int i )
     if( 0 <= low && arr[low] > arr[i] ) return low;
     if( high < arr.size() && arr[high] > arr[i] ) return high;
   }
+  return -1;
 }
 
 inline std::vector<int> preprocess( std::vector<int> arr )
@@ -37,7 +38,7 @@ inline std::vector<int> preprocess( std::vector<int> arr )
   }
 
   for( int i = 0; i < cache.size(); i++ )
-    if( cache[i] == -1 ) cache[i] = _nearest( arr, i );
+    if( cache[i] == -1 ) cache[i] = nearest( arr, i );
 
   return cache;
 }
