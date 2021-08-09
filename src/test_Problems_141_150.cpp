@@ -107,3 +107,13 @@ TEST( Problem_146, Given_Case )
   EXPECT_EQ( result->right->value, 0 );
   EXPECT_EQ( result->right->left->value, 1 );
 }
+
+// Problem 147
+TEST( Problem_147, Test_Case )
+{
+  std::vector<int> arr      = { 4, 1, 3, 5, 6 };
+  std::vector<int> expected = { 1, 3, 4, 5, 6 };
+  std::vector<int> result   = sortWithReverse( arr );
+
+  EXPECT_EQ( result, expected );
+}
