@@ -17,5 +17,4 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 131
 - Problem 139
 - Problem 144
-- Problem 145
 - Problem 146

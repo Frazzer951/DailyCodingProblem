@@ -2,6 +2,8 @@
 #include "Problem_142.hpp"
 #include "Problem_143.hpp"
 #include "Problem_144.hpp"
+#include "Problem_145.hpp"
+#include "Problem_146.hpp"
 
 #include "gtest/gtest.h"
 
@@ -50,4 +52,17 @@ TEST( Problem_143, Given_Case )
   std::vector<int> result   = partition( given, 10 );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 145
+TEST( Problem_145, Given_Case )
+{
+  // given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3
+  auto *   root   = new slNode( 1, new slNode( 2, new slNode( 3, new slNode( 4 ) ) ) );
+  slNode * result = swapEveryTwo( root );
+
+  EXPECT_EQ( result->value, 2 );
+  EXPECT_EQ( result->next->value, 1 );
+  EXPECT_EQ( result->next->next->value, 4 );
+  EXPECT_EQ( result->next->next->next->value, 3 );
 }
