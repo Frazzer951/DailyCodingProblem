@@ -21,3 +21,26 @@ should be pruned to:
    1
 We do not remove the tree at the root or its left child because it still has a 1 as a descendant.
 */
+
+#include "Futils.hpp"
+
+inline bool isZeroBranch( ibtNode * node )
+{
+  if( node == nullptr ) return false;
+  if( node->value == 1 ) return false;
+  if( node->value == 0 && ( node->left == nullptr || isZeroBranch( node->left ) )
+      && ( node->right == nullptr || isZeroBranch( node->right ) ) )
+    return true;
+  return isZeroBranch( node->left ) && isZeroBranch( node->right );
+}
+
+inline ibtNode * pruneZeroBranches( ibtNode * root )
+{
+  if( root == nullptr ) return root;
+  if( isZeroBranch( root ) ) return nullptr;
+
+  root->left  = pruneZeroBranches( root->left );
+  root->right = pruneZeroBranches( root->right );
+
+  return root;
+}

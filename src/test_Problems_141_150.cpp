@@ -66,3 +66,33 @@ TEST( Problem_145, Given_Case )
   EXPECT_EQ( result->next->next->value, 4 );
   EXPECT_EQ( result->next->next->next->value, 3 );
 }
+
+// Problem 146
+TEST( Problem_146, Given_Case )
+{
+  /*
+     0
+    / \
+   1   0
+      / \
+     1   0
+    / \
+   0   0
+  should be pruned to:
+
+     0
+    / \
+   1   0
+      /
+     1
+  */
+
+  auto * root   = new ibtNode( 0, new ibtNode( 1 ),
+                             new ibtNode( 0, new ibtNode( 1, new ibtNode( 0 ), new ibtNode( 0 ) ), new ibtNode( 0 ) ) );
+  auto * result = pruneZeroBranches( root );
+
+  EXPECT_EQ( result->value, 0 );
+  EXPECT_EQ( result->left->value, 1 );
+  EXPECT_EQ( result->right->value, 0 );
+  EXPECT_EQ( result->right->left->value, 1 );
+}
