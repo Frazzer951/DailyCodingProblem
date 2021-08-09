@@ -55,6 +55,16 @@ TEST( Problem_143, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
+// Problem 144
+TEST( Problem_144, Given_Case )
+{
+  // given [4, 1, 3, 5, 6] and index 0, you should return 3
+  std::vector<int> arr   = { 4, 1, 3, 5, 6 };
+  auto             cache = preprocess( arr );
+
+  EXPECT_EQ( cache[0], 3 );
+}
+
 // Problem 145
 TEST( Problem_145, Given_Case )
 {

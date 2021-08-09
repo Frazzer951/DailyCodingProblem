@@ -11,3 +11,33 @@ larger integer, then return null.
 
 Follow-up: If you can preprocess the array, can you do this in constant time?
 */
+
+#include <vector>
+
+inline int _nearest( std::vector<int> arr, int i )
+{
+  for( int j = 1; j < arr.size(); j++ )
+  {
+    int low  = i - j;
+    int high = i + j;
+    if( 0 <= low && arr[low] > arr[i] ) return low;
+    if( high < arr.size() && arr[high] > arr[i] ) return high;
+  }
+}
+
+inline std::vector<int> preprocess( std::vector<int> arr )
+{
+  std::vector<int> cache( arr.size(), -1 );
+
+  for( int j = 0; j < arr.size() - 1; j++ )
+  {
+    if( arr[j] > arr[j + 1] ) cache[j + 1] = j;
+    else if( arr[j + 1] > arr[j] )
+      cache[j] = j + 1;
+  }
+
+  for( int i = 0; i < cache.size(); i++ )
+    if( cache[i] == -1 ) cache[i] = _nearest( arr, i );
+
+  return cache;
+}
