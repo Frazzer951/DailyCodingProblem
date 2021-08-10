@@ -5,6 +5,7 @@
 #include "Problem_145.hpp"
 #include "Problem_146.hpp"
 #include "Problem_147.hpp"
+#include "Problem_148.hpp"
 
 #include "gtest/gtest.h"
 
