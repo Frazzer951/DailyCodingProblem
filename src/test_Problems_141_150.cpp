@@ -6,6 +6,7 @@
 #include "Problem_146.hpp"
 #include "Problem_147.hpp"
 #include "Problem_148.hpp"
+#include "Problem_149.hpp"
 
 #include "gtest/gtest.h"
 
@@ -117,4 +118,15 @@ TEST( Problem_147, Test_Case )
   std::vector<int> result   = sortWithReverse( arr );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 149
+TEST( Problem_149, Given_Case )
+{
+  // given L = [1, 2, 3, 4, 5], sum(1, 3) should return sum([2, 3]), which is 5.
+
+  std::vector<int> L            = { 1, 2, 3, 4, 5 };
+  std::vector<int> preprocessed = sumPreprocess( L );
+
+  EXPECT_EQ( sum( preprocessed, 1, 3 ), 5 );
 }
