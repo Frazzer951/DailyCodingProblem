@@ -17,3 +17,8 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 131
 - Problem 139
 - Problem 148
+- Problem 149
+- Problem 150
+- Problem 151
+- Problem 152
+- Problem 153
