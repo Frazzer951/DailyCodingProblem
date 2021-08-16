@@ -9,3 +9,25 @@ the time, 2 50% of the time, and 3 and 4 20% of the time.
 
 You can generate random numbers between 0 and 1 uniformly.
 */
+
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+
+int randomProb( std::vector<int> nums, std::vector<double> probs )
+{
+  srand( (unsigned) time( NULL ) );
+
+  double random = (double) rand() / RAND_MAX;
+
+  int    i    = 0;
+  double prob = 0;
+  while( i < probs.size() )
+  {
+    prob += probs[i];
+    if( random < prob ) return nums[i];
+    i++;
+  }
+
+  return 0;
+}
