@@ -20,13 +20,13 @@ B B B
 
 #include <vector>
 
-bool inRange( std::vector<std::vector<char>> v, int x, int y )
+inline bool inRange( std::vector<std::vector<char>> v, int x, int y )
 {
   return ( x >= 0 && x < v.size() ) && ( y >= 0 && y < v[0].size() );
 }
 
-std::vector<std::vector<char>> pixleReplace( std::vector<std::vector<char>> pixelMatrix, std::pair<int, int> loc,
-                                             char newPixle )
+inline std::vector<std::vector<char>> pixleReplace( std::vector<std::vector<char>> pixelMatrix, std::pair<int, int> loc,
+                                                    char newPixle )
 {
   char curPixle                      = pixelMatrix[loc.first][loc.second];
   pixelMatrix[loc.first][loc.second] = newPixle;

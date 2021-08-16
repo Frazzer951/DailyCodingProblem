@@ -13,37 +13,37 @@ For example, given words "hello", and "world" and a text content of "dog cat hel
 #include <string>
 #include <vector>
 
-int smallestWordDistance( std::string w1, std::string w2, std::vector<std::string> words )
+inline int smallestWordDistance( const std::string & w1, const std::string & w2, std::vector<std::string> words )
 {
-  std::multimap<std::string, int> indecies;
+  std::multimap<std::string, int> indexes;
   for( int i = 0; i < words.size(); i++ )
   {
-    if( words[i] == w1 || words[i] == w2 ) { indecies.emplace( words[i], i ); }
+    if( words[i] == w1 || words[i] == w2 ) { indexes.emplace( words[i], i ); }
   }
   int smallest = (int) words.size();
 
-  auto w1_it = indecies.find( w1 );
-  auto w2_it = indecies.find( w2 );
+  auto w1_it = indexes.find( w1 );
+  auto w2_it = indexes.find( w2 );
 
-  std::vector<int> w1_indecies;
-  std::vector<int> w2_indecies;
+  std::vector<int> w1_indexes;
+  std::vector<int> w2_indexes;
 
-  while( w1_it != indecies.end() && w1_it->first == w1 )
+  while( w1_it != indexes.end() && w1_it->first == w1 )
   {
-    w1_indecies.push_back( w1_it->second );
+    w1_indexes.push_back( w1_it->second );
     w1_it++;
   }
-  while( w2_it != indecies.end() && w2_it->first == w2 )
+  while( w2_it != indexes.end() && w2_it->first == w2 )
   {
-    w2_indecies.push_back( w2_it->second );
+    w2_indexes.push_back( w2_it->second );
     w2_it++;
   }
 
-  for( int i = 0; i < w1_indecies.size(); i++ )
+  for( int w1_index : w1_indexes )
   {
-    for( int j = 0; j < w2_indecies.size(); j++ )
+    for( int w2_index : w2_indexes )
     {
-      int distance = std::abs( w1_indecies[i] - w2_indecies[j] ) - 1;
+      int distance = std::abs( w1_index - w2_index ) - 1;
       smallest     = std::min( smallest, distance );
     }
   }

@@ -14,9 +14,9 @@ You can generate random numbers between 0 and 1 uniformly.
 #include <ctime>
 #include <vector>
 
-int randomProb( std::vector<int> nums, std::vector<double> probs )
+inline int randomProb( std::vector<int> nums, std::vector<double> probs )
 {
-  srand( (unsigned) time( NULL ) );
+  srand( (unsigned) time( nullptr ) );
 
   double random = (double) rand() / RAND_MAX;
 

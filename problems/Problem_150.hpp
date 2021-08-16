@@ -11,8 +11,8 @@ For example, given the list of points [(0, 0), (5, 4), (3, 1)], the central poin
 #include <map>
 #include <vector>
 
-inline std::vector<std::pair<int, int>> nearestPoints( std::vector<std::pair<int, int>> points,
-                                                       std::pair<int, int>              central )
+inline std::vector<std::pair<int, int>> nearestPoints( const std::vector<std::pair<int, int>> & points,
+                                                       std::pair<int, int>                      central )
 {
   std::map<std::pair<int, int>, double> pointDistance;
 
