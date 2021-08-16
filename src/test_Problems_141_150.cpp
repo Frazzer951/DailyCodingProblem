@@ -131,3 +131,16 @@ TEST( Problem_149, Given_Case )
 
   EXPECT_EQ( sum( preprocessed, 1, 3 ), 5 );
 }
+
+// Problem 150
+TEST( Problem_150, Given_Case )
+{
+  // given the list of points [(0, 0), (5, 4), (3, 1)], the central point (1, 2), and k = 2, return [(0, 0), (3,1)]
+
+  std::vector<std::pair<int, int>> points = { std::make_pair( 0, 0 ), std::make_pair( 5, 4 ), std::make_pair( 3, 1 ) };
+  std::pair<int, int>              central( 1, 2 );
+  std::vector<std::pair<int, int>> expected = { std::make_pair( 0, 0 ), std::make_pair( 3, 1 ) };
+  std::vector<std::pair<int, int>> result   = nearestPoints( points, central );
+
+  EXPECT_EQ( result, expected );
+}
