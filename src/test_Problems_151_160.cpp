@@ -42,3 +42,13 @@ TEST( Problem_152, Given_Case )
 
   EXPECT_TRUE( result == 1 || result == 2 || result == 3 || result == 4 );
 }
+
+// Problem 153
+TEST( Problem_153, Given_Case )
+{
+  // given words "hello", and "world" and a text content of "dog cat hello cat dog dog hello cat world", return 1
+
+  EXPECT_EQ(
+      smallestWordDistance( "hello", "world", { "dog", "cat", "hello", "cat", "dog", "dog", "hello", "cat", "world" } ),
+      1 );
+}
