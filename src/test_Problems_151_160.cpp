@@ -55,3 +55,13 @@ TEST( Problem_153, Given_Case )
       smallestWordDistance( "hello", "world", { "dog", "cat", "hello", "cat", "dog", "dog", "hello", "cat", "world" } ),
       1 );
 }
+
+// Problem 155
+TEST( Problem_155, Given_Case )
+{
+  // given [1, 2, 1, 1, 3, 4, 0], return 1
+
+  int result = majority( { 1, 2, 1, 1, 3, 4, 0 } );
+
+  EXPECT_EQ( result, 1 );
+}
