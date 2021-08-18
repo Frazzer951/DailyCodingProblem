@@ -3,6 +3,7 @@
 #include "Problem_153.hpp"
 #include "Problem_154.hpp"
 #include "Problem_155.hpp"
+#include "Problem_156.hpp"
 
 #include "gtest/gtest.h"
 
