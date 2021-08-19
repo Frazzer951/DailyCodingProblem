@@ -67,6 +67,18 @@ TEST( Problem_155, Given_Case )
   EXPECT_EQ( result, 1 );
 }
 
+// Problem 156
+TEST( Problem_156, Given_Case_1 )
+{
+  // For example, given n = 13, return 2 since 13 = 32 + 22 = 9 + 4.
+  EXPECT_EQ( num_squares( 13 ), 2 );
+}
+
+TEST( Problem_156, Given_Case_2 )
+{
+  // Given n = 27, return 3 since 27 = 32 + 32 + 32 = 9 + 9 + 9.
+  EXPECT_EQ( num_squares( 27 ), 3 );
+}
 
 // Problem 157
 TEST( Problem_157, Given_Case_1 )
