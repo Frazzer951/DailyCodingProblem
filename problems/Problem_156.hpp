@@ -16,7 +16,7 @@ inline int num_squares( int n )
 {
   if( n == 0 ) return 0;
 
-  std::vector<int> cache( n+1, std::numeric_limits<int>::max() );
+  std::vector<int> cache( n + 1, std::numeric_limits<int>::max() );
   cache[0] = 0;
 
   for( int i = 1; i < n + 1; i++ )

@@ -10,7 +10,7 @@ return false, since there's no rearrangement that can form a palindrome.
 #include <map>
 #include <string>
 
-inline bool permPalindrome( std::string word )
+inline bool permPalindrome( const std::string & word )
 {
   std::map<char, int> letterCount;
 
@@ -23,8 +23,7 @@ inline bool permPalindrome( std::string word )
     if( n % 2 != 0 )
     {
       if( oneOdd ) return false;
-      else
-        oneOdd = true;
+      oneOdd = true;
     }
   }
   return true;
