@@ -4,6 +4,7 @@
 #include "Problem_154.hpp"
 #include "Problem_155.hpp"
 #include "Problem_156.hpp"
+#include "Problem_157.hpp"
 
 #include "gtest/gtest.h"
 
@@ -64,4 +65,18 @@ TEST( Problem_155, Given_Case )
   int result = majority( { 1, 2, 1, 1, 3, 4, 0 } );
 
   EXPECT_EQ( result, 1 );
+}
+
+
+// Problem 157
+TEST( Problem_157, Given_Case_1 )
+{
+  // carrace should return true
+  EXPECT_TRUE( permPalindrome( "carrace" ) );
+}
+
+TEST( Problem_157, Given_Case_2 )
+{
+  // daily should return false
+  EXPECT_FALSE( permPalindrome( "daily" ) );
 }
