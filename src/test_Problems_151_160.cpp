@@ -96,6 +96,22 @@ TEST( Problem_157, Given_Case_2 )
   EXPECT_FALSE( permPalindrome( "daily" ) );
 }
 
+// Problem 158
+TEST( Problem_158, Given_Case )
+{
+  /*
+    [[0, 0, 1],
+     [0, 0, 1],
+     [1, 0, 0]]
+
+     return 2
+  */
+
+  std::vector<std::vector<int>> matrix = { { 0, 0, 1 }, { 0, 0, 1 }, { 1, 0, 0 } };
+  int                           result = num_ways( matrix );
+  EXPECT_EQ( result, 2 );
+}
+
 // Problem 159
 TEST( Problem_159, Given_Case_1 )
 {
