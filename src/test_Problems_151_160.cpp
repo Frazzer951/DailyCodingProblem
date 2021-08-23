@@ -110,3 +110,31 @@ TEST( Problem_159, Given_Case_2 )
   char result = firstRepeat( "abcdef" );
   EXPECT_EQ( result, '\0' );
 }
+
+// Problem 160
+TEST( Problem_160, Given_Case )
+{
+  /*
+     a
+    /|\
+   b c d
+      / \
+     e   f
+    / \
+   g   h
+  and the weights: a-b: 3, a-c: 5, a-d: 8, d-e: 2, d-f: 4, e-g: 1, e-h: 1, the longest path would be c -> a -> d -> f,
+  with a length of 17.
+  */
+  Node * b = new Node { 'b', {} };
+  Node * c = new Node { 'c', {} };
+  Node * f = new Node { 'f', {} };
+  Node * g = new Node { 'g', {} };
+  Node * h = new Node { 'h', {} };
+  Node * e = new Node { 'e', { { 1, g }, { 1, h } } };
+  Node * d = new Node { 'd', { { 2, e }, { 4, f } } };
+  Node * a = new Node { 'a', { { 3, b }, { 5, c }, { 8, d } } };
+
+  int longestPath = longest_path( a );
+
+  EXPECT_EQ( longestPath, 17 );
+}
