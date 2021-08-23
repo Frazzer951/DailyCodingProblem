@@ -95,3 +95,18 @@ TEST( Problem_157, Given_Case_2 )
   // daily should return false
   EXPECT_FALSE( permPalindrome( "daily" ) );
 }
+
+// Problem 159
+TEST( Problem_159, Given_Case_1 )
+{
+  // given the string "acbbac", return "b".
+  char result = firstRepeat( "acbbac" );
+  EXPECT_EQ( result, 'b' );
+}
+
+TEST( Problem_159, Given_Case_2 )
+{
+  // Given the string "abcdef", return null.
+  char result = firstRepeat( "abcdef" );
+  EXPECT_EQ( result, '\0' );
+}
