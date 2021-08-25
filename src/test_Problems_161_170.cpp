@@ -13,3 +13,29 @@ TEST( Problem_161, Given_Case )
 
   EXPECT_EQ( result, 0x0F0F0F0F );
 }
+
+// Problem 162
+TEST( Problem_162, Given_Case )
+{
+  /*
+  given the list:
+    dog
+    cat
+    apple
+    apricot
+    fish
+
+  Return the list:
+    d
+    c
+    app
+    apr
+    f
+  */
+
+  std::vector<std::string> lst      = { "dog", "cat", "apple", "apricot", "fish" };
+  std::vector<std::string> expected = { "d", "c", "app", "apr", "f" };
+  std::vector<std::string> result   = shortest_unique_prefix( lst );
+
+  EXPECT_EQ( result, expected );
+}
