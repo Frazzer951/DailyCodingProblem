@@ -39,3 +39,14 @@ TEST( Problem_162, Given_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 163
+TEST( Problem_163, Given_Case )
+{
+  // [15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-'] should return 5, since it is equivalent to
+  // ( ( 15 / ( 7 - ( 1 + 1 ) ) ) * 3 ) - ( 2 + ( 1 + 1 ) ) = 5.
+
+  std::vector<std::string> equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
+  double                   result   = solve( equation );
+  EXPECT_DOUBLE_EQ( result, 5.0 );
+}
