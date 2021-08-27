@@ -1,6 +1,7 @@
 #include "Problem_161.hpp"
 #include "Problem_162.hpp"
 #include "Problem_163.hpp"
+#include "Problem_164.hpp"
 
 #include "gtest/gtest.h"
 
@@ -49,4 +50,17 @@ TEST( Problem_163, Given_Case )
   std::vector<std::string> equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
   double                   result   = solve( equation );
   EXPECT_DOUBLE_EQ( result, 5.0 );
+}
+
+// Problem 164
+TEST( Problem_164, Test_Case_1 )
+{
+  std::vector<int> arr = { 1, 2, 3, 4, 3, 5, 6, 7, 8, 9 };
+  EXPECT_EQ( findDuplicate( arr ), 3 );
+}
+
+TEST( Problem_164, Test_Case_2 )
+{
+  std::vector<int> arr = { 1, 2, 3, 4, 9, 5, 6, 7, 8, 9 };
+  EXPECT_EQ( findDuplicate( arr ), 9 );
 }
