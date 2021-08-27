@@ -2,6 +2,7 @@
 #include "Problem_162.hpp"
 #include "Problem_163.hpp"
 #include "Problem_164.hpp"
+#include "Problem_165.hpp"
 
 #include "gtest/gtest.h"
 
@@ -63,4 +64,13 @@ TEST( Problem_164, Test_Case_2 )
 {
   std::vector<int> arr = { 1, 2, 3, 4, 9, 5, 6, 7, 8, 9 };
   EXPECT_EQ( findDuplicate( arr ), 9 );
+}
+
+// Problem 165
+TEST( Problem_166, Given_Case )
+{
+  std::vector<int> arr      = { 3, 4, 9, 6, 1 };
+  std::vector<int> expected = { 1, 1, 2, 1, 0 };
+  std::vector<int> result   = rightSmaller( arr );
+  EXPECT_EQ( result, expected );
 }
