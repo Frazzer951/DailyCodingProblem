@@ -103,3 +103,15 @@ TEST( Problem_166, Given_Case )
   EXPECT_FALSE( it.has_next() );
   EXPECT_ANY_THROW( it.next() );
 }
+
+// Problem 167
+TEST( Problem_167, Given_Case )
+{
+  // given the list ["code", "edoc", "da", "d"], return [(0, 1), (1, 0), (2, 3)]
+
+  std::vector<std::string>         words    = { "code", "edoc", "da", "d" };
+  std::vector<std::pair<int, int>> expected = { { 0, 1 }, { 1, 0 }, { 2, 3 } };
+  std::vector<std::pair<int, int>> result   = palindromes( words );
+
+  EXPECT_EQ( result, expected );
+}
