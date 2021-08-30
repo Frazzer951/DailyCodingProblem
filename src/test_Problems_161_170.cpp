@@ -115,3 +115,23 @@ TEST( Problem_167, Given_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 168
+TEST( Problem_168, Given_Case )
+{
+  /*
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+    you should return:
+
+    [[7, 4, 1],
+     [8, 5, 2],
+     [9, 6, 3]]
+  */
+  std::vector<std::vector<int>> arr      = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+  std::vector<std::vector<int>> expected = { { 7, 4, 1 }, { 8, 5, 2 }, { 9, 6, 3 } };
+  std::vector<std::vector<int>> result   = rotate90( arr );
+
+  EXPECT_EQ( result, expected );
+}
