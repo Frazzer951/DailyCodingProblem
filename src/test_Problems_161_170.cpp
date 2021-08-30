@@ -3,6 +3,9 @@
 #include "Problem_163.hpp"
 #include "Problem_164.hpp"
 #include "Problem_165.hpp"
+#include "Problem_166.hpp"
+#include "Problem_167.hpp"
+#include "Problem_168.hpp"
 
 #include "gtest/gtest.h"
 
