@@ -70,10 +70,36 @@ TEST( Problem_164, Test_Case_2 )
 }
 
 // Problem 165
-TEST( Problem_166, Given_Case )
+TEST( Problem_165, Given_Case )
 {
   std::vector<int> arr      = { 3, 4, 9, 6, 1 };
   std::vector<int> expected = { 1, 1, 2, 1, 0 };
   std::vector<int> result   = rightSmaller( arr );
   EXPECT_EQ( result, expected );
+}
+
+// Problem 166
+TEST( Problem_166, Given_Case )
+{
+  // For example, given the input [[1, 2], [3], [], [4, 5, 6]], calling next() repeatedly should output 1, 2, 3, 4,
+  // 5, 6.
+
+  std::vector<std::vector<int>> arr = { { 1, 2 }, { 3 }, {}, { 4, 5, 6 } };
+
+  iterator2D it( arr );
+
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 1 );
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 2 );
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 3 );
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 4 );
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 5 );
+  EXPECT_TRUE( it.has_next() );
+  EXPECT_EQ( it.next(), 6 );
+  EXPECT_FALSE( it.has_next() );
+  EXPECT_ANY_THROW( it.next() );
 }
