@@ -160,3 +160,27 @@ TEST( Problem_169, Given_Case )
 
   EXPECT_EQ( *a, *expected );
 }
+
+// Problem 170
+TEST( Problem_170, Given_Case_1 )
+{
+  // given start = "dog", end = "cat", and dictionary = {"dot", "dop", "dat", "cat"}, return ["dog", "dot", "dat",
+  // "cat"].
+
+  std::vector<std::string> dict     = { "dot", "dop", "dat", "cat" };
+  std::vector<std::string> expected = { "dog", "dot", "dat", "cat" };
+  std::vector<std::string> result   = shortestTransform( "dog", "cat", dict );
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_170, Given_Case_2 )
+{
+  // Given start = "dog", end = "cat", and dictionary = {"dot", "tod", "dat", "dar"}, return {}
+
+  std::vector<std::string> dict     = { "dot", "tod", "dat", "dar" };
+  std::vector<std::string> expected = {};
+  std::vector<std::string> result   = shortestTransform( "dog", "cat", dict );
+
+  EXPECT_EQ( result, expected );
+}
