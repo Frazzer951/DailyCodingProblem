@@ -6,6 +6,7 @@
 #include "Problem_166.hpp"
 #include "Problem_167.hpp"
 #include "Problem_168.hpp"
+#include "Problem_169.hpp"
 
 #include "gtest/gtest.h"
 
@@ -134,4 +135,27 @@ TEST( Problem_168, Given_Case )
   std::vector<std::vector<int>> result   = rotate90( arr );
 
   EXPECT_EQ( result, expected );
+}
+
+// Problem 169
+TEST( Problem_169, Given_Case )
+{
+  // the linked list 4 -> 1 -> -3 -> 99 should become -3 -> 1 -> 4 -> 99
+
+  LNode * a        = nullptr;
+  LNode * expected = nullptr;
+
+  push( &a, 99 );
+  push( &a, -3 );
+  push( &a, 1 );
+  push( &a, 4 );
+
+  push( &expected, 99 );
+  push( &expected, 4 );
+  push( &expected, 1 );
+  push( &expected, -3 );
+
+  MergeSort( &a );
+
+  EXPECT_EQ( *a, *expected );
 }
