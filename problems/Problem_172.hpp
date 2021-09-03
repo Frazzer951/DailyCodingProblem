@@ -18,7 +18,7 @@ The order of the indices does not matter.
 #include <string>
 #include <vector>
 
-bool testSubstring( std::string s, std::vector<std::string> words )
+inline bool testSubstring( std::string s, const std::vector<std::string> & words )
 {
   std::vector<std::string> splitWords;
 
@@ -29,20 +29,20 @@ bool testSubstring( std::string s, std::vector<std::string> words )
   }
 
   std::set<std::string> set;
-  unsigned              size = splitWords.size();
-  for( unsigned i = 0; i < size; ++i ) set.insert( splitWords[i] );
+  long unsigned int     size = splitWords.size();
+  for( long unsigned int i = 0; i < size; ++i ) set.insert( splitWords[i] );
   splitWords.assign( set.begin(), set.end() );
   std::sort( splitWords.begin(), splitWords.end() );
 
   return splitWords == words;
 }
 
-inline std::vector<int> indiciesOfSubstrings( std::string s, std::vector<std::string> words )
+inline std::vector<int> indiciesOfSubstrings( const std::string & s, std::vector<std::string> words )
 {
   std::sort( words.begin(), words.end() );
   std::vector<int> indecies;
 
-  int lengthOfSubstr = words[0].size() * words.size();
+  long unsigned int lengthOfSubstr = words[0].size() * words.size();
 
   for( int i = 0; i <= s.size() - lengthOfSubstr; i++ )
   {
