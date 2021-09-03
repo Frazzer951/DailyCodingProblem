@@ -12,3 +12,42 @@ Given s = "barfoobazbitbyte" and words = ["dog", "cat"], return [] since there a
 
 The order of the indices does not matter.
 */
+
+#include <algorithm>
+#include <set>
+#include <string>
+#include <vector>
+
+bool testSubstring( std::string s, std::vector<std::string> words )
+{
+  std::vector<std::string> splitWords;
+
+  while( !s.empty() )
+  {
+    splitWords.push_back( s.substr( 0, 3 ) );
+    s = s.substr( 3 );
+  }
+
+  std::set<std::string> set;
+  unsigned              size = splitWords.size();
+  for( unsigned i = 0; i < size; ++i ) set.insert( splitWords[i] );
+  splitWords.assign( set.begin(), set.end() );
+  std::sort( splitWords.begin(), splitWords.end() );
+
+  return splitWords == words;
+}
+
+inline std::vector<int> indiciesOfSubstrings( std::string s, std::vector<std::string> words )
+{
+  std::sort( words.begin(), words.end() );
+  std::vector<int> indecies;
+
+  int lengthOfSubstr = words[0].size() * words.size();
+
+  for( int i = 0; i <= s.size() - lengthOfSubstr; i++ )
+  {
+    std::string curSubstr = s.substr( i, lengthOfSubstr );
+    if( testSubstring( curSubstr, words ) ) indecies.push_back( i );
+  }
+  return indecies;
+}
