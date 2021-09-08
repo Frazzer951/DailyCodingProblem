@@ -39,3 +39,25 @@ TEST( Problem_172, Given_Case_2 )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 173
+TEST( Problem_173, Given_Case )
+{
+  std::map<std::string, std::any> vals;
+  std::map<std::string, std::any> foo;
+  std::map<std::string, std::any> bar;
+  bar["baz"]  = 8;
+  foo["a"]    = 5;
+  foo["bar"]  = bar;
+  vals["key"] = 3;
+  vals["foo"] = foo;
+
+  std::map<std::string, int> expected;
+  expected["key"]         = 3;
+  expected["foo.a"]       = 5;
+  expected["foo.bar.baz"] = 8;
+
+  std::map<std::string, int> result = flatten( vals );
+
+  EXPECT_EQ( result, expected );
+}

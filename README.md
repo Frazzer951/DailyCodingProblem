@@ -18,8 +18,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 131
 - Problem 139
 - Problem 148
-- Problem 154
-- Problem 173
 - Problem 174
 - Problem 175
 - Problem 176
