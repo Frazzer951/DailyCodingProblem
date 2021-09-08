@@ -36,7 +36,7 @@ inline std::map<std::string, int> flatten( const anymap & d, char separator = '.
 {
   std::map<std::string, int> new_dict;
 
-  for( auto & [key, value] : d )
+  for( const auto & [key, value] : d )
   {
     if( value.type().name() == typeid( int ).name() ) { new_dict[key] = std::any_cast<int>( value ); }
     else

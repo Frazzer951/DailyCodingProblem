@@ -19,3 +19,49 @@ For example, given the starting state a, number of steps 5000, and the following
 ]
 One instance of running this Markov chain might produce { 'a': 3012, 'b': 1656, 'c': 332 }.
 */
+
+#include <ctime>
+#include <map>
+#include <random>
+#include <vector>
+
+struct transition
+{
+  char   from;
+  char   to;
+  double prob;
+};
+
+inline char getCharFromProb( double prob, std::map<char, double> probs )
+{
+  auto   it  = probs.begin();
+  double val = 0;
+
+  while( it != probs.end() )
+  {
+    val += it->second;
+    if( prob <= val ) return it->first;
+    it++;
+  }
+  return probs.begin()->first;
+}
+
+inline std::map<char, int> markovChain( char startState, int steps, const std::vector<transition> & transitions )
+{
+  srand( (unsigned int) time( nullptr ) );
+
+  std::map<char, int>                    count;
+  std::map<char, std::map<char, double>> probs;
+
+  for( transition t : transitions ) { probs[t.from][t.to] = t.prob; }
+
+  char state = startState;
+
+  for( int i = 0; i < steps; i++ )
+  {
+    double prob = ( rand() & 1000 ) / 1000.0;
+    state       = getCharFromProb( prob, probs[state] );
+    count[state]++;
+  }
+  return count;
+}

@@ -61,3 +61,13 @@ TEST( Problem_173, Given_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 175
+TEST( Problem_175, Test_Case )
+{
+  std::vector<transition> transitions = { { 'a', 'a', 0.9 },  { 'a', 'b', 0.075 }, { 'a', 'c', 0.025 },
+                                          { 'b', 'a', 0.15 }, { 'b', 'b', 0.8 },   { 'b', 'c', 0.05 },
+                                          { 'c', 'a', 0.25 }, { 'c', 'b', 0.25 },  { 'c', 'c', 0.5 } };
+
+  auto result = markovChain( 'a', 5000, transitions );
+}
