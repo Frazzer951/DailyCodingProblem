@@ -161,6 +161,38 @@ struct ibtNode
   }
 };
 
+inline std::string inorder( const ibtNode * root )
+{
+  std::string s;
+  if( root == NULL ) { return s; }
+
+  s += inorder( root->left ) + " ";
+  s += std::to_string( root->value ) + " ";
+  s += inorder( root->right );
+
+  return s;
+}
+
+inline std::ostream & operator<<( std::ostream & os, const ibtNode & n )
+{
+  os << inorder( &n );
+  return os;
+}
+
+inline bool operator==( const ibtNode & lhs, const ibtNode & rhs )
+{
+  if( lhs.value != rhs.value ) return false;
+  if( lhs.left == nullptr && rhs.left != nullptr ) return false;
+  if( lhs.left != nullptr && rhs.left == nullptr ) return false;
+  if( lhs.right == nullptr && rhs.right != nullptr ) return false;
+  if( lhs.right != nullptr && rhs.right == nullptr ) return false;
+  if( lhs.left == nullptr && lhs.right == nullptr ) return true;
+  if( lhs.left != nullptr && lhs.right == nullptr ) return *lhs.left == *rhs.left;
+  if( lhs.left == nullptr && lhs.right != nullptr ) return *lhs.right == *rhs.right;
+  return *lhs.left == *rhs.left && *lhs.right == *rhs.right;
+}
+
+
 inline bool operator==( const btNode & lhs, const btNode & rhs )
 {
   return lhs.value == rhs.value && lhs.left == rhs.left && lhs.right == rhs.right;

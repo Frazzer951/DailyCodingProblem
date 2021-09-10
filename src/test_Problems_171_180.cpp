@@ -8,6 +8,7 @@
 #include "Problem_176.hpp"
 #include "Problem_177.hpp"
 #include "Problem_178.hpp"
+#include "Problem_179.hpp"
 
 #include "gtest/gtest.h"
 
@@ -122,4 +123,29 @@ TEST( Problem_178, Test_Case )
 
   std::cout << "55: " << average55 << '\n';
   std::cout << "56: " << average56 << '\n';
+}
+
+// Problem 179
+TEST( Problem_179, Given_Case )
+{
+  /*
+  For example, given the sequence 2, 4, 3, 8, 7, 5, you should construct the following tree:
+
+      5
+     / \
+    3   7
+   / \   \
+  2   4   8
+  */
+
+  ibtNode * expected = new ibtNode( 5 );
+  expected           = add( expected, 7 );
+  expected           = add( expected, 8 );
+  expected           = add( expected, 3 );
+  expected           = add( expected, 4 );
+  expected           = add( expected, 2 );
+
+  auto result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
+
+  EXPECT_EQ( *result, *expected );
 }
