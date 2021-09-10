@@ -1,3 +1,5 @@
+#include <numeric>
+
 #include "Problem_171.hpp"
 #include "Problem_172.hpp"
 #include "Problem_173.hpp"
@@ -103,4 +105,23 @@ TEST( Problem_177, Given_Case_2 )
   slNode * result   = rotate( head, 3 );
 
   EXPECT_EQ( *result, *expected );
+}
+
+// Problem 178
+TEST( Problem_178, Test_Case )
+{
+  std::vector<int> count56;
+  std::vector<int> count55;
+
+  for( int i = 0; i < 10000; i++ )
+  {
+    count56.push_back( diceSim( { 5, 6 } ) );
+    count55.push_back( diceSim( { 5, 5 } ) );
+  }
+
+  double average56 = std::accumulate( count56.begin(), count56.end(), 0 ) / 10000.0;
+  double average55 = std::accumulate( count55.begin(), count55.end(), 0 ) / 10000.0;
+
+  std::cout << "55: " << average55 << '\n';
+  std::cout << "56: " << average56 << '\n';
 }
