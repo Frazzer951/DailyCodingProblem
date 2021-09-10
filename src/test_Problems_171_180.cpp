@@ -5,6 +5,7 @@
 #include "Problem_175.hpp"
 #include "Problem_176.hpp"
 #include "Problem_177.hpp"
+#include "Problem_178.hpp"
 
 #include "gtest/gtest.h"
 
@@ -70,4 +71,11 @@ TEST( Problem_175, Test_Case )
                                           { 'c', 'a', 0.25 }, { 'c', 'b', 0.25 },  { 'c', 'c', 0.5 } };
 
   auto result = markovChain( 'a', 5000, transitions );
+}
+
+// Porblem 176
+TEST( Problem_176, Given_Case )
+{
+  EXPECT_TRUE( canMap( "abc", "bcd" ) );
+  EXPECT_FALSE( canMap( "foo", "bar" ) );
 }
