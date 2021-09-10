@@ -24,8 +24,8 @@ inline slNode * rotate( slNode * head, int k )
   }
 
   slNode * new_head = slow->next;
-  fast->next       = head;
-  slow->next       = nullptr;
+  fast->next        = head;
+  slow->next        = nullptr;
 
   return new_head;
 }
