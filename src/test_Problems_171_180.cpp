@@ -138,14 +138,14 @@ TEST( Problem_179, Given_Case )
   2   4   8
   */
 
-  ibtNode * expected = new ibtNode( 5 );
-  expected           = add( expected, 7 );
-  expected           = add( expected, 8 );
-  expected           = add( expected, 3 );
-  expected           = add( expected, 4 );
-  expected           = add( expected, 2 );
+  auto * expected = new ibtNode( 5 );
+  expected        = add( expected, 7 );
+  expected        = add( expected, 8 );
+  expected        = add( expected, 3 );
+  expected        = add( expected, 4 );
+  expected        = add( expected, 2 );
 
-  auto result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
+  auto * result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
 
   EXPECT_EQ( *result, *expected );
 }

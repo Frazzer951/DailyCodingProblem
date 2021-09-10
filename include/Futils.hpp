@@ -164,7 +164,7 @@ struct ibtNode
 inline std::string inorder( const ibtNode * root )
 {
   std::string s;
-  if( root == NULL ) { return s; }
+  if( root == nullptr ) { return s; }
 
   s += inorder( root->left ) + " ";
   s += std::to_string( root->value ) + " ";
