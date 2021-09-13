@@ -150,3 +150,24 @@ TEST( Problem_179, Given_Case )
 
   EXPECT_EQ( *result, *expected );
 }
+
+// Problem 180
+TEST( Problem_180, Given_Case_1 )
+{
+  // If the stack is [1, 2, 3, 4, 5], it should become [1, 5, 2, 4, 3]
+  std::stack<int> s( { 1, 2, 3, 4, 5 } );
+  std::stack<int> result = interleave( s );
+  std::stack<int> expected( { 1, 5, 2, 4, 3 } );
+
+  EXPECT_EQ( result, expected );
+}
+
+TEST( Problem_180, Given_Case_2 )
+{
+  // If the stack is [1, 2, 3, 4], it should become [1, 4, 2, 3]
+  std::stack<int> s( { 1, 2, 3, 4 } );
+  std::stack<int> result = interleave( s );
+  std::stack<int> expected( { 1, 4, 2, 3 } );
+
+  EXPECT_EQ( result, expected );
+}
