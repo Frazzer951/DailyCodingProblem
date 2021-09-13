@@ -33,7 +33,7 @@ inline std::stack<int> interleave( std::stack<int> s )
     q.pop();
   }
 
-  for( int i = 0; i < int( ( size / 2.0 ) + 0.5 ); i++ )
+  for( int i = 0; i < int( ( (double) size / 2.0 ) + 0.5 ); i++ )
   {
     s.push( q.front() );
     q.pop();
