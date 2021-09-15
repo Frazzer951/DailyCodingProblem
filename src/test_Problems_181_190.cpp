@@ -1,5 +1,7 @@
 #include "Problem_181.hpp"
 #include "Problem_182.hpp"
+#include "Problem_183.hpp"
+#include "Problem_184.hpp"
 
 #include "gtest/gtest.h"
 
@@ -57,4 +59,20 @@ TEST( Problem_182, Test_Case_2 )
   n4->connections.push_back( n3 );
 
   EXPECT_TRUE( isMinimallyConnected( n1 ) );
+}
+
+// Problem 184
+TEST( Problem_184, Given_Case )
+{
+  // Given [42, 56, 14], return 14
+  int result = greatestCommonDenominator( { 42, 56, 14 } );
+
+  EXPECT_EQ( result, 14 );
+}
+
+TEST( Problem_184, Test_Case )
+{
+  int result = greatestCommonDenominator( { 8, 12, 20 } );
+
+  EXPECT_EQ( result, 4 );
 }
