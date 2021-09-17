@@ -2,6 +2,7 @@
 #include "Problem_182.hpp"
 #include "Problem_183.hpp"
 #include "Problem_184.hpp"
+#include "Problem_185.hpp"
 
 #include "gtest/gtest.h"
 
@@ -75,4 +76,39 @@ TEST( Problem_184, Test_Case )
   int result = greatestCommonDenominator( { 8, 12, 20 } );
 
   EXPECT_EQ( result, 4 );
+}
+
+// Problem 185
+TEST( Problem_185, Given_Case )
+{
+  /*
+  {
+    "top_left": (1, 4),
+    "dimensions": (3, 3) # width, height
+  }
+  and
+
+  {
+      "top_left": (0, 5),
+      "dimensions": (4, 3) # width, height
+  }
+  return 6.
+  */
+
+  Rect r1 = { { 1, 4 }, { 3, 3 } };
+  Rect r2 = { { 0, 5 }, { 4, 3 } };
+
+  int area = intersectArea( r1, r2 );
+
+  EXPECT_EQ( area, 6 );
+}
+
+TEST( Problem_185, Test_Case )
+{
+  Rect r1 = { { 0, 0 }, { 2, 2 } };
+  Rect r2 = { { 2, 5 }, { 4, 3 } };
+
+  int area = intersectArea( r1, r2 );
+
+  EXPECT_EQ( area, 0 );
 }
