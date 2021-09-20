@@ -116,3 +116,28 @@ TEST( Problem_185, Test_Case )
 
   EXPECT_EQ( area, 0 );
 }
+
+// Problem 187
+TEST( Problem_187, Given_Case )
+{
+  /*
+  Given:
+  {
+    "top_left": (1, 4),
+    "dimensions": (3, 3) # width, height
+  },
+  {
+      "top_left": (-1, 3),
+      "dimensions": (2, 1)
+  },
+  {
+      "top_left": (0, 5),
+      "dimensions": (4, 3)
+  }
+  Return true
+  */
+
+  std::vector<Rect> rectangles = { { { 1, 4 }, { 3, 3 } }, { { -1, 3 }, { 2, 1 } }, { { 0, 5 }, { 4, 3 } } };
+
+  EXPECT_TRUE( overlapping( rectangles ) );
+}
