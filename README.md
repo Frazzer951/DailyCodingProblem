@@ -20,3 +20,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 148
 - Problem 174
 - Problem 186
+- Problem 187
+- Problem 188
+- Problem 189
