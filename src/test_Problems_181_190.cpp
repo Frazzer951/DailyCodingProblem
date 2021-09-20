@@ -141,3 +141,13 @@ TEST( Problem_187, Given_Case )
 
   EXPECT_TRUE( overlapping( rectangles ) );
 }
+
+// Problem 189
+TEST( Problem_189, Test_Case )
+{
+  // Given [5, 1, 3, 5, 2, 3, 4, 1] return 5
+
+  std::vector<int> arr = { 5, 1, 3, 5, 2, 3, 4, 1 };
+
+  EXPECT_EQ( longestSubArray( arr ), 5 );
+}
