@@ -13,13 +13,13 @@ For example, given the array [5, 1, 3, 5, 2, 3, 4, 1], return 5 as the longest s
 inline int longestSubArray( std::vector<int> nums )
 {
   int longest = 0;
-
-  for( int i = 0; i < nums.size(); i++ )
+  int size    = (int) nums.size();
+  for( int i = 0; i < size; i++ )
   {
-    if( nums.size() - i < longest ) break;
+    if( size - i < longest ) break;
     std::map<int, bool> seen;
     bool                broke = false;
-    for( int j = i; j < nums.size(); j++ )
+    for( int j = i; j < size; j++ )
     {
       if( seen[nums[j]] )
       {
@@ -29,7 +29,7 @@ inline int longestSubArray( std::vector<int> nums )
       }
       seen[nums[j]] = true;
     }
-    if( !broke ) longest = ( longest > nums.size() - i ) ? longest : nums.size() - i;
+    if( !broke ) longest = std::max( longest, size - i );
   }
   return longest;
 }
