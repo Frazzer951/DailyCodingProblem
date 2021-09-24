@@ -152,3 +152,16 @@ TEST( Problem_189, Test_Case )
 
   EXPECT_EQ( longestSubArray( arr ), 5 );
 }
+
+// Problem 190
+TEST( Problem_190, Given_Case_1 )
+{
+  std::vector<int> arr = { 8, -1, 3, 4 };
+  EXPECT_EQ( maxCircSubArray( arr ), 15 );
+}
+
+TEST( Problem_190, Given_Case_2 )
+{
+  std::vector<int> arr = { -4, 5, 1, 0 };
+  EXPECT_EQ( maxCircSubArray( arr ), 6 );
+}
