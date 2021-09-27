@@ -13,7 +13,7 @@ Given [-4, 5, 1, 0], return 6 as we choose the numbers 5 and 1.
 #include <numeric>
 #include <vector>
 
-inline int maxSubArraySum( std::vector<int> arr )
+inline int maxSubArraySum( const std::vector<int> & arr )
 {
   int max        = 0;
   int max_so_far = 0;
@@ -25,7 +25,7 @@ inline int maxSubArraySum( std::vector<int> arr )
   return max_so_far;
 }
 
-inline int minSubArraySum( std::vector<int> arr )
+inline int minSubArraySum( const std::vector<int> & arr )
 {
   int min        = 0;
   int min_so_far = 0;
