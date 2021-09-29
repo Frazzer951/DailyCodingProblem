@@ -94,5 +94,13 @@ TEST( Problem_196, Given_Case )
 }
 
 // Problem 197
+TEST( Problem_197, Test_Case )
+{
+  std::vector<int> arr      = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+  std::vector<int> result   = rotateArr( arr, 5 );
+  std::vector<int> expected = { 5, 6, 7, 8, 9, 1, 2, 3, 4 };
+
+  EXPECT_EQ( result, expected );
+}
 
 // Problem 198
