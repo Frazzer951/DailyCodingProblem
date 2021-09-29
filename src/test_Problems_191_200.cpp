@@ -75,6 +75,23 @@ TEST( Problem_195, Given_Case )
 }
 
 // Problem 196
+TEST( Problem_196, Given_Case )
+{
+  /*
+  For example, given the following tree:
+
+    5
+   / \
+  2  -5
+  Return 2 as it occurs twice: once as the left leaf, and once as the sum of 2 + 5 - 5.
+  */
+
+  ibtNode * root = new ibtNode( 5, new ibtNode( 2 ), new ibtNode( -5 ) );
+
+  int result = frequen_subtree_sum( root );
+
+  EXPECT_EQ( result, 2 );
+}
 
 // Problem 197
 
