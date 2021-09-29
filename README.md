@@ -2,8 +2,7 @@
 My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/frazzer951/dailycodingproblem/badge)](https://www.codefactor.io/repository/github/frazzer951/dailycodingproblem)
-[![Build Status](https://travis-ci.com/Frazzer951/DailyCodingProblem.svg?branch=master)](https://travis-ci.com/Frazzer951/DailyCodingProblem)
-[![CMake](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/cmake.yml/badge.svg)](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/cmake.yml)
+[![CMake Build](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml/badge.svg)](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml)
 
 ## Skipped Problems 
 - Problem 17
