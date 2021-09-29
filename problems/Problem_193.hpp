@@ -11,3 +11,18 @@ For example, given [1, 3, 2, 8, 4, 10] and fee = 2, you should return 9, since y
 sell at 8 dollars, and then buy it at 4 dollars and sell it at 10 dollars. Since we did two transactions, there is a 4
 dollar fee, so we have 7 + 6 = 13 profit minus 4 dollars of fees.
 */
+
+#include <vector>
+
+inline int maxProfit( std::vector<int> arr, int fee )
+{
+  int max  = 0;
+  int hold = -arr[0];
+  for( int i = 1; i < arr.size(); i++ )
+  {
+    int price = arr[i];
+    max       = std::max( max, hold + price - fee );
+    hold      = std::max( hold, max - price );
+  }
+  return max;
+}

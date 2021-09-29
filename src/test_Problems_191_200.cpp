@@ -38,6 +38,13 @@ TEST( Problem_192, Given_Case_2 )
 }
 
 // Problem 193
+TEST( Problem_193, Given_Case )
+{
+  // given [1, 3, 2, 8, 4, 10] and fee = 2, you should return 9
+  int result = maxProfit( { 1, 3, 2, 8, 4, 10 }, 2 );
+
+  EXPECT_EQ( result, 9 );
+}
 
 // Problem 194
 TEST( Problem_194, Test_Case_1 )
