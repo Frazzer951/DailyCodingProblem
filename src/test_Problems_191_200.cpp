@@ -40,6 +40,17 @@ TEST( Problem_192, Given_Case_2 )
 // Problem 193
 
 // Problem 194
+TEST( Problem_194, Test_Case_1 )
+{
+  int result = numIntersections( { 1, -3 }, { 5, 1 } );
+  EXPECT_EQ( result, 0 );
+}
+
+TEST( Problem_194, Test_Case_2 )
+{
+  int result = numIntersections( { 1, 5 }, { 5, 1 } );
+  EXPECT_EQ( result, 1 );
+}
 
 // Problem 195
 
