@@ -17,18 +17,13 @@ jobs:
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
           }
         - {
-            name: "Windows Latest MinGW", artifact: "Windows-MinGW.tar.xz",
-            os: windows-latest,
-            build_type: "Release", cc: "gcc", cxx: "g++"
-          }
-        - {
             name: "Ubuntu Latest GCC", artifact: "Linux.tar.xz",
             os: ubuntu-latest,
             build_type: "Release", cc: "gcc", cxx: "g++"
           }
         - {
-            name: "macOS Latest Clang", artifact: "macOS.tar.xz",
-            os: macos-latest,
+            name: "Ubuntu Latest Clang", artifact: "Linux.tar.xz",
+            os: ubuntu-latest,
             build_type: "Release", cc: "clang", cxx: "clang++"
           }
 
@@ -39,8 +34,8 @@ jobs:
       id: cmake_and_ninja
       shell: cmake -P {0}
       run: |
-        set(ninja_version "1.9.0")
-        set(cmake_version "3.16.2")
+        set(ninja_version "1.10.2")
+        set(cmake_version "3.18.4")
 
         message(STATUS "Using host CMake version: ${CMAKE_VERSION}")
 
