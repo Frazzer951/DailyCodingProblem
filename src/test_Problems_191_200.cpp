@@ -53,6 +53,26 @@ TEST( Problem_194, Test_Case_2 )
 }
 
 // Problem 195
+TEST( Problem_195, Given_Case )
+{
+  /*
+  [[1, 3, 7, 10, 15, 20],
+   [2, 6, 9, 14, 22, 25],
+   [3, 8, 10, 15, 25, 30],
+   [10, 11, 12, 23, 30, 35],
+   [20, 25, 30, 35, 40, 45]]
+  And i1 = 1, j1 = 1, i2 = 3, j2 = 3, return 15
+  */
+  std::vector<std::vector<int>> matrix = { { 1, 3, 7, 10, 15, 20 },
+                                           { 2, 6, 9, 14, 22, 25 },
+                                           { 3, 8, 10, 15, 25, 30 },
+                                           { 10, 11, 12, 23, 30, 35 },
+                                           { 20, 25, 30, 35, 40, 45 } };
+
+  int result = matrix_count_edge( matrix, 1, 1, 3, 3 );
+
+  EXPECT_EQ( result, 15 );
+}
 
 // Problem 196
 
