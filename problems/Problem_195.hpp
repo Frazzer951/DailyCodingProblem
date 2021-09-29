@@ -19,8 +19,8 @@ And i1 = 1, j1 = 1, i2 = 3, j2 = 3, return 15 as there are 15 numbers in the mat
 
 inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int j1, int i2, int j2 )
 {
-  int m     = matrix.size();
-  int n     = matrix[0].size();
+  int m     = (int) matrix.size();
+  int n     = (int) matrix[0].size();
   int count = 0;
 
   // Count numbers smaller than m[i1][j1]
