@@ -19,6 +19,23 @@ TEST( Problem_191, Given_Case )
 }
 
 // Problem 192
+TEST( Problem_192, Given_Case_1 )
+{
+  // For example, given the array [1, 3, 1, 2, 0, 1], we can go from indices 0 -> 1 -> 3 -> 5, so return true.
+
+  bool result = canReachEnd( { 1, 3, 1, 2, 0, 1 } );
+
+  EXPECT_TRUE( result );
+}
+
+TEST( Problem_192, Given_Case_2 )
+{
+  // Given the array [1, 2, 1, 0, 0], we can't reach the end, so return false.
+
+  bool result = canReachEnd( { 1, 2, 1, 0, 0 } );
+
+  EXPECT_FALSE( result );
+}
 
 // Problem 193
 
