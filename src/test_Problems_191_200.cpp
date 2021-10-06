@@ -116,6 +116,20 @@ TEST( Problem_197, Test_Case )
 
 
 // Problem 199
+TEST( Problem_199, Given_Case_1 )
+{
+  // For example, given "(()", you could return "(())".
+  std::string result = balanceParentheses( "(()" );
 
+  EXPECT_EQ( result, "(())" );
+}
+
+TEST( Problem_199, Given_Case_2 )
+{
+  // Given "))()(", you could return "()()()()".
+  std::string result = balanceParentheses( "))()(" );
+
+  EXPECT_EQ( result, "()()()()" );
+}
 
 // Problem 200
