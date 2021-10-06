@@ -8,8 +8,8 @@ Given a tree, find the largest tree/subtree that is a BST.
 Given a tree, return the size of the largest tree/subtree that is a BST.
 */
 
-#include "btNode.hpp"
 #include "Problem_089.hpp"
+#include "btNode.hpp"
 
 inline int btSize( btNode<char> * node )
 {

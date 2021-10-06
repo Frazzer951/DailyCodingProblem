@@ -56,7 +56,7 @@ inline btNode<char> * reconstruct( std::vector<btNode<char> *> preorder, std::ve
   if( preorder.size() == 1 && inorder.size() == 1 ) { return preorder[0]; }
 
   btNode<char> * root   = preorder[0];
-  int      root_i = get_index( inorder, root );
+  int            root_i = get_index( inorder, root );
 
   //    root.left = reconstruct(preorder[1:1 + root_i], inorder[0:root_i])
   //    root.right = reconstruct(preorder[1 + root_i:], inorder[root_i + 1:])

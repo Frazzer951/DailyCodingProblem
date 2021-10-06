@@ -86,8 +86,8 @@ TEST( FUtils, slNode )
 TEST( FUtils, slList )
 {
   slList<int> list;
-  auto * node  = new slNode( 3 );
-  auto * node2 = new slNode( 8 );
+  auto *      node  = new slNode( 3 );
+  auto *      node2 = new slNode( 8 );
 
   list.add( node );
   list.add( node2 );

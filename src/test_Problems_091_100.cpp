@@ -48,7 +48,7 @@ TEST( Problem_93, Test_Case_1 )
   root->right->right->left  = new btNode( 'c' );
 
   btNode<char> * result      = largest_subBST( root );
-  int      result_size = largest_subBST_size( root );
+  int            result_size = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );

@@ -13,7 +13,7 @@ inline slNode<int> * swapEveryTwo( slNode<int> * root )
   slNode<int> * prev = nullptr;
   slNode<int> * cur  = root;
   slNode<int> * next = root->next;
-  root          = next;
+  root               = next;
 
   while( cur != nullptr && next != nullptr )
   {

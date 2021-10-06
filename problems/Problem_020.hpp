@@ -20,10 +20,10 @@ inline unsigned int length( slNode<int> * head )
 
 inline slNode<int> * findNodeIntersect( slNode<int> * a, slNode<int> * b )
 {
-  unsigned int m    = length( a );
-  unsigned int n    = length( b );
-  slNode<int> *     curA = a;
-  slNode<int> *     curB = b;
+  unsigned int  m    = length( a );
+  unsigned int  n    = length( b );
+  slNode<int> * curA = a;
+  slNode<int> * curB = b;
 
   if( m > n )
   {

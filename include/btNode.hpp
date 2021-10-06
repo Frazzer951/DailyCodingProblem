@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-template <typename T>
+template<typename T>
 struct btNode
 {
-  T     value;
+  T        value;
   btNode * left;
   btNode * right;
 
@@ -17,7 +17,7 @@ struct btNode
   }
 };
 
-template <typename T>
+template<typename T>
 inline std::string inorder( const btNode<T> * root )
 {
   std::string s;
@@ -30,14 +30,14 @@ inline std::string inorder( const btNode<T> * root )
   return s;
 }
 
-template <typename T>
+template<typename T>
 inline std::ostream & operator<<( std::ostream & os, const btNode<T> & n )
 {
   os << inorder( &n );
   return os;
 }
 
-template <typename T>
+template<typename T>
 inline bool operator==( const btNode<T> & lhs, const btNode<T> & rhs )
 {
   if( lhs.value != rhs.value ) return false;

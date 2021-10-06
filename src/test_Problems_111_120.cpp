@@ -101,8 +101,8 @@ TEST( Problem_117, Given_Case_2 )
          -1   -7     -8   (level 3 is the minimum)
   */
 
-  btNode<int> * root = new btNode<int>( 1, new btNode( 2, new btNode( 4 ), new btNode( 5, new btNode( -1 ) ) ),
-                             new btNode<int>( 3, nullptr, new btNode( 6, new btNode( -7 ), new btNode( -8 ) ) ) );
+  auto * root = new btNode<int>( 1, new btNode( 2, new btNode( 4 ), new btNode( 5, new btNode( -1 ) ) ),
+                                 new btNode<int>( 3, nullptr, new btNode( 6, new btNode( -7 ), new btNode( -8 ) ) ) );
 
   int min_level = minimum_level_sum( root );
 
