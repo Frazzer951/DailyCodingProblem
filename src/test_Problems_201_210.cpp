@@ -1,5 +1,7 @@
 #include "Problem_201.hpp"
 #include "Problem_202.hpp"
+#include "Problem_203.hpp"
+#include "Problem_204.hpp"
 
 #include "gtest/gtest.h"
 
