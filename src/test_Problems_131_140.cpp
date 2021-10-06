@@ -96,9 +96,9 @@ TEST( Problem_135, Given_Case )
          /
        -1
   */
-  auto * root        = new ibtNode( 10, new ibtNode( 5 ), new ibtNode( 5 ) );
-  root->left->right  = new ibtNode( 2 );
-  root->right->right = new ibtNode( 1, new ibtNode( -1 ) );
+  auto * root        = new btNode( 10, new btNode( 5 ), new btNode( 5 ) );
+  root->left->right  = new btNode( 2 );
+  root->right->right = new btNode( 1, new btNode( -1 ) );
 
   int result = minPathSum( root );
 

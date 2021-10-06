@@ -51,7 +51,7 @@ TEST( Problem_72, Test_Case )
 // Problem 73
 TEST( Problem_73, Test_Case )
 {
-  slList list;
+  slList<int> list;
   list.add( new slNode( 1 ) );
   list.add( new slNode( 2 ) );
   list.add( new slNode( 3 ) );

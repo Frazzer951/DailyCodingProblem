@@ -13,8 +13,9 @@ For example, the following should print 1, 2, 3, 4, 5.
 
 #include <vector>
 
-#include "Futils.hpp"
-inline std::vector<int> bt_traverse( ibtNode * root )
+#include "btNode.hpp"
+
+inline std::vector<int> bt_traverse( btNode<int> * root )
 {
   if( root == nullptr ) return {};
 

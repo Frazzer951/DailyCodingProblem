@@ -22,9 +22,9 @@ d  e f  g
 
 #include <vector>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline int get_index( std::vector<btNode *> v, btNode * node )
+inline int get_index( std::vector<btNode<char> *> v, btNode<char> * node )
 {
   for( int i = 0; i < v.size(); i++ )
   {
@@ -35,14 +35,14 @@ inline int get_index( std::vector<btNode *> v, btNode * node )
 
 // Function to slice a given vector
 // from range X to Y
-inline std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y )
+inline std::vector<btNode<char> *> slicing( std::vector<btNode<char> *> & arr, int X, int Y )
 {
   // Starting and Ending iterators
   auto start = arr.begin() + X;
   auto end   = arr.begin() + Y + 1;
 
   // To store the sliced vector
-  std::vector<btNode *> result( Y - X + 1 );
+  std::vector<btNode<char> *> result( Y - X + 1 );
 
   // Copy vector using copy function()
   copy( start, end, result.begin() );
@@ -51,11 +51,11 @@ inline std::vector<btNode *> slicing( std::vector<btNode *> & arr, int X, int Y 
   return result;
 }
 
-inline btNode * reconstruct( std::vector<btNode *> preorder, std::vector<btNode *> inorder )
+inline btNode<char> * reconstruct( std::vector<btNode<char> *> preorder, std::vector<btNode<char> *> inorder )
 {
   if( preorder.size() == 1 && inorder.size() == 1 ) { return preorder[0]; }
 
-  btNode * root   = preorder[0];
+  btNode<char> * root   = preorder[0];
   int      root_i = get_index( inorder, root );
 
   //    root.left = reconstruct(preorder[1:1 + root_i], inorder[0:root_i])

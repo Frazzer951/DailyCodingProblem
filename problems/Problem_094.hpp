@@ -7,9 +7,9 @@ The path must go through at least one node, and does not need to go through the 
 
 #include <limits>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline std::pair<int, int> helper( ibtNode * root )
+inline std::pair<int, int> helper( btNode<int> * root )
 {
   if( root == nullptr ) return std::make_pair( std::numeric_limits<int>::min(), 0 );
 
@@ -31,7 +31,7 @@ inline std::pair<int, int> helper( ibtNode * root )
   return std::make_pair( max_sum, root_path );
 }
 
-inline int max_path_sum( ibtNode * root )
+inline int max_path_sum( btNode<int> * root )
 {
   // Return only the maximum path
   return helper( root ).first;

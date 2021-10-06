@@ -16,13 +16,13 @@ there's anything we can help with.
 
 #include <vector>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline ibtNode * add( ibtNode * root, int x )
+inline btNode<int> * add( btNode<int> * root, int x )
 {
   if( root == nullptr )
   {
-    root = new ibtNode( x );
+    root = new btNode( x );
     return root;
   }
 
@@ -34,9 +34,9 @@ inline ibtNode * add( ibtNode * root, int x )
   return root;
 }
 
-inline ibtNode * createBSTfromPostOrder( std::vector<int> values )
+inline btNode<int> * createBSTfromPostOrder( std::vector<int> values )
 {
-  ibtNode * newTree = nullptr;
+  btNode<int> * newTree = nullptr;
 
   for( auto it = values.rbegin(); it != values.rend(); ++it ) { newTree = add( newTree, *it ); }
 

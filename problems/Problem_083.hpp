@@ -19,9 +19,9 @@ should become:
   f e  d
 */
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline void invert_B_Tree( btNode * node )
+inline void invert_B_Tree( btNode<char> * node )
 {
   if( node == nullptr ) return;
   if( node->left == nullptr && node->right == nullptr ) return;

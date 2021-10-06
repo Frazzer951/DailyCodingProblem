@@ -15,15 +15,15 @@ Return 2 as it occurs twice: once as the left leaf, and once as the sum of 2 + 5
 #include <functional>
 #include <map>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline int frequen_subtree_sum( ibtNode * root )
+inline int frequen_subtree_sum( btNode<int> * root )
 {
   if( root == nullptr ) return 0;
 
   std::map<int, int> counter;
 
-  std::function<int( ibtNode * )> getSubTreeSum = [&]( ibtNode * node )
+  std::function<int( btNode<int> * )> getSubTreeSum = [&]( btNode<int> * node )
   {
     if( node == nullptr ) return 0;
     int s = node->value + getSubTreeSum( node->left ) + getSubTreeSum( node->right );

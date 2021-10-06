@@ -201,10 +201,10 @@ TEST( Problem_48, Given_Case )
   auto * f = new btNode( 'f' );
   auto * g = new btNode( 'g' );
 
-  std::vector<btNode *> preorder = { a, b, d, e, c, f, g };
-  std::vector<btNode *> inorder  = { d, b, e, a, f, c, g };
+  std::vector<btNode<char> *> preorder = { a, b, d, e, c, f, g };
+  std::vector<btNode<char> *> inorder  = { d, b, e, a, f, c, g };
 
-  btNode * result = reconstruct( preorder, inorder );
+  auto * result = reconstruct( preorder, inorder );
 
   EXPECT_EQ( result, a );
 }

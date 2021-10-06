@@ -17,12 +17,14 @@ For example, given the following tree:
 You should return 45, as it is (3 + 2) * (4 + 5).
 */
 
+#include "btNode.hpp"
+
 inline char PLUS   = '+';
 inline char MINUS  = '-';
 inline char TIMES  = '*';
 inline char DIVIDE = '/';
 
-inline int evaluate( btNode root )
+inline int evaluate( btNode<char> root )
 {
   if( root.value == PLUS ) return evaluate( *root.left ) + evaluate( *root.right );
   if( root.value == MINUS ) return evaluate( *root.left ) - evaluate( *root.right );

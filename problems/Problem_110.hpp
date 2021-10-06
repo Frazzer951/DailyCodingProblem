@@ -15,8 +15,9 @@ Return [[1, 2], [1, 3, 4], [1, 3, 5]].
 
 #include <vector>
 
-#include "Futils.hpp"
-inline std::vector<std::vector<int>> getPaths( ibtNode * node )
+#include "btNode.hpp"
+
+inline std::vector<std::vector<int>> getPaths( btNode<int> * node )
 {
   if( node->left == nullptr && node->right == nullptr )
     return std::vector<std::vector<int>>( 1, std::vector<int>( 1, node->value ) );

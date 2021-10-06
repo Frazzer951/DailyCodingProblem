@@ -73,7 +73,7 @@ TEST( Problem_145, Given_Case )
 {
   // given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3
   auto *   root   = new slNode( 1, new slNode( 2, new slNode( 3, new slNode( 4 ) ) ) );
-  slNode * result = swapEveryTwo( root );
+  slNode<int> * result = swapEveryTwo( root );
 
   EXPECT_EQ( result->value, 2 );
   EXPECT_EQ( result->next->value, 1 );
@@ -101,8 +101,8 @@ TEST( Problem_146, Given_Case )
      1
   */
 
-  auto * root   = new ibtNode( 0, new ibtNode( 1 ),
-                             new ibtNode( 0, new ibtNode( 1, new ibtNode( 0 ), new ibtNode( 0 ) ), new ibtNode( 0 ) ) );
+  auto * root   = new btNode( 0, new btNode( 1 ),
+                             new btNode( 0, new btNode( 1, new btNode( 0 ), new btNode( 0 ) ), new btNode( 0 ) ) );
   auto * result = pruneZeroBranches( root );
 
   EXPECT_EQ( result->value, 0 );

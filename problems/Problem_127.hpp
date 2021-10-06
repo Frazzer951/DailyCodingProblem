@@ -20,12 +20,12 @@ return 124 (99 + 25) as:
 4 -> 2 -> 1
 */
 
-#include "Futils.hpp"
+#include "slNode.hpp"
 
-inline slNode * sum( slNode * x, slNode * y )
+inline slNode<int> * sum( slNode<int> * x, slNode<int> * y )
 {
   auto *   sumNum    = new slNode( ( x->value + y->value ) % 10 );
-  slNode * cur       = sumNum;
+  slNode<int> * cur       = sumNum;
   int      remainder = ( x->value + y->value ) / 10;
   x                  = x->next;
   y                  = y->next;

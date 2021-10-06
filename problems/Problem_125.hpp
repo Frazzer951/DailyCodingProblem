@@ -15,9 +15,9 @@ Return the nodes 5 and 15.
 
 #include <vector>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline ibtNode * search( ibtNode * node, int val )
+inline btNode<int> * search( btNode<int> * node, int val )
 {
   if( node == nullptr ) return nullptr;
 
@@ -26,9 +26,9 @@ inline ibtNode * search( ibtNode * node, int val )
   return search( node->left, val );
 }
 
-inline std::vector<ibtNode *> iter_tree( ibtNode * root )
+inline std::vector<btNode<int> *> iter_tree( btNode<int> * root )
 {
-  std::vector<ibtNode *> nodes;
+  std::vector<btNode<int> *> nodes;
   if( root != nullptr )
   {
     for( auto * node : iter_tree( root->left ) ) nodes.push_back( node );
@@ -40,7 +40,7 @@ inline std::vector<ibtNode *> iter_tree( ibtNode * root )
   return nodes;
 }
 
-inline std::pair<ibtNode *, ibtNode *> two_sum( ibtNode * root, int K )
+inline std::pair<btNode<int> *, btNode<int> *> two_sum( btNode<int> * root, int K )
 {
   for( auto * node_one : iter_tree( root ) )
   {

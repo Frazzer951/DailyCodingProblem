@@ -91,7 +91,7 @@ TEST( Problem_177, Given_Case_1 )
 
   auto *   head     = new slNode( 7, new slNode( 7, new slNode( 3, new slNode( 5 ) ) ) );
   auto *   expected = new slNode( 3, new slNode( 5, new slNode( 7, new slNode( 7 ) ) ) );
-  slNode * result   = rotate( head, 2 );
+  slNode<int> * result   = rotate( head, 2 );
 
   EXPECT_EQ( *result, *expected );
 }
@@ -102,7 +102,7 @@ TEST( Problem_177, Given_Case_2 )
 
   auto *   head     = new slNode( 1, new slNode( 2, new slNode( 3, new slNode( 4, new slNode( 5 ) ) ) ) );
   auto *   expected = new slNode( 3, new slNode( 4, new slNode( 5, new slNode( 1, new slNode( 2 ) ) ) ) );
-  slNode * result   = rotate( head, 3 );
+  slNode<int> * result   = rotate( head, 3 );
 
   EXPECT_EQ( *result, *expected );
 }
@@ -139,7 +139,7 @@ TEST( Problem_179, Given_Case )
   2   4   8
   */
 
-  auto * expected = new ibtNode( 5 );
+  auto * expected = new btNode( 5 );
   expected        = add( expected, 7 );
   expected        = add( expected, 8 );
   expected        = add( expected, 3 );

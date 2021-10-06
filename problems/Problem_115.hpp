@@ -6,9 +6,9 @@ subtree of s. A subtree of s is a tree consists of a node in s and all of this n
 be considered as a subtree of itself.
 */
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline bool isSubtree( btNode * s, btNode * t )
+inline bool isSubtree( btNode<int> * s, btNode<int> * t )
 {
   if( s == nullptr || t == nullptr ) return false;
 

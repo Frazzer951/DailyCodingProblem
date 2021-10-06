@@ -22,9 +22,9 @@ should be pruned to:
 We do not remove the tree at the root or its left child because it still has a 1 as a descendant.
 */
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline bool isZeroBranch( ibtNode * node )
+inline bool isZeroBranch( btNode<int> * node )
 {
   if( node == nullptr ) return false;
   if( node->value == 1 ) return false;
@@ -34,7 +34,7 @@ inline bool isZeroBranch( ibtNode * node )
   return isZeroBranch( node->left ) && isZeroBranch( node->right );
 }
 
-inline ibtNode * pruneZeroBranches( ibtNode * root )
+inline btNode<int> * pruneZeroBranches( btNode<int> * root )
 {
   if( root == nullptr ) return root;
   if( isZeroBranch( root ) ) return nullptr;

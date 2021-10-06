@@ -184,7 +184,7 @@ TEST( Problem_20, Test_Case_1 )
   B_1->next = C;
   C->next   = D;
 
-  slNode * intersect = findNodeIntersect( A, B );
+  slNode<int> * intersect = findNodeIntersect( A, B );
 
   EXPECT_EQ( intersect, C );
 }
@@ -207,7 +207,7 @@ TEST( Problem_20, Test_Case_2 )
   B_1->next = C;
   C->next   = D;
 
-  slNode * intersect = findNodeIntersect( A, B );
+  slNode<int> * intersect = findNodeIntersect( A, B );
 
   EXPECT_EQ( intersect, C );
 }

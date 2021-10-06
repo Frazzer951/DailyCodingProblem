@@ -47,7 +47,7 @@ TEST( Problem_93, Test_Case_1 )
   root->right->left         = new btNode( 'b' );
   root->right->right->left  = new btNode( 'c' );
 
-  btNode * result      = largest_subBST( root );
+  btNode<char> * result      = largest_subBST( root );
   int      result_size = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
@@ -57,15 +57,15 @@ TEST( Problem_93, Test_Case_1 )
 // Problem 94
 TEST( Problem_94, Test_Case )
 {
-  auto * root              = new ibtNode( 10 );
-  root->left               = new ibtNode( 6 );
-  root->left->left         = new ibtNode( -3 );
-  root->left->left->right  = new ibtNode( 3 );
-  root->left->right        = new ibtNode( 5 );
-  root->right              = new ibtNode( -4 );
-  root->right->left        = new ibtNode( 11 );
-  root->right->right       = new ibtNode( 9 );
-  root->right->right->left = new ibtNode( 2 );
+  auto * root              = new btNode( 10 );
+  root->left               = new btNode( 6 );
+  root->left->left         = new btNode( -3 );
+  root->left->left->right  = new btNode( 3 );
+  root->left->right        = new btNode( 5 );
+  root->right              = new btNode( -4 );
+  root->right->left        = new btNode( 11 );
+  root->right->right       = new btNode( 9 );
+  root->right->right->left = new btNode( 2 );
 
   int result = max_path_sum( root );
 

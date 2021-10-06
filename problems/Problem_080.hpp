@@ -10,9 +10,9 @@ Given the root of a binary tree, return a deepest node. For example, in the foll
 d
 */
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline std::pair<int, btNode *> find_deepest_helper( btNode * node, int depth )
+inline std::pair<int, btNode<char> *> find_deepest_helper( btNode<char> * node, int depth )
 {
   if( node == nullptr ) return std::make_pair( 0, node );
   if( node->left == nullptr && node->right == nullptr ) return std::make_pair( depth, node );
@@ -23,7 +23,7 @@ inline std::pair<int, btNode *> find_deepest_helper( btNode * node, int depth )
   return ( left.first > right.first ) ? left : right;
 }
 
-inline btNode * find_deepest( btNode * root )
+inline btNode<char> * find_deepest( btNode<char> * root )
 {
   auto deepest = find_deepest_helper( root, 0 );
 

@@ -1,4 +1,5 @@
 #include "Futils.hpp"
+#include "slNode.hpp"
 
 #include "gtest/gtest.h"
 
@@ -84,7 +85,7 @@ TEST( FUtils, slNode )
 
 TEST( FUtils, slList )
 {
-  slList list;
+  slList<int> list;
   auto * node  = new slNode( 3 );
   auto * node2 = new slNode( 8 );
 

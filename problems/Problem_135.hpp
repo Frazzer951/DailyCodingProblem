@@ -16,9 +16,9 @@ For example, the minimum path in this tree is [10, 5, 1, -1], which has sum 15.
 
 #include <limits>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline int minPathSum( ibtNode * root )
+inline int minPathSum( btNode<int> * root )
 {
   if( root == nullptr ) return 0;
   if( root->left == nullptr && root->right == nullptr ) return root->value;

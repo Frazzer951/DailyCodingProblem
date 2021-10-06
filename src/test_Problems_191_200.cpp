@@ -95,7 +95,7 @@ TEST( Problem_196, Given_Case )
   Return 2 as it occurs twice: once as the left leaf, and once as the sum of 2 + 5 - 5.
   */
 
-  auto * root = new ibtNode( 5, new ibtNode( 2 ), new ibtNode( -5 ) );
+  auto * root = new btNode( 5, new btNode( 2 ), new btNode( -5 ) );
 
   int result = frequen_subtree_sum( root );
 

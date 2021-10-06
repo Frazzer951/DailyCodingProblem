@@ -7,11 +7,11 @@ Given a binary tree, return the level of the tree with minimum sum
 #include <map>
 #include <queue>
 
-#include "Futils.hpp"
+#include "btNode.hpp"
 
-inline int minimum_level_sum( ibtNode * root )
+inline int minimum_level_sum( btNode<int> * root )
 {
-  std::queue<std::pair<ibtNode *, int>> queue;
+  std::queue<std::pair<btNode<int> *, int>> queue;
   queue.push( std::make_pair( root, 0 ) );
   std::map<int, int> level_to_sum;
 

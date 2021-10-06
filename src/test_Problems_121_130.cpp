@@ -81,7 +81,7 @@ TEST( Problem_125, Given_Case )
   Return the nodes 5 and 15.
   */
 
-  auto * root = new ibtNode( 10, new ibtNode( 5 ), new ibtNode( 15, new ibtNode( 11 ), new ibtNode( 15 ) ) );
+  auto * root = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
 
   auto result   = two_sum( root, 20 );
   auto expected = std::make_pair( root->left, root->right );
@@ -102,7 +102,7 @@ TEST( Problem_125, Test_Case )
   Return the nodes 10 and 11.
   */
 
-  auto * root = new ibtNode( 10, new ibtNode( 5 ), new ibtNode( 15, new ibtNode( 11 ), new ibtNode( 15 ) ) );
+  auto * root = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
 
   auto result   = two_sum( root, 21 );
   auto expected = std::make_pair( root, root->right->left );

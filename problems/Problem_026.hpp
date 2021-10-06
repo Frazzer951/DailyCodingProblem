@@ -9,16 +9,16 @@ The list is very long, so making more than one pass is prohibitively expensive.
 Do this in constant space and in one pass.
 */
 
-#include "Futils.hpp"
+#include "slNode.hpp"
 
-inline slNode * getKthLastNode( slList list, int k )
+inline slNode<int> * getKthLastNode( slList<int> list, int k )
 {
-  slNode * slow = list.get( 0 );
-  slNode * fast = list.get( 0 );
+  slNode<int> * slow = list.get( 0 );
+  slNode<int> * fast = list.get( 0 );
 
   for( int i = 0; i < k; i++ ) fast = fast->next;
 
-  slNode * prev = slow;
+  slNode<int> * prev = slow;
   while( fast != nullptr )
   {
     prev = slow;

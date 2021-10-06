@@ -10,20 +10,20 @@ In this example, assume nodes with the same value are the exact same node object
 Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
 */
 
-#include "Futils.hpp"
+#include "slNode.hpp"
 
-inline unsigned int length( slNode * head )
+inline unsigned int length( slNode<int> * head )
 {
   if( head->next == nullptr ) { return 1; }
   return 1 + length( head->next );
 }
 
-inline slNode * findNodeIntersect( slNode * a, slNode * b )
+inline slNode<int> * findNodeIntersect( slNode<int> * a, slNode<int> * b )
 {
   unsigned int m    = length( a );
   unsigned int n    = length( b );
-  slNode *     curA = a;
-  slNode *     curB = b;
+  slNode<int> *     curA = a;
+  slNode<int> *     curB = b;
 
   if( m > n )
   {

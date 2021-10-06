@@ -101,11 +101,11 @@ TEST( Problem_107, Given_Case )
     4   5
   */
 
-  auto * root        = new ibtNode( 1 );
-  root->left         = new ibtNode( 2 );
-  root->right        = new ibtNode( 3 );
-  root->right->left  = new ibtNode( 4 );
-  root->right->right = new ibtNode( 5 );
+  auto * root        = new btNode( 1 );
+  root->left         = new btNode( 2 );
+  root->right        = new btNode( 3 );
+  root->right->left  = new btNode( 4 );
+  root->right->right = new btNode( 5 );
 
   std::vector<int> expected = { 1, 2, 3, 4, 5 };
   std::vector<int> result   = bt_traverse( root );
@@ -150,11 +150,11 @@ TEST( Problem_109, Given_Case_2 )
 // Problem 110
 TEST( Problem_110, Given_Case )
 {
-  auto * root        = new ibtNode( 1 );
-  root->left         = new ibtNode( 2 );
-  root->right        = new ibtNode( 3 );
-  root->right->left  = new ibtNode( 4 );
-  root->right->right = new ibtNode( 5 );
+  auto * root        = new btNode( 1 );
+  root->left         = new btNode( 2 );
+  root->right        = new btNode( 3 );
+  root->right->left  = new btNode( 4 );
+  root->right->right = new btNode( 5 );
 
   std::vector<std::vector<int>> expected = { { 1, 2 }, { 1, 3, 4 }, { 1, 3, 5 } };
   std::vector<std::vector<int>> result   = getPaths( root );

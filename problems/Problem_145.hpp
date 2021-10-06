@@ -6,13 +6,13 @@ Given the head of a singly linked list, swap every two nodes and return its head
 For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.
 */
 
-#include "Futils.hpp"
+#include "slNode.hpp"
 
-inline slNode * swapEveryTwo( slNode * root )
+inline slNode<int> * swapEveryTwo( slNode<int> * root )
 {
-  slNode * prev = nullptr;
-  slNode * cur  = root;
-  slNode * next = root->next;
+  slNode<int> * prev = nullptr;
+  slNode<int> * cur  = root;
+  slNode<int> * next = root->next;
   root          = next;
 
   while( cur != nullptr && next != nullptr )

@@ -148,7 +148,7 @@ TEST( Problem_25, Given_Case_2 )
 // Problem 26
 TEST( Problem_26, Test_Case )
 {
-  slList list;
+  slList<int> list;
   list.add( new slNode( 1 ) );
   list.add( new slNode( 2 ) );
   list.add( new slNode( 3 ) );
