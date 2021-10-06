@@ -133,3 +133,10 @@ TEST( Problem_199, Given_Case_2 )
 }
 
 // Problem 200
+TEST( Problem_200, Given_Case )
+{
+  std::vector<int> result   = get_points( { { 1, 4 }, { 4, 5 }, { 7, 9 }, { 9, 12 } } );
+  std::vector<int> expected = { 4, 9 };
+
+  EXPECT_EQ( result, expected );
+}

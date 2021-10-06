@@ -9,7 +9,7 @@ For example, given "(()", you could return "(())". Given "))()(", you could retu
 
 #include <string>
 
-inline std::string balanceParentheses( std::string str )
+inline std::string balanceParentheses( const std::string & str )
 {
   std::string ret;
 
