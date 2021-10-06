@@ -89,8 +89,8 @@ TEST( Problem_177, Given_Case_1 )
 {
   // Given the linked list 7 -> 7 -> 3 -> 5 and k = 2, it should become 3 -> 5 -> 7 -> 7
 
-  auto *        head     = new slNode( 7, new slNode( 7, new slNode( 3, new slNode( 5 ) ) ) );
-  auto *        expected = new slNode( 3, new slNode( 5, new slNode( 7, new slNode( 7 ) ) ) );
+  auto *        head     = new slNode<int>( { 7, 7, 3, 5 } );
+  auto *        expected = new slNode<int>( { 3, 5, 7, 7 } );
   slNode<int> * result   = rotate( head, 2 );
 
   EXPECT_EQ( *result, *expected );
@@ -100,8 +100,8 @@ TEST( Problem_177, Given_Case_2 )
 {
   // Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4 -> 5 -> 1 -> 2.
 
-  auto *        head     = new slNode( 1, new slNode( 2, new slNode( 3, new slNode( 4, new slNode( 5 ) ) ) ) );
-  auto *        expected = new slNode( 3, new slNode( 4, new slNode( 5, new slNode( 1, new slNode( 2 ) ) ) ) );
+  auto *        head     = new slNode<int>( { 1, 2, 3, 4, 5 } );
+  auto *        expected = new slNode<int>( { 3, 4, 5, 1, 2 } );
   slNode<int> * result   = rotate( head, 3 );
 
   EXPECT_EQ( *result, *expected );

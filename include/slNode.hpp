@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 template<typename T>
 struct slNode
@@ -13,6 +14,16 @@ struct slNode
     value = x;
     next  = n;
   }
+
+  slNode( std::vector<T> l )
+  {
+    value = l[0];
+    if( l.size() > 1 ) next = new slNode( std::vector<T>( l.begin() + 1, l.end() ) );
+    else
+      next = nullptr;
+  }
+
+  ~slNode() { delete next; }
 };
 
 template<typename T>
