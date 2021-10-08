@@ -17,7 +17,7 @@ Write a program that returns the weight of the maximum weight path.
 
 inline int longestPath( std::vector<std::vector<int>> arrays )
 {
-  for( int level = arrays.size() - 2; level > -1; level-- )
+  for( int level = (int) arrays.size() - 2; level > -1; level-- )
   {
     for( int index = 0; index < level + 1; index++ )
     {

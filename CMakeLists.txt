@@ -63,7 +63,7 @@ file(COPY
 )
 
 add_executable(${PROJECT_NAME} ${src_files} ${problem_files} ${include_files} )
-target_link_libraries(${PROJECT_NAME} gtest_main)
+target_link_libraries(${PROJECT_NAME} PUBLIC gtest_main)
 
 #add_test(
 #    NAME ${PROJECT_NAME}

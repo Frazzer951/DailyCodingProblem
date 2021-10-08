@@ -41,6 +41,6 @@ inline int getCount( btNode<int> * root )
   int right = findDepthRight( root );
 
   if( left == right ) return ( 2 << left ) - 1;
-  else
-    return getCount( root->left ) + getCount( root->right ) + 1;
+
+  return getCount( root->left ) + getCount( root->right ) + 1;
 }

@@ -5,6 +5,8 @@ Given an integer, find the next permutation of it in absolute order. For example
 would be 49578.
 */
 
+#include <algorithm>
+#include <cmath>
 #include <vector>
 
 inline int get_next_perm( int _num )
@@ -18,7 +20,7 @@ inline int get_next_perm( int _num )
   }
 
   std::reverse( num.begin(), num.end() );
-  int n = num.size();
+  int n = (int) num.size();
 
   int tail_start = n - 1;
   while( tail_start >= 0 && num[tail_start - 1] > num[tail_start] ) tail_start -= 1;
@@ -32,7 +34,7 @@ inline int get_next_perm( int _num )
   num[swap]           = temp;
 
   int start = tail_start;
-  int end   = num.size() - 1;
+  int end   = (int) num.size() - 1;
   while( start < end )
   {
     int temp   = num[start];
@@ -44,7 +46,7 @@ inline int get_next_perm( int _num )
 
   _num = 0;
 
-  for( int i = 0; i < num.size(); i++ ) { _num += num[i] * pow( 10, num.size() - i - 1 ); }
+  for( int i = 0; i < num.size(); i++ ) { _num += num[i] * (int) pow( 10, (int) num.size() - i - 1 ); }
 
   return _num;
 }

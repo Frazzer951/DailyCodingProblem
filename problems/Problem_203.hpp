@@ -35,9 +35,9 @@ inline int helper( std::vector<int> arr, int low, int high )
   return helper( arr, low, high );
 }
 
-inline int find_min_element( std::vector<int> arr )
+inline int find_min_element( const std::vector<int> & arr )
 {
   int low  = 0;
-  int high = arr.size() - 1;
+  int high = (int) arr.size() - 1;
   return helper( arr, low, high );
 }
