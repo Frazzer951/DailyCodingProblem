@@ -12,3 +12,17 @@ ending with an entry on the bottom row. For example, 1 -> 3 -> 5. The weight of 
 
 Write a program that returns the weight of the maximum weight path.
 */
+
+#include <vector>
+
+inline int longestPath( std::vector<std::vector<int>> arrays )
+{
+  for( int level = arrays.size() - 2; level > -1; level-- )
+  {
+    for( int index = 0; index < level + 1; index++ )
+    {
+      arrays[level][index] += std::max( arrays[level + 1][index], arrays[level + 1][index + 1] );
+    }
+  }
+  return arrays[0][0];
+}

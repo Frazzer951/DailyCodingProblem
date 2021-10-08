@@ -8,7 +8,12 @@
 #include "gtest/gtest.h"
 
 // Problem 201
-
+TEST( Problem_201, Given_Case )
+{
+  std::vector<std::vector<int>> arrays = { { 1 }, { 2, 3 }, { 1, 5, 1 } };
+  int                           result = longestPath( arrays );
+  EXPECT_EQ( result, 9 );
+}
 
 // Problem 202
 
