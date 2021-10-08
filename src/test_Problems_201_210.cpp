@@ -52,7 +52,14 @@ TEST( Problem_205, Given_Case )
 }
 
 // Problem 206
+TEST( Problem_206, Given_Case )
+{
+  // given the array ["a", "b", "c"] and the permutation [2, 1, 0], return ["c", "b", "a"].
+  std::vector<char> result   = genPermutation( { 'a', 'b', 'c' }, { 2, 1, 0 } );
+  std::vector<char> expected = { 'c', 'b', 'a' };
 
+  EXPECT_EQ( result, expected );
+}
 
 // Problem 207
 
