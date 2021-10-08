@@ -1,8 +1,46 @@
 #pragma once
 
 /* EASY
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. Find the minimum element
-in O(log N) time. You may assume the array does not contain duplicates.
-
-For example, given [5, 7, 10, 3, 4], return 3
+Given a complete binary tree, count the number of nodes in faster than O(n) time. Recall that a complete binary tree has
+every level filled except the last, and the nodes in the last level are filled starting from the left.
 */
+
+#include "btNode.hpp"
+
+inline int findDepthLeft( btNode<int> * root )
+{
+  int depth = 0;
+
+  while( root->left != nullptr )
+  {
+    root = root->left;
+    depth++;
+  }
+
+  return depth;
+}
+
+inline int findDepthRight( btNode<int> * root )
+{
+  int depth = 0;
+
+  while( root->right != nullptr )
+  {
+    root = root->right;
+    depth++;
+  }
+
+  return depth;
+}
+
+inline int getCount( btNode<int> * root )
+{
+  if( root == nullptr ) return 0;
+
+  int left  = findDepthLeft( root );
+  int right = findDepthRight( root );
+
+  if( left == right ) return ( 2 << left ) - 1;
+  else
+    return getCount( root->left ) + getCount( root->right ) + 1;
+}

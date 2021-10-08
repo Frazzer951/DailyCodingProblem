@@ -33,7 +33,15 @@ TEST( Problem_203, Given_Case )
 }
 
 // Problem 204
+TEST( Problem_204, Test_Case )
+{
+  btNode<int> * root =
+      new btNode( 1, new btNode( 2, new btNode( 4, new btNode( 8 ), new btNode( 9 ) ), new btNode( 5 ) ),
+                  new btNode( 3, new btNode( 6 ), new btNode( 7 ) ) );
 
+  int count = getCount( root );
+  EXPECT_EQ( count, 9 );
+}
 
 // Problem 205
 
