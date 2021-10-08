@@ -16,7 +16,14 @@ TEST( Problem_201, Given_Case )
 }
 
 // Problem 202
+TEST( Problem_202, Given_Case )
+{
+  // For example, 121 is a palindrome, as well as 888. 678 is not a palindrome
 
+  EXPECT_TRUE( isPalindrome( 121 ) );
+  EXPECT_TRUE( isPalindrome( 888 ) );
+  EXPECT_FALSE( isPalindrome( 678 ) );
+}
 
 // Problem 203
 
