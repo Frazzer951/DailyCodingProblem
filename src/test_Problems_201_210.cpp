@@ -44,7 +44,12 @@ TEST( Problem_204, Test_Case )
 }
 
 // Problem 205
-
+TEST( Problem_205, Given_Case )
+{
+  // given 48975, the next permutation would be 49578
+  int result = get_next_perm( 48975 );
+  EXPECT_EQ( result, 49578 );
+}
 
 // Problem 206
 
