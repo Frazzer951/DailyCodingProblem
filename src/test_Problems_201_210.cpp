@@ -76,7 +76,7 @@ TEST( Problem_207, Given_Case )
 TEST( Problem_208, Given_Case )
 {
   // given the linked list 5 -> 1 -> 8 -> 0 -> 3 and k = 3, the solution could be 1 -> 0 -> 5 -> 8 -> 3.
-  auto        head   = new slNode<int>( { 5, 1, 8, 0, 3 } );
+  auto *      head   = new slNode<int>( { 5, 1, 8, 0, 3 } );
   slList<int> result = partition( head, 3 );
   slList<int> expected( { 0, 1, 5, 8, 3 } );
 

@@ -9,7 +9,7 @@ For example, given the linked list 5 -> 1 -> 8 -> 0 -> 3 and k = 3, the solution
 
 #include "slNode.hpp"
 
-slList<int> partition( slNode<int> * head, int pivot )
+inline slList<int> partition( slNode<int> * head, int pivot )
 {
   slList<int> newList;
 

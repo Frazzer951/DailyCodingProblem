@@ -33,10 +33,10 @@ inline bool helper( std::map<int, std::vector<int>> graph, int start, std::vecto
   return true;
 }
 
-inline bool is_bipartite( std::map<int, std::vector<int>> graph )
+inline bool is_bipartite( const std::map<int, std::vector<int>> & graph )
 {
   std::vector<int> colors( graph.size(), 0 );
-  for( auto node : graph )
+  for( const auto & node : graph )
   {
     if( colors[node.first] == 0 )
     {
