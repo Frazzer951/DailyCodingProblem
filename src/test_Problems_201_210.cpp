@@ -65,7 +65,12 @@ TEST( Problem_206, Given_Case )
 }
 
 // Problem 207
+TEST( Problem_207, Given_Case )
+{
+  std::map<int, std::vector<int>> graph = { { 0, { 1, 2 } }, { 1, { 0, 2 } }, { 2, { 0, 1, 3 } }, { 3, { 2 } } };
 
+  EXPECT_FALSE( is_bipartite( graph ) );
+}
 
 // Problem 208
 
