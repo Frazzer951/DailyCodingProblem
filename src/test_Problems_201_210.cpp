@@ -84,7 +84,12 @@ TEST( Problem_208, Given_Case )
 }
 
 // Problem 209
+TEST( Problem_209, Given_Case )
+{
+  int length = lcs( "epidemiologist", "refrigeration", "supercalifragilisticexpialodocious" );
 
+  EXPECT_EQ( length, 5 );
+}
 
 // Problem 210
 TEST( Problem_210, Test_Case )
