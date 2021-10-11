@@ -65,6 +65,14 @@ public:
     tail = nullptr;
   }
 
+  slList( std::vector<T> l )
+  {
+    head = nullptr;
+    tail = nullptr;
+
+    for( T i : l ) { add( new slNode( i ) ); }
+  }
+
   void add( slNode<T> * node )
   {
     if( head == nullptr )
@@ -77,6 +85,20 @@ public:
       tail->next = node;
       node->next = nullptr;
       tail       = node;
+    }
+  }
+
+  void insert( slNode<T> * node )
+  {
+    if( head == nullptr )
+    {
+      head = node;
+      tail = node;
+    }
+    else
+    {
+      node->next = head;
+      head       = node;
     }
   }
 
@@ -94,3 +116,19 @@ public:
     return node;
   };
 };
+
+template<typename T>
+inline bool operator==( const slList<T> & lhs, const slList<T> & rhs )
+{
+  if( lhs.head != nullptr && rhs.head == nullptr ) return false;
+  if( lhs.head == nullptr && rhs.head != nullptr ) return false;
+  if( lhs.head != nullptr && rhs.head != nullptr ) return *lhs.head == *rhs.head;
+  return true;
+}
+
+template<typename T>
+inline std::ostream & operator<<( std::ostream & os, const slList<T> & n )
+{
+  os << n.head;
+  return os;
+}
