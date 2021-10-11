@@ -87,3 +87,16 @@ TEST( Problem_208, Given_Case )
 
 
 // Problem 210
+TEST( Problem_210, Test_Case )
+{
+  int      testTo  = 100;
+  long int longest = -1;
+  for( long int i = 1; i <= testTo; i++ )
+  {
+    long int result = collatz( i );
+    if( i == -1 ) testing::AssertionFailure() << "Collatz Returned -1";
+    longest = std::max( longest, result );
+  }
+  std::cout << "Longest Collatz sequence in " << testTo << " is " << longest << "\n";
+  testing::AssertionSuccess() << "Longest Collatz sequence in " << testTo << " is " << longest;
+}

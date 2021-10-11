@@ -9,3 +9,17 @@ It is conjectured that every such sequence eventually reaches the number 1. Test
 
 Bonus: What input n <= 1000000 gives the longest sequence?
 */
+
+inline long int collatz( int n )
+{
+  long int count = 0;
+  while( n != 1 )
+  {
+    if( count > 20000000 ) return -1;
+    if( n % 2 == 0 ) n /= 2;
+    else
+      n = 3 * n + 1;
+    count++;
+  }
+  return count;
+}
