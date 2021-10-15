@@ -42,7 +42,14 @@ TEST( Problem_212, Test_Case )
 }
 
 // Problem 213
+TEST( Problem_213, Given_Case )
+{
+  // given "2542540123", you should return ['254.25.40.123', '254.254.0.123']
+  std::vector<std::string> ips      = generateIpAddresses( "2542540123" );
+  std::vector<std::string> expected = { "254.25.40.123", "254.254.0.123" };
 
+  EXPECT_EQ( ips, expected );
+}
 
 // Problem 214
 
