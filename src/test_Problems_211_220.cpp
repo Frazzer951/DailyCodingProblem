@@ -52,7 +52,13 @@ TEST( Problem_213, Given_Case )
 }
 
 // Problem 214
+TEST( Problem_214, Given_Case )
+{
+  //  given 156, you should return 3
+  int length = longestOneRun( 156 );
 
+  EXPECT_EQ( length, 3 );
+}
 
 // Problem 215
 
