@@ -16,7 +16,30 @@ TEST( Problem_211, Given_Case )
 }
 
 // Problem 212
+TEST( Problem_212, Given_Case )
+{
+  // given 1, return "A". Given 27, return "AA"
+  std::string col1 = colLetter( 1 );
+  std::string col2 = colLetter( 27 );
 
+  EXPECT_EQ( col1, "A" );
+  EXPECT_EQ( col2, "AA" );
+}
+
+TEST( Problem_212, Test_Case )
+{
+  std::string col1 = colLetter( 2 );
+  std::string col2 = colLetter( 25 );
+  std::string col3 = colLetter( 26 );
+  std::string col4 = colLetter( 52 );
+  std::string col5 = colLetter( 53 );
+
+  EXPECT_EQ( col1, "B" );
+  EXPECT_EQ( col2, "Y" );
+  EXPECT_EQ( col3, "Z" );
+  EXPECT_EQ( col4, "ZZ" );
+  EXPECT_EQ( col5, "AAA" );
+}
 
 // Problem 213
 
