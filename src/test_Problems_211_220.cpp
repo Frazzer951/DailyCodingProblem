@@ -6,7 +6,14 @@
 #include "gtest/gtest.h"
 
 // Problem 211
+TEST( Problem_211, Given_Case )
+{
+  // given the string "abracadabra" and the pattern "abr", you should return [0, 7]
+  std::vector<int> indecies = indexOf( "abracadabra", "abr" );
+  std::vector<int> expected = { 0, 7 };
 
+  EXPECT_EQ( indecies, expected );
+}
 
 // Problem 212
 
