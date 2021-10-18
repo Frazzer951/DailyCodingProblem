@@ -1,0 +1,2 @@
+https://docs.python.org/3/library/email.compat32-message.html#compat32-message
+https://docs.python.org/3/library/imaplib.html
