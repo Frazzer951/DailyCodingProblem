@@ -1,8 +1,9 @@
 #pragma once
 
 /* MEDIUM
-Given an iterator with methods next() and hasNext(), create a wrapper iterator, PeekableInterface, which also implements
-peek(). peek shows the next element that would be returned on next().
+Given an iterator with methods next() and hasNext(), create a wrapper iterator,
+PeekableInterface, which also implements peek(). peek shows the next element
+that would be returned on next().
 
 Here is the interface:
 

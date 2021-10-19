@@ -1,7 +1,8 @@
 #pragma once
 
-/*
-What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+/* EASY
+What does the below code snippet print out? How can we fix the anonymous
+functions to behave as we'd expect?
 
 functions = []
 for i in range(10):
@@ -10,5 +11,3 @@ for i in range(10):
 for f in functions:
     print(f())
 */
-
-// IDK What this wants

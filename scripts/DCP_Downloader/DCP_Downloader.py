@@ -100,17 +100,17 @@ def genProblem(problems, num):
         f.write(f"\n- Problem {num:03}")
 
 
-def addProblems(cacheOnly=False):
+def addProblems(cacheOnly=False, forceRefresh=False):
     if cacheOnly:
-        logging.debug("Loading Cache")
+        logging.info("Loading Cache")
         problems = loadEmails()
     else:
-        logging.debug("Getting Cache and New Emails")
-        problems = getEmails()
+        logging.info("Loading Emails")
+        problems = getEmails(forceRefresh)
 
     for num in problems:
         genProblem(problems, int(num))
 
 
-if __name__ is "__main__":
+if __name__ == "__main__":
     addProblems()

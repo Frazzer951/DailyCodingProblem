@@ -3,7 +3,7 @@
 /* MEDIUM
 Describe and give an example of each of the following types of polymorphism:
 
-Ad-hoc polymorphism
-Parametric polymorphism
-Subtype polymorphism
+ * Ad-hoc polymorphism
+ * Parametric polymorphism
+ * Subtype polymorphism
 */

@@ -12,6 +12,7 @@ operations:
 */
 
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 struct timestamp

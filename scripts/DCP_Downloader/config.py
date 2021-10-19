@@ -8,7 +8,7 @@ proj_dir = os.path.dirname(__file__)
 
 # Define the Logging config
 logging.basicConfig(
-    format="%(asctime)s - %(levelname)s - %(message)s", level=logging.DEBUG
+    format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
 logging.debug("Start Of Config.py")
