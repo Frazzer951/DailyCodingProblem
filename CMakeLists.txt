@@ -13,14 +13,13 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
   add_compile_options(-Wall -Wextra -Werror -Wdouble-promotion -fno-common -Wno-sign-compare)
 else()
   message("-- Compiling with GCC")
-  add_compile_options(-Wall -Wextra -Werror -Wdouble-promotion -Wconversion -fno-common -Wno-sign-compare)
+  add_compile_options(-Wall -Wextra -Werror -Wdouble-promotion -fno-common -Wno-sign-compare)
 endif()
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include(ClangFormat)
 include(FetchContent)
 include(GoogleTest)
-#set(CMAKE_CXX_CLANG_TIDY clang-tidy -fix)
 enable_testing()
 
 FetchContent_Declare(
@@ -64,11 +63,6 @@ file(COPY
 
 add_executable(${PROJECT_NAME} ${src_files} ${problem_files} ${include_files} )
 target_link_libraries(${PROJECT_NAME} PUBLIC gtest_main)
-
-#add_test(
-#    NAME ${PROJECT_NAME}
-#    COMMAND ${PROJECT_NAME}
-#)
 
 gtest_discover_tests(${PROJECT_NAME})
 
