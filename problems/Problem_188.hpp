@@ -16,5 +16,7 @@ def make_functions():
 functions = make_functions()
 for f in functions:
     f()
+
+
 How can we make it print out what we apparently want?
 */
