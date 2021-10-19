@@ -1,7 +1,8 @@
 #pragma once
 
 /* MEDIUM
-The horizontal distance of a binary tree node describes how far left or right the node will be when the tree is printed out.
+The horizontal distance of a binary tree node describes how far left or right the node will be when the tree is printed
+out.
 
 More rigorously, we can define it as follows:
 
@@ -17,7 +18,8 @@ For example, for the following tree, hd(1) = -2, and hd(6) = 0.
     1     4    6     9
    /                /
   0                8
-The bottom view of a tree, then, consists of the lowest node at each horizontal distance. If there are two nodes at the same depth and horizontal distance, either is acceptable.
+The bottom view of a tree, then, consists of the lowest node at each horizontal distance. If there are two nodes at the
+same depth and horizontal distance, either is acceptable.
 
 For this tree, for example, the bottom view could be [0, 1, 3, 6, 8, 9].
 

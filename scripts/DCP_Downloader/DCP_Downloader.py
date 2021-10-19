@@ -11,8 +11,10 @@ def loadEmails():
     """Will load cached emails"""
     if os.path.isfile(config.proj_dir + "/emails.json"):
         with open(config.proj_dir + "/emails.json") as f:
+            logging.debug("Cache Loaded")
             return json.load(f)
     else:
+        logging.debug("No cache returning empty dict")
         return {}
 
 
@@ -20,6 +22,7 @@ def saveEmails(emails):
     """Will Save the cached emails"""
     with open(config.proj_dir + "/emails.json", "w") as f:
         json.dump(emails, f, indent=2)
+        logging.debug("Cache Saved")
 
 
 def getEmails(forceRefresh=False):
@@ -70,7 +73,7 @@ def getEmails(forceRefresh=False):
             body,
             flags=re.S | re.M,
         )
-        body = group[1].strip()
+        body = group[1].strip().replace("\r", "")
         emails[number] = {"difficulty": difficulty, "body": body}
 
     m.close()
@@ -79,5 +82,35 @@ def getEmails(forceRefresh=False):
     return emails
 
 
-emails = getEmails()
-saveEmails(emails)
+def genProblem(problems, num):
+    """Generate Missing Problems from Problem List"""
+    filename = f"problems/Problem_{num:03}.hpp"
+    logging.debug(filename)
+    if os.path.isfile(filename):
+        return
+    with open(filename, "w") as f:
+        logging.info(f"Generating file for #{num:03}")
+        f.write("#pragma once\n\n")
+        f.write(f"/* {problems[str(num)]['difficulty'].upper()}\n")
+        f.write(problems[str(num)]["body"].replace("\r", ""))
+        f.write("\n*/\n")
+    # Add file to readme as TODO
+    with open("README.md", "a") as f:
+        logging.info(f"Adding #{num:03} to README.md")
+        f.write(f"\n- Problem {num:03}")
+
+
+def addProblems(cacheOnly=False):
+    if cacheOnly:
+        logging.debug("Loading Cache")
+        problems = loadEmails()
+    else:
+        logging.debug("Getting Cache and New Emails")
+        problems = getEmails()
+
+    for num in problems:
+        genProblem(problems, int(num))
+
+
+if __name__ is "__main__":
+    addProblems()
