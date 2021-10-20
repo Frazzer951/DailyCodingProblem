@@ -9,11 +9,11 @@ struct btNode
   btNode * left;
   btNode * right;
 
-  btNode( T x, btNode<T> * _left = nullptr, btNode<T> * _right = nullptr )
+  btNode( T x, btNode<T> * _left = nullptr, btNode<T> * _right = nullptr ) : value( x ), left( _left ), right( _right )
   {
-    value = x;
-    left  = _left;
-    right = _right;
+    
+    
+    
   }
 };
 

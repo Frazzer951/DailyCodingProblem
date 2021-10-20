@@ -28,23 +28,13 @@ public:
   SerNode *   _left;
   SerNode *   _right;
 
-  SerNode( std::string val )
+  SerNode( std::string val ) : _val( std::move( val ) ), _left( nullptr ), _right( nullptr ) {}
+  SerNode( std::string val, SerNode * left ) : _val( std::move( val ) ), _left( left ), _right( nullptr ) {}
+  SerNode( std::string val, SerNode * left, SerNode * right ) : _val( std::move( val ) ), _left( left ), _right( right )
   {
-    _val   = std::move( val );
-    _left  = nullptr;
-    _right = nullptr;
-  }
-  SerNode( std::string val, SerNode * left )
-  {
-    _val   = std::move( val );
-    _left  = left;
-    _right = nullptr;
-  }
-  SerNode( std::string val, SerNode * left, SerNode * right )
-  {
-    _val   = std::move( val );
-    _left  = left;
-    _right = right;
+    
+    
+    
   }
 
   [[nodiscard]] std::string value() const { return _val; }

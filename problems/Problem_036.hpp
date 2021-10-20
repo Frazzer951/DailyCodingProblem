@@ -20,11 +20,7 @@ public:
   BST() = default;
 
   // Parameterized constructor.
-  BST( int value )
-  {
-    data = value;
-    left = right = nullptr;
-  }
+  BST( int value ) : data( value ) { left = right = nullptr; }
 
   // Insert function.
   BST * Insert( BST * root, int value )

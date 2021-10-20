@@ -9,15 +9,10 @@ struct slNode
   T        value;
   slNode * next;
 
-  slNode( T x, slNode * n = nullptr )
-  {
-    value = x;
-    next  = n;
-  }
+  slNode( T x, slNode * n = nullptr ) : value( x ), next( n ) {}
 
-  slNode( std::vector<T> l )
+  slNode( std::vector<T> l ) : value( l[0] )
   {
-    value = l[0];
     if( l.size() > 1 ) next = new slNode( std::vector<T>( l.begin() + 1, l.end() ) );
     else
       next = nullptr;
@@ -56,20 +51,17 @@ template<typename T>
 class slList
 {
 public:
-  slNode<T> * head;
-  slNode<T> * tail;
+  slNode<T> * head { nullptr };
+  slNode<T> * tail { nullptr };
 
   slList()
   {
-    head = nullptr;
-    tail = nullptr;
+    
+    
   }
 
-  slList( std::vector<T> l )
+  slList( std::vector<T> l ) : head( nullptr ), tail( nullptr )
   {
-    head = nullptr;
-    tail = nullptr;
-
     for( T i : l ) { add( new slNode( i ) ); }
   }
 

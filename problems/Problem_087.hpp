@@ -43,9 +43,8 @@ struct mapNode
   std::vector<std::set<mapNode *>> edges;
   char                             val;
 
-  mapNode( char value = ' ' )
+  mapNode( char value = ' ' ) : val( value )
   {
-    val = value;
     for( int i = 0; i < 4; i++ ) { edges.emplace_back(); }
   }
 };

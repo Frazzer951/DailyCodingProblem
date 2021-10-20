@@ -25,7 +25,7 @@ inline std::pair<std::string, std::string> getAirportPair( const std::vector<std
   {
     if( flight.first == first ) return flight;
   }
-  return std::pair<std::string, std::string>();
+  return {};
 }
 
 inline int getPairIndex( std::vector<std::pair<std::string, std::string>> v,
@@ -47,7 +47,7 @@ inline std::vector<std::string> getItinerary( std::vector<std::pair<std::string,
   while( !v.empty() )
   {
     auto flight = getAirportPair( v, next );
-    if( flight.first.empty() && flight.second.empty() ) return std::vector<std::string>();
+    if( flight.first.empty() && flight.second.empty() ) return {};
     v.erase( v.begin() + getPairIndex( v, flight ) );
     next = flight.second;
     itinerary.push_back( next );

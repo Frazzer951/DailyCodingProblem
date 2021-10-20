@@ -27,14 +27,15 @@ struct lbtNode
   lbtNode * left;
   lbtNode * right;
 
-  lbtNode( int val )
+  lbtNode( int val ) :
+    value( val ), lockedSubNodes( 0 ), locked( false ), parent( nullptr ), left( nullptr ), right( nullptr )
   {
-    value          = val;
-    lockedSubNodes = 0;
-    locked         = false;
-    parent         = nullptr;
-    left           = nullptr;
-    right          = nullptr;
+    
+    
+    
+    
+    
+    
   }
 
   void setLeft( lbtNode * node )

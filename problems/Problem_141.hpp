@@ -18,8 +18,8 @@ class Stack:
 
 class Stack
 {
-  std::size_t      size;
-  std::size_t      s0;
+  std::size_t      size { 10 };
+  std::size_t      s0 { 0 };
   std::size_t      s1;
   std::size_t      s2;
   std::vector<int> list;
@@ -27,9 +27,8 @@ class Stack
 public:
   Stack()
   {
-    size = 10;
     list = std::vector( size, 0 );
-    s0   = 0;                  // Grows up
+    // s0 Grows up
     s1   = list.size() / 2;    // Grows up
     s2   = list.size() - 1;    // Grows down
   }

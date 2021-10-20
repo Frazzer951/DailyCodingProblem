@@ -16,11 +16,7 @@ struct xNode
   int     val;
   xNode * both;
 
-  xNode( int value )
-  {
-    val  = value;
-    both = nullptr;
-  }
+  xNode( int value ) : val( value ), both( nullptr ) {}
 };
 
 inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
@@ -28,13 +24,13 @@ inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) 
 class xor_list
 {
 public:
-  xNode * head;
-  xNode * tail;
+  xNode * head { nullptr };
+  xNode * tail { nullptr };
 
   xor_list()
   {
-    head = nullptr;
-    tail = nullptr;
+    
+    
   }
 
   void add( xNode * node )

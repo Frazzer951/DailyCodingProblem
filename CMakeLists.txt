@@ -67,3 +67,16 @@ target_link_libraries(${PROJECT_NAME} PUBLIC gtest_main)
 gtest_discover_tests(${PROJECT_NAME})
 
 target_clangformat_setup(${PROJECT_NAME})
+
+add_custom_target(clangtidy
+    COMMAND
+      clang-tidy
+      -p ./build
+      --fix-notes
+      --fix-errors
+      ./src/*
+    WORKING_DIRECTORY
+      ${CMAKE_SOURCE_DIR}
+    COMMENT
+      "Running Clang Tidy..."
+  )

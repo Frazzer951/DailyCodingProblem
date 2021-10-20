@@ -25,12 +25,13 @@ struct LLNode
   LLNode *    prev;
   LLNode *    next;
 
-  LLNode( std::string _key, std::string _val )
+  LLNode( std::string _key, std::string _val ) :
+    key( std::move( _key ) ), val( std::move( _val ) ), prev( nullptr ), next( nullptr )
   {
-    key  = std::move( _key );
-    val  = std::move( _val );
-    prev = nullptr;
-    next = nullptr;
+    
+    
+    
+    
   }
 };
 
@@ -77,7 +78,7 @@ struct LRUCache
   std::map<std::string, LLNode *> dict;
   LinkedList                      list;
 
-  LRUCache( int _n ) { n = _n; }
+  LRUCache( int _n ) : n( _n ) {}
 
   void set( const std::string & key, std::string val )
   {

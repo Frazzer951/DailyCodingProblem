@@ -25,13 +25,7 @@ public:
   Node * left;
   Node * right;
 
-  Node( int val )
-  {
-    data = val;
-
-    left  = nullptr;
-    right = nullptr;
-  }
+  Node( int val ) : data( val ), left( nullptr ), right( nullptr ) {}
 };
 
 inline bool sameChildren( Node * root )
