@@ -27,11 +27,7 @@ public:
   xNode * head { nullptr };
   xNode * tail { nullptr };
 
-  xor_list()
-  {
-    
-    
-  }
+  xor_list() = default;
 
   void add( xNode * node )
   {

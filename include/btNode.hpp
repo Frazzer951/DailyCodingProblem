@@ -10,11 +10,7 @@ struct btNode
   btNode * right;
 
   btNode( T x, btNode<T> * _left = nullptr, btNode<T> * _right = nullptr ) : value( x ), left( _left ), right( _right )
-  {
-    
-    
-    
-  }
+  {}
 };
 
 template<typename T>

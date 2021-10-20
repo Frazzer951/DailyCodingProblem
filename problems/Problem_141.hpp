@@ -29,8 +29,8 @@ public:
   {
     list = std::vector( size, 0 );
     // s0 Grows up
-    s1   = list.size() / 2;    // Grows up
-    s2   = list.size() - 1;    // Grows down
+    s1 = list.size() / 2;    // Grows up
+    s2 = list.size() - 1;    // Grows down
   }
 
   int pop( int stack_number )

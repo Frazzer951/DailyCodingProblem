@@ -54,11 +54,7 @@ public:
   slNode<T> * head { nullptr };
   slNode<T> * tail { nullptr };
 
-  slList()
-  {
-    
-    
-  }
+  slList() = default;
 
   slList( std::vector<T> l ) : head( nullptr ), tail( nullptr )
   {
