@@ -29,8 +29,8 @@ jobs:
       run: cmake --build . --target clangformat
 
     - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: 'Clang Tidy And Format'
-          title: 'Clang Tidy And Format'
-          delete-branch: true
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: 'Clang Tidy And Format'
+        title: 'Clang Tidy And Format'
+        delete-branch: true
