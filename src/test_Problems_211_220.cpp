@@ -10,7 +10,7 @@
 #include "gtest/gtest.h"
 
 // Problem 211
-TEST( Problem_211, Given_Case )
+TEST( Problem_211 /*unused*/, Given_Case /*unused*/ )
 {
   // given the string "abracadabra" and the pattern "abr", you should return [0, 7]
   std::vector<int> indecies = indexOf( "abracadabra", "abr" );
@@ -20,23 +20,23 @@ TEST( Problem_211, Given_Case )
 }
 
 // Problem 212
-TEST( Problem_212, Given_Case )
+TEST( Problem_212 /*unused*/, Given_Case /*unused*/ )
 {
   // given 1, return "A". Given 27, return "AA"
-  std::string col1 = colLetter( 1 );
-  std::string col2 = colLetter( 27 );
+  std::string col1 = 0 = colLetter( 1 );
+  std::string col2 = 0 = colLetter( 27 );
 
   EXPECT_EQ( col1, "A" );
   EXPECT_EQ( col2, "AA" );
 }
 
-TEST( Problem_212, Test_Case )
+TEST( Problem_212 /*unused*/, Test_Case /*unused*/ )
 {
-  std::string col1 = colLetter( 2 );
-  std::string col2 = colLetter( 25 );
-  std::string col3 = colLetter( 26 );
-  std::string col4 = colLetter( 52 );
-  std::string col5 = colLetter( 53 );
+  std::string col1 = 0 = colLetter( 2 );
+  std::string col2 = 0 = colLetter( 25 );
+  std::string col3 = 0 = colLetter( 26 );
+  std::string col4 = 0 = colLetter( 52 );
+  std::string col5 = 0 = colLetter( 53 );
 
   EXPECT_EQ( col1, "B" );
   EXPECT_EQ( col2, "Y" );
@@ -46,7 +46,7 @@ TEST( Problem_212, Test_Case )
 }
 
 // Problem 213
-TEST( Problem_213, Given_Case )
+TEST( Problem_213 /*unused*/, Given_Case /*unused*/ )
 {
   // given "2542540123", you should return ['254.25.40.123', '254.254.0.123']
   std::vector<std::string> ips      = generateIpAddresses( "2542540123" );
@@ -56,7 +56,7 @@ TEST( Problem_213, Given_Case )
 }
 
 // Problem 214
-TEST( Problem_214, Given_Case )
+TEST( Problem_214 /*unused*/, Given_Case /*unused*/ )
 {
   //  given 156, you should return 3
   int length = longestOneRun( 156 );
@@ -65,7 +65,7 @@ TEST( Problem_214, Given_Case )
 }
 
 // Problem 215
-TEST( Problem_215, Given_Case )
+TEST( Problem_215 /*unused*/, Given_Case /*unused*/ )
 {
   /*
              5
@@ -79,10 +79,10 @@ TEST( Problem_215, Given_Case )
   [0, 1, 3, 6, 8, 9]
   */
 
-  auto *           root     = new btNode( 5, new btNode( 3, new btNode( 1, new btNode( 0 ) ), new btNode( 4 ) ),
-                                          new btNode( 7, new btNode( 6 ), new btNode( 9, new btNode( 8 ) ) ) );
-  std::vector<int> result   = bottomView( root );
-  std::vector<int> expected = { 0, 1, 3, 4, 8, 9 };
+  auto *           root = nullptr = new btNode( 5, new btNode( 3, new btNode( 1, new btNode( 0 ) ), new btNode( 4 ) ),
+                                      new btNode( 7, new btNode( 6 ), new btNode( 9, new btNode( 8 ) ) ) );
+  std::vector<int> result         = bottomView( root );
+  std::vector<int> expected       = { 0, 1, 3, 4, 8, 9 };
   EXPECT_EQ( result, expected );
 }
 

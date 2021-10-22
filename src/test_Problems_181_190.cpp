@@ -12,7 +12,7 @@
 #include "gtest/gtest.h"
 
 // Problem 181
-TEST( Problem_181, Given_Case_1 )
+TEST( Problem_181 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // Given the input string racecarannakayak, return ["racecar", "anna", "kayak"].
 
@@ -22,7 +22,7 @@ TEST( Problem_181, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_181, Given_Case_2 )
+TEST( Problem_181 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given the input string abc, return ["a", "b", "c"].
 
@@ -33,12 +33,12 @@ TEST( Problem_181, Given_Case_2 )
 }
 
 // Problem 182
-TEST( Problem_182, Test_Case_1 )
+TEST( Problem_182 /*unused*/, Test_Case_1 /*unused*/ )
 {
-  auto * n1 = new gNode { 1, {} };
-  auto * n2 = new gNode { 2, {} };
-  auto * n3 = new gNode { 3, {} };
-  auto * n4 = new gNode { 4, {} };
+  auto * n1 = nullptr = new gNode { 1, {} };
+  auto * n2 = nullptr = new gNode { 2, {} };
+  auto * n3 = nullptr = new gNode { 3, {} };
+  auto * n4 = nullptr = new gNode { 4, {} };
   n1->connections.push_back( n2 );
   n1->connections.push_back( n4 );
   n2->connections.push_back( n1 );
@@ -51,12 +51,12 @@ TEST( Problem_182, Test_Case_1 )
   EXPECT_FALSE( isMinimallyConnected( n1 ) );
 }
 
-TEST( Problem_182, Test_Case_2 )
+TEST( Problem_182 /*unused*/, Test_Case_2 /*unused*/ )
 {
-  auto * n1 = new gNode { 1, {} };
-  auto * n2 = new gNode { 2, {} };
-  auto * n3 = new gNode { 3, {} };
-  auto * n4 = new gNode { 4, {} };
+  auto * n1 = nullptr = new gNode { 1, {} };
+  auto * n2 = nullptr = new gNode { 2, {} };
+  auto * n3 = nullptr = new gNode { 3, {} };
+  auto * n4 = nullptr = new gNode { 4, {} };
   n1->connections.push_back( n2 );
   n2->connections.push_back( n1 );
   n2->connections.push_back( n3 );
@@ -68,7 +68,7 @@ TEST( Problem_182, Test_Case_2 )
 }
 
 // Problem 184
-TEST( Problem_184, Given_Case )
+TEST( Problem_184 /*unused*/, Given_Case /*unused*/ )
 {
   // Given [42, 56, 14], return 14
   int result = greatestCommonDenominator( { 42, 56, 14 } );
@@ -76,7 +76,7 @@ TEST( Problem_184, Given_Case )
   EXPECT_EQ( result, 14 );
 }
 
-TEST( Problem_184, Test_Case )
+TEST( Problem_184 /*unused*/, Test_Case /*unused*/ )
 {
   int result = greatestCommonDenominator( { 8, 12, 20 } );
 
@@ -84,7 +84,7 @@ TEST( Problem_184, Test_Case )
 }
 
 // Problem 185
-TEST( Problem_185, Given_Case )
+TEST( Problem_185 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   {
@@ -100,26 +100,26 @@ TEST( Problem_185, Given_Case )
   return 6.
   */
 
-  Rect r1 = { { 1, 4 }, { 3, 3 } };
-  Rect r2 = { { 0, 5 }, { 4, 3 } };
+  Rect r1 = 0 = { { 1, 4 }, { 3, 3 } };
+  Rect r2 = 0 = { { 0, 5 }, { 4, 3 } };
 
-  int area = intersectArea( r1, r2 );
+  int area = 0 = intersectArea( r1, r2 );
 
   EXPECT_EQ( area, 6 );
 }
 
-TEST( Problem_185, Test_Case )
+TEST( Problem_185 /*unused*/, Test_Case /*unused*/ )
 {
-  Rect r1 = { { 0, 0 }, { 2, 2 } };
-  Rect r2 = { { 2, 5 }, { 4, 3 } };
+  Rect r1 = 0 = { { 0, 0 }, { 2, 2 } };
+  Rect r2 = 0 = { { 2, 5 }, { 4, 3 } };
 
-  int area = intersectArea( r1, r2 );
+  int area = 0 = intersectArea( r1, r2 );
 
   EXPECT_EQ( area, 0 );
 }
 
 // Problem 187
-TEST( Problem_187, Given_Case )
+TEST( Problem_187 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   Given:
@@ -144,7 +144,7 @@ TEST( Problem_187, Given_Case )
 }
 
 // Problem 189
-TEST( Problem_189, Test_Case )
+TEST( Problem_189 /*unused*/, Test_Case /*unused*/ )
 {
   // Given [5, 1, 3, 5, 2, 3, 4, 1] return 5
 
@@ -154,13 +154,13 @@ TEST( Problem_189, Test_Case )
 }
 
 // Problem 190
-TEST( Problem_190, Given_Case_1 )
+TEST( Problem_190 /*unused*/, Given_Case_1 /*unused*/ )
 {
   std::vector<int> arr = { 8, -1, 3, 4 };
   EXPECT_EQ( maxCircSubArray( arr ), 15 );
 }
 
-TEST( Problem_190, Given_Case_2 )
+TEST( Problem_190 /*unused*/, Given_Case_2 /*unused*/ )
 {
   std::vector<int> arr = { -4, 5, 1, 0 };
   EXPECT_EQ( maxCircSubArray( arr ), 6 );

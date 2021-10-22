@@ -12,7 +12,7 @@
 #include "gtest/gtest.h"
 
 // Problem 41
-TEST( Problem_41, Given_Case_1 )
+TEST( Problem_41 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // Given [('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')] and starting airport 'YUL',
   // return ['YUL', 'YYZ', 'SFO', 'HKO', 'ORD'].
@@ -28,7 +28,7 @@ TEST( Problem_41, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_41, Given_Case_2 )
+TEST( Problem_41 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 'COM', return null.
 
@@ -41,7 +41,7 @@ TEST( Problem_41, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_41, Given_Case_3 )
+TEST( Problem_41 /*unused*/, Given_Case_3 /*unused*/ )
 {
   // Given [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', return ['A', 'B', 'C', 'A', 'C']
 
@@ -55,7 +55,7 @@ TEST( Problem_41, Given_Case_3 )
 }
 
 // Problem 42
-TEST( Problem_42, Given_Case )
+TEST( Problem_42 /*unused*/, Given_Case /*unused*/ )
 {
   // given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24
   auto             result   = subset_sum( { 12, 1, 61, 5, 9, 2 }, 24 );
@@ -65,55 +65,55 @@ TEST( Problem_42, Given_Case )
 }
 
 // Problem 43
-TEST( Problem_43, Test_Push )
+TEST( Problem_43 /*unused*/, Test_Push /*unused*/ )
 {
-  stack testStack;
+  stack testStack = 0;
   testStack.push( 10 );
 
   EXPECT_EQ( testStack.top->val, 10 );
 }
 
-TEST( Problem_43, Test_Pop )
+TEST( Problem_43 /*unused*/, Test_Pop /*unused*/ )
 {
-  stack testStack;
+  stack testStack = 0;
   testStack.push( 15 );
 
-  int result   = testStack.pop();
-  int expected = 15;
+  int result = 0 = testStack.pop();
+  int expected   = 15;
 
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_43, Test_Pop_Exception )
+TEST( Problem_43 /*unused*/, Test_Pop_Exception /*unused*/ )
 {
-  stack testStack;
+  stack testStack = 0;
 
   EXPECT_ANY_THROW( testStack.pop() );
 }
 
-TEST( Problem_43, Test_getMax )
+TEST( Problem_43 /*unused*/, Test_getMax /*unused*/ )
 {
-  stack testStack;
+  stack testStack = 0;
   testStack.push( 15 );
   testStack.push( 18 );
   testStack.push( 2 );
 
-  int result   = testStack.getMax();
-  int expected = 18;
+  int result = 0 = testStack.getMax();
+  int expected   = 18;
 
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_43, Test_getMax_Exception )
+TEST( Problem_43 /*unused*/, Test_getMax_Exception /*unused*/ )
 {
-  stack testStack;
-  int   x = 0;
+  stack testStack = 0;
+  int   x         = 0;
   EXPECT_ANY_THROW( x = testStack.getMax() );
   if( x == 10 ) x++;
 }
 
 // Problem 44
-TEST( Problem_44, Given_Case_1 )
+TEST( Problem_44 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4,3).
   int result   = outOfOrder( { 2, 4, 1, 3, 5 } );
@@ -122,7 +122,7 @@ TEST( Problem_44, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_44, Given_Case_2 )
+TEST( Problem_44 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.
 
@@ -133,7 +133,7 @@ TEST( Problem_44, Given_Case_2 )
 }
 
 // Problem 45
-TEST( Problem_45, Test_Case )
+TEST( Problem_45 /*unused*/, Test_Case /*unused*/ )
 {
   int result = rand7();
 
@@ -141,26 +141,26 @@ TEST( Problem_45, Test_Case )
 }
 
 // Problem 46
-TEST( Problem_46, Given_Case_1 )
+TEST( Problem_46 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // "aabcdcb" is "bcdcb"
-  std::string result   = longest_palindrome( "aabcdcb" );
-  std::string expected = "bcdcb";
+  std::string result = 0 = longest_palindrome( "aabcdcb" );
+  std::string expected = 0 = "bcdcb";
 
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_46, Given_Case_2 )
+TEST( Problem_46 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // "bananas" is "anana"
-  std::string result   = longest_palindrome( "bananas" );
-  std::string expected = "anana";
+  std::string result = 0 = longest_palindrome( "bananas" );
+  std::string expected = 0 = "anana";
 
   EXPECT_EQ( result, expected );
 }
 
 // Problem 47
-TEST( Problem_47, Given_Case )
+TEST( Problem_47 /*unused*/, Given_Case /*unused*/ )
 {
   //[9, 11, 8, 5, 7, 10], you should return 5
   int result   = max_profit( { 9, 11, 8, 5, 7, 10 } );
@@ -169,7 +169,7 @@ TEST( Problem_47, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_47, Test_Case )
+TEST( Problem_47 /*unused*/, Test_Case /*unused*/ )
 {
   int result   = max_profit( { 10, 16, 7, 18, 5, 9 } );
   int expected = 11;
@@ -178,7 +178,7 @@ TEST( Problem_47, Test_Case )
 }
 
 // Problem 48
-TEST( Problem_48, Given_Case )
+TEST( Problem_48 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given the following preorder traversal:
@@ -193,24 +193,24 @@ TEST( Problem_48, Given_Case )
   d  e f  g
   */
 
-  auto * a = new btNode( 'a' );
-  auto * b = new btNode( 'b' );
-  auto * c = new btNode( 'c' );
-  auto * d = new btNode( 'd' );
-  auto * e = new btNode( 'e' );
-  auto * f = new btNode( 'f' );
-  auto * g = new btNode( 'g' );
+  auto * a = nullptr = new btNode( 'a' );
+  auto * b = nullptr = new btNode( 'b' );
+  auto * c = nullptr = new btNode( 'c' );
+  auto * d = nullptr = new btNode( 'd' );
+  auto * e = nullptr = new btNode( 'e' );
+  auto * f = nullptr = new btNode( 'f' );
+  auto * g = nullptr = new btNode( 'g' );
 
   std::vector<btNode<char> *> preorder = { a, b, d, e, c, f, g };
   std::vector<btNode<char> *> inorder  = { d, b, e, a, f, c, g };
 
-  auto * result = reconstruct( preorder, inorder );
+  auto * result = nullptr = reconstruct( preorder, inorder );
 
   EXPECT_EQ( result, a );
 }
 
 // Problem 49
-TEST( Problem_49, Given_Case_1 )
+TEST( Problem_49 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // [34, -50, 42, 14, -5, 86], the maximum sum would be 137
   int result   = max_subarray_sum( { 34, -50, 42, 14, -5, 86 } );
@@ -219,7 +219,7 @@ TEST( Problem_49, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_49, Given_Case_2 )
+TEST( Problem_49 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // [-5, -1, -8, -9], the maximum sum would be 0
   int result   = max_subarray_sum( { -5, -1, -8, -9 } );
@@ -229,7 +229,7 @@ TEST( Problem_49, Given_Case_2 )
 }
 
 // Problem 50
-TEST( Problem_50, Given_Case )
+TEST( Problem_50 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given the following tree:
@@ -242,7 +242,7 @@ TEST( Problem_50, Given_Case )
 
   You should return 45, as it is (3 + 2) * (4 + 5).
   */
-  btNode root( '*' );
+  btNode root       = 0( '*' );
   root.left         = new btNode( '+' );
   root.right        = new btNode( '+' );
   root.left->left   = new btNode( '3' );
@@ -250,8 +250,8 @@ TEST( Problem_50, Given_Case )
   root.right->left  = new btNode( '4' );
   root.right->right = new btNode( '5' );
 
-  int result   = evaluate( root );
-  int expected = 45;
+  int result = 0 = evaluate( root );
+  int expected   = 45;
 
   EXPECT_EQ( result, expected );
 }

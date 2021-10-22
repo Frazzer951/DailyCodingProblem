@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "Problem_061.hpp"
 #include "Problem_062.hpp"
 #include "Problem_063.hpp"
@@ -12,36 +14,36 @@
 #include "gtest/gtest.h"
 
 // Problem 61
-TEST( Problem_61, Given_Case )
+TEST( Problem_61 /*unused*/, Given_Case /*unused*/ )
 {
-  double result = p61::pow( 2, 10 );
+  double result = NAN = p61::pow( 2, 10 );
 
   EXPECT_DOUBLE_EQ( 1024, result );
 }
 
-TEST( Problem_61, Test_Case )
+TEST( Problem_61 /*unused*/, Test_Case /*unused*/ )
 {
-  double result = p61::pow( 5, -5 );
+  double result = NAN = p61::pow( 5, -5 );
 
   EXPECT_DOUBLE_EQ( 0.00032, result );
 }
 
 // Problem 62
-TEST( Problem_62, Given_Case_1 )
+TEST( Problem_62 /*unused*/, Given_Case_1 /*unused*/ )
 {
   int result = num_ways( 2, 2 );
 
   EXPECT_EQ( 2, result );
 }
 
-TEST( Problem_62, Given_Case_2 )
+TEST( Problem_62 /*unused*/, Given_Case_2 /*unused*/ )
 {
   int result = num_ways( 5, 5 );
 
   EXPECT_EQ( 70, result );
 }
 
-TEST( Problem_62, Test_Case )
+TEST( Problem_62 /*unused*/, Test_Case /*unused*/ )
 {
   int result = num_ways( 2, 8 );
 
@@ -49,52 +51,52 @@ TEST( Problem_62, Test_Case )
 }
 
 // Problem 63
-TEST( Problem_63, Given_Case_1 )
+TEST( Problem_63 /*unused*/, Given_Case_1 /*unused*/ )
 {
   std::vector<std::vector<char>> letters = {
     { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
   };
 
-  bool result = findWord( letters, "FOAM" );
+  bool result = 0 = findWord( letters, "FOAM" );
 
   EXPECT_TRUE( result );
 }
 
-TEST( Problem_63, Given_Case_2 )
+TEST( Problem_63 /*unused*/, Given_Case_2 /*unused*/ )
 {
   std::vector<std::vector<char>> letters = {
     { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
   };
 
-  bool result = findWord( letters, "MASS" );
+  bool result = 0 = findWord( letters, "MASS" );
 
   EXPECT_TRUE( result );
 }
 
-TEST( Problem_63, Test_Case_1 )
+TEST( Problem_63 /*unused*/, Test_Case_1 /*unused*/ )
 {
   std::vector<std::vector<char>> letters = {
     { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
   };
 
-  bool result = findWord( letters, "ZOOM" );
+  bool result = 0 = findWord( letters, "ZOOM" );
 
   EXPECT_FALSE( result );
 }
 
-TEST( Problem_63, Test_Case_2 )
+TEST( Problem_63 /*unused*/, Test_Case_2 /*unused*/ )
 {
   std::vector<std::vector<char>> letters = {
     { 'F', 'A', 'C', 'I' }, { 'O', 'B', 'Q', 'P' }, { 'A', 'N', 'O', 'B' }, { 'M', 'A', 'S', 'S' }
   };
 
-  bool result = findWord( letters, "LAUGH" );
+  bool result = 0 = findWord( letters, "LAUGH" );
 
   EXPECT_FALSE( result );
 }
 
 // Problem 64
-TEST( Problem_64, Test_Case_1 )
+TEST( Problem_64 /*unused*/, Test_Case_1 /*unused*/ )
 {
   int result = knights_tours( 1 );
 
@@ -102,7 +104,7 @@ TEST( Problem_64, Test_Case_1 )
 }
 
 // Problem 65
-TEST( Problem_65, Given_Case )
+TEST( Problem_65 /*unused*/, Given_Case /*unused*/ )
 {
   std::vector<std::vector<int>> v = {
     { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, { 16, 17, 18, 19, 20 }
@@ -116,7 +118,7 @@ TEST( Problem_65, Given_Case )
 }
 
 // Problem 66
-TEST( Problem_66, Test_Case )
+TEST( Problem_66 /*unused*/, Test_Case /*unused*/ )
 {
   int heads = 0;
   int tails = 0;
@@ -136,7 +138,7 @@ TEST( Problem_66, Test_Case )
 
 // Problem 67
 LFUCache LFU_cache( 5 );
-TEST( Problem_67, Set )
+TEST( Problem_67 /*unused*/, Set /*unused*/ )
 {
   LFU_cache.set( "1", 1 );
   LFU_cache.set( "2", 2 );
@@ -152,25 +154,25 @@ TEST( Problem_67, Set )
 }
 
 // Problem 68
-TEST( Problem_68, Given_Case )
+TEST( Problem_68 /*unused*/, Given_Case /*unused*/ )
 {
   std::vector<std::pair<int, int>> bishops = { std::make_pair( 0, 0 ), std::make_pair( 1, 2 ), std::make_pair( 2, 2 ),
                                                std::make_pair( 4, 0 ) };
 
-  int result = pairs( bishops, 5 );
+  int result = 0 = pairs( bishops, 5 );
 
   EXPECT_EQ( 2, result );
 }
 
 // Problem 69
-TEST( Problem_69, Given_Case )
+TEST( Problem_69 /*unused*/, Given_Case /*unused*/ )
 {
   int result = largest_product_x3( { -10, -10, 5, 2 } );
 
   EXPECT_EQ( 500, result );
 }
 
-TEST( Problem_69, Test_Case )
+TEST( Problem_69 /*unused*/, Test_Case /*unused*/ )
 {
   int result = largest_product_x3( { -18, 3, 9, 4, -1, 10, 7 } );
 
@@ -178,21 +180,21 @@ TEST( Problem_69, Test_Case )
 }
 
 // Problem 70
-TEST( Problem_70, Given_Case_1 )
+TEST( Problem_70 /*unused*/, Given_Case_1 /*unused*/ )
 {
   int result = perfecet_num( 1 );
 
   EXPECT_EQ( 19, result );
 }
 
-TEST( Problem_70, Given_Case_2 )
+TEST( Problem_70 /*unused*/, Given_Case_2 /*unused*/ )
 {
   int result = perfecet_num( 2 );
 
   EXPECT_EQ( 28, result );
 }
 
-TEST( Problem_70, Test_Case )
+TEST( Problem_70 /*unused*/, Test_Case /*unused*/ )
 {
   int result = perfecet_num( 10 );
 

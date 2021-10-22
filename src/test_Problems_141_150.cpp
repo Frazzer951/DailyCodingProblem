@@ -12,9 +12,9 @@
 #include "gtest/gtest.h"
 
 // Problem 141
-TEST( Problem_141, Test_Case )
+TEST( Problem_141 /*unused*/, Test_Case /*unused*/ )
 {
-  Stack s;
+  Stack s = 0;
   s.push( 1, 0 );
   s.push( 2, 0 );
   s.push( 3, 0 );
@@ -37,7 +37,7 @@ TEST( Problem_141, Test_Case )
 }
 
 // Problem 142
-TEST( Problem_142, Given_Case )
+TEST( Problem_142 /*unused*/, Given_Case /*unused*/ )
 {
   // For example, (()* and (*) are balanced. )*( is not balanced.
 
@@ -47,7 +47,7 @@ TEST( Problem_142, Given_Case )
 }
 
 // Problem 143
-TEST( Problem_143, Given_Case )
+TEST( Problem_143 /*unused*/, Given_Case /*unused*/ )
 {
   // For example, given x = 10 and lst = [9, 12, 3, 5, 14, 10, 10], one partition may be [9, 3, 5, 10, 10, 12, 14].
 
@@ -59,7 +59,7 @@ TEST( Problem_143, Given_Case )
 }
 
 // Problem 144
-TEST( Problem_144, Given_Case )
+TEST( Problem_144 /*unused*/, Given_Case /*unused*/ )
 {
   // given [4, 1, 3, 5, 6] and index 0, you should return 3
   std::vector<int> arr   = { 4, 1, 3, 5, 6 };
@@ -69,11 +69,11 @@ TEST( Problem_144, Given_Case )
 }
 
 // Problem 145
-TEST( Problem_145, Given_Case )
+TEST( Problem_145 /*unused*/, Given_Case /*unused*/ )
 {
   // given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3
-  auto *        root   = new slNode<int>( { 1, 2, 3, 4 } );
-  slNode<int> * result = swapEveryTwo( root );
+  auto *        root = nullptr = new slNode<int>( { 1, 2, 3, 4 } );
+  slNode<int> * result = nullptr = swapEveryTwo( root );
 
   EXPECT_EQ( result->value, 2 );
   EXPECT_EQ( result->next->value, 1 );
@@ -82,7 +82,7 @@ TEST( Problem_145, Given_Case )
 }
 
 // Problem 146
-TEST( Problem_146, Given_Case )
+TEST( Problem_146 /*unused*/, Given_Case /*unused*/ )
 {
   /*
      0
@@ -101,9 +101,9 @@ TEST( Problem_146, Given_Case )
      1
   */
 
-  auto * root   = new btNode( 0, new btNode( 1 ),
-                              new btNode( 0, new btNode( 1, new btNode( 0 ), new btNode( 0 ) ), new btNode( 0 ) ) );
-  auto * result = pruneZeroBranches( root );
+  auto * root = nullptr = new btNode(
+      0, new btNode( 1 ), new btNode( 0, new btNode( 1, new btNode( 0 ), new btNode( 0 ) ), new btNode( 0 ) ) );
+  auto * result = nullptr = pruneZeroBranches( root );
 
   EXPECT_EQ( result->value, 0 );
   EXPECT_EQ( result->left->value, 1 );
@@ -112,7 +112,7 @@ TEST( Problem_146, Given_Case )
 }
 
 // Problem 147
-TEST( Problem_147, Test_Case )
+TEST( Problem_147 /*unused*/, Test_Case /*unused*/ )
 {
   std::vector<int> arr      = { 4, 1, 3, 5, 6 };
   std::vector<int> expected = { 1, 3, 4, 5, 6 };
@@ -122,7 +122,7 @@ TEST( Problem_147, Test_Case )
 }
 
 // Problem 149
-TEST( Problem_149, Given_Case )
+TEST( Problem_149 /*unused*/, Given_Case /*unused*/ )
 {
   // given L = [1, 2, 3, 4, 5], sum(1, 3) should return sum([2, 3]), which is 5.
 
@@ -133,7 +133,7 @@ TEST( Problem_149, Given_Case )
 }
 
 // Problem 150
-TEST( Problem_150, Given_Case )
+TEST( Problem_150 /*unused*/, Given_Case /*unused*/ )
 {
   // given the list of points [(0, 0), (5, 4), (3, 1)], the central point (1, 2), and k = 2, return [(0, 0), (3,1)]
 

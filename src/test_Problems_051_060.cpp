@@ -12,7 +12,7 @@
 #include "gtest/gtest.h"
 
 // Problem 51
-TEST( Problem_51, Test_Case )
+TEST( Problem_51 /*unused*/, Test_Case /*unused*/ )
 {
   std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
@@ -20,9 +20,9 @@ TEST( Problem_51, Test_Case )
 }
 
 // Problem 52
-TEST( Problem_52, set_get )
+TEST( Problem_52 /*unused*/, set_get /*unused*/ )
 {
-  LRUCache LRU_cache( 5 );
+  LRUCache LRU_cache = 0( 5 );
 
   EXPECT_NO_THROW( LRU_cache.set( "one", "1" ) );
   EXPECT_NO_THROW( LRU_cache.set( "two", "2" ) );
@@ -39,9 +39,9 @@ TEST( Problem_52, set_get )
   EXPECT_EQ( LRU_cache.get( "six" ), "6" );
 }
 
-TEST( Problem_52, CacheSizeTest )
+TEST( Problem_52 /*unused*/, CacheSizeTest /*unused*/ )
 {
-  LRUCache LRU_cache( 5 );
+  LRUCache LRU_cache = 0( 5 );
 
   EXPECT_NO_THROW( LRU_cache.set( "one", "1" ) );
   EXPECT_NO_THROW( LRU_cache.set( "two", "2" ) );
@@ -63,9 +63,9 @@ TEST( Problem_52, CacheSizeTest )
 }
 
 // Problem 53
-TEST( Problem_53, enqueue_dequeue )
+TEST( Problem_53 /*unused*/, enqueue_dequeue /*unused*/ )
 {
-  queue_s q;
+  queue_s q = 0;
 
   EXPECT_NO_THROW( q.enqueue( 1 ) );
   EXPECT_NO_THROW( q.enqueue( 2 ) );
@@ -82,7 +82,7 @@ TEST( Problem_53, enqueue_dequeue )
 }
 
 // Problem 54
-TEST( Problem_54, valid_sudoku_1 )
+TEST( Problem_54 /*unused*/, valid_sudoku_1 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                                                { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -93,7 +93,7 @@ TEST( Problem_54, valid_sudoku_1 )
   EXPECT_TRUE( valid_sudoku( test_board ) );
 }
 
-TEST( Problem_54, valid_sudoku_2 )
+TEST( Problem_54 /*unused*/, valid_sudoku_2 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 5, 3, 4, 6, 7, 8, 9, 1, 2 }, { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
                                                { 1, 9, 8, 3, 4, 2, 5, 6, 7 }, { 8, 5, 9, 7, 6, 1, 4, 2, 3 },
@@ -104,7 +104,7 @@ TEST( Problem_54, valid_sudoku_2 )
   EXPECT_TRUE( valid_sudoku( test_board ) );
 }
 
-TEST( Problem_54, invalid_sudoku_1 )
+TEST( Problem_54 /*unused*/, invalid_sudoku_1 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 1, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                                                { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -115,7 +115,7 @@ TEST( Problem_54, invalid_sudoku_1 )
   EXPECT_FALSE( valid_sudoku( test_board ) );
 }
 
-TEST( Problem_54, invalid_sudoku_2 )
+TEST( Problem_54 /*unused*/, invalid_sudoku_2 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 2, 0, 0, 0, 0, 0, 0, 0, 2 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                                                { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -126,7 +126,7 @@ TEST( Problem_54, invalid_sudoku_2 )
   EXPECT_FALSE( valid_sudoku( test_board ) );
 }
 
-TEST( Problem_54, invalid_sudoku_3 )
+TEST( Problem_54 /*unused*/, invalid_sudoku_3 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 3, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                                                { 0, 0, 3, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -137,7 +137,7 @@ TEST( Problem_54, invalid_sudoku_3 )
   EXPECT_FALSE( valid_sudoku( test_board ) );
 }
 
-TEST( Problem_54, test_case_1 )
+TEST( Problem_54 /*unused*/, test_case_1 /*unused*/ )
 {
   std::vector<std::vector<int>> test_board = { { 0, 0, 4, 6, 0, 8, 9, 1, 2 }, { 0, 7, 2, 0, 0, 0, 3, 4, 8 },
                                                { 1, 0, 0, 3, 4, 2, 5, 0, 7 }, { 0, 5, 9, 7, 0, 1, 4, 2, 0 },
@@ -158,21 +158,21 @@ TEST( Problem_54, test_case_1 )
 
 // Problem 55
 URLShortener urls;
-TEST( Problem_55, shorten_restore )
+TEST( Problem_55 /*unused*/, shorten_restore /*unused*/ )
 {
-  std::string url    = "www.google.com";
-  std::string result = urls.restore( urls.shorten( url ) );
+  std::string url = 0 = "www.google.com";
+  std::string result = 0 = urls.restore( urls.shorten( url ) );
 
   EXPECT_EQ( result, url );
 }
 
-TEST( Problem_55, shorten_same_url )
+TEST( Problem_55 /*unused*/, shorten_same_url /*unused*/ )
 {
-  std::string url       = "www.frazzer.net";
-  std::string shorten_1 = urls.shorten( url );
-  std::string shorten_2 = urls.shorten( url );
-  std::string restore_1 = urls.restore( shorten_1 );
-  std::string restore_2 = urls.restore( shorten_2 );
+  std::string url = 0   = "www.frazzer.net";
+  std::string shorten_1 = 0 = urls.shorten( url );
+  std::string shorten_2 = 0 = urls.shorten( url );
+  std::string restore_1 = 0 = urls.restore( shorten_1 );
+  std::string restore_2 = 0 = urls.restore( shorten_2 );
 
   EXPECT_EQ( shorten_1, shorten_2 );
   EXPECT_EQ( url, restore_1 );
@@ -180,13 +180,13 @@ TEST( Problem_55, shorten_same_url )
 }
 
 // Problem 56
-TEST( Problem_56, Test_Case )
+TEST( Problem_56 /*unused*/, Test_Case /*unused*/ )
 {
   // Even with the solution I'm still lost, so I'm skipping this one
 }
 
 // Problem 57
-TEST( Problem_57, Given_Case )
+TEST( Problem_57 /*unused*/, Given_Case /*unused*/ )
 {
   // given the string "the quick brown fox jumps over the lazy dog" and k = 10,
   // you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"].
@@ -198,7 +198,7 @@ TEST( Problem_57, Given_Case )
 }
 
 // Problem 58
-TEST( Problem_58, Given_Case )
+TEST( Problem_58 /*unused*/, Given_Case /*unused*/ )
 {
   // Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
 
@@ -208,13 +208,13 @@ TEST( Problem_58, Given_Case )
 }
 
 // Problem 59
-TEST( Problem_59, Test_Case )
+TEST( Problem_59 /*unused*/, Test_Case /*unused*/ )
 {
   // I'm not learning networking for this
 }
 
 // Problem 60
-TEST( Problem_60, Given_Case_1 )
+TEST( Problem_60 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // For example, given the multiset {15, 5, 20, 10, 35, 15, 10},
   // it would return true, since we can split it up into
@@ -225,7 +225,7 @@ TEST( Problem_60, Given_Case_1 )
   EXPECT_TRUE( result );
 }
 
-TEST( Problem_60, Given_Case_2 )
+TEST( Problem_60 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given the multiset {15, 5, 20, 10, 35}, it would return false,
   // since we can't split it up into two subsets that add up to the same sum.

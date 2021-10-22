@@ -12,7 +12,7 @@
 #include "gtest/gtest.h"
 
 // Problem 92
-TEST( Problem_92, Given_Case )
+TEST( Problem_92 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given {'CSC300': ['CSC100', 'CSC200'],
@@ -32,9 +32,9 @@ TEST( Problem_92, Given_Case )
 }
 
 // Problem 93
-TEST( Problem_93, Test_Case_1 )
+TEST( Problem_93 /*unused*/, Test_Case_1 /*unused*/ )
 {
-  auto * root = new btNode( 'f' );
+  auto * root = nullptr = new btNode( 'f' );
 
   root->left             = new btNode( 'g' );
   root->left->left       = new btNode( 'e' );
@@ -47,17 +47,17 @@ TEST( Problem_93, Test_Case_1 )
   root->right->left         = new btNode( 'b' );
   root->right->right->left  = new btNode( 'c' );
 
-  btNode<char> * result      = largest_subBST( root );
-  int            result_size = largest_subBST_size( root );
+  btNode<char> * result = nullptr = largest_subBST( root );
+  int            result_size = 0 = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );
 }
 
 // Problem 94
-TEST( Problem_94, Test_Case )
+TEST( Problem_94 /*unused*/, Test_Case /*unused*/ )
 {
-  auto * root              = new btNode( 10 );
+  auto * root = nullptr    = new btNode( 10 );
   root->left               = new btNode( 6 );
   root->left->left         = new btNode( -3 );
   root->left->left->right  = new btNode( 3 );
@@ -67,13 +67,13 @@ TEST( Problem_94, Test_Case )
   root->right->right       = new btNode( 9 );
   root->right->right->left = new btNode( 2 );
 
-  int result = max_path_sum( root );
+  int result = 0 = max_path_sum( root );
 
   EXPECT_EQ( 28, result );
 }
 
 // Problem 95
-TEST( Problem_95, Given_Case_1 )
+TEST( Problem_95 /*unused*/, Given_Case_1 /*unused*/ )
 {
   /*
   the list [1,2,3] should return [1,3,2].
@@ -85,7 +85,7 @@ TEST( Problem_95, Given_Case_1 )
   EXPECT_EQ( expected, nums );
 }
 
-TEST( Problem_95, Given_Case_2 )
+TEST( Problem_95 /*unused*/, Given_Case_2 /*unused*/ )
 {
   /*
   The list [1,3,2] should return [2,1,3].
@@ -97,7 +97,7 @@ TEST( Problem_95, Given_Case_2 )
   EXPECT_EQ( expected, nums );
 }
 
-TEST( Problem_95, Given_Case_3 )
+TEST( Problem_95 /*unused*/, Given_Case_3 /*unused*/ )
 {
   /*
   The list [3,2,1] should return [1,2,3].
@@ -110,7 +110,7 @@ TEST( Problem_95, Given_Case_3 )
 }
 
 // Problem 96
-TEST( Problem_96, Given_Case )
+TEST( Problem_96 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given [1,2,3], return
@@ -126,7 +126,7 @@ TEST( Problem_96, Given_Case )
 }
 
 // Problem 97
-TEST( Problem_97, Given_Case )
+TEST( Problem_97 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   d.set(1, 1, 0) # set key 1 to value 1 at time 0
@@ -141,7 +141,7 @@ TEST( Problem_97, Given_Case )
   d.get(1, 0) # get key 1 at time 0 should be 2
   */
 
-  MultiTimeMap d;
+  MultiTimeMap d = 0;
 
   d.set( 1, 1, 0 );                  // set key 1 to value 1 at time 0
   d.set( 1, 2, 2 );                  // set key 1 to value 2 at time 2
@@ -156,7 +156,7 @@ TEST( Problem_97, Given_Case )
 }
 
 // Problem 98
-TEST( Problem_98, Given_Case )
+TEST( Problem_98 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   [
@@ -177,7 +177,7 @@ TEST( Problem_98, Given_Case )
 }
 
 // Problem 99
-TEST( Problem_99, Given_Case )
+TEST( Problem_99 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given [100, 4, 200, 1, 3, 2],
@@ -186,12 +186,12 @@ TEST( Problem_99, Given_Case )
   */
 
   std::vector<int> arr    = { 100, 4, 200, 1, 3, 2 };
-  int              result = findLongestConseqSubseq( arr );
+  int              result = 0 = findLongestConseqSubseq( arr );
   EXPECT_EQ( 4, result );
 }
 
 // Problem 100
-TEST( Problem_100, Given_Case )
+TEST( Problem_100 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   Input: [(0, 0), (1, 1), (1, 2)]
@@ -200,7 +200,7 @@ TEST( Problem_100, Given_Case )
 
   std::vector<std::pair<int, int>> points = { std::make_pair( 0, 0 ), std::make_pair( 1, 1 ), std::make_pair( 1, 2 ) };
 
-  int result = minSteps( points );
+  int result = 0 = minSteps( points );
 
   EXPECT_EQ( 2, result );
 }

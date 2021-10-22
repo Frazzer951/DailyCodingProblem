@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "Problem_161.hpp"
 #include "Problem_162.hpp"
 #include "Problem_163.hpp"
@@ -12,7 +14,7 @@
 #include "gtest/gtest.h"
 
 // Problem 161
-TEST( Problem_161, Given_Case )
+TEST( Problem_161 /*unused*/, Given_Case /*unused*/ )
 {
   // given 1111 0000 1111 0000 1111 0000 1111 0000, return 0000 1111 0000 1111 0000 1111 0000 1111
   long int x      = 0xF0F0F0F0;
@@ -22,7 +24,7 @@ TEST( Problem_161, Given_Case )
 }
 
 // Problem 162
-TEST( Problem_162, Given_Case )
+TEST( Problem_162 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   given the list:
@@ -48,31 +50,31 @@ TEST( Problem_162, Given_Case )
 }
 
 // Problem 163
-TEST( Problem_163, Given_Case )
+TEST( Problem_163 /*unused*/, Given_Case /*unused*/ )
 {
   // [15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-'] should return 5, since it is equivalent to
   // ( ( 15 / ( 7 - ( 1 + 1 ) ) ) * 3 ) - ( 2 + ( 1 + 1 ) ) = 5.
 
   std::vector<std::string> equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
-  double                   result   = solve( equation );
+  double                   result = NAN = solve( equation );
   EXPECT_DOUBLE_EQ( result, 5.0 );
 }
 
 // Problem 164
-TEST( Problem_164, Test_Case_1 )
+TEST( Problem_164 /*unused*/, Test_Case_1 /*unused*/ )
 {
   std::vector<int> arr = { 1, 2, 3, 4, 3, 5, 6, 7, 8, 9 };
   EXPECT_EQ( findDuplicate( arr ), 3 );
 }
 
-TEST( Problem_164, Test_Case_2 )
+TEST( Problem_164 /*unused*/, Test_Case_2 /*unused*/ )
 {
   std::vector<int> arr = { 1, 2, 3, 4, 9, 5, 6, 7, 8, 9 };
   EXPECT_EQ( findDuplicate( arr ), 9 );
 }
 
 // Problem 165
-TEST( Problem_165, Given_Case )
+TEST( Problem_165 /*unused*/, Given_Case /*unused*/ )
 {
   std::vector<int> arr      = { 3, 4, 9, 6, 1 };
   std::vector<int> expected = { 1, 1, 2, 1, 0 };
@@ -81,7 +83,7 @@ TEST( Problem_165, Given_Case )
 }
 
 // Problem 166
-TEST( Problem_166, Given_Case )
+TEST( Problem_166 /*unused*/, Given_Case /*unused*/ )
 {
   // For example, given the input [[1, 2], [3], [], [4, 5, 6]], calling next() repeatedly should output 1, 2, 3, 4,
   // 5, 6.
@@ -107,7 +109,7 @@ TEST( Problem_166, Given_Case )
 }
 
 // Problem 167
-TEST( Problem_167, Given_Case )
+TEST( Problem_167 /*unused*/, Given_Case /*unused*/ )
 {
   // given the list ["code", "edoc", "da", "d"], return [(0, 1), (1, 0), (2, 3)]
 
@@ -119,7 +121,7 @@ TEST( Problem_167, Given_Case )
 }
 
 // Problem 168
-TEST( Problem_168, Given_Case )
+TEST( Problem_168 /*unused*/, Given_Case /*unused*/ )
 {
   /*
     [[1, 2, 3],
@@ -139,12 +141,12 @@ TEST( Problem_168, Given_Case )
 }
 
 // Problem 169
-TEST( Problem_169, Given_Case )
+TEST( Problem_169 /*unused*/, Given_Case /*unused*/ )
 {
   // the linked list 4 -> 1 -> -3 -> 99 should become -3 -> 1 -> 4 -> 99
 
-  LNode * a        = nullptr;
-  LNode * expected = nullptr;
+  LNode * a = nullptr = nullptr;
+  LNode * expected = nullptr = nullptr;
 
   push( &a, 99 );
   push( &a, -3 );
@@ -162,7 +164,7 @@ TEST( Problem_169, Given_Case )
 }
 
 // Problem 170
-TEST( Problem_170, Given_Case_1 )
+TEST( Problem_170 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // given start = "dog", end = "cat", and dictionary = {"dot", "dop", "dat", "cat"}, return ["dog", "dot", "dat",
   // "cat"].
@@ -174,7 +176,7 @@ TEST( Problem_170, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_170, Given_Case_2 )
+TEST( Problem_170 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given start = "dog", end = "cat", and dictionary = {"dot", "tod", "dat", "dar"}, return {}
 

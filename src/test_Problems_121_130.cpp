@@ -12,20 +12,20 @@
 #include "gtest/gtest.h"
 
 // Problem 121
-TEST( Problem_121, Given_Case ) { EXPECT_TRUE( k_palindrome( "waterrfetawx", 2 ) ); }
+TEST( Problem_121 /*unused*/, Given_Case /*unused*/ ) { EXPECT_TRUE( k_palindrome( "waterrfetawx", 2 ) ); }
 
 // Problem 122
-TEST( Problem_122, Given_Case )
+TEST( Problem_122 /*unused*/, Given_Case /*unused*/ )
 {
   std::vector<std::vector<int>> coins = { { 0, 3, 1, 1 }, { 2, 0, 0, 4 }, { 1, 5, 3, 1 } };
 
-  int result = maxCoins( coins );
+  int result = 0 = maxCoins( coins );
 
   EXPECT_EQ( 12, result );
 }
 
 // Problem 123
-TEST( Problem_123, Test_Case )
+TEST( Problem_123 /*unused*/, Test_Case /*unused*/ )
 {
   /*
   True:
@@ -60,7 +60,7 @@ TEST( Problem_123, Test_Case )
 }
 
 // Problem 124
-TEST( Problem_124, Test_Case )
+TEST( Problem_124 /*unused*/, Test_Case /*unused*/ )
 {
   EXPECT_DOUBLE_EQ( 0, expected_tosses( 1 ) );
   EXPECT_DOUBLE_EQ( 1, expected_tosses( 2 ) );
@@ -68,7 +68,7 @@ TEST( Problem_124, Test_Case )
 }
 
 // Problem 125
-TEST( Problem_125, Given_Case )
+TEST( Problem_125 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given the following tree and K of 20
@@ -81,7 +81,7 @@ TEST( Problem_125, Given_Case )
   Return the nodes 5 and 15.
   */
 
-  auto * root = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
+  auto * root = nullptr = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
 
   auto result   = two_sum( root, 20 );
   auto expected = std::make_pair( root->left, root->right );
@@ -89,7 +89,7 @@ TEST( Problem_125, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_125, Test_Case )
+TEST( Problem_125 /*unused*/, Test_Case /*unused*/ )
 {
   /*
   For example, given the following tree and K of 21
@@ -102,7 +102,7 @@ TEST( Problem_125, Test_Case )
   Return the nodes 10 and 11.
   */
 
-  auto * root = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
+  auto * root = nullptr = new btNode( 10, new btNode( 5 ), new btNode( 15, new btNode( 11 ), new btNode( 15 ) ) );
 
   auto result   = two_sum( root, 21 );
   auto expected = std::make_pair( root, root->right->left );
@@ -111,7 +111,7 @@ TEST( Problem_125, Test_Case )
 }
 
 // Problem 126
-TEST( Problem_126, Given_Case )
+TEST( Problem_126 /*unused*/, Given_Case /*unused*/ )
 {
   // [1, 2, 3, 4, 5, 6] rotated by two becomes [3, 4, 5, 6, 1, 2].
   std::vector<int> v        = { 1, 2, 3, 4, 5, 6 };
@@ -122,7 +122,7 @@ TEST( Problem_126, Given_Case )
 }
 
 // Problem 127
-TEST( Problem_127, Given_Case )
+TEST( Problem_127 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given:
@@ -132,15 +132,15 @@ TEST( Problem_127, Given_Case )
   4 -> 2 -> 1
   */
 
-  auto *      x      = new slNode<int>( { 9, 9 } );
-  auto *      y      = new slNode<int>( { 5, 2 } );
-  slNode<int> result = *sum( x, y );
+  auto *      x = nullptr = new slNode<int>( { 9, 9 } );
+  auto *      y = nullptr = new slNode<int>( { 5, 2 } );
+  slNode<int> result = 0 = *sum( x, y );
   slNode<int> expected( { 4, 2, 1 } );
 
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_127, Test_Case )
+TEST( Problem_127 /*unused*/, Test_Case /*unused*/ )
 {
   /*
   For example, given:
@@ -150,16 +150,16 @@ TEST( Problem_127, Test_Case )
   8 -> 9 -> 0 -> 1
   */
 
-  auto *      x      = new slNode<int>( { 9, 9 } );
-  auto *      y      = new slNode<int>( { 9, 9, 9 } );
-  slNode<int> result = *sum( x, y );
+  auto *      x = nullptr = new slNode<int>( { 9, 9 } );
+  auto *      y = nullptr = new slNode<int>( { 9, 9, 9 } );
+  slNode<int> result = 0 = *sum( x, y );
   slNode<int> expected( { 8, 9, 0, 1 } );
 
   EXPECT_EQ( result, expected );
 }
 
 // Problem 128
-TEST( Problem_128, Given_Case )
+TEST( Problem_128 /*unused*/, Given_Case /*unused*/ )
 {
   /*
     For example, with n = 3, we can do this in 7 moves:
@@ -182,7 +182,7 @@ TEST( Problem_128, Given_Case )
 }
 
 // Problem 129
-TEST( Problem_129, Given_Case )
+TEST( Problem_129 /*unused*/, Given_Case /*unused*/ )
 {
   double result = squareroot( 9 );
 
@@ -190,14 +190,14 @@ TEST( Problem_129, Given_Case )
 }
 
 // Problem 130
-TEST( Problem_130, Given_Case )
+TEST( Problem_130 /*unused*/, Given_Case /*unused*/ )
 {
   // [5, 2, 4, 0, 1] k = 2
   // Return 3
 
   std::vector<int> stocks = { 5, 2, 4, 0, 1 };
 
-  int result = stonks( stocks, 2 );
+  int result = 0 = stonks( stocks, 2 );
 
   EXPECT_EQ( result, 3 );
 }

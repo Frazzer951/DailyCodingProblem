@@ -1,3 +1,4 @@
+#include <math.h>
 #include <numeric>
 
 #include "Problem_171.hpp"
@@ -14,7 +15,7 @@
 #include "gtest/gtest.h"
 
 // Problem 171
-TEST( Problem_171, Test_Case )
+TEST( Problem_171 /*unused*/, Test_Case /*unused*/ )
 {
   std::vector<Timelog> entries = { { 0, 3, Type::enter }, { 10, 6, Type::exit },  { 3, 15, Type::enter },
                                    { 99, 2, Type::exit }, { 100, 4, Type::exit }, { 18, 5, Type::exit },
@@ -27,7 +28,7 @@ TEST( Problem_171, Test_Case )
 }
 
 // Problem 172
-TEST( Problem_172, Given_Case_1 )
+TEST( Problem_172 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // Given s = "dogcatcatcodecatdog" and words = ["cat", "dog"], return [0, 13]
   std::vector<int> result   = indiciesOfSubstrings( "dogcatcatcodecatdog", { "cat", "dog" } );
@@ -36,7 +37,7 @@ TEST( Problem_172, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_172, Given_Case_2 )
+TEST( Problem_172 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given s = "barfoobazbitbyte" and words = ["dog", "cat"], return []
   std::vector<int> result   = indiciesOfSubstrings( "barfoobazbitbyte", { "dog", "cat" } );
@@ -46,7 +47,7 @@ TEST( Problem_172, Given_Case_2 )
 }
 
 // Problem 173
-TEST( Problem_173, Given_Case )
+TEST( Problem_173 /*unused*/, Given_Case /*unused*/ )
 {
   std::map<std::string, std::any> vals;
   std::map<std::string, std::any> foo;
@@ -68,7 +69,7 @@ TEST( Problem_173, Given_Case )
 }
 
 // Problem 175
-TEST( Problem_175, Test_Case )
+TEST( Problem_175 /*unused*/, Test_Case /*unused*/ )
 {
   std::vector<transition> transitions = { { 'a', 'a', 0.9 },  { 'a', 'b', 0.075 }, { 'a', 'c', 0.025 },
                                           { 'b', 'a', 0.15 }, { 'b', 'b', 0.8 },   { 'b', 'c', 0.05 },
@@ -78,37 +79,37 @@ TEST( Problem_175, Test_Case )
 }
 
 // Problem 176
-TEST( Problem_176, Given_Case )
+TEST( Problem_176 /*unused*/, Given_Case /*unused*/ )
 {
   EXPECT_TRUE( canMap( "abc", "bcd" ) );
   EXPECT_FALSE( canMap( "foo", "bar" ) );
 }
 
 // Problem 177
-TEST( Problem_177, Given_Case_1 )
+TEST( Problem_177 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // Given the linked list 7 -> 7 -> 3 -> 5 and k = 2, it should become 3 -> 5 -> 7 -> 7
 
-  auto *        head     = new slNode<int>( { 7, 7, 3, 5 } );
-  auto *        expected = new slNode<int>( { 3, 5, 7, 7 } );
-  slNode<int> * result   = rotate( head, 2 );
+  auto *        head = nullptr = new slNode<int>( { 7, 7, 3, 5 } );
+  auto *        expected = nullptr = new slNode<int>( { 3, 5, 7, 7 } );
+  slNode<int> * result = nullptr = rotate( head, 2 );
 
   EXPECT_EQ( *result, *expected );
 }
 
-TEST( Problem_177, Given_Case_2 )
+TEST( Problem_177 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4 -> 5 -> 1 -> 2.
 
-  auto *        head     = new slNode<int>( { 1, 2, 3, 4, 5 } );
-  auto *        expected = new slNode<int>( { 3, 4, 5, 1, 2 } );
-  slNode<int> * result   = rotate( head, 3 );
+  auto *        head = nullptr = new slNode<int>( { 1, 2, 3, 4, 5 } );
+  auto *        expected = nullptr = new slNode<int>( { 3, 4, 5, 1, 2 } );
+  slNode<int> * result = nullptr = rotate( head, 3 );
 
   EXPECT_EQ( *result, *expected );
 }
 
 // Problem 178
-TEST( Problem_178, Test_Case )
+TEST( Problem_178 /*unused*/, Test_Case /*unused*/ )
 {
   std::vector<int> count56;
   std::vector<int> count55;
@@ -119,15 +120,15 @@ TEST( Problem_178, Test_Case )
     count55.push_back( diceSim( { 5, 5 } ) );
   }
 
-  double average56 = std::accumulate( count56.begin(), count56.end(), 0 ) / 10000.0;
-  double average55 = std::accumulate( count55.begin(), count55.end(), 0 ) / 10000.0;
+  double average56 = NAN = std::accumulate( count56.begin(), count56.end(), 0 ) / 10000.0;
+  double average55 = NAN = std::accumulate( count55.begin(), count55.end(), 0 ) / 10000.0;
 
   std::cout << "55: " << average55 << '\n';
   std::cout << "56: " << average56 << '\n';
 }
 
 // Problem 179
-TEST( Problem_179, Given_Case )
+TEST( Problem_179 /*unused*/, Given_Case /*unused*/ )
 {
   /*
   For example, given the sequence 2, 4, 3, 8, 7, 5, you should construct the following tree:
@@ -139,12 +140,12 @@ TEST( Problem_179, Given_Case )
   2   4   8
   */
 
-  auto * expected = new btNode( 5 );
-  expected        = add( expected, 7 );
-  expected        = add( expected, 8 );
-  expected        = add( expected, 3 );
-  expected        = add( expected, 4 );
-  expected        = add( expected, 2 );
+  auto * expected = nullptr = new btNode( 5 );
+  expected                  = add( expected, 7 );
+  expected                  = add( expected, 8 );
+  expected                  = add( expected, 3 );
+  expected                  = add( expected, 4 );
+  expected                  = add( expected, 2 );
 
   auto * result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
 
@@ -152,7 +153,7 @@ TEST( Problem_179, Given_Case )
 }
 
 // Problem 180
-TEST( Problem_180, Given_Case_1 )
+TEST( Problem_180 /*unused*/, Given_Case_1 /*unused*/ )
 {
   // If the stack is [1, 2, 3, 4, 5], it should become [1, 5, 2, 4, 3]
   std::stack<int> s( { 1, 2, 3, 4, 5 } );
@@ -162,7 +163,7 @@ TEST( Problem_180, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_180, Given_Case_2 )
+TEST( Problem_180 /*unused*/, Given_Case_2 /*unused*/ )
 {
   // If the stack is [1, 2, 3, 4], it should become [1, 4, 2, 3]
   std::stack<int> s( { 1, 2, 3, 4 } );
