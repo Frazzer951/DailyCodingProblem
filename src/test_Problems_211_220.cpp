@@ -119,3 +119,8 @@ TEST( Problem_218, Given_Case )
 
 
 // Problem 220
+TEST(Problem_220, Given_Case){
+  int result = max_profit_coin_game({10,24,5,9});
+
+  EXPECT_EQ(result, 33);
+}
