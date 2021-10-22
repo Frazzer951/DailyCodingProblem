@@ -101,8 +101,9 @@ TEST( Problem_146, Given_Case )
      1
   */
 
-  auto * root   = new btNode( 0, new btNode( 1 ),
+  auto * root = new btNode( 0, new btNode( 1 ),
                             new btNode( 0, new btNode( 1, new btNode( 0 ), new btNode( 0 ) ), new btNode( 0 ) ) );
+
   auto * result = pruneZeroBranches( root );
 
   EXPECT_EQ( result->value, 0 );

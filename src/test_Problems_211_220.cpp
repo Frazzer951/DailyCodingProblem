@@ -81,8 +81,9 @@ TEST( Problem_215, Given_Case )
   [0, 1, 3, 6, 8, 9]
   */
 
-  auto *           root     = new btNode( 5, new btNode( 3, new btNode( 1, new btNode( 0 ) ), new btNode( 4 ) ),
+  auto * root = new btNode( 5, new btNode( 3, new btNode( 1, new btNode( 0 ) ), new btNode( 4 ) ),
                             new btNode( 7, new btNode( 6 ), new btNode( 9, new btNode( 8 ) ) ) );
+
   std::vector<int> result   = bottomView( root );
   std::vector<int> expected = { 0, 1, 3, 4, 8, 9 };
   EXPECT_EQ( result, expected );
