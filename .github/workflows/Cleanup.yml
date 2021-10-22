@@ -29,7 +29,9 @@ jobs:
           cmake --build . --target clangtidy
 
       - name: Clang Format
-        run: cmake --build . --target clangformat
+        run: |
+          cd build
+          cmake --build . --target clangformat
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
