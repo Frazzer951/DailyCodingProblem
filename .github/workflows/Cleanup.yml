@@ -15,11 +15,11 @@ jobs:
 
       - name: Set up Clang
         run: |
-        sudo apt install -y clang-12 clang-format-12 clang-tidy-12
-        sudo update-alternatives --install /bin/clang clang /bin/clang-12 100
-        sudo update-alternatives --install /bin/clang++ clang++ /bin/clang++-12 100
-        sudo update-alternatives --install /bin/clang-tidy clang-tidy /bin/clang-tidy-12 100
-        sudo update-alternatives --install /bin/clang-format clang-format /bin/clang-format-12 100
+          sudo apt install -y clang-12 clang-format-12 clang-tidy-12
+          sudo update-alternatives --install /bin/clang clang /bin/clang-12 100
+          sudo update-alternatives --install /bin/clang++ clang++ /bin/clang++-12 100
+          sudo update-alternatives --install /bin/clang-tidy clang-tidy /bin/clang-tidy-12 100
+          sudo update-alternatives --install /bin/clang-format clang-format /bin/clang-format-12 100
 
       - name: Configure CMake
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
