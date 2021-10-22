@@ -14,9 +14,11 @@ jobs:
         uses: lukka/get-cmake@v3.21.2
 
       - name: Set up Clang
-        run: sudo apt install -y clang-13 clang-format-13 clang-tidy-13
+        run: sudo apt install -y clang-12 clang-format-12 clang-tidy-12
 
       - name: Configure CMake
+        cc: "clang-12",
+        cxx: "clang++-12"
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Clang Tidy
