@@ -89,7 +89,11 @@ TEST( Problem_215, Given_Case )
 }
 
 // Problem 216
-
+TEST( Problem_216, Given_Case )
+{
+  int result = romanToInt( "XIV" );
+  EXPECT_EQ( result, 14 );
+}
 
 // Problem 217
 
