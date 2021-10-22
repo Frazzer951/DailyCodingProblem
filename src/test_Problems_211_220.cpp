@@ -106,7 +106,14 @@ TEST( Problem_217, Given_Case )
 }
 
 // Problem 218
+TEST( Problem_218, Given_Case )
+{
+  slNode<char> * result   = new slNode<char>( { 'a', 'b', 'c' } );
+  slNode<char> * expected = new slNode<char>( { 'c', 'b', 'a' } );
+  result                  = reverse( result );
 
+  EXPECT_EQ( *result, *expected );
+}
 
 // Problem 219
 
