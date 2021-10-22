@@ -96,7 +96,14 @@ TEST( Problem_216, Given_Case )
 }
 
 // Problem 217
+TEST( Problem_217, Given_Case )
+{
+  int result1 = nextSparse( 21 );
+  int result2 = nextSparse( 22 );
 
+  EXPECT_EQ( result1, 21 );
+  EXPECT_EQ( result2, 32 );
+}
 
 // Problem 218
 

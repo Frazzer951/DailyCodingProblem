@@ -7,3 +7,21 @@ given input N, find the smallest sparse number greater than or equal to N.
 
 Do this in faster than O(N log N) time.
 */
+
+inline bool isSparse( int x )
+{
+  bool last = false;
+  for( int i = 0; i < 32; i++ )
+  {
+    bool bit = ( x & ( 1 << i ) ) != 0;
+    if( bit && last ) return false;
+    last = bit;
+  }
+  return true;
+}
+
+inline int nextSparse( int x )
+{
+  while( !isSparse( x ) ) { x++; }
+  return x;
+}
