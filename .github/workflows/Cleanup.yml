@@ -1,0 +1,36 @@
+name: Clang Tidy and Clang Format
+
+on: [push]
+
+jobs:
+    name: Ubuntu Latest
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get Cmake
+      uses: lukka/get-cmake@v3.21.2
+
+    - name: Set up Clang
+    uses: egor-tensin/setup-clang@v1
+    with:
+      version: 13
+
+    - name: Configure CMake
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Clang Tidy
+      run: |
+        cd build
+        cmake --build . --target clangtidy
+
+    - name: Clang Format
+      run: cmake --build . --target clangformat
+
+    - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'Clang Tidy And Format'
+          title: 'Clang Tidy And Format'
+          delete-branch: true
