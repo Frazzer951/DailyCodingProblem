@@ -6,7 +6,13 @@
 #include "gtest/gtest.h"
 
 // Problem 221
-
+TEST( Problem_221, Given_Case )
+{
+  EXPECT_EQ( nthSevenish( 1 ), 1 );
+  EXPECT_EQ( nthSevenish( 2 ), 7 );
+  EXPECT_EQ( nthSevenish( 3 ), 8 );
+  EXPECT_EQ( nthSevenish( 4 ), 49 );
+}
 
 // Problem 222
 
