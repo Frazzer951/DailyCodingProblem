@@ -14,7 +14,7 @@ inline int nthSevenish( int n )
   int bitPlace = 0;
   while( n > 0 )
   {
-    if( n & 1 ) { answer += pow( 7, bitPlace ); }
+    if( ( n & 1 ) != 0 ) { answer += pow( 7, bitPlace ); }
     n >>= 1;
     bitPlace++;
   }
