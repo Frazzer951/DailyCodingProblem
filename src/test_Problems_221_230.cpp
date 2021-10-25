@@ -34,7 +34,13 @@ TEST( Problem_223, Given_Case )
 }
 
 // Problem 224
+TEST( Problem_224, Given_Case )
+{
+  // for the input [1, 2, 3, 10], you should return 7.
+  int result = smallestIntNotSubset( { 1, 2, 3, 10 } );
 
+  EXPECT_EQ( result, 7 );
+}
 
 // Problem 225
 
