@@ -23,7 +23,15 @@ TEST( Problem_222, Given_Case )
 }
 
 // Problem 223
+TEST( Problem_223, Given_Case )
+{
+  auto * root =
+      new btNode( 5, new btNode( 4, new btNode<int>( 1, nullptr, new btNode<int>( 2, nullptr, new btNode( 3 ) ) ) ),
+                  new btNode( 8 ) );
 
+  std::string result = inOrderTraversal( root );
+  EXPECT_EQ( result, "1 2 3 4 5 8 " );
+}
 
 // Problem 224
 
