@@ -15,7 +15,12 @@ TEST( Problem_221, Given_Case )
 }
 
 // Problem 222
-
+TEST( Problem_222, Given_Case )
+{
+  // given "/usr/bin/../bin/./scripts/../", return "/usr/bin/"
+  std::string result = shortestAbsolutePath( "/usr/bin/../bin/./scripts/../" );
+  EXPECT_EQ( result, "/usr/bin/" );
+}
 
 // Problem 223
 
