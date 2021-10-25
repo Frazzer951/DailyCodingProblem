@@ -107,7 +107,7 @@ def addProblems(cacheOnly=False, forceRefresh=False):
     else:
         logging.info("Loading Emails")
         problems = getEmails(forceRefresh)
-
+    saveEmails(problems)
     for num in problems:
         genProblem(problems, int(num))
 
