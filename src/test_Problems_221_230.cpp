@@ -2,6 +2,7 @@
 #include "Problem_222.hpp"
 #include "Problem_223.hpp"
 #include "Problem_224.hpp"
+#include "Problem_225.hpp"
 
 #include "gtest/gtest.h"
 
