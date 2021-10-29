@@ -23,5 +23,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 188
 - Problem 198
 - Problem 219
-- Problem 225
 - Problem 226
+- Problem 227
+- Problem 228

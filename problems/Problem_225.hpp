@@ -13,3 +13,10 @@ For example, if N = 5 and k = 2, the order of executions would be [2, 4, 1, 5,
 
 Bonus: Find an O(log N) solution if k = 2.
 */
+
+inline int last_prisoner( int n, int k )
+{
+  if( n == 1 ) return 1;
+  if( k == 1 ) return n - 1;
+  return ( ( last_prisoner( n - 1, k ) + k - 1 ) % n ) + 1;
+}

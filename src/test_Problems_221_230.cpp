@@ -4,6 +4,8 @@
 #include "Problem_224.hpp"
 #include "Problem_225.hpp"
 #include "Problem_226.hpp"
+#include "Problem_227.hpp"
+#include "Problem_228.hpp"
 
 #include "gtest/gtest.h"
 
@@ -45,7 +47,12 @@ TEST( Problem_224, Given_Case )
 }
 
 // Problem 225
-
+TEST( Problem_225, Given_Case )
+{
+  // if N = 5 and k = 2, the order of executions would be [2, 4, 1, 5, 3], so you should return 3.
+  int result = last_prisoner( 5, 2 );
+  EXPECT_EQ( result, 3 );
+}
 
 // Problem 226
 
