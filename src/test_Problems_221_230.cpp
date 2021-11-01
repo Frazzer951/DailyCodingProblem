@@ -6,6 +6,8 @@
 #include "Problem_226.hpp"
 #include "Problem_227.hpp"
 #include "Problem_228.hpp"
+#include "Problem_229.hpp"
+#include "Problem_230.hpp"
 
 #include "gtest/gtest.h"
 
