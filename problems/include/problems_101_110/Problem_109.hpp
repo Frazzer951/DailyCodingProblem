@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_109_HPP
+#define PROBLEMS_101_110_PROBLEM_109_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -28,3 +31,4 @@ inline std::int8_t     even_odd_bit_swap( std::int8_t bits )
   return ( ( ( 0b10101010 & bits ) >> 1 ) & 0b01010101 ) | ( ( ( 0b01010101 & bits ) << 1 ) & 0b10101010 );
 }
 #pragma GCC diagnostic pop    // Restore warnings to previous state.
+#endif

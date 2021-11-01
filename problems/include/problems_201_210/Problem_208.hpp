@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_208_HPP
+#define PROBLEMS_201_210_PROBLEM_208_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -25,3 +28,4 @@ inline slList<int> partition( slNode<int> * head, int pivot )
   }
   return newList;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_124_HPP
+#define PROBLEMS_121_130_PROBLEM_124_HPP
+
 #pragma once
 
 /* EASY
@@ -12,3 +15,4 @@ play until one coin remains.
 #include <cmath>
 
 inline double expected_tosses( int n ) { return std::log2( n ); }
+#endif

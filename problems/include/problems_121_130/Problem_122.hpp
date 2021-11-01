@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_122_HPP
+#define PROBLEMS_121_130_PROBLEM_122_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -34,3 +37,4 @@ inline int maxCoins( std::vector<std::vector<int>> coins )
   }
   return counts[counts.size() - 1][counts[0].size() - 1];
 }
+#endif

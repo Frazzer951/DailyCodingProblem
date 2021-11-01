@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_219_HPP
+#define PROBLEMS_211_220_PROBLEM_219_HPP
+
 #pragma once
 
 /* HARD
@@ -8,3 +11,5 @@ diagonally), or when there are no more spots left in the grid.
 
 Design and implement Connect 4.
 */
+
+#endif

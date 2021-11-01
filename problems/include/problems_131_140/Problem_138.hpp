@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_138_HPP
+#define PROBLEMS_131_140_PROBLEM_138_HPP
+
 #pragma once
 
 /* HARD
@@ -31,3 +34,4 @@ inline int minimum_coins( int n )
   }
   return min;
 }
+#endif

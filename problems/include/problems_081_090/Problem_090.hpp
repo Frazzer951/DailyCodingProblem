@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_090_HPP
+#define PROBLEMS_081_090_PROBLEM_090_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -25,3 +28,4 @@ inline int randNotInL( const int & n, const std::vector<int> & l )
 
   return x;
 }
+#endif

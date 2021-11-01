@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_178_HPP
+#define PROBLEMS_171_180_PROBLEM_178_HPP
+
 #pragma once
 
 /* HARD
@@ -41,3 +44,4 @@ inline int diceSim( std::vector<int> winningCondition )
   }
   return rollCount;
 }
+#endif

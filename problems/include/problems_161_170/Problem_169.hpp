@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_169_HPP
+#define PROBLEMS_161_170_PROBLEM_169_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -96,3 +99,5 @@ inline void MergeSort( LNode ** headRef )
 
   *headRef = SortedMerge( a, b );
 }
+
+#endif

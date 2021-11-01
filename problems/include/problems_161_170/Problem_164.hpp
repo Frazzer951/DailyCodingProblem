@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_164_HPP
+#define PROBLEMS_161_170_PROBLEM_164_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -19,3 +22,4 @@ inline int findDuplicate( const std::vector<int> & arr )
   }
   return 0;
 }
+#endif

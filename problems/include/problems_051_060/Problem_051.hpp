@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_051_HPP
+#define PROBLEMS_051_060_PROBLEM_051_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -26,3 +29,4 @@ inline std::vector<int> shuffle( std::vector<int> arr )
   }
   return arr;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_126_HPP
+#define PROBLEMS_121_130_PROBLEM_126_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -20,3 +23,5 @@ inline std::vector<int> rotateVector( std::vector<int> v, int k )
   for( std::size_t i = 0; i < v.size() - k; i++ ) { vSwap( v, i, ( v.size() - k + i ) % v.size() ); }
   return v;
 }
+
+#endif

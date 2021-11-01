@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_055_HPP
+#define PROBLEMS_051_060_PROBLEM_055_HPP
+
 #pragma once
 
 /* EASY
@@ -52,3 +55,4 @@ public:
 
   std::string restore( const std::string & shortened ) { return short_to_url[shortened]; }
 };
+#endif

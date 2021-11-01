@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_045_HPP
+#define PROBLEMS_041_050_PROBLEM_045_HPP
+
 #pragma once
 
 /* EASY
@@ -25,3 +28,4 @@ inline int rand7()
 
   return rand7();
 }
+#endif

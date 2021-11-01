@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_026_HPP
+#define PROBLEMS_021_030_PROBLEM_026_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -29,3 +32,4 @@ inline slNode<int> * getKthLastNode( slList<int> list, int k )
 
   return slow;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_107_HPP
+#define PROBLEMS_101_110_PROBLEM_107_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ inline std::vector<int> bt_traverse( btNode<int> * root )
 
   return traverse;
 }
+#endif

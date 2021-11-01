@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_197_HPP
+#define PROBLEMS_191_200_PROBLEM_197_HPP
+
 #pragma once
 
 /* EASY
@@ -14,3 +17,4 @@ inline std::vector<int> rotateArr( std::vector<int> arr, int k )
   for( int i = 0; i < arr.size(); i++ ) { rotated[( i + k ) % arr.size()] = arr[i]; }
   return rotated;
 }
+#endif

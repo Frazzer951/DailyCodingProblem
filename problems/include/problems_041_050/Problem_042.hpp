@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_042_HPP
+#define PROBLEMS_041_050_PROBLEM_042_HPP
+
 #pragma once
 
 /* HARD
@@ -42,3 +45,4 @@ inline std::vector<int> subset_sum( std::vector<int> nums, int k )
   }
   return *A[nums.size()][k];
 }
+#endif

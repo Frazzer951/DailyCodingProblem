@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_192_HPP
+#define PROBLEMS_191_200_PROBLEM_192_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -25,3 +28,5 @@ inline bool canReachEnd( std::vector<int> arr )
   }
   return furthest_so_far >= arr.size() - 1;
 }
+
+#endif

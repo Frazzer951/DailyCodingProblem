@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_081_HPP
+#define PROBLEMS_081_090_PROBLEM_081_HPP
+
 #pragma once
 
 /* EASY
@@ -27,3 +30,4 @@ inline std::vector<std::string> num_to_str( std::string nums, std::map<char, std
   }
   return possible_strs;
 }
+#endif

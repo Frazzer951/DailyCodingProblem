@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_087_HPP
+#define PROBLEMS_081_090_PROBLEM_087_HPP
+
 #pragma once
 
 /* HARD
@@ -134,3 +137,5 @@ inline bool validate( const std::vector<std::string> & rules )
 
   return true;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_199_HPP
+#define PROBLEMS_191_200_PROBLEM_199_HPP
+
 #pragma once
 
 /* HARD
@@ -41,3 +44,4 @@ inline std::string balanceParentheses( const std::string & str )
 
   return ret;
 }
+#endif

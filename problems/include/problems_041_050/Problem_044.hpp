@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_044_HPP
+#define PROBLEMS_041_050_PROBLEM_044_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -31,3 +34,4 @@ inline int outOfOrder( std::vector<int> v )
   }
   return count;
 }
+#endif

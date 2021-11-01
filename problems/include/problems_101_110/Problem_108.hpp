@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_108_HPP
+#define PROBLEMS_101_110_PROBLEM_108_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ inline bool isSifted( std::string A, std::string B )
   }
   return false;
 }
+#endif

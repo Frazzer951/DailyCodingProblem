@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_053_HPP
+#define PROBLEMS_051_060_PROBLEM_053_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -37,3 +40,4 @@ public:
     return x;
   }
 };
+#endif

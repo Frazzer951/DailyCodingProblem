@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_154_HPP
+#define PROBLEMS_151_160_PROBLEM_154_HPP
+
 #pragma once
 
 /* EASY
@@ -13,3 +16,5 @@ Recall that a heap has the following operations:
  * push(item), which adds a new key to the heap
  * pop(), which removes and returns the max value of the heap
 */
+
+#endif

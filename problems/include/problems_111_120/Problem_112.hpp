@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_112_HPP
+#define PROBLEMS_111_120_PROBLEM_112_HPP
+
 #pragma once
 
 /* HARD
@@ -39,3 +42,4 @@ inline pbtNode * pbtLCA( pbtNode * a, pbtNode * b )
   }
   return nullptr;
 }
+#endif

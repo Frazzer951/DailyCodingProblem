@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_024_HPP
+#define PROBLEMS_021_030_PROBLEM_024_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -96,3 +99,4 @@ struct lbtNode
 
   [[nodiscard]] bool isLocked() const { return locked; }
 };
+#endif

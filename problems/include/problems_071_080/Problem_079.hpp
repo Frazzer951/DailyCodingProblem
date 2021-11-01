@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_079_HPP
+#define PROBLEMS_071_080_PROBLEM_079_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -34,3 +37,4 @@ inline bool remove_one_non_decrease( std::vector<int> nums )
   }
   return false;
 }
+#endif

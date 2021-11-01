@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_096_HPP
+#define PROBLEMS_091_100_PROBLEM_096_HPP
+
 #pragma once
 
 /* EASY
@@ -26,3 +29,4 @@ inline std::vector<std::vector<int>> getPermutations( const std::vector<int> & n
 
   return permutations;
 }
+#endif

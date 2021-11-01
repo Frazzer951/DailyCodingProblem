@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_185_HPP
+#define PROBLEMS_181_190_PROBLEM_185_HPP
+
 #pragma once
 
 /* EASY
@@ -66,3 +69,4 @@ inline int intersectArea( Rect r1, Rect r2 )
   }
   return count;
 }
+#endif

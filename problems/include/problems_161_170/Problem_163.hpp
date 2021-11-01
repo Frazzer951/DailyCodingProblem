@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_163_HPP
+#define PROBLEMS_161_170_PROBLEM_163_HPP
+
 #pragma once
 
 /* HARD
@@ -62,3 +65,5 @@ inline double solve( const std::vector<std::string> & equation )
   }
   return std::atof( values.top().c_str() );
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_083_HPP
+#define PROBLEMS_081_090_PROBLEM_083_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -38,3 +41,4 @@ inline void invert_B_Tree( btNode<char> * node )
   node->left  = node->right;
   node->right = tmp;
 }
+#endif

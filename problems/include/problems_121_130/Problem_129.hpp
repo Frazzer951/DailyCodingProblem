@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_129_HPP
+#define PROBLEMS_121_130_PROBLEM_129_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -22,3 +25,4 @@ inline double squareroot( double n, double error = 0.00000000000001 )
   }
   return guess;
 }
+#endif

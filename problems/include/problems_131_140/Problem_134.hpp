@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_134_HPP
+#define PROBLEMS_131_140_PROBLEM_134_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ public:
 
   int get( int i ) { return values[i]; }
 };
+#endif

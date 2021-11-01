@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_155_HPP
+#define PROBLEMS_151_160_PROBLEM_155_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -23,3 +26,4 @@ inline int majority( const std::vector<int> & elements )
                            []( const auto & p1, const auto & p2 ) { return p1.second < p2.second; } )
       ->first;
 }
+#endif

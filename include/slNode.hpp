@@ -1,3 +1,6 @@
+#ifndef SLNODE_HPP
+#define SLNODE_HPP
+
 #pragma once
 
 #include <iostream>
@@ -120,3 +123,4 @@ inline std::ostream & operator<<( std::ostream & os, const slList<T> & n )
   os << n.head;
   return os;
 }
+#endif

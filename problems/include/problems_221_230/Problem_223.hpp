@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_223_HPP
+#define PROBLEMS_221_230_PROBLEM_223_HPP
+
 #pragma once
 
 /* HARD
@@ -42,3 +45,4 @@ inline std::string inOrderTraversal( btNode<int> * root )
   }
   return result;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_141_HPP
+#define PROBLEMS_141_150_PROBLEM_141_HPP
+
 #pragma once
 
 /* HARD
@@ -93,3 +96,4 @@ public:
     if( is_resize_needed() ) resize( size * 2 );
   }
 };
+#endif

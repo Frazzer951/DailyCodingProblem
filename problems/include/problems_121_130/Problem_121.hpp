@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_121_HPP
+#define PROBLEMS_121_130_PROBLEM_121_HPP
+
 #pragma once
 
 /* HARD
@@ -38,3 +41,4 @@ inline bool k_palindrome( const std::string & s, int k )
 {
   return s.size() - longest_palindromic_subsequence( s ) <= k;
 }
+#endif

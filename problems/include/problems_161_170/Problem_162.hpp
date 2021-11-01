@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_162_HPP
+#define PROBLEMS_161_170_PROBLEM_162_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -74,3 +77,4 @@ inline std::vector<std::string> shortest_unique_prefix( const std::vector<std::s
 
   return prefix;
 }
+#endif

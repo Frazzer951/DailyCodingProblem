@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_011_020_PROBLEM_013_HPP
+#define PROBLEMS_011_020_PROBLEM_013_HPP
+
 #pragma once
 
 /* HARD
@@ -68,3 +71,4 @@ inline int prob_13()
 
   return 0;
 }
+#endif

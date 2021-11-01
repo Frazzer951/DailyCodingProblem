@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_106_HPP
+#define PROBLEMS_101_110_PROBLEM_106_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -21,3 +24,4 @@ inline bool validate_hops( std::vector<int> hops )
 
   return index == hops.size() - 1;
 }
+#endif

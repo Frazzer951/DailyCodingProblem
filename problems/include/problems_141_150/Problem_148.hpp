@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_148_HPP
+#define PROBLEMS_141_150_PROBLEM_148_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -10,3 +13,5 @@ Given a number of bits n, generate a possible gray code for it.
 
 For example, for n = 2, one gray code would be [00, 01, 11, 10].
 */
+
+#endif

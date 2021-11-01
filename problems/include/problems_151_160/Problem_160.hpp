@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_160_HPP
+#define PROBLEMS_151_160_PROBLEM_160_HPP
+
 #pragma once
 
 /* HARD
@@ -61,3 +64,4 @@ inline int longest_path( Node * root )
   auto [height, path] = longest_height_and_path( root );
   return path;
 }
+#endif

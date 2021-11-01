@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_188_HPP
+#define PROBLEMS_181_190_PROBLEM_188_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -20,3 +23,5 @@ for f in functions:
 
 How can we make it print out what we apparently want?
 */
+
+#endif

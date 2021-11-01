@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_191_HPP
+#define PROBLEMS_191_200_PROBLEM_191_HPP
+
 #pragma once
 
 /* EASY
@@ -37,3 +40,4 @@ inline int non_overlapping_intervals( std::vector<std::pair<int, int>> intervals
   }
   return overlapping;
 }
+#endif

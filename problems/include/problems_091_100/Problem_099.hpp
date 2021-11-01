@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_099_HPP
+#define PROBLEMS_091_100_PROBLEM_099_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -42,3 +45,4 @@ inline int findLongestConseqSubseq( std::vector<int> arr )
   }
   return ans;
 }
+#endif

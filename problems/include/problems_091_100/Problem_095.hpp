@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_095_HPP
+#define PROBLEMS_091_100_PROBLEM_095_HPP
+
 #pragma once
 
 /* HARD
@@ -44,3 +47,4 @@ inline void nextPermutation( std::vector<int> & nums )
   }
   reverse( nums, pivot + 1, (int) nums.size() - 1 );
 }
+#endif

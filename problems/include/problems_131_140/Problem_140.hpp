@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_140_HPP
+#define PROBLEMS_131_140_PROBLEM_140_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -30,3 +33,4 @@ inline std::pair<int, int> array_two_elements( const std::vector<int> & arr )
   }
   return rets;
 }
+#endif

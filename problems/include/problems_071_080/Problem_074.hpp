@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_074_HPP
+#define PROBLEMS_071_080_PROBLEM_074_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -48,3 +51,4 @@ inline int countMultiples( int n, int x )
 
   return count;
 }
+#endif

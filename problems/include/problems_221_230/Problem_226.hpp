@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_226_HPP
+#define PROBLEMS_221_230_PROBLEM_226_HPP
+
 #pragma once
 
 /* HARD
@@ -8,3 +11,5 @@ language.
 For example, given ['xww', 'wxyz', 'wxyw', 'ywx', 'ywz'], you should return
 ['x', 'z', 'w', 'y'].
 */
+
+#endif

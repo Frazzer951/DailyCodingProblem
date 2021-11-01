@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_067_HPP
+#define PROBLEMS_061_070_PROBLEM_067_HPP
+
 #pragma once
 
 /* HARD
@@ -98,3 +101,4 @@ struct LFUCache
     }
   }
 };
+#endif

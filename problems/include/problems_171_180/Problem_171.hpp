@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_171_HPP
+#define PROBLEMS_171_180_PROBLEM_171_HPP
+
 #pragma once
 
 /* EASY
@@ -58,3 +61,4 @@ inline std::pair<long, long> busiest_period( std::vector<Timelog> entries )
   }
   return period;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_086_HPP
+#define PROBLEMS_081_090_PROBLEM_086_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -44,3 +47,4 @@ inline int parentheses_to_remove( std::string parens_str )
   }
   return counter;
 }
+#endif

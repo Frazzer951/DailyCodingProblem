@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_064_HPP
+#define PROBLEMS_061_070_PROBLEM_064_HPP
+
 #pragma once
 
 /* HARD
@@ -71,3 +74,5 @@ inline int knights_tours( int n )
   }
   return count;
 }
+
+#endif

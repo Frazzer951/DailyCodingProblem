@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_127_HPP
+#define PROBLEMS_121_130_PROBLEM_127_HPP
+
 #pragma once
 
 /* EASY
@@ -61,3 +64,4 @@ inline slNode<int> * sum( slNode<int> * x, slNode<int> * y )
 
   return sumNum;
 }
+#endif

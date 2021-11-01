@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_092_HPP
+#define PROBLEMS_091_100_PROBLEM_092_HPP
+
 #pragma once
 
 /* HARD
@@ -37,3 +40,4 @@ inline std::vector<std::string> course_order( std::map<std::string, std::vector<
   }
   return courses;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_032_HPP
+#define PROBLEMS_031_040_PROBLEM_032_HPP
+
 #pragma once
 
 /* HARD
@@ -9,3 +12,5 @@ currency.
 
 There are no transaction costs and you can trade fractional quantities.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_133_HPP
+#define PROBLEMS_131_140_PROBLEM_133_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -32,3 +35,4 @@ inline int nextElement( pbtNode * node )
   while( curNode->left != nullptr ) { curNode = curNode->left; }
   return curNode->value;
 }
+#endif

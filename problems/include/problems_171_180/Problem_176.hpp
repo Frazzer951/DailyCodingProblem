@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_176_HPP
+#define PROBLEMS_171_180_PROBLEM_176_HPP
+
 #pragma once
 
 /* EASY
@@ -33,3 +36,4 @@ inline bool canMap( std::string s1, std::string s2 )
   }
   return true;
 }
+#endif

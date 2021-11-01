@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_153_HPP
+#define PROBLEMS_151_160_PROBLEM_153_HPP
+
 #pragma once
 
 /* HARD
@@ -51,3 +54,4 @@ inline int smallestWordDistance( const std::string & w1, const std::string & w2,
 
   return smallest;
 }
+#endif

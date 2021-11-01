@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_207_HPP
+#define PROBLEMS_201_210_PROBLEM_207_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -46,3 +49,5 @@ inline bool is_bipartite( const std::map<int, std::vector<int>> & graph )
   }
   return true;
 }
+
+#endif

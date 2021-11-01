@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_217_HPP
+#define PROBLEMS_211_220_PROBLEM_217_HPP
+
 #pragma once
 
 /* HARD
@@ -25,3 +28,4 @@ inline int nextSparse( int x )
   while( !isSparse( x ) ) { x++; }
   return x;
 }
+#endif

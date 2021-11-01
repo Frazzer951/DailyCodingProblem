@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_098_HPP
+#define PROBLEMS_091_100_PROBLEM_098_HPP
+
 #pragma once
 
 /* EASY
@@ -62,3 +65,4 @@ inline bool find_word( std::vector<std::vector<char>> board, const std::string &
   }
   return false;
 }
+#endif

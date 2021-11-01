@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_088_HPP
+#define PROBLEMS_081_090_PROBLEM_088_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -19,3 +22,4 @@ inline int divide( const int & x, const int & y )
 
   return i;
 }
+#endif

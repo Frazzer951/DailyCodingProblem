@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_033_HPP
+#define PROBLEMS_031_040_PROBLEM_033_HPP
+
 #pragma once
 
 /* EASY
@@ -41,3 +44,4 @@ inline std::vector<double> runningMedian( const std::vector<double> & v )
   }
   return medians;
 }
+#endif

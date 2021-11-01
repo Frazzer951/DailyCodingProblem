@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_049_HPP
+#define PROBLEMS_041_050_PROBLEM_049_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -26,3 +29,4 @@ inline int max_subarray_sum( const std::vector<int> & arr )
   }
   return max_so_far;
 }
+#endif

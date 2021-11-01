@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_132_HPP
+#define PROBLEMS_131_140_PROBLEM_132_HPP
+
 #pragma once
 
 /* EASY
@@ -84,3 +87,4 @@ public:
     return timestamps;
   }
 };
+#endif

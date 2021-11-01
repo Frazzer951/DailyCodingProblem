@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_115_HPP
+#define PROBLEMS_111_120_PROBLEM_115_HPP
+
 #pragma once
 
 /* HARD
@@ -17,3 +20,4 @@ inline bool isSubtree( btNode<int> * s, btNode<int> * t )
 
   return isSubtree( s->left, t ) || isSubtree( s->right, t );
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_050_HPP
+#define PROBLEMS_041_050_PROBLEM_050_HPP
+
 #pragma once
 
 /* EASY
@@ -32,3 +35,4 @@ inline int evaluate( btNode<char> root )
   if( root.value == DIVIDE ) return evaluate( *root.left ) / evaluate( *root.right );
   return root.value - 48;
 }
+#endif

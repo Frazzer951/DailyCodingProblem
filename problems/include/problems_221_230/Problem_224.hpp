@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_224_HPP
+#define PROBLEMS_221_230_PROBLEM_224_HPP
+
 #pragma once
 
 /* EASY
@@ -17,3 +20,5 @@ inline int smallestIntNotSubset( std::vector<int> input )
   for( int i = 0; i < input.size() && input[i] <= result; i++ ) { result = result + input[i]; }
   return result;
 }
+
+#endif

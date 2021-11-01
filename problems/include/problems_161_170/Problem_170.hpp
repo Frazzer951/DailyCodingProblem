@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_170_HPP
+#define PROBLEMS_161_170_PROBLEM_170_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -54,3 +57,4 @@ inline std::vector<std::string> shortestTransform( const std::string & start, co
   }
   return transform;
 }
+#endif

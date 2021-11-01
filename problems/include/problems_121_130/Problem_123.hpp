@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_123_HPP
+#define PROBLEMS_121_130_PROBLEM_123_HPP
+
 #pragma once
 
 /* HARD
@@ -76,3 +79,4 @@ inline bool isNum( std::string s )
 
   return true;
 }
+#endif

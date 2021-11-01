@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_204_HPP
+#define PROBLEMS_201_210_PROBLEM_204_HPP
+
 #pragma once
 
 /* EASY
@@ -45,3 +48,4 @@ inline int getCount( btNode<int> * root )
 
   return getCount( root->left ) + getCount( root->right ) + 1;
 }
+#endif

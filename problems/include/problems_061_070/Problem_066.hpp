@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_066_HPP
+#define PROBLEMS_061_070_PROBLEM_066_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -25,3 +28,4 @@ inline bool toss_fair()
 
   return toss_fair();
 }
+#endif

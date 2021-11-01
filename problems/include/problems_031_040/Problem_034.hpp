@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_034_HPP
+#define PROBLEMS_031_040_PROBLEM_034_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -40,3 +43,5 @@ inline std::string makePalindrome( std::string s )
 
   return min( one, two );
 }
+
+#endif

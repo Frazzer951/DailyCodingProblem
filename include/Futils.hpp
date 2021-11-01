@@ -1,3 +1,6 @@
+#ifndef FUTILS_HPP
+#define FUTILS_HPP
+
 #pragma once
 
 /* My Custom Functions */
@@ -64,3 +67,4 @@ inline int sum( const std::vector<int> & v )
 
   return sum;
 }
+#endif

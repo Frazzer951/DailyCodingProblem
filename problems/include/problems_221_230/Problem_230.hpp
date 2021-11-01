@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_230_HPP
+#define PROBLEMS_221_230_PROBLEM_230_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -14,3 +17,5 @@ For example, if N = 1 and k = 5, we will need to try dropping the egg at every
 floor, beginning with the first, until we reach the fifth floor, so our solution
 will be 5.
 */
+
+#endif

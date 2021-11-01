@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_149_HPP
+#define PROBLEMS_141_150_PROBLEM_149_HPP
+
 #pragma once
 
 /* HARD
@@ -24,3 +27,4 @@ inline int sum( std::vector<int> L, int i, int j )
   if( i == 0 ) return L[j - 1];
   return L[j - 1] - L[i - 1];
 }
+#endif

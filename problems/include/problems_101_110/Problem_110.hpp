@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_110_HPP
+#define PROBLEMS_101_110_PROBLEM_110_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -46,3 +49,4 @@ inline std::vector<std::vector<int>> getPaths( btNode<int> * node )
   }
   return paths;
 }
+#endif

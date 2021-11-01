@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_189_HPP
+#define PROBLEMS_181_190_PROBLEM_189_HPP
+
 #pragma once
 
 /* EASY
@@ -34,3 +37,4 @@ inline int longestSubArray( std::vector<int> nums )
   }
   return longest;
 }
+#endif

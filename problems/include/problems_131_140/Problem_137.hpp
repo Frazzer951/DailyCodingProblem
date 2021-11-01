@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_137_HPP
+#define PROBLEMS_131_140_PROBLEM_137_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -23,3 +26,4 @@ public:
   void set( std::size_t i, bool val ) { arr[i] = val; }
   bool get( std::size_t i ) { return arr[i]; }
 };
+#endif

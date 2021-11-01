@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_181_HPP
+#define PROBLEMS_181_190_PROBLEM_181_HPP
+
 #pragma once
 
 /* HARD
@@ -36,3 +39,4 @@ inline std::vector<std::string> splitPalindrome( std::string str )
 
   return palindromes;
 }
+#endif

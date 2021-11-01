@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_058_HPP
+#define PROBLEMS_051_060_PROBLEM_058_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -50,3 +53,4 @@ inline int shifted_array_search( std::vector<int> lst, int num )
     dist = dist / 2;
   }
 }
+#endif

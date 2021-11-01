@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_078_HPP
+#define PROBLEMS_071_080_PROBLEM_078_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -51,3 +54,4 @@ inline std::forward_list<int> combine_lists( std::vector<std::forward_list<int>>
 
   return combined_list;
 }
+#endif

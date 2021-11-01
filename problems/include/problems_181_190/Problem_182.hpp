@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_182_HPP
+#define PROBLEMS_181_190_PROBLEM_182_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -37,3 +40,4 @@ inline bool isMinimallyConnected( gNode * node )
   std::map<gNode *, bool> visited;
   return isMinConHelper( node, nullptr, visited );
 }
+#endif

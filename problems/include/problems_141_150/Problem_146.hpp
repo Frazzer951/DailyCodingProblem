@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_146_HPP
+#define PROBLEMS_141_150_PROBLEM_146_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -50,3 +53,4 @@ inline btNode<int> * pruneZeroBranches( btNode<int> * root )
 
   return root;
 }
+#endif

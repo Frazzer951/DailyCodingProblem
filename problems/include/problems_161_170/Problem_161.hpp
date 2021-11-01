@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_161_HPP
+#define PROBLEMS_161_170_PROBLEM_161_HPP
+
 #pragma once
 
 /* EASY
@@ -8,3 +11,4 @@ return 0000 1111 0000 1111 0000 1111 0000 1111.
 */
 
 inline long int reverse( long int x ) { return x ^ 0xFFFFFFFF; }
+#endif

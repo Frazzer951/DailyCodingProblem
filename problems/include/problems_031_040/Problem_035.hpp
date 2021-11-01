@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_035_HPP
+#define PROBLEMS_031_040_PROBLEM_035_HPP
+
 #pragma once
 
 /* HARD
@@ -56,3 +59,4 @@ inline void rgbSort( std::vector<char> & v )
     }
   }
 }
+#endif

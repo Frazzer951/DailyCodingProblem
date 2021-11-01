@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_104_HPP
+#define PROBLEMS_101_110_PROBLEM_104_HPP
+
 #pragma once
 
 /* EASY
@@ -23,3 +26,5 @@ inline bool palindromeList( std::list<int> l )
   }
   return true;
 }
+
+#endif

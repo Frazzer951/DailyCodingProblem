@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_179_HPP
+#define PROBLEMS_171_180_PROBLEM_179_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -42,3 +45,4 @@ inline btNode<int> * createBSTfromPostOrder( std::vector<int> values )
 
   return newTree;
 }
+#endif

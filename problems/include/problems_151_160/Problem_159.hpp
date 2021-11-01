@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_159_HPP
+#define PROBLEMS_151_160_PROBLEM_159_HPP
+
 #pragma once
 
 /* EASY
@@ -23,3 +26,4 @@ inline char firstRepeat( const std::string & str )
   }
   return '\0';
 }
+#endif

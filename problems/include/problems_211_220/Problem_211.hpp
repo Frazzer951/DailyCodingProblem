@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_211_HPP
+#define PROBLEMS_211_220_PROBLEM_211_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -20,3 +23,4 @@ inline std::vector<int> indexOf( const std::string & str, const std::string & pa
 
   return indecies;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_198_HPP
+#define PROBLEMS_191_200_PROBLEM_198_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -8,3 +11,5 @@ every pair of elements in the subset (i, j) satisfies either i % j = 0 or j % i
 For example, given the set [3, 5, 10, 20, 21], you should return [5, 10, 20].
 Given [1, 3, 6, 24], return [1, 3, 6, 24].
 */
+
+#endif

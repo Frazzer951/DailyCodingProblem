@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_147_HPP
+#define PROBLEMS_141_150_PROBLEM_147_HPP
+
 #pragma once
 
 /* HARD
@@ -23,3 +26,4 @@ inline std::vector<int> sortWithReverse( std::vector<int> arr )
   }
   return arr;
 }
+#endif

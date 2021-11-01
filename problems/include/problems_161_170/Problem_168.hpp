@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_168_HPP
+#define PROBLEMS_161_170_PROBLEM_168_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -32,3 +35,4 @@ inline std::vector<std::vector<int>> rotate90( std::vector<std::vector<int>> arr
   }
   return rotated;
 }
+#endif

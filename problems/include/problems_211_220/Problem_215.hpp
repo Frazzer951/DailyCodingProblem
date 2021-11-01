@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_215_HPP
+#define PROBLEMS_211_220_PROBLEM_215_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -73,3 +76,4 @@ inline std::vector<int> bottomView( btNode<int> * root )
 
   return bottom;
 }
+#endif

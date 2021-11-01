@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_084_HPP
+#define PROBLEMS_081_090_PROBLEM_084_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -54,3 +57,4 @@ inline int num_islands( std::vector<std::vector<int>> island_map )
   }
   return island_count;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_041_HPP
+#define PROBLEMS_041_050_PROBLEM_041_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -60,3 +63,4 @@ inline std::vector<std::string> getItinerary( std::vector<std::pair<std::string,
 
   return itinerary;
 }
+#endif

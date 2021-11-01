@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_214_HPP
+#define PROBLEMS_211_220_PROBLEM_214_HPP
+
 #pragma once
 
 /* EASY
@@ -23,3 +26,4 @@ inline int longestOneRun( int x )
   }
   return ( counter > maxLength ) ? counter : maxLength;
 }
+#endif

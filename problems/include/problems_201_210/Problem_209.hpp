@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_209_HPP
+#define PROBLEMS_201_210_PROBLEM_209_HPP
+
 #pragma once
 
 /* HARD
@@ -34,3 +37,4 @@ inline int lcs( std::string a, std::string b, std::string c )
   }
   return lengths[lengths.size() - 1][lengths[0].size() - 1][lengths[0][0].size() - 1];
 }
+#endif

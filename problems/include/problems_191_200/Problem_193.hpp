@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_193_HPP
+#define PROBLEMS_191_200_PROBLEM_193_HPP
+
 #pragma once
 
 /* HARD
@@ -29,3 +32,4 @@ inline int maxProfit( std::vector<int> arr, int fee )
   }
   return max;
 }
+#endif

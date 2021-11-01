@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_082_HPP
+#define PROBLEMS_081_090_PROBLEM_082_HPP
+
 #pragma once
 
 /* EASY
@@ -62,3 +65,4 @@ inline std::string readN( int n )
 
   return all.substr( 0, n );
 }
+#endif

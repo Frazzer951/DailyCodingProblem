@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_111_HPP
+#define PROBLEMS_111_120_PROBLEM_111_HPP
+
 #pragma once
 
 /* HARD
@@ -41,3 +44,4 @@ inline std::vector<int> anagramIndex( const std::string & w, const std::string &
   }
   return indecies;
 }
+#endif

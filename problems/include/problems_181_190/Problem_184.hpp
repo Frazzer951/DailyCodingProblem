@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_184_HPP
+#define PROBLEMS_181_190_PROBLEM_184_HPP
+
 #pragma once
 
 /* EASY
@@ -24,3 +27,4 @@ inline int greatestCommonDenominator( std::vector<int> nums )
 
   return i;
 }
+#endif

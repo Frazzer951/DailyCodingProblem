@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_061_HPP
+#define PROBLEMS_061_070_PROBLEM_061_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -38,3 +41,4 @@ namespace p61
     return coeff * base;
   }
 }    // namespace p61
+#endif

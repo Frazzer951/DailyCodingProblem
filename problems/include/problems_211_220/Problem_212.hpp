@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_212_HPP
+#define PROBLEMS_211_220_PROBLEM_212_HPP
+
 #pragma once
 
 /* EASY
@@ -24,3 +27,4 @@ inline std::string colLetter( int col )
 
   return letters;
 }
+#endif

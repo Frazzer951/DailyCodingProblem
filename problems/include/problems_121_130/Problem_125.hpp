@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_125_HPP
+#define PROBLEMS_121_130_PROBLEM_125_HPP
+
 #pragma once
 
 /* EASY
@@ -53,3 +56,5 @@ inline std::pair<btNode<int> *, btNode<int> *> two_sum( btNode<int> * root, int 
   }
   return std::make_pair( nullptr, nullptr );
 }
+
+#endif

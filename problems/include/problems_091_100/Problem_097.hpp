@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_097_HPP
+#define PROBLEMS_091_100_PROBLEM_097_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -92,3 +95,4 @@ public:
     return time_map.get( time );
   }
 };
+#endif

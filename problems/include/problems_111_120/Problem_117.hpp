@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_117_HPP
+#define PROBLEMS_111_120_PROBLEM_117_HPP
+
 #pragma once
 
 /* EASY
@@ -36,3 +39,4 @@ inline int minimum_level_sum( btNode<int> * root )
 
   return min_level;
 }
+#endif

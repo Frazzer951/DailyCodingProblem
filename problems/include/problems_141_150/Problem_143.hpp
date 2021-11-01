@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_143_HPP
+#define PROBLEMS_141_150_PROBLEM_143_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -38,3 +41,4 @@ inline std::vector<int> partition( const std::vector<int> & lst, int x )
 
   return less;
 }
+#endif

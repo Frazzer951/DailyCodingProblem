@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_102_HPP
+#define PROBLEMS_101_110_PROBLEM_102_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -33,3 +36,4 @@ inline std::vector<int> continuousSum( std::vector<int> nums, int k )
   }
   return std::vector<int>( nums.begin() + left, nums.begin() + right + 1 );
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_029_HPP
+#define PROBLEMS_021_030_PROBLEM_029_HPP
+
 #pragma once
 
 /* EASY
@@ -58,3 +61,5 @@ inline std::string runLengthDecode( std::string str )
 
   return return_str;
 }
+
+#endif

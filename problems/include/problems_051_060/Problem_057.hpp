@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_057_HPP
+#define PROBLEMS_051_060_PROBLEM_057_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -51,3 +54,4 @@ inline std::vector<std::string> splitString( std::string str, int k )
 
   return multi_string;
 }
+#endif

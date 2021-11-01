@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_144_HPP
+#define PROBLEMS_141_150_PROBLEM_144_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -42,3 +45,4 @@ inline std::vector<int> preprocess( std::vector<int> arr )
 
   return cache;
 }
+#endif

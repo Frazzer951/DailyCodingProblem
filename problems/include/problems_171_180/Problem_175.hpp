@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_175_HPP
+#define PROBLEMS_171_180_PROBLEM_175_HPP
+
 #pragma once
 
 /* EASY
@@ -70,3 +73,4 @@ inline std::map<char, int> markovChain( char startState, int steps, const std::v
   }
   return count;
 }
+#endif

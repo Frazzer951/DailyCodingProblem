@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_145_HPP
+#define PROBLEMS_141_150_PROBLEM_145_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ inline slNode<int> * swapEveryTwo( slNode<int> * root )
 
   return root;
 }
+#endif

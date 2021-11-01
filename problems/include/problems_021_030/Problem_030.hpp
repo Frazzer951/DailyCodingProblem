@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_030_HPP
+#define PROBLEMS_021_030_PROBLEM_030_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -39,3 +42,4 @@ inline int waterHeightMap( std::vector<int> v )
 
   return unitsOfWater;
 }
+#endif

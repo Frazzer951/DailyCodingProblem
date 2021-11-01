@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_022_HPP
+#define PROBLEMS_021_030_PROBLEM_022_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -39,3 +42,4 @@ inline std::vector<std::string> decompressString( const std::vector<std::string>
 
   return sentance;
 }
+#endif

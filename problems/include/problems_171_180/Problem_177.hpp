@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_177_HPP
+#define PROBLEMS_171_180_PROBLEM_177_HPP
+
 #pragma once
 
 /* EASY
@@ -32,3 +35,4 @@ inline slNode<int> * rotate( slNode<int> * head, int k )
 
   return new_head;
 }
+#endif

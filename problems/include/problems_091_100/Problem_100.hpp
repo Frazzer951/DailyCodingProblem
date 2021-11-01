@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_100_HPP
+#define PROBLEMS_091_100_PROBLEM_100_HPP
+
 #pragma once
 
 /* EASY
@@ -44,3 +47,4 @@ inline int minSteps( std::vector<std::pair<int, int>> points )
 
   return totalSteps;
 }
+#endif

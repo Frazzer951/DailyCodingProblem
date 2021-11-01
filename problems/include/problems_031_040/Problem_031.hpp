@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_031_HPP
+#define PROBLEMS_031_040_PROBLEM_031_HPP
+
 #pragma once
 
 /* EASY
@@ -32,3 +35,4 @@ inline int strDistance( std::string s1, std::string s2 )
   }
   return A[y - 1][x - 1];
 }
+#endif

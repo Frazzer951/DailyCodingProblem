@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_203_HPP
+#define PROBLEMS_201_210_PROBLEM_203_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -26,3 +29,4 @@ inline int find_min_element( const std::vector<int> & arr )
   int high = (int) arr.size() - 1;
   return helper( arr, low, high );
 }
+#endif

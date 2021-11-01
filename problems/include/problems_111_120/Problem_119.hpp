@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_119_HPP
+#define PROBLEMS_111_120_PROBLEM_119_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -31,3 +34,5 @@ inline std::vector<int> covering( std::vector<std::vector<int>> intervals )
   }
   return result;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_073_HPP
+#define PROBLEMS_071_080_PROBLEM_073_HPP
+
 #pragma once
 
 /* EASY
@@ -25,3 +28,4 @@ inline void reverse_slList( slList<int> & list )
   while( last->next != nullptr ) last = last->next;
   list.tail = last;
 }
+#endif

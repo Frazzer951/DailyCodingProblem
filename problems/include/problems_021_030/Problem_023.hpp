@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_023_HPP
+#define PROBLEMS_021_030_PROBLEM_023_HPP
+
 #pragma once
 
 /* EASY
@@ -147,3 +150,4 @@ inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int,
   }
   return moves;
 }
+#endif

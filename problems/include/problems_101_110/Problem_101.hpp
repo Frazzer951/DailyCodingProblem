@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_101_HPP
+#define PROBLEMS_101_110_PROBLEM_101_HPP
+
 #pragma once
 
 /* EASY
@@ -60,3 +63,5 @@ inline std::pair<int, int> primeSum( int n )
   }
   return std::make_pair( -1, -1 );
 }
+
+#endif

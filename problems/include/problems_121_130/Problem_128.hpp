@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_128_HPP
+#define PROBLEMS_121_130_PROBLEM_128_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -178,3 +181,4 @@ For an odd number of disks:
   make the legal move between pegs B and C (in either direction),
   repeat until complete.
 */
+#endif

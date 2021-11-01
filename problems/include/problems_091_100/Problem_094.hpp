@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_094_HPP
+#define PROBLEMS_091_100_PROBLEM_094_HPP
+
 #pragma once
 
 /* EASY
@@ -37,3 +40,4 @@ inline int max_path_sum( btNode<int> * root )
   // Return only the maximum path
   return helper( root ).first;
 }
+#endif

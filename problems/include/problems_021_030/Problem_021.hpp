@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_021_HPP
+#define PROBLEMS_021_030_PROBLEM_021_HPP
+
 #pragma once
 
 /* EASY
@@ -28,3 +31,4 @@ inline int findMinRoomsNeeded( std::vector<std::pair<int, int>> schedule )
 
   return 1 + findMinRoomsNeeded( conflictingLecture );
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_028_HPP
+#define PROBLEMS_021_030_PROBLEM_028_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -71,3 +74,4 @@ inline std::vector<std::string> padWords( std::vector<std::string> words, unsign
   }
   return padded_strings;
 }
+#endif

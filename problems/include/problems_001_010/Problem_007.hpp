@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_001_010_PROBLEM_007_HPP
+#define PROBLEMS_001_010_PROBLEM_007_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -39,3 +42,4 @@ inline int prob_7()
 
   return 0;
 }
+#endif

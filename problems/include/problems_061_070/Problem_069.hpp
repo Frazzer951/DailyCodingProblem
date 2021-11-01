@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_069_HPP
+#define PROBLEMS_061_070_PROBLEM_069_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ inline int largest_product_x3( std::vector<int> nums )
   }
   return largest;
 }
+#endif

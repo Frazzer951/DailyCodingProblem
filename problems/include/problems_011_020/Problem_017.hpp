@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_011_020_PROBLEM_017_HPP
+#define PROBLEMS_011_020_PROBLEM_017_HPP
+
 #pragma once
 
 /* HARD
@@ -47,3 +50,5 @@ The name of a file contains at least a period and an extension.
 
 The name of a directory or sub-directory will not contain a period.
 */
+
+#endif

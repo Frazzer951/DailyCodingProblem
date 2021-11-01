@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_021_030_PROBLEM_027_HPP
+#define PROBLEMS_021_030_PROBLEM_027_HPP
+
 #pragma once
 
 /* EASY
@@ -36,3 +39,4 @@ inline bool isBallancedString( const std::string & str )
 
   return square == 0 && curly == 0 && round == 0;
 }
+#endif

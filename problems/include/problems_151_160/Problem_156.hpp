@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_156_HPP
+#define PROBLEMS_151_160_PROBLEM_156_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -31,3 +34,4 @@ inline int num_squares( int n )
   }
   return cache[n];
 }
+#endif

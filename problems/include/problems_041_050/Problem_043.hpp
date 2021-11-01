@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_043_HPP
+#define PROBLEMS_041_050_PROBLEM_043_HPP
+
 #pragma once
 
 /* EASY
@@ -63,3 +66,4 @@ struct stack
     return maxVal;
   }
 };
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_038_HPP
+#define PROBLEMS_031_040_PROBLEM_038_HPP
+
 #pragma once
 
 /* HARD
@@ -35,3 +38,4 @@ inline int n_queens( int n, std::vector<int> board = {} )
   }
   return count;
 }
+#endif

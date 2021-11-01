@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_105_HPP
+#define PROBLEMS_101_110_PROBLEM_105_HPP
+
 #pragma once
 
 /* EASY
@@ -33,3 +36,4 @@ inline auto debunce( int f(), int n )
 
   return std::function( func );
 }
+#endif

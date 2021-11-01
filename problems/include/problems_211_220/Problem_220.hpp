@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_220_HPP
+#define PROBLEMS_211_220_PROBLEM_220_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -35,3 +38,4 @@ inline int max_profit_coin_game( std::vector<int> coins )
   }
   return profit[0][n - 1];
 }
+#endif

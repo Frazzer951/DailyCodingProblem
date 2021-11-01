@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_093_HPP
+#define PROBLEMS_091_100_PROBLEM_093_HPP
+
 #pragma once
 
 /* HARD
@@ -38,3 +41,4 @@ inline int largest_subBST_size( btNode<char> * root )
   auto * largest = largest_subBST( root );
   return btSize( largest );
 }
+#endif

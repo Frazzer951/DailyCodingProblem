@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_077_HPP
+#define PROBLEMS_071_080_PROBLEM_077_HPP
+
 #pragma once
 
 /* EASY
@@ -62,3 +65,4 @@ inline std::vector<std::pair<int, int>> merge_overlaping_intervals( std::vector<
   }
   return merged;
 }
+#endif

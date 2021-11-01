@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_195_HPP
+#define PROBLEMS_191_200_PROBLEM_195_HPP
+
 #pragma once
 
 /* HARD
@@ -49,3 +52,4 @@ inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int 
   }
   return count;
 }
+#endif

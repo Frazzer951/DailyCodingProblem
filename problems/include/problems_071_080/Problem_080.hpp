@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_080_HPP
+#define PROBLEMS_071_080_PROBLEM_080_HPP
+
 #pragma once
 
 /* EASY
@@ -30,3 +33,4 @@ inline btNode<char> * find_deepest( btNode<char> * root )
 
   return deepest.second;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_196_HPP
+#define PROBLEMS_191_200_PROBLEM_196_HPP
+
 #pragma once
 
 /* EASY
@@ -40,3 +43,4 @@ inline int frequen_subtree_sum( btNode<int> * root )
                                { return p1.second < p2.second; } );
   return max->first;
 }
+#endif

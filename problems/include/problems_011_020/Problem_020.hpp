@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_011_020_PROBLEM_020_HPP
+#define PROBLEMS_011_020_PROBLEM_020_HPP
+
 #pragma once
 
 /* EASY
@@ -46,3 +49,4 @@ inline slNode<int> * findNodeIntersect( slNode<int> * a, slNode<int> * b )
 
   return curA;
 }
+#endif

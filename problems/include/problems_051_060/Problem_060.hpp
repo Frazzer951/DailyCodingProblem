@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_060_HPP
+#define PROBLEMS_051_060_PROBLEM_060_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -67,3 +70,4 @@ inline bool partitions( std::vector<int> s )
   }
   return A[A.size() - 1][A[0].size() - 1];
 }
+#endif

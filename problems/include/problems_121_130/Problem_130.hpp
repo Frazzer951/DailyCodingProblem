@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_121_130_PROBLEM_130_HPP
+#define PROBLEMS_121_130_PROBLEM_130_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -50,3 +53,4 @@ inline int stonks( std::vector<int> stocks, int k )
 
   return profit;
 }
+#endif

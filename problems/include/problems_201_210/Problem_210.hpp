@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_210_HPP
+#define PROBLEMS_201_210_PROBLEM_210_HPP
+
 #pragma once
 
 /* EASY
@@ -26,3 +29,4 @@ inline long int collatz( long int n )
   }
   return count;
 }
+#endif

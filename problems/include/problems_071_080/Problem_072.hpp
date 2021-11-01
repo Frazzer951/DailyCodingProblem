@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_072_HPP
+#define PROBLEMS_071_080_PROBLEM_072_HPP
+
 #pragma once
 
 /* HARD
@@ -118,3 +121,4 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
 
   return best_score( paths, nodes );
 }
+#endif

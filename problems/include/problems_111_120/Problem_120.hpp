@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_120_HPP
+#define PROBLEMS_111_120_PROBLEM_120_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -6,3 +9,5 @@ instance, store two instances. And in every even call of getInstance(), return
 the first instance and in every odd call of getInstance(), return the second
 instance.
 */
+
+#endif

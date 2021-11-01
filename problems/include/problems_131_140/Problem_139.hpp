@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_139_HPP
+#define PROBLEMS_131_140_PROBLEM_139_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -20,3 +23,5 @@ class PeekableInterface(object):
     def hasNext(self):
         pass
 */
+
+#endif

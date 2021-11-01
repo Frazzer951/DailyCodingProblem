@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_157_HPP
+#define PROBLEMS_151_160_PROBLEM_157_HPP
+
 #pragma once
 
 /* EASY
@@ -29,3 +32,4 @@ inline bool permPalindrome( const std::string & word )
   }
   return true;
 }
+#endif

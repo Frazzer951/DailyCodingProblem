@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_205_HPP
+#define PROBLEMS_201_210_PROBLEM_205_HPP
+
 #pragma once
 
 /* EASY
@@ -50,3 +53,4 @@ inline int get_next_perm( int _num )
 
   return _num;
 }
+#endif

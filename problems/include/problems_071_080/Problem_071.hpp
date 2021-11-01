@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_071_HPP
+#define PROBLEMS_071_080_PROBLEM_071_HPP
+
 #pragma once
 
 /* EASY
@@ -19,3 +22,4 @@ namespace prob71
     return rand5();
   }
 }    // namespace prob71
+#endif

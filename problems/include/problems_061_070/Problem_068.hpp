@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_068_HPP
+#define PROBLEMS_061_070_PROBLEM_068_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -51,3 +54,5 @@ inline int pairs( std::vector<std::pair<int, int>> bishops, int /*m*/ )
   }
   return count;
 }
+
+#endif

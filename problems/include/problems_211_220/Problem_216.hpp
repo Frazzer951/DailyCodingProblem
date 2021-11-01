@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_216_HPP
+#define PROBLEMS_211_220_PROBLEM_216_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -49,3 +52,4 @@ inline int romanToInt( std::string roman )
   }
   return num;
 }
+#endif

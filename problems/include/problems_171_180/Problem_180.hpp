@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_180_HPP
+#define PROBLEMS_171_180_PROBLEM_180_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -61,3 +64,4 @@ inline std::stack<int> interleave( std::stack<int> s )
 
   return s;
 }
+#endif

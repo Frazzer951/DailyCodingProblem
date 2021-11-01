@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_135_HPP
+#define PROBLEMS_131_140_PROBLEM_135_HPP
+
 #pragma once
 
 /* EASY
@@ -31,3 +34,4 @@ inline int minPathSum( btNode<int> * root )
 
   return root->value + std::min( left, right );
 }
+#endif

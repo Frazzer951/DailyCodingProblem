@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_039_HPP
+#define PROBLEMS_031_040_PROBLEM_039_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -22,3 +25,5 @@ top-leftmost live cell to bottom-rightmost live cell.
 You can represent a live cell with an asterisk (*) and a dead cell with a dot (.
 ).
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_213_HPP
+#define PROBLEMS_211_220_PROBLEM_213_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -66,3 +69,4 @@ inline std::vector<std::string> generateIpAddresses( const std::string & s, std:
 
   return addresses;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_141_150_PROBLEM_150_HPP
+#define PROBLEMS_141_150_PROBLEM_150_HPP
+
 #pragma once
 
 /* HARD
@@ -32,3 +35,4 @@ inline std::vector<std::pair<int, int>> nearestPoints( const std::vector<std::pa
 
   return nearest;
 }
+#endif

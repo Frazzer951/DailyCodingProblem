@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_190_HPP
+#define PROBLEMS_181_190_PROBLEM_190_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -42,3 +45,4 @@ inline int maxCircSubArray( std::vector<int> arr )
   int maxSubArraySumWrap = std::accumulate( arr.begin(), arr.end(), 0 ) - minSubArraySum( arr );
   return std::max( maxSubArraySum( arr ), maxSubArraySumWrap );
 }
+#endif

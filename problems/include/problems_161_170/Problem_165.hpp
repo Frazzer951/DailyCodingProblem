@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_165_HPP
+#define PROBLEMS_161_170_PROBLEM_165_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -32,3 +35,4 @@ inline std::vector<int> rightSmaller( const std::vector<int> & arr )
   }
   return counts;
 }
+#endif

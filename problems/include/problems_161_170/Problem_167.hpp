@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_167_HPP
+#define PROBLEMS_161_170_PROBLEM_167_HPP
+
 #pragma once
 
 /* HARD
@@ -30,3 +33,4 @@ inline std::vector<std::pair<int, int>> palindromes( std::vector<std::string> wo
   }
   return indices;
 }
+#endif

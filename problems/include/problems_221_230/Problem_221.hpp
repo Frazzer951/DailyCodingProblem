@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_221_HPP
+#define PROBLEMS_221_230_PROBLEM_221_HPP
+
 #pragma once
 
 /* EASY
@@ -20,3 +23,4 @@ inline int nthSevenish( int n )
   }
   return answer;
 }
+#endif

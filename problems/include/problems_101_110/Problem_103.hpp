@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_101_110_PROBLEM_103_HPP
+#define PROBLEMS_101_110_PROBLEM_103_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -47,3 +50,4 @@ inline int smallest( std::string s1, const std::vector<char> & s2 )
   }
   return (int) minlen;
 }
+#endif

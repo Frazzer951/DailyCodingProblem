@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_011_020_PROBLEM_019_HPP
+#define PROBLEMS_011_020_PROBLEM_019_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -27,3 +30,4 @@ inline int build_houses( std::vector<std::vector<int>> matrix )
   }
   return getIntVecMin( soln_row );
 }
+#endif

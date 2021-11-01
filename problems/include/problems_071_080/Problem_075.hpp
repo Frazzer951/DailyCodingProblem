@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_071_080_PROBLEM_075_HPP
+#define PROBLEMS_071_080_PROBLEM_075_HPP
+
 #pragma once
 
 /* HARD
@@ -26,3 +29,4 @@ inline int longest_increasing_subsequence( std::vector<int> arr )
   }
   return getIntVecMax( cache );
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_118_HPP
+#define PROBLEMS_111_120_PROBLEM_118_HPP
+
 #pragma once
 
 /* EASY
@@ -18,3 +21,4 @@ inline std::vector<int> square_sort( std::vector<int> nums )
 
   return nums;
 }
+#endif

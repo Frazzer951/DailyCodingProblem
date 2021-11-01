@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_052_HPP
+#define PROBLEMS_051_060_PROBLEM_052_HPP
+
 #pragma once
 
 /* HARD
@@ -100,3 +103,4 @@ struct LRUCache
     return "";
   }
 };
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_194_HPP
+#define PROBLEMS_191_200_PROBLEM_194_HPP
+
 #pragma once
 
 /* EASY
@@ -49,3 +52,4 @@ inline int numIntersections( std::vector<int> ps, std::vector<int> qs )
   }
   return intersections;
 }
+#endif

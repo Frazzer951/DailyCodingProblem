@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_191_200_PROBLEM_200_HPP
+#define PROBLEMS_191_200_PROBLEM_200_HPP
+
 #pragma once
 
 /* HARD
@@ -30,3 +33,4 @@ inline std::vector<int> get_points( std::vector<std::pair<int, int>> intervals )
 
   return points;
 }
+#endif

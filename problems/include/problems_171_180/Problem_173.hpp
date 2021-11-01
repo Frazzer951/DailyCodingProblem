@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_173_HPP
+#define PROBLEMS_171_180_PROBLEM_173_HPP
+
 #pragma once
 
 /* EASY
@@ -53,3 +56,4 @@ inline std::map<std::string, int> flatten( const anymap & d, char separator = '.
 
   return new_dict;
 }
+#endif

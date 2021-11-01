@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_131_140_PROBLEM_136_HPP
+#define PROBLEMS_131_140_PROBLEM_136_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -53,3 +56,4 @@ inline int largestRectangle( std::vector<std::vector<int>> v )
   }
   return largest;
 }
+#endif

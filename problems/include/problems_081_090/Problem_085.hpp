@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_085_HPP
+#define PROBLEMS_081_090_PROBLEM_085_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -12,3 +15,4 @@ inline int math_if( int x, int y, int b )
   y = y & ~b;
   return x | y;
 }
+#endif

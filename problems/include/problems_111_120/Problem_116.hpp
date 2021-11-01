@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_116_HPP
+#define PROBLEMS_111_120_PROBLEM_116_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -17,3 +20,4 @@ inline btNode<int> * generate()
 
   return root;
 }
+#endif

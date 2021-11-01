@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_161_170_PROBLEM_166_HPP
+#define PROBLEMS_161_170_PROBLEM_166_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -50,3 +53,4 @@ public:
 
   bool has_next() { return updateIndex(); }
 };
+#endif

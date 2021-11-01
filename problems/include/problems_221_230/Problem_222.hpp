@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_222_HPP
+#define PROBLEMS_221_230_PROBLEM_222_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -52,3 +55,5 @@ inline std::string shortestAbsolutePath( std::string path )
   if( result.empty() ) result = "/";
   return result;
 }
+
+#endif

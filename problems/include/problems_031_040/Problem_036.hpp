@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_036_HPP
+#define PROBLEMS_031_040_PROBLEM_036_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -86,3 +89,4 @@ inline int findSecondLargetNode( BST * root )
   revInorder( root, count, val );
   return val;
 }
+#endif

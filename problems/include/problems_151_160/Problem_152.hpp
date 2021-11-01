@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_152_HPP
+#define PROBLEMS_151_160_PROBLEM_152_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -32,3 +35,4 @@ inline int randomProb( std::vector<int> nums, std::vector<double> probs )
 
   return 0;
 }
+#endif

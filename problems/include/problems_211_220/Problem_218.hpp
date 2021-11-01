@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_211_220_PROBLEM_218_HPP
+#define PROBLEMS_211_220_PROBLEM_218_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -26,3 +29,4 @@ inline slNode<T> * reverse( slNode<T> * root )
 
   return curr;
 }
+#endif

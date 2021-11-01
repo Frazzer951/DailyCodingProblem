@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_206_HPP
+#define PROBLEMS_201_210_PROBLEM_206_HPP
+
 #pragma once
 
 /* EASY
@@ -20,3 +23,4 @@ inline std::vector<char> genPermutation( std::vector<char> arr, std::vector<int>
 
   return perm;
 }
+#endif

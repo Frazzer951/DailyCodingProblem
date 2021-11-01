@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_062_HPP
+#define PROBLEMS_061_070_PROBLEM_062_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -28,3 +31,4 @@ inline int num_ways( int n, int m )
   }
   return A[n - 1][m - 1];
 }
+#endif

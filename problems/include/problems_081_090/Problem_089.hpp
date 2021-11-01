@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_081_090_PROBLEM_089_HPP
+#define PROBLEMS_081_090_PROBLEM_089_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -20,3 +23,4 @@ inline bool validateBST( btNode<char> * node )
 
   return validateBST( node->left ) && validateBST( node->right );
 }
+#endif

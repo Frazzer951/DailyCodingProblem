@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_047_HPP
+#define PROBLEMS_041_050_PROBLEM_047_HPP
+
 #pragma once
 
 /* EASY
@@ -24,3 +27,4 @@ inline int max_profit( std::vector<int> prices )
   }
   return profit;
 }
+#endif

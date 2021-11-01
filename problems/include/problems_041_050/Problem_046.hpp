@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_046_HPP
+#define PROBLEMS_041_050_PROBLEM_046_HPP
+
 #pragma once
 
 /* HARD
@@ -32,3 +35,4 @@ inline std::string longest_palindrome( const std::string & s )
   }
   return longest;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_051_060_PROBLEM_054_HPP
+#define PROBLEMS_051_060_PROBLEM_054_HPP
+
 #pragma once
 
 /* HARD
@@ -106,3 +109,4 @@ inline std::vector<std::vector<int>> solveSudoku( std::vector<std::vector<int>> 
 
   return board;
 }
+#endif

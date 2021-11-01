@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_040_HPP
+#define PROBLEMS_031_040_PROBLEM_040_HPP
+
 #pragma once
 
 /* HARD
@@ -32,3 +35,4 @@ inline int nonRepeatInt( const std::vector<int> & v )
 
   return result;
 }
+#endif

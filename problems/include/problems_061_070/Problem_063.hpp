@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_063_HPP
+#define PROBLEMS_061_070_PROBLEM_063_HPP
+
 #pragma once
 
 /* EASY
@@ -65,3 +68,4 @@ inline bool findWord( std::vector<std::vector<char>> letters, std::string word )
 
   return false;
 }
+#endif

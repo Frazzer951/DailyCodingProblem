@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_171_180_PROBLEM_172_HPP
+#define PROBLEMS_171_180_PROBLEM_172_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -52,3 +55,4 @@ inline std::vector<int> indiciesOfSubstrings( const std::string & s, std::vector
   }
   return indecies;
 }
+#endif

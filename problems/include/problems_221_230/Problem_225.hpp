@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_221_230_PROBLEM_225_HPP
+#define PROBLEMS_221_230_PROBLEM_225_HPP
+
 #pragma once
 
 /* EASY
@@ -20,3 +23,4 @@ inline int last_prisoner( int n, int k )
   if( k == 1 ) return n - 1;
   return ( ( last_prisoner( n - 1, k ) + k - 1 ) % n ) + 1;
 }
+#endif

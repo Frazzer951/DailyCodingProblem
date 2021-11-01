@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_202_HPP
+#define PROBLEMS_201_210_PROBLEM_202_HPP
+
 #pragma once
 
 /* EASY
@@ -28,3 +31,4 @@ inline bool isPalindrome( int num )
 
   return true;
 }
+#endif

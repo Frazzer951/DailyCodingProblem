@@ -1,3 +1,6 @@
+#ifndef BTNODE_HPP
+#define BTNODE_HPP
+
 #pragma once
 
 #include <iostream>
@@ -46,3 +49,4 @@ inline bool operator==( const btNode<T> & lhs, const btNode<T> & rhs )
   if( lhs.left == nullptr && lhs.right != nullptr ) return *lhs.right == *rhs.right;
   return *lhs.left == *rhs.left && *lhs.right == *rhs.right;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_151_160_PROBLEM_151_HPP
+#define PROBLEMS_151_160_PROBLEM_151_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -46,3 +49,4 @@ inline std::vector<std::vector<char>> pixleReplace( std::vector<std::vector<char
 
   return pixelMatrix;
 }
+#endif

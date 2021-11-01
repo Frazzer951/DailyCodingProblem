@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_201_210_PROBLEM_201_HPP
+#define PROBLEMS_201_210_PROBLEM_201_HPP
+
 #pragma once
 
 /* EASY
@@ -30,3 +33,4 @@ inline int longestPath( std::vector<std::vector<int>> arrays )
   }
   return arrays[0][0];
 }
+#endif

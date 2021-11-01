@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_031_040_PROBLEM_037_HPP
+#define PROBLEMS_031_040_PROBLEM_037_HPP
+
 #pragma once
 
 /* EASY
@@ -36,3 +39,5 @@ inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
   // std::sort( powerSet.begin(), powerSet.end() );
   return powerSet;
 }
+
+#endif

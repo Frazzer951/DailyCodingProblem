@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_065_HPP
+#define PROBLEMS_061_070_PROBLEM_065_HPP
+
 #pragma once
 
 /* EASY
@@ -84,3 +87,4 @@ inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
   }
   return spiral;
 }
+#endif

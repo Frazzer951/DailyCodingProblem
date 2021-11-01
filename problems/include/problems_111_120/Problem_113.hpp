@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_111_120_PROBLEM_113_HPP
+#define PROBLEMS_111_120_PROBLEM_113_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -21,3 +24,4 @@ inline std::string reverseSentance( std::string sentance )
   reverse.erase( reverse.end() - 1 );
   return reverse;
 }
+#endif

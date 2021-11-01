@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_091_100_PROBLEM_091_HPP
+#define PROBLEMS_091_100_PROBLEM_091_HPP
+
 #pragma once
 
 /* EASY
@@ -11,3 +14,5 @@ for i in range(10):
 for f in functions:
     print(f())
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_181_190_PROBLEM_187_HPP
+#define PROBLEMS_181_190_PROBLEM_187_HPP
+
 #pragma once
 
 /* EASY
@@ -55,3 +58,4 @@ inline bool overlapping( std::vector<Rect> rectangles )
 
   return false;
 }
+#endif

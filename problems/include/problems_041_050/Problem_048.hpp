@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_041_050_PROBLEM_048_HPP
+#define PROBLEMS_041_050_PROBLEM_048_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -68,3 +71,4 @@ inline btNode<char> * reconstruct( std::vector<btNode<char> *> preorder, std::ve
 
   return root;
 }
+#endif

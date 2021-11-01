@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_061_070_PROBLEM_070_HPP
+#define PROBLEMS_061_070_PROBLEM_070_HPP
+
 #pragma once
 
 /* EASY
@@ -25,3 +28,4 @@ inline int perfecet_num( int n )
 
   return ( perfecet_num( std::stoi( n_str ) ) );
 }
+#endif
