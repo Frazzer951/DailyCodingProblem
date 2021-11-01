@@ -1,15 +1,15 @@
-#include "Problem_071.hpp"
-#include "Problem_072.hpp"
-#include "Problem_073.hpp"
-#include "Problem_074.hpp"
-#include "Problem_075.hpp"
-#include "Problem_076.hpp"
-#include "Problem_077.hpp"
-#include "Problem_078.hpp"
-#include "Problem_079.hpp"
-#include "Problem_080.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_071_080/Problem_071.hpp"
+#include "problems_071_080/Problem_072.hpp"
+#include "problems_071_080/Problem_073.hpp"
+#include "problems_071_080/Problem_074.hpp"
+#include "problems_071_080/Problem_075.hpp"
+#include "problems_071_080/Problem_076.hpp"
+#include "problems_071_080/Problem_077.hpp"
+#include "problems_071_080/Problem_078.hpp"
+#include "problems_071_080/Problem_079.hpp"
+#include "problems_071_080/Problem_080.hpp"
 
 // Problem 71
 TEST( Problem_71, Test_Case )

@@ -1,17 +1,17 @@
 #include <numeric>
 
-#include "Problem_171.hpp"
-#include "Problem_172.hpp"
-#include "Problem_173.hpp"
-#include "Problem_174.hpp"
-#include "Problem_175.hpp"
-#include "Problem_176.hpp"
-#include "Problem_177.hpp"
-#include "Problem_178.hpp"
-#include "Problem_179.hpp"
-#include "Problem_180.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_171_180/Problem_171.hpp"
+#include "problems_171_180/Problem_172.hpp"
+#include "problems_171_180/Problem_173.hpp"
+#include "problems_171_180/Problem_174.hpp"
+#include "problems_171_180/Problem_175.hpp"
+#include "problems_171_180/Problem_176.hpp"
+#include "problems_171_180/Problem_177.hpp"
+#include "problems_171_180/Problem_178.hpp"
+#include "problems_171_180/Problem_179.hpp"
+#include "problems_171_180/Problem_180.hpp"
 
 // Problem 171
 TEST( Problem_171, Test_Case )
@@ -66,6 +66,9 @@ TEST( Problem_173, Given_Case )
 
   EXPECT_EQ( result, expected );
 }
+
+// Problem 174
+
 
 // Problem 175
 TEST( Problem_175, Test_Case )

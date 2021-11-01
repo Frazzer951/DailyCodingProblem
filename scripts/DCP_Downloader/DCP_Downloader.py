@@ -20,7 +20,7 @@ def loadEmails():
 
 def saveEmails(emails):
     """Will Save the cached emails"""
-    with open(config.proj_dir + "/emails.json", "w") as f:
+    with open(config.proj_dir + "/emails.json", "w", encoding="utf-8") as f:
         json.dump(emails, f, indent=2)
         logging.debug("Cache Saved")
 
@@ -82,12 +82,37 @@ def getEmails(forceRefresh=False):
     return emails
 
 
+def line_prepender(filename, line):
+    with open(filename, "r+") as f:
+        content = f.read()
+        f.seek(0, 0)
+        f.write(line.rstrip("\r\n") + "\n" + content)
+
+
 def genProblem(problems, num):
     """Generate Missing Problems from Problem List"""
-    filename = f"problems/Problem_{num:03}.hpp"
+    # Create Filenames for all files with problems
+    section = (num - 1) // 10
+    path = f"problems/include/problems_{section:02}1_{section+1:02}0"
+    filename = f"{path}/Problem_{num:03}.hpp"
+    cpp_filename = f"src/test_Problems_{section:02}1_{section+1:02}0.cpp"
+
+    # Make sure the files exist
+    if not os.path.exists(path):
+        os.makedirs(path)
+    if not os.path.isfile(cpp_filename):
+        if not os.path.exists("src"):
+            os.makedirs("src")
+        with open(cpp_filename, "w") as f:
+            logging.info(f"Generating {cpp_filename}")
+            f.write('\n#include "gtest/gtest.h"\n\n')
+            for i in range(section * 10 + 1, (section + 1) * 10 + 1):
+                f.write(f"// Problem {i}\n\n\n")
+
     logging.debug(filename)
     if os.path.isfile(filename):
         return
+
     with open(filename, "w") as f:
         logging.info(f"Generating file for #{num:03}")
         f.write("#pragma once\n\n")
@@ -98,6 +123,11 @@ def genProblem(problems, num):
     with open("README.md", "a") as f:
         logging.info(f"Adding #{num:03} to README.md")
         f.write(f"\n- Problem {num:03}")
+    # Include file in cpp file
+    line_prepender(
+        cpp_filename,
+        f'#include "problems_{section:02}1_{section+1:02}0/Problem_{num:03}.hpp"',
+    )
 
 
 def addProblems(cacheOnly=False, forceRefresh=False):

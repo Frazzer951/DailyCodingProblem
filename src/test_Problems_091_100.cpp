@@ -1,15 +1,18 @@
-#include "Problem_091.hpp"
-#include "Problem_092.hpp"
-#include "Problem_093.hpp"
-#include "Problem_094.hpp"
-#include "Problem_095.hpp"
-#include "Problem_096.hpp"
-#include "Problem_097.hpp"
-#include "Problem_098.hpp"
-#include "Problem_099.hpp"
-#include "Problem_100.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_091_100/Problem_091.hpp"
+#include "problems_091_100/Problem_092.hpp"
+#include "problems_091_100/Problem_093.hpp"
+#include "problems_091_100/Problem_094.hpp"
+#include "problems_091_100/Problem_095.hpp"
+#include "problems_091_100/Problem_096.hpp"
+#include "problems_091_100/Problem_097.hpp"
+#include "problems_091_100/Problem_098.hpp"
+#include "problems_091_100/Problem_099.hpp"
+#include "problems_091_100/Problem_100.hpp"
+
+// Problem 91
+
 
 // Problem 92
 TEST( Problem_92, Given_Case )

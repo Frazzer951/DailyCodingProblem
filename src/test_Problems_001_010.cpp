@@ -1,15 +1,15 @@
-#include "Problem_001.hpp"
-#include "Problem_002.hpp"
-#include "Problem_003.hpp"
-#include "Problem_004.hpp"
-#include "Problem_005.hpp"
-#include "Problem_006.hpp"
-#include "Problem_007.hpp"
-#include "Problem_008.hpp"
-#include "Problem_009.hpp"
-#include "Problem_010.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_001_010/Problem_001.hpp"
+#include "problems_001_010/Problem_002.hpp"
+#include "problems_001_010/Problem_003.hpp"
+#include "problems_001_010/Problem_004.hpp"
+#include "problems_001_010/Problem_005.hpp"
+#include "problems_001_010/Problem_006.hpp"
+#include "problems_001_010/Problem_007.hpp"
+#include "problems_001_010/Problem_008.hpp"
+#include "problems_001_010/Problem_009.hpp"
+#include "problems_001_010/Problem_010.hpp"
 
 // Problem 1
 TEST( Problem_1, Given_Case ) { EXPECT_TRUE( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) ); }

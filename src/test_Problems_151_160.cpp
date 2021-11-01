@@ -1,15 +1,15 @@
-#include "Problem_151.hpp"
-#include "Problem_152.hpp"
-#include "Problem_153.hpp"
-#include "Problem_154.hpp"
-#include "Problem_155.hpp"
-#include "Problem_156.hpp"
-#include "Problem_157.hpp"
-#include "Problem_158.hpp"
-#include "Problem_159.hpp"
-#include "Problem_160.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_151_160/Problem_151.hpp"
+#include "problems_151_160/Problem_152.hpp"
+#include "problems_151_160/Problem_153.hpp"
+#include "problems_151_160/Problem_154.hpp"
+#include "problems_151_160/Problem_155.hpp"
+#include "problems_151_160/Problem_156.hpp"
+#include "problems_151_160/Problem_157.hpp"
+#include "problems_151_160/Problem_158.hpp"
+#include "problems_151_160/Problem_159.hpp"
+#include "problems_151_160/Problem_160.hpp"
 
 // Problem 151
 TEST( Problem_151, Given_Case )
@@ -59,6 +59,9 @@ TEST( Problem_153, Given_Case )
       smallestWordDistance( "hello", "world", { "dog", "cat", "hello", "cat", "dog", "dog", "hello", "cat", "world" } ),
       1 );
 }
+
+// Problem 154
+
 
 // Problem 155
 TEST( Problem_155, Given_Case )

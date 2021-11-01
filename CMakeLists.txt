@@ -37,27 +37,27 @@ if(NOT googletest_POPULATED)
   add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
 
-include_directories(problems)
+include_directories(problems/include)
 include_directories(include)
 
-file(GLOB src_files
+file(GLOB_RECURSE src_files
      "src/*.cpp"
      "src/*.hpp"
 )
 
-file(GLOB problem_files
+file(GLOB_RECURSE problem_files
      "problems/*.cpp"
      "problems/*.hpp"
 )
 
-file(GLOB include_files
+file(GLOB_RECURSE include_files
      "include/*.cpp"
      "include/*.hpp"
 )
 
 # Copy Needed TXT Files to build dir
 file(COPY
-    ${CMAKE_CURRENT_SOURCE_DIR}/problems/Problem_082.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/problems/include/problems_081_090/Problem_082.txt
     DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
 )
 

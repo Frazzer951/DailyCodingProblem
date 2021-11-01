@@ -1,15 +1,15 @@
-#include "Problem_031.hpp"
-#include "Problem_032.hpp"
-#include "Problem_033.hpp"
-#include "Problem_034.hpp"
-#include "Problem_035.hpp"
-#include "Problem_036.hpp"
-#include "Problem_037.hpp"
-#include "Problem_038.hpp"
-#include "Problem_039.hpp"
-#include "Problem_040.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_031_040/Problem_031.hpp"
+#include "problems_031_040/Problem_032.hpp"
+#include "problems_031_040/Problem_033.hpp"
+#include "problems_031_040/Problem_034.hpp"
+#include "problems_031_040/Problem_035.hpp"
+#include "problems_031_040/Problem_036.hpp"
+#include "problems_031_040/Problem_037.hpp"
+#include "problems_031_040/Problem_038.hpp"
+#include "problems_031_040/Problem_039.hpp"
+#include "problems_031_040/Problem_040.hpp"
 
 // Problem 31
 TEST( Problem_31, Given_Case )
@@ -22,10 +22,7 @@ TEST( Problem_31, Given_Case )
 }
 
 // Problem 32
-TEST( Problem_32, Given_Case )
-{
-  // Not sure what the input is, and there are no examples, so I do not know how to make a solution
-}
+
 
 // Problem 33
 TEST( Problem_33, Given_Case )
@@ -118,10 +115,7 @@ TEST( Problem_38, Test_Case_3 )
 }
 
 // Problem 39
-TEST( Problem_39, Test_Case )
-{
-  // I've done multiple CGOL's before and do not want to make another, also not sure how I would test it
-}
+
 
 // Problem 40
 TEST( Problem_40, Given_Case_1 )

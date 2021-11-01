@@ -1,15 +1,15 @@
-#include "Problem_181.hpp"
-#include "Problem_182.hpp"
-#include "Problem_183.hpp"
-#include "Problem_184.hpp"
-#include "Problem_185.hpp"
-#include "Problem_186.hpp"
-#include "Problem_187.hpp"
-#include "Problem_188.hpp"
-#include "Problem_189.hpp"
-#include "Problem_190.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_181_190/Problem_181.hpp"
+#include "problems_181_190/Problem_182.hpp"
+#include "problems_181_190/Problem_183.hpp"
+#include "problems_181_190/Problem_184.hpp"
+#include "problems_181_190/Problem_185.hpp"
+#include "problems_181_190/Problem_186.hpp"
+#include "problems_181_190/Problem_187.hpp"
+#include "problems_181_190/Problem_188.hpp"
+#include "problems_181_190/Problem_189.hpp"
+#include "problems_181_190/Problem_190.hpp"
 
 // Problem 181
 TEST( Problem_181, Given_Case_1 )
@@ -67,6 +67,9 @@ TEST( Problem_182, Test_Case_2 )
   EXPECT_TRUE( isMinimallyConnected( n1 ) );
 }
 
+// Problem 183
+
+
 // Problem 184
 TEST( Problem_184, Given_Case )
 {
@@ -118,6 +121,9 @@ TEST( Problem_185, Test_Case )
   EXPECT_EQ( area, 0 );
 }
 
+// Problem 186
+
+
 // Problem 187
 TEST( Problem_187, Given_Case )
 {
@@ -142,6 +148,9 @@ TEST( Problem_187, Given_Case )
 
   EXPECT_TRUE( overlapping( rectangles ) );
 }
+
+// Problem 188
+
 
 // Problem 189
 TEST( Problem_189, Test_Case )

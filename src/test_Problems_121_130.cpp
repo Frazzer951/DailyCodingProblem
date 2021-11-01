@@ -1,15 +1,15 @@
-#include "Problem_121.hpp"
-#include "Problem_122.hpp"
-#include "Problem_123.hpp"
-#include "Problem_124.hpp"
-#include "Problem_125.hpp"
-#include "Problem_126.hpp"
-#include "Problem_127.hpp"
-#include "Problem_128.hpp"
-#include "Problem_129.hpp"
-#include "Problem_130.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_121_130/Problem_121.hpp"
+#include "problems_121_130/Problem_122.hpp"
+#include "problems_121_130/Problem_123.hpp"
+#include "problems_121_130/Problem_124.hpp"
+#include "problems_121_130/Problem_125.hpp"
+#include "problems_121_130/Problem_126.hpp"
+#include "problems_121_130/Problem_127.hpp"
+#include "problems_121_130/Problem_128.hpp"
+#include "problems_121_130/Problem_129.hpp"
+#include "problems_121_130/Problem_130.hpp"
 
 // Problem 121
 TEST( Problem_121, Given_Case ) { EXPECT_TRUE( k_palindrome( "waterrfetawx", 2 ) ); }

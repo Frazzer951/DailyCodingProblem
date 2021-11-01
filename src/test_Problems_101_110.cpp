@@ -1,16 +1,15 @@
-#include "Problem_101.hpp"
-#include "Problem_102.hpp"
-#include "Problem_103.hpp"
-#include "Problem_104.hpp"
-#include "Problem_105.hpp"
-#include "Problem_106.hpp"
-#include "Problem_107.hpp"
-#include "Problem_108.hpp"
-#include "Problem_109.hpp"
-#include "Problem_110.hpp"
-
 #include "gtest/gtest.h"
 
+#include "problems_101_110/Problem_101.hpp"
+#include "problems_101_110/Problem_102.hpp"
+#include "problems_101_110/Problem_103.hpp"
+#include "problems_101_110/Problem_104.hpp"
+#include "problems_101_110/Problem_105.hpp"
+#include "problems_101_110/Problem_106.hpp"
+#include "problems_101_110/Problem_107.hpp"
+#include "problems_101_110/Problem_108.hpp"
+#include "problems_101_110/Problem_109.hpp"
+#include "problems_101_110/Problem_110.hpp"
 
 // Problem 101
 TEST( Problem_101, Given_Case )

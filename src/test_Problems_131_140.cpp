@@ -1,15 +1,17 @@
-#include "Problem_131.hpp"
-#include "Problem_132.hpp"
-#include "Problem_133.hpp"
-#include "Problem_134.hpp"
-#include "Problem_135.hpp"
-#include "Problem_136.hpp"
-#include "Problem_137.hpp"
-#include "Problem_138.hpp"
-#include "Problem_139.hpp"
-#include "Problem_140.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_131_140/Problem_131.hpp"
+#include "problems_131_140/Problem_132.hpp"
+#include "problems_131_140/Problem_133.hpp"
+#include "problems_131_140/Problem_134.hpp"
+#include "problems_131_140/Problem_135.hpp"
+#include "problems_131_140/Problem_136.hpp"
+#include "problems_131_140/Problem_137.hpp"
+#include "problems_131_140/Problem_138.hpp"
+#include "problems_131_140/Problem_139.hpp"
+#include "problems_131_140/Problem_140.hpp"
+
+// Problem 131
 
 
 // Problem 132
@@ -141,6 +143,9 @@ TEST( Problem_138, Given_Case )
   int result = minimum_coins( 16 );
   EXPECT_EQ( result, 3 );
 }
+
+// Problem 139
+
 
 // Problem 140
 TEST( Problem_140, Given_Case )

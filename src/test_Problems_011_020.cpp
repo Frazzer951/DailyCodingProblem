@@ -1,15 +1,15 @@
-#include "Problem_011.hpp"
-#include "Problem_012.hpp"
-#include "Problem_013.hpp"
-#include "Problem_014.hpp"
-#include "Problem_015.hpp"
-#include "Problem_016.hpp"
-#include "Problem_017.hpp"
-#include "Problem_018.hpp"
-#include "Problem_019.hpp"
-#include "Problem_020.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_011_020/Problem_011.hpp"
+#include "problems_011_020/Problem_012.hpp"
+#include "problems_011_020/Problem_013.hpp"
+#include "problems_011_020/Problem_014.hpp"
+#include "problems_011_020/Problem_015.hpp"
+#include "problems_011_020/Problem_016.hpp"
+#include "problems_011_020/Problem_017.hpp"
+#include "problems_011_020/Problem_018.hpp"
+#include "problems_011_020/Problem_019.hpp"
+#include "problems_011_020/Problem_020.hpp"
 
 // Problem 11
 TEST( Problem_11, Given_Case )
@@ -135,10 +135,7 @@ TEST( Problem_16, Test_Case_4 )
 }
 
 // Problem 17
-TEST( Problem_17, Given_Case )
-{
-  // Not sure how to do this ATM so I'll return later
-}
+
 
 // Problem 18
 TEST( Problem_18, Given_Case )

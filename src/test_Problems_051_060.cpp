@@ -1,15 +1,15 @@
-#include "Problem_051.hpp"
-#include "Problem_052.hpp"
-#include "Problem_053.hpp"
-#include "Problem_054.hpp"
-#include "Problem_055.hpp"
-#include "Problem_056.hpp"
-#include "Problem_057.hpp"
-#include "Problem_058.hpp"
-#include "Problem_059.hpp"
-#include "Problem_060.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_051_060/Problem_051.hpp"
+#include "problems_051_060/Problem_052.hpp"
+#include "problems_051_060/Problem_053.hpp"
+#include "problems_051_060/Problem_054.hpp"
+#include "problems_051_060/Problem_055.hpp"
+#include "problems_051_060/Problem_056.hpp"
+#include "problems_051_060/Problem_057.hpp"
+#include "problems_051_060/Problem_058.hpp"
+#include "problems_051_060/Problem_059.hpp"
+#include "problems_051_060/Problem_060.hpp"
 
 // Problem 51
 TEST( Problem_51, Test_Case )
@@ -18,6 +18,7 @@ TEST( Problem_51, Test_Case )
 
   auto shuffled = shuffle( arr );
 }
+
 
 // Problem 52
 TEST( Problem_52, set_get )
@@ -208,10 +209,7 @@ TEST( Problem_58, Given_Case )
 }
 
 // Problem 59
-TEST( Problem_59, Test_Case )
-{
-  // I'm not learning networking for this
-}
+
 
 // Problem 60
 TEST( Problem_60, Given_Case_1 )

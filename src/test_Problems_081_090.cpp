@@ -1,22 +1,22 @@
-#include "Problem_081.hpp"
-#include "Problem_082.hpp"
-#include "Problem_083.hpp"
-#include "Problem_084.hpp"
-#include "Problem_085.hpp"
-#include "Problem_086.hpp"
-#include "Problem_087.hpp"
-#include "Problem_088.hpp"
-#include "Problem_089.hpp"
-#include "Problem_090.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_081_090/Problem_081.hpp"
+#include "problems_081_090/Problem_082.hpp"
+#include "problems_081_090/Problem_083.hpp"
+#include "problems_081_090/Problem_084.hpp"
+#include "problems_081_090/Problem_085.hpp"
+#include "problems_081_090/Problem_086.hpp"
+#include "problems_081_090/Problem_087.hpp"
+#include "problems_081_090/Problem_088.hpp"
+#include "problems_081_090/Problem_089.hpp"
+#include "problems_081_090/Problem_090.hpp"
 
 // Problem 81
 TEST( Problem_81, Given_Case )
 {
   /*
-  For example if {“2”: [“a”, “b”, “c”], 3: [“d”, “e”, “f”], …}
-  then “23” should return [“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf"].
+  For example if {ï¿½2ï¿½: [ï¿½aï¿½, ï¿½bï¿½, ï¿½cï¿½], 3: [ï¿½dï¿½, ï¿½eï¿½, ï¿½fï¿½], ï¿½}
+  then ï¿½23ï¿½ should return [ï¿½adï¿½, ï¿½aeï¿½, ï¿½afï¿½, ï¿½bdï¿½, ï¿½beï¿½, ï¿½bfï¿½, ï¿½cdï¿½, ï¿½ceï¿½, ï¿½cf"].
   */
 
   std::map<char, std::vector<std::string>> num_map;

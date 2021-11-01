@@ -1,15 +1,15 @@
-#include "Problem_041.hpp"
-#include "Problem_042.hpp"
-#include "Problem_043.hpp"
-#include "Problem_044.hpp"
-#include "Problem_045.hpp"
-#include "Problem_046.hpp"
-#include "Problem_047.hpp"
-#include "Problem_048.hpp"
-#include "Problem_049.hpp"
-#include "Problem_050.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_041_050/Problem_041.hpp"
+#include "problems_041_050/Problem_042.hpp"
+#include "problems_041_050/Problem_043.hpp"
+#include "problems_041_050/Problem_044.hpp"
+#include "problems_041_050/Problem_045.hpp"
+#include "problems_041_050/Problem_046.hpp"
+#include "problems_041_050/Problem_047.hpp"
+#include "problems_041_050/Problem_048.hpp"
+#include "problems_041_050/Problem_049.hpp"
+#include "problems_041_050/Problem_050.hpp"
 
 // Problem 41
 TEST( Problem_41, Given_Case_1 )
