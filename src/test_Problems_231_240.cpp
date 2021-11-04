@@ -1,6 +1,9 @@
 #include "gtest/gtest.h"
 
 #include "problems_231_240/Problem_231.hpp"
+#include "problems_231_240/Problem_232.hpp"
+#include "problems_231_240/Problem_233.hpp"
+#include "problems_231_240/Problem_234.hpp"
 
 // Problem 231
 
