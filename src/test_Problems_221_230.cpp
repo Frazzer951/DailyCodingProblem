@@ -63,7 +63,12 @@ TEST( Problem_225, Given_Case )
 
 
 // Problem 228
-
+TEST( Problem_228, Given_Case )
+{
+  // given [10, 7, 76, 415], you should return 77641510
+  int result = largest_possible_arrangement( { 10, 7, 76, 415 } );
+  EXPECT_EQ( result, 77641510 );
+}
 
 // Problem 229
 
