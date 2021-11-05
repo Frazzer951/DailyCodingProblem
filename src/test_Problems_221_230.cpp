@@ -88,3 +88,8 @@ TEST( Problem_229, Given_Case )
 }
 
 // Problem 230
+TEST( Problem_230, Given_Case )
+{
+  int result = min_drops( 1, 5 );
+  EXPECT_EQ( result, 5 );
+}
