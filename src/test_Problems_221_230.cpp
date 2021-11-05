@@ -81,6 +81,10 @@ TEST( Problem_228, Given_Case )
 }
 
 // Problem 229
-
+TEST( Problem_229, Given_Case )
+{
+  int result = minimum_turns();
+  EXPECT_EQ( result, 7 );
+}
 
 // Problem 230

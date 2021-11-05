@@ -19,4 +19,51 @@ snakes = {16: 6, 48: 26, 49: 11, 56: 53, 62: 19, 64: 60, 87: 24, 93: 73, 95: 75,
 ladders = {1: 38, 4: 14, 9: 31, 21: 42, 28: 84, 36: 44, 51: 67, 71: 91, 80: 100}
 */
 
+#include <deque>
+#include <map>
+#include <set>
+#include <vector>
+
+inline int minimum_turns()
+{
+  std::map<int, int> snakes_and_ladders = { { 16, 6 },  { 48, 26 }, { 49, 11 }, { 56, 53 }, { 62, 19 },
+                                            { 64, 60 }, { 87, 24 }, { 93, 73 }, { 95, 75 }, { 98, 78 },
+                                            { 1, 38 },  { 4, 14 },  { 9, 31 },  { 21, 42 }, { 28, 84 },
+                                            { 36, 44 }, { 51, 67 }, { 71, 91 }, { 80, 100 } };
+
+  std::vector<int> board;
+  for( int i = 0; i <= 100; ++i )
+  {
+    if( snakes_and_ladders.find( i ) != snakes_and_ladders.end() ) { board.push_back( snakes_and_ladders[i] ); }
+    else
+    {
+      board.push_back( i );
+    }
+  }
+
+  int                             start = 0;
+  int                             end   = 100;
+  int                             turns = 0;
+  std::deque<std::pair<int, int>> path  = { std::make_pair( start, turns ) };
+  std::set<int>                   visited;
+
+  while( !path.empty() )
+  {
+    int square = path.front().first;
+    turns      = path.front().second;
+    path.pop_front();
+
+    for( int move = square + 1; move < square + 7; ++move )
+    {
+      if( move >= end ) return turns + 1;
+
+      if( visited.find( move ) == visited.end() )
+      {
+        visited.insert( move );
+        path.push_back( std::make_pair( board[move], turns + 1 ) );
+      }
+    }
+  }
+}
+
 #endif
