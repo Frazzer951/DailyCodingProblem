@@ -60,10 +60,11 @@ inline int minimum_turns()
       if( visited.find( move ) == visited.end() )
       {
         visited.insert( move );
-        path.push_back( std::make_pair( board[move], turns + 1 ) );
+        path.emplace_back( board[move], turns + 1 );
       }
     }
   }
+  return -1;
 }
 
 #endif

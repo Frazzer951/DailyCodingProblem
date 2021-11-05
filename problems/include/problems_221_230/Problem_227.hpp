@@ -37,9 +37,9 @@ inline std::vector<std::pair<int, int>> get_neighbors( std::pair<int, int> locat
   return neighbors;
 }
 
-inline void search( std::pair<int, int> & location, std::vector<std::vector<std::string>> & grid,
-                    std::set<std::pair<int, int>> & visited, std::string & word, std::set<std::string> & result,
-                    std::vector<std::string> & dictionary )
+inline void search( std::pair<int, int> location, std::vector<std::vector<std::string>> grid,
+                    std::set<std::pair<int, int>> & visited, std::string word, std::set<std::string> & result,
+                    std::vector<std::string> dictionary )
 {
   visited.insert( location );
   if( std::find( dictionary.begin(), dictionary.end(), word ) != dictionary.end() ) { result.insert( word ); }
@@ -58,7 +58,7 @@ inline void search( std::pair<int, int> & location, std::vector<std::vector<std:
 
 
 inline std::vector<std::string> boggle( std::vector<std::vector<std::string>> grid,
-                                        std::vector<std::string>              dictionary )
+                                        const std::vector<std::string> &      dictionary )
 {
   std::set<std::pair<int, int>> visited;
   std::set<std::string>         result;
