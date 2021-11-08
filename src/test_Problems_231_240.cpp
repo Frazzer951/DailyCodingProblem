@@ -9,7 +9,14 @@
 #include "problems_231_240/Problem_237.hpp"
 
 // Problem 231
+TEST( Problem_231, Given_Case )
+{
+  std::string result = noRepeatingAdjacentCharacters( "aaabbc" );
+  EXPECT_EQ( result, "abacba" );
 
+  result = noRepeatingAdjacentCharacters( "aaab" );
+  EXPECT_EQ( result, "" );
+}
 
 // Problem 232
 

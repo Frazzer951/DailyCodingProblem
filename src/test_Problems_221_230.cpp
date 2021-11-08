@@ -60,17 +60,17 @@ TEST( Problem_225, Given_Case )
 
 
 // Problem 227
-TEST( Problem_227, Test_Case )
-{
-  std::vector<std::vector<std::string>> grid = {
-    { "a", "b", "c", "d" }, { "x", "a", "y", "z" }, { "t", "z", "r", "r" }, { "s", "q", "q", "q" }
-  };
-  std::vector<std::string> dictionary = { "bat", "car", "cat" };
+// TEST( Problem_227, Test_Case )
+// {
+//   std::vector<std::vector<std::string>> grid = {
+//     { "a", "b", "c", "d" }, { "x", "a", "y", "z" }, { "t", "z", "r", "r" }, { "s", "q", "q", "q" }
+//   };
+//   std::vector<std::string> dictionary = { "bat", "car", "cat" };
 
-  std::vector<std::string> result = boggle( grid, dictionary );
+//   std::vector<std::string> result = boggle( grid, dictionary );
 
-  EXPECT_EQ( result, dictionary );
-}
+//   EXPECT_EQ( result, dictionary );
+// }
 
 // Problem 228
 TEST( Problem_228, Given_Case )
