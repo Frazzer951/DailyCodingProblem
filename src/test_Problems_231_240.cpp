@@ -5,6 +5,8 @@
 #include "problems_231_240/Problem_233.hpp"
 #include "problems_231_240/Problem_234.hpp"
 #include "problems_231_240/Problem_235.hpp"
+#include "problems_231_240/Problem_236.hpp"
+#include "problems_231_240/Problem_237.hpp"
 
 // Problem 231
 

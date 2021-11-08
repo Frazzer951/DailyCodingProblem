@@ -29,3 +29,5 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 232
 - Problem 234
 - Problem 235
+- Problem 236
+- Problem 237
