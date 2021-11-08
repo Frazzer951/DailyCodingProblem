@@ -65,7 +65,13 @@ TEST( Problem_234, Test_Case )
 }
 
 // Problem 235
+TEST( Problem_237, Given_Case )
+{
+  // [4, 2, 7, 5, -1, 3, 6]
+  std::pair<int, int> result = min_and_max( { 4, 2, 7, 5, -1, 3, 6 } );
 
+  EXPECT_EQ( result, std::make_pair( -1, 7 ) );
+}
 
 // Problem 236
 
