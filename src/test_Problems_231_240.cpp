@@ -7,6 +7,7 @@
 #include "problems_231_240/Problem_235.hpp"
 #include "problems_231_240/Problem_236.hpp"
 #include "problems_231_240/Problem_237.hpp"
+#include "problems_231_240/Problem_238.hpp"
 
 // Problem 231
 TEST( Problem_231, Given_Case )
