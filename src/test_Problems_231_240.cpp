@@ -52,7 +52,17 @@ TEST( Problem_223, Test_Case )
 }
 
 // Problem 234
+TEST( Problem_234, Test_Case )
+{
+  UndirectedGraph graph( 3 );
+  graph.add_edge( 0, 1, 5 );
+  graph.add_edge( 1, 2, 10 );
+  graph.add_edge( 2, 0, 15 );
 
+  auto result = max_spanning_tree( graph );
+
+  EXPECT_EQ( result.size(), 2 );
+}
 
 // Problem 235
 
