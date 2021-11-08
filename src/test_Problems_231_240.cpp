@@ -20,7 +20,23 @@ TEST( Problem_231, Given_Case )
 }
 
 // Problem 232
+TEST( Problem_232, Given_Case )
+{
+  /*
+  mapsum.insert("columnar", 3)
+  assert mapsum.sum("col") == 3
 
+  mapsum.insert("column", 2)
+  assert mapsum.sum("col") == 5
+  */
+
+  PrefixMapSum mapsum;
+  mapsum.insert( "columnar", 3 );
+  EXPECT_EQ( mapsum.sum( "col" ), 3 );
+
+  mapsum.insert( "column", 2 );
+  EXPECT_EQ( mapsum.sum( "col" ), 5 );
+}
 
 // Problem 233
 TEST( Problem_223, Test_Case )
