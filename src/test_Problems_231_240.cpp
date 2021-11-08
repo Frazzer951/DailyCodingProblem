@@ -74,7 +74,15 @@ TEST( Problem_237, Given_Case )
 }
 
 // Problem 236
-
+TEST( Problem_236, Test_Case )
+{
+  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { 20, 20 } ) );
+  EXPECT_TRUE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { 5, 5 } ) );
+  EXPECT_TRUE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 3, 3 } ) );
+  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 5, 1 } ) );
+  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 8, 1 } ) );
+  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { -1, 10 } ) );
+}
 
 // Problem 237
 
