@@ -29,7 +29,7 @@ struct Letter
   }
 };
 
-inline std::string noRepeatingAdjacentCharacters( std::string input )
+inline std::string noRepeatingAdjacentCharacters( const std::string & input )
 {
   std::map<char, int> charCount;
   for( auto c : input ) { charCount[c]++; }

@@ -26,14 +26,11 @@ assert mapsum.sum("col") == 5
 class PrefixMapSum
 {
 public:
-  PrefixMapSum() {}
+  PrefixMapSum() = default;
 
-  void insert( std::string key, int value )
-  {
-    map[key] = value;
-  }
+  void insert( const std::string & key, int value ) { map[key] = value; }
 
-  int sum( std::string prefix )
+  int sum( const std::string & prefix )
   {
     int sum = 0;
     for( auto it = map.lower_bound( prefix ); it != map.end(); it++ )

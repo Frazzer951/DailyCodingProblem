@@ -58,7 +58,8 @@ struct DisjointSet
     int s1 = find( v1 );
     int s2 = find( v2 );
 
-    int small, big;
+    int small;
+    int big;
     if( sizes[s1] < sizes[s2] )
     {
       small = s1;

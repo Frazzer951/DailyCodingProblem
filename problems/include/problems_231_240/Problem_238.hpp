@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_231_240_PROBLEM_238_HPP
+#define PROBLEMS_231_240_PROBLEM_238_HPP
+
 #pragma once
 
 /* HARD
@@ -17,3 +20,5 @@ For this problem, cards values are counted as follows: each card between 2 and
 Given perfect knowledge of the sequence of cards in the deck, implement a
 blackjack solver that maximizes the player's score (that is, wins minus losses).
 */
+
+#endif
