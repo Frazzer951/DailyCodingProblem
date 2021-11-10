@@ -66,7 +66,7 @@ TEST( Problem_234, Test_Case )
 }
 
 // Problem 235
-TEST( Problem_237, Given_Case )
+TEST( Problem_235, Given_Case )
 {
   // [4, 2, 7, 5, -1, 3, 6]
   std::pair<int, int> result = min_and_max( { 4, 2, 7, 5, -1, 3, 6 } );
@@ -86,7 +86,33 @@ TEST( Problem_236, Test_Case )
 }
 
 // Problem 237
+TEST( Problem_237, Given_Case )
+{
+  /*
+        4
+      /   \
+     3      3
+    / \    / \
+   9   4  5   9
+  */
+  auto * root = new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 4 ) ),
+                            new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
 
+  EXPECT_FALSE( isSymmetric( root, root ) );
+
+  /*
+        4
+      /   \
+     3      3
+    / \    / \
+   9   5  5   9
+  */
+
+  root = new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 5 ) ),
+                     new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
+
+  EXPECT_TRUE( isSymmetric( root, root ) );
+}
 
 // Problem 238
 
