@@ -27,3 +27,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 226
 - Problem 238
 - Problem 239
+- Problem 240
+- Problem 241
+- Problem 242
