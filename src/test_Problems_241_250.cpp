@@ -1,7 +1,7 @@
-#include "problems_241_250/Problem_242.hpp"
-#include "problems_241_250/Problem_241.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_241_250/Problem_241.hpp"
+#include "problems_241_250/Problem_242.hpp"
 
 // Problem 241
 
@@ -31,5 +31,3 @@
 
 
 // Problem 250
-
-

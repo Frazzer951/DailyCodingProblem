@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_241_250_PROBLEM_241_HPP
+#define PROBLEMS_241_250_PROBLEM_241_HPP
+
 #pragma once
 
 /* EASY
@@ -13,3 +16,5 @@ at least 3 citations.
 
 Given a list of paper citations of a researcher, calculate their h-index.
 */
+
+#endif
