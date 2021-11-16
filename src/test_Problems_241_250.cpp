@@ -2,6 +2,10 @@
 
 #include "problems_241_250/Problem_241.hpp"
 #include "problems_241_250/Problem_242.hpp"
+#include "problems_241_250/Problem_243.hpp"
+#include "problems_241_250/Problem_244.hpp"
+#include "problems_241_250/Problem_245.hpp"
+#include "problems_241_250/Problem_246.hpp"
 
 // Problem 241
 
