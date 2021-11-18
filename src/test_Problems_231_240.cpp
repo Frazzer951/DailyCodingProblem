@@ -119,6 +119,12 @@ TEST( Problem_237, Given_Case )
 
 
 // Problem 239
-
+TEST( Problem_239, Test_Case )
+{
+  EXPECT_EQ( unlock_combinations( 1 ), 9 );
+  EXPECT_EQ( unlock_combinations( 2 ), 56 );
+  EXPECT_EQ( unlock_combinations( 3 ), 320 );
+  EXPECT_EQ( unlock_combinations( 4 ), 1624 );
+}
 
 // Problem 240
