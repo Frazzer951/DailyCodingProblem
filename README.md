@@ -34,3 +34,5 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 244
 - Problem 245
 - Problem 246
+- Problem 247
+- Problem 248
