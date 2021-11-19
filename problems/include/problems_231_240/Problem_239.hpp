@@ -48,11 +48,11 @@ inline int unlock_combinations( int n )
                                                { { 3, 1 }, 2 }, { { 3, 7 }, 5 }, { { 3, 9 }, 6 }, { { 4, 6 }, 5 },
                                                { { 6, 4 }, 5 }, { { 7, 1 }, 4 }, { { 7, 3 }, 5 }, { { 7, 9 }, 8 },
                                                { { 8, 2 }, 5 }, { { 9, 1 }, 5 }, { { 9, 3 }, 6 }, { { 9, 7 }, 8 } };
-  std::set<int> v1 = {1};
-  std::set<int> v2 = {2};
-  std::set<int> v5 = {5};
-  return 4 * num_paths( 1, jumps, v1, n ) + 4 * num_paths( 2, jumps, v2, n )
-       + 1 * num_paths( 5, jumps, v5, n );
+
+  std::set<int> v1 = { 1 };
+  std::set<int> v2 = { 2 };
+  std::set<int> v5 = { 5 };
+  return 4 * num_paths( 1, jumps, v1, n ) + 4 * num_paths( 2, jumps, v2, n ) + 1 * num_paths( 5, jumps, v5, n );
 }
 
 #endif
