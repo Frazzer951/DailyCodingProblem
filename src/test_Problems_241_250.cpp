@@ -9,6 +9,7 @@
 #include "problems_241_250/Problem_247.hpp"
 #include "problems_241_250/Problem_248.hpp"
 #include "problems_241_250/Problem_249.hpp"
+#include "problems_241_250/Problem_250.hpp"
 
 // Problem 241
 
