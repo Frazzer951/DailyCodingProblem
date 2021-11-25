@@ -39,3 +39,5 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 250
 - Problem 251
 - Problem 252
+- Problem 253
+- Problem 254
