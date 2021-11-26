@@ -4,6 +4,7 @@
 #include "problems_251_260/Problem_252.hpp"
 #include "problems_251_260/Problem_253.hpp"
 #include "problems_251_260/Problem_254.hpp"
+#include "problems_251_260/Problem_255.hpp"
 
 // Problem 251
 
