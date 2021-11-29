@@ -17,4 +17,25 @@ at least 3 citations.
 Given a list of paper citations of a researcher, calculate their h-index.
 */
 
+#include <vector>
+
+inline int hIndex( const int & n, int citations[] )
+{
+  std::vector<int> counts( n );
+  for( int i = 0; i < n; ++i )
+  {
+    for( int j = 0; j < citations[i]; ++j ) { counts[j]++; }
+  }
+  int h = 0;
+  for( int i = n - 1; i >= 0; --i )
+  {
+    if( counts[i] >= i + 1 )
+    {
+      h = i + 1;
+      break;
+    }
+  }
+  return h;
+}
+
 #endif

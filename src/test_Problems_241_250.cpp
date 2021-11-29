@@ -12,7 +12,13 @@
 #include "problems_241_250/Problem_250.hpp"
 
 // Problem 241
-
+TEST( Problem_241, GivenCase )
+{
+  // N = 5, and the respective citations of each paper are [4, 3, 0, 1, 5]. Then the h-index would be 3
+  int arr[]  = { 4, 3, 0, 1, 5 };
+  int result = hIndex( 5, arr );
+  EXPECT_EQ( 3, result );
+}
 
 // Problem 242
 
