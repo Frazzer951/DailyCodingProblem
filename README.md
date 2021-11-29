@@ -42,3 +42,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - Problem 253
 - Problem 254
 - Problem 255
+- Problem 256
+- Problem 257
+- [Problem 258](problems/include/problems_251_260/Problem_258.hpp)

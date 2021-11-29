@@ -1,3 +1,6 @@
+#include "problems_251_260/Problem_258.hpp"
+#include "problems_251_260/Problem_257.hpp"
+#include "problems_251_260/Problem_256.hpp"
 #include "gtest/gtest.h"
 
 #include "problems_251_260/Problem_251.hpp"
