@@ -122,7 +122,7 @@ def genProblem(problems, num):
     # Add file to readme as TODO
     with open("README.md", "a") as f:
         logging.info(f"Adding #{num:03} to README.md")
-        f.write(f"\n- Problem {num:03}")
+        f.write(f"\n- [Problem {num:03}]({filename})")
     # Include file in cpp file
     line_prepender(
         cpp_filename,

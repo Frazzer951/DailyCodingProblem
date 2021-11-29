@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_251_260_PROBLEM_258_HPP
+#define PROBLEMS_251_260_PROBLEM_258_HPP
+
 #pragma once
 
 /* EASY
@@ -19,3 +22,5 @@ For example, given the following tree:
 
 You should return [1, 3, 2, 4, 5, 6, 7].
 */
+
+#endif

@@ -4,7 +4,7 @@
 #pragma once
 
 /* MEDIUM
-Given the head to a singly linked list, where each node also has a “random”
+Given the head to a singly linked list, where each node also has a â€œrandomâ€
 pointer that points to anywhere in the linked list, deep clone the list.
 */
 
