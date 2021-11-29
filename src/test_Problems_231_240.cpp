@@ -128,3 +128,10 @@ TEST( Problem_239, Test_Case )
 }
 
 // Problem 240
+TEST( Problem_240, Test_Case )
+{
+  std::vector<int> arr    = { 1, 2, 3, 4, 1, 2, 3, 4 };
+  std::vector<int> exp    = { 1, 1, 3, 3, 2, 2, 4, 4 };
+  std::vector<int> result = sortPairs( arr );
+  EXPECT_EQ( result, exp );
+}
