@@ -7,7 +7,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 
 ## Skipped Problems
 
-- [Problem 017](problems/include/problems_011_020/Problem_017.hpp)
 - [Problem 032](problems/include/problems_031_040/Problem_032.hpp)
 - [Problem 039](problems/include/problems_031_040/Problem_039.hpp)
 - [Problem 056](problems/include/problems_051_060/Problem_056.hpp)
@@ -26,6 +25,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - [Problem 219](problems/include/problems_211_220/Problem_219.hpp)
 - [Problem 226](problems/include/problems_221_230/Problem_226.hpp)
 - [Problem 238](problems/include/problems_231_240/Problem_238.hpp)
+
+## TODO Problems
+
+- [Problem 017](problems/include/problems_011_020/Problem_017.hpp)
 - [Problem 243](problems/include/problems_241_250/Problem_243.hpp)
 - [Problem 244](problems/include/problems_241_250/Problem_244.hpp)
 - [Problem 245](problems/include/problems_241_250/Problem_245.hpp)
