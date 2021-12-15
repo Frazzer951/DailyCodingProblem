@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_261_HPP
+#define PROBLEMS_261_270_PROBLEM_261_HPP
+
 #pragma once
 
 /* EASY
@@ -24,3 +27,5 @@ With this encoding, cats would be represented as 0000110111.
 Given a dictionary of character frequencies, build a Huffman tree, and use it to
 determine a mapping between characters and their encoded binary strings.
 */
+
+#endif

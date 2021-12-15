@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_269_HPP
+#define PROBLEMS_261_270_PROBLEM_269_HPP
+
 #pragma once
 
 /* EASY
@@ -16,3 +19,5 @@ For example, given the string .L.R....L, you should return LL.RRRLLL.
 
 Given the string ..R...L.L, you should return ..RR.LLLL.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_271_HPP
+#define PROBLEMS_271_280_PROBLEM_271_HPP
+
 #pragma once
 
 /* HARD
@@ -6,3 +9,5 @@ list without performing any multiplication, division, or bit-shift operations.
 
 Do this in O(log N) time.
 */
+
+#endif

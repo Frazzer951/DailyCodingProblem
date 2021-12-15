@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_266_HPP
+#define PROBLEMS_261_270_PROBLEM_266_HPP
+
 #pragma once
 
 /* EASY
@@ -8,3 +11,5 @@ anagram to get "APPEAL".
 Given a dictionary of words and an input word, create a function that returns
 all valid step words.
 */
+
+#endif

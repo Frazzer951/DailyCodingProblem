@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_272_HPP
+#define PROBLEMS_271_280_PROBLEM_272_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -7,3 +10,5 @@ total.
 
 For example, throw_dice(3, 6, 7) should equal 15.
 */
+
+#endif

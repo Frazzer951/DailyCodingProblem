@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_267_HPP
+#define PROBLEMS_261_270_PROBLEM_267_HPP
+
 #pragma once
 
 /* HARD
@@ -22,3 +25,5 @@ For example, given the following matrix:
 
 You should return True, since the bishop is attacking the king diagonally.
 */
+
+#endif

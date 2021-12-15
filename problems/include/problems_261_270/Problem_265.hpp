@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_265_HPP
+#define PROBLEMS_261_270_PROBLEM_265_HPP
+
 #pragma once
 
 /* EASY
@@ -12,3 +15,5 @@ how much each one should get paid.
 For example, given [10, 40, 200, 1000, 60, 30], you should return [1, 2, 3, 4,
 2, 1].
 */
+
+#endif
