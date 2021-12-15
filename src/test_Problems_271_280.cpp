@@ -1,9 +1,9 @@
-#include "problems_271_280/Problem_274.hpp"
-#include "problems_271_280/Problem_273.hpp"
-#include "problems_271_280/Problem_272.hpp"
-#include "problems_271_280/Problem_271.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_271_280/Problem_271.hpp"
+#include "problems_271_280/Problem_272.hpp"
+#include "problems_271_280/Problem_273.hpp"
+#include "problems_271_280/Problem_274.hpp"
 
 // Problem 271
 
@@ -33,5 +33,3 @@
 
 
 // Problem 280
-
-

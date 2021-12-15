@@ -19,7 +19,7 @@ Given a list of paper citations of a researcher, calculate their h-index.
 
 #include <vector>
 
-inline int hIndex( const int & n, int citations[] )
+inline int hIndex( const int & n, const int citations[] )
 {
   std::vector<int> counts( n );
   for( int i = 0; i < n; ++i )

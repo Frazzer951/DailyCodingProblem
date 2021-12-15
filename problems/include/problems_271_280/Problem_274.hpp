@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_274_HPP
+#define PROBLEMS_271_280_PROBLEM_274_HPP
+
 #pragma once
 
 /* HARD
@@ -9,3 +12,5 @@ Don't use eval or a similar built-in parser.
 
 For example, given '-1 + (2 + 3)', you should return 4.
 */
+
+#endif

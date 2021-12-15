@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_264_HPP
+#define PROBLEMS_261_270_PROBLEM_264_HPP
+
 #pragma once
 
 /* HARD
@@ -11,3 +14,5 @@ possible solution would be 00010111.
 
 Create an algorithm that finds a De Bruijn sequence.
 */
+
+#endif

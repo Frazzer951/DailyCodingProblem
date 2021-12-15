@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_261_270_PROBLEM_263_HPP
+#define PROBLEMS_261_270_PROBLEM_263_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -14,3 +17,5 @@ We can consider a sentence valid if it conforms to the following rules:
  3. There must be a single space between each word.
  4. The sentence must end with a terminal mark immediately following a word.
 */
+
+#endif

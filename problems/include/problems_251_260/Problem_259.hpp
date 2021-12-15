@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_251_260_PROBLEM_259_HPP
+#define PROBLEMS_251_260_PROBLEM_259_HPP
+
 #pragma once
 
 /* HARD
@@ -17,3 +20,5 @@ with, such that with optimal play they cannot lose.
 For example, if the dictionary is ["cat", "calf", "dog", "bear"], the only
 winning start letter would be b.
 */
+
+#endif
