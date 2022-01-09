@@ -19,4 +19,22 @@ Bonus: Create a generator that produces primes indefinitely (that is, without
 taking N as an input).
 */
 
+#include <vector>
+
+std::vector<int> sieveOfEratosthenes(int n) {
+  std::vector<int> primes;
+  std::vector<bool> isPrime(n + 1, true);
+
+  for (int i = 2; i <= n; ++i) {
+    if (isPrime[i]) {
+      primes.push_back(i);
+      for (int j = i * i; j <= n; j += i) {
+        isPrime[j] = false;
+      }
+    }
+  }
+
+  return primes;
+}
+
 #endif
