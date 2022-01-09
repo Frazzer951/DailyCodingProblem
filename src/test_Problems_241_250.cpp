@@ -54,7 +54,13 @@ TEST( Problem_244, Test_Case )
 }
 
 // Problem 245
-
+TEST( Problem_245, Test_Case )
+{
+  // given [6, 2, 4, 0, 5, 1, 1, 4, 2, 9], you should return 2
+  std::vector<int> jumps  = { 6, 2, 4, 0, 5, 1, 1, 4, 2, 9 };
+  int              result = minJumps( jumps );
+  EXPECT_EQ( 2, result );
+}
 
 // Problem 246
 
