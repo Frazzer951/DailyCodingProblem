@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_294_HPP
+#define PROBLEMS_291_300_PROBLEM_294_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -28,3 +31,5 @@ paths = {
 In this case, the shortest valid path would be 0 -> 2 -> 4 -> 0, with a distance
 of 28.
 */
+
+#endif

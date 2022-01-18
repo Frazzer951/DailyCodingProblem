@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_307_HPP
+#define PROBLEMS_301_310_PROBLEM_307_HPP
+
 #pragma once
 
 /* EASY
@@ -8,3 +11,5 @@ integer.
 
 If either value does not exist, return None.
 */
+
+#endif

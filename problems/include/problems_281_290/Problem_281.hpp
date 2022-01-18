@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_281_HPP
+#define PROBLEMS_281_290_PROBLEM_281_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -23,3 +26,5 @@ only require cutting through the bricks in the third and fifth row.
 Given an input consisting of brick lengths for each row such as the one above,
 return the fewest number of bricks that must be cut to create a vertical line.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_303_HPP
+#define PROBLEMS_301_310_PROBLEM_303_HPP
+
 #pragma once
 
 /* EASY
@@ -6,3 +9,5 @@ between the hour and the minute hands.
 
 Bonus: When, during the course of a day, will the angle be zero?
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_275_HPP
+#define PROBLEMS_271_280_PROBLEM_275_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -12,8 +15,10 @@ term. The first few terms are as follows:
 111221
 
 
-As an example, the fourth term is 1211, since the third term consists of one 2 
+As an example, the fourth term is 1211, since the third term consists of one 2
 and one 1.
 
 Given an integer N, print the Nth term of this sequence.
 */
+
+#endif

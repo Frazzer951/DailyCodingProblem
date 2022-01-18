@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_297_HPP
+#define PROBLEMS_291_300_PROBLEM_297_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -22,3 +25,5 @@ customers.
 For the input above, the answer would be 2, as drinks 1 and 5 will satisfy
 everyone.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_287_HPP
+#define PROBLEMS_281_290_PROBLEM_287_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -17,3 +20,5 @@ For example, suppose k = 1, and the list of tuples is:
 Then a reasonable similarity metric would most likely conclude that a and e are
 the most similar, so your program should return [('a', 'e')].
 */
+
+#endif

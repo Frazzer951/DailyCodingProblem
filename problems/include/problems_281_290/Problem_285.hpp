@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_285_HPP
+#define PROBLEMS_281_290_PROBLEM_285_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -12,3 +15,5 @@ view to the west.
 
 Can you do this using just one forward pass through the array?
 */
+
+#endif

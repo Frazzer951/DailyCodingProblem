@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_301_HPP
+#define PROBLEMS_301_310_PROBLEM_301_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -11,3 +14,5 @@ The check method may return occasional false positives (in other words,
 incorrectly identifying an element as part of the set), but should always
 correctly identify a true element.
 */
+
+#endif

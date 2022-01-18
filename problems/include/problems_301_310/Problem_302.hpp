@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_302_HPP
+#define PROBLEMS_301_310_PROBLEM_302_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -15,3 +18,5 @@ For example, suppose the input for a three-by-six grid is the following:
 Considering the edges of the matrix as boundaries, this divides the grid into
 three triangles, so you should return 3.
 */
+
+#endif

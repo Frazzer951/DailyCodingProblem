@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_289_HPP
+#define PROBLEMS_281_290_PROBLEM_289_HPP
+
 #pragma once
 
 /* HARD
@@ -14,7 +17,7 @@ played as shown below:
   3  |  1  |  3
   0  |  1  |  3
   0  |  1  |  0
-  0  |  0  |  0 
+  0  |  0  |  0
 
 
 In other words, to start, the first player takes three items from pile B. The
@@ -24,3 +27,5 @@ this way until player one takes last stone and loses.
 Given a list of non-zero starting values [a, b, c], and assuming optimal play,
 determine whether the first player has a forced win.
 */
+
+#endif

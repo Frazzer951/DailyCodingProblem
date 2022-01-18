@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_290_HPP
+#define PROBLEMS_281_290_PROBLEM_290_HPP
+
 #pragma once
 
 /* EASY
@@ -20,3 +23,5 @@ with a single Qux through the following steps:
 ['B', 'G']                | (B, G) -> R
 ['R']                     |
 */
+
+#endif

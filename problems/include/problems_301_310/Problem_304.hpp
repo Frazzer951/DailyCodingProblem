@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_304_HPP
+#define PROBLEMS_301_310_PROBLEM_304_HPP
+
 #pragma once
 
 /* HARD
@@ -8,3 +11,5 @@ the board at any point, however, it is not allowed to jump back on.
 
 After k moves, what is the probability that the knight remains on the board?
 */
+
+#endif
