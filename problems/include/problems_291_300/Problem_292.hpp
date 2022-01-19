@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_292_HPP
+#define PROBLEMS_291_300_PROBLEM_292_HPP
+
 #pragma once
 
 /* HARD
@@ -32,3 +35,5 @@ students = {
     5: [3]
 }
 */
+
+#endif

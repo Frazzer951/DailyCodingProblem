@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_277_HPP
+#define PROBLEMS_271_280_PROBLEM_277_HPP
+
 #pragma once
 
 /* EASY
@@ -24,3 +27,5 @@ Visually, this can be represented as follows.
 Write a program that takes in an array of integers representing byte values, and
 returns whether it is a valid UTF-8 encoding.
 */
+
+#endif

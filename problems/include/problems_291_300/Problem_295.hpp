@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_295_HPP
+#define PROBLEMS_291_300_PROBLEM_295_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -21,3 +24,5 @@ Given an input k, return the kth row of Pascal's triangle.
 
 Bonus: Can you do this using only O(k) space?
 */
+
+#endif

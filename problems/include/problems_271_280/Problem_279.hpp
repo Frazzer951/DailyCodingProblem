@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_271_280_PROBLEM_279_HPP
+#define PROBLEMS_271_280_PROBLEM_279_HPP
+
 #pragma once
 
 /* EASY
@@ -11,7 +14,7 @@ friends with 1 and 2, 3 is friends with 6, and so on.
  3: [6],
  4: [],
  5: [1],
- 6: [3]} 
+ 6: [3]}
 
 
 Each student can be placed in a friend group, which can be defined as the
@@ -23,3 +26,5 @@ this group. For the example above, the friend groups would be {0, 1, 2, 5}, {3,
 Given a friendship list such as the one above, determine the number of friend
 groups in the class.
 */
+
+#endif

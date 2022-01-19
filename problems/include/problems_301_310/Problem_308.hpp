@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_308_HPP
+#define PROBLEMS_301_310_PROBLEM_308_HPP
+
 #pragma once
 
 /* HARD
@@ -13,3 +16,5 @@ that the entire expression evaluates to True.
 For example, suppose the input is ['F', '|', 'T', '&', 'T']. In this case, there
 are two acceptable groupings: (F | T) & T and F | (T & T).
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_305_HPP
+#define PROBLEMS_301_310_PROBLEM_305_HPP
+
 #pragma once
 
 /* EASY
@@ -7,3 +10,5 @@ the remaining nodes.
 For example, suppose you are given the input 3 -> 4 -> -7 -> 5 -> -6 -> 6. In
 this case, you should first remove 3 -> 4 -> -7, then -6 -> 6, leaving only 5.
 */
+
+#endif

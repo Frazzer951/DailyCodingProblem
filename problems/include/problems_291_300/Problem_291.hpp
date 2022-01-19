@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_291_HPP
+#define PROBLEMS_291_300_PROBLEM_291_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -8,3 +11,5 @@ is k, determine how many boats will be needed to save everyone.
 For example, given a population with weights [100, 200, 150, 80] and a boat
 limit of 200, the smallest number of boats required will be three.
 */
+
+#endif

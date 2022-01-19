@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_283_HPP
+#define PROBLEMS_281_290_PROBLEM_283_HPP
+
 #pragma once
 
 /* EASY
@@ -11,3 +14,5 @@ time to tuning instruments according to the diatonic scale.
 Given an integer N, write a program that returns, in order, the first N regular
 numbers.
 */
+
+#endif

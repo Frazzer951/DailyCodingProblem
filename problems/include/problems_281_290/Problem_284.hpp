@@ -1,8 +1,11 @@
+#ifndef PROBLEMS_281_290_PROBLEM_284_HPP
+#define PROBLEMS_281_290_PROBLEM_284_HPP
+
 #pragma once
 
 /* MEDIUM
 Two nodes in a binary tree can be called cousins if they are on the same level
-of the tree but have different parents. For example, in the following diagram 4 
+of the tree but have different parents. For example, in the following diagram 4
 and 6 are cousins.
 
     1
@@ -14,3 +17,5 @@ and 6 are cousins.
 
 Given a binary tree and a particular node, find all cousins of that node.
 */
+
+#endif

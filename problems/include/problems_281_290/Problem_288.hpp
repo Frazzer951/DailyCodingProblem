@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_281_290_PROBLEM_288_HPP
+#define PROBLEMS_281_290_PROBLEM_288_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -6,7 +9,7 @@ discovered an associated property: for all four-digit numbers with at least two
 distinct digits, repeatedly applying a simple procedure eventually results in
 this value. The procedure is as follows:
 
- * For a given input x, create two new numbers that consist of the digits in x 
+ * For a given input x, create two new numbers that consist of the digits in x
    in ascending and descending order.
  * Subtract the smaller number from the larger number.
 
@@ -18,3 +21,5 @@ For example, this algorithm terminates in three steps when starting from 1234:
 
 Write a function that returns how many steps this will take for a given input N.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_299_HPP
+#define PROBLEMS_291_300_PROBLEM_299_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -14,10 +17,10 @@ A <--> B <--> C <--> plant
 
 Each pipe has an associated cost, which the utility company would like to
 minimize. Given an undirected graph of pipe connections, return the lowest cost
-configuration of pipes such that each house has access to water. 
+configuration of pipes such that each house has access to water.
 
-In the following setup, for example, we can remove all but the pipes from plant 
-to A, plant to B, and B to C, for a total cost of 16. 
+In the following setup, for example, we can remove all but the pipes from plant
+to A, plant to B, and B to C, for a total cost of 16.
 
 pipes = {
     'plant': {'A': 1, 'B': 5, 'C': 20},
@@ -26,3 +29,5 @@ pipes = {
     'C': {}
 }
 */
+
+#endif

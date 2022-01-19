@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_291_300_PROBLEM_298_HPP
+#define PROBLEMS_291_300_PROBLEM_298_HPP
+
 #pragma once
 
 /* EASY
@@ -12,3 +15,5 @@ just two types of apple trees.
 For example, given the input [2, 1, 2, 3, 3, 1, 3, 5], the longest portion will
 involve types 1 and 3, with a length of four.
 */
+
+#endif
