@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_301_310_PROBLEM_309_HPP
+#define PROBLEMS_301_310_PROBLEM_309_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -14,3 +17,5 @@ person must move, so that the cost here would be five.
 Given an input such as the one above, return the lowest possible cost of moving
 people to remove all gaps.
 */
+
+#endif

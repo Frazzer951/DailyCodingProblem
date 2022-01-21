@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_311_HPP
+#define PROBLEMS_311_320_PROBLEM_311_HPP
+
 #pragma once
 
 /* EASY
@@ -8,3 +11,5 @@ An element is considered a peak if it is greater than both its left and right
 neighbors. It is guaranteed that the first and last elements are lower than all
 others.
 */
+
+#endif
