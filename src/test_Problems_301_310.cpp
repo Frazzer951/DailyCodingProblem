@@ -8,6 +8,8 @@
 #include "problems_301_310/Problem_306.hpp"
 #include "problems_301_310/Problem_307.hpp"
 #include "problems_301_310/Problem_308.hpp"
+#include "problems_301_310/Problem_309.hpp"
+#include "problems_301_310/Problem_310.hpp"
 
 // Problem 301
 

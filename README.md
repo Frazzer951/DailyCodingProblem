@@ -7,6 +7,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 
 ## Skipped Problems
 
+- [Problem 017](problems/include/problems_011_020/Problem_017.hpp)
 - [Problem 032](problems/include/problems_031_040/Problem_032.hpp)
 - [Problem 039](problems/include/problems_031_040/Problem_039.hpp)
 - [Problem 056](problems/include/problems_051_060/Problem_056.hpp)
@@ -28,7 +29,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 
 ## TODO Problems
 
-- [Problem 017](problems/include/problems_011_020/Problem_017.hpp)
 - [Problem 243](problems/include/problems_241_250/Problem_243.hpp)
 - [Problem 246](problems/include/problems_241_250/Problem_246.hpp)
 - [Problem 247](problems/include/problems_241_250/Problem_247.hpp)
@@ -84,7 +84,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - [Problem 297](problems/include/problems_291_300/Problem_297.hpp)
 - [Problem 298](problems/include/problems_291_300/Problem_298.hpp)
 - [Problem 299](problems/include/problems_291_300/Problem_299.hpp)
-
 - [Problem 300](problems/include/problems_291_300/Problem_300.hpp)
 - [Problem 301](problems/include/problems_301_310/Problem_301.hpp)
 - [Problem 302](problems/include/problems_301_310/Problem_302.hpp)
@@ -94,3 +93,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - [Problem 306](problems/include/problems_301_310/Problem_306.hpp)
 - [Problem 307](problems/include/problems_301_310/Problem_307.hpp)
 - [Problem 308](problems/include/problems_301_310/Problem_308.hpp)
+- [Problem 309](problems/include/problems_301_310/Problem_309.hpp)
+- [Problem 310](problems/include/problems_301_310/Problem_310.hpp)
+- [Problem 311](problems/include/problems_311_320/Problem_311.hpp)
+- [Problem 312](problems/include/problems_311_320/Problem_312.hpp)
