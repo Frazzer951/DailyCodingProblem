@@ -63,7 +63,19 @@ TEST( Problem_245, Test_Case )
 }
 
 // Problem 246
+TEST( Problem_246, Given_Case )
+{
+  // For example, the words ["chair", "height", "racket", "touch", "tunic"] can form
+  // the following circle: chair --> racket --> touch --> height --> tunic --> chair.
+  std::vector<std::string> words = { "chair", "height", "racket", "touch", "tunic" };
+  EXPECT_TRUE( can_chain( words ) );
+}
 
+TEST( Problem_246, Test_Case )
+{
+  std::vector<std::string> words = { "chair", "height" };
+  EXPECT_FALSE( can_chain( words ) );
+}
 
 // Problem 247
 

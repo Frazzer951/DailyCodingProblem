@@ -26,11 +26,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - [Problem 219](problems/include/problems_211_220/Problem_219.hpp)
 - [Problem 226](problems/include/problems_221_230/Problem_226.hpp)
 - [Problem 238](problems/include/problems_231_240/Problem_238.hpp)
+- [Problem 243](problems/include/problems_241_250/Problem_243.hpp)
 
 ## TODO Problems
 
-- [Problem 243](problems/include/problems_241_250/Problem_243.hpp)
-- [Problem 246](problems/include/problems_241_250/Problem_246.hpp)
 - [Problem 247](problems/include/problems_241_250/Problem_247.hpp)
 - [Problem 248](problems/include/problems_241_250/Problem_248.hpp)
 - [Problem 249](problems/include/problems_241_250/Problem_249.hpp)
