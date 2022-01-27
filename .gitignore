@@ -363,7 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Custom
-[Bb][Uu][Ii][Ll][Dd]/
+*[Bb][Uu][Ii][Ll][Dd]*/
 .vscode/
 config.json
 emails.json
