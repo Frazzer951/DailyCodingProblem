@@ -8,7 +8,7 @@ Find the maximum of two numbers without using any if-else statements, branching,
 or direct comparisons.
 */
 
-int max( int a, int b ) { return ( abs( a - b ) + ( a + b ) ) / 2; }
+inline int max( int x1, int x2 ) { return ( abs( x1 - x2 ) + ( x1 + x2 ) ) / 2; }
 
 
 #endif
