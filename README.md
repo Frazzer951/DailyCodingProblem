@@ -30,7 +30,6 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 
 ## TODO Problems
 
-- [Problem 247](problems/include/problems_241_250/Problem_247.hpp)
 - [Problem 248](problems/include/problems_241_250/Problem_248.hpp)
 - [Problem 249](problems/include/problems_241_250/Problem_249.hpp)
 - [Problem 250](problems/include/problems_241_250/Problem_250.hpp)
