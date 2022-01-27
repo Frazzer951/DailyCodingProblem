@@ -97,7 +97,13 @@ TEST( Problem_247, Test_Case_3 )
 }
 
 // Problem 248
-
+TEST( Problem_248, Test_Case )
+{
+  EXPECT_EQ( 2, max( 1, 2 ) );
+  EXPECT_EQ( 55, max( 55, 8 ) );
+  EXPECT_EQ( 1, max( 1, 1 ) );
+  EXPECT_EQ( 5523664, max( 11547, 5523664 ) );
+}
 
 // Problem 249
 
