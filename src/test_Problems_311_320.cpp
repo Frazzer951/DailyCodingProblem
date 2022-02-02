@@ -1,3 +1,5 @@
+#include "problems_311_320/Problem_320.hpp"
+#include "problems_311_320/Problem_319.hpp"
 #include "problems_311_320/Problem_318.hpp"
 #include "problems_311_320/Problem_317.hpp"
 #include "problems_311_320/Problem_316.hpp"
