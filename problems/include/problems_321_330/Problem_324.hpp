@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_321_330_PROBLEM_324_HPP
+#define PROBLEMS_321_330_PROBLEM_324_HPP
+
 #pragma once
 
 /* EASY
@@ -12,3 +15,5 @@ For example, suppose the mice are positioned at [1, 4, 9, 15], and the holes are
 located at [10, -5, 0, 16]. In this case, the best pairing would require us to
 send the mouse at 1 to the hole at -5, so our function should return 6.
 */
+
+#endif

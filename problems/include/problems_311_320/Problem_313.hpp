@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_313_HPP
+#define PROBLEMS_311_320_PROBLEM_313_HPP
+
 #pragma once
 
 /* HARD
@@ -14,3 +17,5 @@ either direction. Given a lock initially set to 000, a target combination, and a
 list of dead ends, write a function that returns the minimum number of moves
 required to reach the target state, or None if this is impossible.
 */
+
+#endif

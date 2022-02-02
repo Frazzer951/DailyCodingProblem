@@ -11,13 +11,13 @@ two subtrees of any node never differ by more than one.
 
 #include "btNode.hpp"
 
-int get_height( btNode<int> * node )
+inline int get_height( btNode<int> * node )
 {
   if( node == nullptr ) return 0;
   return 1 + std::max( get_height( node->left ), get_height( node->right ) );
 }
 
-bool is_height_balanced( btNode<int> * root )
+inline bool is_height_balanced( btNode<int> * root )
 {
   if( root == nullptr ) return true;
   int l_h = get_height( root->left );

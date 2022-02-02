@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_318_HPP
+#define PROBLEMS_311_320_PROBLEM_318_HPP
+
 #pragma once
 
 /* HARD
@@ -8,3 +11,5 @@ and guarantee a buffer of B songs between repeats.
 
 Given N, M, and B, determine the number of valid playlists.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_319_HPP
+#define PROBLEMS_311_320_PROBLEM_319_HPP
+
 #pragma once
 
 /* HARD
@@ -9,3 +12,5 @@ removed from the board.
 Design a class to represent the board, and find a series of steps to bring the
 board to the state [[1, 2, 3], [4, 5, 6], [7, 8, None]].
 */
+
+#endif

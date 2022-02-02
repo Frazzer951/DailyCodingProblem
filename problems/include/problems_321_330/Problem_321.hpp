@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_321_330_PROBLEM_321_HPP
+#define PROBLEMS_321_330_PROBLEM_321_HPP
+
 #pragma once
 
 /* EASY
@@ -9,6 +12,8 @@ There are two kinds of permitted steps:
  * You may decrement N to N - 1.
  * If a * b = N, you may decrement N to the larger of a and b.
 
-For example, given 100, you can reach 1 in five steps with the following route: 
+For example, given 100, you can reach 1 in five steps with the following route:
 100 -> 10 -> 9 -> 3 -> 2 -> 1.
 */
+
+#endif

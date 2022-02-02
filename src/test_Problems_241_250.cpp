@@ -80,19 +80,19 @@ TEST( Problem_246, Test_Case )
 // Problem 247
 TEST( Problem_247, Test_Case_1 )
 {
-  btNode<int> * root = new btNode( 1, new btNode( 2 ), new btNode( 3 ) );
+  auto * root = new btNode( 1, new btNode( 2 ), new btNode( 3 ) );
   EXPECT_TRUE( is_height_balanced( root ) );
 }
 
 TEST( Problem_247, Test_Case_2 )
 {
-  btNode<int> * root = new btNode( 1, new btNode( 2, new btNode( 4 ) ), new btNode( 3 ) );
+  auto * root = new btNode( 1, new btNode( 2, new btNode( 4 ) ), new btNode( 3 ) );
   EXPECT_TRUE( is_height_balanced( root ) );
 }
 
 TEST( Problem_247, Test_Case_3 )
 {
-  btNode<int> * root = new btNode( 1, new btNode( 2, new btNode( 4 ) ) );
+  auto * root = new btNode( 1, new btNode( 2, new btNode( 4 ) ) );
   EXPECT_FALSE( is_height_balanced( root ) );
 }
 

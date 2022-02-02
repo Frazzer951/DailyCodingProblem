@@ -1,9 +1,9 @@
-#include "problems_321_330/Problem_324.hpp"
-#include "problems_321_330/Problem_323.hpp"
-#include "problems_321_330/Problem_322.hpp"
-#include "problems_321_330/Problem_321.hpp"
-
 #include "gtest/gtest.h"
+
+#include "problems_321_330/Problem_321.hpp"
+#include "problems_321_330/Problem_322.hpp"
+#include "problems_321_330/Problem_323.hpp"
+#include "problems_321_330/Problem_324.hpp"
 
 // Problem 321
 
@@ -33,5 +33,3 @@
 
 
 // Problem 330
-
-
