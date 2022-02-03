@@ -51,7 +51,7 @@ inline bool are_degrees_equal( const std::map<char, std::vector<char>> & graph )
   std::map<char, int> in_degree;
   std::map<char, int> out_degree;
 
-  for( auto & [key, values] : graph )
+  for( const auto & [key, values] : graph )
   {
     for( auto v : values )
     {
@@ -70,9 +70,9 @@ inline std::map<char, std::vector<char>> make_graph( const std::vector<std::stri
   return graph;
 }
 
-inline bool can_chain( std::vector<std::string> words )
+inline bool can_chain( const std::vector<std::string> & words )
 {
-  std::map<char, std::vector<char>> graph         = make_graph( std::move( words ) );
+  std::map<char, std::vector<char>> graph         = make_graph( words );
   bool                              degrees_equal = are_degrees_equal( graph );
   bool                              connected     = is_connected( graph );
 
