@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_315_HPP
+#define PROBLEMS_311_320_PROBLEM_315_HPP
+
 #pragma once
 
 /* EASY
@@ -14,3 +17,5 @@ Here is an example:
 
 Write a program to determine whether a given input is a Toeplitz matrix.
 */
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_314_HPP
+#define PROBLEMS_311_320_PROBLEM_314_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -13,3 +16,5 @@ For example, suppose listeners = [1, 5, 11, 20], and towers = [4, 8, 15]. In
 this case the minimum range would be 5, since that would be required for the
 tower at position 15 to reach the listener at position 20.
 */
+
+#endif

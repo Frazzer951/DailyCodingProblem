@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_321_330_PROBLEM_322_HPP
+#define PROBLEMS_321_330_PROBLEM_322_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -8,3 +11,5 @@ On the ith jump, you may move exactly i places to the left or right.
 
 Find a path with the fewest number of jumps required to get from 0 to N.
 */
+
+#endif

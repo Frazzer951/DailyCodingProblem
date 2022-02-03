@@ -1,3 +1,6 @@
+#ifndef PROBLEMS_311_320_PROBLEM_316_HPP
+#define PROBLEMS_311_320_PROBLEM_316_HPP
+
 #pragma once
 
 /* MEDIUM
@@ -9,3 +12,5 @@ making 4 units.
 Given such an array, determine the denominations that must be in use. In the
 case above, for example, there must be coins with value 2, 3, and 4.
 */
+
+#endif

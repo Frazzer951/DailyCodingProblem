@@ -15,9 +15,11 @@ the following circle: chair --> racket --> touch --> height --> tunic --> chair.
 #include <map>
 #include <set>
 #include <string>
+#include <utility>
 #include <vector>
 
-std::set<char> find_component( std::map<char, std::vector<char>> graph, std::set<char> visited, char current_word )
+inline std::set<char> find_component( std::map<char, std::vector<char>> graph, std::set<char> visited,
+                                      char current_word )
 {
   visited.insert( current_word );
 
@@ -29,7 +31,7 @@ std::set<char> find_component( std::map<char, std::vector<char>> graph, std::set
   return visited;
 }
 
-bool is_connected( std::map<char, std::vector<char>> graph )
+inline bool is_connected( std::map<char, std::vector<char>> graph )
 {
   char           start     = graph.begin()->first;
   std::set<char> component = find_component( graph, std::set<char>(), start );
@@ -44,7 +46,7 @@ bool is_connected( std::map<char, std::vector<char>> graph )
 }
 
 
-bool are_degrees_equal( std::map<char, std::vector<char>> graph )
+inline bool are_degrees_equal( const std::map<char, std::vector<char>> & graph )
 {
   std::map<char, int> in_degree;
   std::map<char, int> out_degree;
@@ -61,16 +63,16 @@ bool are_degrees_equal( std::map<char, std::vector<char>> graph )
   return in_degree == out_degree;
 }
 
-std::map<char, std::vector<char>> make_graph( std::vector<std::string> words )
+inline std::map<char, std::vector<char>> make_graph( const std::vector<std::string> & words )
 {
   std::map<char, std::vector<char>> graph;
   for( auto word : words ) { graph[word[0]].push_back( word[word.size() - 1] ); }
   return graph;
 }
 
-bool can_chain( std::vector<std::string> words )
+inline bool can_chain( std::vector<std::string> words )
 {
-  std::map<char, std::vector<char>> graph         = make_graph( words );
+  std::map<char, std::vector<char>> graph         = make_graph( std::move( words ) );
   bool                              degrees_equal = are_degrees_equal( graph );
   bool                              connected     = is_connected( graph );
 
