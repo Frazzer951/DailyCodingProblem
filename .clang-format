@@ -154,7 +154,6 @@ PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 60
 PointerAlignment: Middle
 ReflowComments: true
-ShortNamespaceLines: 1
 SortIncludes: true
 SortUsingDeclarations: true
 SpaceAfterCStyleCast: true
