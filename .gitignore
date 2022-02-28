@@ -367,3 +367,4 @@ FodyWeavers.xsd
 .vscode/
 config.json
 emails.json
+.idea/
