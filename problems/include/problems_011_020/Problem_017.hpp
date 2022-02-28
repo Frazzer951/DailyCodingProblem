@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_017_HPP
 #define PROBLEMS_011_020_PROBLEM_017_HPP
 
-// NOT DONE
 
 #pragma once
 
@@ -52,5 +51,53 @@ The name of a file contains at least a period and an extension.
 
 The name of a directory or sub-directory will not contain a period.
 */
+
+#include <algorithm>
+#include <map>
+#include <string>
+#include <vector>
+
+#include "Futils.hpp"
+
+bool is_file( std::string f )
+{
+  if( f.find( '.' ) != std::string::npos ) return true;
+  return false;
+}
+
+std::string find_longest_filepath( std::string filesystem )
+{
+  std::vector<std::string>   file_paths = split( filesystem, '\n' );
+  std::map<int, std::string> depths;
+  std::vector<std::string>   filepaths;
+
+  for( auto path : file_paths )
+  {
+    int depth = std::count( path.begin(), path.end(), '\t' );
+    path.erase( std::remove( path.begin(), path.end(), '\t' ), path.end() );
+    if( is_file( path ) )
+    {
+      std::string filepath;
+      for( int i = 0; i < depth; i++ )
+      {
+        filepath += depths[i];
+        filepath += '/';
+      }
+
+      filepath += path;
+      filepaths.push_back( filepath );
+    }
+    else
+    {
+      depths[depth] = path;
+    }
+  }
+  std::string longest = filepaths[0];
+  for( auto filepath : filepaths )
+  {
+    if( filepath.size() > longest.size() ) { longest = filepath; }
+  }
+  return longest;
+}
 
 #endif

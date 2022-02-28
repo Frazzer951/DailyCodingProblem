@@ -136,7 +136,16 @@ TEST( Problem_16, Test_Case_4 )
 }
 
 // Problem 017
+TEST( Problem_17, Given_Case )
+{
+  // "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+  // "dir/subdir2/subsubdir2/file2.ext"
+  std::string result = find_longest_filepath(
+      "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext" );
+  std::string expected = "dir/subdir2/subsubdir2/file2.ext";
 
+  EXPECT_EQ( result, expected );
+}
 
 // Problem 018
 TEST( Problem_18, Given_Case )
