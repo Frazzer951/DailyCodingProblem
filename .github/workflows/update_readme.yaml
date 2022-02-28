@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "src/**"
+      - "problems/**"
       - "scripts/generateReadme.py"
 
 jobs:
