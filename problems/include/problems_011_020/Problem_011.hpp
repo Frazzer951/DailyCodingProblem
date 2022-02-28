@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_011_HPP
 #define PROBLEMS_011_020_PROBLEM_011_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -14,7 +15,6 @@ return [deer, deal].
 Hint: Try preprocessing the dictionary into a more efficient data structure to
 speed up queries.
 */
-
 #include <iostream>
 #include <utility>
 #include <vector>

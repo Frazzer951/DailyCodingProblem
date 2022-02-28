@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_091_100_PROBLEM_097_HPP
 #define PROBLEMS_091_100_PROBLEM_097_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -34,7 +35,6 @@ d.set(1, 1, 0) # set key 1 to value 1 at time 0
 d.set(1, 2, 0) # set key 1 to value 2 at time 0
 d.get(1, 0) # get key 1 at time 0 should be 2
 */
-
 #include <map>
 #include <vector>
 

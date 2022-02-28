@@ -156,4 +156,4 @@ def add_problems(cache_only=False, force_refresh=False):
 
 
 if __name__ == "__main__":
-    add_problems(True)
+    add_problems()

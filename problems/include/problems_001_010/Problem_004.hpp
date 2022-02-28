@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_001_010_PROBLEM_004_HPP
 #define PROBLEMS_001_010_PROBLEM_004_HPP
 
+
 #pragma once
 
 /* HARD
@@ -14,7 +15,6 @@ give 3.
 
 You can modify the input array in-place.
 */
-
 #include <algorithm>
 #include <iostream>
 #include <vector>

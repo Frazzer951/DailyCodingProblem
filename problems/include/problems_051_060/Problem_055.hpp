@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_055_HPP
 #define PROBLEMS_051_060_PROBLEM_055_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ Implement a URL shortener with the following methods:
 
 Hint: What if we enter the same URL twice?
 */
-
 #include <cstdlib>
 #include <map>
 #include <string>

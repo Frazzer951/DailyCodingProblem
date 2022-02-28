@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_121_HPP
 #define PROBLEMS_121_130_PROBLEM_121_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ palindrome.
 For example, given 'waterrfetawx' and a k of 2, you could delete f and x to get
 'waterretaw'.
 */
-
 #include <algorithm>
 #include <string>
 #include <vector>

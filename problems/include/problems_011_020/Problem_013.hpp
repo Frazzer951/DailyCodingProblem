@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_013_HPP
 #define PROBLEMS_011_020_PROBLEM_013_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ contains at most k distinct characters.
 For example, given s = "abcba" and k = 2, the longest substring with k distinct
 characters is "bcb".
 */
-
 #include <iostream>
 #include <map>
 

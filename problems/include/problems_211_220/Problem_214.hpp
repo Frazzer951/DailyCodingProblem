@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_211_220_PROBLEM_214_HPP
 #define PROBLEMS_211_220_PROBLEM_214_HPP
 
+
 #pragma once
 
 /* EASY
@@ -9,7 +10,6 @@ its binary representation.
 
 For example, given 156, you should return 3.
 */
-
 inline int longestOneRun( int x )
 {
   int maxLength = 0;

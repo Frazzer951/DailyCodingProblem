@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_158_HPP
 #define PROBLEMS_151_160_PROBLEM_158_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -59,5 +60,4 @@ inline int num_ways( std::vector<std::vector<int>> matrix )
 
   return num_ways_matrix[m - 1][n - 1];
 }
-
 #endif

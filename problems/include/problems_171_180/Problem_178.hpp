@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_171_180_PROBLEM_178_HPP
 #define PROBLEMS_171_180_PROBLEM_178_HPP
 
+
 #pragma once
 
 /* HARD
@@ -16,7 +17,6 @@ a five.
 Which of the two games should Alice elect to play? Does it even matter? Write a
 program to simulate the two games and calculate their expected value.
 */
-
 #include <ctime>
 #include <random>
 #include <vector>

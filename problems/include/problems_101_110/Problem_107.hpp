@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_107_HPP
 #define PROBLEMS_101_110_PROBLEM_107_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ print 1, 2, 3, 4, 5.
    / \
   4   5
 */
-
 #include <vector>
 
 #include "btNode.hpp"

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_030_HPP
 #define PROBLEMS_021_030_PROBLEM_030_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -19,7 +20,6 @@ Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in
 the second, and 3 in the fourth index (we cannot hold 5 since it would run off
 to the left), so we can trap 8 units of water.
 */
-
 #include <vector>
 
 inline int waterHeightMap( std::vector<int> v )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_232_HPP
 #define PROBLEMS_231_240_PROBLEM_232_HPP
 
+
 #pragma once
 
 /* EASY
@@ -19,7 +20,6 @@ assert mapsum.sum("col") == 3
 mapsum.insert("column", 2)
 assert mapsum.sum("col") == 5
 */
-
 #include <map>
 #include <string>
 
@@ -44,5 +44,4 @@ public:
 private:
   std::map<std::string, int> map;
 };
-
 #endif

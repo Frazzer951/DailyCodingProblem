@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_181_190_PROBLEM_185_HPP
 #define PROBLEMS_181_190_PROBLEM_185_HPP
 
+
 #pragma once
 
 /* EASY
@@ -25,7 +26,6 @@ and
 
 return 6.
 */
-
 #include <vector>
 
 struct Rect

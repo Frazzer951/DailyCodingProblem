@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_131_140_PROBLEM_140_HPP
 #define PROBLEMS_131_140_PROBLEM_140_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -13,7 +14,6 @@ order does not matter.
 
 Follow-up: Can you do this in linear time and constant space?
 */
-
 #include <vector>
 
 inline std::pair<int, int> array_two_elements( const std::vector<int> & arr )

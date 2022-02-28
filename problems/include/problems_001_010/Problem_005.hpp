@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_001_010_PROBLEM_005_HPP
 #define PROBLEMS_001_010_PROBLEM_005_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -18,7 +19,6 @@ def cons(a, b):
 
 Implement car and cdr.
 */
-
 #include <iostream>
 #include <utility>
 

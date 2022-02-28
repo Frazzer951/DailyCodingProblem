@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_193_HPP
 #define PROBLEMS_191_200_PROBLEM_193_HPP
 
+
 #pragma once
 
 /* HARD
@@ -17,7 +18,6 @@ you could buy the stock at 1 dollar, and sell at 8 dollars, and then buy it at 4
 dollars and sell it at 10 dollars. Since we did two transactions, there is a 4
 dollar fee, so we have 7 + 6 = 13 profit minus 4 dollars of fees.
 */
-
 #include <vector>
 
 inline int maxProfit( std::vector<int> arr, int fee )

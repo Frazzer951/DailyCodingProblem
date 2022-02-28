@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_012_HPP
 #define PROBLEMS_011_020_PROBLEM_012_HPP
 
+
 #pragma once
 
 /* HARD
@@ -20,7 +21,6 @@ What if, instead of being able to climb 1 or 2 steps at a time, you could climb
 any number from a set of positive integers X? For example, if X = {1, 3, 5}, you
 could climb 1, 3, or 5 steps at a time.
 */
-
 #include <iostream>
 
 inline int fib( int n )

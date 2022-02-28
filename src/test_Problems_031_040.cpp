@@ -11,20 +11,21 @@
 #include "problems_031_040/Problem_039.hpp"
 #include "problems_031_040/Problem_040.hpp"
 
-// Problem 31
+
+// Problem 031
 TEST( Problem_31, Given_Case )
 {
-  //�kitten� and �sitting� is three
+  //“kitten” and “sitting” is three
   int result   = strDistance( "kitten", "sitting" );
   int expected = 3;
 
   EXPECT_EQ( result, expected );
 }
 
-// Problem 32
+// Problem 032
 
 
-// Problem 33
+// Problem 033
 TEST( Problem_33, Given_Case )
 {
   // For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should print out:
@@ -36,7 +37,7 @@ TEST( Problem_33, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 34
+// Problem 034
 TEST( Problem_34, Given_Case_1 )
 {
   std::string result   = makePalindrome( "race" );
@@ -52,8 +53,7 @@ TEST( Problem_34, Given_Case_2 )
 
   EXPECT_EQ( result, expected );
 }
-
-// Problem 35
+// Problem 035
 TEST( Problem_35, Given_Case )
 {
   std::vector<char> result = { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
@@ -63,7 +63,7 @@ TEST( Problem_35, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 36
+// Problem 036
 TEST( Problem_36, Test_Case )
 {
   BST * tree = new BST( 10 );
@@ -79,7 +79,7 @@ TEST( Problem_36, Test_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 37
+// Problem 037
 TEST( Problem_37, Given_Case )
 {
   // {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
@@ -89,7 +89,8 @@ TEST( Problem_37, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 38
+// Problem 038
+
 TEST( Problem_38, Test_Case )
 {
   int result   = n_queens( 1 );
@@ -114,10 +115,10 @@ TEST( Problem_38, Test_Case_3 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 39
+// Problem 039
 
 
-// Problem 40
+// Problem 040
 TEST( Problem_40, Given_Case_1 )
 {
   // Given [6, 1, 3, 3, 3, 6, 6], return 1.

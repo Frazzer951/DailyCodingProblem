@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_022_HPP
 #define PROBLEMS_021_030_PROBLEM_022_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -16,7 +17,6 @@ Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string
 "bedbathandbeyond", return either ['bed', 'bath', 'and', 'beyond] or ['bedbath',
 'and', 'beyond'].
 */
-
 #include <string>
 #include <vector>
 

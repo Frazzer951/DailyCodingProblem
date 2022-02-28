@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_201_210_PROBLEM_203_HPP
 #define PROBLEMS_201_210_PROBLEM_203_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -10,7 +11,6 @@ array does not contain duplicates.
 
 For example, given [5, 7, 10, 3, 4], return 3.
 */
-
 #include <vector>
 
 inline int helper( std::vector<int> arr, int low, int high )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_001_010_PROBLEM_002_HPP
 #define PROBLEMS_001_010_PROBLEM_002_HPP
 
+
 #pragma once
 
 /* HARD
@@ -14,7 +15,6 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be
 
 Follow-up: what if you can't use division?
 */
-
 #include <iostream>
 #include <string>
 #include <vector>

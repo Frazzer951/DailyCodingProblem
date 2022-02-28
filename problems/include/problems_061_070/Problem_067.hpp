@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_067_HPP
 #define PROBLEMS_061_070_PROBLEM_067_HPP
 
+
 #pragma once
 
 /* HARD
@@ -15,7 +16,6 @@ initialized with a cache size n, and contain the following methods:
 
 Each operation should run in O(1) time.
 */
-
 #include <deque>
 #include <map>
 #include <string>

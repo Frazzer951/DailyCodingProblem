@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_034_HPP
 #define PROBLEMS_031_040_PROBLEM_034_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -16,7 +17,6 @@ letters, but "ecarace" comes first alphabetically.
 
 As another example, given the string "google", you should return "elgoogle".
 */
-
 #include <algorithm>
 #include <string>
 
@@ -43,5 +43,4 @@ inline std::string makePalindrome( std::string s )
 
   return min( one, two );
 }
-
 #endif

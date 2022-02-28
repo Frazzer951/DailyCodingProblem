@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_131_140_PROBLEM_134_HPP
 #define PROBLEMS_131_140_PROBLEM_134_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ interface:
  * set(i, val): updates index at i with val.
  * get(i): gets the value at index i.
 */
-
 #include <map>
 
 class SparseArray

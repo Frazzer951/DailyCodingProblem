@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_068_HPP
 #define PROBLEMS_061_070_PROBLEM_068_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -32,7 +33,6 @@ The board would look like this:
 You should return 2, since bishops 1 and 3 attack each other, as well as bishops
 3 and 4.
 */
-
 #include <vector>
 
 inline bool is_attacking( std::pair<int, int> bishop0, std::pair<int, int> bishop1 )

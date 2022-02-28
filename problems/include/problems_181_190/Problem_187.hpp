@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_181_190_PROBLEM_187_HPP
 #define PROBLEMS_181_190_PROBLEM_187_HPP
 
+
 #pragma once
 
 /* EASY
@@ -26,7 +27,6 @@ For example, given the following rectangles:
 
 return true as the first and third rectangle overlap each other.
 */
-
 #include <vector>
 
 #include "problems_181_190/Problem_185.hpp"

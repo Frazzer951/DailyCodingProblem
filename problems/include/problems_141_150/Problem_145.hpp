@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_141_150_PROBLEM_145_HPP
 #define PROBLEMS_141_150_PROBLEM_145_HPP
 
+
 #pragma once
 
 /* EASY
@@ -9,7 +10,6 @@ head.
 
 For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.
 */
-
 #include "slNode.hpp"
 
 inline slNode<int> * swapEveryTwo( slNode<int> * root )

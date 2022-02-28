@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_102_HPP
 #define PROBLEMS_101_110_PROBLEM_102_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -10,7 +11,6 @@ list sum to K.
 For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return
 [2, 3, 4], since 2 + 3 + 4 = 9.
 */
-
 #include <vector>
 
 inline std::vector<int> continuousSum( std::vector<int> nums, int k )

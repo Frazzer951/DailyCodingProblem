@@ -1,6 +1,8 @@
 #ifndef PROBLEMS_291_300_PROBLEM_298_HPP
 #define PROBLEMS_291_300_PROBLEM_298_HPP
 
+// NOT DONE
+
 #pragma once
 
 /* EASY

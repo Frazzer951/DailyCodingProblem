@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_091_100_PROBLEM_092_HPP
 #define PROBLEMS_091_100_PROBLEM_092_HPP
 
+
 #pragma once
 
 /* HARD
@@ -13,7 +14,6 @@ Return null if there is no such ordering.
 For example, given {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'],
 'CSC100': []}, should return ['CSC100', 'CSC200', 'CSCS300'].
 */
-
 #include <algorithm>
 #include <map>
 #include <string>

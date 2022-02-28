@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_110_HPP
 #define PROBLEMS_101_110_PROBLEM_110_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -17,7 +18,6 @@ For example, given the tree:
 
 Return [[1, 2], [1, 3, 4], [1, 3, 5]].
 */
-
 #include <vector>
 
 #include "btNode.hpp"

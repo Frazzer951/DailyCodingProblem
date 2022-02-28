@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_181_190_PROBLEM_181_HPP
 #define PROBLEMS_181_190_PROBLEM_181_HPP
 
+
 #pragma once
 
 /* HARD
@@ -12,7 +13,6 @@ For example, given the input string racecarannakayak, return ["racecar", "anna",
 
 Given the input string abc, return ["a", "b", "c"].
 */
-
 #include <string>
 #include <vector>
 

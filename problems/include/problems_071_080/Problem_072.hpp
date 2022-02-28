@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_072_HPP
 #define PROBLEMS_071_080_PROBLEM_072_HPP
 
+
 #pragma once
 
 /* HARD
@@ -41,7 +42,6 @@ A
 
 Should return null, since we have an infinite loop.
 */
-
 #include <algorithm>
 #include <map>
 #include <string>

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_028_HPP
 #define PROBLEMS_021_030_PROBLEM_028_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -25,7 +26,6 @@ For example, given the list of words ["the", "quick", "brown", "fox", "jumps",
 "fox  jumps  over", # 2 extra spaces distributed evenly
 "the   lazy   dog"] # 4 extra spaces distributed evenly
 */
-
 #include <string>
 #include <vector>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_239_HPP
 #define PROBLEMS_231_240_PROBLEM_239_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -17,7 +18,6 @@ For example, 4 - 2 - 1 - 7 is a valid pattern, whereas 2 - 1 - 7 is not.
 
 Find the total number of valid unlock patterns of length N, where 1 <= N <= 9.
 */
-
 #include <map>
 #include <set>
 
@@ -54,5 +54,4 @@ inline int unlock_combinations( int n )
   std::set<int> v5 = { 5 };
   return 4 * num_paths( 1, jumps, v1, n ) + 4 * num_paths( 2, jumps, v2, n ) + 1 * num_paths( 5, jumps, v5, n );
 }
-
 #endif

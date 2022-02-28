@@ -11,7 +11,8 @@
 #include "problems_041_050/Problem_049.hpp"
 #include "problems_041_050/Problem_050.hpp"
 
-// Problem 41
+
+// Problem 041
 TEST( Problem_41, Given_Case_1 )
 {
   // Given [('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')] and starting airport 'YUL',
@@ -54,7 +55,7 @@ TEST( Problem_41, Given_Case_3 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 42
+// Problem 042
 TEST( Problem_42, Given_Case )
 {
   // given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24
@@ -64,7 +65,7 @@ TEST( Problem_42, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 43
+// Problem 043
 TEST( Problem_43, Test_Push )
 {
   stack testStack;
@@ -112,7 +113,7 @@ TEST( Problem_43, Test_getMax_Exception )
   if( x == 10 ) x++;
 }
 
-// Problem 44
+// Problem 044
 TEST( Problem_44, Given_Case_1 )
 {
   // The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4,3).
@@ -132,7 +133,7 @@ TEST( Problem_44, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 45
+// Problem 045
 TEST( Problem_45, Test_Case )
 {
   int result = rand7();
@@ -140,7 +141,7 @@ TEST( Problem_45, Test_Case )
   EXPECT_TRUE( ( result >= 1 ) && ( result <= 7 ) );
 }
 
-// Problem 46
+// Problem 046
 TEST( Problem_46, Given_Case_1 )
 {
   // "aabcdcb" is "bcdcb"
@@ -159,7 +160,7 @@ TEST( Problem_46, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 47
+// Problem 047
 TEST( Problem_47, Given_Case )
 {
   //[9, 11, 8, 5, 7, 10], you should return 5
@@ -177,7 +178,7 @@ TEST( Problem_47, Test_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 48
+// Problem 048
 TEST( Problem_48, Given_Case )
 {
   /*
@@ -209,7 +210,7 @@ TEST( Problem_48, Given_Case )
   EXPECT_EQ( result, a );
 }
 
-// Problem 49
+// Problem 049
 TEST( Problem_49, Given_Case_1 )
 {
   // [34, -50, 42, 14, -5, 86], the maximum sum would be 137
@@ -228,7 +229,7 @@ TEST( Problem_49, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 50
+// Problem 050
 TEST( Problem_50, Given_Case )
 {
   /*

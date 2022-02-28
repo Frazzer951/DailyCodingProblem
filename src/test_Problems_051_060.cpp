@@ -11,7 +11,8 @@
 #include "problems_051_060/Problem_059.hpp"
 #include "problems_051_060/Problem_060.hpp"
 
-// Problem 51
+
+// Problem 051
 TEST( Problem_51, Test_Case )
 {
   std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -19,8 +20,7 @@ TEST( Problem_51, Test_Case )
   auto shuffled = shuffle( arr );
 }
 
-
-// Problem 52
+// Problem 052
 TEST( Problem_52, set_get )
 {
   LRUCache LRU_cache( 5 );
@@ -63,7 +63,7 @@ TEST( Problem_52, CacheSizeTest )
   EXPECT_EQ( LRU_cache.get( "two" ), "" );
 }
 
-// Problem 53
+// Problem 053
 TEST( Problem_53, enqueue_dequeue )
 {
   queue_s q;
@@ -82,7 +82,8 @@ TEST( Problem_53, enqueue_dequeue )
   EXPECT_THROW( q.dequeue(), std::out_of_range );
 }
 
-// Problem 54
+
+// Problem 054
 TEST( Problem_54, valid_sudoku_1 )
 {
   std::vector<std::vector<int>> test_board = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -157,7 +158,7 @@ TEST( Problem_54, test_case_1 )
   EXPECT_EQ( result_board, expected_board );
 }
 
-// Problem 55
+// Problem 055
 URLShortener urls;
 TEST( Problem_55, shorten_restore )
 {
@@ -180,13 +181,10 @@ TEST( Problem_55, shorten_same_url )
   EXPECT_EQ( url, restore_2 );
 }
 
-// Problem 56
-TEST( Problem_56, Test_Case )
-{
-  // Even with the solution I'm still lost, so I'm skipping this one
-}
+// Problem 056
 
-// Problem 57
+
+// Problem 057
 TEST( Problem_57, Given_Case )
 {
   // given the string "the quick brown fox jumps over the lazy dog" and k = 10,
@@ -198,7 +196,7 @@ TEST( Problem_57, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 58
+// Problem 058
 TEST( Problem_58, Given_Case )
 {
   // Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
@@ -208,10 +206,10 @@ TEST( Problem_58, Given_Case )
   EXPECT_EQ( 4, result );
 }
 
-// Problem 59
+// Problem 059
 
 
-// Problem 60
+// Problem 060
 TEST( Problem_60, Given_Case_1 )
 {
   // For example, given the multiset {15, 5, 20, 10, 35, 15, 10},

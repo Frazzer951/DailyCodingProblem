@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_033_HPP
 #define PROBLEMS_031_040_PROBLEM_033_HPP
 
+
 #pragma once
 
 /* EASY
@@ -21,7 +22,6 @@ print out:
 2
 2
 */
-
 #include <algorithm>
 #include <vector>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_026_HPP
 #define PROBLEMS_021_030_PROBLEM_026_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ The list is very long, so making more than one pass is prohibitively expensive.
 
 Do this in constant space and in one pass.
 */
-
 #include "slNode.hpp"
 
 inline slNode<int> * getKthLastNode( slList<int> list, int k )

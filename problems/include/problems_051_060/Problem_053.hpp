@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_053_HPP
 #define PROBLEMS_051_060_PROBLEM_053_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -8,7 +9,6 @@ Implement a queue using two stacks. Recall that a queue is a FIFO (first-in,
 first-out) data structure with the following methods: enqueue, which inserts an
 element into the queue, and dequeue, which removes it.
 */
-
 #include <stack>
 #include <stdexcept>
 

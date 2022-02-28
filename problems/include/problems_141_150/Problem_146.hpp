@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_141_150_PROBLEM_146_HPP
 #define PROBLEMS_141_150_PROBLEM_146_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -30,7 +31,6 @@ should be pruned to:
 We do not remove the tree at the root or its left child because it still has a 1
 as a descendant.
 */
-
 #include "btNode.hpp"
 
 inline bool isZeroBranch( btNode<int> * node )

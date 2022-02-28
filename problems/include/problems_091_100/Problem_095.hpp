@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_091_100_PROBLEM_095_HPP
 #define PROBLEMS_091_100_PROBLEM_095_HPP
 
+
 #pragma once
 
 /* HARD
@@ -15,7 +16,6 @@ return [2,1,3]. The list [3,2,1] should return [1,2,3].
 Can you perform the operation without allocating extra memory (disregarding the
 input memory)?
 */
-
 #include <vector>
 
 inline void swap( std::vector<int> & nums, int a, int b )

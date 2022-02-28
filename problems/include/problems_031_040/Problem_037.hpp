@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_037_HPP
 #define PROBLEMS_031_040_PROBLEM_037_HPP
 
+
 #pragma once
 
 /* EASY
@@ -12,7 +13,6 @@ For example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1,
 
 You may also use a list or array to represent a set.
 */
-
 #include <cmath>
 #include <vector>
 
@@ -39,5 +39,4 @@ inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
   // std::sort( powerSet.begin(), powerSet.end() );
   return powerSet;
 }
-
 #endif

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_042_HPP
 #define PROBLEMS_041_050_PROBLEM_042_HPP
 
+
 #pragma once
 
 /* HARD

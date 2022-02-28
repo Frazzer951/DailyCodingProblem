@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_194_HPP
 #define PROBLEMS_191_200_PROBLEM_194_HPP
 
+
 #pragma once
 
 /* EASY
@@ -9,7 +10,6 @@ y = 0 and the other list q1, q2, ..., qn on the line y = 1. Imagine a set of n
 line segments connecting each point pi to qi. Write an algorithm to determine
 how many pairs of the line segments intersect.
 */
-
 #include <vector>
 
 struct line

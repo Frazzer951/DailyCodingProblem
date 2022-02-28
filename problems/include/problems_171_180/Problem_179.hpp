@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_171_180_PROBLEM_179_HPP
 #define PROBLEMS_171_180_PROBLEM_179_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -16,7 +17,6 @@ following tree:
  / \   \
 2   4   8
 */
-
 #include <vector>
 
 #include "btNode.hpp"

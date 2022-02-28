@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_130_HPP
 #define PROBLEMS_121_130_PROBLEM_130_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ must sell the stock before you can buy it again.
 
 For example, given k = 2 and the array [5, 2, 4, 0, 1], you should return 3.
 */
-
 #include <vector>
 
 inline int stonks( std::vector<int> stocks, int k )

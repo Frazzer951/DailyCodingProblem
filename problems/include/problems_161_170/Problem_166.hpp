@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_161_170_PROBLEM_166_HPP
 #define PROBLEMS_161_170_PROBLEM_166_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -17,7 +18,6 @@ repeatedly should output 1, 2, 3, 4, 5, 6.
 Do not use flatten or otherwise clone the arrays. Some of the arrays can be
 empty.
 */
-
 #include <stdexcept>
 #include <utility>
 #include <vector>

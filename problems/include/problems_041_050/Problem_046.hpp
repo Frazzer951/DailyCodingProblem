@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_046_HPP
 #define PROBLEMS_041_050_PROBLEM_046_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ more than one with the maximum length, return any one.
 For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The
 longest palindromic substring of "bananas" is "anana".
 */
-
 #include <algorithm>
 #include <string>
 

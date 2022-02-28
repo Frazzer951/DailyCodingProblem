@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_079_HPP
 #define PROBLEMS_071_080_PROBLEM_079_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -13,7 +14,6 @@ modify the 10 into a 1 to make the array non-decreasing.
 Given the array [10, 5, 1], you should return false, since we can't modify any
 one element to get a non-decreasing array.
 */
-
 #include <vector>
 
 inline bool remove_one_non_decrease( std::vector<int> nums )

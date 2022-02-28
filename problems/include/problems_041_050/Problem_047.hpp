@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_047_HPP
 #define PROBLEMS_041_050_PROBLEM_047_HPP
 
+
 #pragma once
 
 /* EASY
@@ -12,7 +13,6 @@ can sell it.
 For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could
 buy the stock at 5 dollars and sell it at 10 dollars.
 */
-
 #include <vector>
 
 inline int max_profit( std::vector<int> prices )

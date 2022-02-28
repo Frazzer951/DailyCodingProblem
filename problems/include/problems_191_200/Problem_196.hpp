@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_196_HPP
 #define PROBLEMS_191_200_PROBLEM_196_HPP
 
+
 #pragma once
 
 /* EASY
@@ -17,7 +18,6 @@ For example, given the following tree:
 Return 2 as it occurs twice: once as the left leaf, and once as the sum of 2 + 5
 - 5.
 */
-
 #include <functional>
 #include <map>
 

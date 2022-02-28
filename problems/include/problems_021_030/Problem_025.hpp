@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_025_HPP
 #define PROBLEMS_021_030_PROBLEM_025_HPP
 
+
 #pragma once
 
 /* HARD
@@ -20,7 +21,6 @@ Given the regular expression ".*at" and the string "chat", your function should
 return true. The same regular expression on the string "chats" should return
 false.
 */
-
 #include <string>
 
 inline bool regex( std::string str, std::string exp )

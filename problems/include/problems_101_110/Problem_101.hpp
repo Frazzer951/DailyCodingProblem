@@ -1,13 +1,14 @@
 #ifndef PROBLEMS_101_110_PROBLEM_101_HPP
 #define PROBLEMS_101_110_PROBLEM_101_HPP
 
+
 #pragma once
 
 /* EASY
 Given an even number (greater than 2), return two prime numbers whose sum will
 be equal to the given number.
 
-A solution will always exist. See Goldbach�s conjecture
+A solution will always exist. See Goldbach’s conjecture
 [https://en.wikipedia.org/wiki/Goldbach%27s_conjecture].
 
 Example:
@@ -27,7 +28,6 @@ d, then
 
 If a < c OR a==c AND b < d.
 */
-
 #include <vector>
 
 inline std::vector<int> SieveOfEratosthenes( int n )
@@ -63,5 +63,4 @@ inline std::pair<int, int> primeSum( int n )
   }
   return std::make_pair( -1, -1 );
 }
-
 #endif

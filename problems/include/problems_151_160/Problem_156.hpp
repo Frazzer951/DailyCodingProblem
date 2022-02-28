@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_156_HPP
 #define PROBLEMS_151_160_PROBLEM_156_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ For example, given n = 13, return 2 since 13 = 32 + 22 = 9 + 4.
 
 Given n = 27, return 3 since 27 = 32 + 32 + 32 = 9 + 9 + 9.
 */
-
 #include <limits>
 #include <vector>
 

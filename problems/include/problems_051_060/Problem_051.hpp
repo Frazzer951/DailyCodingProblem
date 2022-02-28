@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_051_HPP
 #define PROBLEMS_051_060_PROBLEM_051_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ It should run in O(N) time.
 
 Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 */
-
 #include <cstdlib>
 #include <vector>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_161_170_PROBLEM_167_HPP
 #define PROBLEMS_161_170_PROBLEM_167_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ concatenation of the two words is a palindrome.
 For example, given the list ["code", "edoc", "da", "d"], return [(0, 1), (1, 0),
 (2, 3)].
 */
-
 #include <string>
 #include <vector>
 

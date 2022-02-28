@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_091_100_PROBLEM_098_HPP
 #define PROBLEMS_091_100_PROBLEM_098_HPP
 
+
 #pragma once
 
 /* EASY
@@ -22,7 +23,6 @@ For example, given the following board:
 exists(board, "ABCCED") returns true,exists(board, "SEE") returns true,
 exists(board, "ABCB") returns false.
 */
-
 #include <string>
 #include <vector>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_001_010_PROBLEM_006_HPP
 #define PROBLEMS_001_010_PROBLEM_006_HPP
 
+
 #pragma once
 
 /* HARD
@@ -14,7 +15,6 @@ If using a language that has no pointers (such as Python), you can assume you
 have access to get_pointer anddereference_pointer functions that converts
 between nodes and memory addresses.
 */
-
 #include <iostream>
 
 struct xNode

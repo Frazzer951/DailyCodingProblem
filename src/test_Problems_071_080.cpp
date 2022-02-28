@@ -11,7 +11,8 @@
 #include "problems_071_080/Problem_079.hpp"
 #include "problems_071_080/Problem_080.hpp"
 
-// Problem 71
+
+// Problem 071
 TEST( Problem_71, Test_Case )
 {
   int result = prob71::rand5();
@@ -19,7 +20,7 @@ TEST( Problem_71, Test_Case )
   EXPECT_TRUE( ( result >= 1 ) && ( result <= 5 ) );
 }
 
-// Problem 72
+// Problem 072
 TEST( Problem_72, Given_Case_1 )
 {
   std::vector<std::pair<int, int>> edges = { std::make_pair( 0, 1 ), std::make_pair( 0, 2 ), std::make_pair( 2, 3 ),
@@ -48,7 +49,7 @@ TEST( Problem_72, Test_Case )
   EXPECT_EQ( -1, result );
 }
 
-// Problem 73
+// Problem 073
 TEST( Problem_73, Test_Case )
 {
   slList<int> list;
@@ -63,7 +64,8 @@ TEST( Problem_73, Test_Case )
   EXPECT_EQ( 1, list.get( 2 )->value );
 }
 
-// Problem 74
+
+// Problem 074
 TEST( Problem_74, Given_Case )
 {
   int result = countMultiples( 6, 12 );
@@ -78,7 +80,7 @@ TEST( Problem_74, Test_Case )
   EXPECT_EQ( 1, result );
 }
 
-// Problem 75
+// Problem 075
 TEST( Problem_75, Given_Case )
 {
   std::vector<int> arr = { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15 };
@@ -88,7 +90,7 @@ TEST( Problem_75, Given_Case )
   EXPECT_EQ( 6, result );
 }
 
-// Problem 76
+// Problem 076
 TEST( Problem_76, Given_Case_1 )
 {
   std::vector<std::string> arr = { "cba", "daf", "ghi" };
@@ -116,7 +118,7 @@ TEST( Problem_76, Given_Case_3 )
   EXPECT_EQ( 3, result );
 }
 
-// Problem 77
+// Problem 077
 TEST( Problem_77, Given_Case )
 {
   std::vector<std::pair<int, int>> intervals = { std::make_pair( 1, 3 ), std::make_pair( 5, 8 ),
@@ -140,7 +142,7 @@ TEST( Problem_77, Test_Case )
   EXPECT_EQ( expected, result );
 }
 
-// Problem 78
+// Problem 078
 TEST( Problem_78, Test_Case )
 {
   std::vector<std::forward_list<int>> lists    = { { 1, 2, 3, 4 }, { 5, 8, 15, 20 }, { 6, 9, 10, 11, 19 } };
@@ -150,7 +152,7 @@ TEST( Problem_78, Test_Case )
   EXPECT_EQ( expected, result );
 }
 
-// Problem 79
+// Problem 079
 TEST( Problem_79, Given_Case_1 )
 {
   std::vector<int> nums   = { 10, 5, 7 };
@@ -165,7 +167,7 @@ TEST( Problem_79, Given_Case_2 )
   EXPECT_FALSE( result );
 }
 
-// Problem 80
+// Problem 080
 TEST( Problem_80, Given_Case )
 {
   /*

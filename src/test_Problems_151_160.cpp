@@ -11,6 +11,7 @@
 #include "problems_151_160/Problem_159.hpp"
 #include "problems_151_160/Problem_160.hpp"
 
+
 // Problem 151
 TEST( Problem_151, Given_Case )
 {
@@ -18,16 +19,16 @@ TEST( Problem_151, Given_Case )
   For example, given the following matrix, and location pixel of (2, 2), and 'G' for green:
 
   B B W
-  W W W
-  W W W
-  B B B
-  Becomes
+          W W W
+              W W W
+                  B B B
+                      Becomes
 
-  B B G
-  G G G
-  G G G
-  B B B
-  */
+                          B B G
+                              G G G
+                                  G G G
+                                      B B B
+                                          */
 
   std::vector<std::vector<char>> matrix = {
     { 'B', 'B', 'W' }, { 'W', 'W', 'W' }, { 'W', 'W', 'W' }, { 'B', 'B', 'B' }

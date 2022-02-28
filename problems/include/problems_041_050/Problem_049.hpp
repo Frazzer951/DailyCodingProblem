@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_049_HPP
 #define PROBLEMS_041_050_PROBLEM_049_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -15,7 +16,6 @@ take any elements.
 
 Do this in O(N) time.
 */
-
 #include <vector>
 
 inline int max_subarray_sum( const std::vector<int> & arr )

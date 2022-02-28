@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_201_210_PROBLEM_204_HPP
 #define PROBLEMS_201_210_PROBLEM_204_HPP
 
+
 #pragma once
 
 /* EASY
@@ -8,7 +9,6 @@ Given a complete binary tree, count the number of nodes in faster than O(n)
 time. Recall that a complete binary tree has every level filled except the last,
 and the nodes in the last level are filled starting from the left.
 */
-
 #include "btNode.hpp"
 
 inline int findDepthLeft( btNode<int> * root )

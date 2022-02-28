@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_080_HPP
 #define PROBLEMS_071_080_PROBLEM_080_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ following tree, return d.
  /
 d
 */
-
 #include "btNode.hpp"
 
 inline std::pair<int, btNode<char> *> find_deepest_helper( btNode<char> * node, int depth )

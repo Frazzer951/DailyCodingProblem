@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_201_210_PROBLEM_201_HPP
 #define PROBLEMS_201_210_PROBLEM_201_HPP
 
+
 #pragma once
 
 /* EASY
@@ -19,7 +20,6 @@ For example, 1 -> 3 -> 5. The weight of the path is the sum of the entries.
 
 Write a program that returns the weight of the maximum weight path.
 */
-
 #include <vector>
 
 inline int longestPath( std::vector<std::vector<int>> arrays )

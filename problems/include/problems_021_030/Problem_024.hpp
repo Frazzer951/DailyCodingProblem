@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_024_HPP
 #define PROBLEMS_021_030_PROBLEM_024_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -20,7 +21,6 @@ like. You may assume the class is used in a single-threaded program, so there is
 no need for actual locks or mutexes. Each method should run in O(h), where h is
 the height of the tree.
 */
-
 #include <iostream>
 
 struct lbtNode

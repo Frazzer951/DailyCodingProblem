@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_070_HPP
 #define PROBLEMS_061_070_PROBLEM_070_HPP
 
+
 #pragma once
 
 /* EASY

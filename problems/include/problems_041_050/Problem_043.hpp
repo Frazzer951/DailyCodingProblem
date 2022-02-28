@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_043_HPP
 #define PROBLEMS_041_050_PROBLEM_043_HPP
 
+
 #pragma once
 
 /* EASY
@@ -14,7 +15,6 @@ Implement a stack that has the following methods:
 
 Each method should run in constant time.
 */
-
 #include <exception>
 
 inline class stackEmptyExcept : public std::exception

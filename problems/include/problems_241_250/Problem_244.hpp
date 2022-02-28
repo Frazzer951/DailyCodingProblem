@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_241_250_PROBLEM_244_HPP
 #define PROBLEMS_241_250_PROBLEM_244_HPP
 
+
 #pragma once
 
 /* EASY
@@ -18,7 +19,6 @@ Implement this algorithm.
 Bonus: Create a generator that produces primes indefinitely (that is, without
 taking N as an input).
 */
-
 #include <vector>
 
 inline std::vector<int> sieveOfEratosthenes( int n )
@@ -37,5 +37,4 @@ inline std::vector<int> sieveOfEratosthenes( int n )
 
   return primes;
 }
-
 #endif

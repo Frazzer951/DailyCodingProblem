@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_161_170_PROBLEM_170_HPP
 #define PROBLEMS_161_170_PROBLEM_170_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -16,7 +17,6 @@ For example, given start = "dog", end = "cat", and dictionary = {"dot", "dop",
 Given start = "dog", end = "cat", and dictionary = {"dot", "tod", "dat", "dar"},
 return null as there is no possible transformation from dog to cat.
 */
-
 #include <string>
 #include <vector>
 

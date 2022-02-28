@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_048_HPP
 #define PROBLEMS_041_050_PROBLEM_048_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -23,7 +24,6 @@ You should return the following tree:
  / \ / \
 d  e f  g
 */
-
 #include <vector>
 
 #include "btNode.hpp"

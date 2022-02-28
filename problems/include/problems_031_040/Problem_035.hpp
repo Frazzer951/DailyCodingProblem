@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_035_HPP
 #define PROBLEMS_031_040_PROBLEM_035_HPP
 
+
 #pragma once
 
 /* HARD
@@ -13,7 +14,6 @@ Do this in linear time and in-place.
 For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should
 become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
 */
-
 #include <vector>
 
 inline void swap( std::vector<char> & v, int i, int j )

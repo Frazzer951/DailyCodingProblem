@@ -1,17 +1,17 @@
 #ifndef PROBLEMS_031_040_PROBLEM_031_HPP
 #define PROBLEMS_031_040_PROBLEM_031_HPP
 
+
 #pragma once
 
 /* EASY
 The edit distance between two strings refers to the minimum number of character
 insertions, deletions, and substitutions required to change one string to the
-other. For example, the edit distance between �kitten� and �sitting� is three:
-substitute the �k� for �s�, substitute the �e� for �i�, and append a �g�.
+other. For example, the edit distance between “kitten” and “sitting” is three:
+substitute the “k” for “s”, substitute the “e” for “i”, and append a “g”.
 
 Given two strings, compute the edit distance between them.
 */
-
 inline int strDistance( std::string s1, std::string s2 )
 {
   int x = (int) s1.size() + 1;

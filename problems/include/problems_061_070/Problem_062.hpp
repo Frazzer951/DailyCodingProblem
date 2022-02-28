@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_062_HPP
 #define PROBLEMS_061_070_PROBLEM_062_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -16,7 +17,6 @@ ways to get to the bottom-right:
 
 Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
 */
-
 #include <vector>
 
 inline int num_ways( int n, int m )

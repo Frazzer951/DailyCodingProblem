@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_211_220_PROBLEM_217_HPP
 #define PROBLEMS_211_220_PROBLEM_217_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ given input N, find the smallest sparse number greater than or equal to N.
 
 Do this in faster than O(N log N) time.
 */
-
 inline bool isSparse( int x )
 {
   bool last = false;

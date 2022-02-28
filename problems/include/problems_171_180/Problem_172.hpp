@@ -1,11 +1,12 @@
 #ifndef PROBLEMS_171_180_PROBLEM_172_HPP
 #define PROBLEMS_171_180_PROBLEM_172_HPP
 
+
 #pragma once
 
 /* MEDIUM
 Given a string s and a list of words words, where each word is the same length,
-find all starting indices of substrings in s that is a concatenation of every
+find all starting indices of substrings in sthat is a concatenation of every
 word in words exactly once.
 
 For example, given s = "dogcatcatcodecatdog" and words = ["cat", "dog"], return
@@ -16,7 +17,6 @@ are no substrings composed of "dog" and "cat" in s.
 
 The order of the indices does not matter.
 */
-
 #include <algorithm>
 #include <set>
 #include <string>

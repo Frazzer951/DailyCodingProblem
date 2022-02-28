@@ -11,12 +11,13 @@
 #include "problems_001_010/Problem_009.hpp"
 #include "problems_001_010/Problem_010.hpp"
 
-// Problem 1
+
+// Problem 001
 TEST( Problem_1, Given_Case ) { EXPECT_TRUE( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) ); }
 
 TEST( Problem_1, Custom_Case ) { EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11 ) ); }
 
-// Problem 2
+// Problem 002
 TEST( Problem_2, Given_Case_1 )
 {
   auto             summed_array = sumArray( { 1, 2, 3, 4, 5 } );
@@ -31,7 +32,7 @@ TEST( Problem_2, Given_Case_2 )
   EXPECT_EQ( summed_array, expected_sum );
 }
 
-// Problem 3
+// Problem 003
 TEST( Problem_3, Given_Case )
 {
   SerNode leftleft( "left.left" );
@@ -45,7 +46,7 @@ TEST( Problem_3, Given_Case )
   EXPECT_EQ( root.left().left().value(), deser_root.left().left().value() );
 }
 
-// Problem 4
+// Problem 004
 TEST( Problem_4, Given_Case_1 )
 {
   std::vector<int> arr         = { 3, 4, -1, 1 };
@@ -60,12 +61,12 @@ TEST( Problem_4, Given_Case_2 )
   EXPECT_EQ( missing_num, 3 );
 }
 
-// Problem 5
+// Problem 005
 TEST( Problem_5, Given_Case_1 ) { EXPECT_EQ( car( cons( 3, 4 ) ), 3 ); }
 
 TEST( Problem_5, Given_Case_2 ) { EXPECT_EQ( cdr( cons( 3, 4 ) ), 4 ); }
 
-// Problem 6
+// Problem 006
 TEST( Problem_6, Test_Case_1 )
 {
   xor_list list;
@@ -99,7 +100,7 @@ TEST( Problem_6, Test_Case_3 )
   EXPECT_EQ( list.get( 2 )->val, 18 );
 }
 
-// Problem 7
+// Problem 007
 TEST( Problem_7, Given_Case )
 {
   int num_ways = num_encodings( "111" );
@@ -130,7 +131,8 @@ TEST( Problem_7, Test_Case_4 )
   EXPECT_EQ( num_ways, 5 );
 }
 
-// Problem 8
+
+// Problem 008
 TEST( Problem_8, Given_Case )
 {
   Node * root              = new Node( 0 );
@@ -159,7 +161,7 @@ TEST( Problem_8, Test_Case_1 )
   EXPECT_EQ( countUnivalTree( root ), 6 );
 }
 
-// Problem 9
+// Problem 009
 TEST( Problem_9, Given_Case_1 )
 {
   int sum = largest_non_adjacent( { 2, 4, 6, 2, 5 } );
@@ -184,5 +186,5 @@ TEST( Problem_9, Test_Case_2 )
   EXPECT_EQ( sum, 21 );
 }
 
-// Problem 10
+// Problem 010
 TEST( Problem_10, Given_Case ) { jobScheduler( testFunc, 100 ); }

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_152_HPP
 #define PROBLEMS_151_160_PROBLEM_152_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -13,7 +14,6 @@ and 4 20% of the time.
 
 You can generate random numbers between 0 and 1 uniformly.
 */
-
 #include <cstdlib>
 #include <ctime>
 #include <vector>

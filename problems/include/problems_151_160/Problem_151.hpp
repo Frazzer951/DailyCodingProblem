@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_151_HPP
 #define PROBLEMS_151_160_PROBLEM_151_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -24,7 +25,6 @@ G G G
 G G G
 B B B
 */
-
 #include <vector>
 
 inline bool inRange( std::vector<std::vector<char>> v, int x, int y )

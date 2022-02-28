@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_016_HPP
 #define PROBLEMS_011_020_PROBLEM_016_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ Implement a data structure to accomplish this, with the following API:
 
 You should be as efficient with time and space as possible.
 */
-
 #include <iostream>
 #include <vector>
 

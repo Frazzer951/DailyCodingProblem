@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_019_HPP
 #define PROBLEMS_011_020_PROBLEM_019_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ Given an N by K matrix where the nth row and kth column represents the cost to
 build the nthhouse with kth color, return the minimum cost which achieves this
 goal.
 */
-
 #include <vector>
 
 #include "Futils.hpp"

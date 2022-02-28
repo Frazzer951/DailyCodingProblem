@@ -11,7 +11,8 @@
 #include "problems_221_230/Problem_229.hpp"
 #include "problems_221_230/Problem_230.hpp"
 
-// Problem 221
+
+/// Problem 221
 TEST( Problem_221, Given_Case )
 {
   EXPECT_EQ( nthSevenish( 1 ), 1 );

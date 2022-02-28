@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_081_090_PROBLEM_086_HPP
 #define PROBLEMS_081_090_PROBLEM_086_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ is eventually closed).
 For example, given the string "()())()", you should return 1. Given the string
 ")(", you should return 2, since we must remove all of them.
 */
-
 #include <string>
 #include <vector>
 

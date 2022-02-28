@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_127_HPP
 #define PROBLEMS_121_130_PROBLEM_127_HPP
 
+
 #pragma once
 
 /* EASY
@@ -29,7 +30,6 @@ return 124 (99 + 25) as:
 
 4 -> 2 -> 1
 */
-
 #include "slNode.hpp"
 
 inline slNode<int> * sum( slNode<int> * x, slNode<int> * y )

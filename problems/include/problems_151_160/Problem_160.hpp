@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_160_HPP
 #define PROBLEMS_151_160_PROBLEM_160_HPP
 
+
 #pragma once
 
 /* HARD
@@ -24,7 +25,6 @@ longest path would be c -> a -> d -> f, with a length of 17.
 The path does not have to pass through the root, and each node can have any
 amount of children.
 */
-
 #include <limits>
 #include <vector>
 

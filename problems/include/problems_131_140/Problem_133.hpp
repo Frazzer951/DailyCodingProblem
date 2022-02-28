@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_131_140_PROBLEM_133_HPP
 #define PROBLEMS_131_140_PROBLEM_133_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -18,7 +19,6 @@ For example, the inorder successor of 22 is 30.
 
 You can assume each node has a parent pointer.
 */
-
 #include "problems_111_120/Problem_112.hpp"
 
 inline int nextElement( pbtNode * node )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_195_HPP
 #define PROBLEMS_191_200_PROBLEM_195_HPP
 
+
 #pragma once
 
 /* HARD
@@ -21,7 +22,6 @@ For example, given the following matrix:
 And i1 = 1, j1 = 1, i2 = 3, j2 = 3, return 15 as there are 15 numbers in the
 matrix smaller than 6 or greater than 23.
 */
-
 #include <vector>
 
 inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int j1, int i2, int j2 )

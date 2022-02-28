@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_077_HPP
 #define PROBLEMS_071_080_PROBLEM_077_HPP
 
+
 #pragma once
 
 /* EASY
@@ -12,7 +13,6 @@ The input list is not necessarily ordered in any way.
 For example, given [(1, 3), (5, 8), (4, 10), (20, 25)], you should return [(1,
 3), (4, 10), (20, 25)].
 */
-
 #include <vector>
 
 inline std::vector<std::pair<int, int>> get_overlaping( std::pair<int, int>                      interval,

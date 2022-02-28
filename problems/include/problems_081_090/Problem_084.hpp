@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_081_090_PROBLEM_084_HPP
 #define PROBLEMS_081_090_PROBLEM_084_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -17,7 +18,6 @@ For example, this matrix has 4 islands.
 1 1 0 0 1
 1 1 0 0 1
 */
-
 #include <vector>
 
 inline int num_islands( std::vector<std::vector<int>> island_map )

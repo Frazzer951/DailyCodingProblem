@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_241_250_PROBLEM_242_HPP
 #define PROBLEMS_241_250_PROBLEM_242_HPP
 
+
 #pragma once
 
 /* HARD
@@ -15,7 +16,6 @@ efficiently supports the following:
 You can assume that all values get cleared at the end of the day, and that you
 will not be asked for start and end values that wrap around midnight.
 */
-
 class sub_hour_counter
 {
   int subs[24] = { 0 };
@@ -29,5 +29,4 @@ public:
     return sum;
   }
 };
-
 #endif

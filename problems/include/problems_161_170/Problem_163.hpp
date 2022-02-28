@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_161_170_PROBLEM_163_HPP
 #define PROBLEMS_161_170_PROBLEM_163_HPP
 
+
 #pragma once
 
 /* HARD
@@ -17,7 +18,6 @@ return 5, since it is equivalent to ((15 / (7 - (1 + 1))) * 3) - (2 + (1 + 1)) =
 
 You can assume the given expression is always valid.
 */
-
 #include <stack>
 #include <string>
 #include <vector>
@@ -65,5 +65,4 @@ inline double solve( const std::vector<std::string> & equation )
   }
   return std::atof( values.top().c_str() );
 }
-
 #endif

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_236_HPP
 #define PROBLEMS_231_240_PROBLEM_236_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ so on, finally looping around to connect point N to point 1.
 Determine if a new point p lies inside this polygon. (If p is on the boundary of
 the polygon, you should return False).
 */
-
 #include <limits>
 #include <vector>
 
@@ -53,5 +53,4 @@ inline bool isInsidePolygon( const std::vector<Point> & polygon, const Point & p
 
   return c;
 }
-
 #endif

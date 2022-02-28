@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_171_180_PROBLEM_176_HPP
 #define PROBLEMS_171_180_PROBLEM_176_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ to c, and c to d.
 Given s1 = foo and s2 = bar, return false since the o cannot map to two
 characters.
 */
-
 #include <map>
 #include <string>
 

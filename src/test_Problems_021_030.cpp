@@ -11,7 +11,8 @@
 #include "problems_021_030/Problem_029.hpp"
 #include "problems_021_030/Problem_030.hpp"
 
-// Problem 21
+
+// Problem 021
 TEST( Problem_21, Given_Case )
 {
   std::vector<std::pair<int, int>> schedule    = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ),
@@ -30,7 +31,7 @@ TEST( Problem_21, Test_Case )
   EXPECT_EQ( roomsNeeded, 3 );
 }
 
-// Problem 22
+// Problem 022
 TEST( Problem_22, Given_Case_1 )
 {
   // For example, given the set of words 'quick', 'brown', 'the', 'fox', and the string "thequickbrownfox", you should
@@ -57,7 +58,7 @@ TEST( Problem_22, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-// Problem 23
+// Problem 023
 TEST( Problem_23, Given_Case )
 {
   /*
@@ -95,7 +96,7 @@ TEST( Problem_23, Test_Case )
   EXPECT_EQ( moves, expectedMoves );
 }
 
-// Problem 24
+// Problem 024
 TEST( Problem_24, Test_Case )
 {
   auto * root = new lbtNode( 10 );
@@ -132,7 +133,7 @@ TEST( Problem_24, Test_Case )
   EXPECT_FALSE( root->lock() );
 }
 
-// Problem 25
+// Problem 025
 TEST( Problem_25, Given_Case_1 )
 {
   EXPECT_TRUE( regex( "ray", "ra." ) );
@@ -145,7 +146,7 @@ TEST( Problem_25, Given_Case_2 )
   EXPECT_FALSE( regex( "chats", ".*at" ) );
 }
 
-// Problem 26
+// Problem 026
 TEST( Problem_26, Test_Case )
 {
   slList<int> list;
@@ -160,7 +161,7 @@ TEST( Problem_26, Test_Case )
   EXPECT_EQ( rmNode->value, 4 );
 }
 
-// Problem 27
+// Problem 027
 TEST( Problem_27, Given_Case )
 {
   // For example, given the string "([])[]({})", you should return true.
@@ -170,7 +171,7 @@ TEST( Problem_27, Given_Case )
   EXPECT_FALSE( isBallancedString( "((()" ) );
 }
 
-// Problem 28
+// Problem 028
 TEST( Problem_28, Given_Case )
 {
   // For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k
@@ -186,7 +187,7 @@ TEST( Problem_28, Given_Case )
   EXPECT_EQ( returned_strings, expected_strings );
 }
 
-// Problem 29
+// Problem 029
 TEST( Problem_29, Given_case )
 {
   std::string expected_encode = "4A3B2C1D2A";
@@ -209,7 +210,7 @@ TEST( Problem_29, Test_case )
   EXPECT_EQ( decode, expected_decode );
 }
 
-// Problem 30
+// Problem 030
 TEST( Problem_30, Given_Case_1 )
 {
   // [2, 1, 2] = 1 unit of water

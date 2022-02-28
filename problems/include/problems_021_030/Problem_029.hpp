@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_029_HPP
 #define PROBLEMS_021_030_PROBLEM_029_HPP
 
+
 #pragma once
 
 /* EASY
@@ -13,7 +14,6 @@ Implement run-length encoding and decoding. You can assume the string to be
 encoded have no digits and consists solely of alphabetic characters. You can
 assume the string to be decoded is valid.
 */
-
 #include <string>
 
 inline int countChar( const std::string & str, char c )
@@ -61,5 +61,4 @@ inline std::string runLengthDecode( std::string str )
 
   return return_str;
 }
-
 #endif

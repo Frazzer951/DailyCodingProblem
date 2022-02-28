@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_091_100_PROBLEM_099_HPP
 #define PROBLEMS_091_100_PROBLEM_099_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ sequence is [1, 2, 3, 4]. Return its length: 4.
 
 Your algorithm should run in O(n) complexity.
 */
-
 #include <unordered_set>
 #include <vector>
 

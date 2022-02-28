@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_159_HPP
 #define PROBLEMS_151_160_PROBLEM_159_HPP
 
+
 #pragma once
 
 /* EASY
@@ -10,7 +11,6 @@ no recurring character.
 For example, given the string "acbbac", return "b". Given the string "abcdef",
 return null.
 */
-
 #include <map>
 #include <string>
 

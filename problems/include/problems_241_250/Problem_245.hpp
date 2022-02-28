@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_241_250_PROBLEM_245_HPP
 #define PROBLEMS_241_250_PROBLEM_245_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ from the start to the end of the array.
 For example, given [6, 2, 4, 0, 5, 1, 1, 4, 2, 9], you should return 2, as the
 optimal solution involves jumping from 6 to 5, and then from 5 to 9.
 */
-
 #include <limits>
 #include <vector>
 

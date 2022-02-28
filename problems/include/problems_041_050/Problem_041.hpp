@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_041_050_PROBLEM_041_HPP
 #define PROBLEMS_041_050_PROBLEM_041_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -22,7 +23,6 @@ starting airport 'A', you should return the list ['A', 'B', 'C', 'A', 'C'] even
 though ['A', 'C', 'A', 'B', 'C'] is also a valid itinerary. However, the first
 one is lexicographically smaller.
 */
-
 #include <string>
 #include <vector>
 

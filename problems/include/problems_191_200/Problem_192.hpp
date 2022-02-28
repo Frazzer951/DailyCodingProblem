@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_192_HPP
 #define PROBLEMS_191_200_PROBLEM_192_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -14,7 +15,6 @@ For example, given the array [1, 3, 1, 2, 0, 1], we can go from indices 0 -> 1
 
 Given the array [1, 2, 1, 0, 0], we can't reach the end, so return false.
 */
-
 #include <vector>
 
 inline bool canReachEnd( std::vector<int> arr )
@@ -28,5 +28,4 @@ inline bool canReachEnd( std::vector<int> arr )
   }
   return furthest_so_far >= arr.size() - 1;
 }
-
 #endif

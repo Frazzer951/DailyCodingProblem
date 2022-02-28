@@ -1,13 +1,13 @@
 #ifndef PROBLEMS_231_240_PROBLEM_235_HPP
 #define PROBLEMS_231_240_PROBLEM_235_HPP
 
+
 #pragma once
 
 /* HARD
 Given an array of numbers of length N, find both the minimum and maximum using
 less than 2 * (N - 2) comparisons.
 */
-
 #include <vector>
 
 inline std::pair<int, int> min_and_max( std::vector<int> arr )
@@ -21,5 +21,4 @@ inline std::pair<int, int> min_and_max( std::vector<int> arr )
   auto r = min_and_max( std::vector<int>( arr.begin() + n, arr.end() ) );
   return std::make_pair( std::min( l.first, r.first ), std::max( l.second, r.second ) );
 }
-
 #endif

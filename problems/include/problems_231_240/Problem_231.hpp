@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_231_HPP
 #define PROBLEMS_231_240_PROBLEM_231_HPP
 
+
 #pragma once
 
 /* EASY
@@ -10,7 +11,6 @@ adjacent characters are the same. If this is not possible, return None.
 For example, given "aaabbc", you could return "ababac". Given "aaab", return
 None.
 */
-
 #include <map>
 #include <queue>
 #include <string>
@@ -58,5 +58,4 @@ inline std::string noRepeatingAdjacentCharacters( const std::string & input )
   if( result.size() != input.size() ) { return ""; }
   return std::string( result.begin(), result.end() );
 }
-
 #endif

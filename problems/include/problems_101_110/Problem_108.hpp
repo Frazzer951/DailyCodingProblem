@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_108_HPP
 #define PROBLEMS_101_110_PROBLEM_108_HPP
 
+
 #pragma once
 
 /* EASY
@@ -10,7 +11,6 @@ times to get B.
 For example, if A is abcde and B is cdeab, return true. If A is abc and B is acb
 , return false.
 */
-
 #include <string>
 
 inline bool isSifted( std::string A, std::string B )

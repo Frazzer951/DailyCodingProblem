@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_157_HPP
 #define PROBLEMS_151_160_PROBLEM_157_HPP
 
+
 #pragma once
 
 /* EASY
@@ -10,7 +11,6 @@ For example, carrace should return true, since it can be rearranged to form
 racecar, which is a palindrome. daily should return false, since there's no
 rearrangement that can form a palindrome.
 */
-
 #include <map>
 #include <string>
 

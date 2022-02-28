@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_181_190_PROBLEM_182_HPP
 #define PROBLEMS_181_190_PROBLEM_182_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ is minimally-connected.
 Given an undirected graph, check if the graph is minimally-connected. You can
 choose to represent the graph as either an adjacency matrix or adjacency list.
 */
-
 #include <map>
 #include <vector>
 

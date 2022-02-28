@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_201_210_PROBLEM_207_HPP
 #define PROBLEMS_201_210_PROBLEM_207_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -8,7 +9,6 @@ Given an undirected graph G, check whether it is bipartite. Recall that a graph
 is bipartite if its vertices can be divided into two independent sets, U and V,
 such that no edge connects vertices of the same set.
 */
-
 #include <map>
 #include <queue>
 #include <vector>
@@ -49,5 +49,4 @@ inline bool is_bipartite( const std::map<int, std::vector<int>> & graph )
   }
   return true;
 }
-
 #endif

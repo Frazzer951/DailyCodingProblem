@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_105_HPP
 #define PROBLEMS_101_110_PROBLEM_105_HPP
 
+
 #pragma once
 
 /* EASY
@@ -9,7 +10,6 @@ Given a function f, and N return a debounced f of N milliseconds.
 That is, as long as the debounced f continues to be invoked, f itself will not
 be called for N milliseconds.
 */
-
 #ifdef _WIN32
 #  include <Windows.h>
 #else

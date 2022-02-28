@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_240_HPP
 #define PROBLEMS_231_240_PROBLEM_240_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ can sit side by side.
 
 What is the minimum number of swaps necessary for this to happen?
 */
-
 #include <vector>
 
 inline std::vector<int> sortPairs( std::vector<int> arr )
@@ -33,5 +33,4 @@ inline std::vector<int> sortPairs( std::vector<int> arr )
   }
   return sorted;
 }
-
 #endif

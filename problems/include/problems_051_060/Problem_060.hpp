@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_060_HPP
 #define PROBLEMS_051_060_PROBLEM_060_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -14,7 +15,6 @@ add up to 55.
 Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't
 split it up into two subsets that add up to the same sum.
 */
-
 #include <vector>
 
 #include "Futils.hpp"

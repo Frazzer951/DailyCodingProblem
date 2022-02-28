@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_161_170_PROBLEM_162_HPP
 #define PROBLEMS_161_170_PROBLEM_162_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -21,7 +22,6 @@ Return the list:
  * apr
  * f
 */
-
 #include <map>
 #include <string>
 #include <vector>

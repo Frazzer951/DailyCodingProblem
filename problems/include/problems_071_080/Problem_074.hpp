@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_074_HPP
 #define PROBLEMS_071_080_PROBLEM_074_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -28,7 +29,6 @@ multiplication table looks like this:
 
 And there are 4 12's in the table.
 */
-
 inline int countMultiples( int n, int x )
 {
   int count = 0;

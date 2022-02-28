@@ -1,12 +1,12 @@
 #ifndef PROBLEMS_071_080_PROBLEM_073_HPP
 #define PROBLEMS_071_080_PROBLEM_073_HPP
 
+
 #pragma once
 
 /* EASY
 Given the head of a singly linked list, reverse it in-place.
 */
-
 #include "slNode.hpp"
 
 inline void reverse_slList( slList<int> & list )

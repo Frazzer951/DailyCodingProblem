@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_141_150_PROBLEM_150_HPP
 #define PROBLEMS_141_150_PROBLEM_150_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ points from the central point.
 For example, given the list of points [(0, 0), (5, 4), (3, 1)], the central
 point (1, 2), and k = 2, return[(0, 0), (3, 1)].
 */
-
 #include <cmath>
 #include <map>
 #include <vector>

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_171_180_PROBLEM_171_HPP
 #define PROBLEMS_171_180_PROBLEM_171_HPP
 
+
 #pragma once
 
 /* EASY
@@ -20,7 +21,6 @@ Find the busiest period in the building, that is, the time with the most people
 in the building. Return it as a pair of (start, end) timestamps. You can assume
 the building always starts off and ends up empty, i.e. with 0 people inside.
 */
-
 #include <algorithm>
 #include <string>
 #include <vector>

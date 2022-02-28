@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_071_080_PROBLEM_076_HPP
 #define PROBLEMS_071_080_PROBLEM_076_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -45,7 +46,6 @@ tsr
 Your function should return 3, since we would need to remove all the columns to
 order it.
 */
-
 #include <vector>
 
 inline int rows_to_remove( std::vector<std::string> arr )

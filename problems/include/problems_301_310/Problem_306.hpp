@@ -1,6 +1,8 @@
 #ifndef PROBLEMS_301_310_PROBLEM_306_HPP
 #define PROBLEMS_301_310_PROBLEM_306_HPP
 
+// NOT DONE
+
 #pragma once
 
 /* MEDIUM

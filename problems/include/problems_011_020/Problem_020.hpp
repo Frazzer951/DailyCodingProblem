@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_020_HPP
 #define PROBLEMS_011_020_PROBLEM_020_HPP
 
+
 #pragma once
 
 /* EASY
@@ -16,7 +17,6 @@ objects.
 Do this in O(M + N) time (where M and N are the lengths of the lists) and
 constant space.
 */
-
 #include "slNode.hpp"
 
 inline unsigned int length( slNode<int> * head )

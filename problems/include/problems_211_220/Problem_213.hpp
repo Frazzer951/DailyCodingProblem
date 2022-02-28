@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_211_220_PROBLEM_213_HPP
 #define PROBLEMS_211_220_PROBLEM_213_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -13,7 +14,6 @@ except for 0 itself.
 For example, given "2542540123", you should return ['254.25.40.123',
 '254.254.0.123'].
 */
-
 #include <string>
 #include <vector>
 

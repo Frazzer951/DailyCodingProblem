@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_141_150_PROBLEM_144_HPP
 #define PROBLEMS_141_150_PROBLEM_144_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -14,7 +15,6 @@ If the array at i doesn't have a nearest larger integer, then return null.
 
 Follow-up: If you can preprocess the array, can you do this in constant time?
 */
-
 #include <vector>
 
 inline int nearest( std::vector<int> arr, int i )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_064_HPP
 #define PROBLEMS_061_070_PROBLEM_064_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ squares are visited once.
 Given N, write a function to return the number of knight's tours on an N by N
 chessboard.
 */
-
 #include <vector>
 
 inline bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, int> move, int n )
@@ -74,5 +74,4 @@ inline int knights_tours( int n )
   }
   return count;
 }
-
 #endif

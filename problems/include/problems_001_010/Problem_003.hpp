@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_001_010_PROBLEM_003_HPP
 #define PROBLEMS_001_010_PROBLEM_003_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -22,7 +23,6 @@ The following test should pass:
 node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
 */
-
 #include <iostream>
 #include <string>
 #include <utility>

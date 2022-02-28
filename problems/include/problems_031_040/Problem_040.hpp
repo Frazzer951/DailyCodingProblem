@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_040_HPP
 #define PROBLEMS_031_040_PROBLEM_040_HPP
 
+
 #pragma once
 
 /* HARD
@@ -12,7 +13,6 @@ return 19.
 
 Do this in O(N) time and O(1) space.
 */
-
 #include <cmath>
 #include <vector>
 

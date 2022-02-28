@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_131_140_PROBLEM_132_HPP
 #define PROBLEMS_131_140_PROBLEM_132_HPP
 
+
 #pragma once
 
 /* EASY
@@ -14,7 +15,6 @@ It should support the following operations:
 
 Follow-up: What if our system has limited memory?
 */
-
 #include <algorithm>
 #include <iostream>
 #include <vector>

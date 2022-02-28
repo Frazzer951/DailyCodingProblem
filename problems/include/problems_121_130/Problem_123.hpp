@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_123_HPP
 #define PROBLEMS_121_130_PROBLEM_123_HPP
 
+
 #pragma once
 
 /* HARD
@@ -20,7 +21,6 @@ And here are examples of non-numbers:
  * "a -2"
  * "-"
 */
-
 #include <map>
 #include <string>
 #include <vector>

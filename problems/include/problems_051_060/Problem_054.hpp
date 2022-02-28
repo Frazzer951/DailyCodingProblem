@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_054_HPP
 #define PROBLEMS_051_060_PROBLEM_054_HPP
 
+
 #pragma once
 
 /* HARD
@@ -10,7 +11,6 @@ column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
 
 Implement an efficient sudoku solver.
 */
-
 #include <vector>
 
 inline bool valid_sudoku( std::vector<std::vector<int>> arr )

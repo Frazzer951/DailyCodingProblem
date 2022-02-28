@@ -1,13 +1,13 @@
 #ifndef PROBLEMS_071_080_PROBLEM_078_HPP
 #define PROBLEMS_071_080_PROBLEM_078_HPP
 
+
 #pragma once
 
 /* MEDIUM
 Given k sorted singly linked lists, write a function to merge all the lists into
 one sorted singly linked list.
 */
-
 #include <forward_list>
 #include <vector>
 

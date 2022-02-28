@@ -1,13 +1,13 @@
 #ifndef PROBLEMS_031_040_PROBLEM_036_HPP
 #define PROBLEMS_031_040_PROBLEM_036_HPP
 
+
 #pragma once
 
 /* MEDIUM
 Given the root to a binary search tree, find the second largest node in the
 tree.
 */
-
 #include <iostream>
 #include <vector>
 

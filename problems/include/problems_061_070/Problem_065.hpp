@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_065_HPP
 #define PROBLEMS_061_070_PROBLEM_065_HPP
 
+
 #pragma once
 
 /* EASY
@@ -37,7 +38,6 @@ You should print out the following:
 13
 12
 */
-
 #include <vector>
 
 inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_231_240_PROBLEM_237_HPP
 #define PROBLEMS_231_240_PROBLEM_237_HPP
 
+
 #pragma once
 
 /* EASY
@@ -16,7 +17,6 @@ about the root node. The following tree is an example:
 
 Given a k-ary tree, determine whether it is symmetric.
 */
-
 #include "btNode.hpp"
 
 inline bool isSymmetric( btNode<int> * left, btNode<int> * right )

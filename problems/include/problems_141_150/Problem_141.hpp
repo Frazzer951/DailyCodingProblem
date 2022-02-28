@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_141_150_PROBLEM_141_HPP
 #define PROBLEMS_141_150_PROBLEM_141_HPP
 
+
 #pragma once
 
 /* HARD
@@ -16,7 +17,6 @@ class Stack:
     def push(self, item, stack_number):
         pass
 */
-
 #include <vector>
 
 class Stack

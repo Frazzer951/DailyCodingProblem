@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_171_180_PROBLEM_180_HPP
 #define PROBLEMS_171_180_PROBLEM_180_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -15,7 +16,6 @@ If the stack is [1, 2, 3, 4], it should become [1, 4, 2, 3].
 
 Hint: Try working backwards from the end state.
 */
-
 #include <queue>
 #include <stack>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_081_090_PROBLEM_082_HPP
 #define PROBLEMS_081_090_PROBLEM_082_HPP
 
+
 #pragma once
 
 /* EASY
@@ -9,10 +10,9 @@ This problem was asked Microsoft.
 Using a read7() method that returns 7 characters from a file, implement readN(n)
 which reads n characters.
 
-For example, given a file with the content �Hello world�, three read7() returns
-�Hello w�, �orld� and then ��.
+For example, given a file with the content “Hello world”, three read7() returns
+“Hello w”, “orld” and then “”.
 */
-
 #include <fstream>
 #include <string>
 #include <vector>

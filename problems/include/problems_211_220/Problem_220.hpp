@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_211_220_PROBLEM_220_HPP
 #define PROBLEMS_211_220_PROBLEM_220_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -13,7 +14,6 @@ and receiving the value of the coin.
 Write a program that returns the maximum amount of money you can win with
 certainty, if you move first, assuming your opponent plays optimally.
 */
-
 #include <vector>
 
 inline int max_profit_coin_game( std::vector<int> coins )

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_066_HPP
 #define PROBLEMS_061_070_PROBLEM_066_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -10,7 +11,6 @@ bias of the coin.
 
 Write a function to simulate an unbiased coin toss.
 */
-
 inline bool toss_biased()
 {
   int BIAS     = 66;

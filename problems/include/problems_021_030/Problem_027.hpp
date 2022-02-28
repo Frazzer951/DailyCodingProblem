@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_021_030_PROBLEM_027_HPP
 #define PROBLEMS_021_030_PROBLEM_027_HPP
 
+
 #pragma once
 
 /* EASY
@@ -11,7 +12,6 @@ For example, given the string "([])[]({})", you should return true.
 
 Given the string "([)]" or "((()", you should return false.
 */
-
 #include <string>
 
 inline bool isBallancedString( const std::string & str )

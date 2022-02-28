@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_031_040_PROBLEM_038_HPP
 #define PROBLEMS_031_040_PROBLEM_038_HPP
 
+
 #pragma once
 
 /* HARD
@@ -9,7 +10,6 @@ possible arrangements of the board where N queens can be placed on the board
 without threatening each other, i.e. no two queens share the same row, column,
 or diagonal.
 */
-
 #include <vector>
 
 inline bool is_valid( std::vector<int> board )

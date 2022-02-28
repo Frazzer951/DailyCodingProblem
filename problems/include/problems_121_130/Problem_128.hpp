@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_128_HPP
 #define PROBLEMS_121_130_PROBLEM_128_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -32,7 +33,6 @@ Move 2 to 1
 Move 2 to 3
 Move 1 to 3
 */
-
 #include <stack>
 #include <vector>
 

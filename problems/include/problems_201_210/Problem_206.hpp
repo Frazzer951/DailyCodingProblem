@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_201_210_PROBLEM_206_HPP
 #define PROBLEMS_201_210_PROBLEM_206_HPP
 
+
 #pragma once
 
 /* EASY
@@ -12,7 +13,6 @@ Given an array and a permutation, apply the permutation to the array. For
 example, given the array ["a", "b", "c"] and the permutation [2, 1, 0], return
 ["c", "b", "a"].
 */
-
 #include <vector>
 
 inline std::vector<char> genPermutation( std::vector<char> arr, std::vector<int> permutation )

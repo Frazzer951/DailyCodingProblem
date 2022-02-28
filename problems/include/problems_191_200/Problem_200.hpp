@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_200_HPP
 #define PROBLEMS_191_200_PROBLEM_200_HPP
 
+
 #pragma once
 
 /* HARD
@@ -11,7 +12,6 @@ smallest set of points that stabs X.
 For example, given the intervals [(1, 4), (4, 5), (7, 9), (9, 12)], you should
 return [4, 9].
 */
-
 #include <algorithm>
 #include <vector>
 

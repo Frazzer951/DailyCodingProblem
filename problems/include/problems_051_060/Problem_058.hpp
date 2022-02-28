@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_051_060_PROBLEM_058_HPP
 #define PROBLEMS_051_060_PROBLEM_058_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -14,7 +15,6 @@ For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
 
 You can assume all the integers in the array are unique.
 */
-
 #include <vector>
 
 inline int shifted_array_search( std::vector<int> lst, int num )

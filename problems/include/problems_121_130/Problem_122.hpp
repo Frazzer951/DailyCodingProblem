@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_121_130_PROBLEM_122_HPP
 #define PROBLEMS_121_130_PROBLEM_122_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -17,7 +18,6 @@ For example, in this matrix
 
 The most we can collect is 0 + 2 + 1 + 5 + 3 + 1 = 12 coins.
 */
-
 #include <vector>
 
 inline int maxCoins( std::vector<std::vector<int>> coins )

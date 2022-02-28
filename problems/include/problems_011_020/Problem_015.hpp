@@ -1,13 +1,13 @@
 #ifndef PROBLEMS_011_020_PROBLEM_015_HPP
 #define PROBLEMS_011_020_PROBLEM_015_HPP
 
+
 #pragma once
 
 /* MEDIUM
 Given a stream of elements too large to store in memory, pick a random element
 from the stream with uniform probability.
 */
-
 #include <cstdlib>
 #include <iostream>
 #include <vector>

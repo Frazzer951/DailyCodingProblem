@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_011_020_PROBLEM_018_HPP
 #define PROBLEMS_011_020_PROBLEM_018_HPP
 
+
 #pragma once
 
 /* HARD
@@ -19,7 +20,6 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 you do not need to store the results. You can simply print them out as you
 compute them.
 */
-
 #include <iostream>
 #include <vector>
 

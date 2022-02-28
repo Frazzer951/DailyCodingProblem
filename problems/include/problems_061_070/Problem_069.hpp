@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_069_HPP
 #define PROBLEMS_061_070_PROBLEM_069_HPP
 
+
 #pragma once
 
 /* EASY
@@ -12,7 +13,6 @@ For example, if the list is [-10, -10, 5, 2], we should return 500, since that's
 
 You can assume the list has at least three integers.
 */
-
 #include <vector>
 
 inline int largest_product_x3( std::vector<int> nums )

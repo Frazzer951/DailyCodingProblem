@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_109_HPP
 #define PROBLEMS_101_110_PROBLEM_109_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ For example, 10101010 should be 01010101. 11100010 should be 11010001.
 
 Bonus: Can you do this in one line?
 */
-
 #include <cstdint>
 
 #pragma GCC diagnostic push    // Save the current warning state.

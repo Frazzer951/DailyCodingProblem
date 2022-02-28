@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_111_120_PROBLEM_111_HPP
 #define PROBLEMS_111_120_PROBLEM_111_HPP
 
+
 #pragma once
 
 /* HARD
@@ -9,7 +10,6 @@ of W.
 
 For example, given that W is "ab", and S is "abxaba", return 0, 3, and 4.
 */
-
 #include <map>
 #include <set>
 #include <string>

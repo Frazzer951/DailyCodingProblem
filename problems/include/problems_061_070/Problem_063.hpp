@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_061_070_PROBLEM_063_HPP
 #define PROBLEMS_061_070_PROBLEM_063_HPP
 
+
 #pragma once
 
 /* EASY
@@ -20,7 +21,6 @@ and the target word 'FOAM', you should return true, since it's the leftmost
 column. Similarly, given the target word 'MASS', you should return true, since
 it's the last row.
 */
-
 #include <string>
 #include <vector>
 

@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_153_HPP
 #define PROBLEMS_151_160_PROBLEM_153_HPP
 
+
 #pragma once
 
 /* HARD
@@ -11,7 +12,6 @@ For example, given words "hello", and "world" and a text content of "dog cat
 hello cat dog dog hello cat world", return 1 because there's only one word "cat"
 in between the two words.
 */
-
 #include <cmath>
 #include <map>
 #include <string>

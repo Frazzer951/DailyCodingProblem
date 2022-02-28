@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_101_110_PROBLEM_103_HPP
 #define PROBLEMS_101_110_PROBLEM_103_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -12,7 +13,6 @@ you should return "aeci".
 
 If there is no substring containing all the characters in the set, return null.
 */
-
 #include <map>
 #include <string>
 #include <vector>

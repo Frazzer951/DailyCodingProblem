@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_151_160_PROBLEM_155_HPP
 #define PROBLEMS_151_160_PROBLEM_155_HPP
 
+
 #pragma once
 
 /* MEDIUM
@@ -11,7 +12,6 @@ You can assume that such element exists.
 
 For example, given [1, 2, 1, 1, 3, 4, 0], return 1.
 */
-
 #include <algorithm>
 #include <map>
 #include <vector>

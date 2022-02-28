@@ -1,6 +1,7 @@
 #ifndef PROBLEMS_191_200_PROBLEM_199_HPP
 #define PROBLEMS_191_200_PROBLEM_199_HPP
 
+
 #pragma once
 
 /* HARD
@@ -11,7 +12,6 @@ multiple solutions, return any of them.
 For example, given "(()", you could return "(())". Given "))()(", you could
 return "()()()()".
 */
-
 #include <string>
 
 inline std::string balanceParentheses( const std::string & str )

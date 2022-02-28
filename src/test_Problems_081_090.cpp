@@ -11,12 +11,13 @@
 #include "problems_081_090/Problem_089.hpp"
 #include "problems_081_090/Problem_090.hpp"
 
-// Problem 81
+
+// Problem 081
 TEST( Problem_81, Given_Case )
 {
   /*
-  For example if {�2�: [�a�, �b�, �c�], 3: [�d�, �e�, �f�], �}
-  then �23� should return [�ad�, �ae�, �af�, �bd�, �be�, �bf�, �cd�, �ce�, �cf"].
+  For example if {“2”: [“a”, “b”, “c”], 3: [“d”, “e”, “f”], …} then “23” should
+  return [“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf"].
   */
 
   std::map<char, std::vector<std::string>> num_map;
@@ -29,7 +30,7 @@ TEST( Problem_81, Given_Case )
   EXPECT_EQ( expected, result );
 }
 
-// Problem 82
+// Problem 082
 TEST( Problem_82, Test_read7 )
 {
   filereader filereader( "Problem_082.txt" );
@@ -57,26 +58,26 @@ TEST( Problem_82, Test_Case_2 )
   EXPECT_EQ( "Hello world", result );
 }
 
-// Problem 83
+// Problem 083
 TEST( Problem_83, Given_Case )
 {
   /*
   For example, given the following tree:
 
-      a
-     / \
-    b   c
-   / \  /
-  d   e f
-  should become:
+  a
+      / \
+      b   c
+      / \  /
+      d   e f
+          should become:
 
     a
-   / \
-  c   b
+    / \
+    c   b
   \  / \
-   f e  d
+    f e  d
 
-  */
+        */
 
   auto * a       = new btNode( 'a' );
   a->left        = new btNode( 'b' );
@@ -95,19 +96,19 @@ TEST( Problem_83, Given_Case )
   EXPECT_EQ( 'd', a->right->right->value );
 }
 
-// Problem 84
+// Problem 084
 TEST( Problem_84, Given_Case )
 {
   /*
   For example, this matrix has 4 islands.
 
   1 0 0 0 0
-  0 0 1 1 0
-  0 1 1 0 0
-  0 0 0 0 0
-  1 1 0 0 1
-  1 1 0 0 1
-  */
+      0 0 1 1 0
+      0 1 1 0 0
+      0 0 0 0 0
+      1 1 0 0 1
+      1 1 0 0 1
+      */
   std::vector<std::vector<int>> island_map = { { 1, 0, 0, 0, 0 }, { 0, 0, 1, 1, 0 }, { 0, 1, 1, 0, 0 },
                                                { 0, 0, 0, 0, 0 }, { 1, 1, 0, 0, 1 }, { 1, 1, 0, 0, 1 } };
 
@@ -116,7 +117,7 @@ TEST( Problem_84, Given_Case )
   EXPECT_EQ( 4, result );
 }
 
-// Problem 85
+// Problem 085
 TEST( Problem_85, Test_Case_1 )
 {
   int result = math_if( 10, 20, 1 );
@@ -131,7 +132,8 @@ TEST( Problem_85, Test_Case_2 )
   EXPECT_EQ( 20, result );
 }
 
-// Problem 86
+
+// Problem 086
 TEST( Problem_86, Give_Case_1 )
 {
   int result = parentheses_to_remove( "()())()" );
@@ -146,7 +148,7 @@ TEST( Problem_86, Give_Case_2 )
   EXPECT_EQ( 2, result );
 }
 
-// Problem 87
+// Problem 087
 TEST( Problem_87, Given_Case_1 )
 {
   std::vector<std::string> rules = { "A N B", "C SE B", "C N A" };
@@ -187,7 +189,7 @@ TEST( Problem_87, Test_Case )
   EXPECT_FALSE( result );
 }
 
-// Problem 88
+// Problem 088
 TEST( Problem_88, Test_Case_1 )
 {
   int result = divide( 10, 2 );
@@ -216,7 +218,7 @@ TEST( Problem_88, Test_Case_4 )
   EXPECT_EQ( 3, result );
 }
 
-// Problem 89
+// Problem 089
 TEST( Problem_89, Test_Case_1 )
 {
   auto * root       = new btNode( 'd' );
@@ -243,7 +245,7 @@ TEST( Problem_89, Test_Case_2 )
   EXPECT_FALSE( result );
 }
 
-// Problem 90
+// Problem 090
 TEST( Problem_90, Test_Case )
 {
   std::vector<int> l = { 1, 3, 4, 8, 9 };
