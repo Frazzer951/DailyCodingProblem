@@ -116,7 +116,14 @@ TEST( Problem_38, Test_Case_3 )
 }
 
 // Problem 039
+TEST( Problem_39, Test_Case )
+{
+  std::vector<std::vector<bool>> board    = { { false, true, false }, { false, true, false }, { false, true, false } };
+  std::vector<std::vector<bool>> expected = { { false, false, false }, { true, true, true }, { false, false, false } };
+  game_of_life( board );
 
+  EXPECT_EQ( board, expected );
+}
 
 // Problem 040
 TEST( Problem_40, Given_Case_1 )
