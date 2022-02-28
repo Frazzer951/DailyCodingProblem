@@ -40,3 +40,10 @@
 
 
 // Problem 340
+TEST( Problem_340, Given_Case )
+{
+  std::pair<std::pair<int, int>, std::pair<int, int>> result =
+      findClosestPair( { { 1, 1 }, { -1, -1 }, { 3, 4 }, { 6, 1 }, { -1, -6 }, { -4, -3 } } );
+  std::pair<std::pair<int, int>, std::pair<int, int>> expected = { { 1, 1 }, { -1, -1 } };
+  EXPECT_EQ( result, expected );
+}
