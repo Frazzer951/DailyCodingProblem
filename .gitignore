@@ -368,3 +368,4 @@ FodyWeavers.xsd
 config.json
 emails.json
 .idea/
+llvm.sh
