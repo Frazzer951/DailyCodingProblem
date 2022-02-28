@@ -15,7 +15,9 @@ jobs:
 
       - name: Set up Clang
         run: |
-          sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+          sudo wget https://apt.llvm.org/llvm.sh
+          sudo chmod +x llvm.sh
+          sudo ./llvm.sh 13
           sudo apt install -y clang-13 clang-format-13 clang-tidy-13
           sudo update-alternatives --install /bin/clang-tidy clang-tidy /bin/clang-tidy-13 100
           sudo update-alternatives --install /bin/clang-format clang-format /bin/clang-format-13 100
