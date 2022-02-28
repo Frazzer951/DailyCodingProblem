@@ -6,7 +6,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 [![CMake Build](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml/badge.svg)](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml)
 
 <!-- start completed section -->
-## Completed ⭐️ - 230
+## Completed ⭐️ - 231
 <details><summary>Completed</summary>
 <p>
 
@@ -240,6 +240,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 246](problems/include/problems_241_250/Problem_246.hpp) - Medium
  - [Problem 247](problems/include/problems_241_250/Problem_247.hpp) - Easy
  - [Problem 248](problems/include/problems_241_250/Problem_248.hpp) - Hard
+ - [Problem 249](problems/include/problems_241_250/Problem_249.hpp) - Hard
 
 </p>
 </details>
@@ -247,12 +248,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 103
+## Missing ❌️ - 101
 <details><summary>Missing</summary>
 <p>
 
- - [Problem 243](problems/include/problems_241_250/Problem_243.hpp) - Medium
- - [Problem 249](problems/include/problems_241_250/Problem_249.hpp) - Hard
  - [Problem 250](problems/include/problems_241_250/Problem_250.hpp) - Medium
  - [Problem 251](problems/include/problems_251_260/Problem_251.hpp) - Medium
  - [Problem 252](problems/include/problems_251_260/Problem_252.hpp) - Easy
@@ -361,7 +360,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end missing section -->
 
 <!-- start skipped section -->
-## Skipped️ ⏭️ - 17
+## Skipped️ ⏭️ - 18
 <details><summary>Skipped</summary>
 <p>
 
@@ -382,6 +381,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 219](problems/include/problems_211_220/Problem_219.hpp) - Hard
  - [Problem 226](problems/include/problems_221_230/Problem_226.hpp) - Hard
  - [Problem 238](problems/include/problems_231_240/Problem_238.hpp) - Hard
+ - [Problem 243](problems/include/problems_241_250/Problem_243.hpp) - Medium
 
 </p>
 </details>
