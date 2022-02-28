@@ -247,24 +247,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 117
+## Missing ❌️ - 103
 <details><summary>Missing</summary>
 <p>
 
- - [Problem 091](problems/include/problems_091_100/Problem_091.hpp) - Easy
- - [Problem 114](problems/include/problems_111_120/Problem_114.hpp) - Hard
- - [Problem 120](problems/include/problems_111_120/Problem_120.hpp) - Medium
- - [Problem 131](problems/include/problems_131_140/Problem_131.hpp) - Medium
- - [Problem 139](problems/include/problems_131_140/Problem_139.hpp) - Medium
- - [Problem 148](problems/include/problems_141_150/Problem_148.hpp) - Medium
- - [Problem 174](problems/include/problems_171_180/Problem_174.hpp) - Medium
- - [Problem 183](problems/include/problems_181_190/Problem_183.hpp) - Hard
- - [Problem 186](problems/include/problems_181_190/Problem_186.hpp) - Hard
- - [Problem 188](problems/include/problems_181_190/Problem_188.hpp) - Medium
- - [Problem 198](problems/include/problems_191_200/Problem_198.hpp) - Medium
- - [Problem 219](problems/include/problems_211_220/Problem_219.hpp) - Hard
- - [Problem 226](problems/include/problems_221_230/Problem_226.hpp) - Hard
- - [Problem 238](problems/include/problems_231_240/Problem_238.hpp) - Hard
  - [Problem 243](problems/include/problems_241_250/Problem_243.hpp) - Medium
  - [Problem 249](problems/include/problems_241_250/Problem_249.hpp) - Hard
  - [Problem 250](problems/include/problems_241_250/Problem_250.hpp) - Medium
@@ -375,13 +361,27 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end missing section -->
 
 <!-- start skipped section -->
-## Skipped️ ⏭️ - 3
+## Skipped️ ⏭️ - 17
 <details><summary>Skipped</summary>
 <p>
 
  - [Problem 032](problems/include/problems_031_040/Problem_032.hpp) - Hard
  - [Problem 056](problems/include/problems_051_060/Problem_056.hpp) - Medium
  - [Problem 059](problems/include/problems_051_060/Problem_059.hpp) - Hard
+ - [Problem 091](problems/include/problems_091_100/Problem_091.hpp) - Easy
+ - [Problem 114](problems/include/problems_111_120/Problem_114.hpp) - Hard
+ - [Problem 120](problems/include/problems_111_120/Problem_120.hpp) - Medium
+ - [Problem 131](problems/include/problems_131_140/Problem_131.hpp) - Medium
+ - [Problem 139](problems/include/problems_131_140/Problem_139.hpp) - Medium
+ - [Problem 148](problems/include/problems_141_150/Problem_148.hpp) - Medium
+ - [Problem 174](problems/include/problems_171_180/Problem_174.hpp) - Medium
+ - [Problem 183](problems/include/problems_181_190/Problem_183.hpp) - Hard
+ - [Problem 186](problems/include/problems_181_190/Problem_186.hpp) - Hard
+ - [Problem 188](problems/include/problems_181_190/Problem_188.hpp) - Medium
+ - [Problem 198](problems/include/problems_191_200/Problem_198.hpp) - Medium
+ - [Problem 219](problems/include/problems_211_220/Problem_219.hpp) - Hard
+ - [Problem 226](problems/include/problems_221_230/Problem_226.hpp) - Hard
+ - [Problem 238](problems/include/problems_231_240/Problem_238.hpp) - Hard
 
 </p>
 </details>

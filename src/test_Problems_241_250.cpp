@@ -107,6 +107,12 @@ TEST( Problem_248, Test_Case )
 }
 
 // Problem 249
-
+TEST( Problem_249, Test_Case )
+{
+  std::vector<int> arr      = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+  int              result   = max_xor( arr );
+  int              expected = 15;
+  EXPECT_EQ( result, expected );
+}
 
 // Problem 250
