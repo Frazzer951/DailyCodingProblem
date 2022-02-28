@@ -1,0 +1,12 @@
+#ifndef PROBLEMS_{section}1_{section+1}0_PROBLEM_{problem_number}_HPP
+#define PROBLEMS_{section}1_{section+1}0_PROBLEM_{problem_number}_HPP
+
+// NOT DONE
+
+#pragma once
+
+/* {difficulty}
+{problem_body}
+*/
+
+#endif

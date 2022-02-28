@@ -7,10 +7,10 @@ import os
 import re
 
 
-def loadEmails():
+def load_emails():
     """Will load cached emails"""
     if os.path.isfile(config.proj_dir + "/emails.json"):
-        with open(config.proj_dir + "/emails.json") as f:
+        with open(config.proj_dir + "/emails.json", "r", encoding="UTF-8") as f:
             logging.debug("Cache Loaded")
             return json.load(f)
     else:
@@ -18,14 +18,14 @@ def loadEmails():
         return {}
 
 
-def saveEmails(emails):
+def save_emails(emails):
     """Will Save the cached emails"""
     with open(config.proj_dir + "/emails.json", "w", encoding="utf-8") as f:
-        json.dump(emails, f, indent=2)
+        json.dump(emails, f, indent=2, sort_keys=True)
         logging.debug("Cache Saved")
 
 
-def getEmails(forceRefresh=False):
+def get_emails(force_refresh=False):
     """Will retrieve all emails from gmail"""
     m = imaplib.IMAP4_SSL("imap.gmail.com")
     m.login(config.user, config.password)
@@ -35,10 +35,10 @@ def getEmails(forceRefresh=False):
     resp, items = m.search(None, "ALL")
     items = items[0].split()
     logging.debug(len(items))
-    if forceRefresh:
+    if force_refresh:
         emails = {}
     else:
-        emails = loadEmails()
+        emails = load_emails()
 
     for emailid in items:
         resp, data = m.fetch(emailid, "(RFC822)")
@@ -50,6 +50,7 @@ def getEmails(forceRefresh=False):
         body = ""
 
         if number in emails:
+            logging.info(f"Skipping Problem #{number}, Already Parsed")
             continue
 
         logging.info(f"Parsing Problem #{number}")
@@ -83,64 +84,76 @@ def getEmails(forceRefresh=False):
 
 
 def line_prepender(filename, line):
+    if not os.path.isfile(filename):
+        with open(filename, "w") as f:
+            logging.info(f"Generating {filename}")
     with open(filename, "r+") as f:
         content = f.read()
         f.seek(0, 0)
         f.write(line.rstrip("\r\n") + "\n" + content)
 
 
-def genProblem(problems, num):
+def gen_problem(problems, num):
     """Generate Missing Problems from Problem List"""
     # Create Filenames for all files with problems
     section = (num - 1) // 10
-    path = f"problems/include/problems_{section:02}1_{section+1:02}0"
+    path = f"problems/include/problems_{section:02}1_{section + 1:02}0"
     filename = f"{path}/Problem_{num:03}.hpp"
-    cpp_filename = f"src/test_Problems_{section:02}1_{section+1:02}0.cpp"
+    cpp_filename = f"src/test_Problems_{section:02}1_{section + 1:02}0.cpp"
 
     # Make sure the files exist
+    if not os.path.exists("src"):
+        os.makedirs("src")
     if not os.path.exists(path):
         os.makedirs(path)
     if not os.path.isfile(cpp_filename):
-        if not os.path.exists("src"):
-            os.makedirs("src")
-        with open(cpp_filename, "w") as f:
+        # Create the file
+        with open(config.proj_dir + "/templates/test.txt", "r") as f:
+            template = f.read()
+
+        template = template.replace("{section}", f"{section:02}")
+        template = template.replace("{section+1}", f"{section + 1:02}")
+
+        with open(cpp_filename, "w", encoding="UTF-8") as f:
             logging.info(f"Generating {cpp_filename}")
-            f.write('\n#include "gtest/gtest.h"\n\n')
-            for i in range(section * 10 + 1, (section + 1) * 10 + 1):
-                f.write(f"// Problem {i}\n\n\n")
+            f.write(template)
 
     logging.debug(filename)
     if os.path.isfile(filename):
         return
 
-    with open(filename, "w") as f:
+    # Create the file
+    with open(config.proj_dir + "/templates/problem.txt", "r") as f:
+        template = f.read()
+
+    template = template.replace("{section}", f"{section:02}")
+    template = template.replace("{section+1}", f"{section + 1:02}")
+    template = template.replace("{difficulty}", problems[str(num)]["difficulty"].upper())
+    template = template.replace("{problem_body}", problems[str(num)]["body"].replace("\r", ""))
+    template = template.replace("{problem_number}", f"{num:03}")
+
+    with open(filename, "w", encoding="UTF-8") as f:
         logging.info(f"Generating file for #{num:03}")
-        f.write("#pragma once\n\n")
-        f.write(f"/* {problems[str(num)]['difficulty'].upper()}\n")
-        f.write(problems[str(num)]["body"].replace("\r", ""))
-        f.write("\n*/\n")
-    # Add file to readme as TODO
-    with open("README.md", "a") as f:
-        logging.info(f"Adding #{num:03} to README.md")
-        f.write(f"\n- [Problem {num:03}]({filename})")
+        f.write(template)
+
     # Include file in cpp file
     line_prepender(
         cpp_filename,
-        f'#include "problems_{section:02}1_{section+1:02}0/Problem_{num:03}.hpp"',
+        f'#include "problems_{section:02}1_{section + 1:02}0/Problem_{num:03}.hpp"',
     )
 
 
-def addProblems(cacheOnly=False, forceRefresh=False):
-    if cacheOnly:
+def add_problems(cache_only=False, force_refresh=False):
+    if cache_only:
         logging.info("Loading Cache")
-        problems = loadEmails()
+        problems = load_emails()
     else:
         logging.info("Loading Emails")
-        problems = getEmails(forceRefresh)
-    saveEmails(problems)
+        problems = get_emails(force_refresh)
+    save_emails(problems)
     for num in problems:
-        genProblem(problems, int(num))
+        gen_problem(problems, int(num))
 
 
 if __name__ == "__main__":
-    addProblems()
+    add_problems(True)
