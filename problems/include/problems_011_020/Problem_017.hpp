@@ -55,19 +55,16 @@ The name of a directory or sub-directory will not contain a period.
 #include <algorithm>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "Futils.hpp"
 
-bool is_file( std::string f )
-{
-  if( f.find( '.' ) != std::string::npos ) return true;
-  return false;
-}
+inline bool is_file( const std::string & f ) { return f.find( '.' ) != std::string::npos; }
 
-std::string find_longest_filepath( std::string filesystem )
+inline std::string find_longest_filepath( std::string filesystem )
 {
-  std::vector<std::string>   file_paths = split( filesystem, '\n' );
+  std::vector<std::string>   file_paths = split( std::move( filesystem ), '\n' );
   std::map<int, std::string> depths;
   std::vector<std::string>   filepaths;
 
@@ -93,7 +90,7 @@ std::string find_longest_filepath( std::string filesystem )
     }
   }
   std::string longest = filepaths[0];
-  for( auto filepath : filepaths )
+  for( const auto & filepath : filepaths )
   {
     if( filepath.size() > longest.size() ) { longest = filepath; }
   }
