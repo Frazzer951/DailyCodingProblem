@@ -156,7 +156,6 @@ PointerAlignment: Middle
 ReflowComments: true
 ShortNamespaceLines: 1
 SortIncludes: true
-SortJavaStaticImport: Before
 SortUsingDeclarations: true
 SpaceAfterCStyleCast: true
 SpaceAfterLogicalNot: false
