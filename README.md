@@ -6,7 +6,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 [![CMake Build](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml/badge.svg)](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml)
 
 <!-- start completed section -->
-## Completed ⭐️
+## Completed ⭐️ - 230
 <details><summary>Completed</summary>
 <p>
 
@@ -26,6 +26,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 014](problems/include/problems_011_020/Problem_014.hpp) - Medium
  - [Problem 015](problems/include/problems_011_020/Problem_015.hpp) - Medium
  - [Problem 016](problems/include/problems_011_020/Problem_016.hpp) - Easy
+ - [Problem 017](problems/include/problems_011_020/Problem_017.hpp) - Hard
  - [Problem 018](problems/include/problems_011_020/Problem_018.hpp) - Hard
  - [Problem 019](problems/include/problems_011_020/Problem_019.hpp) - Medium
  - [Problem 020](problems/include/problems_011_020/Problem_020.hpp) - Easy
@@ -46,6 +47,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 036](problems/include/problems_031_040/Problem_036.hpp) - Medium
  - [Problem 037](problems/include/problems_031_040/Problem_037.hpp) - Easy
  - [Problem 038](problems/include/problems_031_040/Problem_038.hpp) - Hard
+ - [Problem 039](problems/include/problems_031_040/Problem_039.hpp) - Medium
  - [Problem 040](problems/include/problems_031_040/Problem_040.hpp) - Hard
  - [Problem 041](problems/include/problems_041_050/Problem_041.hpp) - Medium
  - [Problem 042](problems/include/problems_041_050/Problem_042.hpp) - Hard
@@ -245,15 +247,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️
+## Missing ❌️ - 117
 <details><summary>Missing</summary>
 <p>
 
- - [Problem 017](problems/include/problems_011_020/Problem_017.hpp) - Hard
- - [Problem 032](problems/include/problems_031_040/Problem_032.hpp) - Hard
- - [Problem 039](problems/include/problems_031_040/Problem_039.hpp) - Medium
- - [Problem 056](problems/include/problems_051_060/Problem_056.hpp) - Medium
- - [Problem 059](problems/include/problems_051_060/Problem_059.hpp) - Hard
  - [Problem 091](problems/include/problems_091_100/Problem_091.hpp) - Easy
  - [Problem 114](problems/include/problems_111_120/Problem_114.hpp) - Hard
  - [Problem 120](problems/include/problems_111_120/Problem_120.hpp) - Medium
@@ -378,10 +375,13 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end missing section -->
 
 <!-- start skipped section -->
-## Skipped️ ⏭️
+## Skipped️ ⏭️ - 3
 <details><summary>Skipped</summary>
 <p>
 
+ - [Problem 032](problems/include/problems_031_040/Problem_032.hpp) - Hard
+ - [Problem 056](problems/include/problems_051_060/Problem_056.hpp) - Medium
+ - [Problem 059](problems/include/problems_051_060/Problem_059.hpp) - Hard
 
 </p>
 </details>
