@@ -2,7 +2,6 @@
 #define PROBLEMS_331_340_PROBLEM_340_HPP
 
 
-
 #pragma once
 
 /* EASY
@@ -14,12 +13,13 @@ points. For example, given the points [(1, 1), (-1, -1), (3, 4), (6, 1), (-1,
 #include <map>
 #include <vector>
 
-double distance( const std::pair<int, int> & p1, const std::pair<int, int> & p2 )
+inline double distance( const std::pair<int, int> & p1, const std::pair<int, int> & p2 )
 {
   return std::sqrt( std::pow( p1.first - p2.first, 2 ) + std::pow( p1.second - p2.second, 2 ) );
 }
 
-std::pair<std::pair<int, int>, std::pair<int, int>> findClosestPair( const std::vector<std::pair<int, int>> & points )
+inline std::pair<std::pair<int, int>, std::pair<int, int>>
+    findClosestPair( const std::vector<std::pair<int, int>> & points )
 {
   std::map<double, std::pair<std::pair<int, int>, std::pair<int, int>>> distances;
   for( int i = 0; i < points.size(); ++i )

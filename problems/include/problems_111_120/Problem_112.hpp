@@ -20,10 +20,10 @@ struct pbtNode
 {
   int       value;
   pbtNode * parent;
-  pbtNode * left;
-  pbtNode * right;
+  pbtNode * left { nullptr };
+  pbtNode * right { nullptr };
 
-  pbtNode( int v, pbtNode * p = nullptr ) : value( v ), parent( p ), left( nullptr ), right( nullptr ) {}
+  pbtNode( int v, pbtNode * p = nullptr ) : value( v ), parent( p ), {}
 };
 
 inline pbtNode * pbtLCA( pbtNode * a, pbtNode * b )

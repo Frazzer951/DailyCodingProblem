@@ -28,7 +28,7 @@ You can represent a live cell with an asterisk (*) and a dead cell with a dot (.
 */
 #include <vector>
 
-int count_neighbors( std::vector<std::vector<bool>> & board, int x, int y )
+inline int count_neighbors( std::vector<std::vector<bool>> & board, int x, int y )
 {
   int count = 0;
   for( int i = x - 1; i <= x + 1; i++ )
@@ -44,7 +44,7 @@ int count_neighbors( std::vector<std::vector<bool>> & board, int x, int y )
 }
 
 
-void game_of_life( std::vector<std::vector<bool>> & board, int steps = 1 )
+inline void game_of_life( std::vector<std::vector<bool>> & board, int steps = 1 )
 {
   for( int i = 0; i < steps; i++ )
   {

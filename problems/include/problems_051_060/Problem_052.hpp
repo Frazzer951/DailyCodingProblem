@@ -23,12 +23,10 @@ struct LLNode
 {
   std::string key;
   std::string val;
-  LLNode *    prev;
-  LLNode *    next;
+  LLNode *    prev { nullptr };
+  LLNode *    next { nullptr };
 
-  LLNode( std::string _key, std::string _val ) :
-    key( std::move( _key ) ), val( std::move( _val ) ), prev( nullptr ), next( nullptr )
-  {}
+  LLNode( std::string _key, std::string _val ) : key( std::move( _key ) ), val( std::move( _val ) ), {}
 };
 
 struct LinkedList

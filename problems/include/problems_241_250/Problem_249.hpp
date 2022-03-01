@@ -9,7 +9,7 @@ Given an array of integers, find the maximum XOR of any two elements.
 */
 #include <vector>
 
-int max_xor( std::vector<int> arr )
+inline int max_xor( std::vector<int> arr )
 {
   int max_xor = 0;
   for( int i = 0; i < arr.size(); i++ )

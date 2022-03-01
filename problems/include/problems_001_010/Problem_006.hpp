@@ -20,9 +20,9 @@ between nodes and memory addresses.
 struct xNode
 {
   int     val;
-  xNode * both;
+  xNode * both { nullptr };
 
-  xNode( int value ) : val( value ), both( nullptr ) {}
+  xNode( int value ) : val( value ), {}
 };
 
 inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
