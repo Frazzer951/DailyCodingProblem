@@ -32,7 +32,7 @@ struct lbtNode
   lbtNode * left { nullptr };
   lbtNode * right { nullptr };
 
-  lbtNode( int val ) : value( val ), {}
+  lbtNode( int val ) : value( val ) {}
 
   void setLeft( lbtNode * node )
   {

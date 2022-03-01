@@ -42,7 +42,7 @@ private:
   }
 
 public:
-  iterator2D( std::vector<std::vector<int>> arr ) : m_Arr( std::move( arr ) ), {}
+  iterator2D( std::vector<std::vector<int>> arr ) : m_Arr( std::move( arr ) ) {}
 
   int next()
   {

@@ -23,7 +23,7 @@ struct pbtNode
   pbtNode * left { nullptr };
   pbtNode * right { nullptr };
 
-  pbtNode( int v, pbtNode * p = nullptr ) : value( v ), parent( p ), {}
+  pbtNode( int v, pbtNode * p = nullptr ) : value( v ), parent( p ) {}
 };
 
 inline pbtNode * pbtLCA( pbtNode * a, pbtNode * b )

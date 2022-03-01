@@ -22,7 +22,7 @@ struct xNode
   int     val;
   xNode * both { nullptr };
 
-  xNode( int value ) : val( value ), {}
+  xNode( int value ) : val( value ) {}
 };
 
 inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }

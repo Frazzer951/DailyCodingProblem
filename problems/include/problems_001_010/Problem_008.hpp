@@ -29,7 +29,7 @@ public:
   Node * left { nullptr };
   Node * right { nullptr };
 
-  Node( int val ) : data( val ), {}
+  Node( int val ) : data( val ) {}
 };
 
 inline bool sameChildren( Node * root )
