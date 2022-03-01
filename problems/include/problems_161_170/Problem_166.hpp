@@ -26,8 +26,8 @@ class iterator2D
 {
 private:
   std::vector<std::vector<int>> m_Arr;
-  size_t                        outerIndex;
-  size_t                        innerIndex;
+  size_t                        outerIndex { 0 };
+  size_t                        innerIndex { 0 };
 
   bool updateIndex()
   {
@@ -42,7 +42,7 @@ private:
   }
 
 public:
-  iterator2D( std::vector<std::vector<int>> arr ) : m_Arr( std::move( arr ) ), outerIndex( 0 ), innerIndex( 0 ) {}
+  iterator2D( std::vector<std::vector<int>> arr ) : m_Arr( std::move( arr ) ), {}
 
   int next()
   {

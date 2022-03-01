@@ -26,15 +26,13 @@ the height of the tree.
 struct lbtNode
 {
   int       value;
-  int       lockedSubNodes;
-  bool      locked;
-  lbtNode * parent;
-  lbtNode * left;
-  lbtNode * right;
+  int       lockedSubNodes { 0 };
+  bool      locked { false };
+  lbtNode * parent { nullptr };
+  lbtNode * left { nullptr };
+  lbtNode * right { nullptr };
 
-  lbtNode( int val ) :
-    value( val ), lockedSubNodes( 0 ), locked( false ), parent( nullptr ), left( nullptr ), right( nullptr )
-  {}
+  lbtNode( int val ) : value( val ), {}
 
   void setLeft( lbtNode * node )
   {
