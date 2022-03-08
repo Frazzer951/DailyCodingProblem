@@ -249,7 +249,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 100
+## Missing ❌️ - 107
 <details><summary>Missing</summary>
 <p>
 
@@ -353,6 +353,13 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 348](problems/include/problems_341_350/Problem_348.hpp) - Easy
  - [Problem 349](problems/include/problems_341_350/Problem_349.hpp) - Hard
  - [Problem 350](problems/include/problems_341_350/Problem_350.hpp) - Medium
+ - [Problem 351](problems/include/problems_351_360/Problem_351.hpp) - Hard
+ - [Problem 352](problems/include/problems_351_360/Problem_352.hpp) - Easy
+ - [Problem 353](problems/include/problems_351_360/Problem_353.hpp) - Medium
+ - [Problem 354](problems/include/problems_351_360/Problem_354.hpp) - Hard
+ - [Problem 355](problems/include/problems_351_360/Problem_355.hpp) - Hard
+ - [Problem 356](problems/include/problems_351_360/Problem_356.hpp) - Hard
+ - [Problem 357](problems/include/problems_351_360/Problem_357.hpp) - Hard
 
 </p>
 </details>
