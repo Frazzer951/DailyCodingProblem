@@ -1,11 +1,12 @@
-#include "problems_351_360/Problem_357.hpp"
-#include "problems_351_360/Problem_356.hpp"
-#include "problems_351_360/Problem_355.hpp"
-#include "problems_351_360/Problem_354.hpp"
-#include "problems_351_360/Problem_353.hpp"
-#include "problems_351_360/Problem_352.hpp"
-#include "problems_351_360/Problem_351.hpp"
 #include "gtest/gtest.h"
+
+#include "problems_351_360/Problem_351.hpp"
+#include "problems_351_360/Problem_352.hpp"
+#include "problems_351_360/Problem_353.hpp"
+#include "problems_351_360/Problem_354.hpp"
+#include "problems_351_360/Problem_355.hpp"
+#include "problems_351_360/Problem_356.hpp"
+#include "problems_351_360/Problem_357.hpp"
 
 
 // Problem 351
