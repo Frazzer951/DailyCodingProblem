@@ -1,7 +1,7 @@
 #ifndef PROBLEMS_241_250_PROBLEM_250_HPP
 #define PROBLEMS_241_250_PROBLEM_250_HPP
 
-// NOT DONE
+// SKIPPED
 
 #pragma once
 
