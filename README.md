@@ -249,7 +249,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 107
+## Missing ❌️ - 121
 <details><summary>Missing</summary>
 <p>
 
@@ -360,6 +360,20 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 355](problems/include/problems_351_360/Problem_355.hpp) - Hard
  - [Problem 356](problems/include/problems_351_360/Problem_356.hpp) - Hard
  - [Problem 357](problems/include/problems_351_360/Problem_357.hpp) - Hard
+ - [Problem 358](problems/include/problems_351_360/Problem_358.hpp) - Hard
+ - [Problem 359](problems/include/problems_351_360/Problem_359.hpp) - Easy
+ - [Problem 360](problems/include/problems_351_360/Problem_360.hpp) - Medium
+ - [Problem 361](problems/include/problems_361_370/Problem_361.hpp) - Medium
+ - [Problem 362](problems/include/problems_361_370/Problem_362.hpp) - Easy
+ - [Problem 363](problems/include/problems_361_370/Problem_363.hpp) - Medium
+ - [Problem 364](problems/include/problems_361_370/Problem_364.hpp) - Medium
+ - [Problem 365](problems/include/problems_361_370/Problem_365.hpp) - Hard
+ - [Problem 366](problems/include/problems_361_370/Problem_366.hpp) - Medium
+ - [Problem 367](problems/include/problems_361_370/Problem_367.hpp) - Medium
+ - [Problem 368](problems/include/problems_361_370/Problem_368.hpp) - Hard
+ - [Problem 369](problems/include/problems_361_370/Problem_369.hpp) - Medium
+ - [Problem 370](problems/include/problems_361_370/Problem_370.hpp) - Easy
+ - [Problem 371](problems/include/problems_371_380/Problem_371.hpp) - Hard
 
 </p>
 </details>

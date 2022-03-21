@@ -7,6 +7,9 @@
 #include "problems_351_360/Problem_355.hpp"
 #include "problems_351_360/Problem_356.hpp"
 #include "problems_351_360/Problem_357.hpp"
+#include "problems_351_360/Problem_358.hpp"
+#include "problems_351_360/Problem_359.hpp"
+#include "problems_351_360/Problem_360.hpp"
 
 
 // Problem 351
