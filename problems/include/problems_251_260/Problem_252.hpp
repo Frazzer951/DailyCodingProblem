@@ -16,13 +16,13 @@ Egyptian fraction.
 #include <Futils.hpp>
 #include <vector>
 
-std::vector<int> egyptianFraction( int a, int b )
+inline std::vector<int> egyptianFraction( int a, int b )
 {
   std::vector<int> denominators;
 
   while( a != 0 )
   {
-    int ceil_div = b / a + ( b % a != 0 );
+    int ceil_div = b / a + static_cast<int>( b % a != 0 );
     denominators.push_back( ceil_div );
     a = mod( -b, a );
     b = b * ( ceil_div );

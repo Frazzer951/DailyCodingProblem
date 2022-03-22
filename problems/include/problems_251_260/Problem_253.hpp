@@ -20,7 +20,7 @@ t     a     g
 #include <string>
 #include <vector>
 
-std::string zigzag( std::string str, int k )
+inline std::string zigzag( std::string str, int k )
 {
   std::vector<std::vector<char>> lines = std::vector( k, std::vector<char>( str.size(), ' ' ) );
   bool                           down  = true;
@@ -39,8 +39,8 @@ std::string zigzag( std::string str, int k )
       line--;
     }
   }
-  std::string result = "";
-  for( auto line : lines )
+  std::string result;
+  for( const auto & line : lines )
   {
     for( auto c : line ) { result += c; }
     result += '\n';
