@@ -16,7 +16,14 @@
 
 
 // Problem 252
+TEST( Problem_252, Given_Case )
+{
+  // For example, 4 / 13 can be represented as 1 / 4 + 1 / 18 + 1 / 468
+  std::vector<int> result   = egyptianFraction( 4, 13 );
+  std::vector<int> expected = { 4, 18, 468 };
 
+  EXPECT_EQ( expected, result );
+}
 
 // Problem 253
 

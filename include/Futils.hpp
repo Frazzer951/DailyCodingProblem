@@ -67,4 +67,11 @@ inline int sum( const std::vector<int> & v )
 
   return sum;
 }
+
+inline int mod( int a, int b )
+{
+  int r = a % b;
+  return r < 0 ? r + b : r;
+}
+
 #endif
