@@ -249,12 +249,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 121
+## Missing ❌️ - 120
 <details><summary>Missing</summary>
 <p>
 
- - [Problem 250](problems/include/problems_241_250/Problem_250.hpp) - Medium
- - [Problem 251](problems/include/problems_251_260/Problem_251.hpp) - Medium
  - [Problem 252](problems/include/problems_251_260/Problem_252.hpp) - Easy
  - [Problem 253](problems/include/problems_251_260/Problem_253.hpp) - Medium
  - [Problem 254](problems/include/problems_251_260/Problem_254.hpp) - Medium
@@ -374,6 +372,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 369](problems/include/problems_361_370/Problem_369.hpp) - Medium
  - [Problem 370](problems/include/problems_361_370/Problem_370.hpp) - Easy
  - [Problem 371](problems/include/problems_371_380/Problem_371.hpp) - Hard
+ - [Problem 372](problems/include/problems_371_380/Problem_372.hpp) - Easy
 
 </p>
 </details>
@@ -381,7 +380,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end missing section -->
 
 <!-- start skipped section -->
-## Skipped️ ⏭️ - 18
+## Skipped️ ⏭️ - 20
 <details><summary>Skipped</summary>
 <p>
 
@@ -403,6 +402,8 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 226](problems/include/problems_221_230/Problem_226.hpp) - Hard
  - [Problem 238](problems/include/problems_231_240/Problem_238.hpp) - Hard
  - [Problem 243](problems/include/problems_241_250/Problem_243.hpp) - Medium
+ - [Problem 250](problems/include/problems_241_250/Problem_250.hpp) - Medium
+ - [Problem 251](problems/include/problems_251_260/Problem_251.hpp) - Medium
 
 </p>
 </details>

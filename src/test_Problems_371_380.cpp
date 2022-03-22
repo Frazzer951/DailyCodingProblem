@@ -1,3 +1,4 @@
+#include "problems_371_380/Problem_372.hpp"
 #include "gtest/gtest.h"
 
 #include "problems_371_380/Problem_371.hpp"
