@@ -26,7 +26,20 @@ TEST( Problem_252, Given_Case )
 }
 
 // Problem 253
+TEST( Problem_253, Given_Case )
+{
+  /*
+   For example, given the sentence "thisisazigzag" and k = 4, you should print:
 
+    t     a     g
+     h   s z   a
+      i i   i z
+       s     g
+   */
+  std::string result   = zigzag( "thisisazigzag", 4 );
+  std::string expected = "t     a     g\n h   s z   a \n  i i   i z  \n   s     g   \n";
+  EXPECT_EQ( expected, result );
+}
 
 // Problem 254
 
