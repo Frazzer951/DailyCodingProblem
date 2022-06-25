@@ -56,7 +56,10 @@ inline std::string runLengthDecode( std::string str )
 
   for( auto & charPair : charPairs )
   {
-    for( int j = 0; j < charPair.first; j++ ) { return_str += charPair.second; }
+    for( int j = 0; j < charPair.first; j++ )
+    {
+      return_str += charPair.second;
+    }
   }
 
   return return_str;

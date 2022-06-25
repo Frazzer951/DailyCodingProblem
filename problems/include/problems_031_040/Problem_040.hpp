@@ -30,7 +30,10 @@ inline int nonRepeatInt( const std::vector<int> & v )
   int result = 0;
   for( int i = 0; i < 32; i++ )
   {
-    if( result_arr[i] != 0 ) { result += (int) pow( 2, i ); }
+    if( result_arr[i] != 0 )
+    {
+      result += (int) pow( 2, i );
+    }
   }
 
   return result;

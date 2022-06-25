@@ -40,7 +40,10 @@ inline std::string balanceParentheses( const std::string & str )
       }
     }
   }
-  for( int i = 0; i < open_count; i++ ) { ret += ')'; }
+  for( int i = 0; i < open_count; i++ )
+  {
+    ret += ')';
+  }
 
   return ret;
 }

@@ -18,7 +18,10 @@ inline bool permPalindrome( const std::string & word )
 {
   std::map<char, int> letterCount;
 
-  for( char c : word ) { letterCount[c]++; }
+  for( char c : word )
+  {
+    letterCount[c]++;
+  }
 
   bool oneOdd = false;
 

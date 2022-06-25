@@ -29,7 +29,10 @@ inline btNode<int> * add( btNode<int> * root, int x )
     return root;
   }
 
-  if( x > root->value ) { root->right = add( root->right, x ); }
+  if( x > root->value )
+  {
+    root->right = add( root->right, x );
+  }
   else
   {
     root->left = add( root->left, x );
@@ -41,7 +44,10 @@ inline btNode<int> * createBSTfromPostOrder( std::vector<int> values )
 {
   btNode<int> * newTree = nullptr;
 
-  for( auto it = values.rbegin(); it != values.rend(); ++it ) { newTree = add( newTree, *it ); }
+  for( auto it = values.rbegin(); it != values.rend(); ++it )
+  {
+    newTree = add( newTree, *it );
+  }
 
   return newTree;
 }

@@ -18,7 +18,10 @@ over the pre-processing step.
 
 inline std::vector<int> sumPreprocess( std::vector<int> L )
 {
-  for( int i = 1; i < L.size(); i++ ) { L[i] = L[i] + L[i - 1]; }
+  for( int i = 1; i < L.size(); i++ )
+  {
+    L[i] = L[i] + L[i - 1];
+  }
   return L;
 }
 

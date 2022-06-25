@@ -57,7 +57,10 @@ inline std::vector<btNode<char> *> slicing( std::vector<btNode<char> *> & arr, i
 
 inline btNode<char> * reconstruct( std::vector<btNode<char> *> preorder, std::vector<btNode<char> *> inorder )
 {
-  if( preorder.size() == 1 && inorder.size() == 1 ) { return preorder[0]; }
+  if( preorder.size() == 1 && inorder.size() == 1 )
+  {
+    return preorder[0];
+  }
 
   btNode<char> * root   = preorder[0];
   int            root_i = get_index( inorder, root );

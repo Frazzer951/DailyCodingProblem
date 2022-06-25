@@ -33,7 +33,10 @@ inline int waterHeightMap( std::vector<int> v )
   {
     if( rightMax == v[i] ) rightMax = 0;
 
-    for( unsigned int j = i + 1; j < v.size(); j++ ) { rightMax = ( rightMax > v[j] ) ? rightMax : v[j]; }
+    for( unsigned int j = i + 1; j < v.size(); j++ )
+    {
+      rightMax = ( rightMax > v[j] ) ? rightMax : v[j];
+    }
 
     int tempWater = ( leftMax < rightMax ) ? leftMax : rightMax;
 

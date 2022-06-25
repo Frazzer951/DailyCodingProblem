@@ -30,7 +30,10 @@ inline std::string longest_palindrome( const std::string & s )
     for( int j = 1; j < s.length(); j++ )
     {
       std::string substring = s.substr( i, j - i );
-      if( is_palindrome( substring ) && substring.length() > longest.length() ) { longest = substring; }
+      if( is_palindrome( substring ) && substring.length() > longest.length() )
+      {
+        longest = substring;
+      }
     }
   }
   return longest;

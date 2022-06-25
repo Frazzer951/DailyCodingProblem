@@ -29,7 +29,10 @@ inline int minimum_turns()
   std::vector<int> board;
   for( int i = 0; i <= 100; ++i )
   {
-    if( snakes_and_ladders.find( i ) != snakes_and_ladders.end() ) { board.push_back( snakes_and_ladders[i] ); }
+    if( snakes_and_ladders.find( i ) != snakes_and_ladders.end() )
+    {
+      board.push_back( snakes_and_ladders[i] );
+    }
     else
     {
       board.push_back( i );

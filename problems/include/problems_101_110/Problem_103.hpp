@@ -34,7 +34,10 @@ inline int smallest( std::string s1, const std::vector<char> & s2 )
     d[c]--;
   };
 
-  for( char c : s2 ) { decr( c ); }
+  for( char c : s2 )
+  {
+    decr( c );
+  }
   std::size_t minlen = s1.size() + 1;
   std::size_t j      = 0;
   for( std::size_t i = 0; i < s1.size(); i++ )

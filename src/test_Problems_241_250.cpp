@@ -26,8 +26,14 @@ TEST( Problem_242, Test_Case )
 {
   sub_hour_counter counter;
   EXPECT_EQ( 0, counter.query( 0, 23 ) );
-  for( int i = 0; i < 24; i++ ) { counter.update( i, i * 10 ); }
-  for( int i = 0; i < 24; i++ ) { EXPECT_EQ( i * 10, counter.query( i, i ) ); }
+  for( int i = 0; i < 24; i++ )
+  {
+    counter.update( i, i * 10 );
+  }
+  for( int i = 0; i < 24; i++ )
+  {
+    EXPECT_EQ( i * 10, counter.query( i, i ) );
+  }
   int sum = 0;
   for( int i = 0; i < 24; i++ )
   {

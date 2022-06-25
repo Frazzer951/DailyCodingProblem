@@ -31,7 +31,10 @@ inline std::vector<int> sieveOfEratosthenes( int n )
     if( isPrime[i] )
     {
       primes.push_back( i );
-      for( int j = i * i; j <= n; j += i ) { isPrime[j] = false; }
+      for( int j = i * i; j <= n; j += i )
+      {
+        isPrime[j] = false;
+      }
     }
   }
 

@@ -17,7 +17,10 @@ inline int max_xor( std::vector<int> arr )
     for( int j = i + 1; j < arr.size(); j++ )
     {
       int cur_xor = arr[i] ^ arr[j];
-      if( cur_xor > max_xor ) { max_xor = cur_xor; }
+      if( cur_xor > max_xor )
+      {
+        max_xor = cur_xor;
+      }
     }
   }
   return max_xor;

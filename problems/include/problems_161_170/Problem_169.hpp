@@ -31,7 +31,10 @@ inline bool operator==( const LNode & lhs, const LNode & rhs )
 inline std::ostream & operator<<( std::ostream & os, const LNode & n )
 {
   os << n.data;
-  if( n.next != nullptr ) { os << " -> " << *n.next; }
+  if( n.next != nullptr )
+  {
+    os << " -> " << *n.next;
+  }
   return os;
 }
 
@@ -90,7 +93,10 @@ inline void MergeSort( LNode ** headRef )
   LNode * a    = nullptr;
   LNode * b    = nullptr;
 
-  if( head == nullptr || head->next == nullptr ) { return; }
+  if( head == nullptr || head->next == nullptr )
+  {
+    return;
+  }
 
   FrontBackSplit( head, &a, &b );
 

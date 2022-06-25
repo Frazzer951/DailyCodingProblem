@@ -25,14 +25,20 @@ inline int nextElement( pbtNode * node )
 {
   auto * curNode = node;
 
-  if( node->right != nullptr ) { curNode = curNode->right; }
+  if( node->right != nullptr )
+  {
+    curNode = curNode->right;
+  }
   else
   {
     curNode = curNode->parent;
     if( curNode->left == nullptr || curNode->left == node ) return curNode->value;
   }
 
-  while( curNode->left != nullptr ) { curNode = curNode->left; }
+  while( curNode->left != nullptr )
+  {
+    curNode = curNode->left;
+  }
   return curNode->value;
 }
 #endif

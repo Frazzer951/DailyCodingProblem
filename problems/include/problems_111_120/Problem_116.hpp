@@ -15,8 +15,14 @@ inline btNode<int> * generate()
 {
   auto * root = new btNode( 0 );
 
-  if( ( std::rand() % 100 ) < 50 ) { root->left = generate(); }
-  if( ( std::rand() % 100 ) < 50 ) { root->right = generate(); }
+  if( ( std::rand() % 100 ) < 50 )
+  {
+    root->left = generate();
+  }
+  if( ( std::rand() % 100 ) < 50 )
+  {
+    root->right = generate();
+  }
 
   return root;
 }

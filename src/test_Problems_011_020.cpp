@@ -66,7 +66,10 @@ TEST( Problem_15, Test_Case_1 )
 
   for( int element : elements )
   {
-    if( element == elem ) { inVec = true; }
+    if( element == elem )
+    {
+      inVec = true;
+    }
   }
 
   EXPECT_TRUE( inVec );
@@ -80,7 +83,10 @@ TEST( Problem_15, Test_Case_2 )
 
   for( int element : elements )
   {
-    if( element == elem ) { inVec = true; }
+    if( element == elem )
+    {
+      inVec = true;
+    }
   }
 
   EXPECT_TRUE( inVec );

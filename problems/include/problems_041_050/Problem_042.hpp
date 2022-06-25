@@ -21,7 +21,10 @@ inline std::vector<int> subset_sum( std::vector<int> nums, int k )
 {
   std::vector<std::vector<std::vector<int> *>> A( nums.size() + 1, std::vector<std::vector<int> *>( k + 1, nullptr ) );
 
-  for( int i = 0; i < nums.size() + 1; i++ ) { A[i][0] = new std::vector<int>(); }
+  for( int i = 0; i < nums.size() + 1; i++ )
+  {
+    A[i][0] = new std::vector<int>();
+  }
 
   for( int i = 1; i < nums.size() + 1; i++ )
   {
@@ -31,7 +34,10 @@ inline std::vector<int> subset_sum( std::vector<int> nums, int k )
       if( last > j ) A[i][j] = A[i - 1][j];
       else
       {
-        if( A[i - 1][j] != nullptr ) { A[i][j] = new std::vector<int>( *A[i - 1][j] ); }
+        if( A[i - 1][j] != nullptr )
+        {
+          A[i][j] = new std::vector<int>( *A[i - 1][j] );
+        }
         else if( A[i - 1][j - last] != nullptr )
         {
           A[i][j] = new std::vector<int>( *A[i - 1][j - last] );

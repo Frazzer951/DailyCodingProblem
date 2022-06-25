@@ -47,7 +47,10 @@ inline int countUnivalTree( Node * root )
 {
   if( root == nullptr ) return 0;
 
-  if( root->left == nullptr && root->right == nullptr ) { return 1; }
+  if( root->left == nullptr && root->right == nullptr )
+  {
+    return 1;
+  }
   int count = 0;
 
   if( sameChildren( root ) ) count++;

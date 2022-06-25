@@ -25,7 +25,10 @@ inline bool isSparse( int x )
 
 inline int nextSparse( int x )
 {
-  while( !isSparse( x ) ) { x++; }
+  while( !isSparse( x ) )
+  {
+    x++;
+  }
   return x;
 }
 #endif

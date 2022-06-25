@@ -26,7 +26,10 @@ inline int minJumps( std::vector<int> & jumps )
   {
     for( int j = 0; j < i; ++j )
     {
-      if( jumps[j] >= i - j ) { dp[i] = std::min( dp[i], dp[j] + 1 ); }
+      if( jumps[j] >= i - j )
+      {
+        dp[i] = std::min( dp[i], dp[j] + 1 );
+      }
     }
   }
 

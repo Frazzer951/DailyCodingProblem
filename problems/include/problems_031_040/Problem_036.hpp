@@ -58,7 +58,10 @@ public:
   // This gives data in sorted order.
   void Inorder( BST * root )
   {
-    if( root == nullptr ) { return; }
+    if( root == nullptr )
+    {
+      return;
+    }
     Inorder( root->left );
     std::cout << root->data << std::endl;
     Inorder( root->right );

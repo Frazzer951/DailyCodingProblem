@@ -21,7 +21,10 @@ constant space.
 
 inline unsigned int length( slNode<int> * head )
 {
-  if( head->next == nullptr ) { return 1; }
+  if( head->next == nullptr )
+  {
+    return 1;
+  }
   return 1 + length( head->next );
 }
 

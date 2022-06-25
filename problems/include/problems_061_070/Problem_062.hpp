@@ -27,7 +27,10 @@ inline int num_ways( int n, int m )
 
   for( int i = 1; i < n; i++ )
   {
-    for( int j = 1; j < m; j++ ) { A[i][j] = A[i - 1][j] + A[i][j - 1]; }
+    for( int j = 1; j < m; j++ )
+    {
+      A[i][j] = A[i - 1][j] + A[i][j - 1];
+    }
   }
   return A[n - 1][m - 1];
 }

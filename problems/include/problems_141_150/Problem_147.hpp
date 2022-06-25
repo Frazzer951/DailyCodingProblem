@@ -14,7 +14,10 @@ from i to j.
 inline int smallestIndex( std::vector<int> arr, int i )
 {
   int min = i;
-  for( int j = i; j < arr.size(); j++ ) { min = ( arr[min] < arr[j] ) ? min : j; }
+  for( int j = i; j < arr.size(); j++ )
+  {
+    min = ( arr[min] < arr[j] ) ? min : j;
+  }
   return min;
 }
 

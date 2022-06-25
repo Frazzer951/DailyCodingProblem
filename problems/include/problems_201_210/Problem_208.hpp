@@ -19,7 +19,10 @@ inline slList<int> partition( slNode<int> * head, int pivot )
 
   while( head != nullptr )
   {
-    if( head->value < pivot ) { newList.insert( new slNode( head->value ) ); }
+    if( head->value < pivot )
+    {
+      newList.insert( new slNode( head->value ) );
+    }
     else
     {
       newList.add( new slNode( head->value ) );

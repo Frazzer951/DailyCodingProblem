@@ -60,7 +60,10 @@ struct stack
     int         maxVal = cur->val;
     while( cur->prev != nullptr )
     {
-      if( cur->val > maxVal ) { maxVal = cur->val; }
+      if( cur->val > maxVal )
+      {
+        maxVal = cur->val;
+      }
       cur = cur->prev;
     }
     return maxVal;

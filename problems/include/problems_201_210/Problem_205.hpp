@@ -49,7 +49,10 @@ inline int get_next_perm( int _num )
 
   _num = 0;
 
-  for( int i = 0; i < num.size(); i++ ) { _num += num[i] * (int) pow( 10, (int) num.size() - i - 1 ); }
+  for( int i = 0; i < num.size(); i++ )
+  {
+    _num += num[i] * (int) pow( 10, (int) num.size() - i - 1 );
+  }
 
   return _num;
 }

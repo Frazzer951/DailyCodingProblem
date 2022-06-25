@@ -138,7 +138,10 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
     }
   };
 
-  for( int i = n; i > 0; i-- ) { A.push( i ); }
+  for( int i = n; i > 0; i-- )
+  {
+    A.push( i );
+  }
 
   if( n % 2 == 0 )
   {

@@ -30,7 +30,10 @@ inline bool isMinConHelper( gNode * node, gNode * cameFrom, std::map<gNode *, bo
   for( gNode * n : node->connections )
   {
     if( n == cameFrom ) continue;
-    if( !isMinConHelper( n, node, visited ) ) { return false; }
+    if( !isMinConHelper( n, node, visited ) )
+    {
+      return false;
+    }
   }
   return true;
 }

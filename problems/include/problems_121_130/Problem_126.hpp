@@ -20,7 +20,10 @@ inline void vSwap( std::vector<int> & v, std::size_t x, std::size_t y )
 
 inline std::vector<int> rotateVector( std::vector<int> v, int k )
 {
-  for( std::size_t i = 0; i < v.size() - k; i++ ) { vSwap( v, i, ( v.size() - k + i ) % v.size() ); }
+  for( std::size_t i = 0; i < v.size() - k; i++ )
+  {
+    vSwap( v, i, ( v.size() - k + i ) % v.size() );
+  }
   return v;
 }
 #endif

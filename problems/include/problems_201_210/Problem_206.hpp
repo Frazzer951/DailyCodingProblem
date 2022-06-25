@@ -19,7 +19,10 @@ inline std::vector<char> genPermutation( std::vector<char> arr, std::vector<int>
 {
   std::vector<char> perm( arr.size() );
 
-  for( int i = 0; i < permutation.size(); i++ ) { perm[permutation[i]] = arr[i]; }
+  for( int i = 0; i < permutation.size(); i++ )
+  {
+    perm[permutation[i]] = arr[i];
+  }
 
   return perm;
 }

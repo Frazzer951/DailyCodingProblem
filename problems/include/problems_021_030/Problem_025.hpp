@@ -40,7 +40,10 @@ inline bool regex( std::string str, std::string exp )
         // Match zero or more of the preceding element
         if( exp[i + 1] == cur ) break;
 
-        while( cur == str[str_index] ) { str_index++; }
+        while( cur == str[str_index] )
+        {
+          str_index++;
+        }
         break;
       default:
         // Regular Char

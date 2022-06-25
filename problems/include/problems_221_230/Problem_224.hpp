@@ -17,7 +17,10 @@ Do this in O(N) time.
 inline int smallestIntNotSubset( std::vector<int> input )
 {
   int result = 1;
-  for( int i = 0; i < input.size() && input[i] <= result; i++ ) { result = result + input[i]; }
+  for( int i = 0; i < input.size() && input[i] <= result; i++ )
+  {
+    result = result + input[i];
+  }
   return result;
 }
 #endif

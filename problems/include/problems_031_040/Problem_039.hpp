@@ -35,9 +35,18 @@ inline int count_neighbors( std::vector<std::vector<bool>> & board, int x, int y
   {
     for( int j = y - 1; j <= y + 1; j++ )
     {
-      if( i == x && j == y ) { continue; }
-      if( i < 0 || j < 0 || i >= board.size() || j >= board[0].size() ) { continue; }
-      if( board[i][j] ) { count++; }
+      if( i == x && j == y )
+      {
+        continue;
+      }
+      if( i < 0 || j < 0 || i >= board.size() || j >= board[0].size() )
+      {
+        continue;
+      }
+      if( board[i][j] )
+      {
+        count++;
+      }
     }
   }
   return count;
@@ -56,7 +65,10 @@ inline void game_of_life( std::vector<std::vector<bool>> & board, int steps = 1 
         int count = count_neighbors( board, x, y );
         if( board[x][y] )
         {
-          if( count < 2 || count > 3 ) { new_board[x][y] = false; }
+          if( count < 2 || count > 3 )
+          {
+            new_board[x][y] = false;
+          }
           else
           {
             new_board[x][y] = true;
@@ -64,7 +76,10 @@ inline void game_of_life( std::vector<std::vector<bool>> & board, int steps = 1 
         }
         else
         {
-          if( count == 3 ) { new_board[x][y] = true; }
+          if( count == 3 )
+          {
+            new_board[x][y] = true;
+          }
         }
       }
     }

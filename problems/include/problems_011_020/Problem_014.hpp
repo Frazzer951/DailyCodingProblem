@@ -27,7 +27,10 @@ inline double monteCarloPi( int n )
 
     total++;
 
-    if( x * x + y * y <= 1 ) { inCircle++; }
+    if( x * x + y * y <= 1 )
+    {
+      inCircle++;
+    }
   }
 
   double PI_Guess = 4.0 * inCircle / total;

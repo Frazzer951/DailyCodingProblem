@@ -52,7 +52,10 @@ struct mapNode
 
   mapNode( char value = ' ' ) : val( value )
   {
-    for( int i = 0; i < 4; i++ ) { edges.emplace_back(); }
+    for( int i = 0; i < 4; i++ )
+    {
+      edges.emplace_back();
+    }
   }
 };
 

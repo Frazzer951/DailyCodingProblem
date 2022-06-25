@@ -20,7 +20,10 @@ template<typename T>
 inline std::string inorder( const btNode<T> * root )
 {
   std::string s;
-  if( root == nullptr ) { return s; }
+  if( root == nullptr )
+  {
+    return s;
+  }
 
   s += inorder( root->left ) + " ";
   s += std::to_string( root->value ) + " ";

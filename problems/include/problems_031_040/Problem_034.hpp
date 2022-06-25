@@ -32,7 +32,10 @@ inline std::string makePalindrome( std::string s )
 {
   if( isPalindrome( s ) ) return s;
 
-  if( s[0] == s[s.size() - 1] ) { return s[0] + makePalindrome( s.substr( 1, s.size() - 2 ) ) + s[s.size() - 1]; }
+  if( s[0] == s[s.size() - 1] )
+  {
+    return s[0] + makePalindrome( s.substr( 1, s.size() - 2 ) ) + s[s.size() - 1];
+  }
 
 
   std::string one = s[0] + makePalindrome( s.substr( 1 ) ) + s[0];

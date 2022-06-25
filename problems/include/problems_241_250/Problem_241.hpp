@@ -22,7 +22,10 @@ inline int hIndex( const int & n, const int citations[] )
   std::vector<int> counts( n );
   for( int i = 0; i < n; ++i )
   {
-    for( int j = 0; j < citations[i]; ++j ) { counts[j]++; }
+    for( int j = 0; j < citations[i]; ++j )
+    {
+      counts[j]++;
+    }
   }
   int h = 0;
   for( int i = n - 1; i >= 0; --i )

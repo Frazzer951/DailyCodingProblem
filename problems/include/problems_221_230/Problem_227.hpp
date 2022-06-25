@@ -42,7 +42,10 @@ inline void search( std::pair<int, int> location, std::vector<std::vector<std::s
                     std::vector<std::string> dictionary )
 {
   visited.insert( location );
-  if( std::find( dictionary.begin(), dictionary.end(), word ) != dictionary.end() ) { result.insert( word ); }
+  if( std::find( dictionary.begin(), dictionary.end(), word ) != dictionary.end() )
+  {
+    result.insert( word );
+  }
 
   for( auto neighbor : get_neighbors( location ) )
   {

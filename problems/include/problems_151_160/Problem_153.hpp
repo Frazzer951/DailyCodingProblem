@@ -22,7 +22,10 @@ inline int smallestWordDistance( const std::string & w1, const std::string & w2,
   std::multimap<std::string, int> indexes;
   for( int i = 0; i < words.size(); i++ )
   {
-    if( words[i] == w1 || words[i] == w2 ) { indexes.emplace( words[i], i ); }
+    if( words[i] == w1 || words[i] == w2 )
+    {
+      indexes.emplace( words[i], i );
+    }
   }
   int smallest = (int) words.size();
 

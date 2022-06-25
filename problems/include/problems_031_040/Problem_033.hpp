@@ -36,7 +36,10 @@ inline std::vector<double> runningMedian( const std::vector<double> & v )
     std::sort( running.begin(), running.end() );
 
     size_t middle = running.size() / 2;
-    if( running.size() % 2 == 0 ) { medians.push_back( ( running[middle - 1] + running[middle] ) / 2.0 ); }
+    if( running.size() % 2 == 0 )
+    {
+      medians.push_back( ( running[middle - 1] + running[middle] ) / 2.0 );
+    }
     else
     {
       medians.push_back( running[middle] );

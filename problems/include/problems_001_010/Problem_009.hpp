@@ -19,7 +19,10 @@ Follow-up: Can you do this in O(N) time and constant space?
 // New Solution from given solution
 inline int largest_non_adjacent( std::vector<int> v )
 {
-  if( v.size() <= 2 ) { return std::max( 0, v[0] ); }
+  if( v.size() <= 2 )
+  {
+    return std::max( 0, v[0] );
+  }
 
   int max_excluding_last = std::max( 0, v[0] );
   int max_including_last = std::max( max_excluding_last, v[1] );
@@ -42,7 +45,10 @@ inline int findSum( std::vector<int> v, int index = 0 )
   if( index + 1 == v.size() ) return v[index];
 
   int sum_1 = 0;
-  for( unsigned int i = index; i < v.size(); i += 2 ) { sum_1 += v[i]; }
+  for( unsigned int i = index; i < v.size(); i += 2 )
+  {
+    sum_1 += v[i];
+  }
 
   int sum_2 = v[index] + findSum( v, index + 3 );
 
@@ -57,7 +63,10 @@ inline int findSum( std::vector<int> v, int index = 0 )
 inline void testVector( const std::vector<int> & v )
 {
   std::cout << "For the array: ";
-  for( int i : v ) { std::cout << i << ' '; }
+  for( int i : v )
+  {
+    std::cout << i << ' ';
+  }
   int sum = largest_non_adjacent( v );
   std::cout << " the largest sum is " << sum << '\n';
 }

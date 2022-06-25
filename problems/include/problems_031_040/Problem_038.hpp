@@ -20,7 +20,10 @@ inline bool is_valid( std::vector<int> board )
   for( int row = 0; row < board.size() - 1; row++ )
   {
     int diff = abs( current_queen_col - board[row] );
-    if( diff == 0 || diff == current_queen_row - row ) { return false; }
+    if( diff == 0 || diff == current_queen_row - row )
+    {
+      return false;
+    }
   }
   return true;
 }

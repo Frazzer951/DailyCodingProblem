@@ -54,9 +54,15 @@ inline bool partitions( std::vector<int> s )
 
   std::vector<std::vector<bool>> A( k_over_two + 1, std::vector<bool>( s.size() + 1, false ) );
 
-  for( int j = 0; j < s.size() + 1; j++ ) { A[0][j] = true; }
+  for( int j = 0; j < s.size() + 1; j++ )
+  {
+    A[0][j] = true;
+  }
 
-  for( int i = 1; i < k_over_two + 1; i++ ) { A[i][0] = false; }
+  for( int i = 1; i < k_over_two + 1; i++ )
+  {
+    A[i][0] = false;
+  }
 
   for( int i = 1; i < k_over_two + 1; i++ )
   {

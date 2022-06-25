@@ -38,7 +38,10 @@ template<typename T>
 inline std::ostream & operator<<( std::ostream & os, const slNode<T> & n )
 {
   os << n.value;
-  if( n.next != nullptr ) { os << " -> " << *n.next; }
+  if( n.next != nullptr )
+  {
+    os << " -> " << *n.next;
+  }
   return os;
 }
 
@@ -46,7 +49,10 @@ template<typename T>
 inline std::ostream & operator<<( std::ostream & os, const slNode<T> * n )
 {
   os << n->value;
-  if( n->next != nullptr ) { os << " -> " << n->next; }
+  if( n->next != nullptr )
+  {
+    os << " -> " << n->next;
+  }
   return os;
 }
 
@@ -61,7 +67,10 @@ public:
 
   slList( std::vector<T> l ) : head( nullptr ), tail( nullptr )
   {
-    for( T i : l ) { add( new slNode( i ) ); }
+    for( T i : l )
+    {
+      add( new slNode( i ) );
+    }
   }
 
   void add( slNode<T> * node )
@@ -98,7 +107,10 @@ public:
     slNode<T> * node = head;
     for( int i = 0; i < index; ++i )
     {
-      if( node->next != nullptr ) { node = node->next; }
+      if( node->next != nullptr )
+      {
+        node = node->next;
+      }
       else
       {
         throw "Linked List index out of range";

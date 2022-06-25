@@ -26,7 +26,10 @@ inline std::vector<std::string> num_to_str( std::string nums, std::map<char, std
 
   for( const std::string & c : num_map[nums[0]] )
   {
-    for( const std::string & sub_str : sub_strs ) { possible_strs.push_back( c + sub_str ); }
+    for( const std::string & sub_str : sub_strs )
+    {
+      possible_strs.push_back( c + sub_str );
+    }
   }
   return possible_strs;
 }

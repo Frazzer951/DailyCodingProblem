@@ -25,7 +25,10 @@ inline int build_houses( std::vector<std::vector<int>> matrix )
   for( auto row : matrix )
   {
     std::vector<int> new_row;
-    for( unsigned int i = 0; i < row.size(); ++i ) { new_row.push_back( getIntVecMin( soln_row, i ) + row[i] ); }
+    for( unsigned int i = 0; i < row.size(); ++i )
+    {
+      new_row.push_back( getIntVecMin( soln_row, i ) + row[i] );
+    }
     soln_row = new_row;
   }
   return getIntVecMin( soln_row );

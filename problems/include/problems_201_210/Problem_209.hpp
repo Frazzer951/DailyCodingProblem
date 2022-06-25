@@ -26,7 +26,10 @@ inline int lcs( std::string a, std::string b, std::string c )
       for( int k = 0; k < c.size() - 1; k++ )
       {
         char z = c[k];
-        if( x == y && y == z ) { lengths[i + 1][j + 1][k + 1] = lengths[i][j][k] + 1; }
+        if( x == y && y == z )
+        {
+          lengths[i + 1][j + 1][k + 1] = lengths[i][j][k] + 1;
+        }
         else
         {
           lengths[i + 1][j + 1][k + 1] =

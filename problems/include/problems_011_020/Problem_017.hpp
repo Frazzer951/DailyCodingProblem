@@ -92,7 +92,10 @@ inline std::string find_longest_filepath( std::string filesystem )
   std::string longest = filepaths[0];
   for( const auto & filepath : filepaths )
   {
-    if( filepath.size() > longest.size() ) { longest = filepath; }
+    if( filepath.size() > longest.size() )
+    {
+      longest = filepath;
+    }
   }
   return longest;
 }

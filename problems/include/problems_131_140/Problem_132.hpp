@@ -77,10 +77,19 @@ public:
     auto                   upper = hits.end();
     upper--;
 
-    while( *lower < l ) { lower++; }
-    while( *upper > u ) { upper--; }
+    while( *lower < l )
+    {
+      lower++;
+    }
+    while( *upper > u )
+    {
+      upper--;
+    }
 
-    for( auto i = lower; i != upper && i != hits.end(); i++ ) { timestamps.push_back( *i ); }
+    for( auto i = lower; i != upper && i != hits.end(); i++ )
+    {
+      timestamps.push_back( *i );
+    }
 
     timestamps.push_back( *upper );
 

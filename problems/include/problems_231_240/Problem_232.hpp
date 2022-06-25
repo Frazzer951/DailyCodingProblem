@@ -35,7 +35,10 @@ public:
     int sum = 0;
     for( auto it = map.lower_bound( prefix ); it != map.end(); it++ )
     {
-      if( it->first.substr( 0, prefix.size() ) != prefix ) { break; }
+      if( it->first.substr( 0, prefix.size() ) != prefix )
+      {
+        break;
+      }
       sum += it->second;
     }
     return sum;

@@ -28,12 +28,18 @@ inline std::string zigzag( std::string str, int k )
   for( int i = 0; i < str.size(); i++ )
   {
     lines[line][i] = str[i];
-    if( line == k - 1 ) { down = false; }
+    if( line == k - 1 )
+    {
+      down = false;
+    }
     else if( line == 0 )
     {
       down = true;
     }
-    if( down ) { line++; }
+    if( down )
+    {
+      line++;
+    }
     else
     {
       line--;
@@ -42,7 +48,10 @@ inline std::string zigzag( std::string str, int k )
   std::string result;
   for( const auto & line : lines )
   {
-    for( auto c : line ) { result += c; }
+    for( auto c : line )
+    {
+      result += c;
+    }
     result += '\n';
   }
   return result;

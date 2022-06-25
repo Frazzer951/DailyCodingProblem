@@ -25,7 +25,10 @@ inline std::set<char> find_component( std::map<char, std::vector<char>> graph, s
 
   for( auto neighbor : graph[current_word] )
   {
-    if( visited.find( neighbor ) == visited.end() ) { find_component( graph, visited, neighbor ); }
+    if( visited.find( neighbor ) == visited.end() )
+    {
+      find_component( graph, visited, neighbor );
+    }
   }
 
   return visited;
@@ -39,7 +42,10 @@ inline bool is_connected( std::map<char, std::vector<char>> graph )
   std::map<char, std::vector<char>> reversed_graph;
   for( auto & [key, values] : graph )
   {
-    for( auto v : values ) { reversed_graph[v].push_back( key ); }
+    for( auto v : values )
+    {
+      reversed_graph[v].push_back( key );
+    }
   }
   std::set<char> reversed_component = find_component( graph, std::set<char>(), start );
   return component == reversed_component;
@@ -66,7 +72,10 @@ inline bool are_degrees_equal( const std::map<char, std::vector<char>> & graph )
 inline std::map<char, std::vector<char>> make_graph( const std::vector<std::string> & words )
 {
   std::map<char, std::vector<char>> graph;
-  for( auto word : words ) { graph[word[0]].push_back( word[word.size() - 1] ); }
+  for( auto word : words )
+  {
+    graph[word[0]].push_back( word[word.size() - 1] );
+  }
   return graph;
 }
 

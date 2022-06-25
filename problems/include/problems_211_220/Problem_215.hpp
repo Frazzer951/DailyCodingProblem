@@ -72,7 +72,10 @@ inline std::vector<int> bottomView( btNode<int> * root )
   std::vector<int> bottom;
 
   bottom.reserve( lowestDistatHeight.size() );
-  for( auto & [dis, depVal] : lowestDistatHeight ) { bottom.push_back( depVal.second ); }
+  for( auto & [dis, depVal] : lowestDistatHeight )
+  {
+    bottom.push_back( depVal.second );
+  }
 
   return bottom;
 }

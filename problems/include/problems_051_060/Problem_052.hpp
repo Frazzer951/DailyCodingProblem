@@ -76,7 +76,10 @@ struct LRUCache
 
   void set( const std::string & key, std::string val )
   {
-    if( dict.find( key ) != dict.end() ) { dict.erase( key ); }
+    if( dict.find( key ) != dict.end() )
+    {
+      dict.erase( key );
+    }
 
     auto * node = new LLNode( key, std::move( val ) );
     list.add( node );

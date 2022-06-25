@@ -19,8 +19,14 @@ inline int strDistance( std::string s1, std::string s2 )
 
   std::vector<std::vector<int>> A( y, std::vector<int>( x, -1 ) );
 
-  for( int i = 0; i < x; i++ ) { A[0][i] = i; }
-  for( int j = 0; j < y; j++ ) { A[j][0] = j; }
+  for( int i = 0; i < x; i++ )
+  {
+    A[0][i] = i;
+  }
+  for( int j = 0; j < y; j++ )
+  {
+    A[j][0] = j;
+  }
 
   for( int i = 1; i < y; i++ )
   {

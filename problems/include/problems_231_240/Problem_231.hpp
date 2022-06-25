@@ -32,10 +32,16 @@ struct Letter
 inline std::string noRepeatingAdjacentCharacters( const std::string & input )
 {
   std::map<char, int> charCount;
-  for( auto c : input ) { charCount[c]++; }
+  for( auto c : input )
+  {
+    charCount[c]++;
+  }
 
   std::priority_queue<Letter> heap;
-  for( auto & c : charCount ) { heap.push( Letter { -c.second, c.first } ); }
+  for( auto & c : charCount )
+  {
+    heap.push( Letter { -c.second, c.first } );
+  }
 
   Letter l     = heap.top();
   int    count = l.priority;
@@ -52,10 +58,16 @@ inline std::string noRepeatingAdjacentCharacters( const std::string & input )
     c     = l.data;
     result.push_back( c );
 
-    if( last.priority < 0 ) { heap.push( last ); }
+    if( last.priority < 0 )
+    {
+      heap.push( last );
+    }
   }
 
-  if( result.size() != input.size() ) { return ""; }
+  if( result.size() != input.size() )
+  {
+    return "";
+  }
   return std::string( result.begin(), result.end() );
 }
 #endif

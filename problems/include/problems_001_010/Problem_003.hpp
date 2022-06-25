@@ -48,8 +48,14 @@ public:
   [[nodiscard]] std::string serialize_node() const
   {
     std::string node_str = _val + ":{";
-    if( _left != nullptr ) { node_str += _left->serialize_node(); }
-    if( _right != nullptr ) { node_str += ',' + _right->serialize_node(); }
+    if( _left != nullptr )
+    {
+      node_str += _left->serialize_node();
+    }
+    if( _right != nullptr )
+    {
+      node_str += ',' + _right->serialize_node();
+    }
     node_str += "}";
     return node_str;
   }
@@ -77,7 +83,10 @@ inline SerNode * deserialize( const std::string & str )
 
   std::string nodes = str.substr( colon_index + 1 );
 
-  if( nodes.size() == 2 ) { return new SerNode( node_name ); }    // If there are no sub nodes return empty node
+  if( nodes.size() == 2 )
+  {
+    return new SerNode( node_name );
+  }    // If there are no sub nodes return empty node
 
   auto comma_index = nodes.find( ',' );
 

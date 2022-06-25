@@ -51,8 +51,14 @@ inline int pathScore( const std::string & path )
 {
   std::map<char, int> counts;
   int                 max_count = 0;
-  for( char c : path ) { counts[c]++; }
-  for( auto & [_, count] : counts ) { max_count = ( count > max_count ) ? count : max_count; }
+  for( char c : path )
+  {
+    counts[c]++;
+  }
+  for( auto & [_, count] : counts )
+  {
+    max_count = ( count > max_count ) ? count : max_count;
+  }
   return max_count;
 }
 
@@ -108,7 +114,10 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
 {
   std::map<int, std::vector<int>> edge_map;
 
-  for( const auto & [from, to] : edges ) { edge_map[from].push_back( to ); }
+  for( const auto & [from, to] : edges )
+  {
+    edge_map[from].push_back( to );
+  }
 
   std::vector<std::vector<int>> paths;
 
@@ -116,7 +125,10 @@ inline int pathValue( const std::string & nodes, const std::vector<std::pair<int
   {
     auto i_paths = follow_path( i, edge_map );
 
-    for( const std::vector<int> & path : i_paths ) { paths.push_back( path ); }
+    for( const std::vector<int> & path : i_paths )
+    {
+      paths.push_back( path );
+    }
   }
 
   return best_score( paths, nodes );

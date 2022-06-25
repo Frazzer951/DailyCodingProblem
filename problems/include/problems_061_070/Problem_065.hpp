@@ -61,19 +61,28 @@ inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
   {
     /* Print the first row from
                the remaining rows */
-    for( i = l; i < n; ++i ) { spiral.push_back( v[k][i] ); }
+    for( i = l; i < n; ++i )
+    {
+      spiral.push_back( v[k][i] );
+    }
     k++;
 
     /* Print the last column
          from the remaining columns */
-    for( i = k; i < m; ++i ) { spiral.push_back( v[i][n - 1] ); }
+    for( i = k; i < m; ++i )
+    {
+      spiral.push_back( v[i][n - 1] );
+    }
     n--;
 
     /* Print the last row from
                 the remaining rows */
     if( k < m )
     {
-      for( i = n - 1; i >= l; --i ) { spiral.push_back( v[m - 1][i] ); }
+      for( i = n - 1; i >= l; --i )
+      {
+        spiral.push_back( v[m - 1][i] );
+      }
       m--;
     }
 
@@ -81,7 +90,10 @@ inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
                    the remaining columns */
     if( l < n )
     {
-      for( i = m - 1; i >= k; --i ) { spiral.push_back( v[i][l] ); }
+      for( i = m - 1; i >= k; --i )
+      {
+        spiral.push_back( v[i][l] );
+      }
       l++;
     }
   }

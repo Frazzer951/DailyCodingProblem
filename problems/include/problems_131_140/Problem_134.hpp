@@ -25,7 +25,10 @@ public:
   {
     for( int i = 0; i < size; i++ )
     {
-      if( arr[i] != 0 ) { values[i] = arr[i]; }
+      if( arr[i] != 0 )
+      {
+        values[i] = arr[i];
+      }
     }
   }
   void set( int i, int val ) { values[i] = val; }

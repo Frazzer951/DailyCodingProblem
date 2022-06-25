@@ -28,7 +28,10 @@ inline std::string inOrderTraversal( btNode<int> * root )
     else
     {
       auto * desc = curr->left;
-      while( desc->right != nullptr && desc->right != curr ) { desc = desc->right; }
+      while( desc->right != nullptr && desc->right != curr )
+      {
+        desc = desc->right;
+      }
 
       if( desc->right == nullptr )
       {

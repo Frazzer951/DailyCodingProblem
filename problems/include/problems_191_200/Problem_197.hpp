@@ -14,7 +14,10 @@ inline std::vector<int> rotateArr( std::vector<int> arr, int k )
 {
   std::vector<int> rotated( arr.size() );
 
-  for( int i = 0; i < arr.size(); i++ ) { rotated[( i + k ) % arr.size()] = arr[i]; }
+  for( int i = 0; i < arr.size(); i++ )
+  {
+    rotated[( i + k ) % arr.size()] = arr[i];
+  }
   return rotated;
 }
 #endif

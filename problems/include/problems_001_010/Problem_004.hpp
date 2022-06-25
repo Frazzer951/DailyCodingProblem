@@ -27,7 +27,10 @@ inline int findMissingPositive( std::vector<int> arr )
 
   for( int i : arr )
   {
-    if( i > 0 && i == missing ) { missing++; }
+    if( i > 0 && i == missing )
+    {
+      missing++;
+    }
   }
   return missing;
 }
@@ -35,7 +38,10 @@ inline int findMissingPositive( std::vector<int> arr )
 inline void testArray( const std::vector<int> & arr )
 {
   std::cout << "For the array: ";
-  for( int i : arr ) { std::cout << i << ' '; }
+  for( int i : arr )
+  {
+    std::cout << i << ' ';
+  }
   int missing = findMissingPositive( arr );
   std::cout << " the missing number is " << missing << '\n';
 }
