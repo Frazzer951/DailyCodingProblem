@@ -251,7 +251,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 118
+## Missing ❌️ - 212
 <details><summary>Missing</summary>
 <p>
 
@@ -373,6 +373,100 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 370](problems/include/problems_361_370/Problem_370.hpp) - Easy
  - [Problem 371](problems/include/problems_371_380/Problem_371.hpp) - Hard
  - [Problem 372](problems/include/problems_371_380/Problem_372.hpp) - Easy
+ - [Problem 373](problems/include/problems_371_380/Problem_373.hpp) - Hard
+ - [Problem 374](problems/include/problems_371_380/Problem_374.hpp) - Hard
+ - [Problem 375](problems/include/problems_371_380/Problem_375.hpp) - Medium
+ - [Problem 376](problems/include/problems_371_380/Problem_376.hpp) - Easy
+ - [Problem 377](problems/include/problems_371_380/Problem_377.hpp) - Hard
+ - [Problem 378](problems/include/problems_371_380/Problem_378.hpp) - Medium
+ - [Problem 379](problems/include/problems_371_380/Problem_379.hpp) - Easy
+ - [Problem 380](problems/include/problems_371_380/Problem_380.hpp) - Medium
+ - [Problem 381](problems/include/problems_381_390/Problem_381.hpp) - Easy
+ - [Problem 382](problems/include/problems_381_390/Problem_382.hpp) - Easy
+ - [Problem 383](problems/include/problems_381_390/Problem_383.hpp) - Medium
+ - [Problem 384](problems/include/problems_381_390/Problem_384.hpp) - Hard
+ - [Problem 385](problems/include/problems_381_390/Problem_385.hpp) - Medium
+ - [Problem 386](problems/include/problems_381_390/Problem_386.hpp) - Easy
+ - [Problem 387](problems/include/problems_381_390/Problem_387.hpp) - Medium
+ - [Problem 388](problems/include/problems_381_390/Problem_388.hpp) - Medium
+ - [Problem 389](problems/include/problems_381_390/Problem_389.hpp) - Hard
+ - [Problem 390](problems/include/problems_381_390/Problem_390.hpp) - Medium
+ - [Problem 391](problems/include/problems_391_400/Problem_391.hpp) - Hard
+ - [Problem 392](problems/include/problems_391_400/Problem_392.hpp) - Hard
+ - [Problem 393](problems/include/problems_391_400/Problem_393.hpp) - Medium
+ - [Problem 394](problems/include/problems_391_400/Problem_394.hpp) - Easy
+ - [Problem 395](problems/include/problems_391_400/Problem_395.hpp) - Medium
+ - [Problem 396](problems/include/problems_391_400/Problem_396.hpp) - Hard
+ - [Problem 397](problems/include/problems_391_400/Problem_397.hpp) - Medium
+ - [Problem 398](problems/include/problems_391_400/Problem_398.hpp) - Medium
+ - [Problem 399](problems/include/problems_391_400/Problem_399.hpp) - Hard
+ - [Problem 400](problems/include/problems_391_400/Problem_400.hpp) - Hard
+ - [Problem 401](problems/include/problems_401_410/Problem_401.hpp) - Easy
+ - [Problem 402](problems/include/problems_401_410/Problem_402.hpp) - Easy
+ - [Problem 403](problems/include/problems_401_410/Problem_403.hpp) - Easy
+ - [Problem 404](problems/include/problems_401_410/Problem_404.hpp) - Easy
+ - [Problem 405](problems/include/problems_401_410/Problem_405.hpp) - Hard
+ - [Problem 406](problems/include/problems_401_410/Problem_406.hpp) - Hard
+ - [Problem 407](problems/include/problems_401_410/Problem_407.hpp) - Medium
+ - [Problem 408](problems/include/problems_401_410/Problem_408.hpp) - Medium
+ - [Problem 409](problems/include/problems_401_410/Problem_409.hpp) - Hard
+ - [Problem 410](problems/include/problems_401_410/Problem_410.hpp) - Hard
+ - [Problem 411](problems/include/problems_411_420/Problem_411.hpp) - Hard
+ - [Problem 412](problems/include/problems_411_420/Problem_412.hpp) - Medium
+ - [Problem 413](problems/include/problems_411_420/Problem_413.hpp) - Hard
+ - [Problem 414](problems/include/problems_411_420/Problem_414.hpp) - Hard
+ - [Problem 415](problems/include/problems_411_420/Problem_415.hpp) - Hard
+ - [Problem 416](problems/include/problems_411_420/Problem_416.hpp) - Easy
+ - [Problem 417](problems/include/problems_411_420/Problem_417.hpp) - Easy
+ - [Problem 418](problems/include/problems_411_420/Problem_418.hpp) - Easy
+ - [Problem 419](problems/include/problems_411_420/Problem_419.hpp) - Easy
+ - [Problem 420](problems/include/problems_411_420/Problem_420.hpp) - Easy
+ - [Problem 421](problems/include/problems_421_430/Problem_421.hpp) - Medium
+ - [Problem 422](problems/include/problems_421_430/Problem_422.hpp) - Easy
+ - [Problem 423](problems/include/problems_421_430/Problem_423.hpp) - Easy
+ - [Problem 424](problems/include/problems_421_430/Problem_424.hpp) - Medium
+ - [Problem 425](problems/include/problems_421_430/Problem_425.hpp) - Hard
+ - [Problem 426](problems/include/problems_421_430/Problem_426.hpp) - Easy
+ - [Problem 427](problems/include/problems_421_430/Problem_427.hpp) - Medium
+ - [Problem 428](problems/include/problems_421_430/Problem_428.hpp) - Hard
+ - [Problem 429](problems/include/problems_421_430/Problem_429.hpp) - Medium
+ - [Problem 430](problems/include/problems_421_430/Problem_430.hpp) - Hard
+ - [Problem 431](problems/include/problems_431_440/Problem_431.hpp) - Medium
+ - [Problem 432](problems/include/problems_431_440/Problem_432.hpp) - Hard
+ - [Problem 433](problems/include/problems_431_440/Problem_433.hpp) - Medium
+ - [Problem 434](problems/include/problems_431_440/Problem_434.hpp) - Easy
+ - [Problem 435](problems/include/problems_431_440/Problem_435.hpp) - Medium
+ - [Problem 436](problems/include/problems_431_440/Problem_436.hpp) - Hard
+ - [Problem 437](problems/include/problems_431_440/Problem_437.hpp) - Medium
+ - [Problem 438](problems/include/problems_431_440/Problem_438.hpp) - Easy
+ - [Problem 439](problems/include/problems_431_440/Problem_439.hpp) - Medium
+ - [Problem 440](problems/include/problems_431_440/Problem_440.hpp) - Medium
+ - [Problem 441](problems/include/problems_441_450/Problem_441.hpp) - Medium
+ - [Problem 442](problems/include/problems_441_450/Problem_442.hpp) - Hard
+ - [Problem 443](problems/include/problems_441_450/Problem_443.hpp) - Medium
+ - [Problem 444](problems/include/problems_441_450/Problem_444.hpp) - Hard
+ - [Problem 445](problems/include/problems_441_450/Problem_445.hpp) - Medium
+ - [Problem 446](problems/include/problems_441_450/Problem_446.hpp) - Medium
+ - [Problem 447](problems/include/problems_441_450/Problem_447.hpp) - Medium
+ - [Problem 448](problems/include/problems_441_450/Problem_448.hpp) - Hard
+ - [Problem 449](problems/include/problems_441_450/Problem_449.hpp) - Easy
+ - [Problem 450](problems/include/problems_441_450/Problem_450.hpp) - Hard
+ - [Problem 451](problems/include/problems_451_460/Problem_451.hpp) - Easy
+ - [Problem 452](problems/include/problems_451_460/Problem_452.hpp) - Easy
+ - [Problem 453](problems/include/problems_451_460/Problem_453.hpp) - Easy
+ - [Problem 454](problems/include/problems_451_460/Problem_454.hpp) - Medium
+ - [Problem 455](problems/include/problems_451_460/Problem_455.hpp) - Medium
+ - [Problem 456](problems/include/problems_451_460/Problem_456.hpp) - Easy
+ - [Problem 457](problems/include/problems_451_460/Problem_457.hpp) - Hard
+ - [Problem 458](problems/include/problems_451_460/Problem_458.hpp) - Hard
+ - [Problem 459](problems/include/problems_451_460/Problem_459.hpp) - Medium
+ - [Problem 460](problems/include/problems_451_460/Problem_460.hpp) - Medium
+ - [Problem 461](problems/include/problems_461_470/Problem_461.hpp) - Medium
+ - [Problem 462](problems/include/problems_461_470/Problem_462.hpp) - Hard
+ - [Problem 463](problems/include/problems_461_470/Problem_463.hpp) - Easy
+ - [Problem 464](problems/include/problems_461_470/Problem_464.hpp) - Medium
+ - [Problem 465](problems/include/problems_461_470/Problem_465.hpp) - Easy
+ - [Problem 466](problems/include/problems_461_470/Problem_466.hpp) - Easy
 
 </p>
 </details>
