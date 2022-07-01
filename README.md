@@ -251,7 +251,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 212
+## Missing ❌️ - 218
 <details><summary>Missing</summary>
 <p>
 
@@ -467,6 +467,12 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 464](problems/include/problems_461_470/Problem_464.hpp) - Medium
  - [Problem 465](problems/include/problems_461_470/Problem_465.hpp) - Easy
  - [Problem 466](problems/include/problems_461_470/Problem_466.hpp) - Easy
+ - [Problem 467](problems/include/problems_461_470/Problem_467.hpp) - Medium
+ - [Problem 468](problems/include/problems_461_470/Problem_468.hpp) - Medium
+ - [Problem 469](problems/include/problems_461_470/Problem_469.hpp) - Medium
+ - [Problem 470](problems/include/problems_461_470/Problem_470.hpp) - Medium
+ - [Problem 471](problems/include/problems_471_480/Problem_471.hpp) - Easy
+ - [Problem 472](problems/include/problems_471_480/Problem_472.hpp) - Medium
 
 </p>
 </details>

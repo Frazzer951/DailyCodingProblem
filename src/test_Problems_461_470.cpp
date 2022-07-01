@@ -1,3 +1,7 @@
+#include "problems_461_470/Problem_470.hpp"
+#include "problems_461_470/Problem_469.hpp"
+#include "problems_461_470/Problem_468.hpp"
+#include "problems_461_470/Problem_467.hpp"
 #include "gtest/gtest.h"
 
 #include "problems_461_470/Problem_461.hpp"
