@@ -12,7 +12,7 @@ with all distinct digits.
 
 Each turn the first player guesses some number, and the second player responds
 by saying how many digits in this number correctly matched their location in the
-secret code. For example, if the secret code were 123456, then a guess of 175286 
+secret code. For example, if the secret code were 123456, then a guess of 175286
 would score two, since 1 and 6 were correctly placed.
 
 Write an algorithm which, given a sequence of guesses and their scores,
