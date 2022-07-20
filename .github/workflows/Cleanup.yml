@@ -18,10 +18,11 @@ jobs:
         with:
           version: 14
           platform: x64
-        run: sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format clang-tidy
 
       - name: Verify up Clang
         run: |
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format clang-tidy
+          
           echo "Clang Version:"
           clang --version
           echo "Clang++ Version:"
