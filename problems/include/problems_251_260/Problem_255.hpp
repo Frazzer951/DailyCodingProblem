@@ -1,8 +1,6 @@
 #ifndef PROBLEMS_251_260_PROBLEM_255_HPP
 #define PROBLEMS_251_260_PROBLEM_255_HPP
 
-// NOT DONE
-
 #pragma once
 
 /* EASY
@@ -30,5 +28,50 @@ The transitive closure of this graph would be:
 
 Given a graph, find its transitive closure.
 */
+
+#include <vector>
+
+std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::vector<int>> graph )
+{
+  int                           n      = graph.size();
+  std::vector<std::vector<int>> result = std::vector( n, std::vector( n, 0 ) );
+
+  for( int i = 0; i < n; i++ )
+  {
+    for( int j = 0; j < n; j++ )
+    {
+      result[i][j] = graph[i][j];
+    }
+  }
+
+  for( int k = 0; k < n; k++ )
+  {
+    for( int i = 0; i < n; i++ )
+    {
+      for( int j = 0; j < n; j++ )
+      {
+        result[i][j] = result[i][j] | ( result[i][k] && result[k][j] );
+      }
+    }
+  }
+
+  return result;
+}
+
+std::vector<std::vector<int>> transitiveClosure( std::vector<std::vector<int>> graph )
+{
+  int                           n     = graph.size();
+  std::vector<std::vector<int>> links = std::vector( n, std::vector( n, 0 ) );
+
+  for( int i = 0; i < n; i++ )
+  {
+    for( int connection : graph[i] )
+    {
+      links[i][connection] = 1;
+    }
+  }
+
+  return transitiveClosure_helper( links );
+}
 
 #endif

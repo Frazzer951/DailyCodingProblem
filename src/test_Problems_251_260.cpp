@@ -76,7 +76,36 @@ TEST( Problem_254, Given_Case )
 }
 
 // Problem 255
+TEST( Problem_255, Given_Case )
+{
+  /*
+  graph = [
+    [0, 1, 3],
+    [1, 2],
+    [2],
+    [3]
+  ]
 
+
+  The transitive closure of this graph would be:
+
+    [1, 1, 1, 1]
+    [0, 1, 1, 0]
+    [0, 0, 1, 0]
+    [0, 0, 0, 1]
+  */
+
+  std::vector<std::vector<int>> graph { { 0, 1, 3 }, { 1, 2 }, { 2 }, { 3 } };
+
+  std::vector<std::vector<int>> result = transitiveClosure( graph );
+  std::vector<std::vector<int>> expected {
+    { 1, 1, 1, 1 },
+    { 0, 1, 1, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 0, 0, 1 }
+  };
+  EXPECT_EQ( expected, result );
+}
 
 // Problem 256
 
