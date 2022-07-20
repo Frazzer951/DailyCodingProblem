@@ -1,6 +1,6 @@
 name: Clang Tidy and Clang Format
 
-on: [push]
+on: [ push ]
 
 jobs:
   cleanup:
@@ -14,18 +14,13 @@ jobs:
         uses: lukka/get-cmake@v3.21.2
 
       - name: Set up Clang
-        run: |
-          sudo wget https://apt.llvm.org/llvm.sh
-          sudo chmod +x llvm.sh
-          sudo ./llvm.sh 14
-          sudo apt update
-          sudo apt install -y clang-14 clang-format-14 clang-tidy-14
-          
-          sudo update-alternatives --install /bin/clang clang /bin/clang-14 100
-          sudo update-alternatives --install /bin/clang++ clang++ /bin/clang++-14 100
-          sudo update-alternatives --install /bin/clang-tidy clang-tidy /bin/clang-tidy-14 100
-          sudo update-alternatives --install /bin/clang-format clang-format /bin/clang-format-14 100
-          
+        uses: egor-tensin/setup-clang@v1
+        with:
+          version: 14
+          platform: x64
+
+      - name: Verify up Clang
+        run: |         
           echo "Clang Version:"
           clang --version
           echo "Clang++ Version:"
