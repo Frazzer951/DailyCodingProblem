@@ -6,7 +6,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 [![CMake Build](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml/badge.svg)](https://github.com/Frazzer951/DailyCodingProblem/actions/workflows/ci.yml)
 
 <!-- start completed section -->
-## Completed ⭐️ - 234
+## Completed ⭐️ - 235
 <details><summary>Completed</summary>
 <p>
 
@@ -243,6 +243,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 249](problems/include/problems_241_250/Problem_249.hpp) - Hard
  - [Problem 252](problems/include/problems_251_260/Problem_252.hpp) - Easy
  - [Problem 253](problems/include/problems_251_260/Problem_253.hpp) - Medium
+ - [Problem 254](problems/include/problems_251_260/Problem_254.hpp) - Medium
  - [Problem 340](problems/include/problems_331_340/Problem_340.hpp) - Easy
 
 </p>
@@ -251,11 +252,10 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 238
+## Missing ❌️ - 237
 <details><summary>Missing</summary>
 <p>
 
- - [Problem 254](problems/include/problems_251_260/Problem_254.hpp) - Medium
  - [Problem 255](problems/include/problems_251_260/Problem_255.hpp) - Easy
  - [Problem 256](problems/include/problems_251_260/Problem_256.hpp) - Medium
  - [Problem 257](problems/include/problems_251_260/Problem_257.hpp) - Easy
