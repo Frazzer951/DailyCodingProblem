@@ -98,12 +98,7 @@ TEST( Problem_255, Given_Case )
   std::vector<std::vector<int>> graph { { 0, 1, 3 }, { 1, 2 }, { 2 }, { 3 } };
 
   std::vector<std::vector<int>> result = transitiveClosure( graph );
-  std::vector<std::vector<int>> expected {
-    { 1, 1, 1, 1 },
-    { 0, 1, 1, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 0, 0, 1 }
-  };
+  std::vector<std::vector<int>> expected { { 1, 1, 1, 1 }, { 0, 1, 1, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } };
   EXPECT_EQ( expected, result );
 }
 
