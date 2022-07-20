@@ -65,12 +65,12 @@ TEST( Problem_254, Given_Case )
           6     7
   */
 
-  btNode<int> * root = new btNode<int>(
+  auto * root = new btNode<int>(
       0, new btNode<int>( 1, new btNode<int>( 3, nullptr, new btNode<int>( 5 ) ) ),
       new btNode<int>( 2, nullptr, new btNode<int>( 4, new btNode<int>( 6 ), new btNode<int>( 7 ) ) ) );
 
   btNode<int> * result = trim_tree( root );
-  btNode<int> * expected =
+  auto *        expected =
       new btNode<int>( 0, new btNode<int>( 5 ), new btNode<int>( 4, new btNode<int>( 6 ), new btNode<int>( 7 ) ) );
   EXPECT_EQ( *expected, *result );
 }
