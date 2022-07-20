@@ -54,4 +54,5 @@ jobs:
         with:
           commit-message: "Clang Tidy And Format"
           title: "Clang Tidy And Format"
+          branch: "ci/reformat_and_fixes"
           delete-branch: true
