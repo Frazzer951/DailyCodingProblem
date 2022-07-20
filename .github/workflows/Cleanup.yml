@@ -24,6 +24,9 @@ jobs:
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format-14 clang-tidy-14
           
+          sudo update-alternatives --install /bin/clang-tidy clang-tidy /bin/clang-tidy-14 100
+          sudo update-alternatives --install /bin/clang-format clang-format /bin/clang-format-14 100
+          
           echo "Clang Version:"
           clang --version
           echo "Clang++ Version:"
