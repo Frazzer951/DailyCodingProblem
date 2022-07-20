@@ -21,7 +21,8 @@ jobs:
 
       - name: Verify up Clang
         run: |
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format clang-tidy
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format-14 clang-tidy-14
           
           echo "Clang Version:"
           clang --version
