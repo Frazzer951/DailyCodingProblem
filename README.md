@@ -251,7 +251,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 218
+## Missing ❌️ - 238
 <details><summary>Missing</summary>
 <p>
 
@@ -473,6 +473,26 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 470](problems/include/problems_461_470/Problem_470.hpp) - Medium
  - [Problem 471](problems/include/problems_471_480/Problem_471.hpp) - Easy
  - [Problem 472](problems/include/problems_471_480/Problem_472.hpp) - Medium
+ - [Problem 473](problems/include/problems_471_480/Problem_473.hpp) - Medium
+ - [Problem 474](problems/include/problems_471_480/Problem_474.hpp) - Hard
+ - [Problem 475](problems/include/problems_471_480/Problem_475.hpp) - Medium
+ - [Problem 476](problems/include/problems_471_480/Problem_476.hpp) - Medium
+ - [Problem 477](problems/include/problems_471_480/Problem_477.hpp) - Easy
+ - [Problem 478](problems/include/problems_471_480/Problem_478.hpp) - Hard
+ - [Problem 479](problems/include/problems_471_480/Problem_479.hpp) - Easy
+ - [Problem 480](problems/include/problems_471_480/Problem_480.hpp) - Medium
+ - [Problem 481](problems/include/problems_481_490/Problem_481.hpp) - Hard
+ - [Problem 482](problems/include/problems_481_490/Problem_482.hpp) - Medium
+ - [Problem 483](problems/include/problems_481_490/Problem_483.hpp) - Easy
+ - [Problem 484](problems/include/problems_481_490/Problem_484.hpp) - Medium
+ - [Problem 485](problems/include/problems_481_490/Problem_485.hpp) - Hard
+ - [Problem 486](problems/include/problems_481_490/Problem_486.hpp) - Medium
+ - [Problem 487](problems/include/problems_481_490/Problem_487.hpp) - Medium
+ - [Problem 488](problems/include/problems_481_490/Problem_488.hpp) - Hard
+ - [Problem 489](problems/include/problems_481_490/Problem_489.hpp) - Easy
+ - [Problem 490](problems/include/problems_481_490/Problem_490.hpp) - Medium
+ - [Problem 491](problems/include/problems_491_500/Problem_491.hpp) - Easy
+ - [Problem 492](problems/include/problems_491_500/Problem_492.hpp) - Medium
 
 </p>
 </details>
