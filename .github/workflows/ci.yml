@@ -1,6 +1,6 @@
 ﻿name: CMake Build
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -11,15 +11,21 @@ jobs:
       matrix:
         config:
           - {
-            name: "Ubuntu Latest GCC", artifact: "Linux.tar.xz",
-            os: ubuntu-latest,
-            build_type: "Release", cc: "gcc", cxx: "g++"
-          }
+              name: "Ubuntu Latest GCC",
+              artifact: "Linux.tar.xz",
+              os: ubuntu-latest,
+              build_type: "Release",
+              cc: "gcc",
+              cxx: "g++",
+            }
           - {
-            name: "Ubuntu Latest Clang", artifact: "Linux.tar.xz",
-            os: ubuntu-latest,
-            build_type: "Release", cc: "clang", cxx: "clang++"
-          }
+              name: "Ubuntu Latest Clang",
+              artifact: "Linux.tar.xz",
+              os: ubuntu-latest,
+              build_type: "Release",
+              cc: "clang",
+              cxx: "clang++",
+            }
 
     steps:
       - uses: actions/checkout@v1
@@ -30,9 +36,9 @@ jobs:
         run: |
           set(ninja_version "1.10.2")
           set(cmake_version "3.18.4")
-          
+
           message(STATUS "Using host CMake version: ${CMAKE_VERSION}")
-          
+
           if ("${{ runner.os }}" STREQUAL "Windows")
             set(ninja_suffix "win.zip")
             set(cmake_suffix "win64-x64.zip")
@@ -46,19 +52,19 @@ jobs:
             set(cmake_suffix "Darwin-x86_64.tar.gz")
             set(cmake_dir "cmake-${cmake_version}-Darwin-x86_64/CMake.app/Contents/bin")
           endif()
-          
+
           set(ninja_url "https://github.com/ninja-build/ninja/releases/download/v${ninja_version}/ninja-${ninja_suffix}")
           file(DOWNLOAD "${ninja_url}" ./ninja.zip SHOW_PROGRESS)
           execute_process(COMMAND ${CMAKE_COMMAND} -E tar xvf ./ninja.zip)
-          
+
           set(cmake_url "https://github.com/Kitware/CMake/releases/download/v${cmake_version}/cmake-${cmake_version}-${cmake_suffix}")
           file(DOWNLOAD "${cmake_url}" ./cmake.zip SHOW_PROGRESS)
           execute_process(COMMAND ${CMAKE_COMMAND} -E tar xvf ./cmake.zip)
-          
+
           # Save the path for other steps
           file(TO_CMAKE_PATH "$ENV{GITHUB_WORKSPACE}/${cmake_dir}" cmake_dir)
           message("::set-output name=cmake_dir::${cmake_dir}")
-          
+
           if (NOT "${{ runner.os }}" STREQUAL "Windows")
             execute_process(
               COMMAND chmod +x ninja
@@ -71,7 +77,7 @@ jobs:
         run: |
           set(ENV{CC} ${{ matrix.config.cc }})
           set(ENV{CXX} ${{ matrix.config.cxx }})
-          
+
           if ("${{ runner.os }}" STREQUAL "Windows" AND NOT "x${{ matrix.config.environment_script }}" STREQUAL "x")
             execute_process(
               COMMAND "${{ matrix.config.environment_script }}" && set
@@ -84,9 +90,9 @@ jobs:
               endif()
             endforeach()
           endif()
-          
+
           file(TO_CMAKE_PATH "$ENV{GITHUB_WORKSPACE}/ninja" ninja_program)
-          
+
           execute_process(
             COMMAND ${{ steps.cmake_and_ninja.outputs.cmake_dir }}/cmake
               -S .
@@ -100,12 +106,11 @@ jobs:
             message(FATAL_ERROR "Bad exit status")
           endif()
 
-
       - name: Build
         shell: cmake -P {0}
         run: |
           set(ENV{NINJA_STATUS} "[%f/%t %o/sec] ")
-          
+
           if ("${{ runner.os }}" STREQUAL "Windows" AND NOT "x${{ matrix.config.environment_script }}" STREQUAL "x")
             file(STRINGS environment_script_output.txt output_lines)
             foreach(line IN LISTS output_lines)
@@ -114,7 +119,7 @@ jobs:
               endif()
             endforeach()
           endif()
-          
+
           execute_process(
             COMMAND ${{ steps.cmake_and_ninja.outputs.cmake_dir }}/cmake --build build
             RESULT_VARIABLE result
@@ -123,13 +128,12 @@ jobs:
             message(FATAL_ERROR "Bad exit status")
           endif()
 
-
       - name: Run tests
         shell: cmake -P {0}
         run: |
           include(ProcessorCount)
           ProcessorCount(N)
-          
+
           execute_process(
             COMMAND ${{ steps.cmake_and_ninja.outputs.cmake_dir }}/ctest -j ${N}
             WORKING_DIRECTORY build

@@ -1,6 +1,6 @@
 name: Clang Tidy and Clang Format
 
-on: [ push ]
+on: [push]
 
 jobs:
   cleanup:
@@ -23,10 +23,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format-14 clang-tidy-14
-          
+
           sudo ln -f -s /usr/bin/clang-format-14 /usr/local/bin/clang-format
           sudo ln -f -s /usr/bin/clang-tidy-14 /usr/local/bin/clang-tidy
-          
+
           echo "Clang Version:"
           clang --version
           echo "Clang++ Version:"
