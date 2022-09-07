@@ -2,6 +2,14 @@
 
 #include "problems_491_500/Problem_491.hpp"
 #include "problems_491_500/Problem_492.hpp"
+#include "problems_491_500/Problem_493.hpp"
+#include "problems_491_500/Problem_494.hpp"
+#include "problems_491_500/Problem_495.hpp"
+#include "problems_491_500/Problem_496.hpp"
+#include "problems_491_500/Problem_497.hpp"
+#include "problems_491_500/Problem_498.hpp"
+#include "problems_491_500/Problem_499.hpp"
+#include "problems_491_500/Problem_500.hpp"
 
 
 // Problem 491
