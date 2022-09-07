@@ -253,7 +253,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 236
+## Missing ❌️ - 284
 <details><summary>Missing</summary>
 <p>
 
@@ -493,6 +493,54 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 490](problems/include/problems_481_490/Problem_490.hpp) - Medium
  - [Problem 491](problems/include/problems_491_500/Problem_491.hpp) - Easy
  - [Problem 492](problems/include/problems_491_500/Problem_492.hpp) - Medium
+ - [Problem 493](problems/include/problems_491_500/Problem_493.hpp) - Medium
+ - [Problem 494](problems/include/problems_491_500/Problem_494.hpp) - Medium
+ - [Problem 495](problems/include/problems_491_500/Problem_495.hpp) - Medium
+ - [Problem 496](problems/include/problems_491_500/Problem_496.hpp) - Easy
+ - [Problem 497](problems/include/problems_491_500/Problem_497.hpp) - Medium
+ - [Problem 498](problems/include/problems_491_500/Problem_498.hpp) - Easy
+ - [Problem 499](problems/include/problems_491_500/Problem_499.hpp) - Easy
+ - [Problem 500](problems/include/problems_491_500/Problem_500.hpp) - Easy
+ - [Problem 501](problems/include/problems_501_510/Problem_501.hpp) - Medium
+ - [Problem 502](problems/include/problems_501_510/Problem_502.hpp) - Easy
+ - [Problem 503](problems/include/problems_501_510/Problem_503.hpp) - Medium
+ - [Problem 504](problems/include/problems_501_510/Problem_504.hpp) - Easy
+ - [Problem 505](problems/include/problems_501_510/Problem_505.hpp) - Easy
+ - [Problem 506](problems/include/problems_501_510/Problem_506.hpp) - Medium
+ - [Problem 507](problems/include/problems_501_510/Problem_507.hpp) - Easy
+ - [Problem 508](problems/include/problems_501_510/Problem_508.hpp) - Medium
+ - [Problem 509](problems/include/problems_501_510/Problem_509.hpp) - Medium
+ - [Problem 510](problems/include/problems_501_510/Problem_510.hpp) - Hard
+ - [Problem 511](problems/include/problems_511_520/Problem_511.hpp) - Medium
+ - [Problem 512](problems/include/problems_511_520/Problem_512.hpp) - Medium
+ - [Problem 513](problems/include/problems_511_520/Problem_513.hpp) - Medium
+ - [Problem 514](problems/include/problems_511_520/Problem_514.hpp) - Medium
+ - [Problem 515](problems/include/problems_511_520/Problem_515.hpp) - Medium
+ - [Problem 516](problems/include/problems_511_520/Problem_516.hpp) - Easy
+ - [Problem 517](problems/include/problems_511_520/Problem_517.hpp) - Easy
+ - [Problem 518](problems/include/problems_511_520/Problem_518.hpp) - Easy
+ - [Problem 519](problems/include/problems_511_520/Problem_519.hpp) - Medium
+ - [Problem 520](problems/include/problems_511_520/Problem_520.hpp) - Hard
+ - [Problem 521](problems/include/problems_521_530/Problem_521.hpp) - Medium
+ - [Problem 522](problems/include/problems_521_530/Problem_522.hpp) - Medium
+ - [Problem 523](problems/include/problems_521_530/Problem_523.hpp) - Easy
+ - [Problem 524](problems/include/problems_521_530/Problem_524.hpp) - Medium
+ - [Problem 525](problems/include/problems_521_530/Problem_525.hpp) - Easy
+ - [Problem 526](problems/include/problems_521_530/Problem_526.hpp) - Easy
+ - [Problem 527](problems/include/problems_521_530/Problem_527.hpp) - Medium
+ - [Problem 528](problems/include/problems_521_530/Problem_528.hpp) - Easy
+ - [Problem 529](problems/include/problems_521_530/Problem_529.hpp) - Hard
+ - [Problem 530](problems/include/problems_521_530/Problem_530.hpp) - Easy
+ - [Problem 531](problems/include/problems_531_540/Problem_531.hpp) - Easy
+ - [Problem 532](problems/include/problems_531_540/Problem_532.hpp) - Medium
+ - [Problem 533](problems/include/problems_531_540/Problem_533.hpp) - Easy
+ - [Problem 534](problems/include/problems_531_540/Problem_534.hpp) - Easy
+ - [Problem 535](problems/include/problems_531_540/Problem_535.hpp) - Medium
+ - [Problem 536](problems/include/problems_531_540/Problem_536.hpp) - Medium
+ - [Problem 537](problems/include/problems_531_540/Problem_537.hpp) - Easy
+ - [Problem 538](problems/include/problems_531_540/Problem_538.hpp) - Hard
+ - [Problem 539](problems/include/problems_531_540/Problem_539.hpp) - Easy
+ - [Problem 540](problems/include/problems_531_540/Problem_540.hpp) - Easy
 
 </p>
 </details>

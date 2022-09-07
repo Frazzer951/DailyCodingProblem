@@ -7,7 +7,7 @@
 
 /* HARD
 You are given a binary tree in a peculiar string representation. Each node is
-written in the form (lr), where l corresponds to the left child and r 
+written in the form (lr), where l corresponds to the left child and r
 corresponds to the right child.
 
 If either l or r is null, it will be represented as a zero. Otherwise, it will
