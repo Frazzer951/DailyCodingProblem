@@ -1,7 +1,7 @@
-import json
-import os
-import logging
 import getpass
+import json
+import logging
+import os
 
 proj_dir = os.path.dirname(__file__)
 

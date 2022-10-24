@@ -1,8 +1,7 @@
 import logging
 import os
 import re
-from typing import Dict
-from typing import List
+from typing import Dict, List
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -37,7 +36,7 @@ def get_problems() -> Dict[str, List[str]]:
         logging.debug(f"Processing {folder}")
         files = os.listdir(folder)
         for file in files:
-            if '.txt' in file:
+            if ".txt" in file:
                 logging.info(f"Skipping {file} because it has .txt")
                 continue
             logging.debug(file)
