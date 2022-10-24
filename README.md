@@ -253,7 +253,7 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
 <!-- end completed section -->
 
 <!-- start missing section -->
-## Missing ❌️ - 284
+## Missing ❌️ - 328
 <details><summary>Missing</summary>
 <p>
 
@@ -541,6 +541,50 @@ My Solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/)
  - [Problem 538](problems/include/problems_531_540/Problem_538.hpp) - Hard
  - [Problem 539](problems/include/problems_531_540/Problem_539.hpp) - Easy
  - [Problem 540](problems/include/problems_531_540/Problem_540.hpp) - Easy
+ - [Problem 541](problems/include/problems_541_550/Problem_541.hpp) - Easy
+ - [Problem 542](problems/include/problems_541_550/Problem_542.hpp) - Medium
+ - [Problem 543](problems/include/problems_541_550/Problem_543.hpp) - Medium
+ - [Problem 544](problems/include/problems_541_550/Problem_544.hpp) - Hard
+ - [Problem 545](problems/include/problems_541_550/Problem_545.hpp) - Hard
+ - [Problem 546](problems/include/problems_541_550/Problem_546.hpp) - Medium
+ - [Problem 547](problems/include/problems_541_550/Problem_547.hpp) - Hard
+ - [Problem 548](problems/include/problems_541_550/Problem_548.hpp) - Easy
+ - [Problem 549](problems/include/problems_541_550/Problem_549.hpp) - Hard
+ - [Problem 550](problems/include/problems_541_550/Problem_550.hpp) - Hard
+ - [Problem 551](problems/include/problems_551_560/Problem_551.hpp) - Medium
+ - [Problem 552](problems/include/problems_551_560/Problem_552.hpp) - Easy
+ - [Problem 553](problems/include/problems_551_560/Problem_553.hpp) - Medium
+ - [Problem 554](problems/include/problems_551_560/Problem_554.hpp) - Easy
+ - [Problem 555](problems/include/problems_551_560/Problem_555.hpp) - Medium
+ - [Problem 556](problems/include/problems_551_560/Problem_556.hpp) - Medium
+ - [Problem 557](problems/include/problems_551_560/Problem_557.hpp) - Medium
+ - [Problem 558](problems/include/problems_551_560/Problem_558.hpp) - Medium
+ - [Problem 559](problems/include/problems_551_560/Problem_559.hpp) - Medium
+ - [Problem 560](problems/include/problems_551_560/Problem_560.hpp) - Easy
+ - [Problem 561](problems/include/problems_561_570/Problem_561.hpp) - Hard
+ - [Problem 562](problems/include/problems_561_570/Problem_562.hpp) - Hard
+ - [Problem 563](problems/include/problems_561_570/Problem_563.hpp) - Hard
+ - [Problem 564](problems/include/problems_561_570/Problem_564.hpp) - Hard
+ - [Problem 565](problems/include/problems_561_570/Problem_565.hpp) - Medium
+ - [Problem 566](problems/include/problems_561_570/Problem_566.hpp) - Medium
+ - [Problem 567](problems/include/problems_561_570/Problem_567.hpp) - Medium
+ - [Problem 568](problems/include/problems_561_570/Problem_568.hpp) - Easy
+ - [Problem 569](problems/include/problems_561_570/Problem_569.hpp) - Hard
+ - [Problem 570](problems/include/problems_561_570/Problem_570.hpp) - Hard
+ - [Problem 571](problems/include/problems_571_580/Problem_571.hpp) - Medium
+ - [Problem 572](problems/include/problems_571_580/Problem_572.hpp) - Hard
+ - [Problem 573](problems/include/problems_571_580/Problem_573.hpp) - Medium
+ - [Problem 574](problems/include/problems_571_580/Problem_574.hpp) - Medium
+ - [Problem 575](problems/include/problems_571_580/Problem_575.hpp) - Medium
+ - [Problem 576](problems/include/problems_571_580/Problem_576.hpp) - Medium
+ - [Problem 577](problems/include/problems_571_580/Problem_577.hpp) - Medium
+ - [Problem 578](problems/include/problems_571_580/Problem_578.hpp) - Easy
+ - [Problem 579](problems/include/problems_571_580/Problem_579.hpp) - Medium
+ - [Problem 580](problems/include/problems_571_580/Problem_580.hpp) - Easy
+ - [Problem 581](problems/include/problems_581_590/Problem_581.hpp) - Easy
+ - [Problem 582](problems/include/problems_581_590/Problem_582.hpp) - Hard
+ - [Problem 583](problems/include/problems_581_590/Problem_583.hpp) - Medium
+ - [Problem 584](problems/include/problems_581_590/Problem_584.hpp) - Easy
 
 </p>
 </details>
