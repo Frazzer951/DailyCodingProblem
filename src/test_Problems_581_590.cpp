@@ -1,8 +1,9 @@
-#include "problems_581_590/Problem_584.hpp"
-#include "problems_581_590/Problem_583.hpp"
-#include "problems_581_590/Problem_582.hpp"
-#include "problems_581_590/Problem_581.hpp"
 #include "gtest/gtest.h"
+
+#include "problems_581_590/Problem_581.hpp"
+#include "problems_581_590/Problem_582.hpp"
+#include "problems_581_590/Problem_583.hpp"
+#include "problems_581_590/Problem_584.hpp"
 
 
 // Problem 581
