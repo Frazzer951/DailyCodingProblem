@@ -38,7 +38,7 @@ public:
   void insert( const std::string &word ) {
     Tnode *node = root;
 
-    for ( char c : word ) {
+    for ( char const c : word ) {
       if ( node->children.find( c ) == node->children.end() ) node->children[c] = new Tnode();
 
       node->count += 1;
@@ -49,7 +49,7 @@ public:
   std::string unique_prefix( const std::string &word ) {
     Tnode      *node = root;
     std::string prefix;
-    for ( char c : word ) {
+    for ( char const c : word ) {
       if ( node->count == 1 ) return prefix;
       node   = node->children[c];
       prefix += c;

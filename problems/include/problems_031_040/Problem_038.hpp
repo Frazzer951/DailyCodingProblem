@@ -12,11 +12,11 @@ or diagonal.
 #include <vector>
 
 inline bool is_valid( std::vector<int> board ) {
-  int current_queen_row = (int) board.size() - 1;
-  int current_queen_col = board[board.size() - 1];
+  int const current_queen_row = (int) board.size() - 1;
+  int const current_queen_col = board[board.size() - 1];
 
   for ( int row = 0; row < board.size() - 1; row++ ) {
-    int diff = abs( current_queen_col - board[row] );
+    int const diff = abs( current_queen_col - board[row] );
     if ( diff == 0 || diff == current_queen_row - row ) { return false; }
   }
   return true;

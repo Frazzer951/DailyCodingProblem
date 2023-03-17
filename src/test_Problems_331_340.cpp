@@ -31,7 +31,7 @@
 
 // Problem 340
 TEST( Problem_340, Given_Case ) {
-  std::pair<std::pair<int, int>, std::pair<int, int>> result   = findClosestPair( {
+  std::pair<std::pair<int, int>, std::pair<int, int>> const result   = findClosestPair( {
       { 1,  1},
       {-1, -1},
       { 3,  4},
@@ -39,7 +39,7 @@ TEST( Problem_340, Given_Case ) {
       {-1, -6},
       {-4, -3}
   } );
-  std::pair<std::pair<int, int>, std::pair<int, int>> expected = {
+  std::pair<std::pair<int, int>, std::pair<int, int>> const expected = {
     { 1,  1},
     {-1, -1}
   };

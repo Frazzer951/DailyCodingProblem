@@ -18,7 +18,7 @@ inline std::string balanceParentheses( const std::string &str ) {
 
   int open_count = 0;
 
-  for ( char c : str ) {
+  for ( char const c : str ) {
     if ( c == '(' ) {
       open_count++;
       ret += c;

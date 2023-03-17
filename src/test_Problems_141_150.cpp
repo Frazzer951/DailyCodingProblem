@@ -48,9 +48,9 @@ TEST( Problem_142, Given_Case ) {
 TEST( Problem_143, Given_Case ) {
   // For example, given x = 10 and lst = [9, 12, 3, 5, 14, 10, 10], one partition may be [9, 3, 5, 10, 10, 12, 14].
 
-  std::vector<int> given    = { 9, 12, 3, 5, 14, 10, 10 };
-  std::vector<int> expected = { 9, 3, 5, 10, 10, 12, 14 };
-  std::vector<int> result   = partition( given, 10 );
+  std::vector<int> const given    = { 9, 12, 3, 5, 14, 10, 10 };
+  std::vector<int> const expected = { 9, 3, 5, 10, 10, 12, 14 };
+  std::vector<int> const result   = partition( given, 10 );
 
   EXPECT_EQ( result, expected );
 }
@@ -58,7 +58,7 @@ TEST( Problem_143, Given_Case ) {
 // Problem 144
 TEST( Problem_144, Given_Case ) {
   // given [4, 1, 3, 5, 6] and index 0, you should return 3
-  std::vector<int> arr   = { 4, 1, 3, 5, 6 };
+  std::vector<int> const arr   = { 4, 1, 3, 5, 6 };
   auto             cache = preprocess( arr );
 
   EXPECT_EQ( cache[0], 3 );
@@ -108,9 +108,9 @@ TEST( Problem_146, Given_Case ) {
 
 // Problem 147
 TEST( Problem_147, Test_Case ) {
-  std::vector<int> arr      = { 4, 1, 3, 5, 6 };
-  std::vector<int> expected = { 1, 3, 4, 5, 6 };
-  std::vector<int> result   = sortWithReverse( arr );
+  std::vector<int> const arr      = { 4, 1, 3, 5, 6 };
+  std::vector<int> const expected = { 1, 3, 4, 5, 6 };
+  std::vector<int> const result   = sortWithReverse( arr );
 
   EXPECT_EQ( result, expected );
 }
@@ -121,8 +121,8 @@ TEST( Problem_147, Test_Case ) {
 TEST( Problem_149, Given_Case ) {
   // given L = [1, 2, 3, 4, 5], sum(1, 3) should return sum([2, 3]), which is 5.
 
-  std::vector<int> L            = { 1, 2, 3, 4, 5 };
-  std::vector<int> preprocessed = sumPreprocess( L );
+  std::vector<int> const L            = { 1, 2, 3, 4, 5 };
+  std::vector<int> const preprocessed = sumPreprocess( L );
 
   EXPECT_EQ( sum( preprocessed, 1, 3 ), 5 );
 }
@@ -131,10 +131,10 @@ TEST( Problem_149, Given_Case ) {
 TEST( Problem_150, Given_Case ) {
   // given the list of points [(0, 0), (5, 4), (3, 1)], the central point (1, 2), and k = 2, return [(0, 0), (3,1)]
 
-  std::vector<std::pair<int, int>> points = { std::make_pair( 0, 0 ), std::make_pair( 5, 4 ), std::make_pair( 3, 1 ) };
-  std::pair<int, int>              central( 1, 2 );
-  std::vector<std::pair<int, int>> expected = { std::make_pair( 0, 0 ), std::make_pair( 3, 1 ) };
-  std::vector<std::pair<int, int>> result   = nearestPoints( points, central );
+  std::vector<std::pair<int, int>> const points = { std::make_pair( 0, 0 ), std::make_pair( 5, 4 ), std::make_pair( 3, 1 ) };
+  std::pair<int, int>              const central( 1, 2 );
+  std::vector<std::pair<int, int>> const expected = { std::make_pair( 0, 0 ), std::make_pair( 3, 1 ) };
+  std::vector<std::pair<int, int>> const result   = nearestPoints( points, central );
 
   EXPECT_EQ( result, expected );
 }

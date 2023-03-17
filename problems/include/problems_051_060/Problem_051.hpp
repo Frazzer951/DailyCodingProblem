@@ -16,11 +16,11 @@ Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 #include <vector>
 
 inline std::vector<int> shuffle( std::vector<int> arr ) {
-  int n = (int) arr.size();
+  int const n = (int) arr.size();
 
   for ( int i = 0; i < n - 1; i++ ) {
-    int j    = rand() % ( n - 1 - i ) + i;
-    int temp = arr[i];
+    int const j    = rand() % ( n - 1 - i ) + i;
+    int const temp = arr[i];
     arr[i]   = arr[j];
     arr[j]   = temp;
   }

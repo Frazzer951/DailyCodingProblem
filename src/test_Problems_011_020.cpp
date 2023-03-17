@@ -14,7 +14,7 @@
 // Problem 011
 TEST( Problem_11, Given_Case ) {
   auto                     returned_strs   = autocomplete( "de", { "dog", "deer", "deal" } );
-  std::vector<std::string> expected_return = { "deer", "deal" };
+  std::vector<std::string> const expected_return = { "deer", "deal" };
   EXPECT_EQ( returned_strs, expected_return );
 }
 
@@ -53,11 +53,11 @@ TEST( Problem_14, Given_Case ) {
 
 // Problem 015
 TEST( Problem_15, Test_Case_1 ) {
-  std::vector<int> elements = { 10, 15, 12, 67, 21, 43 };
+  std::vector<int> const elements = { 10, 15, 12, 67, 21, 43 };
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for ( int element : elements ) {
+  for ( int const element : elements ) {
     if ( element == elem ) { inVec = true; }
   }
 
@@ -65,11 +65,11 @@ TEST( Problem_15, Test_Case_1 ) {
 }
 
 TEST( Problem_15, Test_Case_2 ) {
-  std::vector<int> elements = { 10, 15, 12, 67, 21, 43 };
+  std::vector<int> const elements = { 10, 15, 12, 67, 21, 43 };
   auto             elem     = randElement( elements );
   bool             inVec    = false;
 
-  for ( int element : elements ) {
+  for ( int const element : elements ) {
     if ( element == elem ) { inVec = true; }
   }
 
@@ -125,25 +125,25 @@ TEST( Problem_16, Test_Case_4 ) {
 TEST( Problem_17, Given_Case ) {
   // "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
   // "dir/subdir2/subsubdir2/file2.ext"
-  std::string result =
+  std::string const result =
       find_longest_filepath( "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext" );
-  std::string expected = "dir/subdir2/subsubdir2/file2.ext";
+  std::string const expected = "dir/subdir2/subsubdir2/file2.ext";
 
   EXPECT_EQ( result, expected );
 }
 
 // Problem 018
 TEST( Problem_18, Given_Case ) {
-  std::vector<int> arr      = { 10, 5, 2, 7, 8, 7 };
+  std::vector<int> const arr      = { 10, 5, 2, 7, 8, 7 };
   auto             max_vals = compSubArrMax( arr, 3 );
-  std::vector<int> expected = { 10, 7, 8, 8 };
+  std::vector<int> const expected = { 10, 7, 8, 8 };
 
   EXPECT_EQ( max_vals, expected );
 }
 
 // Problem 019
 TEST( Problem_19, Test_Case_1 ) {
-  std::vector<std::vector<int>> vec = {
+  std::vector<std::vector<int>> const vec = {
     {10, 15, 20},
     {14, 47,  6},
     { 2,  7, 10}
@@ -154,7 +154,7 @@ TEST( Problem_19, Test_Case_1 ) {
 }
 
 TEST( Problem_19, Test_Case_2 ) {
-  std::vector<std::vector<int>> vec = {
+  std::vector<std::vector<int>> const vec = {
     {10, 15, 20},
     { 6, 47, 14},
     { 2,  7, 10}

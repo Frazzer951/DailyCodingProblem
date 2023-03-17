@@ -19,11 +19,11 @@ inline bool isAnagram( const std::string &s1, const std::string &s2 ) {
   std::map<char, int> count2;
   std::set<char>      chars1;
   std::set<char>      chars2;
-  for ( char c : s1 ) {
+  for ( char const c : s1 ) {
     count1[c]++;
     chars1.insert( c );
   }
-  for ( char c : s2 ) {
+  for ( char const c : s2 ) {
     count2[c]++;
     chars2.insert( c );
   }

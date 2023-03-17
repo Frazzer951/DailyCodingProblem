@@ -12,7 +12,7 @@ numbers that covers all these intervals is {3, 6}.
 */
 #include <vector>
 
-inline bool intersecting( std::vector<int> x, std::vector<int> y ) { return !( x[0] > y[1] || y[0] > x[1] ); }
+inline bool intersecting( std::vector<int> x, std::vector<int> y ) { return x[0] <= y[1] && y[0] <= x[1] ; }
 
 inline std::vector<int> covering( std::vector<std::vector<int>> intervals ) {
   std::sort( intervals.begin(), intervals.end() );

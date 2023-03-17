@@ -13,7 +13,7 @@ Do this in faster than O(N log N) time.
 inline bool isSparse( int x ) {
   bool last = false;
   for ( int i = 0; i < 32; i++ ) {
-    bool bit = ( x & ( 1 << i ) ) != 0;
+    bool const bit = ( x & ( 1 << i ) ) != 0;
     if ( bit && last ) return false;
     last = bit;
   }

@@ -36,8 +36,8 @@ inline int minSteps( std::vector<std::pair<int, int>> points ) {
   int totalSteps = 0;
 
   for ( std::size_t i = 1; i < points.size(); i++ ) {
-    int xChange = std::abs( points[i].first - points[i - 1].first );
-    int yChange = std::abs( points[i].second - points[i - 1].second );
+    int const xChange = std::abs( points[i].first - points[i - 1].first );
+    int const yChange = std::abs( points[i].second - points[i - 1].second );
 
     totalSteps += std::max( xChange, yChange );
   }

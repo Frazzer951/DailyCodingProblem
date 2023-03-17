@@ -39,7 +39,7 @@ inline std::vector<std::string> generateIpAddresses( const std::string &s, std::
   addresses.insert( addresses.end(), address.begin(), address.end() );
 
   if ( s.size() > 1 ) {
-    int num = atoi( s.substr( 0, 2 ).c_str() );
+    int const num = atoi( s.substr( 0, 2 ).c_str() );
     if ( 10 <= num && num <= 99 ) {
       tmpParts = parts;
       tmpParts.push_back( s.substr( 0, 2 ) );
@@ -49,7 +49,7 @@ inline std::vector<std::string> generateIpAddresses( const std::string &s, std::
   }
 
   if ( s.size() > 2 ) {
-    int num = atoi( s.substr( 0, 3 ).c_str() );
+    int const num = atoi( s.substr( 0, 3 ).c_str() );
     if ( 100 <= num && num <= 255 ) {
       tmpParts = parts;
       tmpParts.push_back( s.substr( 0, 3 ) );

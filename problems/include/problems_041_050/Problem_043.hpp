@@ -40,7 +40,7 @@ struct stack {
 
     stackNode *topNode = top;
     top                = top->prev;
-    int val            = topNode->val;
+    int const val            = topNode->val;
     delete topNode;
 
     return val;

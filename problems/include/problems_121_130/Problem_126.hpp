@@ -11,7 +11,7 @@ a copy of the list. How many swap or move operations do you need?
 #include <vector>
 
 inline void vSwap( std::vector<int> &v, std::size_t x, std::size_t y ) {
-  int temp = v[x];
+  int const temp = v[x];
   v[x]     = v[y];
   v[y]     = temp;
 }

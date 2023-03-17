@@ -22,7 +22,7 @@ TEST( Problem_221, Given_Case ) {
 // Problem 222
 TEST( Problem_222, Given_Case ) {
   // given "/usr/bin/../bin/./scripts/../", return "/usr/bin/"
-  std::string result = shortestAbsolutePath( "/usr/bin/../bin/./scripts/../" );
+  std::string const result = shortestAbsolutePath( "/usr/bin/../bin/./scripts/../" );
   EXPECT_EQ( result, "/usr/bin/" );
 }
 
@@ -31,14 +31,14 @@ TEST( Problem_223, Given_Case ) {
   auto *root = new btNode( 5, new btNode( 4, new btNode<int>( 1, nullptr, new btNode<int>( 2, nullptr, new btNode( 3 ) ) ) ),
                            new btNode( 8 ) );
 
-  std::string result = inOrderTraversal( root );
+  std::string const result = inOrderTraversal( root );
   EXPECT_EQ( result, "1 2 3 4 5 8 " );
 }
 
 // Problem 224
 TEST( Problem_224, Given_Case ) {
   // for the input [1, 2, 3, 10], you should return 7.
-  int result = smallestIntNotSubset( { 1, 2, 3, 10 } );
+  int const result = smallestIntNotSubset( { 1, 2, 3, 10 } );
 
   EXPECT_EQ( result, 7 );
 }
@@ -46,7 +46,7 @@ TEST( Problem_224, Given_Case ) {
 // Problem 225
 TEST( Problem_225, Given_Case ) {
   // if N = 5 and k = 2, the order of executions would be [2, 4, 1, 5, 3], so you should return 3.
-  int result = last_prisoner( 5, 2 );
+  int const result = last_prisoner( 5, 2 );
   EXPECT_EQ( result, 3 );
 }
 
@@ -68,18 +68,18 @@ TEST( Problem_225, Given_Case ) {
 // Problem 228
 TEST( Problem_228, Given_Case ) {
   // given [10, 7, 76, 415], you should return 77641510
-  int result = largest_possible_arrangement( { 10, 7, 76, 415 } );
+  int const result = largest_possible_arrangement( { 10, 7, 76, 415 } );
   EXPECT_EQ( result, 77641510 );
 }
 
 // Problem 229
 TEST( Problem_229, Given_Case ) {
-  int result = minimum_turns();
+  int const result = minimum_turns();
   EXPECT_EQ( result, 7 );
 }
 
 // Problem 230
 TEST( Problem_230, Given_Case ) {
-  int result = min_drops( 1, 5 );
+  int const result = min_drops( 1, 5 );
   EXPECT_EQ( result, 5 );
 }

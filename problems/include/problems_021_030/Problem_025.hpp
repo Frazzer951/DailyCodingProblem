@@ -26,7 +26,7 @@ inline bool regex( std::string str, std::string exp ) {
   unsigned int str_index = 0;
 
   for ( unsigned int i = 0; i < exp.size(); ++i ) {
-    char cur = str[str_index];
+    char const cur = str[str_index];
     switch ( exp[i] ) {
     case '.':
       // Match Single Char

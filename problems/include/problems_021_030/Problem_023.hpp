@@ -53,10 +53,10 @@ inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int,
 
   while ( curPos != endPos ) {
     // Find the direction we need to move
-    bool up    = curPos.first > endPos.first;
-    bool down  = curPos.first < endPos.first;
-    bool left  = curPos.second > endPos.second;
-    bool right = curPos.second < endPos.second;
+    bool const up    = curPos.first > endPos.first;
+    bool const down  = curPos.first < endPos.first;
+    bool const left  = curPos.second > endPos.second;
+    bool const right = curPos.second < endPos.second;
 
     // First Get to the same level as the end point
     if ( curPos.first != endPos.first ) {
@@ -65,7 +65,7 @@ inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int,
           curPos.first -= 1;
           moves++;
         } else {
-          int moveIndex = findOpening( maze[curPos.first - 1] );
+          int const moveIndex = findOpening( maze[curPos.first - 1] );
           if ( curPos.second < moveIndex ) {
             if ( canMoveRight( maze, curPos ) ) {
               curPos.second += 1;
@@ -83,7 +83,7 @@ inline int stepsToSolveMaze( std::vector<std::vector<bool>> maze, std::pair<int,
           curPos.first += 1;
           moves++;
         } else {
-          int moveIndex = findOpening( maze[curPos.first + 1] );
+          int const moveIndex = findOpening( maze[curPos.first + 1] );
           if ( curPos.second < moveIndex ) {
             if ( canMoveRight( maze, curPos ) ) {
               curPos.second += 1;

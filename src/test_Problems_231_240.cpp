@@ -65,7 +65,7 @@ TEST( Problem_234, Test_Case ) {
 // Problem 235
 TEST( Problem_235, Given_Case ) {
   // [4, 2, 7, 5, -1, 3, 6]
-  std::pair<int, int> result = min_and_max( { 4, 2, 7, 5, -1, 3, 6 } );
+  std::pair<int, int> const result = min_and_max( { 4, 2, 7, 5, -1, 3, 6 } );
 
   EXPECT_EQ( result, std::make_pair( -1, 7 ) );
 }
@@ -158,8 +158,8 @@ TEST( Problem_239, Test_Case ) {
 
 // Problem 240
 TEST( Problem_240, Test_Case ) {
-  std::vector<int> arr    = { 1, 2, 3, 4, 1, 2, 3, 4 };
-  std::vector<int> exp    = { 1, 1, 3, 3, 2, 2, 4, 4 };
-  std::vector<int> result = sortPairs( arr );
+  std::vector<int> const arr    = { 1, 2, 3, 4, 1, 2, 3, 4 };
+  std::vector<int> const exp    = { 1, 1, 3, 3, 2, 2, 4, 4 };
+  std::vector<int> const result = sortPairs( arr );
   EXPECT_EQ( result, exp );
 }

@@ -51,7 +51,7 @@ class TimeMap {
 public:
   int get( int key ) {
     if ( keys.empty() ) return 0;
-    std::size_t i = bisect_left( keys, key );
+    std::size_t const i = bisect_left( keys, key );
     if ( keys.size() == i ) return values[i - 1];
     if ( keys[i] == key ) return values[i];
     if ( i == 0 ) return 0;
@@ -60,7 +60,7 @@ public:
   }
 
   void set( int key, int value ) {
-    std::size_t i = bisect_left( keys, key );
+    std::size_t const i = bisect_left( keys, key );
     if ( keys.size() == i ) {
       keys.push_back( key );
       values.push_back( value );

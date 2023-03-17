@@ -22,7 +22,7 @@ inline std::vector<int> partition( const std::vector<int> &lst, int x ) {
   std::vector<int> eq;
   std::vector<int> great;
 
-  for ( int i : lst ) {
+  for ( int const i : lst ) {
     if ( i < x ) {
       less.push_back( i );
     } else if ( i == x ) {

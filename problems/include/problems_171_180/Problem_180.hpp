@@ -21,7 +21,7 @@ Hint: Try working backwards from the end state.
 inline std::stack<int> interleave( std::stack<int> s ) {
   std::queue<int> q;
 
-  size_t size = s.size();
+  size_t const size = s.size();
 
   for ( int i = 0; i < size; i++ ) {
     q.push( s.top() );

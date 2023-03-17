@@ -20,7 +20,7 @@ inline std::vector<std::string> num_to_str( std::string nums, std::map<char, std
 
   std::vector<std::string> possible_strs;
 
-  std::vector<std::string> sub_strs = num_to_str( nums.substr( 1 ), num_map );
+  std::vector<std::string> const sub_strs = num_to_str( nums.substr( 1 ), num_map );
 
   for ( const std::string &c : num_map[nums[0]] ) {
     for ( const std::string &sub_str : sub_strs ) { possible_strs.push_back( c + sub_str ); }

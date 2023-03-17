@@ -67,19 +67,19 @@ inline bool operator<( const mapNode &lhs, const mapNode &rhs ) { return lhs.val
 inline int opposite( int dir ) { return ( dir + 2 ) % 4; }
 
 inline bool isValid( mapNode *from, mapNode *to, int newDir ) {
-  int oppositeDir = opposite( newDir );
+  int const oppositeDir = opposite( newDir );
   return from->edges[oppositeDir].find( to ) == from->edges[oppositeDir].end();
 }
 
 inline void addEdges( mapNode *from, mapNode *to, int newDir ) {
   /* Get the direct opposite direction, e.g. S from N */
-  int oppositeDir = opposite( newDir );
+  int const oppositeDir = opposite( newDir );
 
   /* Add the immediate edge between the nodes, using bi-directional edges. */
   from->edges[newDir].insert( to );
   to->edges[oppositeDir].insert( from );
 
-  for ( int dir : DIRS ) {
+  for ( int const dir : DIRS ) {
     /* Relationships in the same direction are ambiguous.
          For example, if A is north of B, and we are adding
          C north of B, we cannot say C is north of A. */
@@ -101,8 +101,8 @@ inline bool validate( const std::vector<std::string> &rules ) {
   for ( const std::string &line : rules ) {
     auto rule = split( line );
     std::cout << "Rule " + rule[0] + " " + rule[1] + " " + rule[2] << '\n';
-    char fromVal = rule[2][0];
-    char toVal   = rule[0][0];
+    char const fromVal = rule[2][0];
+    char const toVal   = rule[0][0];
 
     if ( map.find( fromVal ) == map.end() ) {
       auto *n      = new mapNode( fromVal );
@@ -118,8 +118,8 @@ inline bool validate( const std::vector<std::string> &rules ) {
     mapNode *to   = map[toVal];
 
     /* Decompose diagonal (two-char) directions to single directions */
-    for ( char dirChar : rule[1] ) {
-      int dir = charToDir[dirChar];
+    for ( char const dirChar : rule[1] ) {
+      int const dir = charToDir[dirChar];
       if ( !isValid( from, to, dir ) ) return false;
       addEdges( from, to, dir );
     }

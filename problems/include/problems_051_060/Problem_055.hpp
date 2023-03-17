@@ -23,7 +23,7 @@ class URLShortener {
     std::string values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     std::string random;
     for ( int i = 0; i < 6; i++ ) {
-      int index = rand() % 37;
+      int const index = rand() % 37;
       random    += values[index];
     }
     return random;

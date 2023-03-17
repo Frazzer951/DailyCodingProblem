@@ -15,7 +15,7 @@
 
 // Problem 171
 TEST( Problem_171, Test_Case ) {
-  std::vector<Timelog> entries = {
+  std::vector<Timelog> const entries = {
     {  0,  3, Type::enter},
     { 10,  6,  Type::exit},
     {  3, 15, Type::enter},
@@ -26,8 +26,8 @@ TEST( Problem_171, Test_Case ) {
     {  6,  2,  Type::exit}
   };
 
-  std::pair<long, long> result = busiest_period( entries );
-  std::pair<long, long> expected( 5, 6 );
+  std::pair<long, long> const result = busiest_period( entries );
+  std::pair<long, long> const expected( 5, 6 );
 
   EXPECT_EQ( result, expected );
 }
@@ -35,16 +35,16 @@ TEST( Problem_171, Test_Case ) {
 // Problem 172
 TEST( Problem_172, Given_Case_1 ) {
   // Given s = "dogcatcatcodecatdog" and words = ["cat", "dog"], return [0, 13]
-  std::vector<int> result   = indiciesOfSubstrings( "dogcatcatcodecatdog", { "cat", "dog" } );
-  std::vector<int> expected = { 0, 13 };
+  std::vector<int> const result   = indiciesOfSubstrings( "dogcatcatcodecatdog", { "cat", "dog" } );
+  std::vector<int> const expected = { 0, 13 };
 
   EXPECT_EQ( result, expected );
 }
 
 TEST( Problem_172, Given_Case_2 ) {
   // Given s = "barfoobazbitbyte" and words = ["dog", "cat"], return []
-  std::vector<int> result   = indiciesOfSubstrings( "barfoobazbitbyte", { "dog", "cat" } );
-  std::vector<int> expected = {};
+  std::vector<int> const result   = indiciesOfSubstrings( "barfoobazbitbyte", { "dog", "cat" } );
+  std::vector<int> const expected = {};
 
   EXPECT_EQ( result, expected );
 }
@@ -65,7 +65,7 @@ TEST( Problem_173, Given_Case ) {
   expected["foo.a"]       = 5;
   expected["foo.bar.baz"] = 8;
 
-  std::map<std::string, int> result = flatten( vals );
+  std::map<std::string, int> const result = flatten( vals );
 
   EXPECT_EQ( result, expected );
 }
@@ -74,7 +74,7 @@ TEST( Problem_173, Given_Case ) {
 
 // Problem 175
 TEST( Problem_175, Test_Case ) {
-  std::vector<transition> transitions = {
+  std::vector<transition> const transitions = {
     {'a', 'a',   0.9},
     {'a', 'b', 0.075},
     {'a', 'c', 0.025},
@@ -126,8 +126,8 @@ TEST( Problem_178, Test_Case ) {
     count55.push_back( diceSim( { 5, 5 } ) );
   }
 
-  double average56 = std::accumulate( count56.begin(), count56.end(), 0 ) / 10000.0;
-  double average55 = std::accumulate( count55.begin(), count55.end(), 0 ) / 10000.0;
+  double const average56 = std::accumulate( count56.begin(), count56.end(), 0 ) / 10000.0;
+  double const average55 = std::accumulate( count55.begin(), count55.end(), 0 ) / 10000.0;
 
   std::cout << "55: " << average55 << '\n';
   std::cout << "56: " << average56 << '\n';
@@ -160,18 +160,18 @@ TEST( Problem_179, Given_Case ) {
 // Problem 180
 TEST( Problem_180, Given_Case_1 ) {
   // If the stack is [1, 2, 3, 4, 5], it should become [1, 5, 2, 4, 3]
-  std::stack<int> s( { 1, 2, 3, 4, 5 } );
-  std::stack<int> result = interleave( s );
-  std::stack<int> expected( { 1, 5, 2, 4, 3 } );
+  std::stack<int> const s( { 1, 2, 3, 4, 5 } );
+  std::stack<int> const result = interleave( s );
+  std::stack<int> const expected( { 1, 5, 2, 4, 3 } );
 
   EXPECT_EQ( result, expected );
 }
 
 TEST( Problem_180, Given_Case_2 ) {
   // If the stack is [1, 2, 3, 4], it should become [1, 4, 2, 3]
-  std::stack<int> s( { 1, 2, 3, 4 } );
-  std::stack<int> result = interleave( s );
-  std::stack<int> expected( { 1, 4, 2, 3 } );
+  std::stack<int> const s( { 1, 2, 3, 4 } );
+  std::stack<int> const result = interleave( s );
+  std::stack<int> const expected( { 1, 4, 2, 3 } );
 
   EXPECT_EQ( result, expected );
 }

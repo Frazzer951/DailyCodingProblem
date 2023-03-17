@@ -47,8 +47,8 @@ inline bool search( std::vector<std::vector<char>> board, int row, int col, std:
 }
 
 inline bool find_word( std::vector<std::vector<char>> board, const std::string &word ) {
-  int M = (int) board.size();
-  int N = (int) board[0].size();
+  int const M = (int) board.size();
+  int const N = (int) board[0].size();
 
   for ( int row = 0; row < M; row++ ) {
     for ( int col = 0; col < N; col++ ) {

@@ -16,13 +16,13 @@ TEST( Problem_121, Given_Case ) { EXPECT_TRUE( k_palindrome( "waterrfetawx", 2 )
 
 // Problem 122
 TEST( Problem_122, Given_Case ) {
-  std::vector<std::vector<int>> coins = {
+  std::vector<std::vector<int>> const coins = {
     {0, 3, 1, 1},
     {2, 0, 0, 4},
     {1, 5, 3, 1}
   };
 
-  int result = maxCoins( coins );
+  int const result = maxCoins( coins );
 
   EXPECT_EQ( 12, result );
 }
@@ -112,9 +112,9 @@ TEST( Problem_125, Test_Case ) {
 // Problem 126
 TEST( Problem_126, Given_Case ) {
   // [1, 2, 3, 4, 5, 6] rotated by two becomes [3, 4, 5, 6, 1, 2].
-  std::vector<int> v        = { 1, 2, 3, 4, 5, 6 };
-  std::vector<int> expected = { 3, 4, 5, 6, 1, 2 };
-  std::vector<int> result   = rotateVector( v, 2 );
+  std::vector<int> const v        = { 1, 2, 3, 4, 5, 6 };
+  std::vector<int> const expected = { 3, 4, 5, 6, 1, 2 };
+  std::vector<int> const result   = rotateVector( v, 2 );
 
   EXPECT_EQ( result, expected );
 }
@@ -131,8 +131,8 @@ TEST( Problem_127, Given_Case ) {
 
   auto       *x      = new slNode<int>( { 9, 9 } );
   auto       *y      = new slNode<int>( { 5, 2 } );
-  slNode<int> result = *sum( x, y );
-  slNode<int> expected( { 4, 2, 1 } );
+  slNode<int> const result = *sum( x, y );
+  slNode<int> const expected( { 4, 2, 1 } );
 
   EXPECT_EQ( result, expected );
 }
@@ -148,8 +148,8 @@ TEST( Problem_127, Test_Case ) {
 
   auto       *x      = new slNode<int>( { 9, 9 } );
   auto       *y      = new slNode<int>( { 9, 9, 9 } );
-  slNode<int> result = *sum( x, y );
-  slNode<int> expected( { 8, 9, 0, 1 } );
+  slNode<int> const result = *sum( x, y );
+  slNode<int> const expected( { 8, 9, 0, 1 } );
 
   EXPECT_EQ( result, expected );
 }
@@ -168,17 +168,17 @@ TEST( Problem_128, Given_Case ) {
     Move 1 to 3
   */
 
-  std::vector<std::pair<int, int>> expected = { std::make_pair( 1, 3 ), std::make_pair( 1, 2 ), std::make_pair( 3, 2 ),
+  std::vector<std::pair<int, int>> const expected = { std::make_pair( 1, 3 ), std::make_pair( 1, 2 ), std::make_pair( 3, 2 ),
                                                 std::make_pair( 1, 3 ), std::make_pair( 2, 1 ), std::make_pair( 2, 3 ),
                                                 std::make_pair( 1, 3 ) };
-  std::vector<std::pair<int, int>> result   = solveHanoi( 3 );
+  std::vector<std::pair<int, int>> const result   = solveHanoi( 3 );
 
   EXPECT_EQ( result, expected );
 }
 
 // Problem 129
 TEST( Problem_129, Given_Case ) {
-  double result = squareroot( 9 );
+  double const result = squareroot( 9 );
 
   EXPECT_DOUBLE_EQ( result, 3.0 );
 }
@@ -188,9 +188,9 @@ TEST( Problem_130, Given_Case ) {
   // [5, 2, 4, 0, 1] k = 2
   // Return 3
 
-  std::vector<int> stocks = { 5, 2, 4, 0, 1 };
+  std::vector<int> const stocks = { 5, 2, 4, 0, 1 };
 
-  int result = stonks( stocks, 2 );
+  int const result = stonks( stocks, 2 );
 
   EXPECT_EQ( result, 3 );
 }

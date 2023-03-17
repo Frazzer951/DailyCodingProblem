@@ -17,8 +17,8 @@ inline int get_height( btNode<int> *node ) {
 
 inline bool is_height_balanced( btNode<int> *root ) {
   if ( root == nullptr ) return true;
-  int l_h = get_height( root->left );
-  int r_h = get_height( root->right );
+  int const l_h = get_height( root->left );
+  int const r_h = get_height( root->right );
   if ( abs( l_h - r_h ) > 1 ) return false;
   return is_height_balanced( root->left ) && is_height_balanced( root->right );
 }

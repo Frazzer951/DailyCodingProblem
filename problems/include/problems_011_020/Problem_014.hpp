@@ -19,15 +19,15 @@ inline double monteCarloPi( int n ) {
   double total    = 0;
 
   for ( int i = 0; i < n; ++i ) {
-    double x = ( (double) rand() ) / (double) RAND_MAX;
-    double y = ( (double) rand() ) / (double) RAND_MAX;
+    double const x = ( (double) rand() ) / (double) RAND_MAX;
+    double const y = ( (double) rand() ) / (double) RAND_MAX;
 
     total++;
 
     if ( x * x + y * y <= 1 ) { inCircle++; }
   }
 
-  double PI_Guess = 4.0 * inCircle / total;
+  double const PI_Guess = 4.0 * inCircle / total;
 
   return PI_Guess;
 }

@@ -18,7 +18,7 @@ inline int smallestIndex( std::vector<int> arr, int i ) {
 
 inline std::vector<int> sortWithReverse( std::vector<int> arr ) {
   for ( int i = 0; i < arr.size(); i++ ) {
-    int min_index = smallestIndex( arr, i );
+    int const min_index = smallestIndex( arr, i );
     std::reverse( arr.begin() + i, arr.begin() + min_index + 1 );
   }
   return arr;

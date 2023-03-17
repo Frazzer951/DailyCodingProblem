@@ -28,7 +28,7 @@ inline std::vector<std::string> split( std::string str, char delim = ' ' ) {
 
 inline int getIntVecMax( std::vector<int> v ) {
   int max = v[0];
-  for ( int i : v ) {
+  for ( int const i : v ) {
     if ( i > max ) { max = i; }
   }
   return max;
@@ -45,20 +45,20 @@ inline int getIntVecMin( std::vector<int> v, unsigned int exclude_index = -1 ) {
 
 inline std::string intVecToStr( const std::vector<int> &v ) {
   std::string str;
-  for ( int i : v ) { str += std::to_string( i ) + ' '; }
+  for ( int const i : v ) { str += std::to_string( i ) + ' '; }
   return str;
 }
 
 inline int sum( const std::vector<int> &v ) {
   int sum = 0;
 
-  for ( int x : v ) { sum += x; }
+  for ( int const x : v ) { sum += x; }
 
   return sum;
 }
 
 inline int mod( int a, int b ) {
-  int r = a % b;
+  int const r = a % b;
   return r < 0 ? r + b : r;
 }
 

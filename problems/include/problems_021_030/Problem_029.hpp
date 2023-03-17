@@ -17,7 +17,7 @@ assume the string to be decoded is valid.
 
 inline int countChar( const std::string &str, char c ) {
   int count = 0;
-  for ( char i : str ) {
+  for ( char const i : str ) {
     if ( i == c )
       count++;
     else
@@ -30,8 +30,8 @@ inline std::string runLengthEncode( std::string str ) {
   std::string return_str;
 
   while ( !str.empty() ) {
-    char c     = str[0];
-    int  count = countChar( str, c );
+    char const c     = str[0];
+    int  const count = countChar( str, c );
     return_str += std::to_string( count ) + c;
     str        = str.substr( count );
   }

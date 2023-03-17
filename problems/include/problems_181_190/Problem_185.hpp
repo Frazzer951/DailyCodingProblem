@@ -33,18 +33,18 @@ struct Rect {
 };
 
 inline bool inRect( Rect r, std::pair<int, int> point ) {
-  int x = point.first;
-  int y = point.second;
+  int const x = point.first;
+  int const y = point.second;
   if ( x < r.top_left.first || x > r.top_left.first + r.dimensions.first ) return false;
   if ( y < r.top_left.second || y > r.top_left.second + r.dimensions.second ) return false;
   return true;
 }
 
 inline int intersectArea( Rect r1, Rect r2 ) {
-  int x_shift = std::min( r1.top_left.first, r2.top_left.first );
-  int y_shift = std::min( r1.top_left.second, r2.top_left.second );
-  int x_size  = std::max( r1.top_left.first + r1.dimensions.first, r2.top_left.first + r2.dimensions.first );
-  int y_size  = std::max( r1.top_left.second + r1.dimensions.second, r2.top_left.second + r2.dimensions.second );
+  int const x_shift = std::min( r1.top_left.first, r2.top_left.first );
+  int const y_shift = std::min( r1.top_left.second, r2.top_left.second );
+  int const x_size  = std::max( r1.top_left.first + r1.dimensions.first, r2.top_left.first + r2.dimensions.first );
+  int const y_size  = std::max( r1.top_left.second + r1.dimensions.second, r2.top_left.second + r2.dimensions.second );
 
   std::vector<std::vector<bool>> board( x_size, std::vector( y_size, false ) );
 

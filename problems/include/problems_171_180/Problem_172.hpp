@@ -30,7 +30,7 @@ inline bool testSubstring( std::string s, const std::vector<std::string> &words 
   }
 
   std::set<std::string> set;
-  size_t                size = splitWords.size();
+  size_t                const size = splitWords.size();
   for ( size_t i = 0; i < size; ++i ) set.insert( splitWords[i] );
   splitWords.assign( set.begin(), set.end() );
   std::sort( splitWords.begin(), splitWords.end() );
@@ -42,10 +42,10 @@ inline std::vector<int> indiciesOfSubstrings( const std::string &s, std::vector<
   std::sort( words.begin(), words.end() );
   std::vector<int> indecies;
 
-  size_t lengthOfSubstr = words[0].size() * words.size();
+  size_t const lengthOfSubstr = words[0].size() * words.size();
 
   for ( int i = 0; i <= s.size() - lengthOfSubstr; i++ ) {
-    std::string curSubstr = s.substr( i, lengthOfSubstr );
+    std::string const curSubstr = s.substr( i, lengthOfSubstr );
     if ( testSubstring( curSubstr, words ) ) indecies.push_back( i );
   }
   return indecies;

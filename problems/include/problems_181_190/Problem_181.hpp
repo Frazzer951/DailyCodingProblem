@@ -22,7 +22,7 @@ inline std::vector<std::string> splitPalindrome( std::string str ) {
 
   while ( !str.empty() ) {
     for ( size_t i = str.size(); i > 0; i-- ) {
-      std::string substr = str.substr( 0, i );
+      std::string const substr = str.substr( 0, i );
       if ( isPalindrome( substr ) ) {
         palindromes.push_back( substr );
         str = str.substr( i );

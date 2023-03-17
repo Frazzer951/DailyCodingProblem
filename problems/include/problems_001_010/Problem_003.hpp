@@ -68,9 +68,9 @@ inline SerNode *deserialize( const std::string &str ) {
 
   auto colon_index = str.find( ':' );
 
-  std::string node_name = str.substr( 0, colon_index );
+  std::string const node_name = str.substr( 0, colon_index );
 
-  std::string nodes = str.substr( colon_index + 1 );
+  std::string const nodes = str.substr( colon_index + 1 );
 
   if ( nodes.size() == 2 ) { return new SerNode( node_name ); }    // If there are no sub nodes return empty node
 
@@ -94,13 +94,13 @@ inline int prob_3() {
   SerNode leftleft( "left.left" );
   SerNode left( "left", &leftleft );
   SerNode right( "right" );
-  SerNode root( "root", &left, &right );
+  SerNode const root( "root", &left, &right );
 
-  std::string serialized_root = serialize( root );
+  std::string const serialized_root = serialize( root );
 
   std::cout << "Root serialized: " << serialized_root << '\n';
 
-  SerNode deser_root = *deserialize( serialized_root );
+  SerNode const deser_root = *deserialize( serialized_root );
 
   std::cout << "Original root left.left:    " << root.left().left().value() << '\n';
   std::cout << "Deserialize root left.left: " << deser_root.left().left().value() << '\n';

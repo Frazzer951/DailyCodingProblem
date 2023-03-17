@@ -49,7 +49,7 @@ Should return null, since we have an infinite loop.
 inline int pathScore( const std::string &path ) {
   std::map<char, int> counts;
   int                 max_count = 0;
-  for ( char c : path ) { counts[c]++; }
+  for ( char const c : path ) { counts[c]++; }
   for ( auto &[_, count] : counts ) { max_count = ( count > max_count ) ? count : max_count; }
   return max_count;
 }
@@ -58,11 +58,11 @@ inline int best_score( const std::vector<std::vector<int>> &paths, std::string n
   int best_score = 0;
   for ( const std::vector<int> &v : paths ) {
     std::string path;
-    for ( int i : v ) {
+    for ( int const i : v ) {
       if ( i == -1 ) return -1;
       path += nodes[i];
     }
-    int score  = pathScore( path );
+    int const score  = pathScore( path );
     best_score = ( score > best_score ) ? score : best_score;
   }
   return best_score;

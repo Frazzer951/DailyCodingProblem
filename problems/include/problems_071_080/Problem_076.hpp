@@ -54,8 +54,8 @@ inline int rows_to_remove( std::vector<std::string> arr ) {
 
   for ( int i = 0; i < arr.size(); i++ ) {
     for ( int j = 0; j < arr[0].size() - 1; j++ ) {
-      char a = arr[j][i];
-      char b = arr[j + 1][i];
+      char const a = arr[j][i];
+      char const b = arr[j + 1][i];
       if ( a > b ) {
         count++;
         break;

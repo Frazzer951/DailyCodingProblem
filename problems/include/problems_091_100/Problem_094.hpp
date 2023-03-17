@@ -16,19 +16,19 @@ inline std::pair<int, int> helper( btNode<int> *root ) {
   if ( root == nullptr ) return std::make_pair( std::numeric_limits<int>::min(), 0 );
 
   auto left         = helper( root->left );
-  int  left_max_sum = left.first;
-  int  left_path    = left.second;
+  int  const left_max_sum = left.first;
+  int  const left_path    = left.second;
 
   auto right         = helper( root->right );
-  int  right_max_sum = right.first;
-  int  right_path    = right.second;
+  int  const right_max_sum = right.first;
+  int  const right_path    = right.second;
 
   // Calculates the maximum path through the root
-  int root_max_sum = std::max( 0, left_path ) + root->value + std::max( 0, right_path );
+  int const root_max_sum = std::max( 0, left_path ) + root->value + std::max( 0, right_path );
   // Find the maximum path, including or excluding the root
-  int max_sum      = std::max( left_max_sum, std::max( root_max_sum, right_max_sum ) );
+  int const max_sum      = std::max( left_max_sum, std::max( root_max_sum, right_max_sum ) );
   // Find the maximum path including and ending at the root
-  int root_path    = std::max( left_path, std::max( right_path, 0 ) ) + root->value;
+  int const root_path    = std::max( left_path, std::max( right_path, 0 ) ) + root->value;
 
   return std::make_pair( max_sum, root_path );
 }

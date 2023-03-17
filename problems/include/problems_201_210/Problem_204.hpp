@@ -35,8 +35,8 @@ inline int findDepthRight( btNode<int> *root ) {
 inline int getCount( btNode<int> *root ) {
   if ( root == nullptr ) return 0;
 
-  int left  = findDepthLeft( root );
-  int right = findDepthRight( root );
+  int const left  = findDepthLeft( root );
+  int const right = findDepthRight( root );
 
   if ( left == right ) return ( 2 << left ) - 1;
 

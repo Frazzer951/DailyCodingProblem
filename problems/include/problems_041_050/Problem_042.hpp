@@ -23,7 +23,7 @@ inline std::vector<int> subset_sum( std::vector<int> nums, int k ) {
 
   for ( int i = 1; i < nums.size() + 1; i++ ) {
     for ( int j = 1; j < k + 1; j++ ) {
-      int last = nums[i - 1];
+      int const last = nums[i - 1];
       if ( last > j )
         A[i][j] = A[i - 1][j];
       else {

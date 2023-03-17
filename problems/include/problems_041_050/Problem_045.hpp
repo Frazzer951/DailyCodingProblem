@@ -13,8 +13,8 @@ to 7 (inclusive).
 inline int rand5() { return rand() % 5 + 1; }
 
 inline int rand7() {
-  int r1 = rand5();
-  int r2 = rand5();
+  int const r1 = rand5();
+  int const r2 = rand5();
   if ( r2 <= 3 ) return r1;
   if ( r2 == 4 ) {
     if ( r1 <= 3 ) return 6;

@@ -44,7 +44,7 @@ inline std::pair<long, long> busiest_period( std::vector<Timelog> entries ) {
 
   // Keep track of the number of people at each entry.
   for ( int i = 0; i < entries.size(); i++ ) {
-    Timelog entry = entries[i];
+    Timelog const entry = entries[i];
     if ( entry.type == Type::enter )
       num_people += entry.count;
     else

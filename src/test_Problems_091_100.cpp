@@ -22,14 +22,14 @@ TEST( Problem_92, Given_Case ) {
   should return ['CSC100', 'CSC200', 'CSCS300'].
   */
 
-  std::map<std::string, std::vector<std::string>> course_dependencies = {
+  std::map<std::string, std::vector<std::string>> const course_dependencies = {
     {"CSC300", { "CSC100", "CSC200" }},
     {"CSC200",           { "CSC100" }},
     {"CSC100",                     {}}
   };
 
-  std::vector<std::string> expected = { "CSC100", "CSC200", "CSC300" };
-  std::vector<std::string> result   = course_order( course_dependencies );
+  std::vector<std::string> const expected = { "CSC100", "CSC200", "CSC300" };
+  std::vector<std::string> const result   = course_order( course_dependencies );
 
   EXPECT_EQ( expected, result );
 }
@@ -50,7 +50,7 @@ TEST( Problem_93, Test_Case_1 ) {
   root->right->right->left  = new btNode( 'c' );
 
   btNode<char> *result      = largest_subBST( root );
-  int           result_size = largest_subBST_size( root );
+  int           const result_size = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );
@@ -68,7 +68,7 @@ TEST( Problem_94, Test_Case ) {
   root->right->right       = new btNode( 9 );
   root->right->right->left = new btNode( 2 );
 
-  int result = max_path_sum( root );
+  int const result = max_path_sum( root );
 
   EXPECT_EQ( 28, result );
 }
@@ -80,7 +80,7 @@ TEST( Problem_95, Given_Case_1 ) {
   */
 
   std::vector<int> nums     = { 1, 2, 3 };
-  std::vector<int> expected = { 1, 3, 2 };
+  std::vector<int> const expected = { 1, 3, 2 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
 }
@@ -90,7 +90,7 @@ TEST( Problem_95, Given_Case_2 ) {
   */
 
   std::vector<int> nums     = { 1, 3, 2 };
-  std::vector<int> expected = { 2, 1, 3 };
+  std::vector<int> const expected = { 2, 1, 3 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
 }
@@ -100,7 +100,7 @@ TEST( Problem_95, Given_Case_3 ) {
   */
 
   std::vector<int> nums     = { 3, 2, 1 };
-  std::vector<int> expected = { 1, 2, 3 };
+  std::vector<int> const expected = { 1, 2, 3 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
 }
@@ -112,9 +112,9 @@ TEST( Problem_96, Given_Case ) {
   [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
   */
 
-  std::vector<int>              nums     = { 1, 2, 3 };
-  std::vector<std::vector<int>> result   = getPermutations( nums );
-  std::vector<std::vector<int>> expected = {
+  std::vector<int>              const nums     = { 1, 2, 3 };
+  std::vector<std::vector<int>> const result   = getPermutations( nums );
+  std::vector<std::vector<int>> const expected = {
     {1, 2, 3},
     {1, 3, 2},
     {2, 1, 3},
@@ -168,7 +168,7 @@ TEST( Problem_98, Given_Case ) {
   exists(board, "ABCB") returns false.
   */
 
-  std::vector<std::vector<char>> board = {
+  std::vector<std::vector<char>> const board = {
     {'A', 'B', 'C', 'E'},
     {'S', 'F', 'C', 'S'},
     {'A', 'D', 'E', 'E'}
@@ -187,8 +187,8 @@ TEST( Problem_99, Given_Case ) {
   Return its length: 4.
   */
 
-  std::vector<int> arr    = { 100, 4, 200, 1, 3, 2 };
-  int              result = findLongestConseqSubseq( arr );
+  std::vector<int> const arr    = { 100, 4, 200, 1, 3, 2 };
+  int              const result = findLongestConseqSubseq( arr );
   EXPECT_EQ( 4, result );
 }
 
@@ -199,9 +199,9 @@ TEST( Problem_100, Given_Case ) {
   Output: 2
   */
 
-  std::vector<std::pair<int, int>> points = { std::make_pair( 0, 0 ), std::make_pair( 1, 1 ), std::make_pair( 1, 2 ) };
+  std::vector<std::pair<int, int>> const points = { std::make_pair( 0, 0 ), std::make_pair( 1, 1 ), std::make_pair( 1, 2 ) };
 
-  int result = minSteps( points );
+  int const result = minSteps( points );
 
   EXPECT_EQ( 2, result );
 }

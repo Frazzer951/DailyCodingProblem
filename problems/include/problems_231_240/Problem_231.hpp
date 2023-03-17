@@ -40,7 +40,7 @@ inline std::string noRepeatingAdjacentCharacters( const std::string &input ) {
   std::vector<char> result = { c };
 
   while ( !heap.empty() ) {
-    Letter last = { count + 1, c };
+    Letter const last = { count + 1, c };
     l           = heap.top();
     heap.pop();
     count = l.priority;

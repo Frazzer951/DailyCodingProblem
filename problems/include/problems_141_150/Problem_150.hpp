@@ -19,9 +19,9 @@ inline std::vector<std::pair<int, int>> nearestPoints( const std::vector<std::pa
   std::map<std::pair<int, int>, double> pointDistance;
 
   for ( auto p : points ) {
-    double xLeng    = p.first - central.first;
-    double yLeng    = p.second - central.second;
-    double distance = sqrt( ( xLeng * xLeng ) + ( yLeng * yLeng ) );
+    double const xLeng    = p.first - central.first;
+    double const yLeng    = p.second - central.second;
+    double const distance = sqrt( ( xLeng * xLeng ) + ( yLeng * yLeng ) );
 
     pointDistance[p] = distance;
   }

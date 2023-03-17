@@ -14,8 +14,8 @@
 // Problem 161
 TEST( Problem_161, Given_Case ) {
   // given 1111 0000 1111 0000 1111 0000 1111 0000, return 0000 1111 0000 1111 0000 1111 0000 1111
-  long int x      = 0xF0F0F0F0;
-  long int result = reverse( x );
+  long int const x      = 0xF0F0F0F0;
+  long int const result = reverse( x );
 
   EXPECT_EQ( result, 0x0F0F0F0F );
 }
@@ -38,9 +38,9 @@ TEST( Problem_162, Given_Case ) {
     f
   */
 
-  std::vector<std::string> lst      = { "dog", "cat", "apple", "apricot", "fish" };
-  std::vector<std::string> expected = { "d", "c", "app", "apr", "f" };
-  std::vector<std::string> result   = shortest_unique_prefix( lst );
+  std::vector<std::string> const lst      = { "dog", "cat", "apple", "apricot", "fish" };
+  std::vector<std::string> const expected = { "d", "c", "app", "apr", "f" };
+  std::vector<std::string> const result   = shortest_unique_prefix( lst );
 
   EXPECT_EQ( result, expected );
 }
@@ -50,27 +50,27 @@ TEST( Problem_163, Given_Case ) {
   // [15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-'] should return 5, since it is equivalent to
   // ( ( 15 / ( 7 - ( 1 + 1 ) ) ) * 3 ) - ( 2 + ( 1 + 1 ) ) = 5.
 
-  std::vector<std::string> equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
-  double                   result   = solve( equation );
+  std::vector<std::string> const equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
+  double                   const result   = solve( equation );
   EXPECT_DOUBLE_EQ( result, 5.0 );
 }
 
 // Problem 164
 TEST( Problem_164, Test_Case_1 ) {
-  std::vector<int> arr = { 1, 2, 3, 4, 3, 5, 6, 7, 8, 9 };
+  std::vector<int> const arr = { 1, 2, 3, 4, 3, 5, 6, 7, 8, 9 };
   EXPECT_EQ( findDuplicate( arr ), 3 );
 }
 
 TEST( Problem_164, Test_Case_2 ) {
-  std::vector<int> arr = { 1, 2, 3, 4, 9, 5, 6, 7, 8, 9 };
+  std::vector<int> const arr = { 1, 2, 3, 4, 9, 5, 6, 7, 8, 9 };
   EXPECT_EQ( findDuplicate( arr ), 9 );
 }
 
 // Problem 165
 TEST( Problem_165, Given_Case ) {
-  std::vector<int> arr      = { 3, 4, 9, 6, 1 };
-  std::vector<int> expected = { 1, 1, 2, 1, 0 };
-  std::vector<int> result   = rightSmaller( arr );
+  std::vector<int> const arr      = { 3, 4, 9, 6, 1 };
+  std::vector<int> const expected = { 1, 1, 2, 1, 0 };
+  std::vector<int> const result   = rightSmaller( arr );
   EXPECT_EQ( result, expected );
 }
 
@@ -79,7 +79,7 @@ TEST( Problem_166, Given_Case ) {
   // For example, given the input [[1, 2], [3], [], [4, 5, 6]], calling next() repeatedly should output 1, 2, 3, 4,
   // 5, 6.
 
-  std::vector<std::vector<int>> arr = {
+  std::vector<std::vector<int>> const arr = {
     { 1, 2 },
     { 3 },
     {},
@@ -108,13 +108,13 @@ TEST( Problem_166, Given_Case ) {
 TEST( Problem_167, Given_Case ) {
   // given the list ["code", "edoc", "da", "d"], return [(0, 1), (1, 0), (2, 3)]
 
-  std::vector<std::string>         words    = { "code", "edoc", "da", "d" };
-  std::vector<std::pair<int, int>> expected = {
+  std::vector<std::string>         const words    = { "code", "edoc", "da", "d" };
+  std::vector<std::pair<int, int>> const expected = {
     {0, 1},
     {1, 0},
     {2, 3}
   };
-  std::vector<std::pair<int, int>> result = palindromes( words );
+  std::vector<std::pair<int, int>> const result = palindromes( words );
 
   EXPECT_EQ( result, expected );
 }
@@ -131,17 +131,17 @@ TEST( Problem_168, Given_Case ) {
      [8, 5, 2],
      [9, 6, 3]]
   */
-  std::vector<std::vector<int>> arr = {
+  std::vector<std::vector<int>> const arr = {
     {1, 2, 3},
     {4, 5, 6},
     {7, 8, 9}
   };
-  std::vector<std::vector<int>> expected = {
+  std::vector<std::vector<int>> const expected = {
     {7, 4, 1},
     {8, 5, 2},
     {9, 6, 3}
   };
-  std::vector<std::vector<int>> result = rotate90( arr );
+  std::vector<std::vector<int>> const result = rotate90( arr );
 
   EXPECT_EQ( result, expected );
 }
@@ -173,9 +173,9 @@ TEST( Problem_170, Given_Case_1 ) {
   // given start = "dog", end = "cat", and dictionary = {"dot", "dop", "dat", "cat"}, return ["dog", "dot", "dat",
   // "cat"].
 
-  std::vector<std::string> dict     = { "dot", "dop", "dat", "cat" };
-  std::vector<std::string> expected = { "dog", "dot", "dat", "cat" };
-  std::vector<std::string> result   = shortestTransform( "dog", "cat", dict );
+  std::vector<std::string> const dict     = { "dot", "dop", "dat", "cat" };
+  std::vector<std::string> const expected = { "dog", "dot", "dat", "cat" };
+  std::vector<std::string> const result   = shortestTransform( "dog", "cat", dict );
 
   EXPECT_EQ( result, expected );
 }
@@ -183,9 +183,9 @@ TEST( Problem_170, Given_Case_1 ) {
 TEST( Problem_170, Given_Case_2 ) {
   // Given start = "dog", end = "cat", and dictionary = {"dot", "tod", "dat", "dar"}, return {}
 
-  std::vector<std::string> dict     = { "dot", "tod", "dat", "dar" };
-  std::vector<std::string> expected = {};
-  std::vector<std::string> result   = shortestTransform( "dog", "cat", dict );
+  std::vector<std::string> const dict     = { "dot", "tod", "dat", "dar" };
+  std::vector<std::string> const expected = {};
+  std::vector<std::string> const result   = shortestTransform( "dog", "cat", dict );
 
   EXPECT_EQ( result, expected );
 }

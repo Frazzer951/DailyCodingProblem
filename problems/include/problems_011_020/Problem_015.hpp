@@ -12,7 +12,7 @@ from the stream with uniform probability.
 #include <vector>
 
 inline int randElement( std::vector<int> v ) {
-  int index = (int) ( rand() % v.size() );
+  int const index = (int) ( rand() % v.size() );
 
   return v[index];
 }

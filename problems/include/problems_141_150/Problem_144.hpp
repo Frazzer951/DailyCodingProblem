@@ -18,8 +18,8 @@ Follow-up: If you can preprocess the array, can you do this in constant time?
 
 inline int nearest( std::vector<int> arr, int i ) {
   for ( int j = 1; j < arr.size(); j++ ) {
-    int low  = i - j;
-    int high = i + j;
+    int const low  = i - j;
+    int const high = i + j;
     if ( 0 <= low && arr[low] > arr[i] ) return low;
     if ( high < arr.size() && arr[high] > arr[i] ) return high;
   }

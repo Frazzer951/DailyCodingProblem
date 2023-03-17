@@ -19,7 +19,7 @@ inline std::vector<int> sortPairs( std::vector<int> arr ) {
     for ( int j = i + 1; j < arr.size(); j++ ) {
       if ( sorted[i] == sorted[j] ) {
         if ( j == i + 1 ) break;
-        int temp      = sorted[i + 1];
+        int const temp      = sorted[i + 1];
         sorted[i + 1] = sorted[j];
         sorted[j]     = temp;
         break;

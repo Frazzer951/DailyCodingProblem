@@ -14,7 +14,7 @@ namespace prob71 {
   inline int rand7() { return rand() % 7 + 1; }
 
   inline int rand5() {
-    int r = rand7();
+    int const r = rand7();
     if ( r >= 1 && r <= 5 ) return r;
     return rand5();
   }

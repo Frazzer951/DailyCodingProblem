@@ -13,7 +13,7 @@
 
 // Problem 051
 TEST( Problem_51, Test_Case ) {
-  std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+  std::vector<int> const arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
   auto shuffled = shuffle( arr );
 }
@@ -79,7 +79,7 @@ TEST( Problem_53, enqueue_dequeue ) {
 
 // Problem 054
 TEST( Problem_54, valid_sudoku_1 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -95,7 +95,7 @@ TEST( Problem_54, valid_sudoku_1 ) {
 }
 
 TEST( Problem_54, valid_sudoku_2 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {5, 3, 4, 6, 7, 8, 9, 1, 2},
     {6, 7, 2, 1, 9, 5, 3, 4, 8},
     {1, 9, 8, 3, 4, 2, 5, 6, 7},
@@ -111,7 +111,7 @@ TEST( Problem_54, valid_sudoku_2 ) {
 }
 
 TEST( Problem_54, invalid_sudoku_1 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {1, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -127,7 +127,7 @@ TEST( Problem_54, invalid_sudoku_1 ) {
 }
 
 TEST( Problem_54, invalid_sudoku_2 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {2, 0, 0, 0, 0, 0, 0, 0, 2},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -143,7 +143,7 @@ TEST( Problem_54, invalid_sudoku_2 ) {
 }
 
 TEST( Problem_54, invalid_sudoku_3 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {3, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 3, 0, 0, 0, 0, 0, 0},
@@ -159,7 +159,7 @@ TEST( Problem_54, invalid_sudoku_3 ) {
 }
 
 TEST( Problem_54, test_case_1 ) {
-  std::vector<std::vector<int>> test_board = {
+  std::vector<std::vector<int>> const test_board = {
     {0, 0, 4, 6, 0, 8, 9, 1, 2},
     {0, 7, 2, 0, 0, 0, 3, 4, 8},
     {1, 0, 0, 3, 4, 2, 5, 0, 7},
@@ -171,7 +171,7 @@ TEST( Problem_54, test_case_1 ) {
     {3, 4, 5, 2, 0, 6, 1, 0, 0}
   };
 
-  std::vector<std::vector<int>> expected_board = {
+  std::vector<std::vector<int>> const expected_board = {
     {5, 3, 4, 6, 7, 8, 9, 1, 2},
     {6, 7, 2, 1, 9, 5, 3, 4, 8},
     {1, 9, 8, 3, 4, 2, 5, 6, 7},
@@ -191,18 +191,18 @@ TEST( Problem_54, test_case_1 ) {
 // Problem 055
 URLShortener urls;
 TEST( Problem_55, shorten_restore ) {
-  std::string url    = "www.google.com";
-  std::string result = urls.restore( urls.shorten( url ) );
+  std::string const url    = "www.google.com";
+  std::string const result = urls.restore( urls.shorten( url ) );
 
   EXPECT_EQ( result, url );
 }
 
 TEST( Problem_55, shorten_same_url ) {
-  std::string url       = "www.frazzer.net";
-  std::string shorten_1 = urls.shorten( url );
-  std::string shorten_2 = urls.shorten( url );
-  std::string restore_1 = urls.restore( shorten_1 );
-  std::string restore_2 = urls.restore( shorten_2 );
+  std::string const url       = "www.frazzer.net";
+  std::string const shorten_1 = urls.shorten( url );
+  std::string const shorten_2 = urls.shorten( url );
+  std::string const restore_1 = urls.restore( shorten_1 );
+  std::string const restore_2 = urls.restore( shorten_2 );
 
   EXPECT_EQ( shorten_1, shorten_2 );
   EXPECT_EQ( url, restore_1 );
@@ -217,7 +217,7 @@ TEST( Problem_57, Given_Case ) {
   // you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"].
 
   auto                     result   = splitString( "the quick brown fox jumps over the lazy dog", 10 );
-  std::vector<std::string> expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
+  std::vector<std::string> const expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
 
   EXPECT_EQ( result, expected );
 }
@@ -226,7 +226,7 @@ TEST( Problem_57, Given_Case ) {
 TEST( Problem_58, Given_Case ) {
   // Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4
 
-  int result = shifted_array_search( { 13, 18, 25, 2, 8, 10 }, 8 );
+  int const result = shifted_array_search( { 13, 18, 25, 2, 8, 10 }, 8 );
 
   EXPECT_EQ( 4, result );
 }
@@ -239,7 +239,7 @@ TEST( Problem_60, Given_Case_1 ) {
   // it would return true, since we can split it up into
   // {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
 
-  bool result = partitions( { 15, 5, 20, 10, 35, 15, 10 } );
+  bool const result = partitions( { 15, 5, 20, 10, 35, 15, 10 } );
 
   EXPECT_TRUE( result );
 }
@@ -248,7 +248,7 @@ TEST( Problem_60, Given_Case_2 ) {
   // Given the multiset {15, 5, 20, 10, 35}, it would return false,
   // since we can't split it up into two subsets that add up to the same sum.
 
-  bool result = partitions( { 15, 5, 20, 10, 35 } );
+  bool const result = partitions( { 15, 5, 20, 10, 35 } );
 
   EXPECT_FALSE( result );
 }

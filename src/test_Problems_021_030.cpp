@@ -13,16 +13,16 @@
 
 // Problem 021
 TEST( Problem_21, Given_Case ) {
-  std::vector<std::pair<int, int>> schedule = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ), std::make_pair( 60, 150 ) };
-  int                              roomsNeeded = findMinRoomsNeeded( schedule );
+  std::vector<std::pair<int, int>> const schedule = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ), std::make_pair( 60, 150 ) };
+  int                              const roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 2 );
 }
 
 TEST( Problem_21, Test_Case ) {
-  std::vector<std::pair<int, int>> schedule = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ),
+  std::vector<std::pair<int, int>> const schedule = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ),
                                                 std::make_pair( 50, 75 ) };
-  int                              roomsNeeded = findMinRoomsNeeded( schedule );
+  int                              const roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 3 );
 }
@@ -32,9 +32,9 @@ TEST( Problem_22, Given_Case_1 ) {
   // For example, given the set of words 'quick', 'brown', 'the', 'fox', and the string "thequickbrownfox", you should
   // return ['the', 'quick', 'brown', 'fox'].
 
-  std::vector<std::string> wordSet  = { "quick", "brown", "the", "fox" };
-  std::string              str      = "thequickbrownfox";
-  std::vector<std::string> expected = { "the", "quick", "brown", "fox" };
+  std::vector<std::string> const wordSet  = { "quick", "brown", "the", "fox" };
+  std::string              const str      = "thequickbrownfox";
+  std::vector<std::string> const expected = { "the", "quick", "brown", "fox" };
   auto                     result   = decompressString( wordSet, str );
 
   EXPECT_EQ( result, expected );
@@ -44,9 +44,9 @@ TEST( Problem_22, Given_Case_2 ) {
   // Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string "bedbathandbeyond", return either
   // ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
 
-  std::vector<std::string> wordSet  = { "bed", "bath", "bedbath", "and", "beyond" };
-  std::string              str      = "bedbathandbeyond";
-  std::vector<std::string> expected = { "bed", "bath", "and", "beyond" };
+  std::vector<std::string> const wordSet  = { "bed", "bath", "bedbath", "and", "beyond" };
+  std::string              const str      = "bedbathandbeyond";
+  std::vector<std::string> const expected = { "bed", "bath", "and", "beyond" };
   auto                     result   = decompressString( wordSet, str );
 
   EXPECT_EQ( result, expected );
@@ -63,31 +63,31 @@ TEST( Problem_23, Given_Case ) {
   7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.
   */
 
-  std::vector<std::vector<bool>> maze = {
+  std::vector<std::vector<bool>> const maze = {
     {false, false, false, false},
     { true,  true, false,  true},
     {false, false, false, false},
     {false, false, false, false}
   };
-  std::pair<int, int> startPos( 3, 0 );
-  std::pair<int, int> endPos( 0, 0 );
-  int                 expectedMoves = 7;
-  int                 moves         = stepsToSolveMaze( maze, startPos, endPos );
+  std::pair<int, int> const startPos( 3, 0 );
+  std::pair<int, int> const endPos( 0, 0 );
+  int                 const expectedMoves = 7;
+  int                 const moves         = stepsToSolveMaze( maze, startPos, endPos );
 
   EXPECT_EQ( moves, expectedMoves );
 }
 
 TEST( Problem_23, Test_Case ) {
-  std::vector<std::vector<bool>> maze = {
+  std::vector<std::vector<bool>> const maze = {
     {false, false, false, false},
     { true,  true, false,  true},
     {false, false, false, false},
     {false, false, false, false}
   };
-  std::pair<int, int> startPos( 3, 3 );
-  std::pair<int, int> endPos( 0, 0 );
-  int                 expectedMoves = 6;
-  int                 moves         = stepsToSolveMaze( maze, startPos, endPos );
+  std::pair<int, int> const startPos( 3, 3 );
+  std::pair<int, int> const endPos( 0, 0 );
+  int                 const expectedMoves = 6;
+  int                 const moves         = stepsToSolveMaze( maze, startPos, endPos );
 
   EXPECT_EQ( moves, expectedMoves );
 }
@@ -170,8 +170,8 @@ TEST( Problem_28, Given_Case ) {
   //"fox  jumps  over", # 2 extra spaces distributed evenly
   //"the   lazy   dog"] # 4 extra spaces distributed evenly
 
-  std::vector<std::string> words            = { "the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog" };
-  std::vector<std::string> expected_strings = { "the  quick brown", "fox  jumps  over", "the   lazy   dog" };
+  std::vector<std::string> const words            = { "the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog" };
+  std::vector<std::string> const expected_strings = { "the  quick brown", "fox  jumps  over", "the   lazy   dog" };
   auto                     returned_strings = padWords( words, 16 );
 
   EXPECT_EQ( returned_strings, expected_strings );
@@ -179,20 +179,20 @@ TEST( Problem_28, Given_Case ) {
 
 // Problem 029
 TEST( Problem_29, Given_case ) {
-  std::string expected_encode = "4A3B2C1D2A";
-  std::string expected_decode = "AAAABBBCCDAA";
-  std::string encode          = runLengthEncode( "AAAABBBCCDAA" );
-  std::string decode          = runLengthDecode( encode );
+  std::string const expected_encode = "4A3B2C1D2A";
+  std::string const expected_decode = "AAAABBBCCDAA";
+  std::string const encode          = runLengthEncode( "AAAABBBCCDAA" );
+  std::string const decode          = runLengthDecode( encode );
 
   EXPECT_EQ( encode, expected_encode );
   EXPECT_EQ( decode, expected_decode );
 }
 
 TEST( Problem_29, Test_case ) {
-  std::string expected_encode = "2B3G2R1E";
-  std::string expected_decode = "BBGGGRRE";
-  std::string encode          = runLengthEncode( "BBGGGRRE" );
-  std::string decode          = runLengthDecode( encode );
+  std::string const expected_encode = "2B3G2R1E";
+  std::string const expected_decode = "BBGGGRRE";
+  std::string const encode          = runLengthEncode( "BBGGGRRE" );
+  std::string const decode          = runLengthDecode( encode );
 
   EXPECT_EQ( encode, expected_encode );
   EXPECT_EQ( decode, expected_decode );
@@ -201,14 +201,14 @@ TEST( Problem_29, Test_case ) {
 // Problem 030
 TEST( Problem_30, Given_Case_1 ) {
   // [2, 1, 2] = 1 unit of water
-  int unitWater = waterHeightMap( { 2, 1, 2 } );
+  int const unitWater = waterHeightMap( { 2, 1, 2 } );
 
   EXPECT_EQ( unitWater, 1 );
 }
 
 TEST( Problem_30, Given_Case_2 ) {
   // [3, 0, 1, 3, 0, 5] = 8 unit of water
-  int unitWater = waterHeightMap( { 3, 0, 1, 3, 0, 5 } );
+  int const unitWater = waterHeightMap( { 3, 0, 1, 3, 0, 5 } );
 
   EXPECT_EQ( unitWater, 8 );
 }

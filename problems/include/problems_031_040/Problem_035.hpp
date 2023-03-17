@@ -16,7 +16,7 @@ become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
 #include <vector>
 
 inline void swap( std::vector<char> &v, int i, int j ) {
-  char temp = v[i];
+  char const temp = v[i];
   v[i]      = v[j];
   v[j]      = temp;
 }
@@ -25,7 +25,7 @@ inline void rgbSort( std::vector<char> &v ) {
   int r = 0;
   int g = 0;
   int b = 0;
-  for ( char i : v ) {
+  for ( char const i : v ) {
     switch ( i ) {
     case 'R': r++; break;
     case 'G': g++; break;

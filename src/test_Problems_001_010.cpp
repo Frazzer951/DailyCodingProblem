@@ -19,13 +19,13 @@ TEST( Problem_1, Custom_Case ) { EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11
 // Problem 002
 TEST( Problem_2, Given_Case_1 ) {
   auto             summed_array = sumArray( { 1, 2, 3, 4, 5 } );
-  std::vector<int> expected_sum = { 120, 60, 40, 30, 24 };
+  std::vector<int> const expected_sum = { 120, 60, 40, 30, 24 };
   EXPECT_EQ( summed_array, expected_sum );
 }
 
 TEST( Problem_2, Given_Case_2 ) {
   auto             summed_array = sumArray( { 3, 2, 1 } );
-  std::vector<int> expected_sum = { 2, 3, 6 };
+  std::vector<int> const expected_sum = { 2, 3, 6 };
   EXPECT_EQ( summed_array, expected_sum );
 }
 
@@ -34,24 +34,24 @@ TEST( Problem_3, Given_Case ) {
   SerNode leftleft( "left.left" );
   SerNode left( "left", &leftleft );
   SerNode right( "right" );
-  SerNode root( "root", &left, &right );
+  SerNode const root( "root", &left, &right );
 
-  std::string serialized_root = serialize( root );
-  SerNode     deser_root      = *deserialize( serialized_root );
+  std::string const serialized_root = serialize( root );
+  SerNode     const deser_root      = *deserialize( serialized_root );
 
   EXPECT_EQ( root.left().left().value(), deser_root.left().left().value() );
 }
 
 // Problem 004
 TEST( Problem_4, Given_Case_1 ) {
-  std::vector<int> arr         = { 3, 4, -1, 1 };
-  int              missing_num = findMissingPositive( arr );
+  std::vector<int> const arr         = { 3, 4, -1, 1 };
+  int              const missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 2 );
 }
 
 TEST( Problem_4, Given_Case_2 ) {
-  std::vector<int> arr         = { 1, 2, 0 };
-  int              missing_num = findMissingPositive( arr );
+  std::vector<int> const arr         = { 1, 2, 0 };
+  int              const missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 3 );
 }
 
@@ -93,27 +93,27 @@ TEST( Problem_6, Test_Case_3 ) {
 
 // Problem 007
 TEST( Problem_7, Given_Case ) {
-  int num_ways = num_encodings( "111" );
+  int const num_ways = num_encodings( "111" );
   EXPECT_EQ( num_ways, 3 );
 }
 
 TEST( Problem_7, Test_Case_1 ) {
-  int num_ways = num_encodings( "" );
+  int const num_ways = num_encodings( "" );
   EXPECT_EQ( num_ways, 1 );
 }
 
 TEST( Problem_7, Test_Case_2 ) {
-  int num_ways = num_encodings( "1" );
+  int const num_ways = num_encodings( "1" );
   EXPECT_EQ( num_ways, 1 );
 }
 
 TEST( Problem_7, Test_Case_3 ) {
-  int num_ways = num_encodings( "11" );
+  int const num_ways = num_encodings( "11" );
   EXPECT_EQ( num_ways, 2 );
 }
 
 TEST( Problem_7, Test_Case_4 ) {
-  int num_ways = num_encodings( "1111" );
+  int const num_ways = num_encodings( "1111" );
   EXPECT_EQ( num_ways, 5 );
 }
 
@@ -146,22 +146,22 @@ TEST( Problem_8, Test_Case_1 ) {
 
 // Problem 009
 TEST( Problem_9, Given_Case_1 ) {
-  int sum = largest_non_adjacent( { 2, 4, 6, 2, 5 } );
+  int const sum = largest_non_adjacent( { 2, 4, 6, 2, 5 } );
   EXPECT_EQ( sum, 13 );
 }
 
 TEST( Problem_9, Given_Case_2 ) {
-  int sum = largest_non_adjacent( { 5, 1, 1, 5 } );
+  int const sum = largest_non_adjacent( { 5, 1, 1, 5 } );
   EXPECT_EQ( sum, 10 );
 }
 
 TEST( Problem_9, Test_Case_1 ) {
-  int sum = largest_non_adjacent( { 5, 1, 1, 5, 1, 3 } );
+  int const sum = largest_non_adjacent( { 5, 1, 1, 5, 1, 3 } );
   EXPECT_EQ( sum, 13 );
 }
 
 TEST( Problem_9, Test_Case_2 ) {
-  int sum = largest_non_adjacent( { 1, 7, 3, 4, 1, 1, 10 } );
+  int const sum = largest_non_adjacent( { 1, 7, 3, 4, 1, 1, 10 } );
   EXPECT_EQ( sum, 21 );
 }
 

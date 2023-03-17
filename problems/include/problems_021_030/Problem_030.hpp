@@ -24,7 +24,7 @@ to the left), so we can trap 8 units of water.
 inline int waterHeightMap( std::vector<int> v ) {
   int unitsOfWater = 0;
 
-  int leftMax  = v[0];
+  int const leftMax  = v[0];
   int rightMax = 0;
 
   for ( unsigned int i = 1; i < v.size(); i++ ) {
@@ -32,7 +32,7 @@ inline int waterHeightMap( std::vector<int> v ) {
 
     for ( unsigned int j = i + 1; j < v.size(); j++ ) { rightMax = ( rightMax > v[j] ) ? rightMax : v[j]; }
 
-    int tempWater = ( leftMax < rightMax ) ? leftMax : rightMax;
+    int const tempWater = ( leftMax < rightMax ) ? leftMax : rightMax;
 
     unitsOfWater += ( tempWater - v[i] > 0 ) ? tempWater - v[i] : 0;
   }

@@ -32,12 +32,12 @@ inline std::vector<int> sumArray( std::vector<int> arr ) {
 
 inline std::string vectorToString( std::vector<int> const &v ) {
   std::string str;
-  for ( int i : v ) str += std::to_string( i ) + " ";
+  for ( int const i : v ) str += std::to_string( i ) + " ";
   return str;
 }
 
 inline void checkArray( std::vector<int> const &v ) {
-  std::vector<int> sumedArray = sumArray( v );
+  std::vector<int> const sumedArray = sumArray( v );
 
   std::cout << "The array [ " << vectorToString( v ) << "] summed to [ " << vectorToString( sumedArray ) << "]\n";
 }

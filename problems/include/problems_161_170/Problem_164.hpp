@@ -13,7 +13,7 @@ linear time and space.
 
 inline int findDuplicate( const std::vector<int> &arr ) {
   std::map<int, int> counts;
-  for ( int x : arr ) {
+  for ( int const x : arr ) {
     counts[x]++;
     if ( counts[x] > 1 ) return x;
   }

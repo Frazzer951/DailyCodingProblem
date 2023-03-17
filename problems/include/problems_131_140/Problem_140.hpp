@@ -17,13 +17,13 @@ Follow-up: Can you do this in linear time and constant space?
 
 inline std::pair<int, int> array_two_elements( const std::vector<int> &arr ) {
   int val = 0;
-  for ( int num : arr ) val = val ^ num;
+  for ( int const num : arr ) val = val ^ num;
 
   // Get rightmost set bit
   val = val & -val;
 
   std::pair<int, int> rets = std::make_pair( 0, 0 );
-  for ( int num : arr ) {
+  for ( int const num : arr ) {
     if ( ( num & val ) != 0 )
       rets.first = rets.first ^ num;
     else

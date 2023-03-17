@@ -16,8 +16,8 @@
 // Problem 252
 TEST( Problem_252, Given_Case ) {
   // For example, 4 / 13 can be represented as 1 / 4 + 1 / 18 + 1 / 468
-  std::vector<int> result   = egyptianFraction( 4, 13 );
-  std::vector<int> expected = { 4, 18, 468 };
+  std::vector<int> const result   = egyptianFraction( 4, 13 );
+  std::vector<int> const expected = { 4, 18, 468 };
 
   EXPECT_EQ( expected, result );
 }
@@ -32,8 +32,8 @@ TEST( Problem_253, Given_Case ) {
       i i   i z
        s     g
    */
-  std::string result   = zigzag( "thisisazigzag", 4 );
-  std::string expected = "t     a     g\n h   s z   a \n  i i   i z  \n   s     g   \n";
+  std::string const result   = zigzag( "thisisazigzag", 4 );
+  std::string const expected = "t     a     g\n h   s z   a \n  i i   i z  \n   s     g   \n";
   EXPECT_EQ( expected, result );
 }
 
@@ -89,15 +89,15 @@ TEST( Problem_255, Given_Case ) {
     [0, 0, 0, 1]
   */
 
-  std::vector<std::vector<int>> graph {
+  std::vector<std::vector<int>> const graph {
     { 0, 1, 3 },
     { 1, 2 },
     { 2 },
     { 3 }
   };
 
-  std::vector<std::vector<int>> result = transitiveClosure( graph );
-  std::vector<std::vector<int>> expected {
+  std::vector<std::vector<int>> const result = transitiveClosure( graph );
+  std::vector<std::vector<int>> const expected {
     {1, 1, 1, 1},
     {0, 1, 1, 0},
     {0, 0, 1, 0},

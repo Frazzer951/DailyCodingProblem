@@ -37,7 +37,7 @@ inline std::vector<std::string> padWords( std::vector<std::string> words, unsign
 
     while ( length < k ) {
       if ( words.empty() ) break;
-      std::string word = words[0];
+      std::string const word = words[0];
       if ( length + word.size() + line.size() <= k ) {
         line.push_back( word );
         words.erase( words.begin() );

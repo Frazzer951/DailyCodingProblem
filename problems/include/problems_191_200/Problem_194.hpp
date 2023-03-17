@@ -20,26 +20,26 @@ inline int numIntersections( std::vector<int> ps, std::vector<int> qs ) {
 
   std::vector<line> lines;
 
-  int y1 = 0;
-  int y2 = 1;
+  int const y1 = 0;
+  int const y2 = 1;
 
   for ( int i = 0; i < ps.size(); i++ ) {
-    int x1 = ps[i];
-    int x2 = qs[i];
+    int const x1 = ps[i];
+    int const x2 = qs[i];
 
-    int A = y2 - y1;
-    int B = x1 - x2;
-    int C = A * x1 + B * y1;
+    int const A = y2 - y1;
+    int const B = x1 - x2;
+    int const C = A * x1 + B * y1;
 
     lines.push_back( { A, B, C } );
   }
 
   for ( int i = 0; i < lines.size(); i++ ) {
     for ( int j = i + 1; j < lines.size(); j++ ) {
-      line l1 = lines[i];
-      line l2 = lines[j];
+      line const l1 = lines[i];
+      line const l2 = lines[j];
 
-      double det = l1.a * l2.b - l2.a * l1.b;
+      double const det = l1.a * l2.b - l2.a * l1.b;
 
       if ( det != 0 ) intersections++;
     }

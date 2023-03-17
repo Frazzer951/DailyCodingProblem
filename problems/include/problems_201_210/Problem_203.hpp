@@ -14,7 +14,7 @@ For example, given [5, 7, 10, 3, 4], return 3.
 
 inline int helper( std::vector<int> arr, int low, int high ) {
   if ( high == low ) return arr[low];
-  int mid = ( high + low ) / 2;
+  int const mid = ( high + low ) / 2;
   if ( arr[mid] < arr[high] )
     high = mid;
   else
@@ -23,8 +23,8 @@ inline int helper( std::vector<int> arr, int low, int high ) {
 }
 
 inline int find_min_element( const std::vector<int> &arr ) {
-  int low  = 0;
-  int high = (int) arr.size() - 1;
+  int const low  = 0;
+  int const high = (int) arr.size() - 1;
   return helper( arr, low, high );
 }
 #endif

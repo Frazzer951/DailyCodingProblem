@@ -13,7 +13,7 @@ inline int longestOneRun( int x ) {
   int maxLength = 0;
   int counter   = 0;
   for ( int i = 0; i < 32; i++ ) {
-    bool bit = ( x & ( 1 << i ) ) != 0;
+    bool const bit = ( x & ( 1 << i ) ) != 0;
     if ( bit )
       counter++;
     else {

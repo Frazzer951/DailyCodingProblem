@@ -29,7 +29,7 @@ public:
 
   int dequeue() {
     if ( s1.empty() ) { throw std::out_of_range( "There are no items in the Queue!" ); }
-    int x = s1.top();
+    int const x = s1.top();
     s1.pop();
     return x;
   }

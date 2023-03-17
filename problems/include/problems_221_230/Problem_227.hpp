@@ -18,7 +18,7 @@ inline std::vector<std::pair<int, int>> get_neighbors( std::pair<int, int> locat
   int i = location.first;
   int j = location.second;
 
-  std::vector<std::pair<int, int>> possible_neighbors = {
+  std::vector<std::pair<int, int>> const possible_neighbors = {
     {i - 1, j - 1},
     {i - 1,     j},
     {i - 1, j + 1},
@@ -63,7 +63,7 @@ inline std::vector<std::string> boggle( std::vector<std::vector<std::string>> gr
 
   for ( int row = 0; row < grid.size(); row++ ) {
     for ( int col = 0; col < grid.size(); col++ ) {
-      std::string word = grid[row][col];
+      std::string const word = grid[row][col];
       search( std::make_pair( row, col ), grid, visited, word, result, dictionary );
     }
   }

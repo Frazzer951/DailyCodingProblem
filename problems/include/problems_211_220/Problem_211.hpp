@@ -15,7 +15,7 @@ inline std::vector<int> indexOf( const std::string &str, const std::string &patt
   std::vector<int> indecies;
 
   for ( int i = 0; i < str.size() - pattern.size(); i++ ) {
-    std::string tmp = str.substr( i, pattern.size() );
+    std::string const tmp = str.substr( i, pattern.size() );
     if ( tmp == pattern ) indecies.push_back( i );
   }
 

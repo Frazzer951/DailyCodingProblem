@@ -29,7 +29,7 @@ inline int frequen_subtree_sum( btNode<int> *root ) {
 
   std::function<int( btNode<int> * )> getSubTreeSum = [&]( btNode<int> *node ) {
     if ( node == nullptr ) return 0;
-    int s = node->value + getSubTreeSum( node->left ) + getSubTreeSum( node->right );
+    int const s = node->value + getSubTreeSum( node->left ) + getSubTreeSum( node->right );
     counter[s]++;
     return s;
   };

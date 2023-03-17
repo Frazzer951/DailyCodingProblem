@@ -27,7 +27,7 @@ inline int diceSim( std::vector<int> winningCondition ) {
   int  index     = 0;
   int  rollCount = 0;
   while ( !won ) {
-    int roll = ( rand() % 6 ) + 1;
+    int const roll = ( rand() % 6 ) + 1;
     rollCount++;
     if ( roll == winningCondition[index] ) {
       index++;

@@ -18,7 +18,7 @@ inline bool isBallancedString( const std::string &str ) {
   int square = 0;
   int curly  = 0;
 
-  for ( char i : str ) {
+  for ( char const i : str ) {
     switch ( i ) {
     case '(': round++; break;
     case ')':

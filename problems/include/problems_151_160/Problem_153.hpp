@@ -38,9 +38,9 @@ inline int smallestWordDistance( const std::string &w1, const std::string &w2, s
     w2_it++;
   }
 
-  for ( int w1_index : w1_indexes ) {
-    for ( int w2_index : w2_indexes ) {
-      int distance = std::abs( w1_index - w2_index ) - 1;
+  for ( int const w1_index : w1_indexes ) {
+    for ( int const w2_index : w2_indexes ) {
+      int const distance = std::abs( w1_index - w2_index ) - 1;
       smallest     = std::min( smallest, distance );
     }
   }

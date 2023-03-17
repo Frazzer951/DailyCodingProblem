@@ -13,7 +13,7 @@ inline int randNotInL( const int &n, const std::vector<int> &l ) {
   int x = rand() % n;
 
   bool included = false;
-  for ( int i : l ) {
+  for ( int const i : l ) {
     if ( i == x ) {
       included = true;
       break;

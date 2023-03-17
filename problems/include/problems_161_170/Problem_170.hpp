@@ -31,7 +31,7 @@ inline std::vector<std::string> shortestTransform( const std::string &start, con
   std::vector<std::string> transform;
 
   for ( int i = 0; i < dict.size(); i++ ) {
-    std::string word = dict[i];
+    std::string const word = dict[i];
 
     if ( lettersOff( word, start ) == 1 ) {
       if ( word == end ) {
@@ -41,7 +41,7 @@ inline std::vector<std::string> shortestTransform( const std::string &start, con
 
       std::vector<std::string> newDict = dict;
       newDict.erase( newDict.begin() + i );
-      std::vector<std::string> newPath = shortestTransform( word, end, newDict );
+      std::vector<std::string> const newPath = shortestTransform( word, end, newDict );
       if ( !newPath.empty() && ( transform.empty() || newPath.size() < transform.size() ) ) {
         transform = newPath;
         transform.insert( transform.begin(), start );

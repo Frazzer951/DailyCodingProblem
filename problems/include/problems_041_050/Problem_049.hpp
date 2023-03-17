@@ -20,7 +20,7 @@ Do this in O(N) time.
 inline int max_subarray_sum( const std::vector<int> &arr ) {
   int max_ending_here = 0;
   int max_so_far      = 0;
-  for ( int x : arr ) {
+  for ( int const x : arr ) {
     max_ending_here = std::max( x, max_ending_here + x );
     max_so_far      = std::max( max_so_far, max_ending_here );
   }

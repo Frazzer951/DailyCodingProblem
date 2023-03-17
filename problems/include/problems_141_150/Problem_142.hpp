@@ -14,7 +14,7 @@ For example, (()* and (*) are balanced. )*( is not balanced.
 inline bool balanced( const std::string &s ) {
   int low  = 0;
   int high = 0;
-  for ( char c : s ) {
+  for ( char const c : s ) {
     if ( c == '(' ) {
       low++;
       high++;

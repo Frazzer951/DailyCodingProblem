@@ -16,11 +16,11 @@ inline int lcs( std::string a, std::string b, std::string c ) {
   std::vector<std::vector<std::vector<int>>> lengths =
       std::vector( a.size(), std::vector( b.size(), std::vector( c.size(), 0 ) ) );
   for ( int i = 0; i < a.size() - 1; i++ ) {
-    char x = a[i];
+    char const x = a[i];
     for ( int j = 0; j < b.size() - 1; j++ ) {
-      char y = b[j];
+      char const y = b[j];
       for ( int k = 0; k < c.size() - 1; k++ ) {
-        char z = c[k];
+        char const z = c[k];
         if ( x == y && y == z ) {
           lengths[i + 1][j + 1][k + 1] = lengths[i][j][k] + 1;
         } else {

@@ -16,7 +16,7 @@ characters is "bcb".
 inline char findMin( std::map<char, int> m ) {
   char key = m.begin()->first;
   int  min = m.begin()->second;
-  for ( std::pair<char, int> c : m ) {
+  for ( std::pair<char, int> const c : m ) {
     if ( c.second < min ) {
       key = c.first;
       min = c.second;
@@ -38,7 +38,7 @@ inline int longest_substring_with_k_distinct_characters( std::string s, unsigned
       new_lower_bounds = bounds[0];    // Lower bound remains the same
     } else {
       // otherwise, pop last occurring char
-      char key_to_pop  = findMin( h );
+      char const key_to_pop  = findMin( h );
       new_lower_bounds = h[key_to_pop] + 1;
       h.erase( key_to_pop );
     }

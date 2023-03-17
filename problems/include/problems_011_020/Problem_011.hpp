@@ -29,7 +29,7 @@ inline std::vector<std::string> autocomplete( const std::string &qstr, const std
 }
 
 inline void testComplete( const std::string &qstr, const std::vector<std::string> &qstrs ) {
-  std::vector<std::string> autocompletes = autocomplete( qstr, qstrs );
+  std::vector<std::string> const autocompletes = autocomplete( qstr, qstrs );
 
   std::cout << "'" << qstr << "' auto-completes to ";
 

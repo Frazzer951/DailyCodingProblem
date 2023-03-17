@@ -20,7 +20,7 @@ inline int get_next_perm( int _num ) {
   }
 
   std::reverse( num.begin(), num.end() );
-  int n = (int) num.size();
+  int const n = (int) num.size();
 
   int tail_start = n - 1;
   while ( tail_start >= 0 && num[tail_start - 1] > num[tail_start] ) tail_start -= 1;
@@ -29,14 +29,14 @@ inline int get_next_perm( int _num ) {
   while ( swap < n && num[tail_start - 1] < num[swap] ) swap += 1;
   swap -= 1;
 
-  int temp            = num[tail_start - 1];
+  int const temp            = num[tail_start - 1];
   num[tail_start - 1] = num[swap];
   num[swap]           = temp;
 
   int start = tail_start;
   int end   = (int) num.size() - 1;
   while ( start < end ) {
-    int temp   = num[start];
+    int const temp   = num[start];
     num[start] = num[end];
     num[end]   = temp;
     start++;

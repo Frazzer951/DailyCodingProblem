@@ -17,10 +17,10 @@ inline bool helper( std::map<int, std::vector<int>> graph, int start, std::vecto
   queue.push( start );
   colors[start] = 1;
   while ( !queue.empty() ) {
-    int vertex = queue.front();
+    int const vertex = queue.front();
     queue.pop();
 
-    for ( int neighbor : graph[vertex] ) {
+    for ( int const neighbor : graph[vertex] ) {
       if ( colors[neighbor] == 0 ) {
         colors[neighbor] = -colors[vertex];
         queue.push( neighbor );

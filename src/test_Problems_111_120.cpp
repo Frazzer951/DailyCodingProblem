@@ -14,8 +14,8 @@
 // Problem 111
 TEST( Problem_111, Given_Case ) {
   // given that W is "ab", and S is "abxaba", return 0, 3, and 4.
-  std::vector<int> expected = { 0, 3, 4 };
-  std::vector<int> result   = anagramIndex( "ab", "abxaba" );
+  std::vector<int> const expected = { 0, 3, 4 };
+  std::vector<int> const result   = anagramIndex( "ab", "abxaba" );
 
   EXPECT_EQ( expected, result );
 }
@@ -41,7 +41,7 @@ TEST( Problem_112, Test_Case ) {
 
 // Problem 113
 TEST( Problem_113, Given_Case ) {
-  std::string result = reverseSentance( "hello world here" );
+  std::string const result = reverseSentance( "hello world here" );
 
   EXPECT_EQ( "here world hello", result );
 }
@@ -80,7 +80,7 @@ TEST( Problem_117, Given_Case_1 ) {
 
   auto *root = new btNode( 1, new btNode( -2 ), new btNode( -3, new btNode( 4 ), new btNode( -5 ) ) );
 
-  int min_level = minimum_level_sum( root );
+  int const min_level = minimum_level_sum( root );
 
   EXPECT_EQ( 1, min_level );
 }
@@ -99,7 +99,7 @@ TEST( Problem_117, Given_Case_2 ) {
   auto *root = new btNode<int>( 1, new btNode( 2, new btNode( 4 ), new btNode( 5, new btNode( -1 ) ) ),
                                 new btNode<int>( 3, nullptr, new btNode( 6, new btNode( -7 ), new btNode( -8 ) ) ) );
 
-  int min_level = minimum_level_sum( root );
+  int const min_level = minimum_level_sum( root );
 
   EXPECT_EQ( 3, min_level );
 }
@@ -107,9 +107,9 @@ TEST( Problem_117, Given_Case_2 ) {
 // Problem 118
 TEST( Problem_118, Given_Case ) {
   // given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81]
-  std::vector<int> nums     = { -9, -2, 0, 2, 3 };
-  std::vector<int> expected = { 0, 4, 4, 9, 81 };
-  std::vector<int> result   = square_sort( nums );
+  std::vector<int> const nums     = { -9, -2, 0, 2, 3 };
+  std::vector<int> const expected = { 0, 4, 4, 9, 81 };
+  std::vector<int> const result   = square_sort( nums );
 
   EXPECT_EQ( expected, result );
 }
@@ -118,15 +118,15 @@ TEST( Problem_118, Given_Case ) {
 TEST( Problem_119, Given_Case_1 ) {
   // given the intervals [0, 3], [2, 6], [3, 4], [6, 9], return {3, 6}.
 
-  std::vector<std::vector<int>> intervals = {
+  std::vector<std::vector<int>> const intervals = {
     {0, 3},
     {2, 6},
     {3, 4},
     {6, 9}
   };
 
-  std::vector<int> expected = { 3, 9 };
-  std::vector<int> result   = covering( intervals );
+  std::vector<int> const expected = { 3, 9 };
+  std::vector<int> const result   = covering( intervals );
 
   EXPECT_EQ( result, expected );
 }
@@ -134,15 +134,15 @@ TEST( Problem_119, Given_Case_1 ) {
 TEST( Problem_119, Given_Case_2 ) {
   // given the intervals [[10, 20], [1, 6], [3, 8], [7, 12]], return {1, 6}.
 
-  std::vector<std::vector<int>> intervals = {
+  std::vector<std::vector<int>> const intervals = {
     {10, 20},
     { 1,  6},
     { 3,  8},
     { 7, 12}
   };
 
-  std::vector<int> expected = { 6, 12 };
-  std::vector<int> result   = covering( intervals );
+  std::vector<int> const expected = { 6, 12 };
+  std::vector<int> const result   = covering( intervals );
 
   EXPECT_EQ( result, expected );
 }

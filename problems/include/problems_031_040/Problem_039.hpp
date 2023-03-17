@@ -44,7 +44,7 @@ inline void game_of_life( std::vector<std::vector<bool>> &board, int steps = 1 )
     std::vector<std::vector<bool>> new_board( board.size(), std::vector<bool>( board[0].size(), false ) );
     for ( int x = 0; x < board.size(); x++ ) {
       for ( int y = 0; y < board[0].size(); y++ ) {
-        int count = count_neighbors( board, x, y );
+        int const count = count_neighbors( board, x, y );
         if ( board[x][y] ) {
           if ( count < 2 || count > 3 ) {
             new_board[x][y] = false;

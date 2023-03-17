@@ -46,8 +46,8 @@ struct DisjointSet {
   }
 
   void join( int v1, int v2 ) {
-    int s1 = find( v1 );
-    int s2 = find( v2 );
+    int const s1 = find( v1 );
+    int const s2 = find( v2 );
 
     int small = 0;
     int big   = 0;
@@ -65,15 +65,15 @@ struct DisjointSet {
 
 inline std::set<std::pair<std::pair<int, int>, int>> max_spanning_tree( const UndirectedGraph &graph ) {
   std::set<std::pair<std::pair<int, int>, int>> tree;
-  int                                           n = graph.n;
+  int                                           const n = graph.n;
   DisjointSet                                   ds( n );
   auto                                          edges = graph.edges;
 
   std::sort( edges.begin(), edges.end(), []( const auto &a, const auto &b ) { return a.second < b.second; } );
 
   for ( const auto &edge : edges ) {
-    int u = edge.first.first;
-    int v = edge.first.second;
+    int const u = edge.first.first;
+    int const v = edge.first.second;
     if ( ds.find( u ) != ds.find( v ) ) {
       tree.insert( edge );
       ds.join( u, v );

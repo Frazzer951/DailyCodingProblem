@@ -16,7 +16,7 @@ rearrangement that can form a palindrome.
 inline bool permPalindrome( const std::string &word ) {
   std::map<char, int> letterCount;
 
-  for ( char c : word ) { letterCount[c]++; }
+  for ( char const c : word ) { letterCount[c]++; }
 
   bool oneOdd = false;
 

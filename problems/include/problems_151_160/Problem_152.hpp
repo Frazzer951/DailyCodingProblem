@@ -20,7 +20,7 @@ You can generate random numbers between 0 and 1 uniformly.
 inline int randomProb( std::vector<int> nums, std::vector<double> probs ) {
   srand( (unsigned) time( nullptr ) );
 
-  double random = (double) rand() / RAND_MAX;
+  double const random = (double) rand() / RAND_MAX;
 
   int    i    = 0;
   double prob = 0;

@@ -50,14 +50,14 @@ inline int minimum_turns() {
     }
   }
 
-  int                             start = 0;
-  int                             end   = 100;
+  int                             const start = 0;
+  int                             const end   = 100;
   int                             turns = 0;
   std::deque<std::pair<int, int>> path  = { std::make_pair( start, turns ) };
   std::set<int>                   visited;
 
   while ( !path.empty() ) {
-    int square = path.front().first;
+    int const square = path.front().first;
     turns      = path.front().second;
     path.pop_front();
 

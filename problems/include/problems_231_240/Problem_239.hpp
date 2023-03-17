@@ -38,7 +38,7 @@ inline int num_paths( int current, std::map<std::pair<int, int>, int> jumps, std
 }
 
 inline int unlock_combinations( int n ) {
-  std::map<std::pair<int, int>, int> jumps = {
+  std::map<std::pair<int, int>, int> const jumps = {
     {{ 1, 3 }, 2},
     {{ 1, 7 }, 4},
     {{ 1, 9 }, 5},

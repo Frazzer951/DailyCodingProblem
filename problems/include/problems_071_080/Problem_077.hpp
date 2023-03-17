@@ -18,7 +18,7 @@ inline std::vector<std::pair<int, int>> get_overlaping( std::pair<int, int>     
                                                         const std::vector<std::pair<int, int>> &intervals ) {
   std::vector<std::pair<int, int>> overlaping;
 
-  for ( std::pair<int, int> cur_interval : intervals ) {
+  for ( std::pair<int, int> const cur_interval : intervals ) {
     if ( interval == cur_interval ) continue;
 
     if ( ( interval.first > cur_interval.first && interval.first < cur_interval.second )

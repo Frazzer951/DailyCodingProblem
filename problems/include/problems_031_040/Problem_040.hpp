@@ -17,7 +17,7 @@ Do this in O(N) time and O(1) space.
 
 inline int nonRepeatInt( const std::vector<int> &v ) {
   std::vector<int> result_arr( 32, 0 );
-  for ( int num : v ) {
+  for ( int const num : v ) {
     for ( int i = 0; i < 32; i++ ) {
       auto bit      = num >> i & 1;
       result_arr[i] = ( result_arr[i] + bit ) % 3;

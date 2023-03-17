@@ -14,14 +14,14 @@ For example, given 1, you should return 19. Given 2, you should return 28.
 
 inline int perfecet_num( int n ) {
   std::string n_str  = std::to_string( n );
-  int         length = (int) n_str.size();
+  int         const length = (int) n_str.size();
   int         sum    = 0;
 
   for ( int i = 0; i < length; i++ ) { sum += (int) n_str[i] - 48; }
 
   if ( sum == 10 ) return n;
 
-  int needed = 10 - sum;
+  int const needed = 10 - sum;
   n_str      += std::to_string( needed );
 
   return ( perfecet_num( std::stoi( n_str ) ) );

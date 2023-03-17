@@ -66,7 +66,7 @@ struct LFUCache {
       // from the lowest-frequency key, since it's ordered by
       // time (because we use append).
       if ( val_map.size() >= capacity ) {
-        std::string to_evict = freq_map[min_freq].front();
+        std::string const to_evict = freq_map[min_freq].front();
         freq_map[min_freq].pop_front();
         val_map.erase( to_evict );
       }

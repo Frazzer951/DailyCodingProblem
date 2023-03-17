@@ -44,9 +44,9 @@ inline bool is_overlapping( Rect rec1, Rect rec2 ) {
 
 inline bool overlapping( std::vector<Rect> rectangles ) {
   for ( int i = 0; i < rectangles.size(); i++ ) {
-    Rect rec1 = rectangles[i];
+    Rect const rec1 = rectangles[i];
     for ( int j = i + 1; j < rectangles.size(); j++ ) {
-      Rect rec2 = rectangles[j];
+      Rect const rec2 = rectangles[j];
       if ( is_overlapping( rec1, rec2 ) ) return true;
     }
   }

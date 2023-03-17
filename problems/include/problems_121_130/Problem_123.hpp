@@ -31,17 +31,17 @@ inline bool isNum( std::string s ) {
   int  eCount       = 0;
   int  decimalCount = 0;
 
-  char                 numbers[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-  char                 allowed[] = { '+', '-', 'e', '.' };
+  char                 const numbers[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+  char                 const allowed[] = { '+', '-', 'e', '.' };
   std::map<char, bool> allowedChars;
   std::map<char, bool> nums;
-  for ( char c : allowed ) allowedChars[c] = true;
-  for ( char c : numbers ) {
+  for ( char const c : allowed ) allowedChars[c] = true;
+  for ( char const c : numbers ) {
     allowedChars[c] = true;
     nums[c]         = true;
   }
 
-  for ( char c : s ) {
+  for ( char const c : s ) {
     if ( !allowedChars[c] ) return false;
     if ( !hasNum && nums[c] ) hasNum = true;
     if ( c == 'e' ) {
@@ -54,17 +54,17 @@ inline bool isNum( std::string s ) {
     }
   }
   if ( !hasNum ) return false;
-  if ( !( nums[s[0]] || s[0] == '+' || s[0] == '-' ) ) return false;
+  if ( !nums[s[0]] && s[0] != '+' && s[0] != '-' ) return false;
 
   if ( hasE ) {
     if ( eCount > 1 ) return false;
-    std::size_t index = s.find( 'e' );
+    std::size_t const index = s.find( 'e' );
     if ( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
   }
 
   if ( hasDecimal ) {
     if ( decimalCount > 1 ) return false;
-    std::size_t index = s.find( '.' );
+    std::size_t const index = s.find( '.' );
     if ( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
   }
 

@@ -41,7 +41,7 @@ TEST_F( HitCounterTest, total ) { EXPECT_EQ( h.total(), 7 ); }
 
 TEST_F( HitCounterTest, range ) {
   auto                   timestamps = h.range( timestamp( 5, 0, 0 ), timestamp( 19, 0, 0 ) );
-  std::vector<timestamp> expected   = { timestamp( 5, 5, 15 ), timestamp( 10, 15, 6 ), timestamp( 12, 10, 1 ),
+  std::vector<timestamp> const expected   = { timestamp( 5, 5, 15 ), timestamp( 10, 15, 6 ), timestamp( 12, 10, 1 ),
                                         timestamp( 18, 54, 30 ) };
 
   EXPECT_EQ( timestamps, expected );
@@ -70,7 +70,7 @@ TEST( Problem_133, Given_Case ) {
 // Problem 134
 TEST( Problem_134, Test_Class ) {
   int         arr[] = { 0, 0, 0, 18, 0, 0, 0, 1, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 4, 9 };
-  int         size  = sizeof( arr ) / sizeof( int );
+  int         const size  = sizeof( arr ) / sizeof( int );
   SparseArray sArr;
   ASSERT_NO_FATAL_FAILURE( sArr.init( arr, size ) );
 
@@ -95,7 +95,7 @@ TEST( Problem_135, Given_Case ) {
   root->left->right  = new btNode( 2 );
   root->right->right = new btNode( 1, new btNode( -1 ) );
 
-  int result = minPathSum( root );
+  int const result = minPathSum( root );
 
   EXPECT_EQ( result, 15 );
 }
@@ -112,13 +112,13 @@ TEST( Problem_136, Given_Case ) {
   Return 4.
   */
 
-  std::vector<std::vector<int>> v = {
+  std::vector<std::vector<int>> const v = {
     {1, 0, 0, 0},
     {1, 0, 1, 1},
     {1, 0, 1, 1},
     {0, 1, 0, 0}
   };
-  int result = largestRectangle( v );
+  int const result = largestRectangle( v );
 
   EXPECT_EQ( result, 4 );
 }
@@ -126,7 +126,7 @@ TEST( Problem_136, Given_Case ) {
 // Problem 137
 TEST( Problem_137, BitArray ) {
   bitarray arr( 10 );
-  bool     a[10] = { 1, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
+  bool     const a[10] = { 1, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
   for ( int i = 0; i < 10; i++ ) { EXPECT_FALSE( arr.get( i ) ); }
   for ( int i = 0; i < 10; i++ ) { ASSERT_NO_FATAL_FAILURE( arr.set( i, a[i] ) ); }
   for ( int i = 0; i < 10; i++ ) { EXPECT_EQ( arr.get( i ), a[i] ); }
@@ -134,7 +134,7 @@ TEST( Problem_137, BitArray ) {
 
 // Problem 138
 TEST( Problem_138, Given_Case ) {
-  int result = minimum_coins( 16 );
+  int const result = minimum_coins( 16 );
   EXPECT_EQ( result, 3 );
 }
 
@@ -143,9 +143,9 @@ TEST( Problem_138, Given_Case ) {
 // Problem 140
 TEST( Problem_140, Given_Case ) {
   // given the array [2, 4, 6, 8, 10, 2, 6, 10], return 4 and 8
-  std::vector<int>    arr = { 2, 4, 6, 8, 10, 2, 6, 10 };
-  std::pair<int, int> expected( 4, 8 );
-  std::pair<int, int> result = array_two_elements( arr );
+  std::vector<int>    const arr = { 2, 4, 6, 8, 10, 2, 6, 10 };
+  std::pair<int, int> const expected( 4, 8 );
+  std::pair<int, int> const result = array_two_elements( arr );
 
   EXPECT_EQ( result, expected );
 }

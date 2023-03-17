@@ -10,6 +10,7 @@ squares are visited once.
 Given N, write a function to return the number of knight's tours on an N by N
 chessboard.
 */
+#include <cstddef>
 #include <vector>
 
 inline bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, int> move, int n ) {
@@ -18,7 +19,7 @@ inline bool is_valid_move( std::vector<std::vector<int>> board, std::pair<int, i
 }
 
 inline std::vector<std::pair<int, int>> vaild_moves( const std::vector<std::vector<int>> &board, int r, int c, int n ) {
-  std::vector<std::pair<int, int>> deltas = { std::make_pair( 2, 1 ),   std::make_pair( 1, 2 ),  std::make_pair( 1, -2 ),
+  std::vector<std::pair<int, int>> const deltas = { std::make_pair( 2, 1 ),   std::make_pair( 1, 2 ),  std::make_pair( 1, -2 ),
                                               std::make_pair( -2, 1 ),  std::make_pair( -1, 2 ), std::make_pair( 2, -1 ),
                                               std::make_pair( -1, -2 ), std::make_pair( -2, -1 ) };
 
@@ -37,7 +38,7 @@ inline std::vector<std::pair<int, int>> vaild_moves( const std::vector<std::vect
 }
 
 inline int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::pair<int, int>> tour, int n ) {
-  if ( tour.size() == n * n ) return 1;
+  if ( tour.size() == static_cast<unsigned long>(n * )n ) return 1;
 
   int count              = 0;
   auto &[last_r, last_c] = tour[tour.size() - 1];

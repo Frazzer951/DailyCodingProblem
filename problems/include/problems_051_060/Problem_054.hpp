@@ -15,7 +15,7 @@ Implement an efficient sudoku solver.
 inline bool valid_sudoku( std::vector<std::vector<int>> arr ) {
   for ( int i = 0; i < 9; i++ ) {
     for ( int j = 0; j < 9; j++ ) {
-      int cur_num = arr[i][j];
+      int const cur_num = arr[i][j];
 
       if ( cur_num == 0 ) continue;
 
@@ -26,8 +26,8 @@ inline bool valid_sudoku( std::vector<std::vector<int>> arr ) {
       }
 
       // Check Box
-      int box_x = i / 3 * 3;
-      int box_y = j / 3 * 3;
+      int const box_x = i / 3 * 3;
+      int const box_y = j / 3 * 3;
 
       for ( int x = box_x; x < box_x + 3; x++ ) {
         for ( int y = box_y; y < box_y + 3; y++ ) {
@@ -78,8 +78,8 @@ inline std::vector<std::vector<int>> solveSudoku( std::vector<std::vector<int>> 
   if ( valid_sudoku( board ) && is_filled( board ) ) return board;
 
   auto pos = find_first_empty( board );
-  int  r   = pos.first;
-  int  c   = pos.second;
+  int  const r   = pos.first;
+  int  const c   = pos.second;
 
   // Set r, c to a val from 1 to 9
   for ( int i = 1; i < 10; i++ ) {

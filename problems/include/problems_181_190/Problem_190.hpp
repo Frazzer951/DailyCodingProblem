@@ -18,7 +18,7 @@ Given [-4, 5, 1, 0], return 6 as we choose the numbers 5 and 1.
 inline int maxSubArraySum( const std::vector<int> &arr ) {
   int max        = 0;
   int max_so_far = 0;
-  for ( int x : arr ) {
+  for ( int const x : arr ) {
     max        = std::max( x, max + x );
     max_so_far = std::max( max_so_far, max );
   }
@@ -28,7 +28,7 @@ inline int maxSubArraySum( const std::vector<int> &arr ) {
 inline int minSubArraySum( const std::vector<int> &arr ) {
   int min        = 0;
   int min_so_far = 0;
-  for ( int x : arr ) {
+  for ( int const x : arr ) {
     min        = std::min( x, min + x );
     min_so_far = std::min( min_so_far, min );
   }
@@ -36,7 +36,7 @@ inline int minSubArraySum( const std::vector<int> &arr ) {
 }
 
 inline int maxCircSubArray( std::vector<int> arr ) {
-  int maxSubArraySumWrap = std::accumulate( arr.begin(), arr.end(), 0 ) - minSubArraySum( arr );
+  int const maxSubArraySumWrap = std::accumulate( arr.begin(), arr.end(), 0 ) - minSubArraySum( arr );
   return std::max( maxSubArraySum( arr ), maxSubArraySumWrap );
 }
 #endif

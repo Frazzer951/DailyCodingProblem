@@ -16,7 +16,7 @@ return null.
 inline char firstRepeat( const std::string &str ) {
   std::map<char, int> count;
 
-  for ( char c : str ) {
+  for ( char const c : str ) {
     count[c]++;
     if ( count[c] > 1 ) return c;
   }

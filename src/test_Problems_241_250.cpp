@@ -15,7 +15,7 @@
 TEST( Problem_241, Given_Case ) {
   // N = 5, and the respective citations of each paper are [4, 3, 0, 1, 5]. Then the h-index would be 3
   int arr[]  = { 4, 3, 0, 1, 5 };
-  int result = hIndex( 5, arr );
+  int const result = hIndex( 5, arr );
   EXPECT_EQ( 3, result );
 }
 
@@ -50,7 +50,7 @@ TEST( Problem_244, Test_Case ) {
 TEST( Problem_245, Test_Case ) {
   // given [6, 2, 4, 0, 5, 1, 1, 4, 2, 9], you should return 2
   std::vector<int> jumps  = { 6, 2, 4, 0, 5, 1, 1, 4, 2, 9 };
-  int              result = minJumps( jumps );
+  int              const result = minJumps( jumps );
   EXPECT_EQ( 2, result );
 }
 
@@ -58,12 +58,12 @@ TEST( Problem_245, Test_Case ) {
 TEST( Problem_246, Given_Case ) {
   // For example, the words ["chair", "height", "racket", "touch", "tunic"] can form
   // the following circle: chair --> racket --> touch --> height --> tunic --> chair.
-  std::vector<std::string> words = { "chair", "height", "racket", "touch", "tunic" };
+  std::vector<std::string> const words = { "chair", "height", "racket", "touch", "tunic" };
   EXPECT_TRUE( can_chain( words ) );
 }
 
 TEST( Problem_246, Test_Case ) {
-  std::vector<std::string> words = { "chair", "height" };
+  std::vector<std::string> const words = { "chair", "height" };
   EXPECT_FALSE( can_chain( words ) );
 }
 
@@ -93,9 +93,9 @@ TEST( Problem_248, Test_Case ) {
 
 // Problem 249
 TEST( Problem_249, Test_Case ) {
-  std::vector<int> arr      = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-  int              result   = max_xor( arr );
-  int              expected = 15;
+  std::vector<int> const arr      = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+  int              const result   = max_xor( arr );
+  int              const expected = 15;
   EXPECT_EQ( result, expected );
 }
 
