@@ -59,7 +59,7 @@ TEST( Problem_143, Given_Case ) {
 TEST( Problem_144, Given_Case ) {
   // given [4, 1, 3, 5, 6] and index 0, you should return 3
   std::vector<int> const arr   = { 4, 1, 3, 5, 6 };
-  auto             cache = preprocess( arr );
+  auto                   cache = preprocess( arr );
 
   EXPECT_EQ( cache[0], 3 );
 }
@@ -132,7 +132,7 @@ TEST( Problem_150, Given_Case ) {
   // given the list of points [(0, 0), (5, 4), (3, 1)], the central point (1, 2), and k = 2, return [(0, 0), (3,1)]
 
   std::vector<std::pair<int, int>> const points = { std::make_pair( 0, 0 ), std::make_pair( 5, 4 ), std::make_pair( 3, 1 ) };
-  std::pair<int, int>              const central( 1, 2 );
+  std::pair<int, int> const              central( 1, 2 );
   std::vector<std::pair<int, int>> const expected = { std::make_pair( 0, 0 ), std::make_pair( 3, 1 ) };
   std::vector<std::pair<int, int>> const result   = nearestPoints( points, central );
 

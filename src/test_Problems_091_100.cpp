@@ -50,7 +50,7 @@ TEST( Problem_93, Test_Case_1 ) {
   root->right->right->left  = new btNode( 'c' );
 
   btNode<char> *result      = largest_subBST( root );
-  int           const result_size = largest_subBST_size( root );
+  int const     result_size = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );
@@ -79,7 +79,7 @@ TEST( Problem_95, Given_Case_1 ) {
   the list [1,2,3] should return [1,3,2].
   */
 
-  std::vector<int> nums     = { 1, 2, 3 };
+  std::vector<int>       nums     = { 1, 2, 3 };
   std::vector<int> const expected = { 1, 3, 2 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
@@ -89,7 +89,7 @@ TEST( Problem_95, Given_Case_2 ) {
   The list [1,3,2] should return [2,1,3].
   */
 
-  std::vector<int> nums     = { 1, 3, 2 };
+  std::vector<int>       nums     = { 1, 3, 2 };
   std::vector<int> const expected = { 2, 1, 3 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
@@ -99,7 +99,7 @@ TEST( Problem_95, Given_Case_3 ) {
   The list [3,2,1] should return [1,2,3].
   */
 
-  std::vector<int> nums     = { 3, 2, 1 };
+  std::vector<int>       nums     = { 3, 2, 1 };
   std::vector<int> const expected = { 1, 2, 3 };
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
@@ -112,7 +112,7 @@ TEST( Problem_96, Given_Case ) {
   [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
   */
 
-  std::vector<int>              const nums     = { 1, 2, 3 };
+  std::vector<int> const              nums     = { 1, 2, 3 };
   std::vector<std::vector<int>> const result   = getPermutations( nums );
   std::vector<std::vector<int>> const expected = {
     {1, 2, 3},
@@ -188,7 +188,7 @@ TEST( Problem_99, Given_Case ) {
   */
 
   std::vector<int> const arr    = { 100, 4, 200, 1, 3, 2 };
-  int              const result = findLongestConseqSubseq( arr );
+  int const              result = findLongestConseqSubseq( arr );
   EXPECT_EQ( 4, result );
 }
 

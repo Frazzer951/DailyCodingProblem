@@ -40,9 +40,9 @@ protected:
 TEST_F( HitCounterTest, total ) { EXPECT_EQ( h.total(), 7 ); }
 
 TEST_F( HitCounterTest, range ) {
-  auto                   timestamps = h.range( timestamp( 5, 0, 0 ), timestamp( 19, 0, 0 ) );
+  auto                         timestamps = h.range( timestamp( 5, 0, 0 ), timestamp( 19, 0, 0 ) );
   std::vector<timestamp> const expected   = { timestamp( 5, 5, 15 ), timestamp( 10, 15, 6 ), timestamp( 12, 10, 1 ),
-                                        timestamp( 18, 54, 30 ) };
+                                              timestamp( 18, 54, 30 ) };
 
   EXPECT_EQ( timestamps, expected );
 }
@@ -70,7 +70,7 @@ TEST( Problem_133, Given_Case ) {
 // Problem 134
 TEST( Problem_134, Test_Class ) {
   int         arr[] = { 0, 0, 0, 18, 0, 0, 0, 1, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 4, 9 };
-  int         const size  = sizeof( arr ) / sizeof( int );
+  int const   size  = sizeof( arr ) / sizeof( int );
   SparseArray sArr;
   ASSERT_NO_FATAL_FAILURE( sArr.init( arr, size ) );
 
@@ -125,8 +125,8 @@ TEST( Problem_136, Given_Case ) {
 
 // Problem 137
 TEST( Problem_137, BitArray ) {
-  bitarray arr( 10 );
-  bool     const a[10] = { 1, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
+  bitarray   arr( 10 );
+  bool const a[10] = { 1, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
   for ( int i = 0; i < 10; i++ ) { EXPECT_FALSE( arr.get( i ) ); }
   for ( int i = 0; i < 10; i++ ) { ASSERT_NO_FATAL_FAILURE( arr.set( i, a[i] ) ); }
   for ( int i = 0; i < 10; i++ ) { EXPECT_EQ( arr.get( i ), a[i] ); }
@@ -143,7 +143,7 @@ TEST( Problem_138, Given_Case ) {
 // Problem 140
 TEST( Problem_140, Given_Case ) {
   // given the array [2, 4, 6, 8, 10, 2, 6, 10], return 4 and 8
-  std::vector<int>    const arr = { 2, 4, 6, 8, 10, 2, 6, 10 };
+  std::vector<int> const    arr = { 2, 4, 6, 8, 10, 2, 6, 10 };
   std::pair<int, int> const expected( 4, 8 );
   std::pair<int, int> const result = array_two_elements( arr );
 

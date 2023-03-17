@@ -19,7 +19,7 @@ inline int longest_palindromic_subsequence( std::string s ) {
   std::reverse( rs.begin(), rs.end() );
   if ( s == rs ) return (int) s.size();
 
-  int                           const n = (int) s.size();
+  int const                     n = (int) s.size();
   std::vector<std::vector<int>> A( n, std::vector( n, 0 ) );
 
   for ( int i = n - 1; i >= 0; i-- ) {

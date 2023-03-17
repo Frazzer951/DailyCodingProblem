@@ -29,16 +29,16 @@ inline int get_next_perm( int _num ) {
   while ( swap < n && num[tail_start - 1] < num[swap] ) swap += 1;
   swap -= 1;
 
-  int const temp            = num[tail_start - 1];
+  int const temp      = num[tail_start - 1];
   num[tail_start - 1] = num[swap];
   num[swap]           = temp;
 
   int start = tail_start;
   int end   = (int) num.size() - 1;
   while ( start < end ) {
-    int const temp   = num[start];
-    num[start] = num[end];
-    num[end]   = temp;
+    int const temp = num[start];
+    num[start]     = num[end];
+    num[end]       = temp;
     start++;
     end--;
   }

@@ -51,7 +51,7 @@ struct filereader {
 inline std::string readN( int n ) {
   filereader filereader( "Problem_082.txt" );
 
-  int         const num_needed = n / 7 + 1;
+  int const   num_needed = n / 7 + 1;
   std::string all;
 
   for ( int i = 0; i < num_needed; i++ ) { all += filereader.read7(); }

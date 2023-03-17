@@ -77,7 +77,7 @@ TEST( Problem_207, Given_Case ) {
 // Problem 208
 TEST( Problem_208, Given_Case ) {
   // given the linked list 5 -> 1 -> 8 -> 0 -> 3 and k = 3, the solution could be 1 -> 0 -> 5 -> 8 -> 3.
-  auto       *head   = new slNode<int>( { 5, 1, 8, 0, 3 } );
+  auto             *head   = new slNode<int>( { 5, 1, 8, 0, 3 } );
   slList<int> const result = partition( head, 3 );
   slList<int> const expected( { 0, 1, 5, 8, 3 } );
 
@@ -93,8 +93,8 @@ TEST( Problem_209, Given_Case ) {
 
 // Problem 210
 TEST( Problem_210, Test_Case ) {
-  int      const testTo  = 100;
-  long int longest = -1;
+  int const testTo  = 100;
+  long int  longest = -1;
   for ( long int i = 1; i <= testTo; i++ ) {
     long int const result = collatz( i );
     if ( i == -1 ) testing::AssertionFailure() << "Collatz Returned -1";

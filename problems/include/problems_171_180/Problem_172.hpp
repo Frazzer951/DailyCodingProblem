@@ -30,7 +30,7 @@ inline bool testSubstring( std::string s, const std::vector<std::string> &words 
   }
 
   std::set<std::string> set;
-  size_t                const size = splitWords.size();
+  size_t const          size = splitWords.size();
   for ( size_t i = 0; i < size; ++i ) set.insert( splitWords[i] );
   splitWords.assign( set.begin(), set.end() );
   std::sort( splitWords.begin(), splitWords.end() );

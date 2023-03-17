@@ -62,7 +62,7 @@ inline std::map<char, int> markovChain( char startState, int steps, const std::v
 
   for ( int i = 0; i < steps; i++ ) {
     double const prob = ( rand() & 1000 ) / 1000.0;
-    state       = getCharFromProb( prob, probs[state] );
+    state             = getCharFromProb( prob, probs[state] );
     count[state]++;
   }
   return count;

@@ -41,7 +41,7 @@ inline std::string noRepeatingAdjacentCharacters( const std::string &input ) {
 
   while ( !heap.empty() ) {
     Letter const last = { count + 1, c };
-    l           = heap.top();
+    l                 = heap.top();
     heap.pop();
     count = l.priority;
     c     = l.data;

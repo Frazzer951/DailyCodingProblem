@@ -28,8 +28,8 @@ The top left corner and bottom right corner will always be 0.
 
 inline int num_ways( std::vector<std::vector<int>> matrix ) {
   const int                     WALL = 1;
-  size_t                        const m    = matrix.size();
-  size_t                        const n    = matrix[0].size();
+  size_t const                  m    = matrix.size();
+  size_t const                  n    = matrix[0].size();
   std::vector<std::vector<int>> num_ways_matrix( m, std::vector<int>( n, 0 ) );
 
   // Fill first row

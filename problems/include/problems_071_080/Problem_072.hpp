@@ -62,8 +62,8 @@ inline int best_score( const std::vector<std::vector<int>> &paths, std::string n
       if ( i == -1 ) return -1;
       path += nodes[i];
     }
-    int const score  = pathScore( path );
-    best_score = ( score > best_score ) ? score : best_score;
+    int const score = pathScore( path );
+    best_score      = ( score > best_score ) ? score : best_score;
   }
   return best_score;
 }

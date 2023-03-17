@@ -21,7 +21,7 @@ TEST( Problem_71, Test_Case ) {
 // Problem 072
 TEST( Problem_72, Given_Case_1 ) {
   std::vector<std::pair<int, int>> const edges = { std::make_pair( 0, 1 ), std::make_pair( 0, 2 ), std::make_pair( 2, 3 ),
-                                             std::make_pair( 3, 4 ) };
+                                                   std::make_pair( 3, 4 ) };
 
   int const result = pathValue( "ABACA", edges );
 
@@ -108,17 +108,20 @@ TEST( Problem_76, Given_Case_3 ) {
 // Problem 077
 TEST( Problem_77, Given_Case ) {
   std::vector<std::pair<int, int>> const intervals = { std::make_pair( 1, 3 ), std::make_pair( 5, 8 ), std::make_pair( 4, 10 ),
-                                                 std::make_pair( 20, 25 ) };
-  std::vector<std::pair<int, int>> const expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ), std::make_pair( 20, 25 ) };
+                                                       std::make_pair( 20, 25 ) };
+  std::vector<std::pair<int, int>> const expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ),
+                                                       std::make_pair( 20, 25 ) };
   std::vector<std::pair<int, int>> const result    = merge_overlaping_intervals( intervals );
 
   EXPECT_EQ( expected, result );
 }
 
 TEST( Problem_77, Test_Case ) {
-  std::vector<std::pair<int, int>> const intervals = { std::make_pair( 1, 3 ),  std::make_pair( 2, 3 ),   std::make_pair( 5, 8 ),
-                                                 std::make_pair( 4, 10 ), std::make_pair( 20, 25 ), std::make_pair( 18, 30 ) };
-  std::vector<std::pair<int, int>> const expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ), std::make_pair( 18, 30 ) };
+  std::vector<std::pair<int, int>> const intervals = { std::make_pair( 1, 3 ),   std::make_pair( 2, 3 ),
+                                                       std::make_pair( 5, 8 ),   std::make_pair( 4, 10 ),
+                                                       std::make_pair( 20, 25 ), std::make_pair( 18, 30 ) };
+  std::vector<std::pair<int, int>> const expected  = { std::make_pair( 1, 3 ), std::make_pair( 4, 10 ),
+                                                       std::make_pair( 18, 30 ) };
   std::vector<std::pair<int, int>> const result    = merge_overlaping_intervals( intervals );
 
   EXPECT_EQ( expected, result );
@@ -140,13 +143,13 @@ TEST( Problem_78, Test_Case ) {
 // Problem 079
 TEST( Problem_79, Given_Case_1 ) {
   std::vector<int> const nums   = { 10, 5, 7 };
-  bool             const result = remove_one_non_decrease( nums );
+  bool const             result = remove_one_non_decrease( nums );
   EXPECT_TRUE( result );
 }
 
 TEST( Problem_79, Given_Case_2 ) {
   std::vector<int> const nums   = { 10, 5, 1 };
-  bool             const result = remove_one_non_decrease( nums );
+  bool const             result = remove_one_non_decrease( nums );
   EXPECT_FALSE( result );
 }
 

@@ -24,7 +24,7 @@ inline int minimum_coins( int n ) {
   for ( int const d : DENOMINATIONS ) {
     if ( ( n - d ) >= 0 ) {
       int const temp = 1 + minimum_coins( n - d );
-      min      = std::min( min, temp );
+      min            = std::min( min, temp );
     }
   }
   return min;

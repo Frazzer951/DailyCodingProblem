@@ -50,10 +50,10 @@ public:
   bool is_resize_needed() { return s0 == list.size() / 2 || s1 > s2; }
 
   void resize( std::size_t new_size ) {
-    std::vector<int> prev_list = list;
-    std::size_t      const prev_s0   = s0;
-    std::size_t      const prev_s1   = s1;
-    std::size_t      const prev_s2   = s2;
+    std::vector<int>  prev_list = list;
+    std::size_t const prev_s0   = s0;
+    std::size_t const prev_s1   = s1;
+    std::size_t const prev_s2   = s2;
 
     list = std::vector( new_size, 0 );
     s0   = 0;                  // Grows up

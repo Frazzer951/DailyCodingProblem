@@ -32,7 +32,7 @@ Given a graph, find its transitive closure.
 #include <vector>
 
 inline std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::vector<int>> graph ) {
-  int                           const n      = graph.size();
+  int const                     n      = graph.size();
   std::vector<std::vector<int>> result = std::vector( n, std::vector( n, 0 ) );
 
   for ( int i = 0; i < n; i++ ) {
@@ -51,7 +51,7 @@ inline std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::
 }
 
 inline std::vector<std::vector<int>> transitiveClosure( std::vector<std::vector<int>> graph ) {
-  int                           const n     = graph.size();
+  int const                     n     = graph.size();
   std::vector<std::vector<int>> links = std::vector( n, std::vector( n, 0 ) );
 
   for ( int i = 0; i < n; i++ ) {

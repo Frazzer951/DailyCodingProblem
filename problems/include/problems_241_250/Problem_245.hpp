@@ -16,7 +16,7 @@ optimal solution involves jumping from 6 to 5, and then from 5 to 9.
 #include <vector>
 
 inline int minJumps( std::vector<int> &jumps ) {
-  int              const n = jumps.size();
+  int const        n = jumps.size();
   std::vector<int> dp( n, std::numeric_limits<int>::max() );
   dp[0] = 0;
 

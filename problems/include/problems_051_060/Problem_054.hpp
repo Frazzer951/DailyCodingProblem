@@ -77,9 +77,9 @@ def sudoku(board):
 inline std::vector<std::vector<int>> solveSudoku( std::vector<std::vector<int>> board ) {
   if ( valid_sudoku( board ) && is_filled( board ) ) return board;
 
-  auto pos = find_first_empty( board );
-  int  const r   = pos.first;
-  int  const c   = pos.second;
+  auto      pos = find_first_empty( board );
+  int const r   = pos.first;
+  int const c   = pos.second;
 
   // Set r, c to a val from 1 to 9
   for ( int i = 1; i < 10; i++ ) {

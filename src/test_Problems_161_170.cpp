@@ -51,7 +51,7 @@ TEST( Problem_163, Given_Case ) {
   // ( ( 15 / ( 7 - ( 1 + 1 ) ) ) * 3 ) - ( 2 + ( 1 + 1 ) ) = 5.
 
   std::vector<std::string> const equation = { "15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-" };
-  double                   const result   = solve( equation );
+  double const                   result   = solve( equation );
   EXPECT_DOUBLE_EQ( result, 5.0 );
 }
 
@@ -108,7 +108,7 @@ TEST( Problem_166, Given_Case ) {
 TEST( Problem_167, Given_Case ) {
   // given the list ["code", "edoc", "da", "d"], return [(0, 1), (1, 0), (2, 3)]
 
-  std::vector<std::string>         const words    = { "code", "edoc", "da", "d" };
+  std::vector<std::string> const         words    = { "code", "edoc", "da", "d" };
   std::vector<std::pair<int, int>> const expected = {
     {0, 1},
     {1, 0},

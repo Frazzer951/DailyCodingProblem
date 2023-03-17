@@ -124,14 +124,14 @@ TEST( Problem_108, Given_Case_2 ) {
 TEST( Problem_109, Given_Case_1 ) {
   // 10101010 should be 01010101.
   std::int8_t const result   = even_odd_bit_swap( (std::int8_t) 0b10101010 );
-  auto        expected = (std::int8_t) 0b01010101;
+  auto              expected = (std::int8_t) 0b01010101;
   EXPECT_EQ( expected, result );
 }
 
 TEST( Problem_109, Given_Case_2 ) {
   // 11100010 should be 11010001.
   std::int8_t const result   = even_odd_bit_swap( (std::int8_t) 0b11100010 );
-  auto        expected = (std::int8_t) 0b11010001;
+  auto              expected = (std::int8_t) 0b11010001;
   EXPECT_EQ( expected, result );
 }
 

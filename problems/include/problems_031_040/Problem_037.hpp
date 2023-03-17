@@ -19,7 +19,7 @@ You may also use a list or array to represent a set.
 inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set ) {
   std::vector<std::vector<int>> powerSet;
   // set_size of power set of a set with set_size n is (2**n -1)
-  std::size_t                   const pow_set_size = set.size() * set.size() - 1;
+  std::size_t const             pow_set_size = set.size() * set.size() - 1;
   int                           counter      = 0;
   int                           j            = 0;
 

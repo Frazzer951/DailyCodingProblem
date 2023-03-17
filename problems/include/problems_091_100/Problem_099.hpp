@@ -18,7 +18,7 @@ Your algorithm should run in O(n) complexity.
 inline int findLongestConseqSubseq( std::vector<int> arr ) {
   std::unordered_set<int> S;
   int                     ans = 0;
-  int                     const n   = (int) arr.size();
+  int const               n   = (int) arr.size();
 
   // Hash all the array elements
   for ( int i = 0; i < n; i++ ) S.insert( arr[i] );

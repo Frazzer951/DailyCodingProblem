@@ -32,7 +32,7 @@ inline bool inRange( std::vector<std::vector<char>> v, int x, int y ) {
 
 inline std::vector<std::vector<char>> pixleReplace( std::vector<std::vector<char>> pixelMatrix, std::pair<int, int> loc,
                                                     char newPixle ) {
-  char const curPixle                      = pixelMatrix[loc.first][loc.second];
+  char const curPixle                = pixelMatrix[loc.first][loc.second];
   pixelMatrix[loc.first][loc.second] = newPixle;
 
   if ( inRange( pixelMatrix, loc.first - 1, loc.second ) && pixelMatrix[loc.first - 1][loc.second] == curPixle )

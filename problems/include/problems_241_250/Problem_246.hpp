@@ -28,7 +28,7 @@ inline std::set<char> find_component( std::map<char, std::vector<char>> graph, s
 }
 
 inline bool is_connected( std::map<char, std::vector<char>> graph ) {
-  char           const start     = graph.begin()->first;
+  char const           start     = graph.begin()->first;
   std::set<char> const component = find_component( graph, std::set<char>(), start );
 
   std::map<char, std::vector<char>> reversed_graph;
@@ -61,8 +61,8 @@ inline std::map<char, std::vector<char>> make_graph( const std::vector<std::stri
 
 inline bool can_chain( const std::vector<std::string> &words ) {
   std::map<char, std::vector<char>> const graph         = make_graph( words );
-  bool                              const degrees_equal = are_degrees_equal( graph );
-  bool                              const connected     = is_connected( graph );
+  bool const                              degrees_equal = are_degrees_equal( graph );
+  bool const                              connected     = is_connected( graph );
 
   return degrees_equal && connected;
 }

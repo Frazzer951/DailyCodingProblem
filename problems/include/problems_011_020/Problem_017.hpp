@@ -62,9 +62,9 @@ The name of a directory or sub-directory will not contain a period.
 inline bool is_file( const std::string &f ) { return f.find( '.' ) != std::string::npos; }
 
 inline std::string find_longest_filepath( std::string filesystem ) {
-  std::vector<std::string>   const file_paths = split( std::move( filesystem ), '\n' );
-  std::map<int, std::string> depths;
-  std::vector<std::string>   filepaths;
+  std::vector<std::string> const file_paths = split( std::move( filesystem ), '\n' );
+  std::map<int, std::string>     depths;
+  std::vector<std::string>       filepaths;
 
   for ( auto path : file_paths ) {
     int const depth = std::count( path.begin(), path.end(), '\t' );

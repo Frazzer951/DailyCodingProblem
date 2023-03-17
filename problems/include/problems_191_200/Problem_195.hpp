@@ -26,12 +26,12 @@ matrix smaller than 6 or greater than 23.
 inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int j1, int i2, int j2 ) {
   int const m     = (int) matrix.size();
   int const n     = (int) matrix[0].size();
-  int count = 0;
+  int       count = 0;
 
   // Count numbers smaller than m[i1][j1]
   int const a = matrix[i1][j1];
-  int i = 0;
-  int j = n;
+  int       i = 0;
+  int       j = n;
 
   for ( j = n - 1; j >= 0; j-- ) {
     while ( i < m && matrix[i][j] < a ) i++;
@@ -40,7 +40,7 @@ inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int 
 
   // Count numbers greater than m[i2][j2]
   int const b = matrix[i2][j2];
-  i     = 0;
+  i           = 0;
 
   for ( j = n - 1; j >= 0; j-- ) {
     while ( i < m && matrix[i][j] < b ) i++;

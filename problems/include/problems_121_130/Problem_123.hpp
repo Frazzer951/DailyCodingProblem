@@ -31,8 +31,8 @@ inline bool isNum( std::string s ) {
   int  eCount       = 0;
   int  decimalCount = 0;
 
-  char                 const numbers[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-  char                 const allowed[] = { '+', '-', 'e', '.' };
+  char const           numbers[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+  char const           allowed[] = { '+', '-', 'e', '.' };
   std::map<char, bool> allowedChars;
   std::map<char, bool> nums;
   for ( char const c : allowed ) allowedChars[c] = true;

@@ -65,7 +65,7 @@ struct DisjointSet {
 
 inline std::set<std::pair<std::pair<int, int>, int>> max_spanning_tree( const UndirectedGraph &graph ) {
   std::set<std::pair<std::pair<int, int>, int>> tree;
-  int                                           const n = graph.n;
+  int const                                     n = graph.n;
   DisjointSet                                   ds( n );
   auto                                          edges = graph.edges;
 

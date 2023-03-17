@@ -129,8 +129,8 @@ TEST( Problem_127, Given_Case ) {
   4 -> 2 -> 1
   */
 
-  auto       *x      = new slNode<int>( { 9, 9 } );
-  auto       *y      = new slNode<int>( { 5, 2 } );
+  auto             *x      = new slNode<int>( { 9, 9 } );
+  auto             *y      = new slNode<int>( { 5, 2 } );
   slNode<int> const result = *sum( x, y );
   slNode<int> const expected( { 4, 2, 1 } );
 
@@ -146,8 +146,8 @@ TEST( Problem_127, Test_Case ) {
   8 -> 9 -> 0 -> 1
   */
 
-  auto       *x      = new slNode<int>( { 9, 9 } );
-  auto       *y      = new slNode<int>( { 9, 9, 9 } );
+  auto             *x      = new slNode<int>( { 9, 9 } );
+  auto             *y      = new slNode<int>( { 9, 9, 9 } );
   slNode<int> const result = *sum( x, y );
   slNode<int> const expected( { 8, 9, 0, 1 } );
 
@@ -169,8 +169,8 @@ TEST( Problem_128, Given_Case ) {
   */
 
   std::vector<std::pair<int, int>> const expected = { std::make_pair( 1, 3 ), std::make_pair( 1, 2 ), std::make_pair( 3, 2 ),
-                                                std::make_pair( 1, 3 ), std::make_pair( 2, 1 ), std::make_pair( 2, 3 ),
-                                                std::make_pair( 1, 3 ) };
+                                                      std::make_pair( 1, 3 ), std::make_pair( 2, 1 ), std::make_pair( 2, 3 ),
+                                                      std::make_pair( 1, 3 ) };
   std::vector<std::pair<int, int>> const result   = solveHanoi( 3 );
 
   EXPECT_EQ( result, expected );

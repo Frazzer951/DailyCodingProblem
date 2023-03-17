@@ -12,8 +12,8 @@ a copy of the list. How many swap or move operations do you need?
 
 inline void vSwap( std::vector<int> &v, std::size_t x, std::size_t y ) {
   int const temp = v[x];
-  v[x]     = v[y];
-  v[y]     = temp;
+  v[x]           = v[y];
+  v[y]           = temp;
 }
 
 inline std::vector<int> rotateVector( std::vector<int> v, int k ) {

@@ -24,7 +24,7 @@ class URLShortener {
     std::string random;
     for ( int i = 0; i < 6; i++ ) {
       int const index = rand() % 37;
-      random    += values[index];
+      random          += values[index];
     }
     return random;
   }

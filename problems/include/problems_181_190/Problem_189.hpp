@@ -14,7 +14,7 @@ subarray of distinct elements is [5, 2, 3, 4, 1].
 #include <vector>
 
 inline int longestSubArray( std::vector<int> nums ) {
-  int longest = 0;
+  int       longest = 0;
   int const size    = (int) nums.size();
   for ( int i = 0; i < size; i++ ) {
     if ( size - i < longest ) break;

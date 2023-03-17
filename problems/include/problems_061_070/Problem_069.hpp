@@ -21,7 +21,7 @@ inline int largest_product_x3( std::vector<int> nums ) {
     for ( int j = i + 1; j < nums.size(); j++ ) {
       for ( int k = j + 1; k < nums.size(); k++ ) {
         int const temp = nums[i] * nums[j] * nums[k];
-        largest  = std::max( largest, temp );
+        largest        = std::max( largest, temp );
       }
     }
   }

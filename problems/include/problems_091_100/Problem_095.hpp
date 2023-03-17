@@ -20,8 +20,8 @@ input memory)?
 inline void swap( std::vector<int> &nums, int a, int b ) {
   // Perform an in-place swap
   int const temp = nums[a];
-  nums[a]  = nums[b];
-  nums[b]  = temp;
+  nums[a]        = nums[b];
+  nums[b]        = temp;
 }
 
 inline void reverse( std::vector<int> &nums, int a, int b ) {

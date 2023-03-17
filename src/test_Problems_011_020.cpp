@@ -13,7 +13,7 @@
 
 // Problem 011
 TEST( Problem_11, Given_Case ) {
-  auto                     returned_strs   = autocomplete( "de", { "dog", "deer", "deal" } );
+  auto                           returned_strs   = autocomplete( "de", { "dog", "deer", "deal" } );
   std::vector<std::string> const expected_return = { "deer", "deal" };
   EXPECT_EQ( returned_strs, expected_return );
 }
@@ -54,8 +54,8 @@ TEST( Problem_14, Given_Case ) {
 // Problem 015
 TEST( Problem_15, Test_Case_1 ) {
   std::vector<int> const elements = { 10, 15, 12, 67, 21, 43 };
-  auto             elem     = randElement( elements );
-  bool             inVec    = false;
+  auto                   elem     = randElement( elements );
+  bool                   inVec    = false;
 
   for ( int const element : elements ) {
     if ( element == elem ) { inVec = true; }
@@ -66,8 +66,8 @@ TEST( Problem_15, Test_Case_1 ) {
 
 TEST( Problem_15, Test_Case_2 ) {
   std::vector<int> const elements = { 10, 15, 12, 67, 21, 43 };
-  auto             elem     = randElement( elements );
-  bool             inVec    = false;
+  auto                   elem     = randElement( elements );
+  bool                   inVec    = false;
 
   for ( int const element : elements ) {
     if ( element == elem ) { inVec = true; }
@@ -135,7 +135,7 @@ TEST( Problem_17, Given_Case ) {
 // Problem 018
 TEST( Problem_18, Given_Case ) {
   std::vector<int> const arr      = { 10, 5, 2, 7, 8, 7 };
-  auto             max_vals = compSubArrMax( arr, 3 );
+  auto                   max_vals = compSubArrMax( arr, 3 );
   std::vector<int> const expected = { 10, 7, 8, 8 };
 
   EXPECT_EQ( max_vals, expected );

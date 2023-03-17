@@ -31,9 +31,9 @@ inline std::string runLengthEncode( std::string str ) {
 
   while ( !str.empty() ) {
     char const c     = str[0];
-    int  const count = countChar( str, c );
-    return_str += std::to_string( count ) + c;
-    str        = str.substr( count );
+    int const  count = countChar( str, c );
+    return_str       += std::to_string( count ) + c;
+    str              = str.substr( count );
   }
 
   return return_str;

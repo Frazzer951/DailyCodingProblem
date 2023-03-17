@@ -13,16 +13,17 @@
 
 // Problem 021
 TEST( Problem_21, Given_Case ) {
-  std::vector<std::pair<int, int>> const schedule = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ), std::make_pair( 60, 150 ) };
-  int                              const roomsNeeded = findMinRoomsNeeded( schedule );
+  std::vector<std::pair<int, int>> const schedule    = { std::make_pair( 30, 75 ), std::make_pair( 0, 50 ),
+                                                         std::make_pair( 60, 150 ) };
+  int const                              roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 2 );
 }
 
 TEST( Problem_21, Test_Case ) {
-  std::vector<std::pair<int, int>> const schedule = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ), std::make_pair( 80, 100 ),
-                                                std::make_pair( 50, 75 ) };
-  int                              const roomsNeeded = findMinRoomsNeeded( schedule );
+  std::vector<std::pair<int, int>> const schedule    = { std::make_pair( 0, 75 ), std::make_pair( 25, 100 ),
+                                                         std::make_pair( 80, 100 ), std::make_pair( 50, 75 ) };
+  int const                              roomsNeeded = findMinRoomsNeeded( schedule );
 
   EXPECT_EQ( roomsNeeded, 3 );
 }
@@ -33,9 +34,9 @@ TEST( Problem_22, Given_Case_1 ) {
   // return ['the', 'quick', 'brown', 'fox'].
 
   std::vector<std::string> const wordSet  = { "quick", "brown", "the", "fox" };
-  std::string              const str      = "thequickbrownfox";
+  std::string const              str      = "thequickbrownfox";
   std::vector<std::string> const expected = { "the", "quick", "brown", "fox" };
-  auto                     result   = decompressString( wordSet, str );
+  auto                           result   = decompressString( wordSet, str );
 
   EXPECT_EQ( result, expected );
 }
@@ -45,9 +46,9 @@ TEST( Problem_22, Given_Case_2 ) {
   // ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
 
   std::vector<std::string> const wordSet  = { "bed", "bath", "bedbath", "and", "beyond" };
-  std::string              const str      = "bedbathandbeyond";
+  std::string const              str      = "bedbathandbeyond";
   std::vector<std::string> const expected = { "bed", "bath", "and", "beyond" };
-  auto                     result   = decompressString( wordSet, str );
+  auto                           result   = decompressString( wordSet, str );
 
   EXPECT_EQ( result, expected );
 }
@@ -71,8 +72,8 @@ TEST( Problem_23, Given_Case ) {
   };
   std::pair<int, int> const startPos( 3, 0 );
   std::pair<int, int> const endPos( 0, 0 );
-  int                 const expectedMoves = 7;
-  int                 const moves         = stepsToSolveMaze( maze, startPos, endPos );
+  int const                 expectedMoves = 7;
+  int const                 moves         = stepsToSolveMaze( maze, startPos, endPos );
 
   EXPECT_EQ( moves, expectedMoves );
 }
@@ -86,8 +87,8 @@ TEST( Problem_23, Test_Case ) {
   };
   std::pair<int, int> const startPos( 3, 3 );
   std::pair<int, int> const endPos( 0, 0 );
-  int                 const expectedMoves = 6;
-  int                 const moves         = stepsToSolveMaze( maze, startPos, endPos );
+  int const                 expectedMoves = 6;
+  int const                 moves         = stepsToSolveMaze( maze, startPos, endPos );
 
   EXPECT_EQ( moves, expectedMoves );
 }
@@ -172,7 +173,7 @@ TEST( Problem_28, Given_Case ) {
 
   std::vector<std::string> const words            = { "the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog" };
   std::vector<std::string> const expected_strings = { "the  quick brown", "fox  jumps  over", "the   lazy   dog" };
-  auto                     returned_strings = padWords( words, 16 );
+  auto                           returned_strings = padWords( words, 16 );
 
   EXPECT_EQ( returned_strings, expected_strings );
 }

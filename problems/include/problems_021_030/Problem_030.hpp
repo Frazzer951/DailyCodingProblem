@@ -25,7 +25,7 @@ inline int waterHeightMap( std::vector<int> v ) {
   int unitsOfWater = 0;
 
   int const leftMax  = v[0];
-  int rightMax = 0;
+  int       rightMax = 0;
 
   for ( unsigned int i = 1; i < v.size(); i++ ) {
     if ( rightMax == v[i] ) rightMax = 0;

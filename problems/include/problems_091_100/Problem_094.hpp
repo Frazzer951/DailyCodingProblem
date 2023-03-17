@@ -15,13 +15,13 @@ root.
 inline std::pair<int, int> helper( btNode<int> *root ) {
   if ( root == nullptr ) return std::make_pair( std::numeric_limits<int>::min(), 0 );
 
-  auto left         = helper( root->left );
-  int  const left_max_sum = left.first;
-  int  const left_path    = left.second;
+  auto      left         = helper( root->left );
+  int const left_max_sum = left.first;
+  int const left_path    = left.second;
 
-  auto right         = helper( root->right );
-  int  const right_max_sum = right.first;
-  int  const right_path    = right.second;
+  auto      right         = helper( root->right );
+  int const right_max_sum = right.first;
+  int const right_path    = right.second;
 
   // Calculates the maximum path through the root
   int const root_max_sum = std::max( 0, left_path ) + root->value + std::max( 0, right_path );

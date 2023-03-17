@@ -91,9 +91,9 @@ inline SerNode *deserialize( const std::string &str ) {
 inline int prob_3() {
   std::cout << "\nProblem 3:\n";
 
-  SerNode leftleft( "left.left" );
-  SerNode left( "left", &leftleft );
-  SerNode right( "right" );
+  SerNode       leftleft( "left.left" );
+  SerNode       left( "left", &leftleft );
+  SerNode       right( "right" );
   SerNode const root( "root", &left, &right );
 
   std::string const serialized_root = serialize( root );

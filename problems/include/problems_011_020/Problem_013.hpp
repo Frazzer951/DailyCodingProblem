@@ -38,8 +38,8 @@ inline int longest_substring_with_k_distinct_characters( std::string s, unsigned
       new_lower_bounds = bounds[0];    // Lower bound remains the same
     } else {
       // otherwise, pop last occurring char
-      char const key_to_pop  = findMin( h );
-      new_lower_bounds = h[key_to_pop] + 1;
+      char const key_to_pop = findMin( h );
+      new_lower_bounds      = h[key_to_pop] + 1;
       h.erase( key_to_pop );
     }
     bounds[0]  = new_lower_bounds;

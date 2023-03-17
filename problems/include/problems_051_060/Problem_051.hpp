@@ -21,8 +21,8 @@ inline std::vector<int> shuffle( std::vector<int> arr ) {
   for ( int i = 0; i < n - 1; i++ ) {
     int const j    = rand() % ( n - 1 - i ) + i;
     int const temp = arr[i];
-    arr[i]   = arr[j];
-    arr[j]   = temp;
+    arr[i]         = arr[j];
+    arr[j]         = temp;
   }
   return arr;
 }

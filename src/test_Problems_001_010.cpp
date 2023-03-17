@@ -18,26 +18,26 @@ TEST( Problem_1, Custom_Case ) { EXPECT_FALSE( arrayAddToNum( { 1, 5, 7, 9 }, 11
 
 // Problem 002
 TEST( Problem_2, Given_Case_1 ) {
-  auto             summed_array = sumArray( { 1, 2, 3, 4, 5 } );
+  auto                   summed_array = sumArray( { 1, 2, 3, 4, 5 } );
   std::vector<int> const expected_sum = { 120, 60, 40, 30, 24 };
   EXPECT_EQ( summed_array, expected_sum );
 }
 
 TEST( Problem_2, Given_Case_2 ) {
-  auto             summed_array = sumArray( { 3, 2, 1 } );
+  auto                   summed_array = sumArray( { 3, 2, 1 } );
   std::vector<int> const expected_sum = { 2, 3, 6 };
   EXPECT_EQ( summed_array, expected_sum );
 }
 
 // Problem 003
 TEST( Problem_3, Given_Case ) {
-  SerNode leftleft( "left.left" );
-  SerNode left( "left", &leftleft );
-  SerNode right( "right" );
+  SerNode       leftleft( "left.left" );
+  SerNode       left( "left", &leftleft );
+  SerNode       right( "right" );
   SerNode const root( "root", &left, &right );
 
   std::string const serialized_root = serialize( root );
-  SerNode     const deser_root      = *deserialize( serialized_root );
+  SerNode const     deser_root      = *deserialize( serialized_root );
 
   EXPECT_EQ( root.left().left().value(), deser_root.left().left().value() );
 }
@@ -45,13 +45,13 @@ TEST( Problem_3, Given_Case ) {
 // Problem 004
 TEST( Problem_4, Given_Case_1 ) {
   std::vector<int> const arr         = { 3, 4, -1, 1 };
-  int              const missing_num = findMissingPositive( arr );
+  int const              missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 2 );
 }
 
 TEST( Problem_4, Given_Case_2 ) {
   std::vector<int> const arr         = { 1, 2, 0 };
-  int              const missing_num = findMissingPositive( arr );
+  int const              missing_num = findMissingPositive( arr );
   EXPECT_EQ( missing_num, 3 );
 }
 

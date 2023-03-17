@@ -74,7 +74,7 @@ TEST( Problem_36, Test_Case ) {
 // Problem 037
 TEST( Problem_37, Given_Case ) {
   // {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
-  auto                          result   = getPowderSet( { 1, 2, 3 } );
+  auto                                result   = getPowderSet( { 1, 2, 3 } );
   std::vector<std::vector<int>> const expected = {
     {},
     { 1 },

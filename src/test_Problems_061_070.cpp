@@ -156,7 +156,7 @@ TEST( Problem_67, Set ) {
 // Problem 068
 TEST( Problem_68, Given_Case ) {
   std::vector<std::pair<int, int>> const bishops = { std::make_pair( 0, 0 ), std::make_pair( 1, 2 ), std::make_pair( 2, 2 ),
-                                               std::make_pair( 4, 0 ) };
+                                                     std::make_pair( 4, 0 ) };
 
   int const result = pairs( bishops, 5 );
 

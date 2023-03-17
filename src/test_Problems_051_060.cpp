@@ -216,7 +216,7 @@ TEST( Problem_57, Given_Case ) {
   // given the string "the quick brown fox jumps over the lazy dog" and k = 10,
   // you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"].
 
-  auto                     result   = splitString( "the quick brown fox jumps over the lazy dog", 10 );
+  auto                           result   = splitString( "the quick brown fox jumps over the lazy dog", 10 );
   std::vector<std::string> const expected = { "the quick", "brown fox", "jumps over", "the lazy", "dog" };
 
   EXPECT_EQ( result, expected );

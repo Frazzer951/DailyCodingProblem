@@ -26,8 +26,8 @@ inline unsigned int length( slNode<int> *head ) {
 inline slNode<int> *findNodeIntersect( slNode<int> *a, slNode<int> *b ) {
   unsigned int const m    = length( a );
   unsigned int const n    = length( b );
-  slNode<int> *curA = a;
-  slNode<int> *curB = b;
+  slNode<int>       *curA = a;
+  slNode<int>       *curB = b;
 
   if ( m > n ) {
     for ( unsigned int i = 0; i < m - n; ++i ) curA = curA->next;

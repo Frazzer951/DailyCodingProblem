@@ -24,8 +24,8 @@ inline int maxProfit( std::vector<int> arr, int fee ) {
   int hold = -arr[0];
   for ( int i = 1; i < arr.size(); i++ ) {
     int const price = arr[i];
-    max       = std::max( max, hold + price - fee );
-    hold      = std::max( hold, max - price );
+    max             = std::max( max, hold + price - fee );
+    hold            = std::max( hold, max - price );
   }
   return max;
 }
