@@ -16,16 +16,17 @@ jobs:
       - name: Set up Clang
         uses: egor-tensin/setup-clang@v1
         with:
-          version: 14
+          version: 15
           platform: x64
 
       - name: Verify up Clang
         run: |
           sudo apt-get update
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format-14 clang-tidy-14
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends clang-format-15 clang-tidy-15 clang-tools-15
 
-          sudo ln -f -s /usr/bin/clang-format-14 /usr/local/bin/clang-format
-          sudo ln -f -s /usr/bin/clang-tidy-14 /usr/local/bin/clang-tidy
+          sudo ln -f -s /usr/bin/clang-format-15 /usr/local/bin/clang-format
+          sudo ln -f -s /usr/bin/clang-tidy-15 /usr/local/bin/clang-tidy
+          sudo ln -f -s /usr/bin/run-clang-tidy-15 /usr/local/bin/run-clang-tidy
 
           echo "Clang Version:"
           clang --version
@@ -42,7 +43,7 @@ jobs:
       - name: Clang Tidy
         run: |
           cd build
-          cmake --build . --target clangtidy
+          run-clang-tidy -fix
 
       - name: Clang Format
         run: |
