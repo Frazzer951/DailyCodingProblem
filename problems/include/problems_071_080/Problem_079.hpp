@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_071_080_PROBLEM_079_HPP
 #define PROBLEMS_071_080_PROBLEM_079_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,24 +15,18 @@ one element to get a non-decreasing array.
 */
 #include <vector>
 
-inline bool remove_one_non_decrease( std::vector<int> nums )
-{
-  for( int i = 0; i < nums.size(); i++ )
-  {
+inline bool remove_one_non_decrease( std::vector<int> nums ) {
+  for ( int i = 0; i < nums.size(); i++ ) {
     bool increasing = true;
-    for( int j = 0; j < nums.size() - 1; j++ )
-    {
-      if( j == i ) continue;
-      if( j + 1 == i && j + 2 < nums.size() )
-      {
-        if( nums[j] > nums[j + 2] ) increasing = false;
-      }
-      else
-      {
-        if( nums[j] > nums[j + 1] ) increasing = false;
+    for ( int j = 0; j < nums.size() - 1; j++ ) {
+      if ( j == i ) continue;
+      if ( j + 1 == i && j + 2 < nums.size() ) {
+        if ( nums[j] > nums[j + 2] ) increasing = false;
+      } else {
+        if ( nums[j] > nums[j + 1] ) increasing = false;
       }
     }
-    if( increasing ) return true;
+    if ( increasing ) return true;
   }
   return false;
 }

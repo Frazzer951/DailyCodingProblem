@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_001_HPP
 #define PROBLEMS_001_010_PROBLEM_001_HPP
 
-
 #pragma once
 
 /* EASY
@@ -15,20 +14,16 @@ Bonus: Can you do this in one pass?
 #include <iostream>
 #include <vector>
 
-inline bool arrayAddToNum( std::vector<int> arr, int k )
-{
-  for( unsigned int i = 0; i < arr.size() - 1; ++i )
-  {
-    for( unsigned int j = i; j < arr.size(); ++j )
-    {
-      if( arr[i] + arr[j] == k ) return true;
+inline bool arrayAddToNum( std::vector<int> arr, int k ) {
+  for ( unsigned int i = 0; i < arr.size() - 1; ++i ) {
+    for ( unsigned int j = i; j < arr.size(); ++j ) {
+      if ( arr[i] + arr[j] == k ) return true;
     }
   }
   return false;
 }
 
-inline int prob_1()
-{
+inline int prob_1() {
   std::cout << "\nProblem 1:\n";
 
   std::string str = ( arrayAddToNum( { 10, 15, 3, 7 }, 17 ) ) ? "True" : "False";

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_021_030_PROBLEM_022_HPP
 #define PROBLEMS_021_030_PROBLEM_022_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -20,24 +19,20 @@ Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string
 #include <string>
 #include <vector>
 
-inline std::vector<std::string> decompressString( const std::vector<std::string> & wordSet, std::string str )
-{
+inline std::vector<std::string> decompressString( const std::vector<std::string> &wordSet, std::string str ) {
   std::vector<std::string> sentance;
 
-  while( str.length() > 0 )
-  {
+  while ( str.length() > 0 ) {
     bool wordFound = false;
-    for( const std::string & word : wordSet )
-    {
+    for ( const std::string &word : wordSet ) {
       auto index = str.find( word );
-      if( index == 0 )
-      {
+      if ( index == 0 ) {
         sentance.push_back( str.substr( 0, word.length() ) );
         str       = str.substr( word.length() );
         wordFound = true;
       }
     }
-    if( !wordFound ) break;
+    if ( !wordFound ) break;
   }
 
   return sentance;

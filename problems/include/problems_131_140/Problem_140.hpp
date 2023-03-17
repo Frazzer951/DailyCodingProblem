@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_131_140_PROBLEM_140_HPP
 #define PROBLEMS_131_140_PROBLEM_140_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,18 +15,17 @@ Follow-up: Can you do this in linear time and constant space?
 */
 #include <vector>
 
-inline std::pair<int, int> array_two_elements( const std::vector<int> & arr )
-{
+inline std::pair<int, int> array_two_elements( const std::vector<int> &arr ) {
   int val = 0;
-  for( int num : arr ) val = val ^ num;
+  for ( int num : arr ) val = val ^ num;
 
   // Get rightmost set bit
   val = val & -val;
 
   std::pair<int, int> rets = std::make_pair( 0, 0 );
-  for( int num : arr )
-  {
-    if( ( num & val ) != 0 ) rets.first = rets.first ^ num;
+  for ( int num : arr ) {
+    if ( ( num & val ) != 0 )
+      rets.first = rets.first ^ num;
     else
       rets.second = rets.second ^ num;
   }

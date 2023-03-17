@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_149_HPP
 #define PROBLEMS_141_150_PROBLEM_149_HPP
 
-
 #pragma once
 
 /* HARD
@@ -16,19 +15,14 @@ over the pre-processing step.
 */
 #include <vector>
 
-inline std::vector<int> sumPreprocess( std::vector<int> L )
-{
-  for( int i = 1; i < L.size(); i++ )
-  {
-    L[i] = L[i] + L[i - 1];
-  }
+inline std::vector<int> sumPreprocess( std::vector<int> L ) {
+  for ( int i = 1; i < L.size(); i++ ) { L[i] = L[i] + L[i - 1]; }
   return L;
 }
 
-inline int sum( std::vector<int> L, int i, int j )
-{
-  if( j == 0 ) return 0;
-  if( i == 0 ) return L[j - 1];
+inline int sum( std::vector<int> L, int i, int j ) {
+  if ( j == 0 ) return 0;
+  if ( i == 0 ) return L[j - 1];
   return L[j - 1] - L[i - 1];
 }
 #endif

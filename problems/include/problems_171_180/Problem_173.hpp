@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_173_HPP
 #define PROBLEMS_171_180_PROBLEM_173_HPP
 
-
 #pragma once
 
 /* EASY
@@ -40,20 +39,15 @@ You can assume keys do not contain dots in them, i.e. no clobbering will occur.
 
 using anymap = std::map<std::string, std::any>;
 
-inline std::map<std::string, int> flatten( const anymap & d, char separator = '.' )
-{
+inline std::map<std::string, int> flatten( const anymap &d, char separator = '.' ) {
   std::map<std::string, int> new_dict;
 
-  for( const auto & [key, value] : d )
-  {
-    if( value.type().name() == typeid( int ).name() )
-    {
+  for ( const auto &[key, value] : d ) {
+    if ( value.type().name() == typeid( int ).name() ) {
       new_dict[key] = std::any_cast<int>( value );
-    }
-    else
-    {
+    } else {
       std::map<std::string, int> flattened_subdict = flatten( std::any_cast<anymap>( value ) );
-      for( auto & [flatkey, flatvalue] : flattened_subdict ) new_dict[key + separator + flatkey] = flatvalue;
+      for ( auto &[flatkey, flatvalue] : flattened_subdict ) new_dict[key + separator + flatkey] = flatvalue;
     }
   }
 

@@ -11,32 +11,22 @@
 #include "problems_381_390/Problem_389.hpp"
 #include "problems_381_390/Problem_390.hpp"
 
-
 // Problem 381
-
 
 // Problem 382
 
-
 // Problem 383
-
 
 // Problem 384
 
-
 // Problem 385
-
 
 // Problem 386
 
-
 // Problem 387
-
 
 // Problem 388
 
-
 // Problem 389
-
 
 // Problem 390

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_008_HPP
 #define PROBLEMS_001_010_PROBLEM_008_HPP
 
-
 #pragma once
 
 /* EASY
@@ -22,47 +21,40 @@ For example, the following tree has 5 unival subtrees:
 */
 #include <iostream>
 
-class Node
-{
+class Node {
 public:
-  int    data;
-  Node * left { nullptr };
-  Node * right { nullptr };
+  int   data;
+  Node *left { nullptr };
+  Node *right { nullptr };
 
   Node( int val ) : data( val ) {}
 };
 
-inline bool sameChildren( Node * root )
-{
-  if( root == nullptr ) return true;
-  if( root->left == nullptr && root->right == nullptr ) return true;
+inline bool sameChildren( Node *root ) {
+  if ( root == nullptr ) return true;
+  if ( root->left == nullptr && root->right == nullptr ) return true;
 
-  if( root->left != nullptr && root->data != root->left->data ) return false;
-  if( root->right != nullptr && root->data != root->right->data ) return false;
+  if ( root->left != nullptr && root->data != root->left->data ) return false;
+  if ( root->right != nullptr && root->data != root->right->data ) return false;
 
   return sameChildren( root->left ) && sameChildren( root->right );
 }
 
-inline int countUnivalTree( Node * root )
-{
-  if( root == nullptr ) return 0;
+inline int countUnivalTree( Node *root ) {
+  if ( root == nullptr ) return 0;
 
-  if( root->left == nullptr && root->right == nullptr )
-  {
-    return 1;
-  }
+  if ( root->left == nullptr && root->right == nullptr ) { return 1; }
   int count = 0;
 
-  if( sameChildren( root ) ) count++;
+  if ( sameChildren( root ) ) count++;
 
   return count + countUnivalTree( root->left ) + countUnivalTree( root->right );
 }
 
-inline int prob_8()
-{
+inline int prob_8() {
   std::cout << "\nProblem 8\n";
 
-  Node * root              = new Node( 0 );
+  Node *root               = new Node( 0 );
   root->left               = new Node( 1 );
   root->right              = new Node( 0 );
   root->right->right       = new Node( 0 );
@@ -72,7 +64,7 @@ inline int prob_8()
 
   std::cout << "The tree of root has " << countUnivalTree( root ) << " univalve subtrees\n";
 
-  Node * root2              = new Node( 1 );
+  Node *root2               = new Node( 1 );
   root2->left               = new Node( 1 );
   root2->left->left         = new Node( 1 );
   root2->left->right        = new Node( 0 );

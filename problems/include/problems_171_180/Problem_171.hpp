@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_171_HPP
 #define PROBLEMS_171_180_PROBLEM_171_HPP
 
-
 #pragma once
 
 /* EASY
@@ -27,17 +26,15 @@ the building always starts off and ends up empty, i.e. with 0 people inside.
 
 enum class Type { enter, exit };
 
-struct Timelog
-{
+struct Timelog {
   long timestamp;
   int  count;
   Type type;
 };
 
-inline bool Timelog_sorter( Timelog const & lhs, Timelog const & rhs ) { return lhs.timestamp < rhs.timestamp; }
+inline bool Timelog_sorter( Timelog const &lhs, Timelog const &rhs ) { return lhs.timestamp < rhs.timestamp; }
 
-inline std::pair<long, long> busiest_period( std::vector<Timelog> entries )
-{
+inline std::pair<long, long> busiest_period( std::vector<Timelog> entries ) {
   std::pair<long, long> period;
   int                   num_people     = 0;
   int                   max_num_people = 0;
@@ -46,15 +43,14 @@ inline std::pair<long, long> busiest_period( std::vector<Timelog> entries )
   std::sort( entries.begin(), entries.end(), Timelog_sorter );
 
   // Keep track of the number of people at each entry.
-  for( int i = 0; i < entries.size(); i++ )
-  {
+  for ( int i = 0; i < entries.size(); i++ ) {
     Timelog entry = entries[i];
-    if( entry.type == Type::enter ) num_people += entry.count;
+    if ( entry.type == Type::enter )
+      num_people += entry.count;
     else
       num_people -= entry.count;
 
-    if( num_people > max_num_people )
-    {
+    if ( num_people > max_num_people ) {
       max_num_people = num_people;
       period         = { entry.timestamp, entries[i + 1].timestamp };
     }

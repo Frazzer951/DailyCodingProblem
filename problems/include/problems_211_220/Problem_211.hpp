@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_211_HPP
 #define PROBLEMS_211_220_PROBLEM_211_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -12,14 +11,12 @@ pattern "abr", you should return [0, 7].
 #include <string>
 #include <vector>
 
-inline std::vector<int> indexOf( const std::string & str, const std::string & pattern )
-{
+inline std::vector<int> indexOf( const std::string &str, const std::string &pattern ) {
   std::vector<int> indecies;
 
-  for( int i = 0; i < str.size() - pattern.size(); i++ )
-  {
+  for ( int i = 0; i < str.size() - pattern.size(); i++ ) {
     std::string tmp = str.substr( i, pattern.size() );
-    if( tmp == pattern ) indecies.push_back( i );
+    if ( tmp == pattern ) indecies.push_back( i );
   }
 
   return indecies;

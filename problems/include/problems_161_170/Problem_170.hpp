@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_161_170_PROBLEM_170_HPP
 #define PROBLEMS_161_170_PROBLEM_170_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -20,27 +19,22 @@ return null as there is no possible transformation from dog to cat.
 #include <string>
 #include <vector>
 
-inline int lettersOff( const std::string & s1, const std::string & s2 )
-{
+inline int lettersOff( const std::string &s1, const std::string &s2 ) {
   int count = 0;
-  for( int i = 0; i < s1.size(); i++ )
-    if( s1[i] != s2[i] ) count++;
+  for ( int i = 0; i < s1.size(); i++ )
+    if ( s1[i] != s2[i] ) count++;
   return count;
 }
 
-inline std::vector<std::string> shortestTransform( const std::string & start, const std::string & end,
-                                                   std::vector<std::string> dict )
-{
+inline std::vector<std::string> shortestTransform( const std::string &start, const std::string &end,
+                                                   std::vector<std::string> dict ) {
   std::vector<std::string> transform;
 
-  for( int i = 0; i < dict.size(); i++ )
-  {
+  for ( int i = 0; i < dict.size(); i++ ) {
     std::string word = dict[i];
 
-    if( lettersOff( word, start ) == 1 )
-    {
-      if( word == end )
-      {
+    if ( lettersOff( word, start ) == 1 ) {
+      if ( word == end ) {
         transform = { start, word };
         return transform;
       }
@@ -48,8 +42,7 @@ inline std::vector<std::string> shortestTransform( const std::string & start, co
       std::vector<std::string> newDict = dict;
       newDict.erase( newDict.begin() + i );
       std::vector<std::string> newPath = shortestTransform( word, end, newDict );
-      if( !newPath.empty() && ( transform.empty() || newPath.size() < transform.size() ) )
-      {
+      if ( !newPath.empty() && ( transform.empty() || newPath.size() < transform.size() ) ) {
         transform = newPath;
         transform.insert( transform.begin(), start );
       }

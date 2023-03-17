@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_091_100_PROBLEM_100_HPP
 #define PROBLEMS_091_100_PROBLEM_100_HPP
 
-
 #pragma once
 
 /* EASY
@@ -33,12 +32,10 @@ from (1, 1) to (1, 2).
 */
 #include <vector>
 
-inline int minSteps( std::vector<std::pair<int, int>> points )
-{
+inline int minSteps( std::vector<std::pair<int, int>> points ) {
   int totalSteps = 0;
 
-  for( std::size_t i = 1; i < points.size(); i++ )
-  {
+  for ( std::size_t i = 1; i < points.size(); i++ ) {
     int xChange = std::abs( points[i].first - points[i - 1].first );
     int yChange = std::abs( points[i].second - points[i - 1].second );
 

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_021_030_PROBLEM_024_HPP
 #define PROBLEMS_021_030_PROBLEM_024_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -23,51 +22,43 @@ the height of the tree.
 */
 #include <iostream>
 
-struct lbtNode
-{
-  int       value;
-  int       lockedSubNodes { 0 };
-  bool      locked { false };
-  lbtNode * parent { nullptr };
-  lbtNode * left { nullptr };
-  lbtNode * right { nullptr };
+struct lbtNode {
+  int      value;
+  int      lockedSubNodes { 0 };
+  bool     locked { false };
+  lbtNode *parent { nullptr };
+  lbtNode *left { nullptr };
+  lbtNode *right { nullptr };
 
   lbtNode( int val ) : value( val ) {}
 
-  void setLeft( lbtNode * node )
-  {
+  void setLeft( lbtNode *node ) {
     left         = node;
     node->parent = this;
   }
 
-  void setRight( lbtNode * node )
-  {
+  void setRight( lbtNode *node ) {
     right        = node;
     node->parent = this;
   }
 
-  [[nodiscard]] bool canLockUnlock() const
-  {
-    if( lockedSubNodes > 0 ) return false;
+  [[nodiscard]] bool canLockUnlock() const {
+    if ( lockedSubNodes > 0 ) return false;
 
-    auto * cur = parent;
-    while( cur != nullptr )
-    {
-      if( cur->locked ) return false;
+    auto *cur = parent;
+    while ( cur != nullptr ) {
+      if ( cur->locked ) return false;
       cur = cur->parent;
     }
     return true;
   }
 
-  bool lock()
-  {
-    if( canLockUnlock() )
-    {
+  bool lock() {
+    if ( canLockUnlock() ) {
       locked = true;
 
-      auto * cur = parent;
-      while( cur != nullptr )
-      {
+      auto *cur = parent;
+      while ( cur != nullptr ) {
         cur->lockedSubNodes++;
         cur = cur->parent;
       }
@@ -77,15 +68,12 @@ struct lbtNode
     return false;
   }
 
-  bool unlock()
-  {
-    if( canLockUnlock() )
-    {
+  bool unlock() {
+    if ( canLockUnlock() ) {
       locked = false;
 
-      auto * cur = parent;
-      while( cur != nullptr )
-      {
+      auto *cur = parent;
+      while ( cur != nullptr ) {
         cur->lockedSubNodes--;
         cur = cur->parent;
       }

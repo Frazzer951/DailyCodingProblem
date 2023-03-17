@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_122_HPP
 #define PROBLEMS_121_130_PROBLEM_122_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -20,15 +19,11 @@ The most we can collect is 0 + 2 + 1 + 5 + 3 + 1 = 12 coins.
 */
 #include <vector>
 
-inline int maxCoins( std::vector<std::vector<int>> coins )
-{
+inline int maxCoins( std::vector<std::vector<int>> coins ) {
   std::vector<std::vector<int>> counts( coins.size() + 1, std::vector( coins[0].size() + 1, 0 ) );
-  for( int i = 0; i < counts.size(); i++ )
-  {
-    for( int j = 0; j < counts[0].size(); j++ )
-    {
-      if( i == 0 || j == 0 )
-      {
+  for ( int i = 0; i < counts.size(); i++ ) {
+    for ( int j = 0; j < counts[0].size(); j++ ) {
+      if ( i == 0 || j == 0 ) {
         counts[i][j] = 0;
         continue;
       }

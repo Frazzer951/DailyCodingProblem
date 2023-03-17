@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_212_HPP
 #define PROBLEMS_211_220_PROBLEM_212_HPP
 
-
 #pragma once
 
 /* EASY
@@ -13,16 +12,14 @@ return "A". Given 27, return "AA".
 */
 #include <string>
 
-inline std::string colLetter( int col )
-{
+inline std::string colLetter( int col ) {
   std::string letters;
 
-  while( col > 0 )
-  {
+  while ( col > 0 ) {
     int cur = col % 26;
-    if( cur == 0 ) cur = 26;
+    if ( cur == 0 ) cur = 26;
     letters += char( cur + 64 );
-    col -= 26;
+    col     -= 26;
   }
 
   return letters;

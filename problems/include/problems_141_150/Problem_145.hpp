@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_145_HPP
 #define PROBLEMS_141_150_PROBLEM_145_HPP
 
-
 #pragma once
 
 /* EASY
@@ -12,22 +11,20 @@ For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.
 */
 #include "slNode.hpp"
 
-inline slNode<int> * swapEveryTwo( slNode<int> * root )
-{
-  slNode<int> * prev = nullptr;
-  slNode<int> * cur  = root;
-  slNode<int> * next = root->next;
-  root               = next;
+inline slNode<int> *swapEveryTwo( slNode<int> *root ) {
+  slNode<int> *prev = nullptr;
+  slNode<int> *cur  = root;
+  slNode<int> *next = root->next;
+  root              = next;
 
-  while( cur != nullptr && next != nullptr )
-  {
-    if( prev != nullptr ) prev->next = next;
+  while ( cur != nullptr && next != nullptr ) {
+    if ( prev != nullptr ) prev->next = next;
     cur->next  = next->next;
     next->next = cur;
 
     prev = cur;
     cur  = cur->next;
-    if( cur != nullptr ) next = cur->next;
+    if ( cur != nullptr ) next = cur->next;
   }
 
   return root;

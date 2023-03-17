@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_051_060_PROBLEM_057_HPP
 #define PROBLEMS_051_060_PROBLEM_057_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -23,28 +22,21 @@ k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy",
 
 #include "Futils.hpp"
 
-inline std::vector<std::string> splitString( std::string str, int k )
-{
+inline std::vector<std::string> splitString( std::string str, int k ) {
   std::vector<std::string> multi_string;
 
   auto split_string = split( std::move( str ) );
 
   int         count = 0;
   std::string cur_str;
-  for( const auto & word : split_string )
-  {
-    if( count == 0 )
-    {
+  for ( const auto &word : split_string ) {
+    if ( count == 0 ) {
       cur_str += word;
-      count = (int) word.size();
-    }
-    else if( count + word.size() + 1 <= k )
-    {
+      count   = (int) word.size();
+    } else if ( count + word.size() + 1 <= k ) {
       cur_str += " " + word;
-      count += (int) word.size() + 1;
-    }
-    else
-    {
+      count   += (int) word.size() + 1;
+    } else {
       multi_string.push_back( cur_str );
       cur_str = word;
       count   = (int) word.size();

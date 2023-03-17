@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_048_HPP
 #define PROBLEMS_041_050_PROBLEM_048_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -28,19 +27,16 @@ d  e f  g
 
 #include "btNode.hpp"
 
-inline int get_index( std::vector<btNode<char> *> v, btNode<char> * node )
-{
-  for( int i = 0; i < v.size(); i++ )
-  {
-    if( v[i] == node ) return i;
+inline int get_index( std::vector<btNode<char> *> v, btNode<char> *node ) {
+  for ( int i = 0; i < v.size(); i++ ) {
+    if ( v[i] == node ) return i;
   }
   return -1;
 }
 
 // Function to slice a given vector
 // from range X to Y
-inline std::vector<btNode<char> *> slicing( std::vector<btNode<char> *> & arr, int X, int Y )
-{
+inline std::vector<btNode<char> *> slicing( std::vector<btNode<char> *> &arr, int X, int Y ) {
   // Starting and Ending iterators
   auto start = arr.begin() + X;
   auto end   = arr.begin() + Y + 1;
@@ -55,15 +51,11 @@ inline std::vector<btNode<char> *> slicing( std::vector<btNode<char> *> & arr, i
   return result;
 }
 
-inline btNode<char> * reconstruct( std::vector<btNode<char> *> preorder, std::vector<btNode<char> *> inorder )
-{
-  if( preorder.size() == 1 && inorder.size() == 1 )
-  {
-    return preorder[0];
-  }
+inline btNode<char> *reconstruct( std::vector<btNode<char> *> preorder, std::vector<btNode<char> *> inorder ) {
+  if ( preorder.size() == 1 && inorder.size() == 1 ) { return preorder[0]; }
 
-  btNode<char> * root   = preorder[0];
-  int            root_i = get_index( inorder, root );
+  btNode<char> *root   = preorder[0];
+  int           root_i = get_index( inorder, root );
 
   //    root.left = reconstruct(preorder[1:1 + root_i], inorder[0:root_i])
   //    root.right = reconstruct(preorder[1 + root_i:], inorder[root_i + 1:])

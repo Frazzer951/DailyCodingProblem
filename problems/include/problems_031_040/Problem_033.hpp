@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_031_040_PROBLEM_033_HPP
 #define PROBLEMS_031_040_PROBLEM_033_HPP
 
-
 #pragma once
 
 /* EASY
@@ -25,23 +24,18 @@ print out:
 #include <algorithm>
 #include <vector>
 
-inline std::vector<double> runningMedian( const std::vector<double> & v )
-{
+inline std::vector<double> runningMedian( const std::vector<double> &v ) {
   std::vector<double> medians;
   std::vector<double> running;
 
-  for( double i : v )
-  {
+  for ( double i : v ) {
     running.push_back( i );
     std::sort( running.begin(), running.end() );
 
     size_t middle = running.size() / 2;
-    if( running.size() % 2 == 0 )
-    {
+    if ( running.size() % 2 == 0 ) {
       medians.push_back( ( running[middle - 1] + running[middle] ) / 2.0 );
-    }
-    else
-    {
+    } else {
       medians.push_back( running[middle] );
     }
   }

@@ -4,8 +4,7 @@
 #include "gtest/gtest.h"
 
 // FUtils
-TEST( FUtils, split )
-{
+TEST( FUtils, split ) {
   std::string              str            = "This is a test string";
   std::vector<std::string> expected_split = { "This", "is", "a", "test", "string" };
   auto                     split_str      = split( str );
@@ -19,8 +18,7 @@ TEST( FUtils, split )
   EXPECT_EQ( split_str, expected_split );
 }
 
-TEST( FUtils, getIntVecMax )
-{
+TEST( FUtils, getIntVecMax ) {
   std::vector<int> vec          = { 1, 5, 3, 7, 5, 9 };
   int              expected_max = 9;
   int              max_val      = getIntVecMax( vec );
@@ -34,8 +32,7 @@ TEST( FUtils, getIntVecMax )
   EXPECT_EQ( max_val, expected_max );
 }
 
-TEST( FUtils, getIntVecMin )
-{
+TEST( FUtils, getIntVecMin ) {
   std::vector<int> vec          = { 1, 5, 3, 7, 5, 9 };
   int              expected_min = 1;
   int              min_val      = getIntVecMin( vec );
@@ -55,8 +52,7 @@ TEST( FUtils, getIntVecMin )
   EXPECT_EQ( min_val, expected_min );
 }
 
-TEST( FUtils, intVecToStr )
-{
+TEST( FUtils, intVecToStr ) {
   std::vector<int> vec          = { 1, 2, 3, 4, 5 };
   std::string      expected_str = "1 2 3 4 5 ";
   std::string      str          = intVecToStr( vec );
@@ -70,11 +66,10 @@ TEST( FUtils, intVecToStr )
   EXPECT_EQ( str, expected_str );
 }
 
-TEST( FUtils, slNode )
-{
-  auto * root      = new slNode( 10 );
-  auto * node      = new slNode( 3 );
-  auto * node2     = new slNode( 8 );
+TEST( FUtils, slNode ) {
+  auto *root       = new slNode( 10 );
+  auto *node       = new slNode( 3 );
+  auto *node2      = new slNode( 8 );
   root->next       = node;
   root->next->next = node2;
 
@@ -83,11 +78,10 @@ TEST( FUtils, slNode )
   EXPECT_EQ( root->next->next->value, 8 );
 }
 
-TEST( FUtils, slList )
-{
+TEST( FUtils, slList ) {
   slList<int> list;
-  auto *      node  = new slNode( 3 );
-  auto *      node2 = new slNode( 8 );
+  auto       *node  = new slNode( 3 );
+  auto       *node2 = new slNode( 8 );
 
   list.add( node );
   list.add( node2 );

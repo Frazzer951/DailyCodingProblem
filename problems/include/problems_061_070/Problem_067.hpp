@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_061_070_PROBLEM_067_HPP
 #define PROBLEMS_061_070_PROBLEM_067_HPP
 
-
 #pragma once
 
 /* HARD
@@ -20,17 +19,14 @@ Each operation should run in O(1) time.
 #include <map>
 #include <string>
 
-inline int get_deque_index( std::deque<std::string> dq, const std::string & value )
-{
-  for( int i = 0; i < dq.size(); i++ )
-  {
-    if( dq[i] == value ) return i;
+inline int get_deque_index( std::deque<std::string> dq, const std::string &value ) {
+  for ( int i = 0; i < dq.size(); i++ ) {
+    if ( dq[i] == value ) return i;
   }
   return -1;
 }
 
-struct LFUCache
-{
+struct LFUCache {
   int                                        capacity;
   std::map<std::string, std::pair<int, int>> val_map;
   std::map<int, std::deque<std::string>>     freq_map;
@@ -38,14 +34,12 @@ struct LFUCache
 
   LFUCache( int _capacity ) : capacity( _capacity ) {};
 
-  int get( const std::string & key )
-  {
+  int get( const std::string &key ) {
     // If key doesn't exist, return None.
-    if( val_map.find( key ) == val_map.end() ) return 0;
-
+    if ( val_map.find( key ) == val_map.end() ) return 0;
 
     // First, we look up the val and frequency in our val_map.
-    auto & [val, freq] = val_map[key];
+    auto &[val, freq] = val_map[key];
 
     // We need to then increment the frequency of our key,
     // so we'll take it out of the current bucket and put it
@@ -54,9 +48,8 @@ struct LFUCache
     // then we'll make sure to update our min_freq so we can keep
     // track of what to evict.
     freq_map[freq].erase( freq_map[freq].begin() + get_deque_index( freq_map[freq], key ) );
-    if( freq_map[freq].empty() )
-    {
-      if( min_freq == freq ) min_freq += 1;
+    if ( freq_map[freq].empty() ) {
+      if ( min_freq == freq ) min_freq += 1;
     }
 
     // Update our dicts as usual.
@@ -65,17 +58,14 @@ struct LFUCache
     return val;
   }
 
-  void set( const std::string & key, int val )
-  {
-    if( capacity == 0 ) return;
+  void set( const std::string &key, int val ) {
+    if ( capacity == 0 ) return;
 
-    if( val_map.find( key ) == val_map.end() )
-    {
+    if ( val_map.find( key ) == val_map.end() ) {
       // Evict the least frequently used key by popping left
       // from the lowest-frequency key, since it's ordered by
       // time (because we use append).
-      if( val_map.size() >= capacity )
-      {
+      if ( val_map.size() >= capacity ) {
         std::string to_evict = freq_map[min_freq].front();
         freq_map[min_freq].pop_front();
         val_map.erase( to_evict );
@@ -84,16 +74,13 @@ struct LFUCache
       val_map[key] = std::make_pair( val, 1 );
       freq_map[1].push_back( key );
       min_freq = 1;
-    }
-    else
-    {
+    } else {
       // Update the entry and increase the frequency of the key,
       // updating the minimum frequency if necessary.
-      auto & [_, freq] = val_map[key];
+      auto &[_, freq] = val_map[key];
       freq_map[freq].erase( freq_map[freq].begin() + get_deque_index( freq_map[freq], key ) );
-      if( freq_map[freq].empty() )
-      {
-        if( freq == min_freq ) min_freq += 1;
+      if ( freq_map[freq].empty() ) {
+        if ( freq == min_freq ) min_freq += 1;
       }
 
       val_map[key] = std::make_pair( val, freq + 1 );

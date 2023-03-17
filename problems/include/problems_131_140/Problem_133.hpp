@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_131_140_PROBLEM_133_HPP
 #define PROBLEMS_131_140_PROBLEM_133_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -21,24 +20,17 @@ You can assume each node has a parent pointer.
 */
 #include "problems_111_120/Problem_112.hpp"
 
-inline int nextElement( pbtNode * node )
-{
-  auto * curNode = node;
+inline int nextElement( pbtNode *node ) {
+  auto *curNode = node;
 
-  if( node->right != nullptr )
-  {
+  if ( node->right != nullptr ) {
     curNode = curNode->right;
-  }
-  else
-  {
+  } else {
     curNode = curNode->parent;
-    if( curNode->left == nullptr || curNode->left == node ) return curNode->value;
+    if ( curNode->left == nullptr || curNode->left == node ) return curNode->value;
   }
 
-  while( curNode->left != nullptr )
-  {
-    curNode = curNode->left;
-  }
+  while ( curNode->left != nullptr ) { curNode = curNode->left; }
   return curNode->value;
 }
 #endif

@@ -11,32 +11,22 @@
 #include "problems_561_570/Problem_569.hpp"
 #include "problems_561_570/Problem_570.hpp"
 
-
 // Problem 561
-
 
 // Problem 562
 
-
 // Problem 563
-
 
 // Problem 564
 
-
 // Problem 565
-
 
 // Problem 566
 
-
 // Problem 567
-
 
 // Problem 568
 
-
 // Problem 569
-
 
 // Problem 570

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_251_260_PROBLEM_252_HPP
 #define PROBLEMS_251_260_PROBLEM_252_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,12 +15,10 @@ Egyptian fraction.
 #include <Futils.hpp>
 #include <vector>
 
-inline std::vector<int> egyptianFraction( int a, int b )
-{
+inline std::vector<int> egyptianFraction( int a, int b ) {
   std::vector<int> denominators;
 
-  while( a != 0 )
-  {
+  while ( a != 0 ) {
     int ceil_div = b / a + static_cast<int>( b % a != 0 );
     denominators.push_back( ceil_div );
     a = mod( -b, a );

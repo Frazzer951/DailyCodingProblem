@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_109_HPP
 #define PROBLEMS_101_110_PROBLEM_109_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,8 +15,7 @@ Bonus: Can you do this in one line?
 
 #pragma GCC diagnostic push    // Save the current warning state.
 #pragma GCC diagnostic ignored "-Wconversion"
-inline std::int8_t     even_odd_bit_swap( std::int8_t bits )
-{
+inline std::int8_t     even_odd_bit_swap( std::int8_t bits ) {
   /*
   std::int8_t even_mask = 0b10101010;
   std::int8_t odd_mask  = 0b01010101;

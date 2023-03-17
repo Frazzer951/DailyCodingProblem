@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_081_090_PROBLEM_086_HPP
 #define PROBLEMS_081_090_PROBLEM_086_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -15,34 +14,28 @@ For example, given the string "()())()", you should return 1. Given the string
 #include <string>
 #include <vector>
 
-inline int parentheses_to_remove( std::string parens_str )
-{
+inline int parentheses_to_remove( std::string parens_str ) {
   int               counter = 0;
   std::vector<bool> used( parens_str.size() );
 
-  for( int i = 0; i < parens_str.size(); i++ )
-  {
-    if( used[i] ) continue;
-    if( parens_str[i] == ')' )
-    {
+  for ( int i = 0; i < parens_str.size(); i++ ) {
+    if ( used[i] ) continue;
+    if ( parens_str[i] == ')' ) {
       used[i] = true;
       counter++;
       continue;
     }
-    if( parens_str[i] == '(' )
-    {
+    if ( parens_str[i] == '(' ) {
       used[i]        = true;
       bool completed = false;
-      for( int j = i + 1; j < parens_str.size(); j++ )
-      {
-        if( !used[j] && parens_str[j] == ')' )
-        {
+      for ( int j = i + 1; j < parens_str.size(); j++ ) {
+        if ( !used[j] && parens_str[j] == ')' ) {
           used[j]   = true;
           completed = true;
           break;
         }
       }
-      if( !completed ) counter++;
+      if ( !completed ) counter++;
     }
   }
   return counter;

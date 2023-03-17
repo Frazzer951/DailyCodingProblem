@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_161_170_PROBLEM_163_HPP
 #define PROBLEMS_161_170_PROBLEM_163_HPP
 
-
 #pragma once
 
 /* HARD
@@ -22,44 +21,32 @@ You can assume the given expression is always valid.
 #include <string>
 #include <vector>
 
-inline double getDouble( std::stack<std::string> & values )
-{
+inline double getDouble( std::stack<std::string> &values ) {
   std::string s = values.top();
   values.pop();
   return std::atof( s.c_str() );
 }
 
-inline double solve( const std::vector<std::string> & equation )
-{
+inline double solve( const std::vector<std::string> &equation ) {
   std::stack<std::string> values;
-  for( const std::string & s : equation )
-  {
-    if( s == "+" )
-    {
+  for ( const std::string &s : equation ) {
+    if ( s == "+" ) {
       double v2 = getDouble( values );
       double v1 = getDouble( values );
       values.push( std::to_string( v1 + v2 ) );
-    }
-    else if( s == "-" )
-    {
+    } else if ( s == "-" ) {
       double v2 = getDouble( values );
       double v1 = getDouble( values );
       values.push( std::to_string( v1 - v2 ) );
-    }
-    else if( s == "*" )
-    {
+    } else if ( s == "*" ) {
       double v2 = getDouble( values );
       double v1 = getDouble( values );
       values.push( std::to_string( v1 * v2 ) );
-    }
-    else if( s == "/" )
-    {
+    } else if ( s == "/" ) {
       double v2 = getDouble( values );
       double v1 = getDouble( values );
       values.push( std::to_string( v1 / v2 ) );
-    }
-    else
-    {
+    } else {
       values.push( s );
     }
   }

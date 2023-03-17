@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_081_090_PROBLEM_083_HPP
 #define PROBLEMS_081_090_PROBLEM_083_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -26,10 +25,9 @@ should become:
 */
 #include "btNode.hpp"
 
-inline void invert_B_Tree( btNode<char> * node )
-{
-  if( node == nullptr ) return;
-  if( node->left == nullptr && node->right == nullptr ) return;
+inline void invert_B_Tree( btNode<char> *node ) {
+  if ( node == nullptr ) return;
+  if ( node->left == nullptr && node->right == nullptr ) return;
 
   // Invert Left Node
   invert_B_Tree( node->left );
@@ -38,7 +36,7 @@ inline void invert_B_Tree( btNode<char> * node )
   invert_B_Tree( node->right );
 
   // Invert Self
-  auto * tmp  = node->left;
+  auto *tmp   = node->left;
   node->left  = node->right;
   node->right = tmp;
 }

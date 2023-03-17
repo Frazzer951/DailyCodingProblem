@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_201_210_PROBLEM_202_HPP
 #define PROBLEMS_201_210_PROBLEM_202_HPP
 
-
 #pragma once
 
 /* EASY
@@ -12,21 +11,18 @@ integer into a string.
 #include <iostream>
 #include <vector>
 
-inline bool isPalindrome( int num )
-{
-  if( num == 0 ) return true;
+inline bool isPalindrome( int num ) {
+  if ( num == 0 ) return true;
 
   std::vector<int> nums;
 
-  while( num > 0 )
-  {
+  while ( num > 0 ) {
     nums.push_back( num % 10 );
     num = num / 10;
   }
 
-  for( int i = 0; i < nums.size(); i++ )
-  {
-    if( nums[i] != nums[nums.size() - i - 1] ) return false;
+  for ( int i = 0; i < nums.size(); i++ ) {
+    if ( nums[i] != nums[nums.size() - i - 1] ) return false;
   }
 
   return true;

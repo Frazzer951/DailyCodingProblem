@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_042_HPP
 #define PROBLEMS_041_050_PROBLEM_042_HPP
 
-
 #pragma once
 
 /* HARD
@@ -17,34 +16,23 @@ since it sums up to 24.
 */
 #include <vector>
 
-inline std::vector<int> subset_sum( std::vector<int> nums, int k )
-{
+inline std::vector<int> subset_sum( std::vector<int> nums, int k ) {
   std::vector<std::vector<std::vector<int> *>> A( nums.size() + 1, std::vector<std::vector<int> *>( k + 1, nullptr ) );
 
-  for( int i = 0; i < nums.size() + 1; i++ )
-  {
-    A[i][0] = new std::vector<int>();
-  }
+  for ( int i = 0; i < nums.size() + 1; i++ ) { A[i][0] = new std::vector<int>(); }
 
-  for( int i = 1; i < nums.size() + 1; i++ )
-  {
-    for( int j = 1; j < k + 1; j++ )
-    {
+  for ( int i = 1; i < nums.size() + 1; i++ ) {
+    for ( int j = 1; j < k + 1; j++ ) {
       int last = nums[i - 1];
-      if( last > j ) A[i][j] = A[i - 1][j];
-      else
-      {
-        if( A[i - 1][j] != nullptr )
-        {
+      if ( last > j )
+        A[i][j] = A[i - 1][j];
+      else {
+        if ( A[i - 1][j] != nullptr ) {
           A[i][j] = new std::vector<int>( *A[i - 1][j] );
-        }
-        else if( A[i - 1][j - last] != nullptr )
-        {
+        } else if ( A[i - 1][j - last] != nullptr ) {
           A[i][j] = new std::vector<int>( *A[i - 1][j - last] );
           A[i][j]->push_back( last );
-        }
-        else
-        {
+        } else {
           A[i][j] = nullptr;
         }
       }

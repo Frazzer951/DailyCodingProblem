@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_151_160_PROBLEM_160_HPP
 #define PROBLEMS_151_160_PROBLEM_160_HPP
 
-
 #pragma once
 
 /* HARD
@@ -28,30 +27,24 @@ amount of children.
 #include <limits>
 #include <vector>
 
-struct Node
-{
+struct Node {
   char                                val;
   std::vector<std::pair<int, Node *>> children;
 };
 
-inline std::pair<int, int> longest_height_and_path( Node * root )
-{
+inline std::pair<int, int> longest_height_and_path( Node *root ) {
   int longest_path_so_far = std::numeric_limits<int>::min();
   int highest             = 0;
   int second_highest      = 0;
-  for( auto & [length, child] : root->children )
-  {
+  for ( auto &[length, child] : root->children ) {
     auto [height, longest_path_length] = longest_height_and_path( child );
 
     longest_path_so_far = std::max( longest_path_so_far, longest_path_length );
 
-    if( height + length > highest )
-    {
+    if ( height + length > highest ) {
       second_highest = highest;
       highest        = height + length;
-    }
-    else if( height + length > second_highest )
-    {
+    } else if ( height + length > second_highest ) {
       second_highest = height + length;
     }
   }
@@ -59,8 +52,7 @@ inline std::pair<int, int> longest_height_and_path( Node * root )
   return { highest, std::max( longest_path_so_far, highest + second_highest ) };
 }
 
-inline int longest_path( Node * root )
-{
+inline int longest_path( Node *root ) {
   auto [height, path] = longest_height_and_path( root );
   return path;
 }

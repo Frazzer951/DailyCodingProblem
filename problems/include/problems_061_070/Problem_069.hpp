@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_061_070_PROBLEM_069_HPP
 #define PROBLEMS_061_070_PROBLEM_069_HPP
 
-
 #pragma once
 
 /* EASY
@@ -15,16 +14,12 @@ You can assume the list has at least three integers.
 */
 #include <vector>
 
-inline int largest_product_x3( std::vector<int> nums )
-{
+inline int largest_product_x3( std::vector<int> nums ) {
   int largest = nums[0] * nums[1] * nums[2];
 
-  for( int i = 0; i < nums.size(); i++ )
-  {
-    for( int j = i + 1; j < nums.size(); j++ )
-    {
-      for( int k = j + 1; k < nums.size(); k++ )
-      {
+  for ( int i = 0; i < nums.size(); i++ ) {
+    for ( int j = i + 1; j < nums.size(); j++ ) {
+      for ( int k = j + 1; k < nums.size(); k++ ) {
         int temp = nums[i] * nums[j] * nums[k];
         largest  = std::max( largest, temp );
       }

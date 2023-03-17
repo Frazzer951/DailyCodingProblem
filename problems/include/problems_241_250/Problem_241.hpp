@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_241_250_PROBLEM_241_HPP
 #define PROBLEMS_241_250_PROBLEM_241_HPP
 
-
 #pragma once
 
 /* EASY
@@ -17,21 +16,14 @@ at least 3 citations.
 
 Given a list of paper citations of a researcher, calculate their h-index.
 */
-inline int hIndex( const int & n, const int citations[] )
-{
+inline int hIndex( const int &n, const int citations[] ) {
   std::vector<int> counts( n );
-  for( int i = 0; i < n; ++i )
-  {
-    for( int j = 0; j < citations[i]; ++j )
-    {
-      counts[j]++;
-    }
+  for ( int i = 0; i < n; ++i ) {
+    for ( int j = 0; j < citations[i]; ++j ) { counts[j]++; }
   }
   int h = 0;
-  for( int i = n - 1; i >= 0; --i )
-  {
-    if( counts[i] >= i + 1 )
-    {
+  for ( int i = n - 1; i >= 0; --i ) {
+    if ( counts[i] >= i + 1 ) {
       h = i + 1;
       break;
     }

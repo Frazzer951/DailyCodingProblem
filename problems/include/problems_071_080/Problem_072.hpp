@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_071_080_PROBLEM_072_HPP
 #define PROBLEMS_071_080_PROBLEM_072_HPP
 
-
 #pragma once
 
 /* HARD
@@ -47,30 +46,20 @@ Should return null, since we have an infinite loop.
 #include <string>
 #include <vector>
 
-inline int pathScore( const std::string & path )
-{
+inline int pathScore( const std::string &path ) {
   std::map<char, int> counts;
   int                 max_count = 0;
-  for( char c : path )
-  {
-    counts[c]++;
-  }
-  for( auto & [_, count] : counts )
-  {
-    max_count = ( count > max_count ) ? count : max_count;
-  }
+  for ( char c : path ) { counts[c]++; }
+  for ( auto &[_, count] : counts ) { max_count = ( count > max_count ) ? count : max_count; }
   return max_count;
 }
 
-inline int best_score( const std::vector<std::vector<int>> & paths, std::string nodes )
-{
+inline int best_score( const std::vector<std::vector<int>> &paths, std::string nodes ) {
   int best_score = 0;
-  for( const std::vector<int> & v : paths )
-  {
+  for ( const std::vector<int> &v : paths ) {
     std::string path;
-    for( int i : v )
-    {
-      if( i == -1 ) return -1;
+    for ( int i : v ) {
+      if ( i == -1 ) return -1;
       path += nodes[i];
     }
     int score  = pathScore( path );
@@ -79,29 +68,24 @@ inline int best_score( const std::vector<std::vector<int>> & paths, std::string 
   return best_score;
 }
 
-inline bool isLoop( const std::vector<int> & cur_path, int cur_index )
-{
+inline bool isLoop( const std::vector<int> &cur_path, int cur_index ) {
   return std::any_of( cur_path.begin(), cur_path.end(), [cur_index]( int i ) { return i == cur_index; } );
 }
 
 inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::vector<int>> edge_map,
-                                                  std::vector<int> cur_path = std::vector<int>() )
-{
-  if( edge_map[index].empty() ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, index ) );
+                                                  std::vector<int> cur_path = std::vector<int>() ) {
+  if ( edge_map[index].empty() ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, index ) );
 
-  if( !cur_path.empty() && isLoop( cur_path, index ) )
-    return std::vector<std::vector<int>>( 1, std::vector<int>( 1, -1 ) );
+  if ( !cur_path.empty() && isLoop( cur_path, index ) ) return std::vector<std::vector<int>>( 1, std::vector<int>( 1, -1 ) );
 
   cur_path.push_back( index );
 
   std::vector<std::vector<int>> paths;
 
-  for( int i = 0; i < edge_map[index].size(); i++ )
-  {
+  for ( int i = 0; i < edge_map[index].size(); i++ ) {
     auto sub_paths = follow_path( edge_map[index][i], edge_map, cur_path );
 
-    for( std::vector<int> path : sub_paths )
-    {
+    for ( std::vector<int> path : sub_paths ) {
       path.insert( path.begin(), index );
       paths.push_back( path );
     }
@@ -110,25 +94,17 @@ inline std::vector<std::vector<int>> follow_path( int index, std::map<int, std::
   return paths;
 }
 
-inline int pathValue( const std::string & nodes, const std::vector<std::pair<int, int>> & edges )
-{
+inline int pathValue( const std::string &nodes, const std::vector<std::pair<int, int>> &edges ) {
   std::map<int, std::vector<int>> edge_map;
 
-  for( const auto & [from, to] : edges )
-  {
-    edge_map[from].push_back( to );
-  }
+  for ( const auto &[from, to] : edges ) { edge_map[from].push_back( to ); }
 
   std::vector<std::vector<int>> paths;
 
-  for( int i = 0; i < nodes.size(); i++ )
-  {
+  for ( int i = 0; i < nodes.size(); i++ ) {
     auto i_paths = follow_path( i, edge_map );
 
-    for( const std::vector<int> & path : i_paths )
-    {
-      paths.push_back( path );
-    }
+    for ( const std::vector<int> &path : i_paths ) { paths.push_back( path ); }
   }
 
   return best_score( paths, nodes );

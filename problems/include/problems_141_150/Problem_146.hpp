@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_146_HPP
 #define PROBLEMS_141_150_PROBLEM_146_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -33,20 +32,18 @@ as a descendant.
 */
 #include "btNode.hpp"
 
-inline bool isZeroBranch( btNode<int> * node )
-{
-  if( node == nullptr ) return false;
-  if( node->value == 1 ) return false;
-  if( node->value == 0 && ( node->left == nullptr || isZeroBranch( node->left ) )
-      && ( node->right == nullptr || isZeroBranch( node->right ) ) )
+inline bool isZeroBranch( btNode<int> *node ) {
+  if ( node == nullptr ) return false;
+  if ( node->value == 1 ) return false;
+  if ( node->value == 0 && ( node->left == nullptr || isZeroBranch( node->left ) )
+       && ( node->right == nullptr || isZeroBranch( node->right ) ) )
     return true;
   return isZeroBranch( node->left ) && isZeroBranch( node->right );
 }
 
-inline btNode<int> * pruneZeroBranches( btNode<int> * root )
-{
-  if( root == nullptr ) return root;
-  if( isZeroBranch( root ) ) return nullptr;
+inline btNode<int> *pruneZeroBranches( btNode<int> *root ) {
+  if ( root == nullptr ) return root;
+  if ( isZeroBranch( root ) ) return nullptr;
 
   root->left  = pruneZeroBranches( root->left );
   root->right = pruneZeroBranches( root->right );

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_172_HPP
 #define PROBLEMS_171_180_PROBLEM_172_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -22,36 +21,32 @@ The order of the indices does not matter.
 #include <string>
 #include <vector>
 
-inline bool testSubstring( std::string s, const std::vector<std::string> & words )
-{
+inline bool testSubstring( std::string s, const std::vector<std::string> &words ) {
   std::vector<std::string> splitWords;
 
-  while( !s.empty() )
-  {
+  while ( !s.empty() ) {
     splitWords.push_back( s.substr( 0, 3 ) );
     s = s.substr( 3 );
   }
 
   std::set<std::string> set;
   size_t                size = splitWords.size();
-  for( size_t i = 0; i < size; ++i ) set.insert( splitWords[i] );
+  for ( size_t i = 0; i < size; ++i ) set.insert( splitWords[i] );
   splitWords.assign( set.begin(), set.end() );
   std::sort( splitWords.begin(), splitWords.end() );
 
   return splitWords == words;
 }
 
-inline std::vector<int> indiciesOfSubstrings( const std::string & s, std::vector<std::string> words )
-{
+inline std::vector<int> indiciesOfSubstrings( const std::string &s, std::vector<std::string> words ) {
   std::sort( words.begin(), words.end() );
   std::vector<int> indecies;
 
   size_t lengthOfSubstr = words[0].size() * words.size();
 
-  for( int i = 0; i <= s.size() - lengthOfSubstr; i++ )
-  {
+  for ( int i = 0; i <= s.size() - lengthOfSubstr; i++ ) {
     std::string curSubstr = s.substr( i, lengthOfSubstr );
-    if( testSubstring( curSubstr, words ) ) indecies.push_back( i );
+    if ( testSubstring( curSubstr, words ) ) indecies.push_back( i );
   }
   return indecies;
 }

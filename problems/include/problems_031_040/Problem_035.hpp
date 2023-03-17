@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_031_040_PROBLEM_035_HPP
 #define PROBLEMS_031_040_PROBLEM_035_HPP
 
-
 #pragma once
 
 /* HARD
@@ -16,46 +15,40 @@ become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
 */
 #include <vector>
 
-inline void swap( std::vector<char> & v, int i, int j )
-{
+inline void swap( std::vector<char> &v, int i, int j ) {
   char temp = v[i];
   v[i]      = v[j];
   v[j]      = temp;
 }
 
-inline void rgbSort( std::vector<char> & v )
-{
+inline void rgbSort( std::vector<char> &v ) {
   int r = 0;
   int g = 0;
   int b = 0;
-  for( char i : v )
-  {
-    switch( i )
-    {
-      case 'R': r++; break;
-      case 'G': g++; break;
-      case 'B': b++; break;
+  for ( char i : v ) {
+    switch ( i ) {
+    case 'R': r++; break;
+    case 'G': g++; break;
+    case 'B': b++; break;
     }
   }
   g += r;
   b += g;
 
-  for( int i = 0; i < v.size(); i++ )
-  {
-    switch( v[i] )
-    {
-      case 'R':
-        swap( v, i, r - 1 );
-        r--;
-        break;
-      case 'G':
-        swap( v, i, g - 1 );
-        g--;
-        break;
-      case 'B':
-        swap( v, i, b - 1 );
-        b--;
-        break;
+  for ( int i = 0; i < v.size(); i++ ) {
+    switch ( v[i] ) {
+    case 'R':
+      swap( v, i, r - 1 );
+      r--;
+      break;
+    case 'G':
+      swap( v, i, g - 1 );
+      g--;
+      break;
+    case 'B':
+      swap( v, i, b - 1 );
+      b--;
+      break;
     }
   }
 }

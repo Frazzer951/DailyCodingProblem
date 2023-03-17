@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_161_170_PROBLEM_165_HPP
 #define PROBLEMS_161_170_PROBLEM_165_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -17,15 +16,11 @@ For example, given the array [3, 4, 9, 6, 1], return [1, 1, 2, 1, 0], since:
  * There is 1 smaller element to the right of 6
  * There are no smaller elements to the right of 1
 */
-inline std::vector<int> rightSmaller( const std::vector<int> & arr )
-{
+inline std::vector<int> rightSmaller( const std::vector<int> &arr ) {
   std::vector<int> counts( arr.size() );
-  for( int i = (int) arr.size() - 2; i >= 0; i-- )
-  {
-    for( int j = i + 1; j < arr.size(); j++ )
-    {
-      if( arr[i] > arr[j] )
-      {
+  for ( int i = (int) arr.size() - 2; i >= 0; i-- ) {
+    for ( int j = i + 1; j < arr.size(); j++ ) {
+      if ( arr[i] > arr[j] ) {
         counts[i] = counts[j] + 1;
         break;
       }

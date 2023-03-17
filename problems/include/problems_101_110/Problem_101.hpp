@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_101_HPP
 #define PROBLEMS_101_110_PROBLEM_101_HPP
 
-
 #pragma once
 
 /* EASY
@@ -30,35 +29,29 @@ If a < c OR a==c AND b < d.
 */
 #include <vector>
 
-inline std::vector<int> SieveOfEratosthenes( int n )
-{
+inline std::vector<int> SieveOfEratosthenes( int n ) {
   std::vector<bool> prime( n + 1, true );
 
-  for( int p = 2; p * p <= n; p++ )
-  {
-    if( prime[p] )
-    {
-      for( int i = p * p; i <= n; i += p ) prime[i] = false;
+  for ( int p = 2; p * p <= n; p++ ) {
+    if ( prime[p] ) {
+      for ( int i = p * p; i <= n; i += p ) prime[i] = false;
     }
   }
 
   std::vector<int> primes;
   // Print all prime numbers
-  for( int p = 2; p <= n; p++ )
-    if( prime[p] ) primes.push_back( p );
+  for ( int p = 2; p <= n; p++ )
+    if ( prime[p] ) primes.push_back( p );
 
   return primes;
 }
 
-inline std::pair<int, int> primeSum( int n )
-{
+inline std::pair<int, int> primeSum( int n ) {
   auto primes = SieveOfEratosthenes( n / 2 );
 
-  for( int i = 0; i < primes.size(); i++ )
-  {
-    for( int j = i; j < primes.size(); j++ )
-    {
-      if( primes[i] + primes[j] == n ) return std::make_pair( primes[i], primes[j] );
+  for ( int i = 0; i < primes.size(); i++ ) {
+    for ( int j = i; j < primes.size(); j++ ) {
+      if ( primes[i] + primes[j] == n ) return std::make_pair( primes[i], primes[j] );
     }
   }
   return std::make_pair( -1, -1 );

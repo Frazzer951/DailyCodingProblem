@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_131_140_PROBLEM_134_HPP
 #define PROBLEMS_131_140_PROBLEM_134_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,19 +15,13 @@ interface:
 */
 #include <map>
 
-class SparseArray
-{
+class SparseArray {
   std::map<int, int> values;
 
 public:
-  void init( const int arr[], int size )
-  {
-    for( int i = 0; i < size; i++ )
-    {
-      if( arr[i] != 0 )
-      {
-        values[i] = arr[i];
-      }
+  void init( const int arr[], int size ) {
+    for ( int i = 0; i < size; i++ ) {
+      if ( arr[i] != 0 ) { values[i] = arr[i]; }
     }
   }
   void set( int i, int val ) { values[i] = val; }

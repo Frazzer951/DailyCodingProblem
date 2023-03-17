@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_195_HPP
 #define PROBLEMS_191_200_PROBLEM_195_HPP
 
-
 #pragma once
 
 /* HARD
@@ -24,8 +23,7 @@ matrix smaller than 6 or greater than 23.
 */
 #include <vector>
 
-inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int j1, int i2, int j2 )
-{
+inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int j1, int i2, int j2 ) {
   int m     = (int) matrix.size();
   int n     = (int) matrix[0].size();
   int count = 0;
@@ -35,9 +33,8 @@ inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int 
   int i = 0;
   int j = n;
 
-  for( j = n - 1; j >= 0; j-- )
-  {
-    while( i < m && matrix[i][j] < a ) i++;
+  for ( j = n - 1; j >= 0; j-- ) {
+    while ( i < m && matrix[i][j] < a ) i++;
     count += i;
   }
 
@@ -45,9 +42,8 @@ inline int matrix_count_edge( std::vector<std::vector<int>> matrix, int i1, int 
   int b = matrix[i2][j2];
   i     = 0;
 
-  for( j = n - 1; j >= 0; j-- )
-  {
-    while( i < m && matrix[i][j] < b ) i++;
+  for ( j = n - 1; j >= 0; j-- ) {
+    while ( i < m && matrix[i][j] < b ) i++;
     count += m - i;
   }
   return count;

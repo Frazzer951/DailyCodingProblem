@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_017_HPP
 #define PROBLEMS_011_020_PROBLEM_017_HPP
 
-
 #pragma once
 
 /* HARD
@@ -60,42 +59,32 @@ The name of a directory or sub-directory will not contain a period.
 
 #include "Futils.hpp"
 
-inline bool is_file( const std::string & f ) { return f.find( '.' ) != std::string::npos; }
+inline bool is_file( const std::string &f ) { return f.find( '.' ) != std::string::npos; }
 
-inline std::string find_longest_filepath( std::string filesystem )
-{
+inline std::string find_longest_filepath( std::string filesystem ) {
   std::vector<std::string>   file_paths = split( std::move( filesystem ), '\n' );
   std::map<int, std::string> depths;
   std::vector<std::string>   filepaths;
 
-  for( auto path : file_paths )
-  {
+  for ( auto path : file_paths ) {
     int depth = std::count( path.begin(), path.end(), '\t' );
     path.erase( std::remove( path.begin(), path.end(), '\t' ), path.end() );
-    if( is_file( path ) )
-    {
+    if ( is_file( path ) ) {
       std::string filepath;
-      for( int i = 0; i < depth; i++ )
-      {
+      for ( int i = 0; i < depth; i++ ) {
         filepath += depths[i];
         filepath += '/';
       }
 
       filepath += path;
       filepaths.push_back( filepath );
-    }
-    else
-    {
+    } else {
       depths[depth] = path;
     }
   }
   std::string longest = filepaths[0];
-  for( const auto & filepath : filepaths )
-  {
-    if( filepath.size() > longest.size() )
-    {
-      longest = filepath;
-    }
+  for ( const auto &filepath : filepaths ) {
+    if ( filepath.size() > longest.size() ) { longest = filepath; }
   }
   return longest;
 }

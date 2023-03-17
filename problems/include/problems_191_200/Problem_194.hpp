@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_194_HPP
 #define PROBLEMS_191_200_PROBLEM_194_HPP
 
-
 #pragma once
 
 /* EASY
@@ -12,13 +11,11 @@ how many pairs of the line segments intersect.
 */
 #include <vector>
 
-struct line
-{
+struct line {
   int a, b, c;
 };
 
-inline int numIntersections( std::vector<int> ps, std::vector<int> qs )
-{
+inline int numIntersections( std::vector<int> ps, std::vector<int> qs ) {
   int intersections = 0;
 
   std::vector<line> lines;
@@ -26,8 +23,7 @@ inline int numIntersections( std::vector<int> ps, std::vector<int> qs )
   int y1 = 0;
   int y2 = 1;
 
-  for( int i = 0; i < ps.size(); i++ )
-  {
+  for ( int i = 0; i < ps.size(); i++ ) {
     int x1 = ps[i];
     int x2 = qs[i];
 
@@ -38,16 +34,14 @@ inline int numIntersections( std::vector<int> ps, std::vector<int> qs )
     lines.push_back( { A, B, C } );
   }
 
-  for( int i = 0; i < lines.size(); i++ )
-  {
-    for( int j = i + 1; j < lines.size(); j++ )
-    {
+  for ( int i = 0; i < lines.size(); i++ ) {
+    for ( int j = i + 1; j < lines.size(); j++ ) {
       line l1 = lines[i];
       line l2 = lines[j];
 
       double det = l1.a * l2.b - l2.a * l1.b;
 
-      if( det != 0 ) intersections++;
+      if ( det != 0 ) intersections++;
     }
   }
   return intersections;

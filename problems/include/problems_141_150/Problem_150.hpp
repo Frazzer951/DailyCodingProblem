@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_150_HPP
 #define PROBLEMS_141_150_PROBLEM_150_HPP
 
-
 #pragma once
 
 /* HARD
@@ -15,13 +14,11 @@ point (1, 2), and k = 2, return[(0, 0), (3, 1)].
 #include <map>
 #include <vector>
 
-inline std::vector<std::pair<int, int>> nearestPoints( const std::vector<std::pair<int, int>> & points,
-                                                       std::pair<int, int>                      central )
-{
+inline std::vector<std::pair<int, int>> nearestPoints( const std::vector<std::pair<int, int>> &points,
+                                                       std::pair<int, int>                     central ) {
   std::map<std::pair<int, int>, double> pointDistance;
 
-  for( auto p : points )
-  {
+  for ( auto p : points ) {
     double xLeng    = p.first - central.first;
     double yLeng    = p.second - central.second;
     double distance = sqrt( ( xLeng * xLeng ) + ( yLeng * yLeng ) );

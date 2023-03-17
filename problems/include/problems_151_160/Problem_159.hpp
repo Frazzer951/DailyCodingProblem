@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_151_160_PROBLEM_159_HPP
 #define PROBLEMS_151_160_PROBLEM_159_HPP
 
-
 #pragma once
 
 /* EASY
@@ -14,15 +13,12 @@ return null.
 #include <map>
 #include <string>
 
-
-inline char firstRepeat( const std::string & str )
-{
+inline char firstRepeat( const std::string &str ) {
   std::map<char, int> count;
 
-  for( char c : str )
-  {
+  for ( char c : str ) {
     count[c]++;
-    if( count[c] > 1 ) return c;
+    if ( count[c] > 1 ) return c;
   }
   return '\0';
 }

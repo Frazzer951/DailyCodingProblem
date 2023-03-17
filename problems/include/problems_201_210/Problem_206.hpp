@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_201_210_PROBLEM_206_HPP
 #define PROBLEMS_201_210_PROBLEM_206_HPP
 
-
 #pragma once
 
 /* EASY
@@ -15,14 +14,10 @@ example, given the array ["a", "b", "c"] and the permutation [2, 1, 0], return
 */
 #include <vector>
 
-inline std::vector<char> genPermutation( std::vector<char> arr, std::vector<int> permutation )
-{
+inline std::vector<char> genPermutation( std::vector<char> arr, std::vector<int> permutation ) {
   std::vector<char> perm( arr.size() );
 
-  for( int i = 0; i < permutation.size(); i++ )
-  {
-    perm[permutation[i]] = arr[i];
-  }
+  for ( int i = 0; i < permutation.size(); i++ ) { perm[permutation[i]] = arr[i]; }
 
   return perm;
 }

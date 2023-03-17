@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_221_230_PROBLEM_221_HPP
 #define PROBLEMS_221_230_PROBLEM_221_HPP
 
-
 #pragma once
 
 /* EASY
@@ -11,16 +10,11 @@ so on. Create an algorithm to find the nth sevenish number.
 */
 #include <cmath>
 
-inline int nthSevenish( int n )
-{
+inline int nthSevenish( int n ) {
   int answer   = 0;
   int bitPlace = 0;
-  while( n > 0 )
-  {
-    if( ( n & 1 ) != 0 )
-    {
-      answer += pow( 7, bitPlace );
-    }
+  while ( n > 0 ) {
+    if ( ( n & 1 ) != 0 ) { answer += pow( 7, bitPlace ); }
     n >>= 1;
     bitPlace++;
   }

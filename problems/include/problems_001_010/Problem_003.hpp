@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_003_HPP
 #define PROBLEMS_001_010_PROBLEM_003_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -27,17 +26,15 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 #include <string>
 #include <utility>
 
-class SerNode
-{
+class SerNode {
 public:
   std::string _val;
-  SerNode *   _left;
-  SerNode *   _right;
+  SerNode    *_left;
+  SerNode    *_right;
 
   SerNode( std::string val ) : _val( std::move( val ) ), _left( nullptr ), _right( nullptr ) {}
-  SerNode( std::string val, SerNode * left ) : _val( std::move( val ) ), _left( left ), _right( nullptr ) {}
-  SerNode( std::string val, SerNode * left, SerNode * right ) : _val( std::move( val ) ), _left( left ), _right( right )
-  {}
+  SerNode( std::string val, SerNode *left ) : _val( std::move( val ) ), _left( left ), _right( nullptr ) {}
+  SerNode( std::string val, SerNode *left, SerNode *right ) : _val( std::move( val ) ), _left( left ), _right( right ) {}
 
   [[nodiscard]] std::string value() const { return _val; }
 
@@ -45,26 +42,18 @@ public:
 
   [[nodiscard]] SerNode right() const { return *_right; }
 
-  [[nodiscard]] std::string serialize_node() const
-  {
+  [[nodiscard]] std::string serialize_node() const {
     std::string node_str = _val + ":{";
-    if( _left != nullptr )
-    {
-      node_str += _left->serialize_node();
-    }
-    if( _right != nullptr )
-    {
-      node_str += ',' + _right->serialize_node();
-    }
+    if ( _left != nullptr ) { node_str += _left->serialize_node(); }
+    if ( _right != nullptr ) { node_str += ',' + _right->serialize_node(); }
     node_str += "}";
     return node_str;
   }
 };
 
-inline std::string serialize( const SerNode & root ) { return root.serialize_node(); }
+inline std::string serialize( const SerNode &root ) { return root.serialize_node(); }
 
-inline SerNode * deserialize( const std::string & str )
-{
+inline SerNode *deserialize( const std::string &str ) {
   // Example Serialized Tree
   // root:{left:{left.left:{}},right:{}}
 
@@ -83,28 +72,23 @@ inline SerNode * deserialize( const std::string & str )
 
   std::string nodes = str.substr( colon_index + 1 );
 
-  if( nodes.size() == 2 )
-  {
-    return new SerNode( node_name );
-  }    // If there are no sub nodes return empty node
+  if ( nodes.size() == 2 ) { return new SerNode( node_name ); }    // If there are no sub nodes return empty node
 
   auto comma_index = nodes.find( ',' );
 
-  if( comma_index == -1 )
-  {
-    SerNode * left        = deserialize( nodes.substr( 1, nodes.size() - 2 ) );
-    auto *    return_node = new SerNode( node_name, left );
+  if ( comma_index == -1 ) {
+    SerNode *left        = deserialize( nodes.substr( 1, nodes.size() - 2 ) );
+    auto    *return_node = new SerNode( node_name, left );
     return return_node;
   }
 
-  SerNode * left        = deserialize( nodes.substr( 1, comma_index - 1 ) );
-  SerNode * right       = deserialize( nodes.substr( comma_index + 1, nodes.size() - comma_index - 2 ) );
-  auto *    return_node = new SerNode( node_name, left, right );
+  SerNode *left        = deserialize( nodes.substr( 1, comma_index - 1 ) );
+  SerNode *right       = deserialize( nodes.substr( comma_index + 1, nodes.size() - comma_index - 2 ) );
+  auto    *return_node = new SerNode( node_name, left, right );
   return return_node;
 }
 
-inline int prob_3()
-{
+inline int prob_3() {
   std::cout << "\nProblem 3:\n";
 
   SerNode leftleft( "left.left" );

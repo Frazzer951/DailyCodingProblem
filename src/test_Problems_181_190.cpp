@@ -11,10 +11,8 @@
 #include "problems_181_190/Problem_189.hpp"
 #include "problems_181_190/Problem_190.hpp"
 
-
 // Problem 181
-TEST( Problem_181, Given_Case_1 )
-{
+TEST( Problem_181, Given_Case_1 ) {
   // Given the input string racecarannakayak, return ["racecar", "anna", "kayak"].
 
   std::vector<std::string> result   = splitPalindrome( "racecarannakayak" );
@@ -23,8 +21,7 @@ TEST( Problem_181, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_181, Given_Case_2 )
-{
+TEST( Problem_181, Given_Case_2 ) {
   // Given the input string abc, return ["a", "b", "c"].
 
   std::vector<std::string> result   = splitPalindrome( "abc" );
@@ -34,12 +31,11 @@ TEST( Problem_181, Given_Case_2 )
 }
 
 // Problem 182
-TEST( Problem_182, Test_Case_1 )
-{
-  auto * n1 = new gNode { 1, {} };
-  auto * n2 = new gNode { 2, {} };
-  auto * n3 = new gNode { 3, {} };
-  auto * n4 = new gNode { 4, {} };
+TEST( Problem_182, Test_Case_1 ) {
+  auto *n1 = new gNode { 1, {} };
+  auto *n2 = new gNode { 2, {} };
+  auto *n3 = new gNode { 3, {} };
+  auto *n4 = new gNode { 4, {} };
   n1->connections.push_back( n2 );
   n1->connections.push_back( n4 );
   n2->connections.push_back( n1 );
@@ -52,12 +48,11 @@ TEST( Problem_182, Test_Case_1 )
   EXPECT_FALSE( isMinimallyConnected( n1 ) );
 }
 
-TEST( Problem_182, Test_Case_2 )
-{
-  auto * n1 = new gNode { 1, {} };
-  auto * n2 = new gNode { 2, {} };
-  auto * n3 = new gNode { 3, {} };
-  auto * n4 = new gNode { 4, {} };
+TEST( Problem_182, Test_Case_2 ) {
+  auto *n1 = new gNode { 1, {} };
+  auto *n2 = new gNode { 2, {} };
+  auto *n3 = new gNode { 3, {} };
+  auto *n4 = new gNode { 4, {} };
   n1->connections.push_back( n2 );
   n2->connections.push_back( n1 );
   n2->connections.push_back( n3 );
@@ -70,26 +65,22 @@ TEST( Problem_182, Test_Case_2 )
 
 // Problem 183
 
-
 // Problem 184
-TEST( Problem_184, Given_Case )
-{
+TEST( Problem_184, Given_Case ) {
   // Given [42, 56, 14], return 14
   int result = greatestCommonDenominator( { 42, 56, 14 } );
 
   EXPECT_EQ( result, 14 );
 }
 
-TEST( Problem_184, Test_Case )
-{
+TEST( Problem_184, Test_Case ) {
   int result = greatestCommonDenominator( { 8, 12, 20 } );
 
   EXPECT_EQ( result, 4 );
 }
 
 // Problem 185
-TEST( Problem_185, Given_Case )
-{
+TEST( Problem_185, Given_Case ) {
   /*
   {
     "top_left": (1, 4),
@@ -104,18 +95,29 @@ TEST( Problem_185, Given_Case )
   return 6.
   */
 
-  Rect r1 = { { 1, 4 }, { 3, 3 } };
-  Rect r2 = { { 0, 5 }, { 4, 3 } };
+  Rect r1 = {
+    {1, 4},
+    {3, 3}
+  };
+  Rect r2 = {
+    {0, 5},
+    {4, 3}
+  };
 
   int area = intersectArea( r1, r2 );
 
   EXPECT_EQ( area, 6 );
 }
 
-TEST( Problem_185, Test_Case )
-{
-  Rect r1 = { { 0, 0 }, { 2, 2 } };
-  Rect r2 = { { 2, 5 }, { 4, 3 } };
+TEST( Problem_185, Test_Case ) {
+  Rect r1 = {
+    {0, 0},
+    {2, 2}
+  };
+  Rect r2 = {
+    {2, 5},
+    {4, 3}
+  };
 
   int area = intersectArea( r1, r2 );
 
@@ -124,10 +126,8 @@ TEST( Problem_185, Test_Case )
 
 // Problem 186
 
-
 // Problem 187
-TEST( Problem_187, Given_Case )
-{
+TEST( Problem_187, Given_Case ) {
   /*
   Given:
   {
@@ -145,17 +145,19 @@ TEST( Problem_187, Given_Case )
   Return true
   */
 
-  std::vector<Rect> rectangles = { { { 1, 4 }, { 3, 3 } }, { { -1, 3 }, { 2, 1 } }, { { 0, 5 }, { 4, 3 } } };
+  std::vector<Rect> rectangles = {
+    { { 1, 4 }, { 3, 3 }},
+    {{ -1, 3 }, { 2, 1 }},
+    { { 0, 5 }, { 4, 3 }}
+  };
 
   EXPECT_TRUE( overlapping( rectangles ) );
 }
 
 // Problem 188
 
-
 // Problem 189
-TEST( Problem_189, Test_Case )
-{
+TEST( Problem_189, Test_Case ) {
   // Given [5, 1, 3, 5, 2, 3, 4, 1] return 5
 
   std::vector<int> arr = { 5, 1, 3, 5, 2, 3, 4, 1 };
@@ -164,14 +166,12 @@ TEST( Problem_189, Test_Case )
 }
 
 // Problem 190
-TEST( Problem_190, Given_Case_1 )
-{
+TEST( Problem_190, Given_Case_1 ) {
   std::vector<int> arr = { 8, -1, 3, 4 };
   EXPECT_EQ( maxCircSubArray( arr ), 15 );
 }
 
-TEST( Problem_190, Given_Case_2 )
-{
+TEST( Problem_190, Given_Case_2 ) {
   std::vector<int> arr = { -4, 5, 1, 0 };
   EXPECT_EQ( maxCircSubArray( arr ), 6 );
 }

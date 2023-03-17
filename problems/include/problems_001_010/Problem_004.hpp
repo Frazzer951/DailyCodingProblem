@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_004_HPP
 #define PROBLEMS_001_010_PROBLEM_004_HPP
 
-
 #pragma once
 
 /* HARD
@@ -19,35 +18,25 @@ You can modify the input array in-place.
 #include <iostream>
 #include <vector>
 
-inline int findMissingPositive( std::vector<int> arr )
-{
+inline int findMissingPositive( std::vector<int> arr ) {
   std::sort( arr.begin(), arr.end() );
 
   int missing = 1;
 
-  for( int i : arr )
-  {
-    if( i > 0 && i == missing )
-    {
-      missing++;
-    }
+  for ( int i : arr ) {
+    if ( i > 0 && i == missing ) { missing++; }
   }
   return missing;
 }
 
-inline void testArray( const std::vector<int> & arr )
-{
+inline void testArray( const std::vector<int> &arr ) {
   std::cout << "For the array: ";
-  for( int i : arr )
-  {
-    std::cout << i << ' ';
-  }
+  for ( int i : arr ) { std::cout << i << ' '; }
   int missing = findMissingPositive( arr );
   std::cout << " the missing number is " << missing << '\n';
 }
 
-inline int prob_4()
-{
+inline int prob_4() {
   std::cout << "\nProblem 4:\n";
 
   std::vector<int> arr = { 3, 4, -1, 1 };

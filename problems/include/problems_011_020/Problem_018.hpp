@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_018_HPP
 #define PROBLEMS_011_020_PROBLEM_018_HPP
 
-
 #pragma once
 
 /* HARD
@@ -25,26 +24,20 @@ compute them.
 
 #include "Futils.hpp"
 
-inline std::vector<int> compSubArrMax( std::vector<int> arr, int k )
-{
+inline std::vector<int> compSubArrMax( std::vector<int> arr, int k ) {
   std::vector<int> returnVec;
 
-  for( unsigned int i = 0; i + k <= arr.size(); ++i )
-  {
+  for ( unsigned int i = 0; i + k <= arr.size(); ++i ) {
     std::vector<int> subVec;
     subVec.reserve( k );
-    for( int j = 0; j < k; ++j )
-    {
-      subVec.push_back( arr[j + i] );
-    }
+    for ( int j = 0; j < k; ++j ) { subVec.push_back( arr[j + i] ); }
     returnVec.push_back( getIntVecMax( subVec ) );
   }
 
   return returnVec;
 }
 
-inline int prob_18()
-{
+inline int prob_18() {
   std::cout << "\nProblem 18\n";
 
   auto vec = compSubArrMax( { 10, 5, 2, 7, 8, 7 }, 3 );

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_151_160_PROBLEM_152_HPP
 #define PROBLEMS_151_160_PROBLEM_152_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -18,18 +17,16 @@ You can generate random numbers between 0 and 1 uniformly.
 #include <ctime>
 #include <vector>
 
-inline int randomProb( std::vector<int> nums, std::vector<double> probs )
-{
+inline int randomProb( std::vector<int> nums, std::vector<double> probs ) {
   srand( (unsigned) time( nullptr ) );
 
   double random = (double) rand() / RAND_MAX;
 
   int    i    = 0;
   double prob = 0;
-  while( i < probs.size() )
-  {
+  while ( i < probs.size() ) {
     prob += probs[i];
-    if( random < prob ) return nums[i];
+    if ( random < prob ) return nums[i];
     i++;
   }
 

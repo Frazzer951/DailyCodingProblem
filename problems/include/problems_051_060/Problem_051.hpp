@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_051_060_PROBLEM_051_HPP
 #define PROBLEMS_051_060_PROBLEM_051_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,12 +15,10 @@ Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 #include <cstdlib>
 #include <vector>
 
-inline std::vector<int> shuffle( std::vector<int> arr )
-{
+inline std::vector<int> shuffle( std::vector<int> arr ) {
   int n = (int) arr.size();
 
-  for( int i = 0; i < n - 1; i++ )
-  {
+  for ( int i = 0; i < n - 1; i++ ) {
     int j    = rand() % ( n - 1 - i ) + i;
     int temp = arr[i];
     arr[i]   = arr[j];

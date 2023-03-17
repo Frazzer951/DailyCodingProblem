@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_012_HPP
 #define PROBLEMS_011_020_PROBLEM_012_HPP
 
-
 #pragma once
 
 /* HARD
@@ -23,17 +22,15 @@ could climb 1, 3, or 5 steps at a time.
 */
 #include <iostream>
 
-inline int fib( int n )
-{
-  if( n <= 1 ) return n;
+inline int fib( int n ) {
+  if ( n <= 1 ) return n;
 
   return fib( n - 1 ) + fib( n - 2 );
 }
 
 inline int countWays( int n ) { return fib( n + 1 ); }
 
-inline int prob_12()
-{
+inline int prob_12() {
   std::cout << "\nProblem 12\n";
 
   std::cout << "You can climb a 1 step stair case " << countWays( 1 ) << " ways.\n";

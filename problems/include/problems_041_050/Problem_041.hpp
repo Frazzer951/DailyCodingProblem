@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_041_HPP
 #define PROBLEMS_041_050_PROBLEM_041_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -26,36 +25,28 @@ one is lexicographically smaller.
 #include <string>
 #include <vector>
 
-inline std::pair<std::string, std::string> getAirportPair( const std::vector<std::pair<std::string, std::string>> & v,
-                                                           const std::string & first )
-{
-  for( std::pair<std::string, std::string> flight : v )
-  {
-    if( flight.first == first ) return flight;
+inline std::pair<std::string, std::string> getAirportPair( const std::vector<std::pair<std::string, std::string>> &v,
+                                                           const std::string                                      &first ) {
+  for ( std::pair<std::string, std::string> flight : v ) {
+    if ( flight.first == first ) return flight;
   }
   return {};
 }
 
-inline int getPairIndex( std::vector<std::pair<std::string, std::string>> v,
-                         const std::pair<std::string, std::string> &      p )
-{
-  for( int i = 0; i < v.size(); i++ )
-  {
-    if( v[i] == p ) return i;
+inline int getPairIndex( std::vector<std::pair<std::string, std::string>> v, const std::pair<std::string, std::string> &p ) {
+  for ( int i = 0; i < v.size(); i++ ) {
+    if ( v[i] == p ) return i;
   }
   return -1;
 }
 
-inline std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::string>> v,
-                                              const std::string &                              start )
-{
+inline std::vector<std::string> getItinerary( std::vector<std::pair<std::string, std::string>> v, const std::string &start ) {
   std::vector<std::string> itinerary = { start };
   std::string              next      = start;
 
-  while( !v.empty() )
-  {
+  while ( !v.empty() ) {
     auto flight = getAirportPair( v, next );
-    if( flight.first.empty() && flight.second.empty() ) return {};
+    if ( flight.first.empty() && flight.second.empty() ) return {};
     v.erase( v.begin() + getPairIndex( v, flight ) );
     next = flight.second;
     itinerary.push_back( next );

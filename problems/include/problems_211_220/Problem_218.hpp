@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_218_HPP
 #define PROBLEMS_211_220_PROBLEM_218_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -10,15 +9,12 @@ if a graph consists of A -> B -> C, it should become A <- B <- C.
 */
 #include "slNode.hpp"
 
-template<typename T>
-inline slNode<T> * reverse( slNode<T> * root )
-{
-  slNode<T> * prev = nullptr;
-  slNode<T> * curr = root;
-  slNode<T> * next = nullptr;
+template<typename T> inline slNode<T> *reverse( slNode<T> *root ) {
+  slNode<T> *prev = nullptr;
+  slNode<T> *curr = root;
+  slNode<T> *next = nullptr;
 
-  while( curr->next != nullptr )
-  {
+  while ( curr->next != nullptr ) {
     next       = curr->next;
     curr->next = prev;
     prev       = curr;

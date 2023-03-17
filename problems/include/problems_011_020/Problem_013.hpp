@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_013_HPP
 #define PROBLEMS_011_020_PROBLEM_013_HPP
 
-
 #pragma once
 
 /* HARD
@@ -14,14 +13,11 @@ characters is "bcb".
 #include <iostream>
 #include <map>
 
-inline char findMin( std::map<char, int> m )
-{
+inline char findMin( std::map<char, int> m ) {
   char key = m.begin()->first;
   int  min = m.begin()->second;
-  for( std::pair<char, int> c : m )
-  {
-    if( c.second < min )
-    {
+  for ( std::pair<char, int> c : m ) {
+    if ( c.second < min ) {
       key = c.first;
       min = c.second;
     }
@@ -29,23 +25,18 @@ inline char findMin( std::map<char, int> m )
   return key;
 }
 
-inline int longest_substring_with_k_distinct_characters( std::string s, unsigned int k )
-{
-  if( k == 0 ) return 0;
+inline int longest_substring_with_k_distinct_characters( std::string s, unsigned int k ) {
+  if ( k == 0 ) return 0;
 
   std::vector<int>    bounds = { 0, 0 };
   std::map<char, int> h;
   int                 max_length       = 0;
   int                 new_lower_bounds = 0;
-  for( unsigned int i = 0; i < s.size(); ++i )
-  {
+  for ( unsigned int i = 0; i < s.size(); ++i ) {
     h[s[i]] = i;
-    if( h.size() <= k )
-    {
+    if ( h.size() <= k ) {
       new_lower_bounds = bounds[0];    // Lower bound remains the same
-    }
-    else
-    {
+    } else {
       // otherwise, pop last occurring char
       char key_to_pop  = findMin( h );
       new_lower_bounds = h[key_to_pop] + 1;
@@ -58,8 +49,7 @@ inline int longest_substring_with_k_distinct_characters( std::string s, unsigned
   return max_length;
 }
 
-inline int prob_13()
-{
+inline int prob_13() {
   std::cout << "\nProblem 13\n";
 
   std::cout << "The string 'abcba' with 2 distinct characters longest substring is "

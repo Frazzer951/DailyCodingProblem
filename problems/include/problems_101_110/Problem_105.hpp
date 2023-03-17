@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_105_HPP
 #define PROBLEMS_101_110_PROBLEM_105_HPP
 
-
 #pragma once
 
 /* EASY
@@ -18,17 +17,14 @@ be called for N milliseconds.
 
 #include <functional>
 
-inline auto debunce( int f(), int n )
-{
+inline auto debunce( int f(), int n ) {
 #ifdef _WIN32
-  auto func = [f, n]() -> int
-  {
+  auto func = [f, n]() -> int {
     Sleep( n );
     return f();
   };
 #else
-  auto func = [f, n]()
-  {
+  auto func = [f, n]() {
     usleep( n * 1000 );    // takes microseconds
     return f();
   };

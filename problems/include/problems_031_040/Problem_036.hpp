@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_031_040_PROBLEM_036_HPP
 #define PROBLEMS_031_040_PROBLEM_036_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -11,8 +10,7 @@ tree.
 #include <iostream>
 #include <vector>
 
-class BST
-{
+class BST {
 public:
   int  data { 0 };
   BST *left { nullptr }, *right { nullptr };
@@ -24,25 +22,20 @@ public:
   BST( int value ) : data( value ) { left = right = nullptr; }
 
   // Insert function.
-  BST * Insert( BST * root, int value )
-  {
-    if( root == nullptr )
-    {
+  BST *Insert( BST *root, int value ) {
+    if ( root == nullptr ) {
       // Insert the first node, if root is NULL.
       return new BST( value );
     }
 
     // Insert data.
-    if( value > root->data )
-    {
+    if ( value > root->data ) {
       // Insert right node data, if the 'value'
       // to be inserted is greater than 'root' node data.
 
       // Process right nodes.
       root->right = Insert( root->right, value );
-    }
-    else
-    {
+    } else {
       // Insert left node data, if the 'value'
       // to be inserted is greater than 'root' node data.
 
@@ -56,37 +49,30 @@ public:
 
   // Inorder traversal function.
   // This gives data in sorted order.
-  void Inorder( BST * root )
-  {
-    if( root == nullptr )
-    {
-      return;
-    }
+  void Inorder( BST *root ) {
+    if ( root == nullptr ) { return; }
     Inorder( root->left );
     std::cout << root->data << std::endl;
     Inorder( root->right );
   }
 };
 
-inline void revInorder( BST * node, int & count, int & val )
-{
-  if( node == nullptr || count == 2 ) return;
+inline void revInorder( BST *node, int &count, int &val ) {
+  if ( node == nullptr || count == 2 ) return;
 
-  if( node->right != nullptr ) revInorder( node->right, count, val );
+  if ( node->right != nullptr ) revInorder( node->right, count, val );
 
   count++;
 
-  if( count == 2 )
-  {
+  if ( count == 2 ) {
     val = node->data;
     return;
   }
 
-  if( node->left != nullptr ) revInorder( node->left, count, val );
+  if ( node->left != nullptr ) revInorder( node->left, count, val );
 }
 
-inline int findSecondLargetNode( BST * root )
-{
+inline int findSecondLargetNode( BST *root ) {
   int count = 0;
   int val   = 0;
   revInorder( root, count, val );

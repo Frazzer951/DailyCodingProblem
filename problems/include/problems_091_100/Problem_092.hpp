@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_091_100_PROBLEM_092_HPP
 #define PROBLEMS_091_100_PROBLEM_092_HPP
 
-
 #pragma once
 
 /* HARD
@@ -19,21 +18,13 @@ For example, given {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'],
 #include <string>
 #include <vector>
 
-inline std::vector<std::string> course_order( std::map<std::string, std::vector<std::string>> course_dependencies )
-{
+inline std::vector<std::string> course_order( std::map<std::string, std::vector<std::string>> course_dependencies ) {
   std::vector<std::string> courses;
-  while( !course_dependencies.empty() )
-  {
-    for( auto & [course, dependencies] : course_dependencies )
-    {
-      if( !dependencies.empty() )
-      {
-        for( const auto & dep_course : dependencies )
-        {
-          if( std::find( courses.begin(), courses.end(), dep_course ) == courses.end() )
-          {
-            continue;
-          }
+  while ( !course_dependencies.empty() ) {
+    for ( auto &[course, dependencies] : course_dependencies ) {
+      if ( !dependencies.empty() ) {
+        for ( const auto &dep_course : dependencies ) {
+          if ( std::find( courses.begin(), courses.end(), dep_course ) == courses.end() ) { continue; }
         }
       }
       courses.push_back( course );

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_061_070_PROBLEM_065_HPP
 #define PROBLEMS_061_070_PROBLEM_065_HPP
 
-
 #pragma once
 
 /* EASY
@@ -40,8 +39,7 @@ You should print out the following:
 */
 #include <vector>
 
-inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
-{
+inline std::vector<int> print_spiral( std::vector<std::vector<int>> v ) {
   std::vector<int> spiral;
 
   int i = 0;
@@ -57,43 +55,28 @@ inline std::vector<int> print_spiral( std::vector<std::vector<int>> v )
      i - iterator
   */
 
-  while( k < m && l < n )
-  {
+  while ( k < m && l < n ) {
     /* Print the first row from
                the remaining rows */
-    for( i = l; i < n; ++i )
-    {
-      spiral.push_back( v[k][i] );
-    }
+    for ( i = l; i < n; ++i ) { spiral.push_back( v[k][i] ); }
     k++;
 
     /* Print the last column
          from the remaining columns */
-    for( i = k; i < m; ++i )
-    {
-      spiral.push_back( v[i][n - 1] );
-    }
+    for ( i = k; i < m; ++i ) { spiral.push_back( v[i][n - 1] ); }
     n--;
 
     /* Print the last row from
                 the remaining rows */
-    if( k < m )
-    {
-      for( i = n - 1; i >= l; --i )
-      {
-        spiral.push_back( v[m - 1][i] );
-      }
+    if ( k < m ) {
+      for ( i = n - 1; i >= l; --i ) { spiral.push_back( v[m - 1][i] ); }
       m--;
     }
 
     /* Print the first column from
                    the remaining columns */
-    if( l < n )
-    {
-      for( i = m - 1; i >= k; --i )
-      {
-        spiral.push_back( v[i][l] );
-      }
+    if ( l < n ) {
+      for ( i = m - 1; i >= k; --i ) { spiral.push_back( v[i][l] ); }
       l++;
     }
   }

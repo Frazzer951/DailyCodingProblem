@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_201_210_PROBLEM_201_HPP
 #define PROBLEMS_201_210_PROBLEM_201_HPP
 
-
 #pragma once
 
 /* EASY
@@ -22,12 +21,9 @@ Write a program that returns the weight of the maximum weight path.
 */
 #include <vector>
 
-inline int longestPath( std::vector<std::vector<int>> arrays )
-{
-  for( int level = (int) arrays.size() - 2; level > -1; level-- )
-  {
-    for( int index = 0; index < level + 1; index++ )
-    {
+inline int longestPath( std::vector<std::vector<int>> arrays ) {
+  for ( int level = (int) arrays.size() - 2; level > -1; level-- ) {
+    for ( int index = 0; index < level + 1; index++ ) {
       arrays[level][index] += std::max( arrays[level + 1][index], arrays[level + 1][index + 1] );
     }
   }

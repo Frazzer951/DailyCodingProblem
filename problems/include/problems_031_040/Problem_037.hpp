@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_031_040_PROBLEM_037_HPP
 #define PROBLEMS_031_040_PROBLEM_037_HPP
 
-
 #pragma once
 
 /* EASY
@@ -17,22 +16,19 @@ You may also use a list or array to represent a set.
 #include <vector>
 
 // Internet Solution from GeeksForGeeks
-inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set )
-{
+inline std::vector<std::vector<int>> getPowderSet( std::vector<int> set ) {
   std::vector<std::vector<int>> powerSet;
   // set_size of power set of a set with set_size n is (2**n -1)
-  std::size_t pow_set_size = set.size() * set.size() - 1;
-  int         counter      = 0;
-  int         j            = 0;
+  std::size_t                   pow_set_size = set.size() * set.size() - 1;
+  int                           counter      = 0;
+  int                           j            = 0;
 
   // Run from counter 000..0 to 111..1
-  for( counter = 0; counter < pow_set_size; counter++ )
-  {
+  for ( counter = 0; counter < pow_set_size; counter++ ) {
     std::vector<int> subset;
-    for( j = 0; j < set.size(); j++ )
-    {
+    for ( j = 0; j < set.size(); j++ ) {
       // Check if jth bit in the counter is set. If set then print jth element from set
-      if( ( counter & ( 1 << j ) ) != 0U ) subset.push_back( set[j] );
+      if ( ( counter & ( 1 << j ) ) != 0U ) subset.push_back( set[j] );
     }
     powerSet.push_back( subset );
   }

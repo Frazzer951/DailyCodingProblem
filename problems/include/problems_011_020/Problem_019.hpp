@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_019_HPP
 #define PROBLEMS_011_020_PROBLEM_019_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -17,18 +16,13 @@ goal.
 
 #include "Futils.hpp"
 
-inline int build_houses( std::vector<std::vector<int>> matrix )
-{
+inline int build_houses( std::vector<std::vector<int>> matrix ) {
   auto             k = matrix[0].size();
   std::vector<int> soln_row( k, 0 );
 
-  for( auto row : matrix )
-  {
+  for ( auto row : matrix ) {
     std::vector<int> new_row;
-    for( unsigned int i = 0; i < row.size(); ++i )
-    {
-      new_row.push_back( getIntVecMin( soln_row, i ) + row[i] );
-    }
+    for ( unsigned int i = 0; i < row.size(); ++i ) { new_row.push_back( getIntVecMin( soln_row, i ) + row[i] ); }
     soln_row = new_row;
   }
   return getIntVecMin( soln_row );

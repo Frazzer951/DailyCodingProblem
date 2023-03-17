@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_142_HPP
 #define PROBLEMS_141_150_PROBLEM_142_HPP
 
-
 #pragma once
 
 /* HARD
@@ -12,28 +11,21 @@ For example, (()* and (*) are balanced. )*( is not balanced.
 */
 #include <string>
 
-inline bool balanced( const std::string & s )
-{
+inline bool balanced( const std::string &s ) {
   int low  = 0;
   int high = 0;
-  for( char c : s )
-  {
-    if( c == '(' )
-    {
+  for ( char c : s ) {
+    if ( c == '(' ) {
       low++;
       high++;
-    }
-    else if( c == ')' )
-    {
+    } else if ( c == ')' ) {
       low = std::max( low - 1, 0 );
       high--;
-    }
-    else if( c == '*' )
-    {
+    } else if ( c == '*' ) {
       low = std::max( low - 1, 0 );
       high++;
     }
-    if( high < 0 ) return false;
+    if ( high < 0 ) return false;
   }
   return low == 0;
 }

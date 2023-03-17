@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_201_210_PROBLEM_208_HPP
 #define PROBLEMS_201_210_PROBLEM_208_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -13,18 +12,13 @@ could be 1 -> 0 -> 5 -> 8 -> 3.
 */
 #include "slNode.hpp"
 
-inline slList<int> partition( slNode<int> * head, int pivot )
-{
+inline slList<int> partition( slNode<int> *head, int pivot ) {
   slList<int> newList;
 
-  while( head != nullptr )
-  {
-    if( head->value < pivot )
-    {
+  while ( head != nullptr ) {
+    if ( head->value < pivot ) {
       newList.insert( new slNode( head->value ) );
-    }
-    else
-    {
+    } else {
       newList.add( new slNode( head->value ) );
     }
     head = head->next;

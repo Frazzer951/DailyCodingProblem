@@ -31,25 +31,17 @@ Given a graph, find its transitive closure.
 
 #include <vector>
 
-inline std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::vector<int>> graph )
-{
+inline std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::vector<int>> graph ) {
   int                           n      = graph.size();
   std::vector<std::vector<int>> result = std::vector( n, std::vector( n, 0 ) );
 
-  for( int i = 0; i < n; i++ )
-  {
-    for( int j = 0; j < n; j++ )
-    {
-      result[i][j] = graph[i][j];
-    }
+  for ( int i = 0; i < n; i++ ) {
+    for ( int j = 0; j < n; j++ ) { result[i][j] = graph[i][j]; }
   }
 
-  for( int k = 0; k < n; k++ )
-  {
-    for( int i = 0; i < n; i++ )
-    {
-      for( int j = 0; j < n; j++ )
-      {
+  for ( int k = 0; k < n; k++ ) {
+    for ( int i = 0; i < n; i++ ) {
+      for ( int j = 0; j < n; j++ ) {
         result[i][j] = result[i][j] | static_cast<int>( ( result[i][k] != 0 ) && ( result[k][j] != 0 ) );
       }
     }
@@ -58,17 +50,12 @@ inline std::vector<std::vector<int>> transitiveClosure_helper( std::vector<std::
   return result;
 }
 
-inline std::vector<std::vector<int>> transitiveClosure( std::vector<std::vector<int>> graph )
-{
+inline std::vector<std::vector<int>> transitiveClosure( std::vector<std::vector<int>> graph ) {
   int                           n     = graph.size();
   std::vector<std::vector<int>> links = std::vector( n, std::vector( n, 0 ) );
 
-  for( int i = 0; i < n; i++ )
-  {
-    for( int connection : graph[i] )
-    {
-      links[i][connection] = 1;
-    }
+  for ( int i = 0; i < n; i++ ) {
+    for ( int connection : graph[i] ) { links[i][connection] = 1; }
   }
 
   return transitiveClosure_helper( links );

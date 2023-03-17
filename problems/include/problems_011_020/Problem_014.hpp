@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_014_HPP
 #define PROBLEMS_011_020_PROBLEM_014_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -13,24 +12,19 @@ Hint: The basic equation of a circle is x2 + y2 = r2.
 #include <cstdlib>
 #include <iostream>
 
-inline double monteCarloPi( int n )
-{
+inline double monteCarloPi( int n ) {
   // PI = 4 * (Points in circle)/(Total Points)
 
   double inCircle = 0;
   double total    = 0;
 
-  for( int i = 0; i < n; ++i )
-  {
+  for ( int i = 0; i < n; ++i ) {
     double x = ( (double) rand() ) / (double) RAND_MAX;
     double y = ( (double) rand() ) / (double) RAND_MAX;
 
     total++;
 
-    if( x * x + y * y <= 1 )
-    {
-      inCircle++;
-    }
+    if ( x * x + y * y <= 1 ) { inCircle++; }
   }
 
   double PI_Guess = 4.0 * inCircle / total;
@@ -38,8 +32,7 @@ inline double monteCarloPi( int n )
   return PI_Guess;
 }
 
-inline int prob_14()
-{
+inline int prob_14() {
   std::cout << "\nProblem 14\n";
 
   std::cout << "At 10 iterations PI is estimated as: " << monteCarloPi( 10 ) << '\n';

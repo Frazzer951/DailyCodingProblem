@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_199_HPP
 #define PROBLEMS_191_200_PROBLEM_199_HPP
 
-
 #pragma once
 
 /* HARD
@@ -14,36 +13,25 @@ return "()()()()".
 */
 #include <string>
 
-inline std::string balanceParentheses( const std::string & str )
-{
+inline std::string balanceParentheses( const std::string &str ) {
   std::string ret;
 
   int open_count = 0;
 
-  for( char c : str )
-  {
-    if( c == '(' )
-    {
+  for ( char c : str ) {
+    if ( c == '(' ) {
       open_count++;
       ret += c;
-    }
-    else if( c == ')' )
-    {
-      if( open_count > 0 )
-      {
+    } else if ( c == ')' ) {
+      if ( open_count > 0 ) {
         open_count--;
         ret += c;
-      }
-      else
-      {
+      } else {
         ret += "()";
       }
     }
   }
-  for( int i = 0; i < open_count; i++ )
-  {
-    ret += ')';
-  }
+  for ( int i = 0; i < open_count; i++ ) { ret += ')'; }
 
   return ret;
 }

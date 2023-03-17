@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_193_HPP
 #define PROBLEMS_191_200_PROBLEM_193_HPP
 
-
 #pragma once
 
 /* HARD
@@ -20,12 +19,10 @@ dollar fee, so we have 7 + 6 = 13 profit minus 4 dollars of fees.
 */
 #include <vector>
 
-inline int maxProfit( std::vector<int> arr, int fee )
-{
+inline int maxProfit( std::vector<int> arr, int fee ) {
   int max  = 0;
   int hold = -arr[0];
-  for( int i = 1; i < arr.size(); i++ )
-  {
+  for ( int i = 1; i < arr.size(); i++ ) {
     int price = arr[i];
     max       = std::max( max, hold + price - fee );
     hold      = std::max( hold, max - price );

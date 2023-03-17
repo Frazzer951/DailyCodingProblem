@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_111_120_PROBLEM_115_HPP
 #define PROBLEMS_111_120_PROBLEM_115_HPP
 
-
 #pragma once
 
 /* HARD
@@ -12,11 +11,10 @@ also be considered as a subtree of itself.
 */
 #include "btNode.hpp"
 
-inline bool isSubtree( btNode<int> * s, btNode<int> * t )
-{
-  if( s == nullptr || t == nullptr ) return false;
+inline bool isSubtree( btNode<int> *s, btNode<int> *t ) {
+  if ( s == nullptr || t == nullptr ) return false;
 
-  if( t->value == s->value && t == s ) return true;
+  if ( t->value == s->value && t == s ) return true;
 
   return isSubtree( s->left, t ) || isSubtree( s->right, t );
 }

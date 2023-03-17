@@ -11,32 +11,22 @@
 #include "problems_501_510/Problem_509.hpp"
 #include "problems_501_510/Problem_510.hpp"
 
-
 // Problem 501
-
 
 // Problem 502
 
-
 // Problem 503
-
 
 // Problem 504
 
-
 // Problem 505
-
 
 // Problem 506
 
-
 // Problem 507
-
 
 // Problem 508
 
-
 // Problem 509
-
 
 // Problem 510

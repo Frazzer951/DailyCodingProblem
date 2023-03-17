@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_191_HPP
 #define PROBLEMS_191_200_PROBLEM_191_HPP
 
-
 #pragma once
 
 /* EASY
@@ -20,21 +19,17 @@ The intervals are not necessarily sorted in any order.
 #include <limits>
 #include <vector>
 
-inline bool sortbysec( const std::pair<int, int> & a, const std::pair<int, int> & b )
-{
-  return ( a.second < b.second );
-}
+inline bool sortbysec( const std::pair<int, int> &a, const std::pair<int, int> &b ) { return ( a.second < b.second ); }
 
-inline int non_overlapping_intervals( std::vector<std::pair<int, int>> intervals )
-{
+inline int non_overlapping_intervals( std::vector<std::pair<int, int>> intervals ) {
   int current_end = std::numeric_limits<int>::min();
   int overlapping = 0;
 
   std::sort( intervals.begin(), intervals.end(), sortbysec );
 
-  for( auto & [start, end] : intervals )
-  {
-    if( start >= current_end ) current_end = end;
+  for ( auto &[start, end] : intervals ) {
+    if ( start >= current_end )
+      current_end = end;
     else
       overlapping += 1;
   }

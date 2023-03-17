@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_091_100_PROBLEM_093_HPP
 #define PROBLEMS_091_100_PROBLEM_093_HPP
 
-
 #pragma once
 
 /* HARD
@@ -13,9 +12,8 @@ Given a tree, return the size of the largest tree/subtree that is a BST.
 
 #include "problems_081_090/Problem_089.hpp"
 
-inline int btSize( btNode<char> * node )
-{
-  if( node == nullptr ) return 0;
+inline int btSize( btNode<char> *node ) {
+  if ( node == nullptr ) return 0;
 
   int left  = btSize( node->left );
   int right = btSize( node->right );
@@ -23,12 +21,11 @@ inline int btSize( btNode<char> * node )
   return 1 + left + right;
 }
 
-inline btNode<char> * largest_subBST( btNode<char> * root )
-{
-  if( validateBST( root ) ) return root;
+inline btNode<char> *largest_subBST( btNode<char> *root ) {
+  if ( validateBST( root ) ) return root;
 
-  btNode<char> * left  = largest_subBST( root->left );
-  btNode<char> * right = largest_subBST( root->right );
+  btNode<char> *left  = largest_subBST( root->left );
+  btNode<char> *right = largest_subBST( root->right );
 
   int left_size  = btSize( left );
   int right_size = btSize( right );
@@ -36,9 +33,8 @@ inline btNode<char> * largest_subBST( btNode<char> * root )
   return ( left_size > right_size ) ? left : right;
 }
 
-inline int largest_subBST_size( btNode<char> * root )
-{
-  auto * largest = largest_subBST( root );
+inline int largest_subBST_size( btNode<char> *root ) {
+  auto *largest = largest_subBST( root );
   return btSize( largest );
 }
 #endif

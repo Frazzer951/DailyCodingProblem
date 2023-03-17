@@ -11,10 +11,8 @@
 #include "problems_231_240/Problem_239.hpp"
 #include "problems_231_240/Problem_240.hpp"
 
-
 /// Problem 231
-TEST( Problem_231, Given_Case )
-{
+TEST( Problem_231, Given_Case ) {
   std::string result = noRepeatingAdjacentCharacters( "aaabbc" );
   EXPECT_EQ( result, "abacba" );
 
@@ -23,8 +21,7 @@ TEST( Problem_231, Given_Case )
 }
 
 // Problem 232
-TEST( Problem_232, Given_Case )
-{
+TEST( Problem_232, Given_Case ) {
   /*
   mapsum.insert("columnar", 3)
   assert mapsum.sum("col") == 3
@@ -42,8 +39,7 @@ TEST( Problem_232, Given_Case )
 }
 
 // Problem 233
-TEST( Problem_223, Test_Case )
-{
+TEST( Problem_223, Test_Case ) {
   EXPECT_EQ( fib( 0 ), 0 );
   EXPECT_EQ( fib( 1 ), 1 );
   EXPECT_EQ( fib( 2 ), 1 );
@@ -55,8 +51,7 @@ TEST( Problem_223, Test_Case )
 }
 
 // Problem 234
-TEST( Problem_234, Test_Case )
-{
+TEST( Problem_234, Test_Case ) {
   UndirectedGraph graph( 3 );
   graph.add_edge( 0, 1, 5 );
   graph.add_edge( 1, 2, 10 );
@@ -68,8 +63,7 @@ TEST( Problem_234, Test_Case )
 }
 
 // Problem 235
-TEST( Problem_235, Given_Case )
-{
+TEST( Problem_235, Given_Case ) {
   // [4, 2, 7, 5, -1, 3, 6]
   std::pair<int, int> result = min_and_max( { 4, 2, 7, 5, -1, 3, 6 } );
 
@@ -77,19 +71,56 @@ TEST( Problem_235, Given_Case )
 }
 
 // Problem 236
-TEST( Problem_236, Test_Case )
-{
-  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { 20, 20 } ) );
-  EXPECT_TRUE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { 5, 5 } ) );
-  EXPECT_TRUE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 3, 3 } ) );
-  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 5, 1 } ) );
-  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 5, 5 }, { 5, 0 } }, { 8, 1 } ) );
-  EXPECT_FALSE( isInsidePolygon( { { 0, 0 }, { 10, 0 }, { 10, 10 }, { 0, 10 } }, { -1, 10 } ) );
+TEST( Problem_236, Test_Case ) {
+  EXPECT_FALSE( isInsidePolygon(
+      {
+          { 0,  0},
+          {10,  0},
+          {10, 10},
+          { 0, 10}
+  },
+      { 20, 20 } ) );
+  EXPECT_TRUE( isInsidePolygon(
+      {
+          { 0,  0},
+          {10,  0},
+          {10, 10},
+          { 0, 10}
+  },
+      { 5, 5 } ) );
+  EXPECT_TRUE( isInsidePolygon(
+      {
+          {0, 0},
+          {5, 5},
+          {5, 0}
+  },
+      { 3, 3 } ) );
+  EXPECT_FALSE( isInsidePolygon(
+      {
+          {0, 0},
+          {5, 5},
+          {5, 0}
+  },
+      { 5, 1 } ) );
+  EXPECT_FALSE( isInsidePolygon(
+      {
+          {0, 0},
+          {5, 5},
+          {5, 0}
+  },
+      { 8, 1 } ) );
+  EXPECT_FALSE( isInsidePolygon(
+      {
+          { 0,  0},
+          {10,  0},
+          {10, 10},
+          { 0, 10}
+  },
+      { -1, 10 } ) );
 }
 
 // Problem 237
-TEST( Problem_237, Given_Case )
-{
+TEST( Problem_237, Given_Case ) {
   /*
         4
       /   \
@@ -97,8 +128,8 @@ TEST( Problem_237, Given_Case )
     / \    / \
    9   4  5   9
   */
-  auto * root = new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 4 ) ),
-                            new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
+  auto *root =
+      new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 4 ) ), new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
 
   EXPECT_FALSE( isSymmetric( root, root ) );
 
@@ -110,18 +141,15 @@ TEST( Problem_237, Given_Case )
    9   5  5   9
   */
 
-  root = new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 5 ) ),
-                     new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
+  root = new btNode( 4, new btNode( 3, new btNode( 9 ), new btNode( 5 ) ), new btNode( 3, new btNode( 5 ), new btNode( 9 ) ) );
 
   EXPECT_TRUE( isSymmetric( root, root ) );
 }
 
 // Problem 238
 
-
 // Problem 239
-TEST( Problem_239, Test_Case )
-{
+TEST( Problem_239, Test_Case ) {
   EXPECT_EQ( unlock_combinations( 1 ), 9 );
   EXPECT_EQ( unlock_combinations( 2 ), 56 );
   EXPECT_EQ( unlock_combinations( 3 ), 320 );
@@ -129,8 +157,7 @@ TEST( Problem_239, Test_Case )
 }
 
 // Problem 240
-TEST( Problem_240, Test_Case )
-{
+TEST( Problem_240, Test_Case ) {
   std::vector<int> arr    = { 1, 2, 3, 4, 1, 2, 3, 4 };
   std::vector<int> exp    = { 1, 1, 3, 3, 2, 2, 4, 4 };
   std::vector<int> result = sortPairs( arr );

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_051_060_PROBLEM_058_HPP
 #define PROBLEMS_051_060_PROBLEM_058_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -17,17 +16,16 @@ You can assume all the integers in the array are unique.
 */
 #include <vector>
 
-inline int shifted_array_search( std::vector<int> lst, int num )
-{
+inline int shifted_array_search( std::vector<int> lst, int num ) {
   int i    = (int) lst.size() / 2;
   int dist = i / 2;
 
-  while( true )
-  {
-    if( lst[0] > lst[i] && lst[i - 1] > lst[i] ) break;
-    if( dist == 0 ) break;
-    if( lst[0] <= lst[i] ) i = i + dist;
-    else if( lst[i - 1] <= lst[i] )
+  while ( true ) {
+    if ( lst[0] > lst[i] && lst[i - 1] > lst[i] ) break;
+    if ( dist == 0 ) break;
+    if ( lst[0] <= lst[i] )
+      i = i + dist;
+    else if ( lst[i - 1] <= lst[i] )
       i = i - dist;
     else
       break;
@@ -39,16 +37,15 @@ inline int shifted_array_search( std::vector<int> lst, int num )
   int high = i - 1;
   dist     = (int) lst.size() / 2;
 
-  while( true )
-  {
-    if( dist == 0 ) return -1;
+  while ( true ) {
+    if ( dist == 0 ) return -1;
 
     int guess_ind = ( low + dist ) % (int) lst.size();
     int guess     = lst[guess_ind];
-    if( guess == num ) return guess_ind;
+    if ( guess == num ) return guess_ind;
 
-    if( guess < num ) low = ( low + dist ) % (int) lst.size();
-    if( guess > num ) high = ( (int) lst.size() + high - dist ) % (int) lst.size();
+    if ( guess < num ) low = ( low + dist ) % (int) lst.size();
+    if ( guess > num ) high = ( (int) lst.size() + high - dist ) % (int) lst.size();
 
     dist = dist / 2;
   }

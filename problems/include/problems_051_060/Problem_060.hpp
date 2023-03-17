@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_051_060_PROBLEM_060_HPP
 #define PROBLEMS_051_060_PROBLEM_060_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -44,32 +43,23 @@ def partition(s):
     return A[-1][-1]
 */
 
-
-inline bool partitions( std::vector<int> s )
-{
+inline bool partitions( std::vector<int> s ) {
   int k = sum( s );
-  if( k % 2 != 0 ) return false;
+  if ( k % 2 != 0 ) return false;
 
   int k_over_two = k / 2;
 
   std::vector<std::vector<bool>> A( k_over_two + 1, std::vector<bool>( s.size() + 1, false ) );
 
-  for( int j = 0; j < s.size() + 1; j++ )
-  {
-    A[0][j] = true;
-  }
+  for ( int j = 0; j < s.size() + 1; j++ ) { A[0][j] = true; }
 
-  for( int i = 1; i < k_over_two + 1; i++ )
-  {
-    A[i][0] = false;
-  }
+  for ( int i = 1; i < k_over_two + 1; i++ ) { A[i][0] = false; }
 
-  for( int i = 1; i < k_over_two + 1; i++ )
-  {
-    for( int j = 1; j < s.size() + 1; j++ )
-    {
+  for ( int i = 1; i < k_over_two + 1; i++ ) {
+    for ( int j = 1; j < s.size() + 1; j++ ) {
       int using_last = i - s[j - 1];
-      if( using_last >= 0 ) A[i][j] = A[i][j - 1] || A[using_last][j - 1];
+      if ( using_last >= 0 )
+        A[i][j] = A[i][j - 1] || A[using_last][j - 1];
       else
         A[i][j] = A[i][j - 1];
     }

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_216_HPP
 #define PROBLEMS_211_220_PROBLEM_216_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -30,22 +29,23 @@ For the input XIV, for instance, you should return 14.
 #include <map>
 #include <string>
 
-inline int romanToInt( std::string roman )
-{
-  std::map<char, int> values = { { 'M', 1000 }, { 'D', 500 }, { 'C', 100 }, { 'L', 50 },
-                                 { 'X', 10 },   { 'V', 5 },   { 'I', 1 } };
-  int                 num    = 0;
-  for( int i = 0; i < roman.length(); i++ )
-  {
-    if( i + 1 < roman.length() )
-    {
-      if( values[roman[i + 1]] > values[roman[i]] )
-      {
+inline int romanToInt( std::string roman ) {
+  std::map<char, int> values = {
+    {'M', 1000},
+    {'D',  500},
+    {'C',  100},
+    {'L',   50},
+    {'X',   10},
+    {'V',    5},
+    {'I',    1}
+  };
+  int num = 0;
+  for ( int i = 0; i < roman.length(); i++ ) {
+    if ( i + 1 < roman.length() ) {
+      if ( values[roman[i + 1]] > values[roman[i]] ) {
         num += values[roman[i + 1]] - values[roman[i]];
         i++;
-      }
-      else
-      {
+      } else {
         num += values[roman[i]];
       }
     }

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_141_HPP
 #define PROBLEMS_141_150_PROBLEM_141_HPP
 
-
 #pragma once
 
 /* HARD
@@ -19,8 +18,7 @@ class Stack:
 */
 #include <vector>
 
-class Stack
-{
+class Stack {
   std::size_t      size { 10 };
   std::size_t      s0 { 0 };
   std::size_t      s1;
@@ -28,27 +26,22 @@ class Stack
   std::vector<int> list;
 
 public:
-  Stack()
-  {
+  Stack() {
     list = std::vector( size, 0 );
     // s0 Grows up
-    s1 = list.size() / 2;    // Grows up
-    s2 = list.size() - 1;    // Grows down
+    s1   = list.size() / 2;    // Grows up
+    s2   = list.size() - 1;    // Grows down
   }
 
-  int pop( int stack_number )
-  {
-    if( stack_number == 0 )
-    {
+  int pop( int stack_number ) {
+    if ( stack_number == 0 ) {
       s0--;
       return list[s0];
     }
-    if( stack_number == 1 )
-    {
+    if ( stack_number == 1 ) {
       s1--;
       return list[s1];
     }
-
 
     s2++;
     return list[s2];
@@ -56,8 +49,7 @@ public:
 
   bool is_resize_needed() { return s0 == list.size() / 2 || s1 > s2; }
 
-  void resize( std::size_t new_size )
-  {
+  void resize( std::size_t new_size ) {
     std::vector<int> prev_list = list;
     std::size_t      prev_s0   = s0;
     std::size_t      prev_s1   = s1;
@@ -69,31 +61,25 @@ public:
     s2   = list.size() - 1;    // Grows down
     size = new_size;
 
-    for( std::size_t i = 0; i < prev_s0; i++ ) push( prev_list[i], 0 );
+    for ( std::size_t i = 0; i < prev_s0; i++ ) push( prev_list[i], 0 );
 
-    for( std::size_t i = prev_list.size() / 2; i < prev_s1; i++ ) push( prev_list[i], 1 );
+    for ( std::size_t i = prev_list.size() / 2; i < prev_s1; i++ ) push( prev_list[i], 1 );
 
-    for( std::size_t i = prev_list.size() - 1; i > prev_s2; i-- ) push( prev_list[i], 2 );
+    for ( std::size_t i = prev_list.size() - 1; i > prev_s2; i-- ) push( prev_list[i], 2 );
   }
 
-  void push( int item, int stack_number )
-  {
-    if( stack_number == 0 )
-    {
+  void push( int item, int stack_number ) {
+    if ( stack_number == 0 ) {
       list[s0] = item;
       s0++;
-    }
-    else if( stack_number == 1 )
-    {
+    } else if ( stack_number == 1 ) {
       list[s1] = item;
       s1++;
-    }
-    else
-    {
+    } else {
       list[s2] = item;
       s2--;
     }
-    if( is_resize_needed() ) resize( size * 2 );
+    if ( is_resize_needed() ) resize( size * 2 );
   }
 };
 #endif

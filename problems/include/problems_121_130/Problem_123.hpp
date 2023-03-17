@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_123_HPP
 #define PROBLEMS_121_130_PROBLEM_123_HPP
 
-
 #pragma once
 
 /* HARD
@@ -25,8 +24,7 @@ And here are examples of non-numbers:
 #include <string>
 #include <vector>
 
-inline bool isNum( std::string s )
-{
+inline bool isNum( std::string s ) {
   bool hasNum       = false;
   bool hasE         = false;
   bool hasDecimal   = false;
@@ -37,45 +35,38 @@ inline bool isNum( std::string s )
   char                 allowed[] = { '+', '-', 'e', '.' };
   std::map<char, bool> allowedChars;
   std::map<char, bool> nums;
-  for( char c : allowed ) allowedChars[c] = true;
-  for( char c : numbers )
-  {
+  for ( char c : allowed ) allowedChars[c] = true;
+  for ( char c : numbers ) {
     allowedChars[c] = true;
     nums[c]         = true;
   }
 
-  for( char c : s )
-  {
-    if( !allowedChars[c] ) return false;
-    if( !hasNum && nums[c] ) hasNum = true;
-    if( c == 'e' )
-    {
+  for ( char c : s ) {
+    if ( !allowedChars[c] ) return false;
+    if ( !hasNum && nums[c] ) hasNum = true;
+    if ( c == 'e' ) {
       hasE = true;
       eCount++;
     }
-    if( c == '.' )
-    {
+    if ( c == '.' ) {
       hasDecimal = true;
       decimalCount++;
     }
   }
-  if( !hasNum ) return false;
-  if( !( nums[s[0]] || s[0] == '+' || s[0] == '-' ) ) return false;
+  if ( !hasNum ) return false;
+  if ( !( nums[s[0]] || s[0] == '+' || s[0] == '-' ) ) return false;
 
-  if( hasE )
-  {
-    if( eCount > 1 ) return false;
+  if ( hasE ) {
+    if ( eCount > 1 ) return false;
     std::size_t index = s.find( 'e' );
-    if( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
+    if ( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
   }
 
-  if( hasDecimal )
-  {
-    if( decimalCount > 1 ) return false;
+  if ( hasDecimal ) {
+    if ( decimalCount > 1 ) return false;
     std::size_t index = s.find( '.' );
-    if( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
+    if ( !nums[s[index - 1]] || !nums[s[index + 1]] ) return false;
   }
-
 
   return true;
 }

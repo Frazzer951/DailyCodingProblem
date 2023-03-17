@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_220_HPP
 #define PROBLEMS_211_220_PROBLEM_220_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,19 +15,16 @@ certainty, if you move first, assuming your opponent plays optimally.
 */
 #include <vector>
 
-inline int max_profit_coin_game( std::vector<int> coins )
-{
+inline int max_profit_coin_game( std::vector<int> coins ) {
   int                           n = coins.size();
   std::vector<std::vector<int>> profit( n, std::vector( n, 0 ) );
 
-  for( int i = 0; i < n; i++ ) profit[i][i] = coins[i];
+  for ( int i = 0; i < n; i++ ) profit[i][i] = coins[i];
 
-  for( int i = 0; i < n - 1; i++ ) profit[i][i + 1] = std::max( profit[i][i], profit[i + 1][i + 1] );
+  for ( int i = 0; i < n - 1; i++ ) profit[i][i + 1] = std::max( profit[i][i], profit[i + 1][i + 1] );
 
-  for( int gap = 2; gap < n; gap++ )
-  {
-    for( int i = 0; i < n - gap; i++ )
-    {
+  for ( int gap = 2; gap < n; gap++ ) {
+    for ( int i = 0; i < n - gap; i++ ) {
       int j              = i + gap;
       int left           = profit[i][j - 2];
       int diagonal       = profit[i + 1][j - 1];

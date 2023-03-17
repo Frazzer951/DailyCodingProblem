@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_043_HPP
 #define PROBLEMS_041_050_PROBLEM_043_HPP
 
-
 #pragma once
 
 /* EASY
@@ -17,53 +16,43 @@ Each method should run in constant time.
 */
 #include <exception>
 
-inline class stackEmptyExcept : public std::exception
-{
-  [[nodiscard]] const char * what() const noexcept override { return "My exception happened"; }
+inline class stackEmptyExcept : public std::exception {
+  [[nodiscard]] const char *what() const noexcept override { return "My exception happened"; }
 } stackEmpty;
 
-struct stackNode
-{
-  int         val;
-  stackNode * prev = nullptr;
+struct stackNode {
+  int        val;
+  stackNode *prev = nullptr;
 
-  stackNode( int value, stackNode * _prev = nullptr ) : val( value ), prev( _prev ) {}
+  stackNode( int value, stackNode *_prev = nullptr ) : val( value ), prev( _prev ) {}
 };
 
-struct stack
-{
-  stackNode * top = nullptr;
+struct stack {
+  stackNode *top = nullptr;
 
-  void push( int val )
-  {
-    auto * newNode = new stackNode( val, top );
-    top            = newNode;
+  void push( int val ) {
+    auto *newNode = new stackNode( val, top );
+    top           = newNode;
   }
 
-  int pop()
-  {
-    if( top == nullptr ) throw stackEmpty;
+  int pop() {
+    if ( top == nullptr ) throw stackEmpty;
 
-    stackNode * topNode = top;
-    top                 = top->prev;
-    int val             = topNode->val;
+    stackNode *topNode = top;
+    top                = top->prev;
+    int val            = topNode->val;
     delete topNode;
 
     return val;
   }
 
-  [[nodiscard]] int getMax() const
-  {
-    if( top == nullptr ) throw stackEmpty;
+  [[nodiscard]] int getMax() const {
+    if ( top == nullptr ) throw stackEmpty;
 
-    stackNode * cur    = top;
-    int         maxVal = cur->val;
-    while( cur->prev != nullptr )
-    {
-      if( cur->val > maxVal )
-      {
-        maxVal = cur->val;
-      }
+    stackNode *cur    = top;
+    int        maxVal = cur->val;
+    while ( cur->prev != nullptr ) {
+      if ( cur->val > maxVal ) { maxVal = cur->val; }
       cur = cur->prev;
     }
     return maxVal;

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_021_030_PROBLEM_025_HPP
 #define PROBLEMS_021_030_PROBLEM_025_HPP
 
-
 #pragma once
 
 /* HARD
@@ -23,33 +22,27 @@ false.
 */
 #include <string>
 
-inline bool regex( std::string str, std::string exp )
-{
+inline bool regex( std::string str, std::string exp ) {
   unsigned int str_index = 0;
 
-  for( unsigned int i = 0; i < exp.size(); ++i )
-  {
+  for ( unsigned int i = 0; i < exp.size(); ++i ) {
     char cur = str[str_index];
-    switch( exp[i] )
-    {
-      case '.':
-        // Match Single Char
-        str_index++;
-        break;
-      case '*':
-        // Match zero or more of the preceding element
-        if( exp[i + 1] == cur ) break;
+    switch ( exp[i] ) {
+    case '.':
+      // Match Single Char
+      str_index++;
+      break;
+    case '*':
+      // Match zero or more of the preceding element
+      if ( exp[i + 1] == cur ) break;
 
-        while( cur == str[str_index] )
-        {
-          str_index++;
-        }
-        break;
-      default:
-        // Regular Char
-        if( exp[i] != cur ) return false;
-        str_index++;
-        break;
+      while ( cur == str[str_index] ) { str_index++; }
+      break;
+    default:
+      // Regular Char
+      if ( exp[i] != cur ) return false;
+      str_index++;
+      break;
     }
   }
   return str_index == str.size();

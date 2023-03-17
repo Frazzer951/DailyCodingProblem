@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_021_030_PROBLEM_030_HPP
 #define PROBLEMS_021_030_PROBLEM_030_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -22,21 +21,16 @@ to the left), so we can trap 8 units of water.
 */
 #include <vector>
 
-inline int waterHeightMap( std::vector<int> v )
-{
+inline int waterHeightMap( std::vector<int> v ) {
   int unitsOfWater = 0;
 
   int leftMax  = v[0];
   int rightMax = 0;
 
-  for( unsigned int i = 1; i < v.size(); i++ )
-  {
-    if( rightMax == v[i] ) rightMax = 0;
+  for ( unsigned int i = 1; i < v.size(); i++ ) {
+    if ( rightMax == v[i] ) rightMax = 0;
 
-    for( unsigned int j = i + 1; j < v.size(); j++ )
-    {
-      rightMax = ( rightMax > v[j] ) ? rightMax : v[j];
-    }
+    for ( unsigned int j = i + 1; j < v.size(); j++ ) { rightMax = ( rightMax > v[j] ) ? rightMax : v[j]; }
 
     int tempWater = ( leftMax < rightMax ) ? leftMax : rightMax;
 

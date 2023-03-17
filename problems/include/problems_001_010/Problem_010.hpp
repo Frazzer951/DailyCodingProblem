@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_010_HPP
 #define PROBLEMS_001_010_PROBLEM_010_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -18,8 +17,7 @@ calls f after n milliseconds.
 
 inline void testFunc() { std::cout << "Running function test\n"; }
 
-inline void jobScheduler( void f(), int n )
-{
+inline void jobScheduler( void f(), int n ) {
 #ifdef _WIN32
   Sleep( n );
 #else
@@ -29,8 +27,7 @@ inline void jobScheduler( void f(), int n )
   f();
 }
 
-inline int prob_10()
-{
+inline int prob_10() {
   std::cout << "\nProblem 10\n";
 
   jobScheduler( testFunc, 10 );

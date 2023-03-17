@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_231_240_PROBLEM_232_HPP
 #define PROBLEMS_231_240_PROBLEM_232_HPP
 
-
 #pragma once
 
 /* EASY
@@ -23,22 +22,16 @@ assert mapsum.sum("col") == 5
 #include <map>
 #include <string>
 
-class PrefixMapSum
-{
+class PrefixMapSum {
 public:
   PrefixMapSum() = default;
 
-  void insert( const std::string & key, int value ) { map[key] = value; }
+  void insert( const std::string &key, int value ) { map[key] = value; }
 
-  int sum( const std::string & prefix )
-  {
+  int sum( const std::string &prefix ) {
     int sum = 0;
-    for( auto it = map.lower_bound( prefix ); it != map.end(); it++ )
-    {
-      if( it->first.substr( 0, prefix.size() ) != prefix )
-      {
-        break;
-      }
+    for ( auto it = map.lower_bound( prefix ); it != map.end(); it++ ) {
+      if ( it->first.substr( 0, prefix.size() ) != prefix ) { break; }
       sum += it->second;
     }
     return sum;

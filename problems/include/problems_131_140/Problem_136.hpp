@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_131_140_PROBLEM_136_HPP
 #define PROBLEMS_131_140_PROBLEM_136_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -21,36 +20,29 @@ Return 4.
 #include <map>
 #include <vector>
 
-inline int explore( std::vector<std::vector<int>> v, std::vector<std::vector<bool>> & seen, int x, int y )
-{
+inline int explore( std::vector<std::vector<int>> v, std::vector<std::vector<bool>> &seen, int x, int y ) {
   int width  = 0;
   int height = 0;
 
-  for( int i = x; i < v.size(); i++ )
-  {
-    for( int j = y; j < v[0].size(); j++ )
-    {
+  for ( int i = x; i < v.size(); i++ ) {
+    for ( int j = y; j < v[0].size(); j++ ) {
       seen[i][j] = true;
-      if( v[i][j] != 1 ) break;
-      if( ( i - x ) > width ) width = i - x;
-      if( ( j - y ) > height ) height = j - y;
+      if ( v[i][j] != 1 ) break;
+      if ( ( i - x ) > width ) width = i - x;
+      if ( ( j - y ) > height ) height = j - y;
     }
   }
   return ( width + 1 ) * ( height + 1 );
 }
 
-inline int largestRectangle( std::vector<std::vector<int>> v )
-{
+inline int largestRectangle( std::vector<std::vector<int>> v ) {
   std::vector<std::vector<bool>> seen( v.size(), std::vector( v[0].size(), false ) );
   int                            largest = 0;
-  for( int i = 0; i < v.size(); i++ )
-  {
-    for( int j = 0; j < v[0].size(); j++ )
-    {
-      if( !seen[i][j] )
-      {
+  for ( int i = 0; i < v.size(); i++ ) {
+    for ( int j = 0; j < v[0].size(); j++ ) {
+      if ( !seen[i][j] ) {
         seen[i][j] = true;
-        if( v[i][j] == 1 ) largest = std::max( largest, explore( v, seen, i, j ) );
+        if ( v[i][j] == 1 ) largest = std::max( largest, explore( v, seen, i, j ) );
       }
     }
   }

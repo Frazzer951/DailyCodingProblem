@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_200_HPP
 #define PROBLEMS_191_200_PROBLEM_200_HPP
 
-
 #pragma once
 
 /* HARD
@@ -15,18 +14,16 @@ return [4, 9].
 #include <algorithm>
 #include <vector>
 
-inline bool sortbysec( const std::pair<int, int> & a, const std::pair<int, int> & b );
+inline bool sortbysec( const std::pair<int, int> &a, const std::pair<int, int> &b );
 
-inline std::vector<int> get_points( std::vector<std::pair<int, int>> intervals )
-{
+inline std::vector<int> get_points( std::vector<std::pair<int, int>> intervals ) {
   std::sort( intervals.begin(), intervals.end(), sortbysec );
 
   std::vector<int> points;
   int              latest_endpoint = intervals[0].first - 1;
 
-  for( auto & [start, end] : intervals )
-  {
-    if( start <= latest_endpoint ) continue;
+  for ( auto &[start, end] : intervals ) {
+    if ( start <= latest_endpoint ) continue;
     points.push_back( end );
     latest_endpoint = end;
   }

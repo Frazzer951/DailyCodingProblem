@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_211_220_PROBLEM_213_HPP
 #define PROBLEMS_211_220_PROBLEM_213_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -17,21 +16,17 @@ For example, given "2542540123", you should return ['254.25.40.123',
 #include <string>
 #include <vector>
 
-inline std::vector<std::string> generateIpAddresses( const std::string & s, std::vector<std::string> parts = {} )
-{
+inline std::vector<std::string> generateIpAddresses( const std::string &s, std::vector<std::string> parts = {} ) {
   std::vector<std::string> addresses;
 
-  if( parts.size() > 4 ) return {};
+  if ( parts.size() > 4 ) return {};
 
-  if( s.empty() )
-  {
-    if( parts.size() == 4 )
-    {
+  if ( s.empty() ) {
+    if ( parts.size() == 4 ) {
       std::string tmp;
-      for( int i = 0; i < 4; i++ )
-      {
+      for ( int i = 0; i < 4; i++ ) {
         tmp += parts[i];
-        if( i != 3 ) tmp += '.';
+        if ( i != 3 ) tmp += '.';
       }
       return { tmp };
     }
@@ -43,11 +38,9 @@ inline std::vector<std::string> generateIpAddresses( const std::string & s, std:
   std::vector<std::string> address = generateIpAddresses( s.substr( 1 ), tmpParts );
   addresses.insert( addresses.end(), address.begin(), address.end() );
 
-  if( s.size() > 1 )
-  {
+  if ( s.size() > 1 ) {
     int num = atoi( s.substr( 0, 2 ).c_str() );
-    if( 10 <= num && num <= 99 )
-    {
+    if ( 10 <= num && num <= 99 ) {
       tmpParts = parts;
       tmpParts.push_back( s.substr( 0, 2 ) );
       address = generateIpAddresses( s.substr( 2 ), tmpParts );
@@ -55,11 +48,9 @@ inline std::vector<std::string> generateIpAddresses( const std::string & s, std:
     }
   }
 
-  if( s.size() > 2 )
-  {
+  if ( s.size() > 2 ) {
     int num = atoi( s.substr( 0, 3 ).c_str() );
-    if( 100 <= num && num <= 255 )
-    {
+    if ( 100 <= num && num <= 255 ) {
       tmpParts = parts;
       tmpParts.push_back( s.substr( 0, 3 ) );
       address = generateIpAddresses( s.substr( 3 ), tmpParts );

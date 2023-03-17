@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_178_HPP
 #define PROBLEMS_171_180_PROBLEM_178_HPP
 
-
 #pragma once
 
 /* HARD
@@ -21,24 +20,19 @@ program to simulate the two games and calculate their expected value.
 #include <random>
 #include <vector>
 
-inline int diceSim( std::vector<int> winningCondition )
-{
+inline int diceSim( std::vector<int> winningCondition ) {
   srand( (unsigned int) time( nullptr ) );
 
   bool won       = false;
   int  index     = 0;
   int  rollCount = 0;
-  while( !won )
-  {
+  while ( !won ) {
     int roll = ( rand() % 6 ) + 1;
     rollCount++;
-    if( roll == winningCondition[index] )
-    {
+    if ( roll == winningCondition[index] ) {
       index++;
-      if( index >= winningCondition.size() ) won = true;
-    }
-    else
-    {
+      if ( index >= winningCondition.size() ) won = true;
+    } else {
       index = 0;
     }
   }

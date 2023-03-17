@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_124_HPP
 #define PROBLEMS_121_130_PROBLEM_124_HPP
 
-
 #pragma once
 
 /* EASY

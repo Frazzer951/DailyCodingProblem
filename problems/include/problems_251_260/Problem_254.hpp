@@ -31,24 +31,16 @@ You should convert it to:
        6     7
 */
 
-inline btNode<int> * trim_tree( btNode<int> * node )
-{
-  if( node == nullptr ) return nullptr;
-  if( node->left == nullptr && node->right == nullptr ) return node;
-  if( node->left != nullptr && node->right != nullptr )
-  {
+inline btNode<int> *trim_tree( btNode<int> *node ) {
+  if ( node == nullptr ) return nullptr;
+  if ( node->left == nullptr && node->right == nullptr ) return node;
+  if ( node->left != nullptr && node->right != nullptr ) {
     node->left  = trim_tree( node->left );
     node->right = trim_tree( node->right );
     return node;
   }
-  if( node->left != nullptr && node->right == nullptr )
-  {
-    return trim_tree( node->left );
-  }
-  if( node->left == nullptr && node->right != nullptr )
-  {
-    return trim_tree( node->right );
-  }
+  if ( node->left != nullptr && node->right == nullptr ) { return trim_tree( node->left ); }
+  if ( node->left == nullptr && node->right != nullptr ) { return trim_tree( node->right ); }
   return nullptr;
 }
 

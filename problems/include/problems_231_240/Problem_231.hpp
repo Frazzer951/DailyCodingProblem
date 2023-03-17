@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_231_240_PROBLEM_231_HPP
 #define PROBLEMS_231_240_PROBLEM_231_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,32 +15,23 @@ None.
 #include <string>
 #include <vector>
 
-struct Letter
-{
+struct Letter {
   int  priority {};
   char data { ' ' };
 
-  friend bool operator<( Letter const & lhs, Letter const & rhs ) { return lhs.priority > rhs.priority; }
+  friend bool operator<( Letter const &lhs, Letter const &rhs ) { return lhs.priority > rhs.priority; }
 
-  friend std::ostream & operator<<( std::ostream & os, Letter const & e )
-  {
+  friend std::ostream &operator<<( std::ostream &os, Letter const &e ) {
     return os << "{ " << e.priority << ", '" << e.data << "' } ";
   }
 };
 
-inline std::string noRepeatingAdjacentCharacters( const std::string & input )
-{
+inline std::string noRepeatingAdjacentCharacters( const std::string &input ) {
   std::map<char, int> charCount;
-  for( auto c : input )
-  {
-    charCount[c]++;
-  }
+  for ( auto c : input ) { charCount[c]++; }
 
   std::priority_queue<Letter> heap;
-  for( auto & c : charCount )
-  {
-    heap.push( Letter { -c.second, c.first } );
-  }
+  for ( auto &c : charCount ) { heap.push( Letter { -c.second, c.first } ); }
 
   Letter l     = heap.top();
   int    count = l.priority;
@@ -49,8 +39,7 @@ inline std::string noRepeatingAdjacentCharacters( const std::string & input )
   heap.pop();
   std::vector<char> result = { c };
 
-  while( !heap.empty() )
-  {
+  while ( !heap.empty() ) {
     Letter last = { count + 1, c };
     l           = heap.top();
     heap.pop();
@@ -58,16 +47,10 @@ inline std::string noRepeatingAdjacentCharacters( const std::string & input )
     c     = l.data;
     result.push_back( c );
 
-    if( last.priority < 0 )
-    {
-      heap.push( last );
-    }
+    if ( last.priority < 0 ) { heap.push( last ); }
   }
 
-  if( result.size() != input.size() )
-  {
-    return "";
-  }
+  if ( result.size() != input.size() ) { return ""; }
   return std::string( result.begin(), result.end() );
 }
 #endif

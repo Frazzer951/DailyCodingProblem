@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_021_030_PROBLEM_026_HPP
 #define PROBLEMS_021_030_PROBLEM_026_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -14,16 +13,14 @@ Do this in constant space and in one pass.
 */
 #include "slNode.hpp"
 
-inline slNode<int> * getKthLastNode( slList<int> list, int k )
-{
-  slNode<int> * slow = list.get( 0 );
-  slNode<int> * fast = list.get( 0 );
+inline slNode<int> *getKthLastNode( slList<int> list, int k ) {
+  slNode<int> *slow = list.get( 0 );
+  slNode<int> *fast = list.get( 0 );
 
-  for( int i = 0; i < k; i++ ) fast = fast->next;
+  for ( int i = 0; i < k; i++ ) fast = fast->next;
 
-  slNode<int> * prev = slow;
-  while( fast != nullptr )
-  {
+  slNode<int> *prev = slow;
+  while ( fast != nullptr ) {
     prev = slow;
     slow = slow->next;
     fast = fast->next;

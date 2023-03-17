@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_221_230_PROBLEM_230_HPP
 #define PROBLEMS_221_230_PROBLEM_230_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -20,29 +19,16 @@ will be 5.
 */
 #include <limits>
 
-inline int min_drops( int eggs, int floors )
-{
-  std::vector<std::vector<int>> trials =
-      std::vector( eggs + 1, std::vector( floors + 1, std::numeric_limits<int>::max() ) );
+inline int min_drops( int eggs, int floors ) {
+  std::vector<std::vector<int>> trials = std::vector( eggs + 1, std::vector( floors + 1, std::numeric_limits<int>::max() ) );
 
-  for( int i = 0; i <= eggs; i++ )
-  {
-    trials[i][0] = 0;
-  }
-  for( int i = 1; i <= eggs; i++ )
-  {
-    for( int j = 1; j <= floors; j++ )
-    {
+  for ( int i = 0; i <= eggs; i++ ) { trials[i][0] = 0; }
+  for ( int i = 1; i <= eggs; i++ ) {
+    for ( int j = 1; j <= floors; j++ ) {
       std::vector<int> options;
-      for( int x = 1; x <= j; x++ )
-      {
-        options.push_back( std::max( trials[i - 1][x - 1], trials[i][j - x] ) );
-      }
+      for ( int x = 1; x <= j; x++ ) { options.push_back( std::max( trials[i - 1][x - 1], trials[i][j - x] ) ); }
       int min = std::numeric_limits<int>::max();
-      for( auto & option : options )
-      {
-        min = std::min( min, option );
-      }
+      for ( auto &option : options ) { min = std::min( min, option ); }
       trials[i][j] = 1 + min;
     }
   }

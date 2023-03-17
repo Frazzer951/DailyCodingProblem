@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_081_090_PROBLEM_087_HPP
 #define PROBLEMS_081_090_PROBLEM_087_HPP
 
-
 #pragma once
 
 /* HARD
@@ -43,41 +42,36 @@ static int                 E         = 1;
 static int                 S         = 2;
 static int                 W         = 3;
 static int                 DIRS[]    = { N, E, S, W };
-static std::map<char, int> charToDir = { { 'N', N }, { 'E', E }, { 'S', S }, { 'W', W } };
+static std::map<char, int> charToDir = {
+  {'N', N},
+  {'E', E},
+  {'S', S},
+  {'W', W}
+};
 
-struct mapNode
-{
+struct mapNode {
   std::vector<std::set<mapNode *>> edges;
   char                             val;
 
-  mapNode( char value = ' ' ) : val( value )
-  {
-    for( int i = 0; i < 4; i++ )
-    {
-      edges.emplace_back();
-    }
+  mapNode( char value = ' ' ) : val( value ) {
+    for ( int i = 0; i < 4; i++ ) { edges.emplace_back(); }
   }
 };
 
-inline bool operator==( const mapNode & lhs, const mapNode & rhs )
-{
+inline bool operator==( const mapNode &lhs, const mapNode &rhs ) {
   return ( lhs.val == rhs.val ) && ( lhs.edges == rhs.edges );
 }
 
-inline bool operator<( const mapNode & lhs, const mapNode & rhs ) { return lhs.val < rhs.val; }
+inline bool operator<( const mapNode &lhs, const mapNode &rhs ) { return lhs.val < rhs.val; }
 
 inline int opposite( int dir ) { return ( dir + 2 ) % 4; }
 
-
-inline bool isValid( mapNode * from, mapNode * to, int newDir )
-{
+inline bool isValid( mapNode *from, mapNode *to, int newDir ) {
   int oppositeDir = opposite( newDir );
   return from->edges[oppositeDir].find( to ) == from->edges[oppositeDir].end();
 }
 
-
-inline void addEdges( mapNode * from, mapNode * to, int newDir )
-{
+inline void addEdges( mapNode *from, mapNode *to, int newDir ) {
   /* Get the direct opposite direction, e.g. S from N */
   int oppositeDir = opposite( newDir );
 
@@ -85,17 +79,15 @@ inline void addEdges( mapNode * from, mapNode * to, int newDir )
   from->edges[newDir].insert( to );
   to->edges[oppositeDir].insert( from );
 
-  for( int dir : DIRS )
-  {
+  for ( int dir : DIRS ) {
     /* Relationships in the same direction are ambiguous.
          For example, if A is north of B, and we are adding
          C north of B, we cannot say C is north of A. */
-    if( dir == newDir ) continue;
+    if ( dir == newDir ) continue;
 
-    for( mapNode * neighbor : from->edges[dir] )
-    {
+    for ( mapNode *neighbor : from->edges[dir] ) {
       /* No need to add self-edges */
-      if( neighbor == to ) continue;
+      if ( neighbor == to ) continue;
       /* Add bi-directional edges */
       neighbor->edges[newDir].insert( to );
       to->edges[oppositeDir].insert( neighbor );
@@ -103,37 +95,32 @@ inline void addEdges( mapNode * from, mapNode * to, int newDir )
   }
 }
 
-inline bool validate( const std::vector<std::string> & rules )
-{
+inline bool validate( const std::vector<std::string> &rules ) {
   std::map<char, mapNode *> map;
 
-  for( const std::string & line : rules )
-  {
+  for ( const std::string &line : rules ) {
     auto rule = split( line );
     std::cout << "Rule " + rule[0] + " " + rule[1] + " " + rule[2] << '\n';
     char fromVal = rule[2][0];
     char toVal   = rule[0][0];
 
-    if( map.find( fromVal ) == map.end() )
-    {
-      auto * n     = new mapNode( fromVal );
+    if ( map.find( fromVal ) == map.end() ) {
+      auto *n      = new mapNode( fromVal );
       map[fromVal] = n;
     }
 
-    if( map.find( toVal ) == map.end() )
-    {
-      auto * n   = new mapNode( toVal );
+    if ( map.find( toVal ) == map.end() ) {
+      auto *n    = new mapNode( toVal );
       map[toVal] = n;
     }
 
-    mapNode * from = map[fromVal];
-    mapNode * to   = map[toVal];
+    mapNode *from = map[fromVal];
+    mapNode *to   = map[toVal];
 
     /* Decompose diagonal (two-char) directions to single directions */
-    for( char dirChar : rule[1] )
-    {
+    for ( char dirChar : rule[1] ) {
       int dir = charToDir[dirChar];
-      if( !isValid( from, to, dir ) ) return false;
+      if ( !isValid( from, to, dir ) ) return false;
       addEdges( from, to, dir );
     }
   }

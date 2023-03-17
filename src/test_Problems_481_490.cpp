@@ -11,32 +11,22 @@
 #include "problems_481_490/Problem_489.hpp"
 #include "problems_481_490/Problem_490.hpp"
 
-
 // Problem 481
-
 
 // Problem 482
 
-
 // Problem 483
-
 
 // Problem 484
 
-
 // Problem 485
-
 
 // Problem 486
 
-
 // Problem 487
-
 
 // Problem 488
 
-
 // Problem 489
-
 
 // Problem 490

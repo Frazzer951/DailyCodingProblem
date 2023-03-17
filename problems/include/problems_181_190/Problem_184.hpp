@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_181_190_PROBLEM_184_HPP
 #define PROBLEMS_181_190_PROBLEM_184_HPP
 
-
 #pragma once
 
 /* EASY
@@ -11,17 +10,15 @@ For example, given the numbers [42, 56, 14], return 14.
 */
 #include <vector>
 
-inline int greatestCommonDenominator( std::vector<int> nums )
-{
+inline int greatestCommonDenominator( std::vector<int> nums ) {
   int i = nums[0];
-  for( int num : nums ) i = std::min( i, num );
+  for ( int num : nums ) i = std::min( i, num );
 
-  while( i > 0 )
-  {
+  while ( i > 0 ) {
     bool divisable = true;
-    for( int num : nums )
-      if( num % i != 0 ) divisable = false;
-    if( divisable ) break;
+    for ( int num : nums )
+      if ( num % i != 0 ) divisable = false;
+    if ( divisable ) break;
     i--;
   }
 

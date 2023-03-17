@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_045_HPP
 #define PROBLEMS_041_050_PROBLEM_045_HPP
 
-
 #pragma once
 
 /* EASY
@@ -13,18 +12,16 @@ to 7 (inclusive).
 
 inline int rand5() { return rand() % 5 + 1; }
 
-inline int rand7()
-{
+inline int rand7() {
   int r1 = rand5();
   int r2 = rand5();
-  if( r2 <= 3 ) return r1;
-  if( r2 == 4 )
-  {
-    if( r1 <= 3 ) return 6;
+  if ( r2 <= 3 ) return r1;
+  if ( r2 == 4 ) {
+    if ( r1 <= 3 ) return 6;
 
     return rand7();
   }
-  if( r1 <= 3 ) return 7;
+  if ( r1 <= 3 ) return 7;
 
   return rand7();
 }

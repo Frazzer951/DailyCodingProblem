@@ -11,32 +11,22 @@
 #include "problems_461_470/Problem_469.hpp"
 #include "problems_461_470/Problem_470.hpp"
 
-
 // Problem 461
-
 
 // Problem 462
 
-
 // Problem 463
-
 
 // Problem 464
 
-
 // Problem 465
-
 
 // Problem 466
 
-
 // Problem 467
-
 
 // Problem 468
 
-
 // Problem 469
-
 
 // Problem 470

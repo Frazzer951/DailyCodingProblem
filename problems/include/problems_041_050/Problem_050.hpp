@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_050_HPP
 #define PROBLEMS_041_050_PROBLEM_050_HPP
 
-
 #pragma once
 
 /* EASY
@@ -28,12 +27,11 @@ inline char MINUS  = '-';
 inline char TIMES  = '*';
 inline char DIVIDE = '/';
 
-inline int evaluate( btNode<char> root )
-{
-  if( root.value == PLUS ) return evaluate( *root.left ) + evaluate( *root.right );
-  if( root.value == MINUS ) return evaluate( *root.left ) - evaluate( *root.right );
-  if( root.value == TIMES ) return evaluate( *root.left ) * evaluate( *root.right );
-  if( root.value == DIVIDE ) return evaluate( *root.left ) / evaluate( *root.right );
+inline int evaluate( btNode<char> root ) {
+  if ( root.value == PLUS ) return evaluate( *root.left ) + evaluate( *root.right );
+  if ( root.value == MINUS ) return evaluate( *root.left ) - evaluate( *root.right );
+  if ( root.value == TIMES ) return evaluate( *root.left ) * evaluate( *root.right );
+  if ( root.value == DIVIDE ) return evaluate( *root.left ) / evaluate( *root.right );
   return root.value - 48;
 }
 #endif

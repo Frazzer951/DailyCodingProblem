@@ -13,13 +13,18 @@
 #include "problems_171_180/Problem_179.hpp"
 #include "problems_171_180/Problem_180.hpp"
 
-
 // Problem 171
-TEST( Problem_171, Test_Case )
-{
-  std::vector<Timelog> entries = { { 0, 3, Type::enter }, { 10, 6, Type::exit },  { 3, 15, Type::enter },
-                                   { 99, 2, Type::exit }, { 100, 4, Type::exit }, { 18, 5, Type::exit },
-                                   { 5, 1, Type::enter }, { 6, 2, Type::exit } };
+TEST( Problem_171, Test_Case ) {
+  std::vector<Timelog> entries = {
+    {  0,  3, Type::enter},
+    { 10,  6,  Type::exit},
+    {  3, 15, Type::enter},
+    { 99,  2,  Type::exit},
+    {100,  4,  Type::exit},
+    { 18,  5,  Type::exit},
+    {  5,  1, Type::enter},
+    {  6,  2,  Type::exit}
+  };
 
   std::pair<long, long> result = busiest_period( entries );
   std::pair<long, long> expected( 5, 6 );
@@ -28,8 +33,7 @@ TEST( Problem_171, Test_Case )
 }
 
 // Problem 172
-TEST( Problem_172, Given_Case_1 )
-{
+TEST( Problem_172, Given_Case_1 ) {
   // Given s = "dogcatcatcodecatdog" and words = ["cat", "dog"], return [0, 13]
   std::vector<int> result   = indiciesOfSubstrings( "dogcatcatcodecatdog", { "cat", "dog" } );
   std::vector<int> expected = { 0, 13 };
@@ -37,8 +41,7 @@ TEST( Problem_172, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_172, Given_Case_2 )
-{
+TEST( Problem_172, Given_Case_2 ) {
   // Given s = "barfoobazbitbyte" and words = ["dog", "cat"], return []
   std::vector<int> result   = indiciesOfSubstrings( "barfoobazbitbyte", { "dog", "cat" } );
   std::vector<int> expected = {};
@@ -47,8 +50,7 @@ TEST( Problem_172, Given_Case_2 )
 }
 
 // Problem 173
-TEST( Problem_173, Given_Case )
-{
+TEST( Problem_173, Given_Case ) {
   std::map<std::string, std::any> vals;
   std::map<std::string, std::any> foo;
   std::map<std::string, std::any> bar;
@@ -70,55 +72,56 @@ TEST( Problem_173, Given_Case )
 
 // Problem 174
 
-
 // Problem 175
-TEST( Problem_175, Test_Case )
-{
-  std::vector<transition> transitions = { { 'a', 'a', 0.9 },  { 'a', 'b', 0.075 }, { 'a', 'c', 0.025 },
-                                          { 'b', 'a', 0.15 }, { 'b', 'b', 0.8 },   { 'b', 'c', 0.05 },
-                                          { 'c', 'a', 0.25 }, { 'c', 'b', 0.25 },  { 'c', 'c', 0.5 } };
+TEST( Problem_175, Test_Case ) {
+  std::vector<transition> transitions = {
+    {'a', 'a',   0.9},
+    {'a', 'b', 0.075},
+    {'a', 'c', 0.025},
+    {'b', 'a',  0.15},
+    {'b', 'b',   0.8},
+    {'b', 'c',  0.05},
+    {'c', 'a',  0.25},
+    {'c', 'b',  0.25},
+    {'c', 'c',   0.5}
+  };
 
   auto result = markovChain( 'a', 5000, transitions );
 }
 
 // Problem 176
-TEST( Problem_176, Given_Case )
-{
+TEST( Problem_176, Given_Case ) {
   EXPECT_TRUE( canMap( "abc", "bcd" ) );
   EXPECT_FALSE( canMap( "foo", "bar" ) );
 }
 
 // Problem 177
-TEST( Problem_177, Given_Case_1 )
-{
+TEST( Problem_177, Given_Case_1 ) {
   // Given the linked list 7 -> 7 -> 3 -> 5 and k = 2, it should become 3 -> 5 -> 7 -> 7
 
-  auto *        head     = new slNode<int>( { 7, 7, 3, 5 } );
-  auto *        expected = new slNode<int>( { 3, 5, 7, 7 } );
-  slNode<int> * result   = rotate( head, 2 );
+  auto        *head     = new slNode<int>( { 7, 7, 3, 5 } );
+  auto        *expected = new slNode<int>( { 3, 5, 7, 7 } );
+  slNode<int> *result   = rotate( head, 2 );
 
   EXPECT_EQ( *result, *expected );
 }
 
-TEST( Problem_177, Given_Case_2 )
-{
+TEST( Problem_177, Given_Case_2 ) {
   // Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4 -> 5 -> 1 -> 2.
 
-  auto *        head     = new slNode<int>( { 1, 2, 3, 4, 5 } );
-  auto *        expected = new slNode<int>( { 3, 4, 5, 1, 2 } );
-  slNode<int> * result   = rotate( head, 3 );
+  auto        *head     = new slNode<int>( { 1, 2, 3, 4, 5 } );
+  auto        *expected = new slNode<int>( { 3, 4, 5, 1, 2 } );
+  slNode<int> *result   = rotate( head, 3 );
 
   EXPECT_EQ( *result, *expected );
 }
 
 // Problem 178
-TEST( Problem_178, Test_Case )
-{
+TEST( Problem_178, Test_Case ) {
   std::vector<int> count56;
   std::vector<int> count55;
 
-  for( int i = 0; i < 10000; i++ )
-  {
+  for ( int i = 0; i < 10000; i++ ) {
     count56.push_back( diceSim( { 5, 6 } ) );
     count55.push_back( diceSim( { 5, 5 } ) );
   }
@@ -131,8 +134,7 @@ TEST( Problem_178, Test_Case )
 }
 
 // Problem 179
-TEST( Problem_179, Given_Case )
-{
+TEST( Problem_179, Given_Case ) {
   /*
   For example, given the sequence 2, 4, 3, 8, 7, 5, you should construct the following tree:
 
@@ -143,21 +145,20 @@ TEST( Problem_179, Given_Case )
   2   4   8
   */
 
-  auto * expected = new btNode( 5 );
-  expected        = add( expected, 7 );
-  expected        = add( expected, 8 );
-  expected        = add( expected, 3 );
-  expected        = add( expected, 4 );
-  expected        = add( expected, 2 );
+  auto *expected = new btNode( 5 );
+  expected       = add( expected, 7 );
+  expected       = add( expected, 8 );
+  expected       = add( expected, 3 );
+  expected       = add( expected, 4 );
+  expected       = add( expected, 2 );
 
-  auto * result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
+  auto *result = createBSTfromPostOrder( { 2, 4, 3, 8, 7, 5 } );
 
   EXPECT_EQ( *result, *expected );
 }
 
 // Problem 180
-TEST( Problem_180, Given_Case_1 )
-{
+TEST( Problem_180, Given_Case_1 ) {
   // If the stack is [1, 2, 3, 4, 5], it should become [1, 5, 2, 4, 3]
   std::stack<int> s( { 1, 2, 3, 4, 5 } );
   std::stack<int> result = interleave( s );
@@ -166,8 +167,7 @@ TEST( Problem_180, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_180, Given_Case_2 )
-{
+TEST( Problem_180, Given_Case_2 ) {
   // If the stack is [1, 2, 3, 4], it should become [1, 4, 2, 3]
   std::stack<int> s( { 1, 2, 3, 4 } );
   std::stack<int> result = interleave( s );

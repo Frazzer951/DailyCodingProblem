@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_041_050_PROBLEM_044_HPP
 #define PROBLEMS_041_050_PROBLEM_044_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -21,15 +20,12 @@ inversions: every distinct pair forms an inversion.
 #include <vector>
 
 // Does not follow speed requirement
-inline int outOfOrder( std::vector<int> v )
-{
+inline int outOfOrder( std::vector<int> v ) {
   int count = 0;
 
-  for( int i = 0; i < v.size(); i++ )
-  {
-    for( int j = i + 1; j < v.size(); j++ )
-    {
-      if( v[j] < v[i] ) count++;
+  for ( int i = 0; i < v.size(); i++ ) {
+    for ( int j = i + 1; j < v.size(); j++ ) {
+      if ( v[j] < v[i] ) count++;
     }
   }
   return count;

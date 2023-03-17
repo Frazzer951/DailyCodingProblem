@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_111_120_PROBLEM_116_HPP
 #define PROBLEMS_111_120_PROBLEM_116_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -11,18 +10,11 @@ That is, generate() should return a tree whose size is unbounded but finite.
 */
 #include "btNode.hpp"
 
-inline btNode<int> * generate()
-{
-  auto * root = new btNode( 0 );
+inline btNode<int> *generate() {
+  auto *root = new btNode( 0 );
 
-  if( ( std::rand() % 100 ) < 50 )
-  {
-    root->left = generate();
-  }
-  if( ( std::rand() % 100 ) < 50 )
-  {
-    root->right = generate();
-  }
+  if ( ( std::rand() % 100 ) < 50 ) { root->left = generate(); }
+  if ( ( std::rand() % 100 ) < 50 ) { root->right = generate(); }
 
   return root;
 }

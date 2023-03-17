@@ -11,32 +11,22 @@
 #include "problems_411_420/Problem_419.hpp"
 #include "problems_411_420/Problem_420.hpp"
 
-
 // Problem 411
-
 
 // Problem 412
 
-
 // Problem 413
-
 
 // Problem 414
 
-
 // Problem 415
-
 
 // Problem 416
 
-
 // Problem 417
-
 
 // Problem 418
 
-
 // Problem 419
-
 
 // Problem 420

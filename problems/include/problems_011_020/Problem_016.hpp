@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_011_020_PROBLEM_016_HPP
 #define PROBLEMS_011_020_PROBLEM_016_HPP
 
-
 #pragma once
 
 /* EASY
@@ -17,8 +16,7 @@ You should be as efficient with time and space as possible.
 #include <iostream>
 #include <vector>
 
-class Store
-{
+class Store {
 public:
   std::vector<long int> log;
 
@@ -27,8 +25,7 @@ public:
   long int get_last( int i ) { return log[log.size() - i]; }
 };
 
-inline int prob_16()
-{
+inline int prob_16() {
   std::cout << "\nProblem 16\n";
 
   Store store;

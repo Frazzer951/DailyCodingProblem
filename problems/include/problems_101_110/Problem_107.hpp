@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_107_HPP
 #define PROBLEMS_101_110_PROBLEM_107_HPP
 
-
 #pragma once
 
 /* EASY
@@ -18,9 +17,8 @@ print 1, 2, 3, 4, 5.
 
 #include "btNode.hpp"
 
-inline std::vector<int> bt_traverse( btNode<int> * root )
-{
-  if( root == nullptr ) return {};
+inline std::vector<int> bt_traverse( btNode<int> *root ) {
+  if ( root == nullptr ) return {};
 
   std::vector<int> traverse = { root->value };
 

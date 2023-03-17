@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_111_120_PROBLEM_118_HPP
 #define PROBLEMS_111_120_PROBLEM_118_HPP
 
-
 #pragma once
 
 /* EASY
@@ -13,12 +12,8 @@ For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 #include <algorithm>
 #include <vector>
 
-inline std::vector<int> square_sort( std::vector<int> nums )
-{
-  for( int & num : nums )
-  {
-    num = num * num;
-  }
+inline std::vector<int> square_sort( std::vector<int> nums ) {
+  for ( int &num : nums ) { num = num * num; }
 
   std::sort( nums.begin(), nums.end() );
 

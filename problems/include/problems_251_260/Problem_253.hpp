@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_251_260_PROBLEM_253_HPP
 #define PROBLEMS_251_260_PROBLEM_253_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -20,38 +19,26 @@ t     a     g
 #include <string>
 #include <vector>
 
-inline std::string zigzag( std::string str, int k )
-{
+inline std::string zigzag( std::string str, int k ) {
   std::vector<std::vector<char>> lines = std::vector( k, std::vector<char>( str.size(), ' ' ) );
   bool                           down  = true;
   int                            line  = 0;
-  for( int i = 0; i < str.size(); i++ )
-  {
+  for ( int i = 0; i < str.size(); i++ ) {
     lines[line][i] = str[i];
-    if( line == k - 1 )
-    {
+    if ( line == k - 1 ) {
       down = false;
-    }
-    else if( line == 0 )
-    {
+    } else if ( line == 0 ) {
       down = true;
     }
-    if( down )
-    {
+    if ( down ) {
       line++;
-    }
-    else
-    {
+    } else {
       line--;
     }
   }
   std::string result;
-  for( const auto & line : lines )
-  {
-    for( auto c : line )
-    {
-      result += c;
-    }
+  for ( const auto &line : lines ) {
+    for ( auto c : line ) { result += c; }
     result += '\n';
   }
   return result;

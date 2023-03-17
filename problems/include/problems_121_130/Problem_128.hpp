@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_128_HPP
 #define PROBLEMS_121_130_PROBLEM_128_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -36,101 +35,73 @@ Move 1 to 3
 #include <stack>
 #include <vector>
 
-inline std::vector<std::pair<int, int>> solveHanoi( int n )
-{
+inline std::vector<std::pair<int, int>> solveHanoi( int n ) {
   std::vector<std::pair<int, int>> moves;
 
   std::stack<int> A;
   std::stack<int> B;
   std::stack<int> C;
 
-  auto moveAB = [&moves, &A, &B]()
-  {
-    if( A.empty() && B.empty() ) return;
-    if( A.empty() )
-    {
+  auto moveAB = [&moves, &A, &B]() {
+    if ( A.empty() && B.empty() ) return;
+    if ( A.empty() ) {
       A.push( B.top() );
       B.pop();
       moves.emplace_back( 2, 1 );
-    }
-    else if( B.empty() )
-    {
+    } else if ( B.empty() ) {
       B.push( A.top() );
       A.pop();
       moves.emplace_back( 1, 2 );
-    }
-    else
-    {
-      if( A.top() < B.top() )
-      {
+    } else {
+      if ( A.top() < B.top() ) {
         B.push( A.top() );
         A.pop();
         moves.emplace_back( 1, 2 );
-      }
-      else
-      {
+      } else {
         A.push( B.top() );
         B.pop();
         moves.emplace_back( 2, 1 );
       }
     }
   };
-  auto moveAC = [&moves, &A, &C]()
-  {
-    if( A.empty() && C.empty() ) return;
-    if( A.empty() )
-    {
+  auto moveAC = [&moves, &A, &C]() {
+    if ( A.empty() && C.empty() ) return;
+    if ( A.empty() ) {
       A.push( C.top() );
       C.pop();
       moves.emplace_back( 3, 1 );
-    }
-    else if( C.empty() )
-    {
+    } else if ( C.empty() ) {
       C.push( A.top() );
       A.pop();
       moves.emplace_back( 1, 3 );
-    }
-    else
-    {
-      if( A.top() < C.top() )
-      {
+    } else {
+      if ( A.top() < C.top() ) {
         C.push( A.top() );
         A.pop();
         moves.emplace_back( 1, 3 );
-      }
-      else
-      {
+      } else {
         A.push( C.top() );
         C.pop();
         moves.emplace_back( 3, 1 );
       }
     }
   };
-  auto moveBC = [&moves, &B, &C]()
-  {
-    if( B.empty() && C.empty() ) return;
-    if( B.empty() )
-    {
+  auto moveBC = [&moves, &B, &C]() {
+    if ( B.empty() && C.empty() ) return;
+    if ( B.empty() ) {
       B.push( C.top() );
       C.pop();
       moves.emplace_back( 3, 2 );
-    }
-    else if( C.empty() )
-    {
+    } else if ( C.empty() ) {
       C.push( B.top() );
       B.pop();
       moves.emplace_back( 2, 3 );
-    }
-    else
-    {
-      if( B.top() < C.top() )
-      {
+    } else {
+      if ( B.top() < C.top() ) {
         C.push( B.top() );
         B.pop();
         moves.emplace_back( 2, 3 );
-      }
-      else
-      {
+      } else {
         B.push( C.top() );
         C.pop();
         moves.emplace_back( 3, 2 );
@@ -138,37 +109,28 @@ inline std::vector<std::pair<int, int>> solveHanoi( int n )
     }
   };
 
-  for( int i = n; i > 0; i-- )
-  {
-    A.push( i );
-  }
+  for ( int i = n; i > 0; i-- ) { A.push( i ); }
 
-  if( n % 2 == 0 )
-  {
-    while( !A.empty() || !B.empty() )
-    {
+  if ( n % 2 == 0 ) {
+    while ( !A.empty() || !B.empty() ) {
       moveAB();
-      if( A.empty() && B.empty() ) break;
+      if ( A.empty() && B.empty() ) break;
       moveAC();
-      if( A.empty() && B.empty() ) break;
+      if ( A.empty() && B.empty() ) break;
       moveBC();
     }
-  }
-  else
-  {
-    while( !A.empty() || !B.empty() )
-    {
+  } else {
+    while ( !A.empty() || !B.empty() ) {
       moveAC();
-      if( A.empty() && B.empty() ) break;
+      if ( A.empty() && B.empty() ) break;
       moveAB();
-      if( A.empty() && B.empty() ) break;
+      if ( A.empty() && B.empty() ) break;
       moveBC();
     }
   }
 
   return moves;
 }
-
 
 /*
 For an even number of disks:

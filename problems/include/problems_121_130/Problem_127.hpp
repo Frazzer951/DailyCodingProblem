@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_127_HPP
 #define PROBLEMS_121_130_PROBLEM_127_HPP
 
-
 #pragma once
 
 /* EASY
@@ -32,25 +31,21 @@ return 124 (99 + 25) as:
 */
 #include "slNode.hpp"
 
-inline slNode<int> * sum( slNode<int> * x, slNode<int> * y )
-{
-  auto *        sumNum    = new slNode( ( x->value + y->value ) % 10 );
-  slNode<int> * cur       = sumNum;
-  int           remainder = ( x->value + y->value ) / 10;
-  x                       = x->next;
-  y                       = y->next;
-  while( x != nullptr || y != nullptr )
-  {
+inline slNode<int> *sum( slNode<int> *x, slNode<int> *y ) {
+  auto        *sumNum    = new slNode( ( x->value + y->value ) % 10 );
+  slNode<int> *cur       = sumNum;
+  int          remainder = ( x->value + y->value ) / 10;
+  x                      = x->next;
+  y                      = y->next;
+  while ( x != nullptr || y != nullptr ) {
     int curSum = remainder;
-    if( x != nullptr )
-    {
+    if ( x != nullptr ) {
       curSum += x->value;
-      x = x->next;
+      x      = x->next;
     }
-    if( y != nullptr )
-    {
+    if ( y != nullptr ) {
       curSum += y->value;
-      y = y->next;
+      y      = y->next;
     }
 
     remainder = curSum / 10;
@@ -60,7 +55,7 @@ inline slNode<int> * sum( slNode<int> * x, slNode<int> * y )
     cur       = cur->next;
   }
 
-  if( remainder > 0 ) cur->next = new slNode( remainder );
+  if ( remainder > 0 ) cur->next = new slNode( remainder );
 
   return sumNum;
 }

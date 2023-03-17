@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_111_120_PROBLEM_112_HPP
 #define PROBLEMS_111_120_PROBLEM_112_HPP
 
-
 #pragma once
 
 /* HARD
@@ -16,29 +15,25 @@ itself).”
 */
 #include <map>
 
-struct pbtNode
-{
-  int       value;
-  pbtNode * parent;
-  pbtNode * left { nullptr };
-  pbtNode * right { nullptr };
+struct pbtNode {
+  int      value;
+  pbtNode *parent;
+  pbtNode *left { nullptr };
+  pbtNode *right { nullptr };
 
-  pbtNode( int v, pbtNode * p = nullptr ) : value( v ), parent( p ) {}
+  pbtNode( int v, pbtNode *p = nullptr ) : value( v ), parent( p ) {}
 };
 
-inline pbtNode * pbtLCA( pbtNode * a, pbtNode * b )
-{
+inline pbtNode *pbtLCA( pbtNode *a, pbtNode *b ) {
   std::map<pbtNode *, bool> nodes;
-  auto *                    cur = a->parent;
-  while( cur != nullptr )
-  {
+  auto                     *cur = a->parent;
+  while ( cur != nullptr ) {
     nodes[cur] = true;
     cur        = cur->parent;
   }
   cur = b->parent;
-  while( cur != nullptr )
-  {
-    if( nodes[cur] ) return cur;
+  while ( cur != nullptr ) {
+    if ( nodes[cur] ) return cur;
     cur = cur->parent;
   }
   return nullptr;

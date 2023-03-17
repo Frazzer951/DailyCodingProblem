@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_005_HPP
 #define PROBLEMS_001_010_PROBLEM_005_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -28,8 +27,7 @@ inline int car( std::pair<int, int> p ) { return p.first; }
 
 inline int cdr( std::pair<int, int> p ) { return p.second; }
 
-inline int prob_5()
-{
+inline int prob_5() {
   std::cout << "\nProblem 5:\n";
 
   std::cout << "car(cons(3,4)) returns " << car( cons( 3, 4 ) ) << '\n';

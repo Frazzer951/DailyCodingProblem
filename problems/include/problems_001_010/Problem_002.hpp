@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_002_HPP
 #define PROBLEMS_001_010_PROBLEM_002_HPP
 
-
 #pragma once
 
 /* HARD
@@ -19,37 +18,31 @@ Follow-up: what if you can't use division?
 #include <string>
 #include <vector>
 
-inline std::vector<int> sumArray( std::vector<int> arr )
-{
+inline std::vector<int> sumArray( std::vector<int> arr ) {
   std::vector<int> sum;
-  for( unsigned int i = 0; i < arr.size(); ++i )
-  {
+  for ( unsigned int i = 0; i < arr.size(); ++i ) {
     int runningSum = 1;
-    for( unsigned int j = 0; j < arr.size(); ++j )
-    {
-      if( j != i ) runningSum *= arr[j];
+    for ( unsigned int j = 0; j < arr.size(); ++j ) {
+      if ( j != i ) runningSum *= arr[j];
     }
     sum.push_back( runningSum );
   }
   return sum;
 }
 
-inline std::string vectorToString( std::vector<int> const & v )
-{
+inline std::string vectorToString( std::vector<int> const &v ) {
   std::string str;
-  for( int i : v ) str += std::to_string( i ) + " ";
+  for ( int i : v ) str += std::to_string( i ) + " ";
   return str;
 }
 
-inline void checkArray( std::vector<int> const & v )
-{
+inline void checkArray( std::vector<int> const &v ) {
   std::vector<int> sumedArray = sumArray( v );
 
   std::cout << "The array [ " << vectorToString( v ) << "] summed to [ " << vectorToString( sumedArray ) << "]\n";
 }
 
-inline int prob_2()
-{
+inline int prob_2() {
   std::cout << "\nProblem 2:\n";
 
   checkArray( { 1, 2, 3, 4, 5 } );

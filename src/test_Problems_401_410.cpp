@@ -11,32 +11,22 @@
 #include "problems_401_410/Problem_409.hpp"
 #include "problems_401_410/Problem_410.hpp"
 
-
 // Problem 401
-
 
 // Problem 402
 
-
 // Problem 403
-
 
 // Problem 404
 
-
 // Problem 405
-
 
 // Problem 406
 
-
 // Problem 407
-
 
 // Problem 408
 
-
 // Problem 409
-
 
 // Problem 410

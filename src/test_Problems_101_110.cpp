@@ -11,10 +11,8 @@
 #include "problems_101_110/Problem_109.hpp"
 #include "problems_101_110/Problem_110.hpp"
 
-
 // Problem 101
-TEST( Problem_101, Given_Case )
-{
+TEST( Problem_101, Given_Case ) {
   // Input: 4
   // Output: 2 + 2 = 4
 
@@ -25,8 +23,7 @@ TEST( Problem_101, Given_Case )
 }
 
 // Problem 102
-TEST( Problem_102, Given_Case )
-{
+TEST( Problem_102, Given_Case ) {
   // For example, if the list is [1, 2, 3, 4, 5] and K is 9,
   // then it should return [2, 3, 4], since 2 + 3 + 4 = 9.
 
@@ -38,8 +35,7 @@ TEST( Problem_102, Given_Case )
 }
 
 // Problem 103
-TEST( Problem_103, Given_Case )
-{
+TEST( Problem_103, Given_Case ) {
   // For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
 
   int result = smallest( "figehaeci", { 'a', 'e', 'i' } );
@@ -48,8 +44,7 @@ TEST( Problem_103, Given_Case )
 }
 
 // Problem 104
-TEST( Problem_104, Given_Case_1 )
-{
+TEST( Problem_104, Given_Case_1 ) {
   // For example, 1 -> 4 -> 3 -> 4 -> 1 returns True
   // while 1 -> 4 returns False.
 
@@ -63,8 +58,7 @@ TEST( Problem_104, Given_Case_1 )
   EXPECT_TRUE( palindromeList( l ) );
 }
 
-TEST( Problem_104, Given_Case_2 )
-{
+TEST( Problem_104, Given_Case_2 ) {
   // For example, 1 -> 4 -> 3 -> 4 -> 1 returns True
   // while 1 -> 4 returns False.
 
@@ -76,8 +70,7 @@ TEST( Problem_104, Given_Case_2 )
 }
 
 // Problem 105
-TEST( Problem_105, Test_Case )
-{
+TEST( Problem_105, Test_Case ) {
   auto f1 = []() { return 1; };
 
   auto f2 = debunce( f1, 20 );
@@ -91,8 +84,7 @@ TEST( Problem_106, Given_Case_1 ) { EXPECT_TRUE( validate_hops( { 2, 0, 1, 0 } )
 TEST( Problem_106, Given_Case_2 ) { EXPECT_FALSE( validate_hops( { 1, 1, 0, 1 } ) ); }
 
 // Problem 107
-TEST( Problem_107, Given_Case )
-{
+TEST( Problem_107, Given_Case ) {
   /*
     1
    / \
@@ -101,7 +93,7 @@ TEST( Problem_107, Given_Case )
     4   5
   */
 
-  auto * root        = new btNode( 1 );
+  auto *root         = new btNode( 1 );
   root->left         = new btNode( 2 );
   root->right        = new btNode( 3 );
   root->right->left  = new btNode( 4 );
@@ -114,16 +106,14 @@ TEST( Problem_107, Given_Case )
 }
 
 // Problem 108
-TEST( Problem_108, Given_Case_1 )
-{
+TEST( Problem_108, Given_Case_1 ) {
   // A is abcde and B is cdeab, return true.
   // A is abc and B is acb, return false.
 
   EXPECT_TRUE( isSifted( "abcde", "cdeab" ) );
 }
 
-TEST( Problem_108, Given_Case_2 )
-{
+TEST( Problem_108, Given_Case_2 ) {
   // A is abcde and B is cdeab, return true.
   // A is abc and B is acb, return false.
 
@@ -131,16 +121,14 @@ TEST( Problem_108, Given_Case_2 )
 }
 
 // Problem 109
-TEST( Problem_109, Given_Case_1 )
-{
+TEST( Problem_109, Given_Case_1 ) {
   // 10101010 should be 01010101.
   std::int8_t result   = even_odd_bit_swap( (std::int8_t) 0b10101010 );
   auto        expected = (std::int8_t) 0b01010101;
   EXPECT_EQ( expected, result );
 }
 
-TEST( Problem_109, Given_Case_2 )
-{
+TEST( Problem_109, Given_Case_2 ) {
   // 11100010 should be 11010001.
   std::int8_t result   = even_odd_bit_swap( (std::int8_t) 0b11100010 );
   auto        expected = (std::int8_t) 0b11010001;
@@ -148,16 +136,19 @@ TEST( Problem_109, Given_Case_2 )
 }
 
 // Problem 110
-TEST( Problem_110, Given_Case )
-{
-  auto * root        = new btNode( 1 );
+TEST( Problem_110, Given_Case ) {
+  auto *root         = new btNode( 1 );
   root->left         = new btNode( 2 );
   root->right        = new btNode( 3 );
   root->right->left  = new btNode( 4 );
   root->right->right = new btNode( 5 );
 
-  std::vector<std::vector<int>> expected = { { 1, 2 }, { 1, 3, 4 }, { 1, 3, 5 } };
-  std::vector<std::vector<int>> result   = getPaths( root );
+  std::vector<std::vector<int>> expected = {
+    { 1, 2 },
+    { 1, 3, 4 },
+    { 1, 3, 5 }
+  };
+  std::vector<std::vector<int>> result = getPaths( root );
 
   EXPECT_EQ( expected, result );
 }

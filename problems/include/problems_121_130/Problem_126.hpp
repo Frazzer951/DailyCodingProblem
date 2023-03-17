@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_121_130_PROBLEM_126_HPP
 #define PROBLEMS_121_130_PROBLEM_126_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -11,19 +10,14 @@ a copy of the list. How many swap or move operations do you need?
 */
 #include <vector>
 
-inline void vSwap( std::vector<int> & v, std::size_t x, std::size_t y )
-{
+inline void vSwap( std::vector<int> &v, std::size_t x, std::size_t y ) {
   int temp = v[x];
   v[x]     = v[y];
   v[y]     = temp;
 }
 
-inline std::vector<int> rotateVector( std::vector<int> v, int k )
-{
-  for( std::size_t i = 0; i < v.size() - k; i++ )
-  {
-    vSwap( v, i, ( v.size() - k + i ) % v.size() );
-  }
+inline std::vector<int> rotateVector( std::vector<int> v, int k ) {
+  for ( std::size_t i = 0; i < v.size() - k; i++ ) { vSwap( v, i, ( v.size() - k + i ) % v.size() ); }
   return v;
 }
 #endif

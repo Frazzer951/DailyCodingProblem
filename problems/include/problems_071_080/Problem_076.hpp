@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_071_080_PROBLEM_076_HPP
 #define PROBLEMS_071_080_PROBLEM_076_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -48,20 +47,16 @@ order it.
 */
 #include <vector>
 
-inline int rows_to_remove( std::vector<std::string> arr )
-{
-  if( arr.size() == 1 ) return 0;
+inline int rows_to_remove( std::vector<std::string> arr ) {
+  if ( arr.size() == 1 ) return 0;
 
   int count = 0;
 
-  for( int i = 0; i < arr.size(); i++ )
-  {
-    for( int j = 0; j < arr[0].size() - 1; j++ )
-    {
+  for ( int i = 0; i < arr.size(); i++ ) {
+    for ( int j = 0; j < arr[0].size() - 1; j++ ) {
       char a = arr[j][i];
       char b = arr[j + 1][i];
-      if( a > b )
-      {
+      if ( a > b ) {
         count++;
         break;
       }

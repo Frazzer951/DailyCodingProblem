@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_201_210_PROBLEM_210_HPP
 #define PROBLEMS_201_210_PROBLEM_210_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,13 +15,12 @@ this conjecture.
 
 Bonus: What input n <= 1000000 gives the longest sequence?
 */
-inline long int collatz( long int n )
-{
+inline long int collatz( long int n ) {
   long int count = 0;
-  while( n != 1 )
-  {
-    if( count > 20000000 ) return -1;
-    if( n % 2 == 0 ) n /= 2;
+  while ( n != 1 ) {
+    if ( count > 20000000 ) return -1;
+    if ( n % 2 == 0 )
+      n /= 2;
     else
       n = 3 * n + 1;
     count++;

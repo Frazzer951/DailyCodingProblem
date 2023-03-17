@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_176_HPP
 #define PROBLEMS_171_180_PROBLEM_176_HPP
 
-
 #pragma once
 
 /* EASY
@@ -17,20 +16,15 @@ characters.
 #include <map>
 #include <string>
 
-inline bool canMap( std::string s1, std::string s2 )
-{
+inline bool canMap( std::string s1, std::string s2 ) {
   std::map<char, char> used;
 
-  if( s1.size() != s2.size() ) return false;
+  if ( s1.size() != s2.size() ) return false;
 
-  for( int i = 0; i < s1.size(); i++ )
-  {
-    if( used.find( s1[i] ) != used.end() )
-    {
-      if( used[s1[i]] != s2[i] ) return false;
-    }
-    else
-    {
+  for ( int i = 0; i < s1.size(); i++ ) {
+    if ( used.find( s1[i] ) != used.end() ) {
+      if ( used[s1[i]] != s2[i] ) return false;
+    } else {
       used[s1[i]] = s2[i];
     }
   }

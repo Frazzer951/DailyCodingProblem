@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_171_180_PROBLEM_177_HPP
 #define PROBLEMS_171_180_PROBLEM_177_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,22 +15,20 @@ Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4
 */
 #include "slNode.hpp"
 
-inline slNode<int> * rotate( slNode<int> * head, int k )
-{
-  slNode<int> * fast = head;
-  slNode<int> * slow = head;
+inline slNode<int> *rotate( slNode<int> *head, int k ) {
+  slNode<int> *fast = head;
+  slNode<int> *slow = head;
 
-  for( int i = 0; i < k; i++ ) fast = fast->next;
+  for ( int i = 0; i < k; i++ ) fast = fast->next;
 
-  while( fast->next != nullptr )
-  {
+  while ( fast->next != nullptr ) {
     slow = slow->next;
     fast = fast->next;
   }
 
-  slNode<int> * new_head = slow->next;
-  fast->next             = head;
-  slow->next             = nullptr;
+  slNode<int> *new_head = slow->next;
+  fast->next            = head;
+  slow->next            = nullptr;
 
   return new_head;
 }

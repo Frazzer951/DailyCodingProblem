@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_241_250_PROBLEM_245_HPP
 #define PROBLEMS_241_250_PROBLEM_245_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -16,20 +15,14 @@ optimal solution involves jumping from 6 to 5, and then from 5 to 9.
 #include <limits>
 #include <vector>
 
-inline int minJumps( std::vector<int> & jumps )
-{
+inline int minJumps( std::vector<int> &jumps ) {
   int              n = jumps.size();
   std::vector<int> dp( n, std::numeric_limits<int>::max() );
   dp[0] = 0;
 
-  for( int i = 1; i < n; ++i )
-  {
-    for( int j = 0; j < i; ++j )
-    {
-      if( jumps[j] >= i - j )
-      {
-        dp[i] = std::min( dp[i], dp[j] + 1 );
-      }
+  for ( int i = 1; i < n; ++i ) {
+    for ( int j = 0; j < i; ++j ) {
+      if ( jumps[j] >= i - j ) { dp[i] = std::min( dp[i], dp[j] + 1 ); }
     }
   }
 

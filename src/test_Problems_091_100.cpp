@@ -11,13 +11,10 @@
 #include "problems_091_100/Problem_099.hpp"
 #include "problems_091_100/Problem_100.hpp"
 
-
 // Problem 091
 
-
 // Problem 092
-TEST( Problem_92, Given_Case )
-{
+TEST( Problem_92, Given_Case ) {
   /*
   For example, given {'CSC300': ['CSC100', 'CSC200'],
                       'CSC200': ['CSC100'],
@@ -25,9 +22,11 @@ TEST( Problem_92, Given_Case )
   should return ['CSC100', 'CSC200', 'CSCS300'].
   */
 
-  std::map<std::string, std::vector<std::string>> course_dependencies = { { "CSC300", { "CSC100", "CSC200" } },
-                                                                          { "CSC200", { "CSC100" } },
-                                                                          { "CSC100", {} } };
+  std::map<std::string, std::vector<std::string>> course_dependencies = {
+    {"CSC300", { "CSC100", "CSC200" }},
+    {"CSC200",           { "CSC100" }},
+    {"CSC100",                     {}}
+  };
 
   std::vector<std::string> expected = { "CSC100", "CSC200", "CSC300" };
   std::vector<std::string> result   = course_order( course_dependencies );
@@ -36,9 +35,8 @@ TEST( Problem_92, Given_Case )
 }
 
 // Problem 093
-TEST( Problem_93, Test_Case_1 )
-{
-  auto * root = new btNode( 'f' );
+TEST( Problem_93, Test_Case_1 ) {
+  auto *root = new btNode( 'f' );
 
   root->left             = new btNode( 'g' );
   root->left->left       = new btNode( 'e' );
@@ -51,17 +49,16 @@ TEST( Problem_93, Test_Case_1 )
   root->right->left         = new btNode( 'b' );
   root->right->right->left  = new btNode( 'c' );
 
-  btNode<char> * result      = largest_subBST( root );
-  int            result_size = largest_subBST_size( root );
+  btNode<char> *result      = largest_subBST( root );
+  int           result_size = largest_subBST_size( root );
 
   EXPECT_EQ( root->right, result );
   EXPECT_EQ( 5, result_size );
 }
 
 // Problem 094
-TEST( Problem_94, Test_Case )
-{
-  auto * root              = new btNode( 10 );
+TEST( Problem_94, Test_Case ) {
+  auto *root               = new btNode( 10 );
   root->left               = new btNode( 6 );
   root->left->left         = new btNode( -3 );
   root->left->left->right  = new btNode( 3 );
@@ -77,8 +74,7 @@ TEST( Problem_94, Test_Case )
 }
 
 // Problem 095
-TEST( Problem_95, Given_Case_1 )
-{
+TEST( Problem_95, Given_Case_1 ) {
   /*
   the list [1,2,3] should return [1,3,2].
   */
@@ -88,8 +84,7 @@ TEST( Problem_95, Given_Case_1 )
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
 }
-TEST( Problem_95, Given_Case_2 )
-{
+TEST( Problem_95, Given_Case_2 ) {
   /*
   The list [1,3,2] should return [2,1,3].
   */
@@ -99,8 +94,7 @@ TEST( Problem_95, Given_Case_2 )
   nextPermutation( nums );
   EXPECT_EQ( expected, nums );
 }
-TEST( Problem_95, Given_Case_3 )
-{
+TEST( Problem_95, Given_Case_3 ) {
   /*
   The list [3,2,1] should return [1,2,3].
   */
@@ -112,8 +106,7 @@ TEST( Problem_95, Given_Case_3 )
 }
 
 // Problem 096
-TEST( Problem_96, Given_Case )
-{
+TEST( Problem_96, Given_Case ) {
   /*
   For example, given [1,2,3], return
   [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
@@ -121,16 +114,20 @@ TEST( Problem_96, Given_Case )
 
   std::vector<int>              nums     = { 1, 2, 3 };
   std::vector<std::vector<int>> result   = getPermutations( nums );
-  std::vector<std::vector<int>> expected = { { 1, 2, 3 }, { 1, 3, 2 }, { 2, 1, 3 },
-                                             { 2, 3, 1 }, { 3, 1, 2 }, { 3, 2, 1 } };
+  std::vector<std::vector<int>> expected = {
+    {1, 2, 3},
+    {1, 3, 2},
+    {2, 1, 3},
+    {2, 3, 1},
+    {3, 1, 2},
+    {3, 2, 1}
+  };
 
   EXPECT_EQ( expected, result );
 }
 
-
 // Problem 097
-TEST( Problem_97, Given_Case )
-{
+TEST( Problem_97, Given_Case ) {
   /*
   d.set(1, 1, 0) # set key 1 to value 1 at time 0
   d.set(1, 2, 2) # set key 1 to value 2 at time 2
@@ -159,8 +156,7 @@ TEST( Problem_97, Given_Case )
 }
 
 // Problem 098
-TEST( Problem_98, Given_Case )
-{
+TEST( Problem_98, Given_Case ) {
   /*
   [
     ['A','B','C','E'],
@@ -172,7 +168,11 @@ TEST( Problem_98, Given_Case )
   exists(board, "ABCB") returns false.
   */
 
-  std::vector<std::vector<char>> board = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
+  std::vector<std::vector<char>> board = {
+    {'A', 'B', 'C', 'E'},
+    {'S', 'F', 'C', 'S'},
+    {'A', 'D', 'E', 'E'}
+  };
 
   EXPECT_TRUE( find_word( board, "ABCCED" ) );
   EXPECT_TRUE( find_word( board, "SEE" ) );
@@ -180,8 +180,7 @@ TEST( Problem_98, Given_Case )
 }
 
 // Problem 099
-TEST( Problem_99, Given_Case )
-{
+TEST( Problem_99, Given_Case ) {
   /*
   For example, given [100, 4, 200, 1, 3, 2],
   the longest consecutive element sequence is [1, 2, 3, 4].
@@ -194,8 +193,7 @@ TEST( Problem_99, Given_Case )
 }
 
 // Problem 100
-TEST( Problem_100, Given_Case )
-{
+TEST( Problem_100, Given_Case ) {
   /*
   Input: [(0, 0), (1, 1), (1, 2)]
   Output: 2

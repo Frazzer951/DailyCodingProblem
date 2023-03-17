@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_108_HPP
 #define PROBLEMS_101_110_PROBLEM_108_HPP
 
-
 #pragma once
 
 /* EASY
@@ -13,22 +12,18 @@ For example, if A is abcde and B is cdeab, return true. If A is abc and B is acb
 */
 #include <string>
 
-inline bool isSifted( std::string A, std::string B )
-{
-  if( A == B ) return true;
+inline bool isSifted( std::string A, std::string B ) {
+  if ( A == B ) return true;
 
-  for( int i = 0; i < A.size(); i++ )
-  {
+  for ( int i = 0; i < A.size(); i++ ) {
     bool matching = true;
-    for( int j = 0; j < B.size(); j++ )
-    {
-      if( A[( i + j ) % A.size()] != B[j] )
-      {
+    for ( int j = 0; j < B.size(); j++ ) {
+      if ( A[( i + j ) % A.size()] != B[j] ) {
         matching = false;
         break;
       }
     }
-    if( matching ) return true;
+    if ( matching ) return true;
   }
   return false;
 }

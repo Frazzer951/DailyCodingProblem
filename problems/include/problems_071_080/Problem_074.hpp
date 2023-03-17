@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_071_080_PROBLEM_074_HPP
 #define PROBLEMS_071_080_PROBLEM_074_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -29,24 +28,20 @@ multiplication table looks like this:
 
 And there are 4 12's in the table.
 */
-inline int countMultiples( int n, int x )
-{
+inline int countMultiples( int n, int x ) {
   int count = 0;
   // Count the upper diagonal
-  for( int i = 0; i < n; i++ )
-  {
-    for( int j = i + 1; j < n; j++ )
-    {
-      if( ( i + 1 ) * ( j + 1 ) == x ) count++;
+  for ( int i = 0; i < n; i++ ) {
+    for ( int j = i + 1; j < n; j++ ) {
+      if ( ( i + 1 ) * ( j + 1 ) == x ) count++;
     }
   }
   // Double it to count the lower diagonal
   count *= 2;
 
   // Count the diagonal
-  for( int i = 0; i < n; i++ )
-  {
-    if( ( i + 1 ) * ( i + 1 ) == x ) count++;
+  for ( int i = 0; i < n; i++ ) {
+    if ( ( i + 1 ) * ( i + 1 ) == x ) count++;
   }
 
   return count;

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_091_100_PROBLEM_096_HPP
 #define PROBLEMS_091_100_PROBLEM_096_HPP
 
-
 #pragma once
 
 /* EASY
@@ -15,14 +14,12 @@ For example, given [1,2,3], return
 
 #include "problems_091_100/Problem_095.hpp"
 
-inline std::vector<std::vector<int>> getPermutations( const std::vector<int> & nums )
-{
+inline std::vector<std::vector<int>> getPermutations( const std::vector<int> &nums ) {
   auto                          permutation  = nums;
   std::vector<std::vector<int>> permutations = { permutation };
   nextPermutation( permutation );
 
-  while( permutation != nums )
-  {
+  while ( permutation != nums ) {
     permutations.push_back( permutation );
     nextPermutation( permutation );
   }

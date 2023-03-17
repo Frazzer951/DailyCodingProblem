@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_001_010_PROBLEM_006_HPP
 #define PROBLEMS_001_010_PROBLEM_006_HPP
 
-
 #pragma once
 
 /* HARD
@@ -17,54 +16,43 @@ between nodes and memory addresses.
 */
 #include <iostream>
 
-struct xNode
-{
-  int     val;
-  xNode * both { nullptr };
+struct xNode {
+  int    val;
+  xNode *both { nullptr };
 
   xNode( int value ) : val( value ) {}
 };
 
-inline xNode * xorNode( xNode * a, xNode * b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
+inline xNode *xorNode( xNode *a, xNode *b ) { return (xNode *) ( (uintptr_t) a ^ (uintptr_t) b ); }
 
-class xor_list
-{
+class xor_list {
 public:
-  xNode * head { nullptr };
-  xNode * tail { nullptr };
+  xNode *head { nullptr };
+  xNode *tail { nullptr };
 
   xor_list() = default;
 
-  void add( xNode * node )
-  {
-    if( head == nullptr )
-    {
+  void add( xNode *node ) {
+    if ( head == nullptr ) {
       head = node;
       tail = node;
-    }
-    else
-    {
+    } else {
       tail->both = xorNode( node, tail->both );
       node->both = tail;
       tail       = node;
     }
   }
 
-  [[nodiscard]] xNode * get( int index ) const
-  {
-    xNode * prev_id = nullptr;
-    xNode * node    = head;
-    for( int i = 0; i < index; ++i )
-    {
-      xNode * next_id = xorNode( prev_id, node->both );
+  [[nodiscard]] xNode *get( int index ) const {
+    xNode *prev_id = nullptr;
+    xNode *node    = head;
+    for ( int i = 0; i < index; ++i ) {
+      xNode *next_id = xorNode( prev_id, node->both );
 
-      if( next_id != nullptr )
-      {
+      if ( next_id != nullptr ) {
         prev_id = node;
         node    = next_id;
-      }
-      else
-      {
+      } else {
         throw "Linked List index out of range";
       }
     }
@@ -72,13 +60,11 @@ public:
   };
 };
 
-inline void printAtIndex( xor_list list, int index )
-{
+inline void printAtIndex( xor_list list, int index ) {
   std::cout << "The index " << index << " contains the value " << list.get( index )->val << '\n';
 }
 
-inline int prob_6()
-{
+inline int prob_6() {
   std::cout << "\nProblem 6:\n";
 
   xor_list list;

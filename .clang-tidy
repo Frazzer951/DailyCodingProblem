@@ -13,8 +13,13 @@ Checks:             '-*,
                     readability-*,
                     -readability-magic-numbers,
                     -cppcoreguidelines-avoid-magic-numbers,
-                    -modernize-use-trailing-return-type,
-                    -readability-braces-around-statements
+                    -llvm-header-guard,
+
+                    -readability-braces-around-statements,
+                    -llvm-include-order,
+                    -bugprone-reserved-identifier,
+                    -readability-identifier-length,
+                    -modernize-use-nodiscard
                     '
 WarningsAsErrors:   ''
 HeaderFilterRegex:  '.hpp'

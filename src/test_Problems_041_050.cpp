@@ -11,15 +11,12 @@
 #include "problems_041_050/Problem_049.hpp"
 #include "problems_041_050/Problem_050.hpp"
 
-
 // Problem 041
-TEST( Problem_41, Given_Case_1 )
-{
+TEST( Problem_41, Given_Case_1 ) {
   // Given [('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')] and starting airport 'YUL',
   // return ['YUL', 'YYZ', 'SFO', 'HKO', 'ORD'].
 
-  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "SFO", "HKO" ),
-                                                               std::make_pair( "YYZ", "SFO" ),
+  std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "SFO", "HKO" ), std::make_pair( "YYZ", "SFO" ),
                                                                std::make_pair( "YUL", "YYZ" ),
                                                                std::make_pair( "HKO", "ORD" ) };
 
@@ -29,8 +26,7 @@ TEST( Problem_41, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_41, Given_Case_2 )
-{
+TEST( Problem_41, Given_Case_2 ) {
   // Given [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 'COM', return null.
 
   std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "SFO", "COM" ),
@@ -42,8 +38,7 @@ TEST( Problem_41, Given_Case_2 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_41, Given_Case_3 )
-{
+TEST( Problem_41, Given_Case_3 ) {
   // Given [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', return ['A', 'B', 'C', 'A', 'C']
 
   std::vector<std::pair<std::string, std::string>> flights = { std::make_pair( "A", "B" ), std::make_pair( "A", "C" ),
@@ -56,8 +51,7 @@ TEST( Problem_41, Given_Case_3 )
 }
 
 // Problem 042
-TEST( Problem_42, Given_Case )
-{
+TEST( Problem_42, Given_Case ) {
   // given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24
   auto             result   = subset_sum( { 12, 1, 61, 5, 9, 2 }, 24 );
   std::vector<int> expected = { 12, 1, 9, 2 };
@@ -66,16 +60,14 @@ TEST( Problem_42, Given_Case )
 }
 
 // Problem 043
-TEST( Problem_43, Test_Push )
-{
+TEST( Problem_43, Test_Push ) {
   stack testStack;
   testStack.push( 10 );
 
   EXPECT_EQ( testStack.top->val, 10 );
 }
 
-TEST( Problem_43, Test_Pop )
-{
+TEST( Problem_43, Test_Pop ) {
   stack testStack;
   testStack.push( 15 );
 
@@ -85,15 +77,13 @@ TEST( Problem_43, Test_Pop )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_43, Test_Pop_Exception )
-{
+TEST( Problem_43, Test_Pop_Exception ) {
   stack testStack;
 
   EXPECT_ANY_THROW( testStack.pop() );
 }
 
-TEST( Problem_43, Test_getMax )
-{
+TEST( Problem_43, Test_getMax ) {
   stack testStack;
   testStack.push( 15 );
   testStack.push( 18 );
@@ -105,17 +95,15 @@ TEST( Problem_43, Test_getMax )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_43, Test_getMax_Exception )
-{
+TEST( Problem_43, Test_getMax_Exception ) {
   stack testStack;
   int   x = 0;
   EXPECT_ANY_THROW( x = testStack.getMax() );
-  if( x == 10 ) x++;
+  if ( x == 10 ) x++;
 }
 
 // Problem 044
-TEST( Problem_44, Given_Case_1 )
-{
+TEST( Problem_44, Given_Case_1 ) {
   // The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4,3).
   int result   = outOfOrder( { 2, 4, 1, 3, 5 } );
   int expected = 3;
@@ -123,8 +111,7 @@ TEST( Problem_44, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_44, Given_Case_2 )
-{
+TEST( Problem_44, Given_Case_2 ) {
   // The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.
 
   int result   = outOfOrder( { 5, 4, 3, 2, 1 } );
@@ -134,16 +121,14 @@ TEST( Problem_44, Given_Case_2 )
 }
 
 // Problem 045
-TEST( Problem_45, Test_Case )
-{
+TEST( Problem_45, Test_Case ) {
   int result = rand7();
 
   EXPECT_TRUE( ( result >= 1 ) && ( result <= 7 ) );
 }
 
 // Problem 046
-TEST( Problem_46, Given_Case_1 )
-{
+TEST( Problem_46, Given_Case_1 ) {
   // "aabcdcb" is "bcdcb"
   std::string result   = longest_palindrome( "aabcdcb" );
   std::string expected = "bcdcb";
@@ -151,8 +136,7 @@ TEST( Problem_46, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_46, Given_Case_2 )
-{
+TEST( Problem_46, Given_Case_2 ) {
   // "bananas" is "anana"
   std::string result   = longest_palindrome( "bananas" );
   std::string expected = "anana";
@@ -161,8 +145,7 @@ TEST( Problem_46, Given_Case_2 )
 }
 
 // Problem 047
-TEST( Problem_47, Given_Case )
-{
+TEST( Problem_47, Given_Case ) {
   //[9, 11, 8, 5, 7, 10], you should return 5
   int result   = max_profit( { 9, 11, 8, 5, 7, 10 } );
   int expected = 5;
@@ -170,8 +153,7 @@ TEST( Problem_47, Given_Case )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_47, Test_Case )
-{
+TEST( Problem_47, Test_Case ) {
   int result   = max_profit( { 10, 16, 7, 18, 5, 9 } );
   int expected = 11;
 
@@ -179,8 +161,7 @@ TEST( Problem_47, Test_Case )
 }
 
 // Problem 048
-TEST( Problem_48, Given_Case )
-{
+TEST( Problem_48, Given_Case ) {
   /*
   For example, given the following preorder traversal:
   [a, b, d, e, c, f, g]
@@ -194,25 +175,24 @@ TEST( Problem_48, Given_Case )
   d  e f  g
   */
 
-  auto * a = new btNode( 'a' );
-  auto * b = new btNode( 'b' );
-  auto * c = new btNode( 'c' );
-  auto * d = new btNode( 'd' );
-  auto * e = new btNode( 'e' );
-  auto * f = new btNode( 'f' );
-  auto * g = new btNode( 'g' );
+  auto *a = new btNode( 'a' );
+  auto *b = new btNode( 'b' );
+  auto *c = new btNode( 'c' );
+  auto *d = new btNode( 'd' );
+  auto *e = new btNode( 'e' );
+  auto *f = new btNode( 'f' );
+  auto *g = new btNode( 'g' );
 
   std::vector<btNode<char> *> preorder = { a, b, d, e, c, f, g };
   std::vector<btNode<char> *> inorder  = { d, b, e, a, f, c, g };
 
-  auto * result = reconstruct( preorder, inorder );
+  auto *result = reconstruct( preorder, inorder );
 
   EXPECT_EQ( result, a );
 }
 
 // Problem 049
-TEST( Problem_49, Given_Case_1 )
-{
+TEST( Problem_49, Given_Case_1 ) {
   // [34, -50, 42, 14, -5, 86], the maximum sum would be 137
   int result   = max_subarray_sum( { 34, -50, 42, 14, -5, 86 } );
   int expected = 137;
@@ -220,8 +200,7 @@ TEST( Problem_49, Given_Case_1 )
   EXPECT_EQ( result, expected );
 }
 
-TEST( Problem_49, Given_Case_2 )
-{
+TEST( Problem_49, Given_Case_2 ) {
   // [-5, -1, -8, -9], the maximum sum would be 0
   int result   = max_subarray_sum( { -5, -1, -8, -9 } );
   int expected = 0;
@@ -230,8 +209,7 @@ TEST( Problem_49, Given_Case_2 )
 }
 
 // Problem 050
-TEST( Problem_50, Given_Case )
-{
+TEST( Problem_50, Given_Case ) {
   /*
   For example, given the following tree:
 

@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_131_140_PROBLEM_132_HPP
 #define PROBLEMS_131_140_PROBLEM_132_HPP
 
-
 #pragma once
 
 /* EASY
@@ -19,49 +18,42 @@ Follow-up: What if our system has limited memory?
 #include <iostream>
 #include <vector>
 
-struct timestamp
-{
+struct timestamp {
   int hour;
   int minute;
   int second;
 
   timestamp( int h, int m, int s ) : hour( h ), minute( m ), second( s ) {}
 
-  friend bool operator<( const timestamp & l, const timestamp & r )
-  {
-    if( l.hour > r.hour ) return false;
-    if( l.hour == r.hour )
-    {
-      if( l.minute >= r.minute ) return false;
-      if( l.minute == r.minute && l.second >= r.second ) return false;
+  friend bool operator<( const timestamp &l, const timestamp &r ) {
+    if ( l.hour > r.hour ) return false;
+    if ( l.hour == r.hour ) {
+      if ( l.minute >= r.minute ) return false;
+      if ( l.minute == r.minute && l.second >= r.second ) return false;
     }
     return true;
   }
 
-  friend bool operator==( const timestamp & l, const timestamp & r )
-  {
-    if( l.hour != r.hour ) return false;
-    if( l.minute != r.minute ) return false;
-    if( l.second != r.second ) return false;
+  friend bool operator==( const timestamp &l, const timestamp &r ) {
+    if ( l.hour != r.hour ) return false;
+    if ( l.minute != r.minute ) return false;
+    if ( l.second != r.second ) return false;
     return true;
   }
-  friend bool operator>( const timestamp & l, const timestamp & r )
-  {
-    if( l.hour <= r.hour ) return false;
-    if( l.minute <= r.minute ) return false;
-    if( l.second <= r.second ) return false;
+  friend bool operator>( const timestamp &l, const timestamp &r ) {
+    if ( l.hour <= r.hour ) return false;
+    if ( l.minute <= r.minute ) return false;
+    if ( l.second <= r.second ) return false;
     return true;
   }
 };
 
-inline std::ostream & operator<<( std::ostream & os, const timestamp & t )
-{
+inline std::ostream &operator<<( std::ostream &os, const timestamp &t ) {
   os << t.hour << ":" << t.minute << ":" << t.second;
   return os;
 }
 
-class hitcounter
-{
+class hitcounter {
   std::vector<timestamp> hits;
 
 public:
@@ -69,27 +61,17 @@ public:
 
   std::size_t total() { return hits.size(); }
 
-  std::vector<timestamp> range( timestamp l, timestamp u )
-  {
+  std::vector<timestamp> range( timestamp l, timestamp u ) {
     std::sort( hits.begin(), hits.end() );
     std::vector<timestamp> timestamps;
     auto                   lower = hits.begin();
     auto                   upper = hits.end();
     upper--;
 
-    while( *lower < l )
-    {
-      lower++;
-    }
-    while( *upper > u )
-    {
-      upper--;
-    }
+    while ( *lower < l ) { lower++; }
+    while ( *upper > u ) { upper--; }
 
-    for( auto i = lower; i != upper && i != hits.end(); i++ )
-    {
-      timestamps.push_back( *i );
-    }
+    for ( auto i = lower; i != upper && i != hits.end(); i++ ) { timestamps.push_back( *i ); }
 
     timestamps.push_back( *upper );
 

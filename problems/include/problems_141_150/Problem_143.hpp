@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_141_150_PROBLEM_143_HPP
 #define PROBLEMS_141_150_PROBLEM_143_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -18,24 +17,17 @@ be [9, 3, 5, 10, 10, 12, 14].
 */
 #include <vector>
 
-inline std::vector<int> partition( const std::vector<int> & lst, int x )
-{
+inline std::vector<int> partition( const std::vector<int> &lst, int x ) {
   std::vector<int> less;
   std::vector<int> eq;
   std::vector<int> great;
 
-  for( int i : lst )
-  {
-    if( i < x )
-    {
+  for ( int i : lst ) {
+    if ( i < x ) {
       less.push_back( i );
-    }
-    else if( i == x )
-    {
+    } else if ( i == x ) {
       eq.push_back( i );
-    }
-    else
-    {
+    } else {
       great.push_back( i );
     }
   }

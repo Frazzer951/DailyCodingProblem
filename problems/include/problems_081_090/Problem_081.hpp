@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_081_090_PROBLEM_081_HPP
 #define PROBLEMS_081_090_PROBLEM_081_HPP
 
-
 #pragma once
 
 /* EASY
@@ -16,20 +15,15 @@ return [“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, �
 #include <string>
 #include <vector>
 
-inline std::vector<std::string> num_to_str( std::string nums, std::map<char, std::vector<std::string>> num_map )
-{
-  if( nums.size() == 1 ) return num_map[nums[0]];
+inline std::vector<std::string> num_to_str( std::string nums, std::map<char, std::vector<std::string>> num_map ) {
+  if ( nums.size() == 1 ) return num_map[nums[0]];
 
   std::vector<std::string> possible_strs;
 
   std::vector<std::string> sub_strs = num_to_str( nums.substr( 1 ), num_map );
 
-  for( const std::string & c : num_map[nums[0]] )
-  {
-    for( const std::string & sub_str : sub_strs )
-    {
-      possible_strs.push_back( c + sub_str );
-    }
+  for ( const std::string &c : num_map[nums[0]] ) {
+    for ( const std::string &sub_str : sub_strs ) { possible_strs.push_back( c + sub_str ); }
   }
   return possible_strs;
 }

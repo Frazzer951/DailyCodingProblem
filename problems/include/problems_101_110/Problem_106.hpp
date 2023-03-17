@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_101_110_PROBLEM_106_HPP
 #define PROBLEMS_101_110_PROBLEM_106_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -12,13 +11,11 @@ For example, [2, 0, 1, 0] returns True while [1, 1, 0, 1] returns False.
 */
 #include <vector>
 
-inline bool validate_hops( std::vector<int> hops )
-{
+inline bool validate_hops( std::vector<int> hops ) {
   int index = 0;
 
-  while( index <= hops.size() )
-  {
-    if( hops[index] == 0 ) break;
+  while ( index <= hops.size() ) {
+    if ( hops[index] == 0 ) break;
     index += hops[index];
   }
 

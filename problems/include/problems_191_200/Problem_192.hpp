@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_191_200_PROBLEM_192_HPP
 #define PROBLEMS_191_200_PROBLEM_192_HPP
 
-
 #pragma once
 
 /* MEDIUM
@@ -17,13 +16,11 @@ Given the array [1, 2, 1, 0, 0], we can't reach the end, so return false.
 */
 #include <vector>
 
-inline bool canReachEnd( std::vector<int> arr )
-{
+inline bool canReachEnd( std::vector<int> arr ) {
   int furthest_so_far = 0;
 
-  for( int i = 0; i < arr.size(); i++ )
-  {
-    if( i > furthest_so_far ) break;
+  for ( int i = 0; i < arr.size(); i++ ) {
+    if ( i > furthest_so_far ) break;
     furthest_so_far = std::max( furthest_so_far, i + arr[i] );
   }
   return furthest_so_far >= arr.size() - 1;

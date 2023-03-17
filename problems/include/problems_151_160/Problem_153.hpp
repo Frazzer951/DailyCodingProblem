@@ -1,7 +1,6 @@
 #ifndef PROBLEMS_151_160_PROBLEM_153_HPP
 #define PROBLEMS_151_160_PROBLEM_153_HPP
 
-
 #pragma once
 
 /* HARD
@@ -17,15 +16,10 @@ in between the two words.
 #include <string>
 #include <vector>
 
-inline int smallestWordDistance( const std::string & w1, const std::string & w2, std::vector<std::string> words )
-{
+inline int smallestWordDistance( const std::string &w1, const std::string &w2, std::vector<std::string> words ) {
   std::multimap<std::string, int> indexes;
-  for( int i = 0; i < words.size(); i++ )
-  {
-    if( words[i] == w1 || words[i] == w2 )
-    {
-      indexes.emplace( words[i], i );
-    }
+  for ( int i = 0; i < words.size(); i++ ) {
+    if ( words[i] == w1 || words[i] == w2 ) { indexes.emplace( words[i], i ); }
   }
   int smallest = (int) words.size();
 
@@ -35,21 +29,17 @@ inline int smallestWordDistance( const std::string & w1, const std::string & w2,
   std::vector<int> w1_indexes;
   std::vector<int> w2_indexes;
 
-  while( w1_it != indexes.end() && w1_it->first == w1 )
-  {
+  while ( w1_it != indexes.end() && w1_it->first == w1 ) {
     w1_indexes.push_back( w1_it->second );
     w1_it++;
   }
-  while( w2_it != indexes.end() && w2_it->first == w2 )
-  {
+  while ( w2_it != indexes.end() && w2_it->first == w2 ) {
     w2_indexes.push_back( w2_it->second );
     w2_it++;
   }
 
-  for( int w1_index : w1_indexes )
-  {
-    for( int w2_index : w2_indexes )
-    {
+  for ( int w1_index : w1_indexes ) {
+    for ( int w2_index : w2_indexes ) {
       int distance = std::abs( w1_index - w2_index ) - 1;
       smallest     = std::min( smallest, distance );
     }

@@ -11,13 +11,10 @@
 #include "problems_251_260/Problem_259.hpp"
 #include "problems_251_260/Problem_260.hpp"
 
-
 // Problem 251
 
-
 // Problem 252
-TEST( Problem_252, Given_Case )
-{
+TEST( Problem_252, Given_Case ) {
   // For example, 4 / 13 can be represented as 1 / 4 + 1 / 18 + 1 / 468
   std::vector<int> result   = egyptianFraction( 4, 13 );
   std::vector<int> expected = { 4, 18, 468 };
@@ -26,8 +23,7 @@ TEST( Problem_252, Given_Case )
 }
 
 // Problem 253
-TEST( Problem_253, Given_Case )
-{
+TEST( Problem_253, Given_Case ) {
   /*
    For example, given the sentence "thisisazigzag" and k = 4, you should print:
 
@@ -42,8 +38,7 @@ TEST( Problem_253, Given_Case )
 }
 
 // Problem 254
-TEST( Problem_254, Given_Case )
-{
+TEST( Problem_254, Given_Case ) {
   /*
    For example, given the following tree:
 
@@ -65,19 +60,18 @@ TEST( Problem_254, Given_Case )
           6     7
   */
 
-  auto * root = new btNode<int>(
-      0, new btNode<int>( 1, new btNode<int>( 3, nullptr, new btNode<int>( 5 ) ) ),
-      new btNode<int>( 2, nullptr, new btNode<int>( 4, new btNode<int>( 6 ), new btNode<int>( 7 ) ) ) );
+  auto *root =
+      new btNode<int>( 0, new btNode<int>( 1, new btNode<int>( 3, nullptr, new btNode<int>( 5 ) ) ),
+                       new btNode<int>( 2, nullptr, new btNode<int>( 4, new btNode<int>( 6 ), new btNode<int>( 7 ) ) ) );
 
-  btNode<int> * result = trim_tree( root );
-  auto *        expected =
+  btNode<int> *result = trim_tree( root );
+  auto        *expected =
       new btNode<int>( 0, new btNode<int>( 5 ), new btNode<int>( 4, new btNode<int>( 6 ), new btNode<int>( 7 ) ) );
   EXPECT_EQ( *expected, *result );
 }
 
 // Problem 255
-TEST( Problem_255, Given_Case )
-{
+TEST( Problem_255, Given_Case ) {
   /*
   graph = [
     [0, 1, 3],
@@ -95,23 +89,29 @@ TEST( Problem_255, Given_Case )
     [0, 0, 0, 1]
   */
 
-  std::vector<std::vector<int>> graph { { 0, 1, 3 }, { 1, 2 }, { 2 }, { 3 } };
+  std::vector<std::vector<int>> graph {
+    { 0, 1, 3 },
+    { 1, 2 },
+    { 2 },
+    { 3 }
+  };
 
   std::vector<std::vector<int>> result = transitiveClosure( graph );
-  std::vector<std::vector<int>> expected { { 1, 1, 1, 1 }, { 0, 1, 1, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } };
+  std::vector<std::vector<int>> expected {
+    {1, 1, 1, 1},
+    {0, 1, 1, 0},
+    {0, 0, 1, 0},
+    {0, 0, 0, 1}
+  };
   EXPECT_EQ( expected, result );
 }
 
 // Problem 256
 
-
 // Problem 257
-
 
 // Problem 258
 
-
 // Problem 259
-
 
 // Problem 260

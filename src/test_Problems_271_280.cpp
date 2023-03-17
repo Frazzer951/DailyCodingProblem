@@ -11,32 +11,22 @@
 #include "problems_271_280/Problem_279.hpp"
 #include "problems_271_280/Problem_280.hpp"
 
-
 // Problem 271
-
 
 // Problem 272
 
-
 // Problem 273
-
 
 // Problem 274
 
-
 // Problem 275
-
 
 // Problem 276
 
-
 // Problem 277
-
 
 // Problem 278
 
-
 // Problem 279
-
 
 // Problem 280
