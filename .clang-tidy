@@ -14,7 +14,7 @@ Checks:             '-*,
                     -readability-magic-numbers,
                     -cppcoreguidelines-avoid-magic-numbers,
                     -llvm-header-guard,
-
+                    -modernize-use-trailing-return-type,
                     -readability-braces-around-statements,
                     -llvm-include-order,
                     -bugprone-reserved-identifier,
@@ -26,4 +26,3 @@ HeaderFilterRegex:  '.hpp'
 FormatStyle:        file
 User:               'Frazzer'
 ...
-
