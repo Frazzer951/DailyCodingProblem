@@ -26,7 +26,7 @@ inline std::vector<std::pair<int, int>> vaild_moves( const std::vector<std::vect
   std::vector<std::pair<int, int>> all_moves;
 
   all_moves.reserve( deltas.size() );
-  for ( auto &[r_delta, c_delta] : deltas ) { all_moves.emplace_back( r + r_delta, c + c_delta ); }
+  for ( const auto &[r_delta, c_delta] : deltas ) { all_moves.emplace_back( r + r_delta, c + c_delta ); }
 
   std::vector<std::pair<int, int>> moves;
 
