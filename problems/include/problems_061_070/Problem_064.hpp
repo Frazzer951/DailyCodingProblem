@@ -38,7 +38,7 @@ inline std::vector<std::pair<int, int>> vaild_moves( const std::vector<std::vect
 }
 
 inline int knights_tours_helper( std::vector<std::vector<int>> board, std::vector<std::pair<int, int>> tour, int n ) {
-  if ( tour.size() == static_cast<unsigned long>( n * ) n ) return 1;
+  if ( tour.size() == static_cast<unsigned long>( n * n ) ) return 1;
 
   int count              = 0;
   auto &[last_r, last_c] = tour[tour.size() - 1];
