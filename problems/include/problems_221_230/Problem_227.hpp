@@ -31,7 +31,7 @@ inline std::vector<std::pair<int, int>> get_neighbors( std::pair<int, int> locat
 
   std::vector<std::pair<int, int>> neighbors;
 
-  for ( auto &neighbor : possible_neighbors ) {
+  for ( const auto &neighbor : possible_neighbors ) {
     if ( neighbor.first >= 0 && neighbor.first < grid_size && neighbor.second >= 0 && neighbor.second < grid_size ) {
       neighbors.push_back( neighbor );
     }

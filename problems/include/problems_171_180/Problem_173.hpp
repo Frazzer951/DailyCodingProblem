@@ -47,7 +47,7 @@ inline std::map<std::string, int> flatten( const anymap &d, char separator = '.'
       new_dict[key] = std::any_cast<int>( value );
     } else {
       std::map<std::string, int> const flattened_subdict = flatten( std::any_cast<anymap>( value ) );
-      for ( auto &[flatkey, flatvalue] : flattened_subdict ) new_dict[key + separator + flatkey] = flatvalue;
+      for ( const auto &[flatkey, flatvalue] : flattened_subdict ) new_dict[key + separator + flatkey] = flatvalue;
     }
   }
 
